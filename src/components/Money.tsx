@@ -1,4 +1,5 @@
 import type { Locale } from "@/lib/locale";
+import { t } from "@/lib/i18n";
 import { formatPlnAmount } from "@/lib/links";
 
 export function Money({ value, locale }: { value: number; locale: Locale }) {
@@ -8,6 +9,35 @@ export function Money({ value, locale }: { value: number; locale: Locale }) {
 export function MoneyRange({ range, locale }: { range: [number, number]; locale: Locale }) {
   const amount = `${formatPlnAmount(range[0], locale)}\u2060–\u2060${formatPlnAmount(range[1], locale)}`;
   return <MoneyCell amount={amount} locale={locale} size="sm" />;
+}
+
+export function FixBand({
+  range,
+  locale,
+  hint = false,
+  compact = false,
+}: {
+  range: [number, number];
+  locale: Locale;
+  hint?: boolean;
+  compact?: boolean;
+}) {
+  const copy = t(locale);
+  return (
+    <div>
+      <p
+        className={`font-semibold uppercase tracking-[0.16em] text-[var(--muted)] ${
+          compact ? "text-[9px]" : "text-[10px]"
+        }`}
+      >
+        {copy.repair}
+      </p>
+      <div className={compact ? "mt-0.5" : "mt-1"}>
+        <MoneyRange range={range} locale={locale} />
+      </div>
+      {hint ? <p className="mt-1 max-w-[16rem] text-[11px] leading-4 text-[var(--muted)]">{copy.repairHint}</p> : null}
+    </div>
+  );
 }
 
 function MoneyCell({

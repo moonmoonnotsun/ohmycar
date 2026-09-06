@@ -1,5 +1,7 @@
 import type { Chassis, Localized, VariantBrief } from "./types";
 import { loc } from "./loc";
+import { getPain } from "@/lib/catalog";
+import { volumeEngineVerdicts } from "./volumeEngineVerdicts";
 
 export type Verdict = {
   summary: Localized;
@@ -697,6 +699,7 @@ const ENGINES: Record<string, Band[]> = {
       "Раздатка, ржавчина, заслонки. Не милый кроссовер.",
     ),
   ],
+  ...volumeEngineVerdicts,
 };
 
 function fill(template: string, variant: VariantBrief, bodyWord: string): string {
@@ -759,16 +762,38 @@ export function variantVerdict(variant: VariantBrief, chassis: Chassis, bodyWord
     bands?.find((item) => variant.year >= item.from && variant.year <= item.to) ??
     bands?.[0];
   const tail = BODY_TAIL[chassis.slug] ?? loc("", "");
-  if (!hit) {
-    return {
-      summary: loc(
-        `The ${variant.year} ${variant.chassisCode} ${variant.model} ${variant.engine} is in the table, but this paragraph is still a stub. Use the score and the fault list, not a fake review. ${tail.en}`,
-        `${variant.year} ${variant.chassisCode} ${variant.model} ${variant.engine} jest w tabeli, ale ten akapit jest jeszcze zaślepką. Użyj oceny i listy usterek, nie fałszywej recenzji. ${tail.pl}`,
-        `${variant.year} ${variant.chassisCode} ${variant.model} ${variant.engine} есть в таблице, но этот абзац ещё заглушка. Смотри оценку и список поломок, не фальшивый обзор. ${tail.ru}`,
-      ),
-      good: loc("It has a scored row.", "Ma wiersz z oceną.", "Есть строка с оценкой."),
-      bad: loc("The prose briefing is not finished.", "Tekstowy briefing nie jest skończony.", "Текстовый брифинг не закончен."),
-    };
-  }
+  if (!hit) return composedVerdict(variant, chassis, bodyWord, tail);
   return fillVerdict(hit, variant, bodyWord, tail);
+}
+
+function composedVerdict(
+  variant: VariantBrief,
+  chassis: Chassis,
+  _bodyWord: string,
+  tail: Localized,
+): Verdict {
+  const score = variant.score.toFixed(0);
+  const pain = getPain(variant.topPainId);
+  const chassisHit = CHASSIS[chassis.slug];
+  return {
+    summary: loc(
+      `The ${variant.year} ${variant.chassisCode} ${variant.model} ${variant.engine} scores ${score} / 100 (hypothesis). Headline fault: ${pain?.title.en ?? "see the fault list"}. ${pain?.summary.en ?? "Use the scored row and the fault list."} ${chassisHit?.bad.en ?? ""} ${tail.en}`
+        .replace(/\s+/g, " ")
+        .trim(),
+      `${variant.year} ${variant.chassisCode} ${variant.model} ${variant.engine} ma ocenę ${score} / 100 (hipoteza). Główna usterka: ${pain?.title.pl ?? "patrz lista usterek"}. ${pain?.summary.pl ?? "Użyj wiersza z oceną i listy usterek."} ${chassisHit?.bad.pl ?? ""} ${tail.pl}`
+        .replace(/\s+/g, " ")
+        .trim(),
+      `${variant.year} ${variant.chassisCode} ${variant.model} ${variant.engine} — оценка ${score} / 100 (гипотеза). Главная поломка: ${pain?.title.ru ?? "смотри список поломок"}. ${pain?.summary.ru ?? "Смотри строку с оценкой и список поломок."} ${chassisHit?.bad.ru ?? ""} ${tail.ru}`
+        .replace(/\s+/g, " ")
+        .trim(),
+    ),
+    good: chassisHit?.good ?? loc("It has a scored row.", "Ma wiersz z oceną.", "Есть строка с оценкой."),
+    bad: pain
+      ? loc(
+          `Budget ${pain.title.en} before you like the listing.`,
+          `Wycen: ${pain.title.pl} — zanim polubisz ogłoszenie.`,
+          `Заложи ${pain.title.ru} до того, как понравится объявление.`,
+        )
+      : loc("Read the fault list. The badge is not a briefing.", "Czytaj listę usterek. Znaczek to nie briefing.", "Читай список поломок. Шильдик — не брифинг."),
+  };
 }

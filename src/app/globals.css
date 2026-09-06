@@ -210,14 +210,6 @@ button:disabled,
   object-fit: cover;
 }
 
-.lang-select {
-  color-scheme: dark;
-}
-.lang-select option {
-  background: #101218;
-  color: #f4f5f7;
-}
-
 .ask-fab {
   position: fixed;
   right: 1rem;

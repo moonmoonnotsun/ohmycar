@@ -4,7 +4,7 @@ import { SearchBox } from "@/components/SearchBox";
 import { ChassisCard } from "@/components/ChassisCard";
 import { ComparePair } from "@/components/ComparePair";
 import { chassisList } from "@/data/chassis";
-import { getVariant } from "@/lib/catalog";
+import { getVariant, listScoreMarks } from "@/lib/catalog";
 import { isLocale, locales } from "@/lib/locale";
 import { t } from "@/lib/i18n";
 
@@ -23,6 +23,7 @@ export default async function HomePage({
   const featured = ["e90", "e46", "f30", "e60", "e39", "f10", "e87", "e70", "e53", "e83"]
     .map((slug) => chassisList.find((item) => item.slug === slug))
     .filter((item): item is NonNullable<typeof item> => Boolean(item));
+  const marks = listScoreMarks(featured);
   const n52 = getVariant("e90", "2006-330i-n52");
   const n47 = getVariant("e90", "2008-320d-n47");
 
@@ -67,7 +68,12 @@ export default async function HomePage({
         </div>
         <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
           {featured.map((chassis) => (
-            <ChassisCard key={chassis.slug} chassis={chassis} locale={locale} />
+            <ChassisCard
+              key={chassis.slug}
+              chassis={chassis}
+              locale={locale}
+              marks={marks.get(chassis.slug) ?? []}
+            />
           ))}
         </div>
       </section>

@@ -2,24 +2,31 @@ import Link from "next/link";
 import type { Chassis } from "@/data/types";
 import type { Locale } from "@/lib/locale";
 import { t } from "@/lib/i18n";
-import { isScoredChassis } from "@/lib/catalog";
+import { chassisSummary, type ListMark } from "@/lib/catalog";
 import { bodyLabelKey, bodyOf } from "@/lib/carImage";
 import { CarPhoto } from "@/components/CarPhoto";
+import { ScoreGlow } from "@/components/ScoreBadge";
+import { FixBand } from "@/components/Money";
 
 export function ChassisCard({
   chassis,
   locale,
+  marks = [],
 }: {
   chassis: Chassis;
   locale: Locale;
+  marks?: ListMark[];
 }) {
   const copy = t(locale);
-  const scored = isScoredChassis(chassis);
+  const summary = chassisSummary(chassis.slug);
+  const fixes = summary?.fixBand;
   const body = copy[bodyLabelKey(bodyOf(chassis))];
+  const split = Boolean(summary && summary.best.slug !== summary.worst.slug);
+
   return (
     <Link
       href={`/${locale}/bmw/${chassis.slug}`}
-      className="tap block overflow-hidden rounded-2xl border border-[var(--line)] bg-[var(--card)] transition active:scale-[0.99]"
+      className="group tap block overflow-hidden rounded-2xl border border-[var(--line)] bg-[var(--card)] transition active:scale-[0.99]"
     >
       <CarPhoto
         chassis={chassis}
@@ -28,20 +35,39 @@ export function ChassisCard({
         ratio="16 / 10"
         badge={body}
         emptyLabel={copy.photoSoon}
-      />
+      >
+        {marks.length > 0 ? (
+          <div className="absolute left-2 top-2 z-10 flex flex-col items-start gap-1">
+            {marks.includes("best") ? <MarkPill tone="good">{copy.listBest}</MarkPill> : null}
+            {marks.includes("worst") ? <MarkPill tone="bad">{copy.listWorst}</MarkPill> : null}
+          </div>
+        ) : null}
+      </CarPhoto>
       <div className="p-4">
-        <div className="flex items-start justify-between gap-2">
-          <p className="font-mono text-xl font-semibold tracking-tight">{chassis.code}</p>
-          <span
-            className={`rounded-full px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wide ${
-              scored ? "bg-[var(--accent)] text-[var(--paper)]" : "bg-[var(--wash)] text-[var(--muted)]"
-            }`}
-          >
-            {scored ? copy.gold : copy.catalogOnly}
-          </span>
+        <div className="flex items-start justify-between gap-4">
+          <div className="min-w-0">
+            <p className="font-mono text-xl font-semibold tracking-tight">{chassis.code}</p>
+            <p className="mt-1 text-sm text-[var(--muted)]">{chassis.name[locale]}</p>
+            <p className="mt-3 text-xs tabular-nums text-[var(--muted)]">{chassis.years}</p>
+            {fixes ? (
+              <div className="mt-3">
+                <FixBand range={fixes} locale={locale} compact />
+              </div>
+            ) : null}
+          </div>
+          {summary ? (
+            <div className="flex shrink-0 gap-4">
+              <ScoreCol label={copy.cardBest} score={summary.best.score} engine={summary.best.engine} />
+              {split ? (
+                <ScoreCol label={copy.cardWorst} score={summary.worst.score} engine={summary.worst.engine} />
+              ) : null}
+            </div>
+          ) : (
+            <span className="rounded-full bg-[var(--wash)] px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wide text-[var(--muted)]">
+              {copy.catalogOnly}
+            </span>
+          )}
         </div>
-        <p className="mt-1 text-sm text-[var(--muted)]">{chassis.name[locale]}</p>
-        <p className="mt-3 text-xs tabular-nums text-[var(--muted)]">{chassis.years}</p>
       </div>
     </Link>
   );
@@ -50,17 +76,22 @@ export function ChassisCard({
 export function ChassisRow({
   chassis,
   locale,
+  marks = [],
 }: {
   chassis: Chassis;
   locale: Locale;
+  marks?: ListMark[];
 }) {
   const copy = t(locale);
-  const scored = isScoredChassis(chassis);
+  const summary = chassisSummary(chassis.slug);
+  const fixes = summary?.fixBand;
   const body = copy[bodyLabelKey(bodyOf(chassis))];
+  const split = Boolean(summary && summary.best.slug !== summary.worst.slug);
+
   return (
     <Link
       href={`/${locale}/bmw/${chassis.slug}`}
-      className="tap flex min-h-14 items-center justify-between gap-3 border-b border-[var(--line)] px-1 py-3 last:border-0"
+      className="tap flex min-h-14 items-start justify-between gap-3 border-b border-[var(--line)] px-1 py-3 last:border-0"
     >
       <CarPhoto
         chassis={chassis}
@@ -69,18 +100,72 @@ export function ChassisRow({
         tone="thumb"
       />
       <div className="min-w-0 flex-1">
-        <p className="font-mono text-base font-semibold">{chassis.code}</p>
+        <div className="flex flex-wrap items-center gap-1.5">
+          <p className="font-mono text-base font-semibold">{chassis.code}</p>
+          {marks.includes("best") ? <MarkPill tone="good">{copy.listBest}</MarkPill> : null}
+          {marks.includes("worst") ? <MarkPill tone="bad">{copy.listWorst}</MarkPill> : null}
+        </div>
         <p className="truncate text-sm text-[var(--muted)]">
           {body} · {chassis.name[locale]} · {chassis.years}
         </p>
+        {fixes ? (
+          <div className="mt-1">
+            <FixBand range={fixes} locale={locale} compact />
+          </div>
+        ) : null}
       </div>
-      <span
-        className={`shrink-0 rounded-full px-2 py-1 text-[10px] font-semibold uppercase tracking-wide ${
-          scored ? "bg-[var(--accent)] text-[var(--paper)]" : "text-[var(--muted)]"
-        }`}
-      >
-        {scored ? copy.gold : copy.catalogOnly}
-      </span>
+      {summary ? (
+        <div className="flex shrink-0 gap-3 text-right">
+          <ScoreCol compact label={copy.cardBest} score={summary.best.score} engine={summary.best.engine} />
+          {split ? (
+            <ScoreCol compact label={copy.cardWorst} score={summary.worst.score} engine={summary.worst.engine} />
+          ) : null}
+        </div>
+      ) : (
+        <span className="shrink-0 text-[10px] font-semibold uppercase tracking-wide text-[var(--muted)]">
+          {copy.catalogOnly}
+        </span>
+      )}
     </Link>
+  );
+}
+
+function ScoreCol({
+  label,
+  score,
+  engine,
+  compact = false,
+}: {
+  label: string;
+  score: number;
+  engine: string;
+  compact?: boolean;
+}) {
+  return (
+    <div className="min-w-[3.25rem] text-right">
+      <p className="text-[9px] font-semibold uppercase tracking-[0.16em] text-[var(--muted)]">{label}</p>
+      <p className={`mt-0.5 font-display leading-none tracking-tight ${compact ? "text-lg" : "text-[1.65rem]"}`}>
+        <ScoreGlow score={score} />
+      </p>
+      <p className="mt-1 font-mono text-[10px] text-[var(--muted)]">{engine}</p>
+    </div>
+  );
+}
+
+function MarkPill({
+  tone,
+  children,
+}: {
+  tone: "good" | "bad";
+  children: string;
+}) {
+  return (
+    <span
+      className={`rounded-full px-2 py-0.5 text-[10px] font-semibold uppercase tracking-[0.14em] ${
+        tone === "good" ? "bg-[var(--good)] text-[#04140c]" : "bg-[var(--bad)] text-white"
+      }`}
+    >
+      {children}
+    </span>
   );
 }

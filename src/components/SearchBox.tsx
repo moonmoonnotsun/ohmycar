@@ -4,9 +4,11 @@ import Link from "next/link";
 import { useMemo, useState } from "react";
 import type { Locale } from "@/lib/locale";
 import { t } from "@/lib/i18n";
-import { searchChassis } from "@/lib/catalog";
+import { chassisSummary, searchChassis } from "@/lib/catalog";
 import { bodyLabelKey, bodyOf } from "@/lib/carImage";
 import { CarPhoto } from "@/components/CarPhoto";
+import { ScoreGlow } from "@/components/ScoreBadge";
+import { FixBand } from "@/components/Money";
 
 const QUICK = ["E90", "320d", "N47", "330i", "E46", "E39"] as const;
 
@@ -72,7 +74,10 @@ export function SearchBox({ locale, hero = false }: { locale: Locale; hero?: boo
           {hits.length === 0 ? (
             <li className="px-4 py-4 text-sm text-[var(--muted)]">{copy.noResults}</li>
           ) : (
-            hits.map((hit) => (
+            hits.map((hit) => {
+              const summary = chassisSummary(hit.chassis.slug);
+              const split = summary && summary.best.slug !== summary.worst.slug;
+              return (
               <li key={hit.chassis.slug} className="border-b border-[var(--line)] last:border-0">
                 <Link
                   href={`/${locale}/bmw/${hit.chassis.slug}`}
@@ -94,15 +99,34 @@ export function SearchBox({ locale, hero = false }: { locale: Locale; hero?: boo
                     <span className="mt-0.5 block text-sm leading-5 text-[var(--muted)]">
                       {hit.chassis.name[locale]} · {hit.chassis.years}
                     </span>
+                    {summary?.fixBand ? (
+                      <span className="mt-1.5 block">
+                        <FixBand range={summary.fixBand} locale={locale} compact />
+                      </span>
+                    ) : null}
                     {hit.reason ? (
                       <span className="mt-1 block text-xs leading-5 text-[var(--ink)]/80">
                         {hit.reason[locale]}
                       </span>
                     ) : null}
                   </span>
+                  {summary ? (
+                    <span className="shrink-0 text-right font-display text-lg leading-none">
+                      {split ? (
+                        <>
+                          <ScoreGlow score={summary.best.score} />
+                          <span className="mx-0.5 text-xs text-white/25">/</span>
+                          <ScoreGlow score={summary.worst.score} />
+                        </>
+                      ) : (
+                        <ScoreGlow score={summary.best.score} />
+                      )}
+                    </span>
+                  ) : null}
                 </Link>
               </li>
-            ))
+              );
+            })
           )}
         </ul>
       )}

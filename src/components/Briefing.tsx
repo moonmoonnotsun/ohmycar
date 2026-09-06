@@ -2,7 +2,7 @@ import type { Chassis, Pain, VariantBrief } from "@/data/types";
 import type { Locale } from "@/lib/locale";
 import { t } from "@/lib/i18n";
 import { autodocUrl, interCarsUrl, mobileDeUrl, otomotoUrl } from "@/lib/links";
-import { FaultDiagram, FaultHint, WorkshopPrices } from "@/components/FaultExplain";
+import { FaultDiagram, FaultHint, SourceList, WorkshopPrices } from "@/components/FaultExplain";
 
 export function BuyBar({
   locale,
@@ -145,6 +145,7 @@ export function PainCard({
       >
         {copy.autodoc}: {pain.autodocQuery[locale]}
       </a>
+      <SourceList locale={locale} sources={pain.sources} />
       <details className="mt-3">
         <summary className="text-sm text-[var(--muted)]">{copy.faultDiagram}</summary>
         <div className="mt-2">

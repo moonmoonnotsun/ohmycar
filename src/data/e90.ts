@@ -1,3 +1,4 @@
+import { cite } from "./citations";
 import type { EngineLine, Pain, ScoreInputs } from "./types";
 
 function fillYears(
@@ -352,12 +353,7 @@ export const e90Pains: Pain[] = [
       en: "BMW E90 N47 timing chain",
       ru: "BMW E90 N47 цепь ГРМ",
     },
-    sources: [
-      {
-        label: "EngineScope N47 (competitor score, not ours)",
-        url: "https://enginescope.com",
-      },
-    ],
+    sources: [...cite.n47],
   },
   {
     id: "n54-hpfp",
@@ -386,7 +382,7 @@ export const e90Pains: Pain[] = [
       en: "BMW E90 N54 HPFP injectors",
       ru: "BMW E90 N54 ТНВД форсунки",
     },
-    sources: [],
+    sources: [...cite.n54],
   },
   {
     id: "n53-injectors",
@@ -415,7 +411,7 @@ export const e90Pains: Pain[] = [
       en: "BMW E90 N53 injectors",
       ru: "BMW E90 N53 форсунки",
     },
-    sources: [],
+    sources: [...cite.n53],
   },
   {
     id: "n43-injectors",
@@ -444,7 +440,7 @@ export const e90Pains: Pain[] = [
       en: "BMW E90 N43 injectors",
       ru: "BMW E90 N43 форсунки",
     },
-    sources: [],
+    sources: [...cite.n43],
   },
   {
     id: "water-pump",
@@ -473,7 +469,7 @@ export const e90Pains: Pain[] = [
       en: "BMW E90 N52 electric water pump",
       ru: "BMW E90 N52 электрическая помпа",
     },
-    sources: [],
+    sources: [...cite.n52],
   },
   {
     id: "swirl-flaps",
@@ -502,7 +498,7 @@ export const e90Pains: Pain[] = [
       en: "BMW E90 M57 swirl flaps",
       ru: "BMW E90 M57 вихревые заслонки",
     },
-    sources: [],
+    sources: [...cite.m57, ...cite.m47],
   },
   {
     id: "n57-timing",
@@ -531,7 +527,7 @@ export const e90Pains: Pain[] = [
       en: "BMW E90 N57 timing chain",
       ru: "BMW E90 N57 цепь ГРМ",
     },
-    sources: [],
+    sources: [...cite.n57],
   },
   {
     id: "timing-guides",
@@ -560,7 +556,7 @@ export const e90Pains: Pain[] = [
       en: "BMW E90 N46 timing chain",
       ru: "BMW E90 N46 цепь ГРМ",
     },
-    sources: [],
+    sources: [...cite.n46],
   },
   {
     id: "subframe-rust",
@@ -589,7 +585,7 @@ export const e90Pains: Pain[] = [
       en: "BMW E90 rear control arm subframe",
       ru: "BMW E90 задний рычаг подрамник",
     },
-    sources: [],
+    sources: [...cite.e90],
   },
   {
     id: "elv-cas",
@@ -618,7 +614,7 @@ export const e90Pains: Pain[] = [
       en: "BMW E90 ELV steering lock",
       ru: "BMW E90 ELV замок руля",
     },
-    sources: [],
+    sources: [...cite.e90],
   },
 ];
 

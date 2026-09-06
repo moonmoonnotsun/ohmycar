@@ -142,6 +142,7 @@ export function FaultHint({
         >
           {copy.autodoc}: {pain.autodocQuery[locale]}
         </a>
+        <SourceList locale={locale} sources={pain.sources} />
       </div>
     </dialog>
   );
@@ -160,6 +161,37 @@ export function FaultHint({
       </button>
       {mounted ? createPortal(sheet, document.body) : null}
     </span>
+  );
+}
+
+export function SourceList({
+  locale,
+  sources,
+}: {
+  locale: Locale;
+  sources: Pain["sources"];
+}) {
+  const copy = t(locale);
+  if (sources.length === 0) return null;
+  return (
+    <div className="mt-3">
+      <p className="text-[10px] font-semibold uppercase tracking-[0.14em] text-[var(--muted)]">{copy.sources}</p>
+      <ul className="mt-1 flex flex-col gap-1">
+        {sources.map((source) => (
+          <li key={source.url}>
+            <a
+              href={source.url}
+              target="_blank"
+              rel="noreferrer"
+              className="text-sm underline underline-offset-2"
+              onClick={(e) => e.stopPropagation()}
+            >
+              {source.label}
+            </a>
+          </li>
+        ))}
+      </ul>
+    </div>
   );
 }
 

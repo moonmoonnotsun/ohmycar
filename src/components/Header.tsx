@@ -1,25 +1,43 @@
 "use client";
 
 import Link from "next/link";
-import { usePathname, useRouter } from "next/navigation";
+import { useEffect, useRef, useState } from "react";
+import { usePathname } from "next/navigation";
 import type { Locale } from "@/lib/locale";
 import { locales, switchLocalePath } from "@/lib/locale";
 import { t } from "@/lib/i18n";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 
-const LANG_NAME: Record<Locale, string> = {
-  en: "English",
-  pl: "Polski",
-  ru: "Русский",
+const LANG_CODE: Record<Locale, string> = {
+  en: "EN",
+  pl: "PL",
+  ru: "RU",
 };
 
 export function Header({ locale }: { locale: Locale }) {
   const copy = t(locale);
   const pathname = usePathname() || `/${locale}`;
-  const router = useRouter();
   const parts = pathname.split("/").filter(Boolean);
   const onCatalog = parts[1] === "bmw" && !parts[2];
   const onScore = parts[1] === "score";
+  const [langOpen, setLangOpen] = useState(false);
+  const langRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    if (!langOpen) return;
+    function onPointer(event: PointerEvent) {
+      if (!langRef.current?.contains(event.target as Node)) setLangOpen(false);
+    }
+    function onKey(event: KeyboardEvent) {
+      if (event.key === "Escape") setLangOpen(false);
+    }
+    document.addEventListener("pointerdown", onPointer);
+    document.addEventListener("keydown", onKey);
+    return () => {
+      document.removeEventListener("pointerdown", onPointer);
+      document.removeEventListener("keydown", onKey);
+    };
+  }, [langOpen]);
 
   return (
     <header className="sticky top-0 z-50 border-b border-white/8 bg-[var(--paper)]/80 backdrop-blur-xl safe-top">
@@ -48,28 +66,43 @@ export function Header({ locale }: { locale: Locale }) {
           >
             {copy.scoreShort}
           </Link>
-          <div className="relative ml-1 inline-flex">
-            <label htmlFor="lang-select" className="sr-only">
-              {copy.lang}
-            </label>
-            <select
-              id="lang-select"
-              value={locale}
-              onChange={(event) => {
-                const next = event.target.value as Locale;
-                if (locales.includes(next)) router.push(switchLocalePath(pathname, locale, next));
-              }}
-              className="lang-select h-tap appearance-none rounded-full border border-white/12 bg-[var(--card)] pl-3 pr-8 text-xs font-semibold text-[var(--ink)] outline-none ring-[var(--accent)] focus:border-[var(--accent)] focus:ring-1"
+          <div ref={langRef} className="relative ml-1">
+            <button
+              type="button"
+              aria-haspopup="listbox"
+              aria-expanded={langOpen}
+              aria-label={copy.lang}
+              onClick={() => setLangOpen((open) => !open)}
+              className="h-tap inline-flex items-center gap-1 rounded-full border border-[var(--accent)] bg-[var(--card)] px-3 font-mono text-xs font-semibold tracking-wide"
             >
-              {locales.map((item) => (
-                <option key={item} value={item}>
-                  {LANG_NAME[item]}
-                </option>
-              ))}
-            </select>
-            <span className="pointer-events-none absolute right-2.5 top-1/2 -translate-y-1/2 text-[9px] text-[var(--muted)]">
-              ▾
-            </span>
+              {LANG_CODE[locale]}
+              <span className="text-[9px] text-[var(--muted)]" aria-hidden>
+                ▾
+              </span>
+            </button>
+            {langOpen ? (
+              <ul
+                role="listbox"
+                aria-label={copy.lang}
+                className="absolute right-0 top-[calc(100%+6px)] z-50 min-w-[4.5rem] overflow-hidden rounded-2xl border border-[var(--line)] bg-[var(--card)] py-1 shadow-[0_16px_40px_rgba(0,0,0,0.45)]"
+              >
+                {locales.map((item) => (
+                  <li key={item} role="option" aria-selected={item === locale}>
+                    <Link
+                      href={switchLocalePath(pathname, locale, item)}
+                      onClick={() => setLangOpen(false)}
+                      className={`flex h-10 items-center justify-center font-mono text-xs font-semibold tracking-wide ${
+                        item === locale
+                          ? "bg-[var(--accent)] text-[var(--paper)]"
+                          : "tap text-[var(--ink)]"
+                      }`}
+                    >
+                      {LANG_CODE[item]}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            ) : null}
           </div>
         </nav>
       </div>

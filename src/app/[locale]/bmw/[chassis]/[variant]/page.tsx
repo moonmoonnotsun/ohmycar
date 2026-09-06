@@ -118,7 +118,7 @@ export default async function VariantPage({
           <Stat label={copy.buy}>
             <Money value={variant.medianBuyPln} locale={locale} />
           </Stat>
-          <Stat label={copy.repair}>
+          <Stat label={copy.repair} hint={copy.repairHint}>
             <MoneyRange range={variant.expectedRepairPln} locale={locale} />
           </Stat>
         </div>
@@ -156,11 +156,12 @@ export default async function VariantPage({
   );
 }
 
-function Stat({ label, children }: { label: string; children: ReactNode }) {
+function Stat({ label, hint, children }: { label: string; hint?: string; children: ReactNode }) {
   return (
     <div className="rounded-2xl border border-[var(--line)] bg-[var(--card)] p-3">
       <p className="text-[10px] uppercase tracking-wide text-[var(--muted)]">{label}</p>
       <div className="mt-1 text-sm font-semibold tabular-nums sm:text-base">{children}</div>
+      {hint ? <p className="mt-2 text-[11px] leading-4 text-[var(--muted)]">{hint}</p> : null}
     </div>
   );
 }

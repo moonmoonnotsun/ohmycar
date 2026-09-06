@@ -5,6 +5,7 @@ import type { Chassis, ChassisFamily } from "@/data/types";
 import type { Locale } from "@/lib/locale";
 import { t, type Copy } from "@/lib/i18n";
 import { ChassisRow } from "@/components/ChassisCard";
+import { listScoreMarks } from "@/lib/catalog";
 
 const GROUPS: { title: keyof Copy; families: ChassisFamily[] }[] = [
   { title: "family3", families: ["3", "4"] },
@@ -69,18 +70,26 @@ export function CatalogExplorer({
         {filtered.length} {copy.chassisCount}
       </p>
 
-      {grouped.map((item) => (
+      {grouped.map((item) => {
+        const marks = listScoreMarks(item.items);
+        return (
         <section key={item.title} className="mt-6">
           <h2 className="mb-1 text-xs uppercase tracking-[0.16em] text-[var(--muted)]">
             {copy[item.title]} · {item.items.length}
           </h2>
           <div className="rounded-2xl border border-[var(--line)] bg-[var(--card)] px-4">
             {item.items.map((c) => (
-              <ChassisRow key={c.slug} chassis={c} locale={locale} />
+              <ChassisRow
+                key={c.slug}
+                chassis={c}
+                locale={locale}
+                marks={marks.get(c.slug) ?? []}
+              />
             ))}
           </div>
         </section>
-      ))}
+        );
+      })}
     </div>
   );
 }

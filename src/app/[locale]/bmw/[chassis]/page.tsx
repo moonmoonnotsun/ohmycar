@@ -5,10 +5,10 @@ import { chassisList, getChassis } from "@/data/chassis";
 import type { Chassis, VariantBrief } from "@/data/types";
 import { locales, isLocale, type Locale } from "@/lib/locale";
 import { t } from "@/lib/i18n";
-import { relatedBodies, summarizeVariants, variantsFor } from "@/lib/catalog";
+import { relatedBodies, summarizeVariants, variantsFor, fixBandForVariants } from "@/lib/catalog";
 import { VariantExplorer } from "@/components/VariantExplorer";
 import { ScoreGlow } from "@/components/ScoreBadge";
-import { Money } from "@/components/Money";
+import { Money, FixBand } from "@/components/Money";
 import { BodySwitcher } from "@/components/BodySwitcher";
 import { CarPhoto } from "@/components/CarPhoto";
 import { VerdictBlock } from "@/components/VerdictBlock";
@@ -49,6 +49,7 @@ export default async function ChassisPage({
   const variants = variantsFor(slug);
   const bodies = relatedBodies(slug);
   const summary = summarizeVariants(variants);
+  const fixes = fixBandForVariants(variants);
 
   const body = copy[bodyLabelKey(bodyOf(chassis))];
 
@@ -62,6 +63,11 @@ export default async function ChassisPage({
             <p className="mt-2 text-base text-[var(--muted)]">
               {chassis.name[locale]} · {chassis.years}
             </p>
+            {fixes ? (
+              <div className="mt-4">
+                <FixBand range={fixes} locale={locale} hint />
+              </div>
+            ) : null}
             {bodies.length > 1 ? (
               <p className="mt-3 max-w-xl text-sm leading-6 text-[var(--muted)]">{copy.drivetrainNote}</p>
             ) : null}
@@ -137,10 +143,11 @@ function FamilyPick({
   crop: string;
   emptyLabel: string;
 }) {
+  const copy = t(locale);
   return (
     <Link
       href={href}
-      className="tap group relative flex min-h-[7.75rem] overflow-hidden rounded-2xl border border-[var(--line)] bg-[var(--card)] sm:min-h-[8.75rem]"
+      className="tap group relative flex min-h-[11.5rem] overflow-hidden rounded-2xl border border-[var(--line)] bg-[var(--card)] sm:min-h-[12.5rem]"
     >
       <div className="relative z-10 min-w-0 w-[58%] p-3 pr-2 sm:p-4 sm:pr-3">
         <p
@@ -157,7 +164,13 @@ function FamilyPick({
           <ScoreGlow score={variant.score} />
         </p>
         <div className="mt-2">
-          <Money value={variant.medianBuyPln} locale={locale} />
+          <FixBand range={variant.expectedRepairPln} locale={locale} compact />
+        </div>
+        <div className="mt-2">
+          <p className="text-[9px] font-semibold uppercase tracking-[0.16em] text-[var(--muted)]">{copy.buy}</p>
+          <div className="mt-0.5">
+            <Money value={variant.medianBuyPln} locale={locale} />
+          </div>
         </div>
       </div>
       <CarPhoto

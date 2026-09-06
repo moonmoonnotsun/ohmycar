@@ -1,3 +1,4 @@
+import { cite } from "./citations";
 import type { EngineLine, Pain, ScoreInputs } from "./types";
 import { buy, fillYears, loc, n47Early, n47Late } from "./loc";
 
@@ -560,7 +561,7 @@ export const volumePains: Pain[] = [
     plnSpecialist: [1400, 3800],
     plnAso: [2500, 6000],
     autodocQuery: loc("BMW M54 radiator expansion tank", "BMW M54 chłodnica zbiornik wyrównawczy", "BMW M54 радиатор расширительный бачок"),
-    sources: [],
+    sources: [...cite.m54],
   },
   {
     id: "m54-disa",
@@ -577,7 +578,7 @@ export const volumePains: Pain[] = [
     plnSpecialist: [1000, 2800],
     plnAso: [1800, 4500],
     autodocQuery: loc("BMW M54 DISA valve", "BMW M54 klapa DISA", "BMW M54 клапан DISA"),
-    sources: [],
+    sources: [...cite.m54],
   },
   {
     id: "n20-chain",
@@ -594,7 +595,7 @@ export const volumePains: Pain[] = [
     plnSpecialist: [7000, 13000],
     plnAso: [11000, 18000],
     autodocQuery: loc("BMW N20 timing chain VANOS", "BMW N20 łańcuch VANOS", "BMW N20 цепь ГРМ VANOS"),
-    sources: [],
+    sources: [...cite.n20],
   },
   {
     id: "n20-oil-filter",
@@ -611,7 +612,7 @@ export const volumePains: Pain[] = [
     plnSpecialist: [700, 1800],
     plnAso: [1200, 2800],
     autodocQuery: loc("BMW N20 oil filter housing gasket", "BMW N20 uszczelka obudowy filtra oleju", "BMW N20 прокладка корпуса масляного фильтра"),
-    sources: [],
+    sources: [...cite.n20],
   },
   {
     id: "n62-valvetronic",
@@ -628,7 +629,7 @@ export const volumePains: Pain[] = [
     plnSpecialist: [7000, 16000],
     plnAso: [12000, 24000],
     autodocQuery: loc("BMW N62 Valvetronic actuator", "BMW N62 siłownik Valvetronic", "BMW N62 актуатор Valvetronic"),
-    sources: [],
+    sources: [...cite.n62],
   },
   {
     id: "b47-egr",
@@ -645,7 +646,7 @@ export const volumePains: Pain[] = [
     plnSpecialist: [3200, 8000],
     plnAso: [5000, 12000],
     autodocQuery: loc("BMW B47 EGR cooler", "BMW B47 chłodnica EGR", "BMW B47 охладитель EGR"),
-    sources: [],
+    sources: [...cite.b47],
   },
   {
     id: "n13-timing",
@@ -662,7 +663,7 @@ export const volumePains: Pain[] = [
     plnSpecialist: [4000, 10000],
     plnAso: [7000, 14000],
     autodocQuery: loc("BMW N13 timing chain HPFP", "BMW N13 łańcuch HPFP", "BMW N13 цепь ТНВД"),
-    sources: [],
+    sources: [...cite.n13],
   },
   {
     id: "e39-cooling",
@@ -679,7 +680,7 @@ export const volumePains: Pain[] = [
     plnSpecialist: [900, 2800],
     plnAso: [1600, 4500],
     autodocQuery: loc("BMW E39 coolant expansion tank", "BMW E39 zbiornik wyrównawczy", "BMW E39 расширительный бачок"),
-    sources: [],
+    sources: [...cite.e39],
   },
   {
     id: "eu-winter-rust",
@@ -701,7 +702,7 @@ export const volumePains: Pain[] = [
     plnSpecialist: [1500, 10000],
     plnAso: [3000, 16000],
     autodocQuery: loc("BMW rear subframe rust", "BMW belka tylna rdza", "BMW задний подрамник ржавчина"),
-    sources: [],
+    sources: [...cite.e90, ...cite.e39],
   },
   {
     id: "transfer-case",
@@ -719,6 +720,6 @@ export const volumePains: Pain[] = [
     plnSpecialist: [4000, 10000],
     plnAso: [7000, 15000],
     autodocQuery: loc("BMW X5 transfer case actuator", "BMW X5 siłownik skrzynki rozdzielczej", "BMW X5 актуатор раздатки"),
-    sources: [],
+    sources: [...cite.xdrive],
   },
 ];
