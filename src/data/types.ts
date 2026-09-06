@@ -1,0 +1,85 @@
+export type ChassisTag = "volume" | "famous" | "both";
+export type ChassisFamily = "3" | "4" | "5" | "1" | "2" | "x" | "luxury" | "z" | "i";
+export type Fuel = "petrol" | "diesel";
+export type ScoreStatus = "hypothesis" | "signed";
+export type PainSeverity =
+  | "engine-loss"
+  | "expensive"
+  | "overheat"
+  | "safety"
+  | "stranded"
+  | "annoyance";
+
+export type Localized = { en: string; pl: string; ru: string };
+
+export type Chassis = {
+  slug: string;
+  code: string;
+  name: Localized;
+  years: string;
+  yearStart: number;
+  yearEnd: number | null;
+  tag: ChassisTag;
+  family: ChassisFamily;
+  gold?: boolean;
+  /** Shared drivetrain briefing, e.g. E91 → e90 */
+  drivetrainOf?: string;
+  engines?: string[];
+  search: string[];
+};
+
+export type ScoreInputs = {
+  catastrophe: number;
+  expectedFix5yPln: number;
+  painLoad: number;
+  campaigns: number;
+  partsReality: number;
+};
+
+export type EngineLine = {
+  model: string;
+  engine: string;
+  fuel: Fuel;
+  years: number[];
+  topPainId: string;
+  medianBuyPlnByYear: Record<number, number>;
+  repairPln: [number, number];
+  inputsByYear: Record<number, ScoreInputs>;
+};
+
+export type Pain = {
+  id: string;
+  engines: string[];
+  yearFrom?: number;
+  yearTo?: number;
+  title: Localized;
+  affects: Localized;
+  summary: Localized;
+  severity: PainSeverity;
+  plnIndependent: [number, number];
+  plnSpecialist: [number, number];
+  plnAso: [number, number];
+  oemHint?: string;
+  autodocQuery: Localized;
+  sources: { label: string; url: string }[];
+  /** Limit a shared pain to these chassis (and their drivetrain twins). */
+  chassisSlugs?: string[];
+  /** Optional diagram of the failing part. Empty = placeholder. */
+  diagram?: string;
+};
+
+export type VariantBrief = {
+  slug: string;
+  chassisSlug: string;
+  chassisCode: string;
+  year: number;
+  model: string;
+  engine: string;
+  fuel: Fuel;
+  score: number;
+  scoreStatus: ScoreStatus;
+  medianBuyPln: number;
+  expectedRepairPln: [number, number];
+  topPainId: string;
+  inputs: ScoreInputs;
+};
