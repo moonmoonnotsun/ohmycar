@@ -2,7 +2,7 @@ import type { Chassis, Pain, VariantBrief } from "@/data/types";
 import type { Locale } from "@/lib/locale";
 import { t } from "@/lib/i18n";
 import { autodocUrl, interCarsUrl, mobileDeUrl, otomotoUrl } from "@/lib/links";
-import { FaultDiagram, FaultHint, SourceList, WorkshopPrices } from "@/components/FaultExplain";
+import { FaultDiagram, SourceList, WorkshopPrices } from "@/components/FaultExplain";
 
 export function BuyBar({
   locale,
@@ -50,25 +50,17 @@ export function MarketLinks({
 }) {
   const copy = t(locale);
   const query = `${chassis.code} ${variant.model} ${variant.engine}`;
+  const linkClass =
+    "h-tap inline-flex items-center rounded-xl border border-[var(--line)] px-4 text-sm font-medium text-[var(--ink)]";
   return (
     <section className="grid gap-3 sm:grid-cols-2">
       <div className="rounded-2xl border border-[var(--line)] bg-[var(--card)] p-4">
         <h2 className="text-sm font-semibold">{copy.whereCar}</h2>
         <div className="mt-3 flex flex-col gap-2">
-          <a
-            className="h-tap inline-flex items-center rounded-xl bg-[var(--accent)] px-4 text-sm font-medium text-[var(--paper)]"
-            href={otomotoUrl(chassis, variant)}
-            target="_blank"
-            rel="noreferrer"
-          >
+          <a className={linkClass} href={otomotoUrl(chassis, variant)} target="_blank" rel="noreferrer">
             {copy.openOtomoto}
           </a>
-          <a
-            className="h-tap inline-flex items-center rounded-xl border border-[var(--line)] px-4 text-sm"
-            href={mobileDeUrl(chassis, variant)}
-            target="_blank"
-            rel="noreferrer"
-          >
+          <a className={linkClass} href={mobileDeUrl(chassis, variant)} target="_blank" rel="noreferrer">
             {copy.mobile}
           </a>
         </div>
@@ -76,20 +68,10 @@ export function MarketLinks({
       <div className="rounded-2xl border border-[var(--line)] bg-[var(--card)] p-4">
         <h2 className="text-sm font-semibold">{copy.whereParts}</h2>
         <div className="mt-3 flex flex-col gap-2">
-          <a
-            className="h-tap inline-flex items-center rounded-xl bg-[var(--accent)] px-4 text-sm font-medium text-[var(--paper)]"
-            href={autodocUrl(query, locale)}
-            target="_blank"
-            rel="noreferrer"
-          >
+          <a className={linkClass} href={autodocUrl(query, locale)} target="_blank" rel="noreferrer">
             {copy.openParts}
           </a>
-          <a
-            className="h-tap inline-flex items-center rounded-xl border border-[var(--line)] px-4 text-sm"
-            href={interCarsUrl(query)}
-            target="_blank"
-            rel="noreferrer"
-          >
+          <a className={linkClass} href={interCarsUrl(query)} target="_blank" rel="noreferrer">
             {copy.intercars}
           </a>
         </div>
@@ -127,7 +109,6 @@ export function PainCard({
           <span className="text-[10px] font-semibold uppercase tracking-wide text-[var(--muted)]">
             {featured ? copy.topPain : copy[sev.key]}
           </span>
-          <FaultHint locale={locale} pain={pain} showTitle={false} />
         </span>
       </div>
       <p className="mt-2 text-sm leading-6 text-[var(--muted)]">{pain.summary[locale]}</p>

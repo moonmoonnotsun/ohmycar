@@ -106,6 +106,14 @@ export function getPain(id: string): Pain | undefined {
   return painById.get(id);
 }
 
+export function engineYearSpan(chassisSlug: string, model: string, engine: string): [number, number] | null {
+  const years = variantsFor(chassisSlug)
+    .filter((item) => item.model === model && item.engine === engine)
+    .map((item) => item.year);
+  if (years.length === 0) return null;
+  return [Math.min(...years), Math.max(...years)];
+}
+
 function roundPln(n: number) {
   return Math.round(n / 100) * 100;
 }
@@ -147,15 +155,15 @@ const BADGE_HITS: { query: string; slugs: string[]; reason: Localized }[] = [
   {
     query: "330d",
     slugs: ["e46", "e90", "f30", "g20"],
-    reason: loc("3.0 diesel — split the generations", "Diesel 3.0 — rozdziel generacje", "Дизель 3.0 — не смешивай поколения"),
+    reason: loc("3.0 diesel — split the generations", "Diesel 3.0 — rozdziel generacje", "Дизель 3.0 — не путайте поколения"),
   },
   {
     query: "320d",
     slugs: ["e46", "e90", "f30", "g20", "e87"],
     reason: loc(
-      "Poland’s default diesel — do not blend N47 with B47",
+      "The common diesel in Poland — do not mix N47 with B47",
       "Najczęstszy diesel w PL — nie mieszaj N47 z B47",
-      "Главный дизель в Польше — не мешай N47 с B47",
+      "Частый дизель в Польше — не путайте N47 с B47",
     ),
   },
 ];

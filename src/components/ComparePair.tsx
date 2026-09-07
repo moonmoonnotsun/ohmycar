@@ -25,8 +25,7 @@ export function ComparePair({
   return (
     <section>
       <p className="text-[11px] font-medium uppercase tracking-[0.2em] text-[var(--muted)]">{copy.sameBadge}</p>
-      <h2 className="mt-2 max-w-[22ch] font-display text-[1.7rem] leading-[1.1] sm:text-4xl">{copy.compareLead}</h2>
-      <div className="mt-5 overflow-hidden rounded-3xl border border-white/8 bg-[var(--card)]">
+      <div className="mt-3 overflow-hidden rounded-3xl border border-white/8 bg-[var(--card)]">
         {chassis ? (
           <CarPhoto
             chassis={chassis}

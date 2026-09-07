@@ -22,19 +22,6 @@ export function VerdictBlock({ locale, verdict }: { locale: Locale; verdict: Ver
   return (
     <section className="rounded-2xl border border-[var(--line)] bg-[var(--card)] p-4 sm:p-5">
       <p className="text-[11px] font-medium uppercase tracking-[0.18em] text-[var(--muted)]">{copy.verdict}</p>
-      <p className="mt-3 hidden text-[15px] leading-7 sm:block">{summary}</p>
-      <div className="sm:hidden">
-        <p className="mt-3 text-[15px] leading-7">{open || !truncated ? summary : preview}</p>
-        {truncated ? (
-          <button
-            type="button"
-            onClick={() => setOpen((value) => !value)}
-            className="mt-3 inline-flex h-tap items-center rounded-full border border-[var(--accent)] px-4 text-sm font-semibold text-[var(--accent)]"
-          >
-            {open ? copy.showLess : copy.showMore}
-          </button>
-        ) : null}
-      </div>
       <div className="mt-4 grid gap-3 sm:grid-cols-2">
         <div className="rounded-xl bg-[var(--good-bg)] px-3 py-3">
           <p className="text-[10px] font-semibold uppercase tracking-wide text-[var(--good)]">{copy.verdictGood}</p>
@@ -44,6 +31,19 @@ export function VerdictBlock({ locale, verdict }: { locale: Locale; verdict: Ver
           <p className="text-[10px] font-semibold uppercase tracking-wide text-[var(--bad)]">{copy.verdictBad}</p>
           <p className="mt-1.5 text-sm leading-6">{tx(verdict.bad, locale)}</p>
         </div>
+      </div>
+      <p className="mt-4 hidden text-[15px] leading-7 text-[var(--muted)] sm:block">{summary}</p>
+      <div className="sm:hidden">
+        <p className="mt-4 text-[15px] leading-7 text-[var(--muted)]">{open || !truncated ? summary : preview}</p>
+        {truncated ? (
+          <button
+            type="button"
+            onClick={() => setOpen((value) => !value)}
+            className="mt-3 inline-flex h-tap items-center rounded-full border border-[var(--accent)] px-4 text-sm font-semibold text-[var(--accent)]"
+          >
+            {open ? copy.showLess : copy.showMore}
+          </button>
+        ) : null}
       </div>
       <p className="mt-3 text-xs text-[var(--muted)]">{copy.hypothesis}</p>
     </section>

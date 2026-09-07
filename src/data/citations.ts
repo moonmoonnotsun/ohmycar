@@ -32,6 +32,8 @@ export const cite = {
     },
     wiki("BMW_N20", "Wikipedia · BMW N20"),
   ],
+  n20Wiki: [wiki("BMW_N20", "Wikipedia · BMW N20")],
+  f30: [wiki("BMW_3_Series_(F30)", "Wikipedia · BMW 3 Series (F30)")],
   m54: [wiki("BMW_M54", "Wikipedia · BMW M54")],
   n62: [wiki("BMW_N62", "Wikipedia · BMW N62")],
   b47: [wiki("BMW_B47", "Wikipedia · BMW B47")],

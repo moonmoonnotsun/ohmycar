@@ -55,7 +55,11 @@ export function VariantExplorer({
       const years = list.map((item) => item.year);
       const scores = list.map((item) => item.score);
       const worst = list.reduce((a, b) => (a.score <= b.score ? a : b));
-      const chronological = [...list].sort((a, b) => a.year - b.year || a.model.localeCompare(b.model));
+      const rows = [...list].sort((a, b) => {
+        if (sort === "buy") return a.medianBuyPln - b.medianBuyPln || b.score - a.score;
+        if (sort === "repair") return a.expectedRepairPln[1] - b.expectedRepairPln[1] || b.score - a.score;
+        return b.score - a.score || b.year - a.year;
+      });
       return {
         engine,
         fuel: list[0].fuel,
@@ -69,7 +73,7 @@ export function VariantExplorer({
         minBuy: Math.min(...list.map((item) => item.medianBuyPln)),
         minRepair: Math.min(...list.map((item) => item.expectedRepairPln[0])),
         maxRepair: Math.max(...list.map((item) => item.expectedRepairPln[1])),
-        rows: chronological,
+        rows,
       };
     });
     out.sort((a, b) => {
@@ -286,11 +290,11 @@ function EngineBlock({
             </span>
           </span>
         </th>
-        <td className="px-4 py-3 tabular-nums text-[var(--muted)]">
+        <td className="px-4 py-3 font-mono text-base font-semibold tabular-nums text-[var(--ink)]">
           {group.yearFrom}–{group.yearTo}
         </td>
         <td className="px-4 py-3 text-right">
-          <ScoreBadge score={group.worst} size="sm" />
+          <ScoreBadge score={group.best} size="sm" />
           {group.best !== group.worst ? (
             <span className="mt-1 block text-[10px] text-[var(--muted)]">
               {group.worst.toFixed(1)}–{group.best.toFixed(1)}
@@ -322,7 +326,7 @@ function EngineBlock({
                     {row.model} {row.engine}
                   </Link>
                 </td>
-                <td className="px-4 py-2.5 tabular-nums">{row.year}</td>
+                <td className="px-4 py-2.5 font-mono text-base font-semibold tabular-nums text-[var(--ink)]">{row.year}</td>
                 <td className="px-4 py-2.5 text-right">
                   <ScoreBadge score={row.score} size="sm" />
                 </td>
@@ -385,12 +389,13 @@ function MobileGroup({
           <div className="flex items-start justify-between gap-3">
             <div className="min-w-0">
               <p className="font-mono text-xl font-semibold">{group.engine}</p>
-              <p className="mt-0.5 text-sm text-[var(--muted)]">
-                {group.models.join(" · ")} · {group.yearFrom}–{group.yearTo}
+              <p className="mt-0.5 text-sm text-[var(--muted)]">{group.models.join(" · ")}</p>
+              <p className="mt-1 font-mono text-sm font-semibold tabular-nums text-[var(--ink)]">
+                {group.yearFrom}–{group.yearTo}
               </p>
             </div>
             <div className="shrink-0 text-right">
-              <ScoreBadge score={group.worst} size="sm" />
+              <ScoreBadge score={group.best} size="sm" />
             </div>
           </div>
           <div className="mt-3">
@@ -430,7 +435,7 @@ function MobileGroup({
                 <Link href={href} className="tap block px-4 py-3">
                   <div className="flex items-start justify-between gap-3">
                     <p className="min-w-0 text-sm font-semibold">
-                      {row.year} {row.model}
+                      <span className="font-mono tabular-nums">{row.year}</span> {row.model}
                     </p>
                     <ScoreBadge score={row.score} size="sm" />
                   </div>

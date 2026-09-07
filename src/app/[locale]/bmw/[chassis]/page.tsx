@@ -92,7 +92,7 @@ export default async function ChassisPage({
               variant={summary.best}
               label={copy.bestInFamily}
               tone="good"
-              crop="32% 58%"
+              crop="50% 55%"
               emptyLabel={copy.photoSoon}
             />
             <FamilyPick
@@ -102,7 +102,7 @@ export default async function ChassisPage({
               variant={summary.worst}
               label={copy.worstInFamily}
               tone="bad"
-              crop="68% 58%"
+              crop="50% 55%"
               emptyLabel={copy.photoSoon}
             />
           </div>
@@ -157,9 +157,14 @@ function FamilyPick({
         >
           {label}
         </p>
-        <p className="mt-2 text-sm font-semibold leading-snug">
-          {variant.year} {variant.model} {variant.engine}
-        </p>
+        <div className="mt-2 flex flex-wrap items-center gap-2">
+          <p className="font-mono text-xl font-semibold leading-none tracking-tight sm:text-2xl">
+            {variant.year}
+          </p>
+          <p className="inline-flex max-w-full rounded-lg border border-white/20 bg-[var(--wash)] px-2 py-1 text-sm font-semibold leading-none sm:text-base">
+            {variant.model} {variant.engine}
+          </p>
+        </div>
         <p className="mt-3 font-display text-4xl leading-none">
           <ScoreGlow score={variant.score} />
         </p>

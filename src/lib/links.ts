@@ -1,43 +1,47 @@
 import type { Locale } from "@/lib/locale";
 import type { Chassis, VariantBrief } from "@/data/types";
-import { bodyOf } from "@/lib/carImage";
+import { engineYearSpan } from "@/lib/catalog";
 
-function otomotoBody(chassis: Chassis): string | null {
-  const style = bodyOf(chassis);
-  if (style === "touring") return "kombi";
-  if (style === "coupe") return "coupe";
-  if (style === "cabrio") return "cabrio";
-  if (style === "hatch") return "hatchback";
-  if (style === "suv") return "suv";
-  if (chassis.slug === "e90") return "sedan";
+function otomotoSeries(chassis: Chassis): string | null {
+  if (chassis.family === "3") return "seria-3";
+  if (chassis.family === "4") return "seria-4";
+  if (chassis.family === "5") return "seria-5";
+  if (chassis.family === "1" || chassis.family === "2") return "seria-1";
+  if (chassis.slug === "e83") return "x3";
+  if (chassis.slug === "e70" || chassis.slug === "e53") return "x5";
+  if (chassis.family === "x") return "x5";
   return null;
 }
 
-export function otomotoUrl(chassis: Chassis, variant?: VariantBrief): string {
-  const params = new URLSearchParams();
-  params.set("search[filter_float_year:from]", String(variant?.year ?? chassis.yearStart));
-  params.set(
-    "search[filter_float_year:to]",
-    String(variant?.year ?? chassis.yearEnd ?? 2026),
-  );
-  const q = ["bmw", chassis.code, variant?.model, variant?.engine].filter(Boolean).join(" ");
-  params.set("q", q);
-  const body = otomotoBody(chassis);
-  if (body) {
-    params.set("search[filter_enum_body_type]", body);
+function yearSpan(chassis: Chassis, variant?: VariantBrief): [number, number] {
+  if (variant) {
+    return engineYearSpan(variant.chassisSlug, variant.model, variant.engine) ?? [variant.year, variant.year];
   }
-  return `https://www.otomoto.pl/osobowe/bmw?${params.toString()}`;
+  return [chassis.yearStart, chassis.yearEnd ?? chassis.yearStart];
+}
+
+export function otomotoUrl(chassis: Chassis, variant?: VariantBrief): string {
+  const [from, to] = yearSpan(chassis, variant);
+  const parts = ["osobowe", "bmw"];
+  const series = otomotoSeries(chassis);
+  if (series) parts.push(series);
+  if (variant?.model) parts.push(`ver-${variant.model.toLowerCase()}`);
+  const params = new URLSearchParams();
+  params.set("search[filter_float_year:from]", String(from));
+  params.set("search[filter_float_year:to]", String(to));
+  return `https://www.otomoto.pl/${parts.join("/")}?${params.toString()}`;
 }
 
 export function mobileDeUrl(chassis: Chassis, variant?: VariantBrief): string {
+  const [from, to] = yearSpan(chassis, variant);
   const params = new URLSearchParams({
     dam: "0",
     isSearchRequest: "true",
     s: "Car",
     vc: "Car",
     ms: "3500",
-    minfirstRegistrationDate: String(variant?.year ?? chassis.yearStart),
-    maxfirstRegistrationDate: String(variant?.year ?? chassis.yearEnd ?? 2026),
+    minfirstRegistrationDate: String(from),
+    maxfirstRegistrationDate: String(to),
   });
   if (variant) params.set("q", `${variant.model} ${chassis.code}`);
   else params.set("q", chassis.code);
