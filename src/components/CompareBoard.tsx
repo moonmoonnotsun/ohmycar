@@ -24,15 +24,21 @@ export function CompareBoard({
   const copy = t(locale);
   const aKey = left ? `${left.chassis.slug}/${left.variant.slug}` : undefined;
   const bKey = right ? `${right.chassis.slug}/${right.variant.slug}` : undefined;
+  const oneOnly = Boolean(left) !== Boolean(right);
 
   return (
     <div>
+      {oneOnly ? (
+        <p className="mb-4 rounded-xl border border-[var(--accent)]/35 bg-[var(--mid-bg)] px-4 py-3 text-sm leading-6 text-[var(--ink)]">
+          {copy.compareNeedSecond}
+        </p>
+      ) : null}
+
       <div className="relative grid gap-3 md:grid-cols-2">
         <CompareColumn
           locale={locale}
           slot="a"
           entry={left}
-          otherKey={bKey}
           removeHref={compareHref(locale, undefined, bKey)}
         />
         <div className="pointer-events-none absolute left-1/2 top-10 z-10 hidden -translate-x-1/2 md:block">
@@ -44,7 +50,6 @@ export function CompareBoard({
           locale={locale}
           slot="b"
           entry={right}
-          otherKey={aKey}
           removeHref={compareHref(locale, aKey, undefined)}
         />
       </div>
@@ -70,31 +75,31 @@ function CompareColumn({
   locale,
   slot,
   entry,
-  otherKey,
   removeHref,
 }: {
   locale: Locale;
   slot: "a" | "b";
   entry: { chassis: Chassis; variant: VariantBrief } | null;
-  otherKey?: string;
   removeHref: string;
 }) {
   const copy = t(locale);
   if (!entry) {
+    const isFirst = slot === "a";
     return (
       <div className="flex min-h-[16rem] flex-col items-center justify-center rounded-2xl border border-dashed border-[var(--line)] bg-[var(--card)] p-6 text-center">
-        <p className="text-sm text-[var(--muted)]">{copy.compareSlot}</p>
+        <p className="text-[11px] font-medium uppercase tracking-[0.16em] text-[var(--muted)]">
+          {isFirst ? copy.compareSlot1 : copy.compareSlot2}
+        </p>
+        <p className="mt-3 font-display text-xl tracking-tight text-[var(--ink)]">
+          {isFirst ? copy.comparePickFirst : copy.comparePickSecond}
+        </p>
+        <p className="mt-2 max-w-[16rem] text-sm leading-6 text-[var(--muted)]">{copy.comparePickHint}</p>
         <Link
           href={`/${locale}/bmw`}
-          className="mt-3 text-sm font-medium text-[var(--accent)] underline underline-offset-2"
+          className="tap mt-5 inline-flex h-11 items-center justify-center rounded-full border border-[var(--accent)] px-5 text-sm font-semibold text-[var(--accent)]"
         >
-          {copy.catalog}
+          {copy.compareBrowse}
         </Link>
-        {otherKey ? (
-          <p className="mt-2 text-xs text-[var(--muted)]">
-            {slot === "b" ? "B" : "A"}
-          </p>
-        ) : null}
       </div>
     );
   }
@@ -106,7 +111,10 @@ function CompareColumn({
     <article className="relative rounded-2xl border border-[var(--line)] bg-[var(--card)] p-4">
       <div className="flex items-start justify-between gap-2">
         <div className="min-w-0">
-          <p className="font-mono text-xs text-[var(--muted)]">{chassis.code}</p>
+          <p className="text-[11px] font-medium uppercase tracking-[0.16em] text-[var(--muted)]">
+            {slot === "a" ? copy.compareSlot1 : copy.compareSlot2}
+          </p>
+          <p className="mt-1 font-mono text-xs text-[var(--muted)]">{chassis.code}</p>
           <h2 className="mt-1 font-display text-xl tracking-tight">
             {variant.model}
             <span className="mt-0.5 block font-mono text-sm font-medium text-[var(--muted)]">

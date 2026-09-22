@@ -93,26 +93,22 @@ export default async function VariantPage({
                 {chassis.name[locale]}
                 <span className="text-[var(--muted)]"> ({chassis.code})</span>
               </h1>
-              <div className="mt-2 flex flex-wrap items-center gap-2">
-                <span className="text-sm font-semibold tracking-tight text-[var(--ink)]">
-                  {chassis.years}
+              <p className="mt-2 text-sm text-[var(--muted)]">
+                {chassis.years}
+                <span className="mx-1.5 text-[var(--line)]" aria-hidden>
+                  ·
                 </span>
-                <span className="inline-flex h-7 items-center rounded-full border border-[var(--line)] px-2.5 text-xs font-semibold text-[var(--ink)]">
-                  {body}
-                </span>
-              </div>
-              <div className="mt-2.5 flex flex-wrap items-center gap-2">
-                <span className="text-sm font-semibold tracking-tight text-[var(--ink)]">
+                {body}
+              </p>
+              <div className="mt-3.5 flex flex-wrap items-center gap-2.5">
+                <span className="text-[1.35rem] font-semibold tracking-tight text-[var(--ink)] tabular-nums sm:text-[1.5rem]">
                   {variant.year}
                 </span>
-                <span className="inline-flex h-7 items-center rounded-full border border-[var(--line)] px-2.5 text-xs font-semibold text-[var(--ink)]">
+                <span className="inline-flex h-8 items-center rounded-full border border-[var(--line)] bg-[var(--wash)] px-3 text-sm font-medium text-[var(--ink)]">
                   {variant.model} {variant.engine}
                 </span>
-                <span className="inline-flex h-7 items-center rounded-full border border-[var(--line)] px-2.5 text-xs font-semibold text-[var(--ink)]">
-                  {variant.fuel === "diesel" ? copy.fuelDiesel : copy.fuelPetrol}
-                </span>
               </div>
-              <p className="mt-2 text-sm leading-6 text-[var(--muted)]">{statusLabel}</p>
+              <p className="mt-2.5 text-sm leading-6 text-[var(--muted)]">{statusLabel}</p>
             </div>
             <div className="mt-5">
               <VariantSwitcher locale={locale} chassisSlug={slug} variant={variant} />

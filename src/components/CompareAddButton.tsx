@@ -1,5 +1,6 @@
 "use client";
 
+import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 import { Bookmark } from "lucide-react";
 import type { Locale } from "@/lib/locale";
@@ -19,6 +20,20 @@ export function CompareAddButton({
   const copy = t(locale);
   const router = useRouter();
   const key = compareSlotKey(chassisSlug, variantSlug);
+  const [label, setLabel] = useState(copy.addToCompare);
+
+  useEffect(() => {
+    const slots = readCompareSlots();
+    if (slots.a === key || slots.b === key) {
+      setLabel(copy.compareInTray);
+    } else if (!slots.a) {
+      setLabel(copy.addToCompare);
+    } else if (!slots.b) {
+      setLabel(copy.compareAddSecond);
+    } else {
+      setLabel(copy.compareReplace);
+    }
+  }, [key, copy.addToCompare, copy.compareInTray, copy.compareAddSecond, copy.compareReplace]);
 
   return (
     <button
@@ -33,14 +48,14 @@ export function CompareAddButton({
         }
         if (!a) a = key;
         else if (!b) b = key;
-        else b = key;
+        else b = key; // third pick replaces car 2
         writeCompareSlots({ a, b });
         router.push(compareHref(locale, a, b));
       }}
       className="tap inline-flex h-tap w-full shrink-0 items-center justify-center gap-2 rounded-full border border-[var(--line)] bg-transparent px-3.5 text-sm font-medium text-[var(--muted)] hover:border-white/20 hover:text-[var(--ink)]"
     >
       <Bookmark className="size-4" strokeWidth={1.75} aria-hidden />
-      {copy.addToCompare}
+      {label}
     </button>
   );
 }

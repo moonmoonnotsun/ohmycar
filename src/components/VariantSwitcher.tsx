@@ -91,8 +91,8 @@ export function VariantSwitcher({
                 href={variantHref(locale, chassisSlug, target.slug)}
                 className={`h-tap inline-flex shrink-0 items-center rounded-full border px-3.5 text-sm font-medium tabular-nums ${
                   active
-                    ? "border-[var(--line)] bg-transparent text-[var(--accent)] outline outline-2 outline-offset-0 outline-[var(--accent)]"
-                    : "border-[var(--line)] bg-transparent text-[var(--muted)]"
+                    ? "border-[var(--accent)] bg-transparent text-[var(--accent)]"
+                    : "border-transparent bg-transparent text-[var(--muted)]"
                 }`}
               >
                 {model}
@@ -132,7 +132,7 @@ export function VariantSwitcher({
             })}
           </div>
 
-          <div className="mt-4 flex justify-end">
+          <div className="mt-4 flex justify-center md:justify-end">
             <div className="inline-flex items-center gap-3 text-[12px] leading-none text-[var(--muted)]">
               <span className="inline-flex items-center gap-2">
                 <span className="size-2.5 shrink-0 rounded-full bg-[var(--good)]" aria-hidden />

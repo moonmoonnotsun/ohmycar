@@ -13,13 +13,14 @@ export function ComparePair({
   left,
   right,
   analysisHref,
+  compareHref,
 }: {
   locale: Locale;
   chassisSlug: string;
   left: VariantBrief;
   right: VariantBrief;
   analysisHref: string;
-  compareHref?: string;
+  compareHref: string;
 }) {
   const copy = t(locale);
   const chassis = getChassis(chassisSlug);
@@ -46,10 +47,10 @@ export function ComparePair({
           {copy.sameBadgeLead}
         </p>
         <Link
-          href={`/${locale}/bmw`}
+          href={compareHref}
           className="tap mt-7 inline-flex h-11 items-center justify-center gap-2 rounded-full border border-[var(--accent)] px-5 text-sm font-semibold text-[var(--accent)]"
         >
-          {copy.findReliable}
+          {copy.compareThese}
           <span aria-hidden>→</span>
         </Link>
       </div>
@@ -95,9 +96,9 @@ export function ComparePair({
             {bestYearsLabel ? (
               <Link
                 href={`/${locale}/bmw/${chassisSlug}/${left.slug}`}
-                className="tap mt-3 flex items-center gap-3 border-t border-[var(--line)] pt-3"
+                className="group mt-3 flex items-center gap-3 border-t border-[var(--line)] pt-3"
               >
-                <span className="inline-flex size-9 shrink-0 items-center justify-center rounded-lg border border-[var(--line)] bg-[var(--wash)] text-[var(--muted)]">
+                <span className="inline-flex size-9 shrink-0 items-center justify-center rounded-lg border border-[var(--line)] bg-[var(--wash)] text-[var(--muted)] transition-colors group-hover:border-white/20 group-hover:text-[var(--ink)]">
                   <CalendarDays className="size-4" strokeWidth={1.75} aria-hidden />
                 </span>
                 <span className="min-w-0 flex-1">
@@ -106,17 +107,20 @@ export function ComparePair({
                   </span>
                   <span className="mt-0.5 block text-sm font-semibold text-[var(--ink)]">{bestYearsLabel}</span>
                 </span>
-                <ChevronRight className="size-4 shrink-0 text-[var(--muted)]" strokeWidth={1.75} aria-hidden />
+                <ChevronRight
+                  className="size-4 shrink-0 text-[var(--muted)] transition-transform group-hover:translate-x-0.5 group-hover:text-[var(--ink)]"
+                  strokeWidth={1.75}
+                  aria-hidden
+                />
               </Link>
             ) : null}
 
             <div className="mt-5">
               <Link
                 href={analysisHref}
-                className="tap flex h-11 w-full items-center justify-center gap-2 rounded-full border border-[var(--accent)] bg-transparent px-4 text-sm font-semibold text-[var(--accent)]"
+                className="tap inline-flex h-10 items-center text-sm font-medium text-[var(--muted)] underline underline-offset-2"
               >
                 {copy.openAnalysis}
-                <span aria-hidden>→</span>
               </Link>
             </div>
           </div>

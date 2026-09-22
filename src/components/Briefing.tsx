@@ -3,6 +3,7 @@ import type { Locale } from "@/lib/locale";
 import { t } from "@/lib/i18n";
 import { autodocBmwUrl, autodocUrl, interCarsUrl, mobileDeUrl, otomotoUrl, partsQuery } from "@/lib/links";
 import { FaultDiagram, SourceList, WorkshopPrices } from "@/components/FaultExplain";
+import { SeverityPill } from "@/components/SeverityPill";
 
 export function BuyBar({
   locale,
@@ -21,7 +22,7 @@ export function BuyBar({
           href={otomotoUrl(chassis, variant)}
           target="_blank"
           rel="noreferrer"
-          className="h-tap inline-flex items-center justify-center rounded-full bg-[var(--accent)] px-3 text-sm font-semibold text-[var(--paper)]"
+          className="h-tap inline-flex items-center justify-center rounded-full border border-[var(--line)] bg-transparent px-3 text-sm font-medium text-[var(--ink)]"
         >
           {copy.otomoto}
         </a>
@@ -29,7 +30,7 @@ export function BuyBar({
           href={autodocBmwUrl(locale, chassis, variant)}
           target="_blank"
           rel="noreferrer"
-          className="h-tap inline-flex items-center justify-center rounded-full bg-[var(--accent)] px-3 text-sm font-semibold text-[var(--paper)]"
+          className="h-tap inline-flex items-center justify-center rounded-full border border-[var(--line)] bg-transparent px-3 text-sm font-medium text-[var(--ink)]"
         >
           {copy.autodoc}
         </a>
@@ -93,7 +94,6 @@ export function PainCard({
   pain,
   chassis,
   variant,
-  featured,
 }: {
   locale: Locale;
   pain: Pain;
@@ -104,15 +104,11 @@ export function PainCard({
   const copy = t(locale);
   const sev = SEV[pain.severity];
   return (
-    <article className="relative overflow-x-clip rounded-xl border border-[var(--line)] bg-[var(--wash)] p-4 pl-5">
-      <span className={`absolute inset-y-0 left-0 w-1 ${sev.bar}`} />
+    <article className="relative overflow-hidden rounded-xl border border-[var(--line)] bg-[var(--wash)] p-4 pl-5">
+      <span className={`absolute inset-y-0 left-0 w-1 ${sev.bar}`} aria-hidden />
       <div className="flex flex-wrap items-center justify-between gap-2">
         <h3 className="min-w-0 text-base font-semibold leading-snug">{pain.title[locale]}</h3>
-        <span className="inline-flex items-center gap-2">
-          <span className="text-[10px] font-semibold uppercase tracking-wide text-[var(--muted)]">
-            {featured ? copy.topPain : copy[sev.key]}
-          </span>
-        </span>
+        <SeverityPill locale={locale} severity={pain.severity} />
       </div>
       <p className="mt-2 text-sm leading-6 text-[var(--muted)]">{pain.summary[locale]}</p>
       <p className="mt-2 text-sm">

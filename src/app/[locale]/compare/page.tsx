@@ -37,9 +37,9 @@ export default async function ComparePage({
 
       <Suspense
         fallback={
-          <p className="rounded-2xl border border-dashed border-[var(--line)] bg-[var(--card)] px-4 py-8 text-center text-sm text-[var(--muted)]">
-            {copy.compareEmpty}
-          </p>
+          <div className="rounded-2xl border border-dashed border-[var(--line)] bg-[var(--card)] px-4 py-8 text-center text-sm text-[var(--muted)]">
+            {copy.compareHowTitle}…
+          </div>
         }
       >
         <CompareView locale={locale} />
