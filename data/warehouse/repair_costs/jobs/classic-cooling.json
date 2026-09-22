@@ -1,0 +1,54 @@
+{
+  "pain_id": "classic-cooling",
+  "status": "quoted_parts_plus_labor",
+  "currency": "PLN",
+  "region": "PL",
+  "collected_at": "2026-09-23T01:15:00Z",
+  "fx_note": "Family prior e36-cooling + S38 pump OEM ~400€",
+  "parts_pln": [
+    400,
+    1720
+  ],
+  "labor_pln": [
+    400,
+    1200
+  ],
+  "totals_pln": {
+    "independent": [
+      800,
+      2500
+    ],
+    "specialist": [
+      1200,
+      3500
+    ],
+    "aso": [
+      2000,
+      5000
+    ]
+  },
+  "quotes": [
+    {
+      "tier": "parts",
+      "pln_low": 1720,
+      "pln_high": 1720,
+      "label": "M5Board · S38 OEM water pump historically ~400€",
+      "url": "https://www.m5board.com/threads/s38-water-pump-rebuild.608383/"
+    },
+    {
+      "tier": "parts",
+      "pln_low": 2380,
+      "pln_high": 2380,
+      "label": "M5Board · S38 water pump rebuild service $595",
+      "url": "https://www.m5board.com/threads/e34m5-s38-b36-s38-b38-water-pump-rebuilt-service-with-core-exchange.618583/"
+    },
+    {
+      "tier": "specialist",
+      "pln_low": 800,
+      "pln_high": 2200,
+      "label": "Family prior · e36-cooling independent band (plastics refresh)",
+      "url": "http://www.bimmerboard.com/forums/posts/1269691"
+    }
+  ],
+  "formula": "classic M20/M30/S14/S38 cooling refresh ≈ e36-cooling + pump OEM quotes"
+}

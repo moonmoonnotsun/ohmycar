@@ -1,0 +1,44 @@
+{
+  "pain_id": "n57-timing",
+  "status": "quoted_workshop_band",
+  "totals_pln": {
+    "independent": [
+      2000,
+      4000
+    ],
+    "specialist": [
+      2800,
+      5000
+    ],
+    "aso": [
+      8499,
+      8499
+    ]
+  },
+  "quotes": [
+    {
+      "tier": "independent",
+      "pln_low": 2000,
+      "pln_high": 4000,
+      "label": "kosztserwisu.pl · N57",
+      "url": "https://kosztserwisu.pl/koszty-napraw/rozrzad/wymiana-rozrzadu-bmw/"
+    },
+    {
+      "tier": "independent",
+      "pln_low": 2800,
+      "pln_high": 2800,
+      "label": "Bosch Sawa · N57 od",
+      "url": "https://www.bosch-sawa.pl/wymiana-rozrzadu-bmw-lublin/"
+    },
+    {
+      "tier": "aso",
+      "pln_low": 8499,
+      "pln_high": 8499,
+      "label": "BMW Smorawiński GZ · N57 od 8499 zł",
+      "url": "https://www.bmw-smorawinskigz.pl/wymiana-rozrzadu"
+    }
+  ],
+  "collected_at": "2026-09-22T21:30:00Z",
+  "currency": "PLN",
+  "region": "PL"
+}

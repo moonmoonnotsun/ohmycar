@@ -1,0 +1,35 @@
+{
+  "chassis_slug": "e65",
+  "region": "PL",
+  "collected_at": "2026-09-23T00:30:00Z",
+  "confidence": "sourced_curated",
+  "phase": "D_long_tail",
+  "sources": [
+    {
+      "label": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/BMW_7_Series_(E65)"
+    },
+    {
+      "label": "RealOEM",
+      "url": "https://www.realoem.com/bmw/"
+    }
+  ],
+  "lines": [
+    {
+      "model": "745i",
+      "engine": "N62",
+      "fuel": "petrol",
+      "years": [
+        2001,
+        2002,
+        2003,
+        2004,
+        2005,
+        2006,
+        2007,
+        2008
+      ]
+    }
+  ],
+  "line_count": 1
+}

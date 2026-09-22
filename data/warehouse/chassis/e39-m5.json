@@ -1,0 +1,43 @@
+{
+  "slug": "e39-m5",
+  "code": "E39 M5",
+  "family": "5",
+  "years": [
+    1998,
+    2003
+  ],
+  "market_model": "Seria 5",
+  "otomoto": "seria-5",
+  "gold": false,
+  "engines": [
+    "S62"
+  ],
+  "wiki": "https://en.wikipedia.org/wiki/BMW_M5#E39",
+  "realoem_hint": "https://www.realoem.com/bmw/",
+  "region": "PL",
+  "status": "catalog_confirmed",
+  "phase": "D_long_tail",
+  "sources": [
+    {
+      "provider": "wikipedia",
+      "url": "https://en.wikipedia.org/wiki/BMW_M5#E39",
+      "role": "generation_identity"
+    },
+    {
+      "provider": "realoem",
+      "url": "https://www.realoem.com/bmw/",
+      "role": "parts_and_type_codes"
+    },
+    {
+      "provider": "ohmycar_chassis_ts",
+      "url": "src/data/chassis.ts",
+      "role": "product_taxonomy"
+    },
+    {
+      "provider": "otomoto",
+      "url": "https://www.otomoto.pl/osobowe/bmw/seria-5",
+      "role": "market_deep_link"
+    }
+  ],
+  "collected_at": "2026-09-23T00:30:00Z"
+}

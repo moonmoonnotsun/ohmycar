@@ -1,0 +1,61 @@
+{
+  "pain_id": "s50-vanos",
+  "status": "quoted_parts_plus_labor",
+  "currency": "PLN",
+  "region": "PL",
+  "collected_at": "2026-09-23T00:45:00Z",
+  "fx_note": "DE workshop EUR converted at 4.3 PLN/EUR (2026-09)",
+  "parts_pln": [
+    2537,
+    3806
+  ],
+  "labor_pln": [
+    1000,
+    2000
+  ],
+  "totals_pln": {
+    "independent": [
+      3500,
+      5800
+    ],
+    "specialist": [
+      9000,
+      14000
+    ],
+    "aso": [
+      12000,
+      18000
+    ]
+  },
+  "quotes": [
+    {
+      "tier": "parts",
+      "pln_low": 2537,
+      "pln_high": 2537,
+      "label": "Probsten-Tech · S50B32 VANOS rebuild (send-in) 590€",
+      "url": "https://www.probsten-tech.de/produkt/s50b32-e36-m3z3m-vanosueberarbeitung/"
+    },
+    {
+      "tier": "parts",
+      "pln_low": 3806,
+      "pln_high": 3806,
+      "label": "VORLING · S50B32 Doppelvanos überholung 885€",
+      "url": "https://www.vorling.de/en/p/vanos-ueberholung-bmw-m3-e36-s50b32-doppelvanos-inkl-material"
+    },
+    {
+      "tier": "specialist",
+      "pln_low": 9000,
+      "pln_high": 14000,
+      "label": "Mr Vanos · rebuilt twin VANOS + UK fitting (~$2456 / £3k+ class)",
+      "url": "https://mrvanos.com/products/copy-of-mr-vanos-rebuilt-vanos-bmw-z3m-s50b32"
+    },
+    {
+      "tier": "labor",
+      "pln_low": 1000,
+      "pln_high": 2000,
+      "label": "Beisan · Euro S50 double VANOS R&R ~5h labor prior",
+      "url": "https://beisansystems.com/euro-s50-double-vanos-procedure-e36/"
+    }
+  ],
+  "formula": "independent ≈ send-in rebuild (590–885€@4.3) + R&R labor; specialist ≈ fitted rebuilt unit class"
+}

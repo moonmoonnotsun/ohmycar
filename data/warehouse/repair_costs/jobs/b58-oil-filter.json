@@ -1,0 +1,54 @@
+{
+  "pain_id": "b58-oil-filter",
+  "status": "quoted_parts_plus_labor",
+  "currency": "PLN",
+  "region": "PL",
+  "collected_at": "2026-09-23T01:15:00Z",
+  "fx_note": "USD shop bands ≈ PLN@4.0; housing kit FCP $705",
+  "parts_pln": [
+    200,
+    2800
+  ],
+  "labor_pln": [
+    1000,
+    2500
+  ],
+  "totals_pln": {
+    "independent": [
+      1200,
+      4500
+    ],
+    "specialist": [
+      1600,
+      5500
+    ],
+    "aso": [
+      2500,
+      7000
+    ]
+  },
+  "quotes": [
+    {
+      "tier": "parts",
+      "pln_low": 180,
+      "pln_high": 180,
+      "label": "BimmerWorld · B58 OFH gasket set ~$45",
+      "url": "https://www.bimmerworld.com/Engine/Gaskets/BMW-Oil-Filter-Housing-Gasket-Set-11428583896.html"
+    },
+    {
+      "tier": "parts",
+      "pln_low": 2800,
+      "pln_high": 2800,
+      "label": "FCP Euro · B58 oil filter housing kit ~$705",
+      "url": "https://www.fcpeuro.com/products/bmw-b58-engine-oil-filter-housing-replacement-kit-11428583895kt3"
+    },
+    {
+      "tier": "specialist",
+      "pln_low": 1200,
+      "pln_high": 6000,
+      "label": "Tysautoworks · gasket $300–800 / housing $800–1500+",
+      "url": "https://tysautoworksperformance.com/blogs/news/bmw-b58-oil-filter-housing-leak-cost-symptoms-when-to-fix-it-540i-340i-440i-guide"
+    }
+  ],
+  "formula": "gasket job low end; full housing kit + labor high end"
+}

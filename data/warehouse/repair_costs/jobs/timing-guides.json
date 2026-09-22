@@ -1,0 +1,32 @@
+{
+  "pain_id": "timing-guides",
+  "status": "quoted_workshop_band",
+  "totals_pln": {
+    "independent": [
+      1200,
+      2800
+    ],
+    "specialist": [
+      2000,
+      3500
+    ],
+    "aso": [
+      3500,
+      5000
+    ]
+  },
+  "quotes": [
+    {
+      "tier": "independent",
+      "pln_low": 1200,
+      "pln_high": 2800,
+      "label": "kosztserwisu.pl · N46/N52 guides/VANOS band",
+      "url": "https://kosztserwisu.pl/koszty-napraw/rozrzad/wymiana-rozrzadu-bmw/"
+    }
+  ],
+  "note": "ASO band estimated +30–60% over independent per kosztserwisu methodology note — marked lower confidence.",
+  "confidence": "aggregator_plus_aso_uplift",
+  "collected_at": "2026-09-22T21:30:00Z",
+  "currency": "PLN",
+  "region": "PL"
+}

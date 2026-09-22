@@ -1,0 +1,56 @@
+{
+  "chassis_slug": "e36-m3",
+  "region": "PL",
+  "collected_at": "2026-09-23T00:45:00Z",
+  "confidence": "sourced_curated",
+  "sources": [
+    {
+      "label": "Wikipedia E36 M3 / S50",
+      "url": "https://en.wikipedia.org/wiki/BMW_M3#E36"
+    },
+    {
+      "label": "Wikipedia BMW S50",
+      "url": "https://en.wikipedia.org/wiki/BMW_S50"
+    }
+  ],
+  "lines": [
+    {
+      "model": "M3",
+      "engine": "S50",
+      "fuel": "petrol",
+      "years": [
+        1992,
+        1993,
+        1994,
+        1995
+      ],
+      "note": "S50B30 early / single VANOS era"
+    },
+    {
+      "model": "M3",
+      "engine": "S50",
+      "fuel": "petrol",
+      "years": [
+        1995,
+        1996,
+        1997,
+        1998,
+        1999
+      ],
+      "note": "S50B32 Euro twin VANOS"
+    },
+    {
+      "model": "M3",
+      "engine": "S52",
+      "fuel": "petrol",
+      "years": [
+        1996,
+        1997,
+        1998,
+        1999
+      ],
+      "note": "US-market S52B32"
+    }
+  ],
+  "line_count": 3
+}

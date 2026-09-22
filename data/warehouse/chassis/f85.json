@@ -1,0 +1,43 @@
+{
+  "slug": "f85",
+  "code": "F85",
+  "family": "x",
+  "years": [
+    2015,
+    2019
+  ],
+  "market_model": "X5",
+  "otomoto": "x5",
+  "gold": false,
+  "engines": [
+    "S63"
+  ],
+  "wiki": "https://en.wikipedia.org/wiki/BMW_X5_M#F85",
+  "realoem_hint": "https://www.realoem.com/bmw/",
+  "region": "PL",
+  "status": "catalog_confirmed",
+  "phase": "D_long_tail",
+  "sources": [
+    {
+      "provider": "wikipedia",
+      "url": "https://en.wikipedia.org/wiki/BMW_X5_M#F85",
+      "role": "generation_identity"
+    },
+    {
+      "provider": "realoem",
+      "url": "https://www.realoem.com/bmw/",
+      "role": "parts_and_type_codes"
+    },
+    {
+      "provider": "ohmycar_chassis_ts",
+      "url": "src/data/chassis.ts",
+      "role": "product_taxonomy"
+    },
+    {
+      "provider": "otomoto",
+      "url": "https://www.otomoto.pl/osobowe/bmw/x5",
+      "role": "market_deep_link"
+    }
+  ],
+  "collected_at": "2026-09-23T00:30:00Z"
+}

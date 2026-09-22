@@ -1,0 +1,49 @@
+{
+  "chassis_slug": "g07",
+  "region": "PL",
+  "collected_at": "2026-09-23T00:15:00Z",
+  "confidence": "sourced_curated",
+  "sources": [
+    {
+      "label": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/BMW_X7"
+    },
+    {
+      "label": "RealOEM",
+      "url": "https://www.realoem.com/bmw/"
+    }
+  ],
+  "lines": [
+    {
+      "model": "30d",
+      "engine": "B57",
+      "fuel": "diesel",
+      "years": [
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025,
+        2026
+      ]
+    },
+    {
+      "model": "40i",
+      "engine": "B58",
+      "fuel": "petrol",
+      "years": [
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025,
+        2026
+      ]
+    }
+  ],
+  "line_count": 2
+}

@@ -1,0 +1,47 @@
+{
+  "pain_id": "s55-rod-bearings",
+  "status": "quoted_parts_plus_labor",
+  "currency": "PLN",
+  "region": "PL",
+  "collected_at": "2026-09-23T01:15:00Z",
+  "fx_note": "DE EUR@4.3",
+  "parts_pln": [
+    2150,
+    3870
+  ],
+  "labor_pln": [
+    7740,
+    12900
+  ],
+  "totals_pln": {
+    "independent": [
+      10746,
+      15050
+    ],
+    "specialist": [
+      10750,
+      17200
+    ],
+    "aso": [
+      15050,
+      23650
+    ]
+  },
+  "quotes": [
+    {
+      "tier": "specialist",
+      "pln_low": 10746,
+      "pln_high": 10746,
+      "label": "Aulitzky · S55 rod bearings (F80/F82/F87) from 2.499€",
+      "url": "https://aulitzkyexhaust.de/en/Connecting-rod-bearing-change-for-BMW-M2-M3-M4-incl.-Competition-CS-F80-F82-F83-F87-S55/ATPLEUELM2F87"
+    },
+    {
+      "tier": "specialist",
+      "pln_low": 7200,
+      "pln_high": 12000,
+      "label": "Bimmer.AI · UK S55 preventative £1,500–£2,500",
+      "url": "https://bimmer.ai/bmw-common-problems/s55-rod-bearings/"
+    }
+  ],
+  "formula": "independent/specialist ≈ Aulitzky 2499€ + EU specialist band 2500–4000€@4.3"
+}

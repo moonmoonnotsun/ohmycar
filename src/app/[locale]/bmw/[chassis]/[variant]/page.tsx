@@ -19,7 +19,7 @@ import { HintTip } from "@/components/HintTip";
 import { variantVerdict } from "@/data/verdicts";
 import { bodyLabelKey, bodyOf } from "@/lib/carImage";
 
-const panel = "rounded-2xl border border-[var(--line)] bg-[var(--card)] p-4";
+const panel = "rounded-2xl border border-[var(--line)] bg-[var(--card)] p-3 sm:p-4";
 
 export async function generateMetadata({
   params,
@@ -72,14 +72,14 @@ export default async function VariantPage({
   const body = copy[bodyLabelKey(bodyOf(chassis))];
 
   return (
-    <div className="flex flex-col gap-4 pb-8 md:pb-0">
+    <div className="flex flex-col gap-3 pb-28 sm:gap-4 md:pb-0">
       <section className={panel}>
-        <div className="flex flex-col gap-5 lg:grid lg:grid-cols-[minmax(0,17rem)_minmax(0,1fr)] lg:items-start lg:gap-6">
-          <div className="flex flex-col gap-4">
+        <div className="flex flex-col gap-3 sm:gap-5 lg:grid lg:grid-cols-[minmax(0,17rem)_minmax(0,1fr)] lg:items-start lg:gap-6">
+          <div className="flex flex-col gap-2.5 sm:gap-4">
             <CarPhoto
               chassis={chassis}
               alt={`${chassis.code} ${variant.model}`}
-              className="h-44 w-full rounded-xl border border-[var(--line)] lg:h-full lg:min-h-[12rem] lg:max-h-[14rem]"
+              className="h-36 w-full rounded-xl border border-[var(--line)] sm:h-44 lg:h-full lg:min-h-[12rem] lg:max-h-[14rem]"
               priority
               tone="card"
               emptyLabel={copy.photoSoon}
@@ -89,46 +89,48 @@ export default async function VariantPage({
           </div>
           <div className="min-w-0">
             <div className="min-w-0">
-              <h1 className="font-display text-[2rem] leading-[1.05] tracking-tight sm:text-4xl">
+              <h1 className="font-display text-[1.55rem] leading-[1.05] tracking-tight sm:text-[2rem] sm:leading-[1.05] md:text-4xl">
                 {chassis.name[locale]}
                 <span className="text-[var(--muted)]"> ({chassis.code})</span>
               </h1>
-              <p className="mt-2 text-sm text-[var(--muted)]">
+              <p className="mt-1 text-xs text-[var(--muted)] sm:mt-2 sm:text-sm">
                 {chassis.years}
                 <span className="mx-1.5 text-[var(--line)]" aria-hidden>
                   ·
                 </span>
                 {body}
               </p>
-              <div className="mt-3.5 flex flex-wrap items-center gap-2.5">
-                <span className="text-[1.35rem] font-semibold tracking-tight text-[var(--ink)] tabular-nums sm:text-[1.5rem]">
+              <div className="mt-2 flex flex-wrap items-center gap-2 sm:mt-3.5 sm:gap-2.5">
+                <span className="text-lg font-semibold tracking-tight text-[var(--ink)] tabular-nums sm:text-[1.5rem]">
                   {variant.year}
                 </span>
-                <span className="inline-flex h-8 items-center rounded-full border border-[var(--line)] bg-[var(--wash)] px-3 text-sm font-medium text-[var(--ink)]">
+                <span className="inline-flex h-7 items-center rounded-full border border-[var(--line)] bg-[var(--wash)] px-2.5 text-xs font-medium text-[var(--ink)] sm:h-8 sm:px-3 sm:text-sm">
                   {variant.model} {variant.engine}
                 </span>
               </div>
-              <p className="mt-2.5 text-sm leading-6 text-[var(--muted)]">{statusLabel}</p>
+              <p className="mt-1.5 text-xs leading-5 text-[var(--muted)] sm:mt-2.5 sm:text-sm sm:leading-6">
+                {statusLabel}
+              </p>
             </div>
-            <div className="mt-5">
+            <div className="mt-3.5 sm:mt-5">
               <VariantSwitcher locale={locale} chassisSlug={slug} variant={variant} />
             </div>
           </div>
         </div>
         {bodies.length > 1 ? (
-          <div className="mt-5 border-t border-[var(--line)] pt-4">
+          <div className="mt-3.5 border-t border-[var(--line)] pt-3 sm:mt-5 sm:pt-4">
             <BodySwitcher locale={locale} current={slug} bodies={bodies} compact from={variant} />
           </div>
         ) : null}
       </section>
 
-      <section className="grid gap-3 lg:grid-cols-3 lg:items-stretch">
+      <section className="grid gap-2.5 sm:gap-3 lg:grid-cols-3 lg:items-stretch">
         <div className={panel}>
           <div className="flex items-center justify-between gap-2">
             <p className="text-[11px] font-medium uppercase tracking-[0.16em] text-[var(--muted)]">{copy.score}</p>
             <HintTip text={copy.threeNumbers} label={copy.score} />
           </div>
-          <p className="mt-2 font-display text-[3.5rem] leading-none tracking-tight sm:text-[4rem]">
+          <p className="mt-1.5 font-display text-[2.75rem] leading-none tracking-tight sm:mt-2 sm:text-[4rem]">
             <ScoreGlow score={variant.score} locale={locale} />
             <span className="ml-1 align-baseline font-mono text-sm font-medium text-[var(--muted)]">/ 100</span>
           </p>
@@ -155,13 +157,13 @@ export default async function VariantPage({
             </p>
             <HintTip text={copy.repairHint} label={copy.typicalCosts} />
           </div>
-          <div className="mt-3">
+          <div className="mt-2 sm:mt-3">
             <Money value={variant.medianBuyPln} locale={locale} size="lg" />
-            <p className="mt-1.5 text-sm text-[var(--muted)]">{copy.buy}</p>
+            <p className="mt-1 text-xs text-[var(--muted)] sm:mt-1.5 sm:text-sm">{copy.buy}</p>
           </div>
-          <div className="mt-3 border-t border-[var(--line)] pt-3">
+          <div className="mt-2.5 border-t border-[var(--line)] pt-2.5 sm:mt-3 sm:pt-3">
             <MoneyRange range={variant.expectedRepairPln} locale={locale} size="lg" />
-            <p className="mt-1.5 text-sm text-[var(--muted)]">{copy.repair}</p>
+            <p className="mt-1 text-xs text-[var(--muted)] sm:mt-1.5 sm:text-sm">{copy.repair}</p>
           </div>
         </div>
       </section>
@@ -170,7 +172,7 @@ export default async function VariantPage({
 
       <section id="faults" className={panel}>
         <h2 className="text-[11px] font-medium uppercase tracking-[0.16em] text-[var(--muted)]">{copy.jumpFaults}</h2>
-        <div className="mt-4 flex flex-col gap-3">
+        <div className="mt-3 flex flex-col gap-2.5 sm:mt-4 sm:gap-3">
           {pains.map((pain, i) => (
             <PainCard
               key={pain.id}
@@ -229,11 +231,11 @@ function SpecRow({
 }) {
   return (
     <div
-      className={`flex items-center gap-3 py-2.5 ${last ? "" : "border-b border-[var(--line)]"}`}
+      className={`flex items-center gap-2.5 py-2 sm:gap-3 sm:py-2.5 ${last ? "" : "border-b border-[var(--line)]"}`}
     >
-      <SpecIcon name={icon} className="size-[1.15rem] shrink-0 text-[var(--accent)]" />
-      <dt className="min-w-0 flex-1 text-sm text-[var(--muted)]">{label}</dt>
-      <dd className="shrink-0 text-sm font-semibold tabular-nums text-[var(--ink)]">{value}</dd>
+      <SpecIcon name={icon} className="size-4 shrink-0 text-[var(--accent)] sm:size-[1.15rem]" />
+      <dt className="min-w-0 flex-1 text-xs text-[var(--muted)] sm:text-sm">{label}</dt>
+      <dd className="shrink-0 text-xs font-semibold tabular-nums text-[var(--ink)] sm:text-sm">{value}</dd>
     </div>
   );
 }

@@ -1,0 +1,54 @@
+{
+  "pain_id": "i3-hv-battery",
+  "status": "quoted_parts_plus_labor",
+  "currency": "PLN",
+  "region": "PL",
+  "collected_at": "2026-09-23T01:15:00Z",
+  "fx_note": "PL Allegro + CZ EUR@4.3",
+  "parts_pln": [
+    6500,
+    30100
+  ],
+  "labor_pln": [
+    1000,
+    4000
+  ],
+  "totals_pln": {
+    "independent": [
+      6500,
+      29000
+    ],
+    "specialist": [
+      19350,
+      35000
+    ],
+    "aso": [
+      40000,
+      80000
+    ]
+  },
+  "quotes": [
+    {
+      "tier": "specialist",
+      "pln_low": 6500,
+      "pln_high": 6500,
+      "label": "e-dakro · regeneracja baterii i3 od 6 500 zł",
+      "url": "https://e-dakro.pl/regeneracja-baterii-trakcyjnych-kiedy-warto-i-ile-mozna-zaoszczedzic/"
+    },
+    {
+      "tier": "specialist",
+      "pln_low": 29000,
+      "pln_high": 29000,
+      "label": "Allegro Lokalnie · i3 upgrade 154Ah 29 000 zł (Poznań)",
+      "url": "https://allegrolokalnie.pl/oferta/bmw-i3-wymiana-baterii-60ah-94ah-120ah-na-154ah-or-upgrade-zasiegu"
+    },
+    {
+      "tier": "parts",
+      "pln_low": 19350,
+      "pln_high": 30100,
+      "label": "i3upgrade · new OEM 94/120Ah 4.500–7.000€ excl. VAT",
+      "url": "https://www.i3upgrade.cz/en/cenik.html"
+    }
+  ],
+  "formula": "regen low; PL upgrade / OEM pack mid–high; ASO outlier not used for independent"
+}

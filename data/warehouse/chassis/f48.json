@@ -1,0 +1,43 @@
+{
+  "slug": "f48",
+  "code": "F48",
+  "family": "x",
+  "years": [
+    2015,
+    2022
+  ],
+  "market_model": "X1",
+  "otomoto": "x1",
+  "gold": false,
+  "engines": [
+    "B47",
+    "B48"
+  ],
+  "wiki": "https://en.wikipedia.org/wiki/BMW_X1_(F48)",
+  "realoem_hint": "https://www.realoem.com/bmw/",
+  "region": "PL",
+  "status": "catalog_confirmed",
+  "sources": [
+    {
+      "provider": "wikipedia",
+      "url": "https://en.wikipedia.org/wiki/BMW_X1_(F48)",
+      "role": "generation_identity"
+    },
+    {
+      "provider": "realoem",
+      "url": "https://www.realoem.com/bmw/",
+      "role": "parts_and_type_codes"
+    },
+    {
+      "provider": "ohmycar_chassis_ts",
+      "url": "src/data/chassis.ts",
+      "role": "product_taxonomy"
+    },
+    {
+      "provider": "otomoto",
+      "url": "https://www.otomoto.pl/osobowe/bmw/x1",
+      "role": "market_deep_link"
+    }
+  ],
+  "collected_at": "2026-09-22T23:30:00Z"
+}

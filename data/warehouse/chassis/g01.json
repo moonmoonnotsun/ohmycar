@@ -1,0 +1,44 @@
+{
+  "slug": "g01",
+  "code": "G01",
+  "family": "x",
+  "years": [
+    2017,
+    2024
+  ],
+  "market_model": "X3",
+  "otomoto": "x3",
+  "gold": false,
+  "engines": [
+    "B47",
+    "B48",
+    "B58"
+  ],
+  "wiki": "https://en.wikipedia.org/wiki/BMW_X3_(G01)",
+  "realoem_hint": "https://www.realoem.com/bmw/",
+  "region": "PL",
+  "status": "catalog_confirmed",
+  "sources": [
+    {
+      "provider": "wikipedia",
+      "url": "https://en.wikipedia.org/wiki/BMW_X3_(G01)",
+      "role": "generation_identity"
+    },
+    {
+      "provider": "realoem",
+      "url": "https://www.realoem.com/bmw/",
+      "role": "parts_and_type_codes"
+    },
+    {
+      "provider": "ohmycar_chassis_ts",
+      "url": "src/data/chassis.ts",
+      "role": "product_taxonomy"
+    },
+    {
+      "provider": "otomoto",
+      "url": "https://www.otomoto.pl/osobowe/bmw/x3",
+      "role": "market_deep_link"
+    }
+  ],
+  "collected_at": "2026-09-22T23:55:00Z"
+}

@@ -6,6 +6,10 @@
 
 Last bootstrap run: `2026-09-22-top10-bootstrap` → see `_meta/collection_log.json`.
 
+**Full catalog collection plan (requests, volumes, sprints):** [`COLLECTION_REQUESTS.md`](./COLLECTION_REQUESTS.md).  
+**External sources, mapping & score math (canonical):** [`EXTERNAL_DATA_AND_MAPPING.md`](./EXTERNAL_DATA_AND_MAPPING.md).  
+**Step-by-step fulfillment status:** [`FULFILLMENT_ROADMAP.md`](./FULFILLMENT_ROADMAP.md).
+
 ---
 
 ## 1. Product ↔ data

@@ -23,6 +23,7 @@ export function Header({ locale }: { locale: Locale }) {
   const onCompare = parts[1] === "compare";
   const [langOpen, setLangOpen] = useState(false);
   const langRef = useRef<HTMLDivElement>(null);
+  const headerRef = useRef<HTMLElement>(null);
 
   useEffect(() => {
     if (!langOpen) return;
@@ -40,26 +41,41 @@ export function Header({ locale }: { locale: Locale }) {
     };
   }, [langOpen]);
 
+  useEffect(() => {
+    const el = headerRef.current;
+    if (!el) return;
+    const publish = () => {
+      document.documentElement.style.setProperty("--header-h", `${el.offsetHeight}px`);
+    };
+    publish();
+    const ro = new ResizeObserver(publish);
+    ro.observe(el);
+    return () => ro.disconnect();
+  }, [pathname]);
+
   return (
-    <header className="sticky top-0 z-50 border-b border-white/8 bg-[var(--paper)]/80 backdrop-blur-xl safe-top">
-      <div className="mx-auto flex h-12 items-center justify-between gap-3 px-4 sm:h-14 sm:px-6 md:max-w-5xl">
+    <header
+      ref={headerRef}
+      className="sticky top-0 z-50 border-b border-white/8 bg-[var(--paper)] safe-top"
+    >      <div className="mx-auto flex h-12 items-center justify-between gap-3 px-4 sm:h-14 sm:px-6 md:max-w-5xl">
         <Link href={`/${locale}`} className="min-w-0 shrink-0 font-display text-[1.35rem] leading-none sm:text-[1.5rem]">
           <span className="text-[var(--accent)]">Oh</span>MyCar
         </Link>
-        <nav className="flex items-center gap-1 text-sm">
+        <nav className="flex items-center gap-0.5 text-sm sm:gap-1">
           <Link
             href={`/${locale}/bmw`}
-            className={`hidden h-tap items-center rounded-full border px-3 font-medium md:inline-flex ${
+            className={`h-tap inline-flex items-center rounded-full border px-2.5 font-medium sm:px-3 ${
               onCatalog
                 ? "border-[var(--accent)] text-[var(--ink)]"
                 : "tap border-transparent text-[var(--muted)]"
             }`}
           >
-            {copy.catalog}
+            <span className="md:hidden">{copy.catalogShort}</span>
+            <span className="hidden md:inline">{copy.catalog}</span>
           </Link>
           <Link
             href={`/${locale}/compare`}
-            className={`h-tap inline-flex items-center rounded-full border px-3 font-medium ${
+            className={`h-tap inline-flex items-center rounded-full border px-2.5 font-medium sm:px-3 ${
               onCompare
                 ? "border-[var(--accent)] text-[var(--ink)]"
                 : "tap border-transparent text-[var(--muted)]"
@@ -69,7 +85,7 @@ export function Header({ locale }: { locale: Locale }) {
           </Link>
           <Link
             href={`/${locale}/score`}
-            className={`h-tap inline-flex items-center rounded-full border px-3 font-medium ${
+            className={`hidden h-tap items-center rounded-full border px-2.5 font-medium sm:inline-flex sm:px-3 ${
               onScore
                 ? "border-[var(--accent)] text-[var(--ink)]"
                 : "tap border-transparent text-[var(--muted)]"

@@ -1,0 +1,61 @@
+{
+  "chassis_slug": "g22",
+  "region": "PL",
+  "collected_at": "2026-09-23T00:05:00Z",
+  "confidence": "sourced_curated",
+  "sources": [
+    {
+      "label": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/BMW_4_Series_(G22)"
+    },
+    {
+      "label": "RealOEM",
+      "url": "https://www.realoem.com/bmw/"
+    }
+  ],
+  "lines": [
+    {
+      "model": "420i",
+      "engine": "B48",
+      "fuel": "petrol",
+      "years": [
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025,
+        2026
+      ]
+    },
+    {
+      "model": "430i",
+      "engine": "B48",
+      "fuel": "petrol",
+      "years": [
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025,
+        2026
+      ]
+    },
+    {
+      "model": "M440i",
+      "engine": "B58",
+      "fuel": "petrol",
+      "years": [
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025,
+        2026
+      ]
+    }
+  ],
+  "line_count": 3
+}

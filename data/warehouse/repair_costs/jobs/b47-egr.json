@@ -1,0 +1,31 @@
+{
+  "pain_id": "b47-egr",
+  "status": "quoted_workshop_band",
+  "totals_pln": {
+    "independent": [
+      2500,
+      5000
+    ],
+    "specialist": [
+      3200,
+      6000
+    ],
+    "aso": [
+      4500,
+      8000
+    ]
+  },
+  "quotes": [
+    {
+      "tier": "specialist",
+      "pln_low": 3200,
+      "pln_high": 6000,
+      "label": "Skanyx · EGR cooler band used as B47 prior (same family job)",
+      "url": "https://skanyx.com/pl/blog/bmw-m57-engine-buyer-guide-525d-530d-535d-obd2"
+    }
+  ],
+  "confidence": "family_prior_from_m57_egr",
+  "collected_at": "2026-09-22T21:30:00Z",
+  "currency": "PLN",
+  "region": "PL"
+}

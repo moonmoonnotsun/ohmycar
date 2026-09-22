@@ -1,0 +1,75 @@
+{
+  "chassis_slug": "f15",
+  "region": "PL",
+  "collected_at": "2026-09-22T23:30:00Z",
+  "confidence": "sourced_curated",
+  "sources": [
+    {
+      "label": "Wikipedia generation page",
+      "url": "https://en.wikipedia.org/wiki/BMW_X5_(F15)"
+    },
+    {
+      "label": "RealOEM BMW catalog",
+      "url": "https://www.realoem.com/bmw/"
+    },
+    {
+      "label": "App seed cross-check",
+      "url": "src/data/volume.ts"
+    }
+  ],
+  "lines": [
+    {
+      "model": "25d",
+      "engine": "N57",
+      "fuel": "diesel",
+      "years": [
+        2013,
+        2014,
+        2015,
+        2016,
+        2017,
+        2018
+      ]
+    },
+    {
+      "model": "30d",
+      "engine": "N57",
+      "fuel": "diesel",
+      "years": [
+        2013,
+        2014,
+        2015,
+        2016,
+        2017,
+        2018
+      ]
+    },
+    {
+      "model": "35i",
+      "engine": "N55",
+      "fuel": "petrol",
+      "years": [
+        2013,
+        2014,
+        2015,
+        2016,
+        2017,
+        2018
+      ]
+    },
+    {
+      "model": "50i",
+      "engine": "N63",
+      "fuel": "petrol",
+      "years": [
+        2013,
+        2014,
+        2015,
+        2016,
+        2017,
+        2018
+      ]
+    }
+  ],
+  "line_count": 4
+}

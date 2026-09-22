@@ -1,0 +1,47 @@
+{
+  "pain_id": "s85-rod-bearings",
+  "status": "quoted_parts_plus_labor",
+  "currency": "PLN",
+  "region": "PL",
+  "collected_at": "2026-09-23T01:15:00Z",
+  "fx_note": "DE/UK EUR@4.3",
+  "parts_pln": [
+    2580,
+    5160
+  ],
+  "labor_pln": [
+    8600,
+    13760
+  ],
+  "totals_pln": {
+    "independent": [
+      11821,
+      15050
+    ],
+    "specialist": [
+      11821,
+      17200
+    ],
+    "aso": [
+      17200,
+      25800
+    ]
+  },
+  "quotes": [
+    {
+      "tier": "specialist",
+      "pln_low": 11821,
+      "pln_high": 11821,
+      "label": "Aulitzky · S85 E60 M5 rod bearings 2.749€",
+      "url": "https://aulitzkyexhaust.de/en/Connecting-rod-bearing-change-BMW-M5-E60-E61-507hp-S85-Aulitzky-Tuning/ATPLEUELM5S85"
+    },
+    {
+      "tier": "specialist",
+      "pln_low": 13055,
+      "pln_high": 13055,
+      "label": "Nforcd · S85 rod bearing service ~€3,036",
+      "url": "https://www.nforcd.com/products/rod-bearing-replacement-bmw-e60-e61-m5-e63-e64-m6"
+    }
+  ],
+  "formula": "independent ≈ Aulitzky 2749€@4.3"
+}

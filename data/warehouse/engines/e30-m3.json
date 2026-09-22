@@ -1,0 +1,33 @@
+{
+  "chassis_slug": "e30-m3",
+  "region": "PL",
+  "collected_at": "2026-09-23T00:30:00Z",
+  "confidence": "sourced_curated",
+  "phase": "D_long_tail",
+  "sources": [
+    {
+      "label": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/BMW_M3#E30"
+    },
+    {
+      "label": "RealOEM",
+      "url": "https://www.realoem.com/bmw/"
+    }
+  ],
+  "lines": [
+    {
+      "model": "M3",
+      "engine": "S14",
+      "fuel": "petrol",
+      "years": [
+        1986,
+        1987,
+        1988,
+        1989,
+        1990,
+        1991
+      ]
+    }
+  ],
+  "line_count": 1
+}

@@ -1,0 +1,30 @@
+{
+  "pain_id": "e39-cooling",
+  "status": "quoted_workshop_band",
+  "totals_pln": {
+    "independent": [
+      800,
+      2200
+    ],
+    "specialist": [
+      1200,
+      3000
+    ],
+    "aso": [
+      2000,
+      4500
+    ]
+  },
+  "quotes": [
+    {
+      "tier": "independent",
+      "pln_low": 800,
+      "pln_high": 2200,
+      "label": "Cooling plastics/expansion tank prior (same family as M54 cooling)",
+      "url": "https://kosztserwisu.pl/modele-samochodow/bmw/"
+    }
+  ],
+  "collected_at": "2026-09-22T21:30:00Z",
+  "currency": "PLN",
+  "region": "PL"
+}

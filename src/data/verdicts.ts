@@ -1,6 +1,6 @@
 import type { Chassis, Localized, VariantBrief } from "./types";
 import { loc } from "./loc";
-import { getPain } from "@/lib/catalog";
+import { getPain, summarizeVariants, variantsFor } from "@/lib/catalog";
 import { volumeEngineVerdicts } from "./volumeEngineVerdicts";
 
 export type Verdict = {
@@ -186,8 +186,8 @@ const CHASSIS: Record<string, Verdict> = {
       "F20 to drugi hatch serii 1 (2011–2019), nadal napęd na tył przed przednionapędowym F40. N13 116i wymaga budżetu na rozrząd; 118d N47 to diesel z łańcuchem; późniejszy 120d B47 przenosi typowy koszt na EGR i nagar w dolocie. Otwórz wiersz silnika×rok przed zdjęciem z ogłoszenia — małe nie znaczy tanie w utrzymaniu.",
       "F20 — второй хэтчбек 1 серии (2011–2019), всё ещё задний привод до переднеприводного F40. N13 116i требует бюджета на ГРМ; 118d N47 — дизель с цепью; поздний 120d B47 переносит типичные расходы на EGR и нагар во впуске. Откройте строку мотор×год до фото из объявления — маленький не значит дешёвый в содержании.",
     ),
-    good: loc("It remains a rear-drive hatch; later B47 years carry lower typical chain risk.", "Nadal jest hatch na napęd tylny; późniejsze lata B47 mają niższe typowe ryzyko łańcucha.", "Это по‑прежнему заднеприводный хэтчбек; поздние годы B47 несут меньший типичный риск цепи."),
-    bad: loc("N13 petrol and N47 118d still need real repair budgets; a small hatch is not cheap to keep.", "Benzyna N13 i 118d N47 nadal wymagają realnego budżetu napraw; mały hatch nie jest tani w utrzymaniu.", "Бензин N13 и 118d N47 по‑прежнему требуют реального бюджета на ремонт; маленький хэтчбек не дёшев в содержании."),
+    good: loc("It remains a rear-drive hatch; later B47 years carry lower typical chain risk.", "Nadal jest hatchbackiem z napędem na tył; późniejsze lata B47 mają niższe typowe ryzyko łańcucha.", "Это по‑прежнему заднеприводный хэтчбек; поздние годы B47 несут меньший типичный риск цепи."),
+    bad: loc("N13 petrol and N47 118d still need real repair budgets; a small hatch is not cheap to keep.", "Benzyna N13 i 118d N47 nadal wymagają realnego budżetu napraw; mały hatchback nie jest tani w utrzymaniu.", "Бензин N13 и 118d N47 по‑прежнему требуют реального бюджета на ремонт; маленький хэтчбек не дёшев в содержании."),
   },
   e83: {
     summary: loc(
@@ -197,6 +197,23 @@ const CHASSIS: Record<string, Verdict> = {
     ),
     good: loc("M54 and M57 are known to Polish specialists, and the size is easy to park.", "M54 i M57 są znane polskim specjalistom, a rozmiar jest łatwy do parkowania.", "M54 и M57 знакомы польским специалистам, а размер легко парковать."),
     bad: loc("Budget the transfer case, sill rust, and age cooling before you trust a cheap listing.", "Zaplanuj budżet na skrzynkę rozdzielczą, rdzę progów i chłodzenie wieku, zanim zaufasz tanim ogłoszeniom.", "Заложите бюджет на раздатку, ржавчину порогов и возрастное охлаждение, прежде чем доверять дешёвому объявлению."),
+  },
+  "e36-m3": {
+    summary: loc(
+      "E36 M3 is the second-generation M3 (1992–1999). In Europe you mostly meet S50 (early 3.0, later 3.2 with double VANOS); US cars use S52. Scores come from sourced cooling and VANOS repairs — not from inventing a market price. Confirm the engine code before you set a budget: double VANOS is a different bill than replacing aged cooling plastics. Body rust after road salt still ends more purchases than the engine itself.",
+      "E36 M3 to druga generacja M3 (1992–1999). W Europie najczęściej spotkasz S50 (wczesne 3.0, później 3.2 z podwójnym VANOS); w USA jest S52. Oceny biorą się z udokumentowanych napraw chłodzenia i VANOS — nie z wymyślonej ceny rynkowej. Zanim ułożysz budżet, potwierdź kod silnika: podwójny VANOS to inny rachunek niż wymiana postarzałego plastiku chłodzenia. Rdza nadwozia po soli kończy więcej zakupów niż sam silnik.",
+      "E36 M3 — второе поколение M3 (1992–1999). В Европе чаще всего S50 (ранний 3.0, позже 3.2 с двойным VANOS); в США — S52. Оценки из документированных ремонтов охлаждения и VANOS — не из выдуманной рыночной цены. Перед бюджетом подтвердите код мотора: двойной VANOS — другой счёт, чем замена состарившегося пластика охлаждения. Ржавчина кузова после соли срывает больше сделок, чем сам мотор.",
+    ),
+    good: loc(
+      "S50 and S52 rows have sourced cooling and double-VANOS repair bands.",
+      "Wiersze S50 i S52 mają pasma napraw chłodzenia i podwójnego VANOS ze źródłami.",
+      "Строки S50 и S52 имеют полосы ремонта охлаждения и двойного VANOS по источникам.",
+    ),
+    bad: loc(
+      "Age rust and, on European 3.2 cars, double VANOS. Asking-price medians before about 2009 stay empty without a paid market feed.",
+      "Rdza wieku oraz — w europejskich 3.2 — podwójny VANOS. Mediany cen wywoławczych sprzed ok. 2009 zostają puste bez płatnego źródła rynku.",
+      "Возрастная ржавчина и на европейских 3.2 — двойной VANOS. Медианы цен предложения до примерно 2009 пустые без платного рыночного источника.",
+    ),
   },
 };
 
@@ -801,12 +818,56 @@ function fillVerdict(base: Verdict, variant: VariantBrief, bodyWord: string, tai
 export function chassisVerdict(chassis: Chassis): Verdict {
   const hit = CHASSIS[chassis.slug];
   if (hit) return hit;
+
   const engines = chassis.engines?.length ? chassis.engines.join(", ") : null;
+  const summary = summarizeVariants(variantsFor(chassis.slug));
+  const best = summary.best;
+  const worst = summary.worst;
+  const hasScore = best?.score != null;
+
+  if (hasScore && best) {
+    const bestLabel = `${best.year} ${best.engine} · ${best.score!.toFixed(0)}/100`;
+    const worstLabel =
+      worst && worst.slug !== best.slug && worst.score != null
+        ? `${worst.year} ${worst.engine} · ${worst.score.toFixed(0)}/100`
+        : null;
+    const pain = getPain(best.topPainId);
+    return {
+      summary: loc(
+        `${chassis.code} is ${chassis.name.en} (${chassis.years}). Evidence score from sourced faults${pain ? ` (headline: ${pain.title.en})` : ""}. Best in this family: ${bestLabel}.${worstLabel ? ` Higher risk: ${worstLabel}.` : ""} ${engines ? `Engines on the card: ${engines}.` : ""} Open the engine×year row before inspection — the badge does not name the motor.`
+          .replace(/\s+/g, " ")
+          .trim(),
+        `${chassis.code} to ${chassis.name.pl} (${chassis.years}). Ocena ze źródeł usterek${pain ? ` (nagłówek: ${pain.title.pl})` : ""}. Najlepszy w rodzinie: ${bestLabel}.${worstLabel ? ` Wyższe ryzyko: ${worstLabel}.` : ""} ${engines ? `Silniki na karcie: ${engines}.` : ""} Przed oględzinami otwórz wiersz silnik×rok — znaczek nie nazywa motoru.`
+          .replace(/\s+/g, " ")
+          .trim(),
+        `${chassis.code} — это ${chassis.name.ru} (${chassis.years}). Оценка из источников по поломкам${pain ? ` (заголовок: ${pain.title.ru})` : ""}. Лучший в семье: ${bestLabel}.${worstLabel ? ` Выше риск: ${worstLabel}.` : ""} ${engines ? `Моторы на карточке: ${engines}.` : ""} До осмотра откройте строку мотор×год — шильдик не указывает двигатель.`
+          .replace(/\s+/g, " ")
+          .trim(),
+      ),
+      good: loc(
+        "Sourced engine×year scores are on this card — compare rows before you buy.",
+        "Na karcie są oceny silnik×rok ze źródeł — porównaj wiersze przed zakupem.",
+        "На карточке есть оценки мотор×год по источникам — сравните строки до покупки.",
+      ),
+      bad: pain
+        ? loc(
+            `Budget for ${pain.title.en} and age-related body work; PLN bands are approximate.`,
+            `Zaplanuj budżet na: ${pain.title.pl} oraz nadwozie z wieku; pasma PLN są orientacyjne.`,
+            `Заложите бюджет на: ${pain.title.ru} и возрастной кузов; полосы PLN ориентировочные.`,
+          )
+        : loc(
+            "Read each engine row. A low asking price often matches an unpaid repair list.",
+            "Czytaj każdy wiersz silnika. Niska cena często odpowiada nieopłaconej liście napraw.",
+            "Читайте каждую строку мотора. Низкая цена часто соответствует неоплаченному списку ремонтов.",
+          ),
+    };
+  }
+
   return {
     summary: loc(
-      `${chassis.code} is ${chassis.name.en} (${chassis.years}). This card exists so you do not mix it with another generation that shares a badge. We have not published a 0–100 table for this chassis, and we will not invent a score. ${engines ? `Typical engines on the card: ${engines}.` : "Engine rows will appear here when the report is ready."} Start from the chassis code, not from 330i on the boot.`,
-      `${chassis.code} to ${chassis.name.pl} (${chassis.years}). Ta karta jest po to, żeby nie pomylić go z inną generacją o tym samym znaczku. Nie opublikowaliśmy tabeli 0–100 dla tego podwozia i nie wymyślimy oceny. ${engines ? `Typowe silniki na karcie: ${engines}.` : "Wiersze silników pojawią się, gdy opis będzie gotowy."} Zaczynaj od kodu podwozia, nie od 330i na klapie.`,
-      `${chassis.code} — это ${chassis.name.ru} (${chassis.years}). Карточка нужна, чтобы не перепутать поколение с другим с тем же шильдиком. Таблицы 0–100 для этого шасси мы не публиковали и оценку не выдумаем. ${engines ? `Типичные моторы на карточке: ${engines}.` : "Строки моторов появятся, когда описание будет готово."} Начинайте с кода шасси, не с 330i на крышке.`,
+      `${chassis.code} is ${chassis.name.en} (${chassis.years}). This card names the generation so you do not mix it with another that shares a badge. ${engines ? `Typical engines listed: ${engines}.` : "Engine rows appear when the report is ready."} We only show a 0–100 score after a sourced fault with a repair band exists — we will not invent one.`,
+      `${chassis.code} to ${chassis.name.pl} (${chassis.years}). Ta karta nazywa generację, żeby nie pomylić jej z inną o tym samym znaczku. ${engines ? `Typowe silniki na liście: ${engines}.` : "Wiersze silników pojawią się, gdy opis będzie gotowy."} Ocenę 0–100 pokazujemy dopiero po usterce ze źródłem i pasmem naprawy — nie wymyślamy jej.`,
+      `${chassis.code} — это ${chassis.name.ru} (${chassis.years}). Карточка называет поколение, чтобы не перепутать его с другим с тем же шильдиком. ${engines ? `Типичные моторы в списке: ${engines}.` : "Строки моторов появятся, когда описание будет готово."} Оценку 0–100 показываем только после поломки с источником и полосой ремонта — не выдумываем её.`,
     ),
     good: loc(
       "The generation is named, so it will not be mixed with the next one.",
@@ -814,9 +875,9 @@ export function chassisVerdict(chassis: Chassis): Verdict {
       "Поколение названо, его не перепутают со следующим.",
     ),
     bad: loc(
-      "No 0–100 table yet. Do not treat the card as a full report.",
-      "Nie ma jeszcze tabeli 0–100. Nie traktuj karty jako pełnego opisu.",
-      "Таблицы 0–100 ещё нет. Не считайте карточку полным описанием.",
+      "No sourced repair band for the engines on this card yet — treat it as identity only.",
+      "Brak jeszcze pasma naprawy ze źródłem dla silników na tej karcie — traktuj ją jako samą tożsamość.",
+      "Пока нет полосы ремонта по источникам для моторов на этой карточке — считайте её только идентификацией.",
     ),
   };
 }

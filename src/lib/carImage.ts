@@ -1,5 +1,6 @@
 import type { Chassis } from "@/data/types";
 import { publicUrl } from "@/lib/asset";
+import carPhotos from "@/data/imported/carPhotos.json";
 
 export type BodyStyle =
   | "sedan"
@@ -11,27 +12,7 @@ export type BodyStyle =
   | "roadster"
   | "gt";
 
-const PHOTOS: Record<string, string> = {
-  e90: "/cars/e90.jpg",
-  e91: "/cars/e91.jpg",
-  e92: "/cars/e92.jpg",
-  e93: "/cars/e93.jpg",
-  "e9x-m3": "/cars/e92.jpg",
-  e46: "/cars/e46.jpg",
-  f30: "/cars/f30.jpg",
-  f31: "/cars/f31.jpg",
-  e60: "/cars/e60.jpg",
-  e61: "/cars/e61.jpg",
-  e39: "/cars/e39.jpg",
-  f10: "/cars/f10.jpg",
-  f11: "/cars/f11.jpg",
-  e87: "/cars/e87.jpg",
-  e81: "/cars/e81.jpg",
-  e70: "/cars/e70.jpg",
-  e53: "/cars/e53.jpg",
-  e83: "/cars/e83.jpg",
-  f20: "/cars/f20.jpg",
-};
+const PHOTOS = carPhotos.photos as Record<string, string>;
 
 export function bodyOf(chassis: Chassis): BodyStyle {
   const h = `${chassis.slug} ${chassis.code} ${chassis.name.en} ${chassis.name.pl}`.toLowerCase();
@@ -50,7 +31,9 @@ export function carPhotoSrc(chassis: Chassis): string | null {
   return src ? publicUrl(src) : null;
 }
 
-export function bodyLabelKey(body: BodyStyle): "bodySedan" | "bodyTouring" | "bodyCoupe" | "bodyCabrio" | "bodySuv" | "bodyHatch" | "bodyRoadster" | "bodyGt" {
+export function bodyLabelKey(
+  body: BodyStyle,
+): "bodySedan" | "bodyTouring" | "bodyCoupe" | "bodyCabrio" | "bodySuv" | "bodyHatch" | "bodyRoadster" | "bodyGt" {
   const map = {
     sedan: "bodySedan",
     touring: "bodyTouring",

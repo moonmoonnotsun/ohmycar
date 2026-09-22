@@ -15,6 +15,8 @@ type WarehouseRow = {
     independent: [number, number];
     specialist: [number, number];
     aso: [number, number];
+    parts?: [number, number] | null;
+    labor?: [number, number] | null;
     note?: string;
   };
   pln_note?: string;
@@ -43,6 +45,8 @@ function toPain(row: WarehouseRow): Pain {
     plnIndependent: bands ? bands.independent : null,
     plnSpecialist: bands ? bands.specialist : null,
     plnAso: bands ? bands.aso : null,
+    plnParts: bands?.parts ?? null,
+    plnLabor: bands?.labor ?? null,
     plnNote: bands?.note ?? row.pln_note,
     oemHint: row.oemHint,
     autodocQuery: asLocalized(row.autodoc_query),

@@ -1,0 +1,57 @@
+{
+  "pain_id": "n54-hpfp",
+  "status": "quoted_parts_plus_labor",
+  "totals_pln": {
+    "independent": [
+      1900,
+      5000
+    ],
+    "specialist": [
+      2090,
+      6000
+    ],
+    "aso": [
+      2565,
+      6750
+    ]
+  },
+  "quotes": [
+    {
+      "tier": "independent",
+      "pln_low": 1900,
+      "pln_high": 5000,
+      "label": "cenauslug.pl · HPFP parts 1400–3800 + labor 500–1200",
+      "url": "https://cenauslug.pl/poradniki/wymiana-pompy-paliwa-jakie-sa-koszty-i-jak-wybrac-warsztat"
+    },
+    {
+      "tier": "specialist",
+      "pln_low": 700,
+      "pln_high": 1300,
+      "currency": "EUR",
+      "pln_note": "Skanyx 700–1300 EUR workshop → ~3000–5600 PLN @4.3",
+      "url": "https://skanyx.com/pl/blog/bmw-fault-codes-guide"
+    },
+    {
+      "tier": "parts",
+      "pln_low": 2833,
+      "pln_high": 2833,
+      "label": "Oryginalne-Czesci.pl · single N54 injector OE",
+      "url": "https://oryginalne-czesci.pl/wtryskiwacz-paliwa-n54-n54t-n63-n74-s63-bmw-e60-e61-x5-e70-x6-e71-e72-e82-e88-z4-e89-e90-e91-e92-e93-f01-f02-f03-f04-5gt-f07-f10-f11-f12-f13,id10359.html",
+      "role": "injector_unit_not_full_set"
+    }
+  ],
+  "note": "HPFP-only band. Full injector set is substantially higher (Skanyx 1300–2200 EUR).",
+  "collected_at": "2026-09-22T21:55:00Z",
+  "currency": "PLN",
+  "region": "PL",
+  "parts_pln": [
+    1400,
+    3800
+  ],
+  "labor_pln": [
+    500,
+    1200
+  ],
+  "split_note": "cenauslug.pl HPFP parts 1400–3800 + labor 500–1200",
+  "formula": "independent_full = parts_pln + labor_pln"
+}

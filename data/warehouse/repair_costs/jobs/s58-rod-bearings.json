@@ -1,0 +1,47 @@
+{
+  "pain_id": "s58-rod-bearings",
+  "status": "quoted_parts_plus_labor",
+  "currency": "PLN",
+  "region": "PL",
+  "collected_at": "2026-09-23T01:15:00Z",
+  "fx_note": "Parts quote + S55 labor family prior @4.3",
+  "parts_pln": [
+    2219,
+    3870
+  ],
+  "labor_pln": [
+    7740,
+    12900
+  ],
+  "totals_pln": {
+    "independent": [
+      9890,
+      16770
+    ],
+    "specialist": [
+      10750,
+      19350
+    ],
+    "aso": [
+      17200,
+      27950
+    ]
+  },
+  "quotes": [
+    {
+      "tier": "parts",
+      "pln_low": 2219,
+      "pln_high": 2219,
+      "label": "5150 AutoSport · S58 coated rod bearings 515,99€",
+      "url": "https://r44performance.com/products/5150-autosport-high-performance-rod-bearing-set-bmw-s58-engine"
+    },
+    {
+      "tier": "labor",
+      "pln_low": 7740,
+      "pln_high": 12900,
+      "label": "Labor prior from Aulitzky S55 bearing job (same layout class)",
+      "url": "https://aulitzkyexhaust.de/en/Connecting-rod-bearing-change-for-BMW-M2-M3-M4-incl.-Competition-CS-F80-F82-F83-F87-S55/ATPLEUELM2F87"
+    }
+  ],
+  "formula": "parts 516€ + S55-class labor 1800–3000€@4.3"
+}

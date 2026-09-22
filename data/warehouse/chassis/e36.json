@@ -1,0 +1,45 @@
+{
+  "slug": "e36",
+  "code": "E36",
+  "family": "3",
+  "years": [
+    1990,
+    2000
+  ],
+  "market_model": "Seria 3",
+  "otomoto": "seria-3",
+  "gold": true,
+  "engines": [
+    "M40",
+    "M43",
+    "M50",
+    "M52"
+  ],
+  "wiki": "https://en.wikipedia.org/wiki/BMW_3_Series_(E36)",
+  "realoem_hint": "https://www.realoem.com/bmw/",
+  "region": "PL",
+  "status": "catalog_confirmed",
+  "sources": [
+    {
+      "provider": "wikipedia",
+      "url": "https://en.wikipedia.org/wiki/BMW_3_Series_(E36)",
+      "role": "generation_identity"
+    },
+    {
+      "provider": "realoem",
+      "url": "https://www.realoem.com/bmw/",
+      "role": "parts_and_type_codes"
+    },
+    {
+      "provider": "ohmycar_chassis_ts",
+      "url": "src/data/chassis.ts",
+      "role": "product_taxonomy"
+    },
+    {
+      "provider": "otomoto",
+      "url": "https://www.otomoto.pl/osobowe/bmw/seria-3",
+      "role": "market_deep_link"
+    }
+  ],
+  "collected_at": "2026-09-22T22:05:00Z"
+}

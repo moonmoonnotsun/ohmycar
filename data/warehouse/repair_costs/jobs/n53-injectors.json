@@ -1,0 +1,53 @@
+{
+  "pain_id": "n53-injectors",
+  "status": "quoted_parts_plus_labor",
+  "currency": "PLN",
+  "region": "PL",
+  "collected_at": "2026-09-22T21:55:00Z",
+  "totals_pln": {
+    "independent": [
+      7000,
+      19000
+    ],
+    "specialist": [
+      7700,
+      22800
+    ],
+    "aso": [
+      8400,
+      22800
+    ]
+  },
+  "quotes": [
+    {
+      "tier": "parts",
+      "pln_low": 2833,
+      "pln_high": 2833,
+      "label": "Oryginalne-Czesci.pl · OE N43/N53 injector (×6 for I6)",
+      "url": "https://oryginalne-czesci.pl/wtryskiwacz-paliwa-n43-n53-bmw-e60-e61-e63-e64-e81-e82-e87-e88-e90-e91-e92-e93-f10-f11,id11322.html"
+    },
+    {
+      "tier": "regen",
+      "pln_low": 130,
+      "pln_high": 390,
+      "label": "Diesel-Partner · regen per injector",
+      "url": "http://diesel-partner.pl/wtryskiwacze-benzynowe.html"
+    },
+    {
+      "tier": "forum",
+      "label": "BMW Klub PL · N43/N53 injector discussion (pricing context)",
+      "url": "https://www.bmwklubpolska.pl/forum/topic/191703-e60-n43-n53-regeneracja-wtryskiwaczy/"
+    }
+  ],
+  "note": "I6 often needs full bank. Independent band assumes mix of aftermarket/regen; ASO upper uses OE×6 + labor prior.",
+  "parts_pln": [
+    6000,
+    17000
+  ],
+  "labor_pln": [
+    1000,
+    2000
+  ],
+  "split_note": "injector bank parts + labor; OE unit 2833 each upper path",
+  "formula": "independent_full = parts_pln + labor_pln"
+}

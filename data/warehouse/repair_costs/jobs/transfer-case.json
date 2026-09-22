@@ -1,0 +1,54 @@
+{
+  "pain_id": "transfer-case",
+  "status": "quoted_parts_plus_labor",
+  "totals_pln": {
+    "independent": [
+      3999,
+      6942
+    ],
+    "specialist": [
+      4398,
+      8330
+    ],
+    "aso": [
+      15498,
+      22525
+    ]
+  },
+  "quotes": [
+    {
+      "tier": "parts",
+      "pln_low": 3249,
+      "pln_high": 5692,
+      "label": "GearMar / xdrive-service · ATC700 regen unit",
+      "url": "https://sklep.gearmar.pl/strona-glowna/53-regenerowana-skrzynia-rozdzielcza-atc300.html"
+    },
+    {
+      "tier": "labor",
+      "hours": 5,
+      "label": "GearMar · ~5h regen job",
+      "url": "http://gearmar.pl/naprawa-reduktorow/"
+    },
+    {
+      "tier": "aso",
+      "pln_low": 15498,
+      "pln_high": 22525,
+      "label": "bmwstore.pl · new ATC700 OE exchange",
+      "url": "https://www.bmwstore.pl/pl/katalog/diagram/27_0038-transfer-case-atc-700"
+    }
+  ],
+  "band_rule": "independent/specialist = regen unit + ~5h labor at 150–250 PLN/h. ASO = new OE unit price.",
+  "collected_at": "2026-09-22T21:55:00Z",
+  "currency": "PLN",
+  "region": "PL",
+  "parts_pln": [
+    3249,
+    5692
+  ],
+  "labor_pln": [
+    750,
+    1250
+  ],
+  "split_note": "GearMar regen unit + ~5h labor; ASO OE unit",
+  "formula": "independent_full = parts_pln + labor_pln"
+}

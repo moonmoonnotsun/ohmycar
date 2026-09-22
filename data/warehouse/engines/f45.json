@@ -1,0 +1,64 @@
+{
+  "chassis_slug": "f45",
+  "region": "PL",
+  "collected_at": "2026-09-23T00:05:00Z",
+  "confidence": "sourced_curated",
+  "sources": [
+    {
+      "label": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/BMW_2_Series_Active_Tourer"
+    },
+    {
+      "label": "RealOEM",
+      "url": "https://www.realoem.com/bmw/"
+    }
+  ],
+  "lines": [
+    {
+      "model": "218i",
+      "engine": "B38",
+      "fuel": "petrol",
+      "years": [
+        2014,
+        2015,
+        2016,
+        2017,
+        2018,
+        2019,
+        2020,
+        2021
+      ]
+    },
+    {
+      "model": "220i",
+      "engine": "B48",
+      "fuel": "petrol",
+      "years": [
+        2014,
+        2015,
+        2016,
+        2017,
+        2018,
+        2019,
+        2020,
+        2021
+      ]
+    },
+    {
+      "model": "218d",
+      "engine": "B47",
+      "fuel": "diesel",
+      "years": [
+        2014,
+        2015,
+        2016,
+        2017,
+        2018,
+        2019,
+        2020,
+        2021
+      ]
+    }
+  ],
+  "line_count": 3
+}

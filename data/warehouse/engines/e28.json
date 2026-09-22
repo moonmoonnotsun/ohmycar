@@ -1,0 +1,34 @@
+{
+  "chassis_slug": "e28",
+  "region": "PL",
+  "collected_at": "2026-09-23T00:30:00Z",
+  "confidence": "sourced_curated",
+  "phase": "D_long_tail",
+  "sources": [
+    {
+      "label": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/BMW_5_Series_(E28)"
+    },
+    {
+      "label": "RealOEM",
+      "url": "https://www.realoem.com/bmw/"
+    }
+  ],
+  "lines": [
+    {
+      "model": "528i",
+      "engine": "M30",
+      "fuel": "petrol",
+      "years": [
+        1981,
+        1982,
+        1983,
+        1984,
+        1985,
+        1986,
+        1987
+      ]
+    }
+  ],
+  "line_count": 1
+}

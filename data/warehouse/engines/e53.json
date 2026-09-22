@@ -1,0 +1,56 @@
+{
+  "chassis_slug": "e53",
+  "region": "PL",
+  "collected_at": "2026-09-22T22:05:00Z",
+  "confidence": "sourced_curated",
+  "sources": [
+    {
+      "label": "Wikipedia X5 E53",
+      "url": "https://en.wikipedia.org/wiki/BMW_X5_(E53)"
+    },
+    {
+      "label": "App volume seed cross-check",
+      "url": "src/data/volume.ts"
+    }
+  ],
+  "lines": [
+    {
+      "model": "3.0i",
+      "engine": "M54",
+      "fuel": "petrol",
+      "years": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005,
+        2006
+      ]
+    },
+    {
+      "model": "4.4i",
+      "engine": "M62",
+      "fuel": "petrol",
+      "years": [
+        2000,
+        2001,
+        2002,
+        2003
+      ]
+    },
+    {
+      "model": "3.0d",
+      "engine": "M57",
+      "fuel": "diesel",
+      "years": [
+        2001,
+        2002,
+        2003,
+        2004,
+        2005,
+        2006
+      ]
+    }
+  ]
+}

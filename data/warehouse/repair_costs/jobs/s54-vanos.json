@@ -1,0 +1,61 @@
+{
+  "pain_id": "s54-vanos",
+  "status": "quoted_parts_plus_labor",
+  "currency": "PLN",
+  "region": "PL",
+  "collected_at": "2026-09-23T01:15:00Z",
+  "fx_note": "DE/UK EUR·GBP converted @4.3 PLN/EUR",
+  "parts_pln": [
+    2537,
+    3436
+  ],
+  "labor_pln": [
+    1720,
+    3010
+  ],
+  "totals_pln": {
+    "independent": [
+      5547,
+      7525
+    ],
+    "specialist": [
+      6450,
+      9460
+    ],
+    "aso": [
+      9460,
+      13760
+    ]
+  },
+  "quotes": [
+    {
+      "tier": "parts",
+      "pln_low": 2537,
+      "pln_high": 2537,
+      "label": "Probsten-Tech · S54 VANOS rebuild (send-in) 590€",
+      "url": "https://www.probsten-tech.de/vanosueberarbeitung-s54-e46-m3-z4m-wiesmann/"
+    },
+    {
+      "tier": "parts",
+      "pln_low": 2576,
+      "pln_high": 3436,
+      "label": "Burkhart 599€ / VOSS 799€ exchange VANOS",
+      "url": "https://burkhart-engineering.com/shop/vanos-ueberarbeitung-passend-fuer-s54-e46-m3-z4-m-bmw/"
+    },
+    {
+      "tier": "specialist",
+      "pln_low": 5547,
+      "pln_high": 5977,
+      "label": "H2 Motors · E46 M3 S54 VANOS Überholung fitted 1.290€",
+      "url": "https://www.h2motors.de/vanos-ueberholung-bmw"
+    },
+    {
+      "tier": "specialist",
+      "pln_low": 7200,
+      "pln_high": 7200,
+      "label": "AReeve · S54 VANOS overhaul package £1,500",
+      "url": "https://areeve.co.uk/product/bmw-e46-m3-z4m-s54-vanos-overhaul/"
+    }
+  ],
+  "formula": "independent ≈ H2 fitted band; parts ≈ send-in rebuild 590–799€@4.3"
+}

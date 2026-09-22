@@ -1,0 +1,62 @@
+{
+  "pain_id": "n43-injectors",
+  "status": "quoted_parts_plus_labor",
+  "currency": "PLN",
+  "region": "PL",
+  "collected_at": "2026-09-22T21:55:00Z",
+  "totals_pln": {
+    "independent": [
+      4800,
+      5900
+    ],
+    "specialist": [
+      5280,
+      7080
+    ],
+    "aso": [
+      5500,
+      7000
+    ]
+  },
+  "quotes": [
+    {
+      "tier": "parts",
+      "pln_low": 1000,
+      "pln_high": 1093,
+      "label": "pojazdy.net / forum · ~1000–1093 zł per injector",
+      "url": "https://www.pojazdy.net/bmw/bmw-n43-2-0-benzyna-170-km/"
+    },
+    {
+      "tier": "aso",
+      "pln_low": 6500,
+      "pln_high": 6500,
+      "label": "BMW Klub PL · ASO bank of injectors ~6500 zł (reported)",
+      "url": "https://www.bmwklubpolska.pl/forum/topic/191703-e60-n43-n53-regeneracja-wtryskiwaczy/"
+    },
+    {
+      "tier": "parts",
+      "pln_low": 2833,
+      "pln_high": 2833,
+      "label": "Oryginalne-Czesci.pl · OE N43/N53 injector unit",
+      "url": "https://oryginalne-czesci.pl/wtryskiwacz-paliwa-n43-n53-bmw-e60-e61-e63-e64-e81-e82-e87-e88-e90-e91-e92-e93-f10-f11,id11322.html"
+    },
+    {
+      "tier": "regen",
+      "pln_low": 130,
+      "pln_high": 390,
+      "label": "Diesel-Partner · regen/test per injector",
+      "url": "http://diesel-partner.pl/wtryskiwacze-benzynowe.html"
+    }
+  ],
+  "note": "UI band ≈ 4-cyl full set aftermarket/ASO path. Single OE unit 2833 zł; regen is lower-confidence alternative.",
+  "parts_pln": [
+    4000,
+    4400
+  ],
+  "labor_pln": [
+    800,
+    1500
+  ],
+  "split_note": "4× injector ~1000–1093 + labor; ASO bank ~6500 reported",
+  "formula": "independent_full = parts_pln + labor_pln"
+}

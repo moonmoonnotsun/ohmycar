@@ -1,0 +1,43 @@
+{
+  "slug": "e23",
+  "code": "E23",
+  "family": "luxury",
+  "years": [
+    1977,
+    1986
+  ],
+  "market_model": "Seria 7",
+  "otomoto": "seria-7",
+  "gold": false,
+  "engines": [
+    "M30"
+  ],
+  "wiki": "https://en.wikipedia.org/wiki/BMW_7_Series_(E23)",
+  "realoem_hint": "https://www.realoem.com/bmw/",
+  "region": "PL",
+  "status": "catalog_confirmed",
+  "phase": "D_long_tail",
+  "sources": [
+    {
+      "provider": "wikipedia",
+      "url": "https://en.wikipedia.org/wiki/BMW_7_Series_(E23)",
+      "role": "generation_identity"
+    },
+    {
+      "provider": "realoem",
+      "url": "https://www.realoem.com/bmw/",
+      "role": "parts_and_type_codes"
+    },
+    {
+      "provider": "ohmycar_chassis_ts",
+      "url": "src/data/chassis.ts",
+      "role": "product_taxonomy"
+    },
+    {
+      "provider": "otomoto",
+      "url": "https://www.otomoto.pl/osobowe/bmw/seria-7",
+      "role": "market_deep_link"
+    }
+  ],
+  "collected_at": "2026-09-23T00:30:00Z"
+}

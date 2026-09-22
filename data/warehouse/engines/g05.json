@@ -1,0 +1,51 @@
+{
+  "chassis_slug": "g05",
+  "region": "PL",
+  "collected_at": "2026-09-22T23:55:00Z",
+  "confidence": "sourced_curated",
+  "sources": [
+    {
+      "label": "Wikipedia generation page",
+      "url": "https://en.wikipedia.org/wiki/BMW_X5_(G05)"
+    },
+    {
+      "label": "RealOEM BMW catalog",
+      "url": "https://www.realoem.com/bmw/"
+    }
+  ],
+  "lines": [
+    {
+      "model": "30d",
+      "engine": "B57",
+      "fuel": "diesel",
+      "years": [
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025,
+        2026
+      ]
+    },
+    {
+      "model": "40i",
+      "engine": "B58",
+      "fuel": "petrol",
+      "years": [
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025,
+        2026
+      ]
+    }
+  ],
+  "line_count": 2
+}

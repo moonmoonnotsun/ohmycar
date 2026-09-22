@@ -1,0 +1,35 @@
+{
+  "pain_id": "m54-cooling",
+  "status": "quoted_workshop_band",
+  "totals_pln": {
+    "independent": [
+      800,
+      2000
+    ],
+    "specialist": [
+      1200,
+      2800
+    ],
+    "aso": [
+      2000,
+      4000
+    ]
+  },
+  "quotes": [
+    {
+      "tier": "independent",
+      "pln_low": 800,
+      "pln_high": 1500,
+      "label": "polecanymechanik / cenauslug electric&plastic cooling prior",
+      "url": "https://www.polecanymechanik.pl/artykul/porownanie-kosztow-wymiany-elektrycznej-pompy-wody-do-bmw-e90-co-warto-wiedziec-534074"
+    },
+    {
+      "tier": "note",
+      "label": "M54 often thermostat + expansion tank + hoses together — upper band allows multi-part cooling refresh",
+      "url": "https://en.wikipedia.org/wiki/BMW_M54"
+    }
+  ],
+  "collected_at": "2026-09-22T21:30:00Z",
+  "currency": "PLN",
+  "region": "PL"
+}

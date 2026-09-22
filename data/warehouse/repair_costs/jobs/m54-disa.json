@@ -1,0 +1,53 @@
+{
+  "pain_id": "m54-disa",
+  "status": "quoted_parts_plus_labor",
+  "currency": "PLN",
+  "region": "PL",
+  "collected_at": "2026-09-22T21:55:00Z",
+  "totals_pln": {
+    "independent": [
+      250,
+      900
+    ],
+    "specialist": [
+      275,
+      1080
+    ],
+    "aso": [
+      350,
+      1260
+    ]
+  },
+  "quotes": [
+    {
+      "tier": "parts",
+      "pln_low": 48,
+      "pln_high": 350,
+      "label": "repair-set.pl / e-motoryzacyjny · DISA repair kit M54",
+      "url": "https://repair-set.pl/sklep/zestawy-naprawcze-ukladu-disa-bmw/zestaw-naprawczy-disa-bmw-m54-3-0-l-i-m56-2-5-l-11617544805-11617502275/"
+    },
+    {
+      "tier": "parts",
+      "pln_low": 195,
+      "pln_high": 257,
+      "label": "e-motoryzacyjny · full DISA valve substitute",
+      "url": "https://e-motoryzacyjny.pl/products/card/01HNF9/zestaw-naprawczy-zaworu-disa-do-bmw-z-silnikiem-3-0-m54-b30-2000-2008"
+    },
+    {
+      "tier": "parts",
+      "pln_note": "New DISA valve avg ~500 zł cited on repair-set.pl",
+      "url": "https://repair-set.pl/sklep/zestawy-naprawcze-ukladu-disa-bmw/zestaw-naprawczy-disa-bmw-m54-3-0-l-i-m56-2-5-l-11617544805-11617502275/"
+    }
+  ],
+  "band_rule": "independent = kit/valve + ~1–2h labor @150 PLN; ASO uses higher parts+rate.",
+  "parts_pln": [
+    50,
+    350
+  ],
+  "labor_pln": [
+    200,
+    550
+  ],
+  "split_note": "repair-set / e-motoryzacyjny DISA kit/valve + labor prior",
+  "formula": "independent_full = parts_pln + labor_pln"
+}

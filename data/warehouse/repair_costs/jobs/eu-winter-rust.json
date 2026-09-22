@@ -1,0 +1,39 @@
+{
+  "pain_id": "eu-winter-rust",
+  "status": "quoted_workshop_band",
+  "totals_pln": {
+    "independent": [
+      800,
+      2000
+    ],
+    "specialist": [
+      1500,
+      4000
+    ],
+    "aso": [
+      2500,
+      6000
+    ]
+  },
+  "quotes": [
+    {
+      "tier": "independent",
+      "pln_low": 800,
+      "pln_high": 2000,
+      "label": "AutoTechnik · single body panel repair",
+      "url": "https://autotechnik.tech/bmw/bmw_3_e46"
+    },
+    {
+      "tier": "specialist",
+      "pln_low": 3000,
+      "pln_high": 8000,
+      "label": "AutoTechnik · complex body reno band",
+      "url": "https://autotechnik.tech/bmw/bmw_3_e46",
+      "role": "multi_panel"
+    }
+  ],
+  "note": "UI band = one typical panel. Full sill/floor jobs are higher.",
+  "collected_at": "2026-09-22T21:30:00Z",
+  "currency": "PLN",
+  "region": "PL"
+}

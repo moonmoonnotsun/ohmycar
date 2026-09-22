@@ -73,7 +73,7 @@ export function VariantSwitcher({
   return (
     <div className="flex flex-col">
       {showModels ? (
-        <div className="flex flex-wrap gap-2">
+        <div className="-mx-1 flex gap-1.5 overflow-x-auto px-1 no-scrollbar sm:flex-wrap sm:overflow-visible">
           {models.map((model) => {
             const active = model === variant.model;
             const target =
@@ -89,7 +89,7 @@ export function VariantSwitcher({
               <HardLink
                 key={model}
                 href={variantHref(locale, chassisSlug, target.slug)}
-                className={`h-tap inline-flex shrink-0 items-center rounded-full border px-3.5 text-sm font-medium tabular-nums ${
+                className={`inline-flex h-9 shrink-0 items-center rounded-full border px-3 text-sm font-medium tabular-nums sm:h-tap sm:px-3.5 ${
                   active
                     ? "border-[var(--accent)] bg-transparent text-[var(--accent)]"
                     : "border-transparent bg-transparent text-[var(--muted)]"
@@ -103,12 +103,12 @@ export function VariantSwitcher({
       ) : null}
 
       {showModels && showYears ? (
-        <div className="my-3.5 h-px w-full bg-white/12" aria-hidden />
+        <div className="my-2.5 h-px w-full bg-white/12 sm:my-3.5" aria-hidden />
       ) : null}
 
       {showYears ? (
         <div>
-          <div className="flex flex-wrap gap-2">
+          <div className="-mx-1 flex gap-1.5 overflow-x-auto px-1 no-scrollbar sm:flex-wrap sm:gap-2 sm:overflow-visible">
             {years.map(({ year, variant: row, score }) => {
               // Color/link = canonical year cell for this model (best score).
               // Do not prefer current engine — that made 2015 flip N47↔B47 when browsing years.
@@ -124,7 +124,7 @@ export function VariantSwitcher({
                 <HardLink
                   key={`${year}-${row.slug}`}
                   href={variantHref(locale, chassisSlug, href.slug)}
-                  className={`h-tap inline-flex shrink-0 items-center rounded-full px-3.5 text-sm font-medium tabular-nums ${yearRiskClass(score, active)}`}
+                  className={`inline-flex h-9 shrink-0 items-center rounded-full px-3 text-sm font-medium tabular-nums sm:h-tap sm:px-3.5 ${yearRiskClass(score, active)}`}
                 >
                   {year}
                 </HardLink>
@@ -132,18 +132,18 @@ export function VariantSwitcher({
             })}
           </div>
 
-          <div className="mt-4 flex justify-center md:justify-end">
-            <div className="inline-flex items-center gap-3 text-[12px] leading-none text-[var(--muted)]">
-              <span className="inline-flex items-center gap-2">
-                <span className="size-2.5 shrink-0 rounded-full bg-[var(--good)]" aria-hidden />
+          <div className="mt-2.5 flex justify-start sm:mt-4 md:justify-end">
+            <div className="inline-flex items-center gap-2 text-[11px] leading-none text-[var(--muted)] sm:gap-3 sm:text-[12px]">
+              <span className="inline-flex items-center gap-1.5 sm:gap-2">
+                <span className="size-2 shrink-0 rounded-full bg-[var(--good)] sm:size-2.5" aria-hidden />
                 <span>{copy.riskLower}</span>
               </span>
               <span
-                className="block h-2 w-24 shrink-0 rounded-full bg-gradient-to-r from-[var(--good)] via-[var(--mid)] to-[var(--bad)]"
+                className="block h-1.5 w-16 shrink-0 rounded-full bg-gradient-to-r from-[var(--good)] via-[var(--mid)] to-[var(--bad)] sm:h-2 sm:w-24"
                 aria-hidden
               />
-              <span className="inline-flex items-center gap-2">
-                <span className="size-2.5 shrink-0 rounded-full bg-[var(--bad)]" aria-hidden />
+              <span className="inline-flex items-center gap-1.5 sm:gap-2">
+                <span className="size-2 shrink-0 rounded-full bg-[var(--bad)] sm:size-2.5" aria-hidden />
                 <span>{copy.riskHigher}</span>
               </span>
             </div>

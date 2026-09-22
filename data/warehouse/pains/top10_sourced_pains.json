@@ -1,6 +1,6 @@
 {
   "dataset": "pains",
-  "collected_at": "2026-09-22T19:20:00Z",
+  "collected_at": "2026-09-23T01:15:00Z",
   "rule": "Every pain must have at least one primary source URL. PLN bands only when parts+labor collected — never invented.",
   "id_aliases": {
     "n47-timing-chain": "n47-chain",
@@ -9,8 +9,23 @@
   "rows": [
     {
       "id": "n47-chain",
-      "engines": ["N47"],
-      "chassis_slugs": ["e90", "f30", "e60", "f10", "e87", "f20"],
+      "engines": [
+        "N47"
+      ],
+      "chassis_slugs": [
+        "e90",
+        "f30",
+        "e60",
+        "f10",
+        "e87",
+        "f20",
+        "e84",
+        "f25",
+        "e82",
+        "f32",
+        "f26",
+        "e71"
+      ],
       "year_from": 2007,
       "title": {
         "en": "Timing chain (rear of engine)",
@@ -28,24 +43,77 @@
         "ru": "Цепь со стороны коробки. Обрыв или перескок часто означает замену мотора. Наибольший риск ~2007-03–2009-01 (Wikipedia N47 / Watchdog). Это поломка N47, не всех E90."
       },
       "severity": "engine-loss",
-      "pln_bands": null,
-      "pln_note": "No Autodoc/IC quote collected yet — do not invent PLN.",
+      "pln_bands": {
+        "parts": [
+          1800,
+          3500
+        ],
+        "labor": [
+          2000,
+          2500
+        ],
+        "independent": [
+          3800,
+          6000
+        ],
+        "specialist": [
+          6500,
+          8500
+        ],
+        "aso": [
+          7499,
+          7499
+        ],
+        "note": "Parts + labor. AutoKult parts+labor split; ADM specialist; Smorawiński ASO"
+      },
       "sources": [
-        { "label": "Wikipedia · BMW N47 (Timing chain problems)", "url": "https://en.wikipedia.org/wiki/BMW_N47" },
-        { "label": "BBC Watchdog · BMW deny engine failures (cited on Wikipedia N47)", "url": "https://www.bbc.co.uk/programmes/b007td16" },
-        { "label": "NHTSA TSB / manufacturer communications index", "url": "https://www.nhtsa.gov/nhtsa-datasets-and-apis" }
+        {
+          "label": "Wikipedia · BMW N47 (Timing chain problems)",
+          "url": "https://en.wikipedia.org/wiki/BMW_N47"
+        },
+        {
+          "label": "BBC Watchdog · BMW deny engine failures (cited on Wikipedia N47)",
+          "url": "https://www.bbc.co.uk/programmes/b007td16"
+        },
+        {
+          "label": "NHTSA TSB / manufacturer communications index",
+          "url": "https://www.nhtsa.gov/nhtsa-datasets-and-apis"
+        },
+        {
+          "label": "PLN · AutoKult · N47 rozrząd (zamienniki→OEM)",
+          "url": "https://autokult.pl/silnik-2-0-n47-od-bmw-i-jego-rozrzad-sprawdzamy-czy-jest-az-tak-zle,6809155006965377a"
+        },
+        {
+          "label": "PLN · ADM Serwis · N47 pełna wymiana",
+          "url": "https://admserwis.com/blog/bmw-n47-i-wymiana-rozrzdu-kiedy-i-dlaczego-to-konieczne"
+        },
+        {
+          "label": "PLN · BMW Smorawiński GZ · N47 od 7499 zł brutto",
+          "url": "https://www.bmw-smorawinskigz.pl/wymiana-rozrzadu"
+        },
+        {
+          "label": "PLN · kosztserwisu.pl · N47 (lower aggregator band — kept as secondary)",
+          "url": "https://kosztserwisu.pl/koszty-napraw/rozrzad/wymiana-rozrzadu-bmw/"
+        }
       ],
       "autodoc_query": {
         "en": "BMW N47 timing chain",
         "pl": "BMW N47 łańcuch rozrządu",
         "ru": "BMW N47 цепь ГРМ"
       },
-      "confidence": "documented_fault_no_pln_yet"
+      "confidence": "documented_fault_no_pln_yet+pln_workshop_band"
     },
     {
       "id": "n54-hpfp",
-      "engines": ["N54"],
-      "chassis_slugs": ["e90"],
+      "engines": [
+        "N54"
+      ],
+      "chassis_slugs": [
+        "e90",
+        "e82",
+        "e82-1m",
+        "e89-z4"
+      ],
       "title": {
         "en": "HPFP and injectors",
         "pl": "Pompa HPFP i wtryskiwacze",
@@ -62,21 +130,63 @@
         "ru": "Отказы HPFP задокументированы; BMW выдавало продление гарантии / TSB в США. Признаки: трудный запуск, падение мощности, ошибки смеси. Пьезофорсунки — связанный дорогой узел."
       },
       "severity": "expensive",
-      "pln_bands": null,
+      "pln_bands": {
+        "parts": [
+          1400,
+          3800
+        ],
+        "labor": [
+          500,
+          1200
+        ],
+        "independent": [
+          1900,
+          5000
+        ],
+        "specialist": [
+          2090,
+          6000
+        ],
+        "aso": [
+          2565,
+          6750
+        ],
+        "note": "Parts + labor. cenauslug.pl HPFP parts 1400–3800 + labor 500–1200"
+      },
       "sources": [
-        { "label": "NHTSA · N54 HPFP warranty TSB (SI B13 04 09 / MC-10149587)", "url": "https://static.nhtsa.gov/odi/tsbs/2013/MC-10149587-9999.pdf" },
-        { "label": "Wikipedia · BMW N54", "url": "https://en.wikipedia.org/wiki/BMW_N54" }
+        {
+          "label": "NHTSA · N54 HPFP warranty TSB (SI B13 04 09 / MC-10149587)",
+          "url": "https://static.nhtsa.gov/odi/tsbs/2013/MC-10149587-9999.pdf"
+        },
+        {
+          "label": "Wikipedia · BMW N54",
+          "url": "https://en.wikipedia.org/wiki/BMW_N54"
+        },
+        {
+          "label": "PLN · cenauslug.pl · HPFP parts 1400–3800 + labor 500–1200",
+          "url": "https://cenauslug.pl/poradniki/wymiana-pompy-paliwa-jakie-sa-koszty-i-jak-wybrac-warsztat"
+        },
+        {
+          "label": "PLN · https://skanyx.com/pl/blog/bmw-fault-codes-guide",
+          "url": "https://skanyx.com/pl/blog/bmw-fault-codes-guide"
+        },
+        {
+          "label": "PLN · Oryginalne-Czesci.pl · single N54 injector OE",
+          "url": "https://oryginalne-czesci.pl/wtryskiwacz-paliwa-n54-n54t-n63-n74-s63-bmw-e60-e61-x5-e70-x6-e71-e72-e82-e88-z4-e89-e90-e91-e92-e93-f01-f02-f03-f04-5gt-f07-f10-f11-f12-f13,id10359.html"
+        }
       ],
       "autodoc_query": {
         "en": "BMW N54 HPFP injectors",
         "pl": "BMW N54 pompa HPFP wtryskiwacze",
         "ru": "BMW N54 ТНВД форсунки"
       },
-      "confidence": "tsb_cited"
+      "confidence": "tsb_cited+pln_workshop_band"
     },
     {
       "id": "n53-injectors",
-      "engines": ["N53"],
+      "engines": [
+        "N53"
+      ],
       "title": {
         "en": "Injectors and HPFP (EU N53)",
         "pl": "Wtryskiwacze i pompa HPFP (N53 EU)",
@@ -93,9 +203,46 @@
         "ru": "N53 — это не N52. Непосредственный впрыск на атмосферной шестёрке — известный дорогой режим отказа по сравнению с помпой."
       },
       "severity": "expensive",
-      "pln_bands": null,
+      "pln_bands": {
+        "parts": [
+          6000,
+          17000
+        ],
+        "labor": [
+          1000,
+          2000
+        ],
+        "independent": [
+          7000,
+          19000
+        ],
+        "specialist": [
+          7700,
+          22800
+        ],
+        "aso": [
+          8400,
+          22800
+        ],
+        "note": "Parts + labor. injector bank parts + labor; OE unit 2833 each upper path"
+      },
       "sources": [
-        { "label": "Wikipedia · BMW N53", "url": "https://en.wikipedia.org/wiki/BMW_N53" }
+        {
+          "label": "Wikipedia · BMW N53",
+          "url": "https://en.wikipedia.org/wiki/BMW_N53"
+        },
+        {
+          "label": "PLN · Oryginalne-Czesci.pl · OE N43/N53 injector (×6 for I6)",
+          "url": "https://oryginalne-czesci.pl/wtryskiwacz-paliwa-n43-n53-bmw-e60-e61-e63-e64-e81-e82-e87-e88-e90-e91-e92-e93-f10-f11,id11322.html"
+        },
+        {
+          "label": "PLN · Diesel-Partner · regen per injector",
+          "url": "http://diesel-partner.pl/wtryskiwacze-benzynowe.html"
+        },
+        {
+          "label": "PLN · BMW Klub PL · N43/N53 injector discussion (pricing context)",
+          "url": "https://www.bmwklubpolska.pl/forum/topic/191703-e60-n43-n53-regeneracja-wtryskiwaczy/"
+        }
       ],
       "autodoc_query": {
         "en": "BMW N53 injectors",
@@ -106,7 +253,9 @@
     },
     {
       "id": "n43-injectors",
-      "engines": ["N43"],
+      "engines": [
+        "N43"
+      ],
       "title": {
         "en": "N43 injectors / NOx",
         "pl": "Wtryskiwacze N43 / NOx",
@@ -123,9 +272,50 @@
         "ru": "Бензин DI 4 цилиндра: форсунки и датчик NOx — задокументированные дорогие узлы этого семейства."
       },
       "severity": "expensive",
-      "pln_bands": null,
+      "pln_bands": {
+        "parts": [
+          4000,
+          4400
+        ],
+        "labor": [
+          800,
+          1500
+        ],
+        "independent": [
+          4800,
+          5900
+        ],
+        "specialist": [
+          5280,
+          7080
+        ],
+        "aso": [
+          5500,
+          7000
+        ],
+        "note": "Parts + labor. 4× injector ~1000–1093 + labor; ASO bank ~6500 reported"
+      },
       "sources": [
-        { "label": "Wikipedia · BMW N43", "url": "https://en.wikipedia.org/wiki/BMW_N43" }
+        {
+          "label": "Wikipedia · BMW N43",
+          "url": "https://en.wikipedia.org/wiki/BMW_N43"
+        },
+        {
+          "label": "PLN · pojazdy.net / forum · ~1000–1093 zł per injector",
+          "url": "https://www.pojazdy.net/bmw/bmw-n43-2-0-benzyna-170-km/"
+        },
+        {
+          "label": "PLN · BMW Klub PL · ASO bank of injectors ~6500 zł (reported)",
+          "url": "https://www.bmwklubpolska.pl/forum/topic/191703-e60-n43-n53-regeneracja-wtryskiwaczy/"
+        },
+        {
+          "label": "PLN · Oryginalne-Czesci.pl · OE N43/N53 injector unit",
+          "url": "https://oryginalne-czesci.pl/wtryskiwacz-paliwa-n43-n53-bmw-e60-e61-e63-e64-e81-e82-e87-e88-e90-e91-e92-e93-f10-f11,id11322.html"
+        },
+        {
+          "label": "PLN · Diesel-Partner · regen/test per injector",
+          "url": "http://diesel-partner.pl/wtryskiwacze-benzynowe.html"
+        }
       ],
       "autodoc_query": {
         "en": "BMW N43 injectors",
@@ -136,7 +326,11 @@
     },
     {
       "id": "water-pump",
-      "engines": ["N52", "N54", "N55"],
+      "engines": [
+        "N52",
+        "N54",
+        "N55"
+      ],
       "title": {
         "en": "Electric water pump / thermostat",
         "pl": "Elektryczna pompa wody / termostat",
@@ -153,20 +347,60 @@
         "ru": "Электрическая помпа — известный расходник; может отказать без явного предупреждения. Проверяйте охлаждение на каждом N52/N54/N55."
       },
       "severity": "overheat",
-      "pln_bands": null,
+      "pln_bands": {
+        "parts": [
+          700,
+          2000
+        ],
+        "labor": [
+          300,
+          600
+        ],
+        "independent": [
+          1000,
+          2600
+        ],
+        "specialist": [
+          1100,
+          3120
+        ],
+        "aso": [
+          1400,
+          3639
+        ],
+        "note": "Parts + labor. cenauslug.pl electric pump: parts 700–2000 + labor 300–600"
+      },
       "sources": [
-        { "label": "Wikipedia · BMW N52", "url": "https://en.wikipedia.org/wiki/BMW_N52" }
+        {
+          "label": "Wikipedia · BMW N52",
+          "url": "https://en.wikipedia.org/wiki/BMW_N52"
+        },
+        {
+          "label": "PLN · polecanymechanik.pl · E90 electric water pump job",
+          "url": "https://www.polecanymechanik.pl/artykul/porownanie-kosztow-wymiany-elektrycznej-pompy-wody-do-bmw-e90-co-warto-wiedziec-534074"
+        },
+        {
+          "label": "PLN · cenauslug.pl · electric pump parts 700–2000 + labor 300–600",
+          "url": "https://cenauslug.pl/poradniki/ile-kosztuje-wymiana-pompy-wody-w-samochodzie-objawy-awarii-i-porownanie-cen"
+        },
+        {
+          "label": "PLN · Hypertech · labor+coolant (parts extra)",
+          "url": "https://www.hypertech.com.pl/serwis-bmw/wymiana-pompy-wody-bmw/"
+        }
       ],
       "autodoc_query": {
         "en": "BMW electric water pump N52 N55",
         "pl": "BMW pompa wody elektryczna N52 N55",
         "ru": "BMW электрическая помпа N52 N55"
       },
-      "confidence": "wiki_prior"
+      "confidence": "wiki_prior+pln_workshop_band"
     },
     {
       "id": "swirl-flaps",
-      "engines": ["M47", "M57"],
+      "engines": [
+        "M47",
+        "M57"
+      ],
       "title": {
         "en": "Intake swirl flaps",
         "pl": "Klapki w kolektorze (swirl flaps)",
@@ -183,21 +417,70 @@
         "ru": "Заслонки во впуске могут отломиться и попасть во впуск. Другая поломка, чем цепь ГРМ N47."
       },
       "severity": "expensive",
-      "pln_bands": null,
+      "pln_bands": {
+        "parts": [
+          80,
+          200
+        ],
+        "labor": [
+          400,
+          1600
+        ],
+        "independent": [
+          480,
+          1800
+        ],
+        "specialist": [
+          1950,
+          3650
+        ],
+        "aso": [
+          2500,
+          4500
+        ],
+        "note": "Parts + labor. blanking kit parts + labor; Skanyx specialist band"
+      },
       "sources": [
-        { "label": "Wikipedia · BMW M57", "url": "https://en.wikipedia.org/wiki/BMW_M57" },
-        { "label": "Wikipedia · BMW M47", "url": "https://en.wikipedia.org/wiki/BMW_M47" }
+        {
+          "label": "Wikipedia · BMW M57",
+          "url": "https://en.wikipedia.org/wiki/BMW_M57"
+        },
+        {
+          "label": "Wikipedia · BMW M47",
+          "url": "https://en.wikipedia.org/wiki/BMW_M47"
+        },
+        {
+          "label": "PLN · BMG Tuning · usuwanie klap (max band)",
+          "url": "https://www.bmgtuning.pl/usuwanie-klap-wirowych/"
+        },
+        {
+          "label": "PLN · Kata-Serwis · od 400 zł",
+          "url": "https://kata-serwis.pl/usuwanie-klap-wirowych-gdansk/"
+        },
+        {
+          "label": "PLN · Skanyx · M57 flap delete parts+labor PLN",
+          "url": "https://skanyx.com/pl/blog/bmw-m57-engine-buyer-guide-525d-530d-535d-obd2"
+        },
+        {
+          "label": "PLN · Car Media · OE collector replacement band",
+          "url": "https://car-media.pl/pl/technika-i-elektromobilnosc/budowa-i-dzialanie/klapy-wirowe-kolektor-naprawa-czy-usuwanie"
+        }
       ],
       "autodoc_query": {
         "en": "BMW M57 swirl flaps",
         "pl": "BMW M57 klapki kolektora",
         "ru": "BMW M57 вихревые заслонки"
       },
-      "confidence": "wiki_prior"
+      "confidence": "wiki_prior+pln_workshop_band",
+      "chassis_slugs": [
+        "e63"
+      ]
     },
     {
       "id": "n57-timing",
-      "engines": ["N57"],
+      "engines": [
+        "N57"
+      ],
       "title": {
         "en": "N57 timing chain (lower risk than N47)",
         "pl": "Rozrząd / łańcuch N57 (niższe ryzyko niż N47)",
@@ -214,21 +497,62 @@
         "ru": "N57 ломается реже N47, но это всё ещё дизель с цепью. Проверьте шум ГРМ и историю. Тема охладителя EGR задокументирована в NHTSA ELW."
       },
       "severity": "expensive",
-      "pln_bands": null,
+      "pln_bands": {
+        "independent": [
+          2000,
+          4000
+        ],
+        "specialist": [
+          2800,
+          5000
+        ],
+        "aso": [
+          8499,
+          8499
+        ],
+        "note": "From warehouse/repair_costs/jobs/n57-timing.json (workshop-published bands 2026-09-22)"
+      },
       "sources": [
-        { "label": "Wikipedia · BMW N57", "url": "https://en.wikipedia.org/wiki/BMW_N57" },
-        { "label": "NHTSA · N47/N57 EGR cooler ELW (SI B01 05 20 / MC-10249439)", "url": "https://static.nhtsa.gov/odi/tsbs/2024/MC-10249439-0001.pdf" }
+        {
+          "label": "Wikipedia · BMW N57",
+          "url": "https://en.wikipedia.org/wiki/BMW_N57"
+        },
+        {
+          "label": "NHTSA · N47/N57 EGR cooler ELW (SI B01 05 20 / MC-10249439)",
+          "url": "https://static.nhtsa.gov/odi/tsbs/2024/MC-10249439-0001.pdf"
+        },
+        {
+          "label": "PLN · kosztserwisu.pl · N57",
+          "url": "https://kosztserwisu.pl/koszty-napraw/rozrzad/wymiana-rozrzadu-bmw/"
+        },
+        {
+          "label": "PLN · Bosch Sawa · N57 od",
+          "url": "https://www.bosch-sawa.pl/wymiana-rozrzadu-bmw-lublin/"
+        },
+        {
+          "label": "PLN · BMW Smorawiński GZ · N57 od 8499 zł",
+          "url": "https://www.bmw-smorawinskigz.pl/wymiana-rozrzadu"
+        }
       ],
       "autodoc_query": {
         "en": "BMW N57 timing chain",
         "pl": "BMW N57 łańcuch rozrządu",
         "ru": "BMW N57 цепь ГРМ"
       },
-      "confidence": "wiki_plus_related_tsb"
+      "confidence": "wiki_plus_related_tsb+pln_workshop_band",
+      "chassis_slugs": [
+        "e71",
+        "f16",
+        "f01",
+        "f13"
+      ]
     },
     {
       "id": "timing-guides",
-      "engines": ["N46", "N42"],
+      "engines": [
+        "N46",
+        "N42"
+      ],
       "title": {
         "en": "N42 / N46 chain guides",
         "pl": "Prowadnice łańcucha N42 / N46",
@@ -245,21 +569,47 @@
         "ru": "У этой бензиновой четвёрки изнашиваются направляющие цепи. Это не N52 и не ТНВД."
       },
       "severity": "expensive",
-      "pln_bands": null,
+      "pln_bands": {
+        "independent": [
+          1200,
+          2800
+        ],
+        "specialist": [
+          2000,
+          3500
+        ],
+        "aso": [
+          3500,
+          5000
+        ],
+        "note": "From warehouse/repair_costs/jobs/timing-guides.json (workshop-published bands 2026-09-22)"
+      },
       "sources": [
-        { "label": "Wikipedia · BMW N46", "url": "https://en.wikipedia.org/wiki/BMW_N46" }
+        {
+          "label": "Wikipedia · BMW N46",
+          "url": "https://en.wikipedia.org/wiki/BMW_N46"
+        },
+        {
+          "label": "PLN · kosztserwisu.pl · N46/N52 guides/VANOS band",
+          "url": "https://kosztserwisu.pl/koszty-napraw/rozrzad/wymiana-rozrzadu-bmw/"
+        }
       ],
       "autodoc_query": {
         "en": "BMW N46 timing chain",
         "pl": "BMW N46 łańcuch rozrządu",
         "ru": "BMW N46 цепь ГРМ"
       },
-      "confidence": "wiki_prior"
+      "confidence": "wiki_prior+pln_workshop_band"
     },
     {
       "id": "subframe-rust",
       "engines": [],
-      "chassis_slugs": ["e90", "e91", "e92", "e93"],
+      "chassis_slugs": [
+        "e90",
+        "e91",
+        "e92",
+        "e93"
+      ],
       "title": {
         "en": "Rear subframe / rust (EU winters)",
         "pl": "Tylna belka / rdza (zima EU)",
@@ -276,21 +626,51 @@
         "ru": "Задний подрамник и крепления рычагов ржавеют после польских зим. Кузов, не мотор."
       },
       "severity": "safety",
-      "pln_bands": null,
+      "pln_bands": {
+        "independent": [
+          2000,
+          5000
+        ],
+        "specialist": [
+          3000,
+          8000
+        ],
+        "aso": [
+          5000,
+          12000
+        ],
+        "note": "From warehouse/repair_costs/jobs/subframe-rust.json (workshop-published bands 2026-09-22)"
+      },
       "sources": [
-        { "label": "Wikipedia · BMW 3 Series (E90)", "url": "https://en.wikipedia.org/wiki/BMW_3_Series_(E90)" }
+        {
+          "label": "Wikipedia · BMW 3 Series (E90)",
+          "url": "https://en.wikipedia.org/wiki/BMW_3_Series_(E90)"
+        },
+        {
+          "label": "PLN · AutoTechnik · E46 subframe mount weld+reinforce",
+          "url": "https://autotechnik.tech/bmw/bmw_3_e46"
+        },
+        {
+          "label": "PLN · e-posadzki.pl · E46 floor panel replacement band",
+          "url": "https://e-posadzki.pl/wymiana-podlogi-w-samochodzie-koszt"
+        }
       ],
       "autodoc_query": {
         "en": "BMW E90 rear control arm subframe",
         "pl": "BMW E90 wahacz tylny belka",
         "ru": "BMW E90 задний рычаг подрамник"
       },
-      "confidence": "wiki_body_prior"
+      "confidence": "wiki_body_prior+pln_workshop_band"
     },
     {
       "id": "elv-cas",
       "engines": [],
-      "chassis_slugs": ["e90", "e91", "e92", "e93"],
+      "chassis_slugs": [
+        "e90",
+        "e91",
+        "e92",
+        "e93"
+      ],
       "title": {
         "en": "Electric steering lock / CAS",
         "pl": "Blokada kierownicy / CAS",
@@ -307,9 +687,30 @@
         "ru": "Может не разблокировать руль и не завестись. Модуль и кодировка, не мотор. На осмотре проверьте запуск с ключа."
       },
       "severity": "stranded",
-      "pln_bands": null,
+      "pln_bands": {
+        "independent": [
+          1200,
+          3500
+        ],
+        "specialist": [
+          2000,
+          4500
+        ],
+        "aso": [
+          3000,
+          6000
+        ],
+        "note": "From warehouse/repair_costs/jobs/elv-cas.json (workshop-published bands 2026-09-22)"
+      },
       "sources": [
-        { "label": "Wikipedia · BMW 3 Series (E90)", "url": "https://en.wikipedia.org/wiki/BMW_3_Series_(E90)" }
+        {
+          "label": "Wikipedia · BMW 3 Series (E90)",
+          "url": "https://en.wikipedia.org/wiki/BMW_3_Series_(E90)"
+        },
+        {
+          "label": "PLN · kosztserwisu.pl · BMW electronic lock / immobiliser jobs priced per VIN",
+          "url": "https://kosztserwisu.pl/modele-samochodow/bmw/"
+        }
       ],
       "autodoc_query": {
         "en": "BMW E90 ELV steering lock",
@@ -320,7 +721,10 @@
     },
     {
       "id": "m54-cooling",
-      "engines": ["M54", "M52"],
+      "engines": [
+        "M54",
+        "M52"
+      ],
       "title": {
         "en": "Cooling system (plastic)",
         "pl": "Układ chłodzenia (plastik)",
@@ -337,20 +741,51 @@
         "ru": "Радиатор, расширительный бачок и корпуса термостата становятся хрупкими. Перегрев может повредить головку."
       },
       "severity": "overheat",
-      "pln_bands": null,
+      "pln_bands": {
+        "independent": [
+          800,
+          2000
+        ],
+        "specialist": [
+          1200,
+          2800
+        ],
+        "aso": [
+          2000,
+          4000
+        ],
+        "note": "From warehouse/repair_costs/jobs/m54-cooling.json (workshop-published bands 2026-09-22)"
+      },
       "sources": [
-        { "label": "Wikipedia · BMW M54", "url": "https://en.wikipedia.org/wiki/BMW_M54" }
+        {
+          "label": "Wikipedia · BMW M54",
+          "url": "https://en.wikipedia.org/wiki/BMW_M54"
+        },
+        {
+          "label": "PLN · polecanymechanik / cenauslug electric&plastic cooling prior",
+          "url": "https://www.polecanymechanik.pl/artykul/porownanie-kosztow-wymiany-elektrycznej-pompy-wody-do-bmw-e90-co-warto-wiedziec-534074"
+        }
       ],
       "autodoc_query": {
         "en": "BMW M54 radiator expansion tank",
         "pl": "BMW M54 chłodnica zbiornik wyrównawczy",
         "ru": "BMW M54 радиатор расширительный бачок"
       },
-      "confidence": "wiki_prior"
+      "confidence": "wiki_prior+pln_workshop_band",
+      "chassis_slugs": [
+        "e39",
+        "e46",
+        "e53",
+        "e83",
+        "e90",
+        "e85-z4"
+      ]
     },
     {
       "id": "m54-disa",
-      "engines": ["M54"],
+      "engines": [
+        "M54"
+      ],
       "title": {
         "en": "DISA valve",
         "pl": "Klapa DISA",
@@ -367,9 +802,42 @@
         "ru": "Вал впускной заслонки изнашивается; клапан может попасть во впуск. Стук на холодном моторе — частый признак."
       },
       "severity": "expensive",
-      "pln_bands": null,
+      "pln_bands": {
+        "parts": [
+          50,
+          350
+        ],
+        "labor": [
+          200,
+          550
+        ],
+        "independent": [
+          250,
+          900
+        ],
+        "specialist": [
+          275,
+          1080
+        ],
+        "aso": [
+          350,
+          1260
+        ],
+        "note": "Parts + labor. repair-set / e-motoryzacyjny DISA kit/valve + labor prior"
+      },
       "sources": [
-        { "label": "Wikipedia · BMW M54", "url": "https://en.wikipedia.org/wiki/BMW_M54" }
+        {
+          "label": "Wikipedia · BMW M54",
+          "url": "https://en.wikipedia.org/wiki/BMW_M54"
+        },
+        {
+          "label": "PLN · repair-set.pl / e-motoryzacyjny · DISA repair kit M54",
+          "url": "https://repair-set.pl/sklep/zestawy-naprawcze-ukladu-disa-bmw/zestaw-naprawczy-disa-bmw-m54-3-0-l-i-m56-2-5-l-11617544805-11617502275/"
+        },
+        {
+          "label": "PLN · e-motoryzacyjny · full DISA valve substitute",
+          "url": "https://e-motoryzacyjny.pl/products/card/01HNF9/zestaw-naprawczy-zaworu-disa-do-bmw-z-silnikiem-3-0-m54-b30-2000-2008"
+        }
       ],
       "autodoc_query": {
         "en": "BMW M54 DISA valve",
@@ -380,8 +848,23 @@
     },
     {
       "id": "n20-chain",
-      "engines": ["N20", "N26"],
-      "chassis_slugs": ["f30", "f10", "f20"],
+      "engines": [
+        "N20",
+        "N26"
+      ],
+      "chassis_slugs": [
+        "f30",
+        "f10",
+        "f20",
+        "e84",
+        "f25",
+        "f48",
+        "f32",
+        "f36",
+        "f22",
+        "f26",
+        "e89-z4"
+      ],
       "title": {
         "en": "N20/N26 timing chain / VANOS",
         "pl": "Łańcuch N20/N26 / VANOS",
@@ -398,21 +881,66 @@
         "ru": "BMW выдало в США гарантийное покрытие цепи (SI B11 03 17). Признаки: стук на запуске, расход масла, перескок. Поздние годы лучше, не без риска."
       },
       "severity": "engine-loss",
-      "pln_bands": null,
+      "pln_bands": {
+        "parts": [
+          1375,
+          1800
+        ],
+        "labor": [
+          1500,
+          2500
+        ],
+        "independent": [
+          2875,
+          4300
+        ],
+        "specialist": [
+          3162,
+          5160
+        ],
+        "aso": [
+          5999,
+          5999
+        ],
+        "note": "Parts + labor. rozrzad.pl IWIS kit 1375 + labor prior; ASO Smorawiński od 5999"
+      },
       "sources": [
-        { "label": "NHTSA · N20/N26 timing-chain warranty (SI B11 03 17 / MC-10142923)", "url": "https://static.nhtsa.gov/odi/tsbs/2017/MC-10142923-0001.pdf" },
-        { "label": "Wikipedia · BMW N20", "url": "https://en.wikipedia.org/wiki/BMW_N20" }
+        {
+          "label": "NHTSA · N20/N26 timing-chain warranty (SI B11 03 17 / MC-10142923)",
+          "url": "https://static.nhtsa.gov/odi/tsbs/2017/MC-10142923-0001.pdf"
+        },
+        {
+          "label": "Wikipedia · BMW N20",
+          "url": "https://en.wikipedia.org/wiki/BMW_N20"
+        },
+        {
+          "label": "PLN · kosztserwisu.pl · N20",
+          "url": "https://kosztserwisu.pl/koszty-napraw/rozrzad/wymiana-rozrzadu-bmw/"
+        },
+        {
+          "label": "PLN · BMW Smorawiński GZ · N20 od 5999 zł",
+          "url": "https://www.bmw-smorawinskigz.pl/wymiana-rozrzadu"
+        },
+        {
+          "label": "PLN · rozrzad.pl · IWIS N20 kit",
+          "url": "https://rozrzad.pl/pl/p/ROZRZAD-LANCUCH-ROZRZADU-BMW-125i-F21-N20-11317584084S2/21575"
+        }
       ],
       "autodoc_query": {
         "en": "BMW N20 timing chain VANOS",
         "pl": "BMW N20 łańcuch VANOS",
         "ru": "BMW N20 цепь ГРМ VANOS"
       },
-      "confidence": "tsb_cited"
+      "confidence": "tsb_cited+pln_workshop_band"
     },
     {
       "id": "n20-oil-filter",
-      "engines": ["N20", "B48", "N55"],
+      "engines": [
+        "N20",
+        "B48",
+        "N55",
+        "B58"
+      ],
       "title": {
         "en": "Oil filter housing gasket",
         "pl": "Uszczelka obudowy filtra oleju",
@@ -429,9 +957,38 @@
         "ru": "Пластиковый корпус течёт маслом на ремень. Дёшево на ранней стадии; игнор может убить ремень. Смотрите на месте."
       },
       "severity": "annoyance",
-      "pln_bands": null,
+      "pln_bands": {
+        "parts": [
+          65,
+          110
+        ],
+        "labor": [
+          1075,
+          2365
+        ],
+        "independent": [
+          1140,
+          2475
+        ],
+        "specialist": [
+          1250,
+          2970
+        ],
+        "aso": [
+          1540,
+          3340
+        ],
+        "note": "Parts + labor. Skanyx N55 OFHG: gasket 15–25€ + labor 250–550€ → PLN @4.3"
+      },
       "sources": [
-        { "label": "Wikipedia · BMW N20", "url": "https://en.wikipedia.org/wiki/BMW_N20" }
+        {
+          "label": "Wikipedia · BMW N20",
+          "url": "https://en.wikipedia.org/wiki/BMW_N20"
+        },
+        {
+          "label": "PLN · https://skanyx.com/pl/blog/bmw-fault-codes-guide",
+          "url": "https://skanyx.com/pl/blog/bmw-fault-codes-guide"
+        }
       ],
       "autodoc_query": {
         "en": "BMW oil filter housing gasket",
@@ -442,7 +999,9 @@
     },
     {
       "id": "n62-valvetronic",
-      "engines": ["N62"],
+      "engines": [
+        "N62"
+      ],
       "title": {
         "en": "N62 Valvetronic / coolant",
         "pl": "N62 Valvetronic / płyn",
@@ -459,20 +1018,47 @@
         "ru": "Актуаторы Valvetronic и пластик охлаждения ломаются на этом V8. Перед покупкой — замер компрессии."
       },
       "severity": "expensive",
-      "pln_bands": null,
+      "pln_bands": {
+        "independent": [
+          1500,
+          3500
+        ],
+        "specialist": [
+          2500,
+          5000
+        ],
+        "aso": [
+          4000,
+          8000
+        ],
+        "note": "From warehouse/repair_costs/jobs/n62-valvetronic.json (workshop-published bands 2026-09-22)"
+      },
       "sources": [
-        { "label": "Wikipedia · BMW N62", "url": "https://en.wikipedia.org/wiki/BMW_N62" }
+        {
+          "label": "Wikipedia · BMW N62",
+          "url": "https://en.wikipedia.org/wiki/BMW_N62"
+        },
+        {
+          "label": "PLN · Common N62 ancillary repair band prior (water pipe/valve cover family)",
+          "url": "https://kosztserwisu.pl/modele-samochodow/bmw/"
+        }
       ],
       "autodoc_query": {
         "en": "BMW N62 Valvetronic actuator",
         "pl": "BMW N62 siłownik Valvetronic",
         "ru": "BMW N62 актуатор Valvetronic"
       },
-      "confidence": "wiki_prior"
+      "confidence": "wiki_prior",
+      "chassis_slugs": [
+        "e63",
+        "e65"
+      ]
     },
     {
       "id": "b47-egr",
-      "engines": ["B47"],
+      "engines": [
+        "B47"
+      ],
       "title": {
         "en": "B47 EGR / intake carbon",
         "pl": "B47 EGR / nagar w dolocie",
@@ -489,21 +1075,64 @@
         "ru": "B47 — не N47. Цепь реже; EGR и нагар во впуске — типичные расходы на большом пробеге. Подтвердите B47 на шильдике."
       },
       "severity": "expensive",
-      "pln_bands": null,
+      "pln_bands": {
+        "independent": [
+          2500,
+          5000
+        ],
+        "specialist": [
+          3200,
+          6000
+        ],
+        "aso": [
+          4500,
+          8000
+        ],
+        "note": "From warehouse/repair_costs/jobs/b47-egr.json (workshop-published bands 2026-09-22)"
+      },
       "sources": [
-        { "label": "Wikipedia · BMW B47", "url": "https://en.wikipedia.org/wiki/BMW_B47" },
-        { "label": "NHTSA · N47/N57 EGR cooler ELW (related family theme)", "url": "https://static.nhtsa.gov/odi/tsbs/2024/MC-10249439-0001.pdf" }
+        {
+          "label": "Wikipedia · BMW B47",
+          "url": "https://en.wikipedia.org/wiki/BMW_B47"
+        },
+        {
+          "label": "NHTSA · N47/N57 EGR cooler ELW (related family theme)",
+          "url": "https://static.nhtsa.gov/odi/tsbs/2024/MC-10249439-0001.pdf"
+        },
+        {
+          "label": "PLN · Skanyx · EGR cooler band used as B47 prior (same family job)",
+          "url": "https://skanyx.com/pl/blog/bmw-m57-engine-buyer-guide-525d-530d-535d-obd2"
+        }
       ],
       "autodoc_query": {
         "en": "BMW B47 EGR cooler",
         "pl": "BMW B47 chłodnica EGR",
         "ru": "BMW B47 охладитель EGR"
       },
-      "confidence": "wiki_plus_related_tsb"
+      "confidence": "wiki_plus_related_tsb+pln_workshop_band",
+      "chassis_slugs": [
+        "f48",
+        "f20",
+        "f30",
+        "g30",
+        "f32",
+        "f36",
+        "f40",
+        "f22",
+        "g01",
+        "f39",
+        "u11",
+        "f26",
+        "g02",
+        "f45",
+        "f44"
+      ]
     },
     {
       "id": "n13-timing",
-      "engines": ["N13"],
+      "engines": [
+        "N13"
+      ],
       "title": {
         "en": "N13 timing / HPFP",
         "pl": "N13 rozrząd / HPFP",
@@ -520,20 +1149,48 @@
         "ru": "1.6 турбо — не дешёвая простая 116i. Цепь, ТНВД и нагар часто вместе на большом пробеге."
       },
       "severity": "expensive",
-      "pln_bands": null,
+      "pln_bands": {
+        "independent": [
+          1500,
+          3000
+        ],
+        "specialist": [
+          3000,
+          4500
+        ],
+        "aso": [
+          4999,
+          4999
+        ],
+        "note": "From warehouse/repair_costs/jobs/n13-timing.json (workshop-published bands 2026-09-22)"
+      },
       "sources": [
-        { "label": "Wikipedia · BMW N13", "url": "https://en.wikipedia.org/wiki/BMW_N13" }
+        {
+          "label": "Wikipedia · BMW N13",
+          "url": "https://en.wikipedia.org/wiki/BMW_N13"
+        },
+        {
+          "label": "PLN · BMW Smorawiński GZ · N13 od 4999 zł",
+          "url": "https://www.bmw-smorawinskigz.pl/wymiana-rozrzadu"
+        },
+        {
+          "label": "PLN · kosztserwisu.pl · similar 4-cyl chain band (N20 row used as prior)",
+          "url": "https://kosztserwisu.pl/koszty-napraw/rozrzad/wymiana-rozrzadu-bmw/"
+        }
       ],
       "autodoc_query": {
         "en": "BMW N13 timing chain HPFP",
         "pl": "BMW N13 łańcuch HPFP",
         "ru": "BMW N13 цепь ТНВД"
       },
-      "confidence": "wiki_prior"
+      "confidence": "wiki_prior+pln_workshop_band"
     },
     {
       "id": "e39-cooling",
-      "engines": ["M52", "M62"],
+      "engines": [
+        "M52",
+        "M62"
+      ],
       "title": {
         "en": "Expansion tank / cooling",
         "pl": "Zbiornik wyrównawczy / chłodzenie",
@@ -550,21 +1207,63 @@
         "ru": "Бачок трескается, мотор перегревается. В этом поколении типична тема охлаждения, не цепи."
       },
       "severity": "overheat",
-      "pln_bands": null,
+      "pln_bands": {
+        "independent": [
+          800,
+          2200
+        ],
+        "specialist": [
+          1200,
+          3000
+        ],
+        "aso": [
+          2000,
+          4500
+        ],
+        "note": "From warehouse/repair_costs/jobs/e39-cooling.json (workshop-published bands 2026-09-22)"
+      },
       "sources": [
-        { "label": "Wikipedia · BMW 5 Series (E39)", "url": "https://en.wikipedia.org/wiki/BMW_5_Series_(E39)" }
+        {
+          "label": "Wikipedia · BMW 5 Series (E39)",
+          "url": "https://en.wikipedia.org/wiki/BMW_5_Series_(E39)"
+        },
+        {
+          "label": "PLN · Cooling plastics/expansion tank prior (same family as M54 cooling)",
+          "url": "https://kosztserwisu.pl/modele-samochodow/bmw/"
+        }
       ],
       "autodoc_query": {
         "en": "BMW E39 coolant expansion tank",
         "pl": "BMW E39 zbiornik wyrównawczy",
         "ru": "BMW E39 расширительный бачок"
       },
-      "confidence": "wiki_prior"
+      "confidence": "wiki_prior+pln_workshop_band",
+      "chassis_slugs": [
+        "e38"
+      ]
     },
     {
       "id": "eu-winter-rust",
       "engines": [],
-      "chassis_slugs": ["e46", "e39", "e60", "e61", "e87", "e81", "e53", "e83"],
+      "chassis_slugs": [
+        "e36",
+        "e39",
+        "e46",
+        "e53",
+        "e60",
+        "e61",
+        "e81",
+        "e83",
+        "e87",
+        "e23",
+        "e32",
+        "e31",
+        "e28",
+        "e30",
+        "e12",
+        "e21",
+        "e24"
+      ],
       "title": {
         "en": "Subframe / sills (EU salt)",
         "pl": "Belka / progi (sól EU)",
@@ -581,22 +1280,67 @@
         "ru": "Ржавчина — кузов. На подъёмнике проверьте швы подрамника, пороги и домкратные точки."
       },
       "severity": "safety",
-      "pln_bands": null,
+      "pln_bands": {
+        "independent": [
+          800,
+          2000
+        ],
+        "specialist": [
+          1500,
+          4000
+        ],
+        "aso": [
+          2500,
+          6000
+        ],
+        "note": "From warehouse/repair_costs/jobs/eu-winter-rust.json (workshop-published bands 2026-09-22)"
+      },
       "sources": [
-        { "label": "Wikipedia · BMW 3 Series (E90)", "url": "https://en.wikipedia.org/wiki/BMW_3_Series_(E90)" },
-        { "label": "Wikipedia · BMW 5 Series (E39)", "url": "https://en.wikipedia.org/wiki/BMW_5_Series_(E39)" }
+        {
+          "label": "Wikipedia · BMW 3 Series (E90)",
+          "url": "https://en.wikipedia.org/wiki/BMW_3_Series_(E90)"
+        },
+        {
+          "label": "Wikipedia · BMW 5 Series (E39)",
+          "url": "https://en.wikipedia.org/wiki/BMW_5_Series_(E39)"
+        },
+        {
+          "label": "PLN · AutoTechnik · single body panel repair",
+          "url": "https://autotechnik.tech/bmw/bmw_3_e46"
+        }
       ],
       "autodoc_query": {
         "en": "BMW rear subframe rust",
         "pl": "BMW belka tylna rdza",
         "ru": "BMW задний подрамник ржавчина"
       },
-      "confidence": "wiki_body_prior"
+      "confidence": "wiki_body_prior+pln_workshop_band"
     },
     {
       "id": "transfer-case",
       "engines": [],
-      "chassis_slugs": ["e70", "e53", "e83"],
+      "chassis_slugs": [
+        "e53",
+        "e70",
+        "e83",
+        "e84",
+        "f48",
+        "f25",
+        "f15",
+        "g01",
+        "g05",
+        "f39",
+        "u11",
+        "f26",
+        "g02",
+        "e71",
+        "f16",
+        "g06",
+        "g07",
+        "f97",
+        "f85",
+        "f86"
+      ],
       "title": {
         "en": "Transfer case / xDrive",
         "pl": "Skrzynka rozdzielcza / xDrive",
@@ -613,21 +1357,69 @@
         "ru": "Цепь в раздатке вытягивается. Зажатие в крутых поворотах / скрежет при старте. Тема xDrive, не мотора."
       },
       "severity": "expensive",
-      "pln_bands": null,
+      "pln_bands": {
+        "parts": [
+          3249,
+          5692
+        ],
+        "labor": [
+          750,
+          1250
+        ],
+        "independent": [
+          3999,
+          6942
+        ],
+        "specialist": [
+          4398,
+          8330
+        ],
+        "aso": [
+          15498,
+          22525
+        ],
+        "note": "Parts + labor. GearMar regen unit + ~5h labor; ASO OE unit"
+      },
       "sources": [
-        { "label": "Wikipedia · BMW xDrive", "url": "https://en.wikipedia.org/wiki/BMW_xDrive" }
+        {
+          "label": "Wikipedia · BMW xDrive",
+          "url": "https://en.wikipedia.org/wiki/BMW_xDrive"
+        },
+        {
+          "label": "PLN · GearMar / xdrive-service · ATC700 regen unit",
+          "url": "https://sklep.gearmar.pl/strona-glowna/53-regenerowana-skrzynia-rozdzielcza-atc300.html"
+        },
+        {
+          "label": "PLN · GearMar · ~5h regen job",
+          "url": "http://gearmar.pl/naprawa-reduktorow/"
+        },
+        {
+          "label": "PLN · bmwstore.pl · new ATC700 OE exchange",
+          "url": "https://www.bmwstore.pl/pl/katalog/diagram/27_0038-transfer-case-atc-700"
+        }
       ],
       "autodoc_query": {
         "en": "BMW X5 transfer case actuator",
         "pl": "BMW X5 siłownik skrzynki rozdzielczej",
         "ru": "BMW X5 актуатор раздатки"
       },
-      "confidence": "wiki_prior"
+      "confidence": "wiki_prior+pln_workshop_band"
     },
     {
       "id": "n47-n57-egr-cooler",
-      "engines": ["N47", "N57"],
-      "chassis_slugs": ["e90", "f30", "e60", "f10", "e87", "f20", "e70"],
+      "engines": [
+        "N47",
+        "N57"
+      ],
+      "chassis_slugs": [
+        "e90",
+        "f30",
+        "e60",
+        "f10",
+        "e87",
+        "f20",
+        "e70"
+      ],
       "title": {
         "en": "N47/N57 EGR cooler — extended warranty theme",
         "pl": "N47/N57 – chłodnica EGR",
@@ -644,21 +1436,49 @@
         "ru": "Продлённая гарантия / сервисная акция охладителя EGR на N47/N57 (NHTSA SI B01 05 20)."
       },
       "severity": "safety",
-      "pln_bands": null,
+      "pln_bands": {
+        "independent": [
+          3200,
+          6000
+        ],
+        "specialist": [
+          4000,
+          7000
+        ],
+        "aso": [
+          5500,
+          9000
+        ],
+        "note": "From warehouse/repair_costs/jobs/n47-n57-egr-cooler.json (workshop-published bands 2026-09-22)"
+      },
       "sources": [
-        { "label": "NHTSA · N47/N57 EGR cooler ELW (SI B01 05 20 / MC-10249439)", "url": "https://static.nhtsa.gov/odi/tsbs/2024/MC-10249439-0001.pdf" }
+        {
+          "label": "NHTSA · N47/N57 EGR cooler ELW (SI B01 05 20 / MC-10249439)",
+          "url": "https://static.nhtsa.gov/odi/tsbs/2024/MC-10249439-0001.pdf"
+        },
+        {
+          "label": "PLN · Skanyx · M57 EGR cooler PLN band",
+          "url": "https://skanyx.com/pl/blog/bmw-m57-engine-buyer-guide-525d-530d-535d-obd2"
+        }
       ],
       "autodoc_query": {
         "en": "EGR cooler N47",
         "pl": "chłodnica EGR N47",
         "ru": "охладитель EGR N47"
       },
-      "confidence": "tsb_cited"
+      "confidence": "tsb_cited+pln_workshop_band"
     },
     {
       "id": "takata-airbag-pl",
       "engines": [],
-      "chassis_slugs": ["e90", "e87", "e83", "f30", "f10", "f20"],
+      "chassis_slugs": [
+        "e90",
+        "e87",
+        "e83",
+        "f30",
+        "f10",
+        "f20"
+      ],
       "title": {
         "en": "Driver airbag inflator (PL UOKiK campaigns)",
         "pl": "Poduszka kierowcy — kampanie UOKiK",
@@ -676,15 +1496,41 @@
       },
       "severity": "safety",
       "pln_bands": {
-        "independent": [0, 0],
-        "specialist": [0, 0],
-        "aso": [0, 0],
-        "note": "Campaign repair free at BMW partner when open on VIN"
+        "parts": [
+          0,
+          0
+        ],
+        "labor": [
+          0,
+          0
+        ],
+        "independent": [
+          0,
+          0
+        ],
+        "specialist": [
+          0,
+          0
+        ],
+        "aso": [
+          0,
+          0
+        ],
+        "note": "Parts + labor. Campaign free when VIN open"
       },
       "sources": [
-        { "label": "UOKiK · E81/E83/E84/E87/E90/E91", "url": "https://uokik.gov.pl/bip/samochody-bmw" },
-        { "label": "UOKiK · F-series batch", "url": "https://uokik.gov.pl/bip/samochody-bmw-1" },
-        { "label": "BMW VIN recall checker PL", "url": "https://www.bmwgroup.com/en/general/regulations/recall/recall-polish.html" }
+        {
+          "label": "UOKiK · E81/E83/E84/E87/E90/E91",
+          "url": "https://uokik.gov.pl/bip/samochody-bmw"
+        },
+        {
+          "label": "UOKiK · F-series batch",
+          "url": "https://uokik.gov.pl/bip/samochody-bmw-1"
+        },
+        {
+          "label": "BMW VIN recall checker PL",
+          "url": "https://www.bmwgroup.com/en/general/regulations/recall/recall-polish.html"
+        }
       ],
       "autodoc_query": {
         "en": "BMW airbag",
@@ -692,6 +1538,1062 @@
         "ru": "BMW подушка безопасности"
       },
       "confidence": "official_pl"
+    },
+    {
+      "id": "s65-rod-bearings",
+      "engines": [
+        "S65"
+      ],
+      "chassis_slugs": [
+        "e9x-m3"
+      ],
+      "year_from": 2007,
+      "year_to": 2013,
+      "title": {
+        "en": "Rod bearings (S65 V8)",
+        "pl": "Panewki korbowodowe (S65 V8)",
+        "ru": "Вкладыши шатунов (S65 V8)"
+      },
+      "affects": {
+        "en": "E9x M3 S65 — preventative replacement widely recommended",
+        "pl": "E9x M3 S65 — powszechnie zalecana wymiana profilaktyczna",
+        "ru": "E9x M3 S65 — обычно рекомендуют превентивную замену"
+      },
+      "summary": {
+        "en": "Tight factory clearances and oil strategy make premature rod-bearing wear a documented S65 risk. Specialists treat bearing refresh as planned maintenance before high mileage.",
+        "pl": "Ciaśniejsze fabryczne luzy i strategia olejowa sprawiają, że przedwczesne zużycie panewek to udokumentowane ryzyko S65. Specjaliści traktują wymianę jako planowy serwis przed dużym przebiegiem.",
+        "ru": "Жёсткие заводские зазоры и масляная стратегия делают ранний износ вкладышей документированным риском S65. Специалисты считают замену плановым ТО до большого пробега."
+      },
+      "severity": "engine-loss",
+      "pln_bands": {
+        "parts": [
+          1050,
+          2500
+        ],
+        "labor": [
+          4950,
+          7500
+        ],
+        "independent": [
+          6000,
+          10000
+        ],
+        "specialist": [
+          7000,
+          12000
+        ],
+        "aso": [
+          10000,
+          16000
+        ],
+        "note": "Wiltronic V8/M-Power band 6000–10000; Motoran ACL rod bearings kit 1050 PLN"
+      },
+      "sources": [
+        {
+          "label": "BMW Tuning · rod bearing failure (S54/S65/S85)",
+          "url": "https://bmwtuning.co/bmw-rod-bearing-failure/"
+        },
+        {
+          "label": "Element Performance · S65 rod bearings",
+          "url": "https://www.elementperformance.co.uk/blog/s65-rod-bearings"
+        },
+        {
+          "label": "PLN · Wiltronic · panewki V8/V10 6000–10000+",
+          "url": "https://wiltronic.pl/blog/od-czego-zalezy-koszt-wymiany-panewek-w-bmw/"
+        },
+        {
+          "label": "PLN · Motoran · ACL S65 rod bearings kit 1050",
+          "url": "https://motoran.pl/sklep/panewki-korbowodowe-52mm-bmw-racing-v8-s65b50-s65b44-panewki-wyczynowe-acl/"
+        },
+        {
+          "label": "Hypertech · M-engine bearing revision",
+          "url": "https://www.hypertech.com.pl/rewizja-panewek-korbowodowych-w-silnikach-bmw-m/"
+        }
+      ],
+      "autodoc_query": {
+        "en": "BMW S65 rod bearings",
+        "pl": "BMW S65 panewki korbowodowe",
+        "ru": "BMW S65 вкладыши шатунов"
+      },
+      "confidence": "documented_fault+pln_workshop_band"
+    },
+    {
+      "id": "e36-cooling",
+      "engines": [
+        "M40",
+        "M43",
+        "M50",
+        "M52",
+        "S50",
+        "S52"
+      ],
+      "chassis_slugs": [
+        "e36",
+        "e34",
+        "z3",
+        "e36-m3"
+      ],
+      "title": {
+        "en": "Cooling plastics / water pump",
+        "pl": "Plastik chłodzenia / pompa wody",
+        "ru": "Пластик охлаждения / помпа"
+      },
+      "affects": {
+        "en": "E36 — radiator, tank, thermostat housing, early plastic impeller pumps",
+        "pl": "E36 — chłodnica, zbiornik, obudowa termostatu, wczesne pompy z plastikowym wirnikiem",
+        "ru": "E36 — радиатор, бачок, корпус термостата, ранние помпы с пластиковой крыльчаткой"
+      },
+      "summary": {
+        "en": "Aged plastics and early plastic impeller water pumps are the classic E36 cooling failure mode. A full cooling refresh is routine when history is unknown.",
+        "pl": "Postarzały plastik i wczesne pompy z plastikowym wirnikiem to klasyczna usterka chłodzenia E36. Pełny refresh układu jest rutyną przy nieznanej historii.",
+        "ru": "Состарившийся пластик и ранние помпы с пластиковой крыльчаткой — классика охлаждения E36. Полный refresh системы обычен при неизвестной истории."
+      },
+      "severity": "overheat",
+      "pln_bands": {
+        "parts": [
+          400,
+          1200
+        ],
+        "labor": [
+          400,
+          1000
+        ],
+        "independent": [
+          800,
+          2200
+        ],
+        "specialist": [
+          1200,
+          3000
+        ],
+        "aso": [
+          1800,
+          4000
+        ],
+        "note": "Family prior aligned with e39/m54 cooling bands + E36 cooling community docs"
+      },
+      "sources": [
+        {
+          "label": "Bimmerboard · E36 Cooling System 101",
+          "url": "http://www.bimmerboard.com/forums/posts/1269691"
+        },
+        {
+          "label": "Wikipedia · BMW 3 Series (E36)",
+          "url": "https://en.wikipedia.org/wiki/BMW_3_Series_(E36)"
+        },
+        {
+          "label": "PLN · kosztserwisu BMW cooling prior",
+          "url": "https://kosztserwisu.pl/modele-samochodow/bmw/"
+        }
+      ],
+      "autodoc_query": {
+        "en": "BMW E36 water pump radiator",
+        "pl": "BMW E36 pompa wody chłodnica",
+        "ru": "BMW E36 помпа радиатор"
+      },
+      "confidence": "documented_fault+pln_family_prior"
+    },
+    {
+      "id": "s50-vanos",
+      "engines": [
+        "S50"
+      ],
+      "chassis_slugs": [
+        "e36-m3",
+        "z3-m-coupe"
+      ],
+      "year_from": 1995,
+      "year_to": 2000,
+      "title": {
+        "en": "S50B32 twin VANOS seals / pump",
+        "pl": "Podwójny VANOS S50B32 — uszczelnienia / pompa",
+        "ru": "Двойной VANOS S50B32 — уплотнения / насос"
+      },
+      "affects": {
+        "en": "Euro E36 M3 3.2 (S50B32) and Z3 M — double VANOS",
+        "pl": "Euro E36 M3 3.2 (S50B32) i Z3 M — podwójny VANOS",
+        "ru": "Euro E36 M3 3.2 (S50B32) и Z3 M — двойной VANOS"
+      },
+      "summary": {
+        "en": "Euro S50B32 twin VANOS is a known wear item (seals, pump, solenoids). Rattle / lost power / codes. Early S50B30 single VANOS is a different unit — confirm engine code.",
+        "pl": "Podwójny VANOS S50B32 to znany element eksploatacyjny (uszczelnienia, pompa, elektrozawory). Stuk / utrata mocy / błędy. Wczesny S50B30 ma inny VANOS — potwierdź kod silnika.",
+        "ru": "Двойной VANOS S50B32 — известный расходник (уплотнения, насос, клапаны). Стук / потеря тяги / ошибки. Ранний S50B30 — другой узел; проверьте код мотора."
+      },
+      "severity": "expensive",
+      "pln_bands": {
+        "parts": [
+          2537,
+          3806
+        ],
+        "labor": [
+          1000,
+          2000
+        ],
+        "independent": [
+          3500,
+          5800
+        ],
+        "specialist": [
+          9000,
+          14000
+        ],
+        "aso": [
+          12000,
+          18000
+        ],
+        "note": "From warehouse/repair_costs/jobs/s50-vanos.json — DE rebuild EUR@4.3 + Beisan 5h labor; specialist fitted-unit class"
+      },
+      "sources": [
+        {
+          "label": "Wikipedia · BMW S50",
+          "url": "https://en.wikipedia.org/wiki/BMW_S50"
+        },
+        {
+          "label": "Beisan · Euro S50 double VANOS procedure (5h)",
+          "url": "https://beisansystems.com/euro-s50-double-vanos-procedure-e36/"
+        },
+        {
+          "label": "PLN · Probsten-Tech · S50B32 VANOS rebuild 590€",
+          "url": "https://www.probsten-tech.de/produkt/s50b32-e36-m3z3m-vanosueberarbeitung/"
+        },
+        {
+          "label": "PLN · VORLING · S50B32 VANOS überholung 885€",
+          "url": "https://www.vorling.de/en/p/vanos-ueberholung-bmw-m3-e36-s50b32-doppelvanos-inkl-material"
+        },
+        {
+          "label": "Mr Vanos · rebuilt twin VANOS + fitting",
+          "url": "https://mrvanos.com/products/copy-of-mr-vanos-rebuilt-vanos-bmw-z3m-s50b32"
+        }
+      ],
+      "autodoc_query": {
+        "en": "BMW S50 VANOS seals",
+        "pl": "BMW S50 uszczelnienia VANOS",
+        "ru": "BMW S50 уплотнения VANOS"
+      },
+      "confidence": "wiki_plus_specialist_rebuild_quotes+pln_fx"
+    },
+    {
+      "id": "s54-vanos",
+      "engines": [
+        "S54"
+      ],
+      "chassis_slugs": [
+        "e46-m3",
+        "z3-m-coupe",
+        "e85-z4"
+      ],
+      "year_from": 2000,
+      "year_to": 2008,
+      "title": {
+        "en": "S54 VANOS seals / unit",
+        "pl": "VANOS S54 — uszczelnienia / jednostka",
+        "ru": "VANOS S54 — уплотнения / блок"
+      },
+      "affects": {
+        "en": "E46 M3 / Z3 M / Z4 M — S54 double VANOS",
+        "pl": "E46 M3 / Z3 M / Z4 M — podwójny VANOS S54",
+        "ru": "E46 M3 / Z3 M / Z4 M — двойной VANOS S54"
+      },
+      "summary": {
+        "en": "S54 VANOS rattle and lost power are a known wear item. Send-in rebuilds and fitted overhauls are widely quoted in DE/UK.",
+        "pl": "Stuk VANOS i utrata mocy w S54 to znane zużycie. Przebudowy wysyłkowe i montaż w warsztacie są powszechnie wyceniane w DE/UK.",
+        "ru": "Стук VANOS и потеря тяги на S54 — известный износ. Переборки с отправкой и работа под ключ широко котируются в DE/UK."
+      },
+      "severity": "expensive",
+      "pln_bands": {
+        "parts": [
+          2537,
+          3436
+        ],
+        "labor": [
+          1720,
+          3010
+        ],
+        "independent": [
+          5547,
+          7525
+        ],
+        "specialist": [
+          6450,
+          9460
+        ],
+        "aso": [
+          9460,
+          13760
+        ],
+        "note": "From warehouse/repair_costs/jobs/s54-vanos.json"
+      },
+      "sources": [
+        {
+          "label": "PLN · Probsten-Tech · S54 VANOS rebuild (send-in) 590€",
+          "url": "https://www.probsten-tech.de/vanosueberarbeitung-s54-e46-m3-z4m-wiesmann/"
+        },
+        {
+          "label": "PLN · Burkhart 599€ / VOSS 799€ exchange VANOS",
+          "url": "https://burkhart-engineering.com/shop/vanos-ueberarbeitung-passend-fuer-s54-e46-m3-z4-m-bmw/"
+        },
+        {
+          "label": "PLN · H2 Motors · E46 M3 S54 VANOS Überholung fitted 1.290€",
+          "url": "https://www.h2motors.de/vanos-ueberholung-bmw"
+        },
+        {
+          "label": "PLN · AReeve · S54 VANOS overhaul package £1,500",
+          "url": "https://areeve.co.uk/product/bmw-e46-m3-z4m-s54-vanos-overhaul/"
+        }
+      ],
+      "autodoc_query": {
+        "en": "BMW S54 VANOS seals",
+        "pl": "BMW S54 uszczelnienia VANOS",
+        "ru": "BMW S54 уплотнения VANOS"
+      },
+      "confidence": "specialist_rebuild_quotes+pln_fx"
+    },
+    {
+      "id": "s55-rod-bearings",
+      "engines": [
+        "S55"
+      ],
+      "chassis_slugs": [
+        "f80",
+        "f82",
+        "f87"
+      ],
+      "year_from": 2014,
+      "year_to": 2020,
+      "title": {
+        "en": "Rod bearings (S55)",
+        "pl": "Panewki korbowodowe (S55)",
+        "ru": "Вкладыши шатунов (S55)"
+      },
+      "affects": {
+        "en": "F80 M3 / F82 M4 / F87 M2 Competition — preventative bearings",
+        "pl": "F80 M3 / F82 M4 / F87 M2 Competition — wymiana profilaktyczna",
+        "ru": "F80 M3 / F82 M4 / F87 M2 Competition — превентивная замена"
+      },
+      "summary": {
+        "en": "S55 rod bearings are treated as planned M-car maintenance. German specialists publish fitted packages from ~2.500€.",
+        "pl": "Panewki S55 traktuje się jak planowy serwis aut M. Niemieccy specjaliści publikują pakiety od ~2.500€.",
+        "ru": "Вкладыши S55 считают плановым ТО для M. Немецкие специалисты публикуют пакеты от ~2.500€."
+      },
+      "severity": "engine-loss",
+      "pln_bands": {
+        "parts": [
+          2150,
+          3870
+        ],
+        "labor": [
+          7740,
+          12900
+        ],
+        "independent": [
+          10746,
+          15050
+        ],
+        "specialist": [
+          10750,
+          17200
+        ],
+        "aso": [
+          15050,
+          23650
+        ],
+        "note": "From warehouse/repair_costs/jobs/s55-rod-bearings.json"
+      },
+      "sources": [
+        {
+          "label": "PLN · Aulitzky · S55 rod bearings (F80/F82/F87) from 2.499€",
+          "url": "https://aulitzkyexhaust.de/en/Connecting-rod-bearing-change-for-BMW-M2-M3-M4-incl.-Competition-CS-F80-F82-F83-F87-S55/ATPLEUELM2F87"
+        },
+        {
+          "label": "PLN · Bimmer.AI · UK S55 preventative £1,500–£2,500",
+          "url": "https://bimmer.ai/bmw-common-problems/s55-rod-bearings/"
+        }
+      ],
+      "autodoc_query": {
+        "en": "BMW S55 rod bearings",
+        "pl": "BMW S55 panewki korbowodowe",
+        "ru": "BMW S55 вкладыши шатунов"
+      },
+      "confidence": "specialist_package_quote+pln_fx"
+    },
+    {
+      "id": "s62-rod-bearings",
+      "engines": [
+        "S62"
+      ],
+      "chassis_slugs": [
+        "e39-m5"
+      ],
+      "year_from": 1998,
+      "year_to": 2003,
+      "title": {
+        "en": "Rod bearings (S62 V8)",
+        "pl": "Panewki korbowodowe (S62 V8)",
+        "ru": "Вкладыши шатунов (S62 V8)"
+      },
+      "affects": {
+        "en": "E39 M5 S62 — preventative rod bearings",
+        "pl": "E39 M5 S62 — profilaktyczna wymiana panewek",
+        "ru": "E39 M5 S62 — превентивная замена вкладышей"
+      },
+      "summary": {
+        "en": "S62 shares the M-car rod-bearing theme. Aulitzky publishes a fitted E39 M5 package at 1.749€.",
+        "pl": "S62 dzieli temat panewek aut M. Aulitzky publikuje pakiet E39 M5 za 1.749€.",
+        "ru": "S62 делит тему вкладышей M-машин. Aulitzky публикует пакет E39 M5 за 1.749€."
+      },
+      "severity": "engine-loss",
+      "pln_bands": {
+        "parts": [
+          1720,
+          3440
+        ],
+        "labor": [
+          5160,
+          8600
+        ],
+        "independent": [
+          7521,
+          10750
+        ],
+        "specialist": [
+          7521,
+          12900
+        ],
+        "aso": [
+          12040,
+          19350
+        ],
+        "note": "From warehouse/repair_costs/jobs/s62-rod-bearings.json"
+      },
+      "sources": [
+        {
+          "label": "PLN · Aulitzky · S62 E39 M5 rod bearings 1.749€",
+          "url": "https://aulitzkyexhaust.de/en/Connecting-rod-bearing-change-for-BMW-M5-E39-400hp-S62/ATPLEUELM5S62"
+        },
+        {
+          "label": "PLN · PLN · Wiltronic · M V8/V10 panewki prior 6000–10000+ (family)",
+          "url": "https://wiltronic.pl/blog/od-czego-zalezy-koszt-wymiany-panewek-w-bmw/"
+        }
+      ],
+      "autodoc_query": {
+        "en": "BMW S62 rod bearings",
+        "pl": "BMW S62 panewki",
+        "ru": "BMW S62 вкладыши"
+      },
+      "confidence": "specialist_package_quote+pln_fx"
+    },
+    {
+      "id": "s85-rod-bearings",
+      "engines": [
+        "S85"
+      ],
+      "chassis_slugs": [
+        "e60-m5",
+        "e63"
+      ],
+      "year_from": 2005,
+      "year_to": 2010,
+      "title": {
+        "en": "Rod bearings (S85 V10)",
+        "pl": "Panewki korbowodowe (S85 V10)",
+        "ru": "Вкладыши шатунов (S85 V10)"
+      },
+      "affects": {
+        "en": "E60/E61 M5 and E63/E64 M6 — S85 preventative bearings",
+        "pl": "E60/E61 M5 i E63/E64 M6 — panewki S85",
+        "ru": "E60/E61 M5 и E63/E64 M6 — вкладыши S85"
+      },
+      "summary": {
+        "en": "S85 V10 rod bearings are a documented preventative job. Fitted DE/UK packages sit around 2.750–3.050€.",
+        "pl": "Panewki S85 V10 to udokumentowany serwis profilaktyczny. Pakiety DE/UK ok. 2.750–3.050€.",
+        "ru": "Вкладыши S85 V10 — документированное превентивное ТО. Пакеты DE/UK около 2.750–3.050€."
+      },
+      "severity": "engine-loss",
+      "pln_bands": {
+        "parts": [
+          2580,
+          5160
+        ],
+        "labor": [
+          8600,
+          13760
+        ],
+        "independent": [
+          11821,
+          15050
+        ],
+        "specialist": [
+          11821,
+          17200
+        ],
+        "aso": [
+          17200,
+          25800
+        ],
+        "note": "From warehouse/repair_costs/jobs/s85-rod-bearings.json"
+      },
+      "sources": [
+        {
+          "label": "PLN · Aulitzky · S85 E60 M5 rod bearings 2.749€",
+          "url": "https://aulitzkyexhaust.de/en/Connecting-rod-bearing-change-BMW-M5-E60-E61-507hp-S85-Aulitzky-Tuning/ATPLEUELM5S85"
+        },
+        {
+          "label": "PLN · Nforcd · S85 rod bearing service ~€3,036",
+          "url": "https://www.nforcd.com/products/rod-bearing-replacement-bmw-e60-e61-m5-e63-e64-m6"
+        }
+      ],
+      "autodoc_query": {
+        "en": "BMW S85 rod bearings",
+        "pl": "BMW S85 panewki",
+        "ru": "BMW S85 вкладыши"
+      },
+      "confidence": "specialist_package_quote+pln_fx"
+    },
+    {
+      "id": "s63-rod-bearings",
+      "engines": [
+        "S63",
+        "S68"
+      ],
+      "chassis_slugs": [
+        "f10-m5",
+        "f90",
+        "g90",
+        "f85",
+        "f86",
+        "f97"
+      ],
+      "year_from": 2011,
+      "year_to": 2030,
+      "title": {
+        "en": "Rod bearings (S63 / S68 V8)",
+        "pl": "Panewki korbowodowe (S63 / S68 V8)",
+        "ru": "Вкладыши шатунов (S63 / S68 V8)"
+      },
+      "affects": {
+        "en": "F10/F90 M5 and related S63; S68 PHEV uses same bearing theme until dedicated quotes",
+        "pl": "F10/F90 M5 i pokrewne S63; S68 PHEV — ten sam temat panewek do czasu osobnych wycen",
+        "ru": "F10/F90 M5 и родственные S63; S68 PHEV — та же тема вкладышей до отдельных котировок"
+      },
+      "summary": {
+        "en": "S63 hot-V V8 carriers often budget preventative rod bearings. S68 reuses the M V8 bearing theme until a dedicated package is published.",
+        "pl": "Właściciele S63 często planują profilaktyczne panewki. S68 korzysta z tego samego tematu V8 M, dopóki nie ma osobnego pakietu.",
+        "ru": "Владельцы S63 часто закладывают превентивные вкладыши. S68 использует ту же тему V8 M, пока нет отдельного пакета."
+      },
+      "severity": "engine-loss",
+      "pln_bands": {
+        "parts": [
+          2150,
+          4300
+        ],
+        "labor": [
+          6450,
+          12040
+        ],
+        "independent": [
+          8600,
+          15050
+        ],
+        "specialist": [
+          10750,
+          19350
+        ],
+        "aso": [
+          17200,
+          30100
+        ],
+        "note": "From warehouse/repair_costs/jobs/s63-rod-bearings.json; S68 family prior"
+      },
+      "sources": [
+        {
+          "label": "PLN · LuxuryCarsGuide · S63 preventative bearings ~$2k–3.5k indie",
+          "url": "https://www.luxurycarsguide.com/guides/bmw-s63-engine-failure-rate/"
+        },
+        {
+          "label": "PLN · Bimmer.AI · S63 preventative £2,000–£3,500 class",
+          "url": "https://bimmer.ai/bmw-common-problems/s55-rod-bearings/"
+        },
+        {
+          "label": "PLN · PLN · Wiltronic · panewki V8/M-Power prior",
+          "url": "https://wiltronic.pl/blog/od-czego-zalezy-koszt-wymiany-panewek-w-bmw/"
+        }
+      ],
+      "autodoc_query": {
+        "en": "BMW S63 rod bearings",
+        "pl": "BMW S63 panewki",
+        "ru": "BMW S63 вкладыши"
+      },
+      "confidence": "specialist_guide+pln_fx+family_prior_s68"
+    },
+    {
+      "id": "s58-rod-bearings",
+      "engines": [
+        "S58"
+      ],
+      "chassis_slugs": [
+        "g80",
+        "g81",
+        "g82",
+        "g87",
+        "f97"
+      ],
+      "year_from": 2019,
+      "year_to": 2030,
+      "title": {
+        "en": "Rod bearings (S58)",
+        "pl": "Panewki korbowodowe (S58)",
+        "ru": "Вкладыши шатунов (S58)"
+      },
+      "affects": {
+        "en": "G80/G81 M3, G82 M4, G87 M2, X3M — S58",
+        "pl": "G80/G81 M3, G82 M4, G87 M2, X3M — S58",
+        "ru": "G80/G81 M3, G82 M4, G87 M2, X3M — S58"
+      },
+      "summary": {
+        "en": "S58 coated bearing kits are sold for ~516€; labor follows the S55 preventative class until a dedicated fitted package is listed.",
+        "pl": "Zestawy panewek S58 kosztują ~516€; robocizna jak klasa S55, dopóki nie ma osobnego pakietu montażu.",
+        "ru": "Комплекты вкладышей S58 ~516€; работа как класс S55, пока нет отдельного пакета монтажа."
+      },
+      "severity": "engine-loss",
+      "pln_bands": {
+        "parts": [
+          2219,
+          3870
+        ],
+        "labor": [
+          7740,
+          12900
+        ],
+        "independent": [
+          9890,
+          16770
+        ],
+        "specialist": [
+          10750,
+          19350
+        ],
+        "aso": [
+          17200,
+          27950
+        ],
+        "note": "From warehouse/repair_costs/jobs/s58-rod-bearings.json"
+      },
+      "sources": [
+        {
+          "label": "PLN · 5150 AutoSport · S58 coated rod bearings 515,99€",
+          "url": "https://r44performance.com/products/5150-autosport-high-performance-rod-bearing-set-bmw-s58-engine"
+        },
+        {
+          "label": "PLN · Labor prior from Aulitzky S55 bearing job (same layout class)",
+          "url": "https://aulitzkyexhaust.de/en/Connecting-rod-bearing-change-for-BMW-M2-M3-M4-incl.-Competition-CS-F80-F82-F83-F87-S55/ATPLEUELM2F87"
+        }
+      ],
+      "autodoc_query": {
+        "en": "BMW S58 rod bearings",
+        "pl": "BMW S58 panewki",
+        "ru": "BMW S58 вкладыши"
+      },
+      "confidence": "parts_quote+s55_labor_family_prior"
+    },
+    {
+      "id": "b58-oil-filter",
+      "engines": [
+        "B58"
+      ],
+      "chassis_slugs": [
+        "g11",
+        "g15",
+        "g70",
+        "g30",
+        "g20",
+        "g01",
+        "g02",
+        "g05",
+        "f22",
+        "f30",
+        "g42",
+        "g60"
+      ],
+      "title": {
+        "en": "B58 oil filter housing gasket / housing",
+        "pl": "Uszczelka / obudowa filtra oleju B58",
+        "ru": "Прокладка / корпус масляного фильтра B58"
+      },
+      "affects": {
+        "en": "B58 40i / 740i / 840i — oil/coolant leak at filter housing",
+        "pl": "B58 40i / 740i / 840i — wyciek oleju/płynu przy obudowie filtra",
+        "ru": "B58 40i / 740i / 840i — течь масла/антифриза у корпуса фильтра"
+      },
+      "summary": {
+        "en": "B58 oil filter housing gaskets (or the whole plastic housing) are a common leak. Labor is high because of the intake path.",
+        "pl": "Uszczelki obudowy filtra B58 (albo cały plastik) to częsty wyciek. Robocizna wysoka przez dostęp od dolotu.",
+        "ru": "Прокладки корпуса фильтра B58 (или весь пластик) — частая течь. Работа дорогая из‑за доступа через впуск."
+      },
+      "severity": "annoyance",
+      "pln_bands": {
+        "parts": [
+          200,
+          2800
+        ],
+        "labor": [
+          1000,
+          2500
+        ],
+        "independent": [
+          1200,
+          4500
+        ],
+        "specialist": [
+          1600,
+          5500
+        ],
+        "aso": [
+          2500,
+          7000
+        ],
+        "note": "From warehouse/repair_costs/jobs/b58-oil-filter.json"
+      },
+      "sources": [
+        {
+          "label": "PLN · BimmerWorld · B58 OFH gasket set ~$45",
+          "url": "https://www.bimmerworld.com/Engine/Gaskets/BMW-Oil-Filter-Housing-Gasket-Set-11428583896.html"
+        },
+        {
+          "label": "PLN · FCP Euro · B58 oil filter housing kit ~$705",
+          "url": "https://www.fcpeuro.com/products/bmw-b58-engine-oil-filter-housing-replacement-kit-11428583895kt3"
+        },
+        {
+          "label": "PLN · Tysautoworks · gasket $300–800 / housing $800–1500+",
+          "url": "https://tysautoworksperformance.com/blogs/news/bmw-b58-oil-filter-housing-leak-cost-symptoms-when-to-fix-it-540i-340i-440i-guide"
+        }
+      ],
+      "autodoc_query": {
+        "en": "BMW B58 oil filter housing gasket",
+        "pl": "BMW B58 uszczelka obudowy filtra oleju",
+        "ru": "BMW B58 прокладка корпуса масляного фильтра"
+      },
+      "confidence": "parts_catalog+shop_cost_guide"
+    },
+    {
+      "id": "n63-coolant-pipes",
+      "engines": [
+        "N63"
+      ],
+      "chassis_slugs": [
+        "g11",
+        "g15",
+        "f01",
+        "f10",
+        "e70",
+        "f15",
+        "f16"
+      ],
+      "year_from": 2008,
+      "year_to": 2020,
+      "title": {
+        "en": "N63 hot-V coolant pipes",
+        "pl": "Rury chłodzenia N63 (hot-V)",
+        "ru": "Патрубки охлаждения N63 (hot-V)"
+      },
+      "affects": {
+        "en": "N63 V8 — brittle plastic coolant pipes in the hot V",
+        "pl": "V8 N63 — kruche plastikowe rury chłodzenia w hot-V",
+        "ru": "V8 N63 — хрупкие пластиковые патрубки в hot-V"
+      },
+      "summary": {
+        "en": "N63 plastic coolant pipes in the turbo valley fail with age. Aluminum replacements are a common preventative quote (~500–800€).",
+        "pl": "Plastikowe rury chłodzenia N63 w dolinie turbo pękają z wiekiem. Aluminiowa wymiana to częsta wycena profilaktyczna (~500–800€).",
+        "ru": "Пластиковые патрубки N63 в развале турбин трескаются с возрастом. Алюминиевая замена — частая превентивная котировка (~500–800€)."
+      },
+      "severity": "overheat",
+      "pln_bands": {
+        "parts": [
+          1290,
+          3440
+        ],
+        "labor": [
+          860,
+          2580
+        ],
+        "independent": [
+          2150,
+          5160
+        ],
+        "specialist": [
+          2580,
+          6450
+        ],
+        "aso": [
+          4300,
+          9460
+        ],
+        "note": "From warehouse/repair_costs/jobs/n63-coolant-pipes.json"
+      },
+      "sources": [
+        {
+          "label": "PLN · TempaDrive forum · N63 aluminum coolant pipes 500–800€",
+          "url": "https://forum.tempadrive.com/t/bmw-n63-hot-v-twin-turbo-v8-problems-guide"
+        },
+        {
+          "label": "PLN · BimmerBoom / RepairPal class $400–1,200 total",
+          "url": "https://bimmerboom.com/bmw-n63-turbo-coolant-line-replacement-cost-insights/"
+        }
+      ],
+      "autodoc_query": {
+        "en": "BMW N63 coolant pipe",
+        "pl": "BMW N63 rura chłodzenia",
+        "ru": "BMW N63 патрубок охлаждения"
+      },
+      "confidence": "forum_quote+repairpal_class+pln_fx"
+    },
+    {
+      "id": "i3-hv-battery",
+      "engines": [
+        "IBE0",
+        "IB1",
+        "HA0",
+        "Range Extender",
+        "B38"
+      ],
+      "chassis_slugs": [
+        "i3",
+        "i4",
+        "i8"
+      ],
+      "title": {
+        "en": "HV battery / pack service",
+        "pl": "Bateria HV / serwis pakietu",
+        "ru": "Тяговая батарея / сервис пакета"
+      },
+      "affects": {
+        "en": "i3 / i4 / i8 — traction battery capacity loss or failure",
+        "pl": "i3 / i4 / i8 — utrata pojemności lub awaria baterii trakcyjnej",
+        "ru": "i3 / i4 / i8 — потеря ёмкости или отказ тяговой батареи"
+      },
+      "summary": {
+        "en": "EV pack work dominates ownership risk. PL regen from ~6.500 zł; OEM/upgrade packs are five-figure PLN. i8 B38 hybrid still inherits pack-cost class.",
+        "pl": "Praca przy pakiecie HV dominuje ryzyko. Regeneracja w PL od ~6.500 zł; pakiety OEM/upgrade to pięciocyfrowe kwoty. Hybryda i8 B38 dziedziczy klasę kosztów pakietu.",
+        "ru": "Работы по HV-пакету доминируют риск. Регенерация в PL от ~6.500 zł; OEM/апгрейд — пятизначные суммы. Гибрид i8 B38 наследует класс стоимости пакета."
+      },
+      "severity": "expensive",
+      "pln_bands": {
+        "parts": [
+          6500,
+          30100
+        ],
+        "labor": [
+          1000,
+          4000
+        ],
+        "independent": [
+          6500,
+          29000
+        ],
+        "specialist": [
+          19350,
+          35000
+        ],
+        "aso": [
+          40000,
+          80000
+        ],
+        "note": "From warehouse/repair_costs/jobs/i3-hv-battery.json"
+      },
+      "sources": [
+        {
+          "label": "PLN · e-dakro · regeneracja baterii i3 od 6 500 zł",
+          "url": "https://e-dakro.pl/regeneracja-baterii-trakcyjnych-kiedy-warto-i-ile-mozna-zaoszczedzic/"
+        },
+        {
+          "label": "PLN · Allegro Lokalnie · i3 upgrade 154Ah 29 000 zł (Poznań)",
+          "url": "https://allegrolokalnie.pl/oferta/bmw-i3-wymiana-baterii-60ah-94ah-120ah-na-154ah-or-upgrade-zasiegu"
+        },
+        {
+          "label": "PLN · i3upgrade · new OEM 94/120Ah 4.500–7.000€ excl. VAT",
+          "url": "https://www.i3upgrade.cz/en/cenik.html"
+        }
+      ],
+      "autodoc_query": {
+        "en": "BMW i3 battery",
+        "pl": "BMW i3 bateria",
+        "ru": "BMW i3 батарея"
+      },
+      "confidence": "pl_quote+eu_oem_pack_quote"
+    },
+    {
+      "id": "classic-cooling",
+      "engines": [
+        "M10",
+        "M20",
+        "M30",
+        "S14",
+        "S38"
+      ],
+      "chassis_slugs": [
+        "e12",
+        "e21",
+        "e23",
+        "e24",
+        "e28",
+        "e28-m5",
+        "e30",
+        "e30-m3",
+        "e31",
+        "e32",
+        "e34-m5"
+      ],
+      "title": {
+        "en": "Classic cooling / water pump",
+        "pl": "Chłodzenie klasyków / pompa wody",
+        "ru": "Охлаждение классики / помпа"
+      },
+      "affects": {
+        "en": "Pre-2000 sixes and early M engines — pumps, radiators, aged hoses",
+        "pl": "Szóstki sprzed 2000 i wczesne M — pompy, chłodnice, stare przewody",
+        "ru": "Шестёрки до 2000 и ранние M — помпы, радиаторы, старые шланги"
+      },
+      "summary": {
+        "en": "Age cooling failures (pump, radiator, hoses) are the routine bill on classics. S38 pump OEM/rebuild quotes anchor the parts side.",
+        "pl": "Awaria chłodzenia z wieku (pompa, chłodnica, przewody) to rutynowy rachunek klasyków. Wyceny pompy S38 kotwiczą stronę części.",
+        "ru": "Возрастные отказы охлаждения (помпа, радиатор, шланги) — рутинный счёт классики. Котировки помпы S38 якорят сторону запчастей."
+      },
+      "severity": "overheat",
+      "pln_bands": {
+        "parts": [
+          400,
+          1720
+        ],
+        "labor": [
+          400,
+          1200
+        ],
+        "independent": [
+          800,
+          2500
+        ],
+        "specialist": [
+          1200,
+          3500
+        ],
+        "aso": [
+          2000,
+          5000
+        ],
+        "note": "From warehouse/repair_costs/jobs/classic-cooling.json"
+      },
+      "sources": [
+        {
+          "label": "PLN · M5Board · S38 OEM water pump historically ~400€",
+          "url": "https://www.m5board.com/threads/s38-water-pump-rebuild.608383/"
+        },
+        {
+          "label": "PLN · M5Board · S38 water pump rebuild service $595",
+          "url": "https://www.m5board.com/threads/e34m5-s38-b36-s38-b38-water-pump-rebuilt-service-with-core-exchange.618583/"
+        },
+        {
+          "label": "PLN · kosztserwisu BMW cooling prior",
+          "url": "https://kosztserwisu.pl/modele-samochodow/bmw/"
+        }
+      ],
+      "autodoc_query": {
+        "en": "BMW M30 water pump",
+        "pl": "BMW M30 pompa wody",
+        "ru": "BMW M30 помпа"
+      },
+      "confidence": "oem_forum_quote+e36_cooling_family_prior"
+    },
+    {
+      "id": "b57-egr",
+      "engines": [
+        "B57"
+      ],
+      "chassis_slugs": [
+        "g11",
+        "g30",
+        "g01",
+        "g05",
+        "g07",
+        "g15"
+      ],
+      "year_from": 2015,
+      "year_to": 2030,
+      "title": {
+        "en": "B57 EGR / intake carbon",
+        "pl": "B57 EGR / nagar w dolocie",
+        "ru": "B57 EGR / нагар во впуске"
+      },
+      "affects": {
+        "en": "B57 30d / 40d / 750d — EGR cooler and intake carbon",
+        "pl": "B57 30d / 40d / 750d — chłodnica EGR i nagar",
+        "ru": "B57 30d / 40d / 750d — EGR и нагар"
+      },
+      "summary": {
+        "en": "B57 modular diesel follows the B47 EGR/carbon theme more than an N47 chain story. PLN band reused from sourced B47 workshop prior.",
+        "pl": "Diesle B57 idą raczej tematami EGR/nagar jak B47, nie łańcuchem N47. Pasmo PLN z wyceny warsztatowej B47.",
+        "ru": "Дизели B57 ближе к теме EGR/нагара B47, чем к цепи N47. Полоса PLN из цеховой котировки B47."
+      },
+      "severity": "expensive",
+      "pln_bands": {
+        "parts": [
+          800,
+          2000
+        ],
+        "labor": [
+          1500,
+          3000
+        ],
+        "independent": [
+          2500,
+          5000
+        ],
+        "specialist": [
+          3200,
+          6000
+        ],
+        "aso": [
+          4500,
+          8000
+        ],
+        "note": "From warehouse/repair_costs/jobs/b57-egr.json — B47 family prior"
+      },
+      "sources": [
+        {
+          "label": "PLN · Skanyx · EGR cooler band (B47 prior applied to B57)",
+          "url": "https://skanyx.com/pl/blog/bmw-m57-engine-buyer-guide-525d-530d-535d-obd2"
+        },
+        {
+          "label": "PLN · Warehouse · b47-egr job bands (modular diesel family)",
+          "url": "https://en.wikipedia.org/wiki/BMW_B57"
+        }
+      ],
+      "autodoc_query": {
+        "en": "BMW B57 EGR cooler",
+        "pl": "BMW B57 chłodnica EGR",
+        "ru": "BMW B57 охладитель EGR"
+      },
+      "confidence": "wiki+b47_family_prior"
     }
-  ]
+  ],
+  "pln_update": {
+    "at": "2026-09-22T21:55:00Z",
+    "method": "parts_plus_labor_where_cited",
+    "with_split": [
+      "m54-disa",
+      "n20-chain",
+      "n20-oil-filter",
+      "n43-injectors",
+      "n47-chain",
+      "n53-injectors",
+      "n54-hpfp",
+      "swirl-flaps",
+      "takata-airbag-pl",
+      "transfer-case",
+      "water-pump"
+    ]
+  },
+  "price_sources_merged_at": "2026-09-22T21:50:00Z",
+  "dataset_note": "Expanded beyond top10: Phase B gold pains (s65, e36-cooling)",
+  "meta": {
+    "phase_e_note": "Filled pending M/EV/classic/B58/B57/N63 pains with sourced PLN quotes"
+  }
 }

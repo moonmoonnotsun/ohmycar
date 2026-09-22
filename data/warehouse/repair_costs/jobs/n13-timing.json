@@ -1,0 +1,37 @@
+{
+  "pain_id": "n13-timing",
+  "status": "quoted_workshop_band",
+  "totals_pln": {
+    "independent": [
+      1500,
+      3000
+    ],
+    "specialist": [
+      3000,
+      4500
+    ],
+    "aso": [
+      4999,
+      4999
+    ]
+  },
+  "quotes": [
+    {
+      "tier": "aso",
+      "pln_low": 4999,
+      "pln_high": 4999,
+      "label": "BMW Smorawiński GZ · N13 od 4999 zł",
+      "url": "https://www.bmw-smorawinskigz.pl/wymiana-rozrzadu"
+    },
+    {
+      "tier": "independent",
+      "pln_low": 1500,
+      "pln_high": 3000,
+      "label": "kosztserwisu.pl · similar 4-cyl chain band (N20 row used as prior)",
+      "url": "https://kosztserwisu.pl/koszty-napraw/rozrzad/wymiana-rozrzadu-bmw/"
+    }
+  ],
+  "collected_at": "2026-09-22T21:30:00Z",
+  "currency": "PLN",
+  "region": "PL"
+}

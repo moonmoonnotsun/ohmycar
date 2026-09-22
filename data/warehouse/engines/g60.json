@@ -1,0 +1,39 @@
+{
+  "chassis_slug": "g60",
+  "region": "PL",
+  "collected_at": "2026-09-23T00:05:00Z",
+  "confidence": "sourced_curated",
+  "sources": [
+    {
+      "label": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/BMW_5_Series_(G60)"
+    },
+    {
+      "label": "RealOEM",
+      "url": "https://www.realoem.com/bmw/"
+    }
+  ],
+  "lines": [
+    {
+      "model": "520i",
+      "engine": "B48",
+      "fuel": "petrol",
+      "years": [
+        2024,
+        2025,
+        2026
+      ]
+    },
+    {
+      "model": "540i",
+      "engine": "B58",
+      "fuel": "petrol",
+      "years": [
+        2024,
+        2025,
+        2026
+      ]
+    }
+  ],
+  "line_count": 2
+}

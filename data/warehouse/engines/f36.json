@@ -1,0 +1,56 @@
+{
+  "chassis_slug": "f36",
+  "region": "PL",
+  "collected_at": "2026-09-22T23:55:00Z",
+  "confidence": "sourced_curated",
+  "sources": [
+    {
+      "label": "Wikipedia generation page",
+      "url": "https://en.wikipedia.org/wiki/BMW_4_Series_(F32)#Gran_Coupé_(F36)"
+    },
+    {
+      "label": "RealOEM BMW catalog",
+      "url": "https://www.realoem.com/bmw/"
+    }
+  ],
+  "lines": [
+    {
+      "model": "420i",
+      "engine": "N20",
+      "fuel": "petrol",
+      "years": [
+        2014,
+        2015,
+        2016
+      ]
+    },
+    {
+      "model": "420i",
+      "engine": "B48",
+      "fuel": "petrol",
+      "years": [
+        2016,
+        2017,
+        2018,
+        2019,
+        2020,
+        2021
+      ]
+    },
+    {
+      "model": "420d",
+      "engine": "B47",
+      "fuel": "diesel",
+      "years": [
+        2015,
+        2016,
+        2017,
+        2018,
+        2019,
+        2020,
+        2021
+      ]
+    }
+  ],
+  "line_count": 3
+}

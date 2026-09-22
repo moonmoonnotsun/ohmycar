@@ -130,9 +130,10 @@ export function AskChat({ locale }: { locale: Locale }) {
           />
           <path d="M9 10h6M9 13h3.5" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
         </svg>
-        <span className="min-w-0 truncate">
+        <span className="min-w-0 truncate max-sm:hidden">
           {ctx.chassisSlug || ctx.variantSlug ? `${copy.askFab} ${label}` : copy.askFab}
         </span>
+        <span className="sm:hidden">{copy.askFab}</span>
       </button>
 
       <dialog

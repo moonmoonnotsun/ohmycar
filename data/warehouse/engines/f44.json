@@ -1,0 +1,61 @@
+{
+  "chassis_slug": "f44",
+  "region": "PL",
+  "collected_at": "2026-09-23T00:05:00Z",
+  "confidence": "sourced_curated",
+  "sources": [
+    {
+      "label": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/BMW_2_Series_Gran_Coupé"
+    },
+    {
+      "label": "RealOEM",
+      "url": "https://www.realoem.com/bmw/"
+    }
+  ],
+  "lines": [
+    {
+      "model": "218i",
+      "engine": "B38",
+      "fuel": "petrol",
+      "years": [
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025,
+        2026
+      ]
+    },
+    {
+      "model": "220i",
+      "engine": "B48",
+      "fuel": "petrol",
+      "years": [
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025,
+        2026
+      ]
+    },
+    {
+      "model": "220d",
+      "engine": "B47",
+      "fuel": "diesel",
+      "years": [
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025,
+        2026
+      ]
+    }
+  ],
+  "line_count": 3
+}

@@ -1,0 +1,37 @@
+{
+  "slug": "e9x-m3",
+  "code": "E9x M3",
+  "family": "3",
+  "years": [
+    2007,
+    2013
+  ],
+  "market_model": "Seria 3",
+  "otomoto": "seria-3",
+  "gold": true,
+  "engines": [
+    "S65"
+  ],
+  "wiki": "https://en.wikipedia.org/wiki/BMW_M3#E90/E92/E93_M3_(2007)",
+  "realoem_hint": "https://www.realoem.com/bmw/",
+  "region": "PL",
+  "status": "catalog_confirmed",
+  "sources": [
+    {
+      "provider": "wikipedia",
+      "url": "https://en.wikipedia.org/wiki/BMW_M3#E90/E92/E93_M3_(2007)",
+      "role": "generation_identity"
+    },
+    {
+      "provider": "realoem",
+      "url": "https://www.realoem.com/bmw/",
+      "role": "parts_and_type_codes"
+    },
+    {
+      "provider": "ohmycar_chassis_ts",
+      "url": "src/data/chassis.ts",
+      "role": "product_taxonomy"
+    }
+  ],
+  "collected_at": "2026-09-22T22:05:00Z"
+}

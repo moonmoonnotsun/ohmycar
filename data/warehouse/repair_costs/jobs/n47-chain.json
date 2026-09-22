@@ -1,0 +1,69 @@
+{
+  "pain_id": "n47-chain",
+  "status": "quoted_parts_plus_labor",
+  "method": "published_workshop_bands_not_bom",
+  "totals_pln": {
+    "independent": [
+      3800,
+      6000
+    ],
+    "specialist": [
+      6500,
+      8500
+    ],
+    "aso": [
+      7499,
+      7499
+    ]
+  },
+  "parts_note": "Parts+labor bundled in workshop quotes. OEM kit vs aftermarket drives independent low end.",
+  "labor_hours": {
+    "estimate": 16,
+    "note": "~2 mechanic-days; AutoKult cites ~2000 PLN labor alone"
+  },
+  "quotes": [
+    {
+      "tier": "independent",
+      "pln_low": 3800,
+      "pln_high": 5000,
+      "label": "AutoKult · N47 rozrząd (zamienniki→OEM)",
+      "url": "https://autokult.pl/silnik-2-0-n47-od-bmw-i-jego-rozrzad-sprawdzamy-czy-jest-az-tak-zle,6809155006965377a"
+    },
+    {
+      "tier": "specialist",
+      "pln_low": 6500,
+      "pln_high": 8500,
+      "label": "ADM Serwis · N47 pełna wymiana",
+      "url": "https://admserwis.com/blog/bmw-n47-i-wymiana-rozrzdu-kiedy-i-dlaczego-to-konieczne"
+    },
+    {
+      "tier": "aso",
+      "pln_low": 7499,
+      "pln_high": 7499,
+      "label": "BMW Smorawiński GZ · N47 od 7499 zł brutto",
+      "url": "https://www.bmw-smorawinskigz.pl/wymiana-rozrzadu"
+    },
+    {
+      "tier": "independent",
+      "pln_low": 1500,
+      "pln_high": 3200,
+      "label": "kosztserwisu.pl · N47 (lower aggregator band — kept as secondary)",
+      "url": "https://kosztserwisu.pl/koszty-napraw/rozrzad/wymiana-rozrzadu-bmw/",
+      "role": "secondary_aggregator"
+    }
+  ],
+  "band_rule": "UI bands use AutoKult independent + ADM specialist + Smorawiński ASO floor. Aggregator low band stored as secondary only.",
+  "collected_at": "2026-09-22T21:55:00Z",
+  "currency": "PLN",
+  "region": "PL",
+  "parts_pln": [
+    1800,
+    3500
+  ],
+  "labor_pln": [
+    2000,
+    2500
+  ],
+  "split_note": "AutoKult parts+labor split; ADM specialist; Smorawiński ASO",
+  "formula": "independent_full = parts_pln + labor_pln"
+}

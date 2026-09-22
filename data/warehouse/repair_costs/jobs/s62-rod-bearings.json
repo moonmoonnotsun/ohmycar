@@ -1,0 +1,47 @@
+{
+  "pain_id": "s62-rod-bearings",
+  "status": "quoted_parts_plus_labor",
+  "currency": "PLN",
+  "region": "PL",
+  "collected_at": "2026-09-23T01:15:00Z",
+  "fx_note": "DE EUR@4.3",
+  "parts_pln": [
+    1720,
+    3440
+  ],
+  "labor_pln": [
+    5160,
+    8600
+  ],
+  "totals_pln": {
+    "independent": [
+      7521,
+      10750
+    ],
+    "specialist": [
+      7521,
+      12900
+    ],
+    "aso": [
+      12040,
+      19350
+    ]
+  },
+  "quotes": [
+    {
+      "tier": "specialist",
+      "pln_low": 7521,
+      "pln_high": 7521,
+      "label": "Aulitzky · S62 E39 M5 rod bearings 1.749€",
+      "url": "https://aulitzkyexhaust.de/en/Connecting-rod-bearing-change-for-BMW-M5-E39-400hp-S62/ATPLEUELM5S62"
+    },
+    {
+      "tier": "parts",
+      "pln_low": 1050,
+      "pln_high": 2500,
+      "label": "PLN · Wiltronic · M V8/V10 panewki prior 6000–10000+ (family)",
+      "url": "https://wiltronic.pl/blog/od-czego-zalezy-koszt-wymiany-panewek-w-bmw/"
+    }
+  ],
+  "formula": "independent ≈ Aulitzky 1749€ fitted@4.3"
+}

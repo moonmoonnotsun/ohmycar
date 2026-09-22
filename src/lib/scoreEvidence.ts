@@ -79,7 +79,7 @@ export type EvidencePack = {
 };
 
 /**
- * Build score from warehouse pains + UOKiK only.
+ * Build score from warehouse pains + UOKiK + quoted repair PLN when present.
  * Returns null if there is no sourced pain evidence for this variant.
  */
 export function deriveEvidencePack(args: {
@@ -95,11 +95,15 @@ export function deriveEvidencePack(args: {
   const catastrophe = CATASTROPHE[headline.severity];
   const painLoad = clamp01(pains.reduce((sum, p) => sum + PAIN_WEIGHT[p.severity], 0) / 2.5);
   const camp = campaignScoreForChassis(chassisSlug, sourceSlug);
+  const expectedFix5yPln = expectedFixPlnFromPains(pains, topPainId);
 
-  const incomplete = ["fiveYearFix", "partsReality"];
+  const incomplete: string[] = [];
+  if (expectedFix5yPln == null) incomplete.push("fiveYearFix");
+  incomplete.push("partsReality"); // Autodoc/IC stock sample still pending
+
   const inputs: ScoreInputs = {
     catastrophe,
-    expectedFix5yPln: null,
+    expectedFix5yPln,
     painLoad,
     campaigns: camp.value,
     partsReality: null,
@@ -125,6 +129,21 @@ export function deriveEvidencePack(args: {
       sourceUrls: [...new Set(sourceUrls)],
     },
   };
+}
+
+/** Midpoint of headline independent band + other quoted lows. Null if no paid quotes. */
+function expectedFixPlnFromPains(pains: Pain[], topPainId: string): number | null {
+  const quoted = pains.filter((pain) => {
+    const band = pain.plnIndependent;
+    return Boolean(band && !(band[0] <= 0 && band[1] <= 0));
+  });
+  if (quoted.length === 0) return null;
+  const headline = quoted.find((pain) => pain.id === topPainId) ?? quoted[0];
+  const [lo, hi] = headline.plnIndependent!;
+  const restLow = quoted
+    .filter((pain) => pain.id !== headline.id)
+    .reduce((sum, pain) => sum + (pain.plnIndependent?.[0] ?? 0), 0);
+  return Math.round((lo + hi) / 2 + restLow);
 }
 
 /** Renormalize weights among present buckets; omit null PLN / parts. */

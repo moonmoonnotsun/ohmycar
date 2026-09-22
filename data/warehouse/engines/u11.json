@@ -1,0 +1,55 @@
+{
+  "chassis_slug": "u11",
+  "region": "PL",
+  "collected_at": "2026-09-23T00:05:00Z",
+  "confidence": "sourced_curated",
+  "sources": [
+    {
+      "label": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/BMW_X1_(U11)"
+    },
+    {
+      "label": "RealOEM",
+      "url": "https://www.realoem.com/bmw/"
+    }
+  ],
+  "lines": [
+    {
+      "model": "18i",
+      "engine": "B38",
+      "fuel": "petrol",
+      "years": [
+        2022,
+        2023,
+        2024,
+        2025,
+        2026
+      ]
+    },
+    {
+      "model": "20i",
+      "engine": "B48",
+      "fuel": "petrol",
+      "years": [
+        2022,
+        2023,
+        2024,
+        2025,
+        2026
+      ]
+    },
+    {
+      "model": "20d",
+      "engine": "B47",
+      "fuel": "diesel",
+      "years": [
+        2022,
+        2023,
+        2024,
+        2025,
+        2026
+      ]
+    }
+  ],
+  "line_count": 3
+}

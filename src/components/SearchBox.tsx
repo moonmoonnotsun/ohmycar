@@ -31,7 +31,7 @@ export function SearchBox({ locale, hero = false }: { locale: Locale; hero?: boo
           autoFocus={hero}
           className={`w-full rounded-2xl border bg-white/[0.06] px-4 pr-12 text-[var(--ink)] outline-none ring-[var(--accent)] placeholder:text-[var(--muted)] focus:border-[var(--accent)] focus:ring-1 ${
             hero
-              ? "h-16 border-[var(--accent)]/55 text-lg shadow-[0_0_0_4px_rgba(245,196,0,0.08)] sm:h-[4.5rem] sm:px-5 sm:text-xl"
+              ? "h-12 border-[var(--accent)]/55 text-base shadow-[0_0_0_3px_rgba(245,196,0,0.08)] sm:h-[4.5rem] sm:px-5 sm:text-xl sm:shadow-[0_0_0_4px_rgba(245,196,0,0.08)]"
               : "h-14 border-white/12 text-base sm:h-16 sm:text-lg"
           }`}
           autoComplete="off"
@@ -52,17 +52,17 @@ export function SearchBox({ locale, hero = false }: { locale: Locale; hero?: boo
         ) : null}
       </div>
       {hero && !q.trim() ? (
-        <p className="mt-2.5 text-sm text-[var(--muted)]">{copy.searchHint}</p>
+        <p className="mt-2 text-xs text-[var(--muted)] sm:mt-2.5 sm:text-sm">{copy.searchHint}</p>
       ) : null}
       {!q.trim() ? (
-        <div className={`flex gap-2 overflow-x-auto no-scrollbar pb-1 ${hero ? "mt-4" : "mt-3"}`}>
+        <div className={`flex gap-2 overflow-x-auto no-scrollbar pb-1 ${hero ? "mt-3 sm:mt-4" : "mt-3"}`}>
           {QUICK.map((chip) => (
             <button
               key={chip}
               type="button"
               onClick={() => setQ(chip)}
-              className={`tap shrink-0 rounded-full border border-white/10 bg-white/[0.04] px-4 font-mono font-medium ${
-                hero ? "h-11 text-[15px]" : "h-tap text-sm"
+              className={`tap shrink-0 rounded-full border border-white/10 bg-white/[0.04] px-3.5 font-mono font-medium sm:px-4 ${
+                hero ? "h-9 text-sm sm:h-11 sm:text-[15px]" : "h-tap text-sm"
               }`}
             >
               {chip}

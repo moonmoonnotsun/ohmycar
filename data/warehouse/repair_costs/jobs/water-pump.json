@@ -1,0 +1,54 @@
+{
+  "pain_id": "water-pump",
+  "status": "quoted_parts_plus_labor",
+  "totals_pln": {
+    "independent": [
+      1000,
+      2600
+    ],
+    "specialist": [
+      1100,
+      3120
+    ],
+    "aso": [
+      1400,
+      3639
+    ]
+  },
+  "quotes": [
+    {
+      "tier": "independent",
+      "pln_low": 800,
+      "pln_high": 1500,
+      "label": "polecanymechanik.pl · E90 electric water pump job",
+      "url": "https://www.polecanymechanik.pl/artykul/porownanie-kosztow-wymiany-elektrycznej-pompy-wody-do-bmw-e90-co-warto-wiedziec-534074"
+    },
+    {
+      "tier": "parts_labor",
+      "pln_low": 1000,
+      "pln_high": 2600,
+      "label": "cenauslug.pl · electric pump parts 700–2000 + labor 300–600",
+      "url": "https://cenauslug.pl/poradniki/ile-kosztuje-wymiana-pompy-wody-w-samochodzie-objawy-awarii-i-porownanie-cen"
+    },
+    {
+      "tier": "specialist",
+      "pln_low": 600,
+      "pln_high": 1500,
+      "label": "Hypertech · labor+coolant (parts extra)",
+      "url": "https://www.hypertech.com.pl/serwis-bmw/wymiana-pompy-wody-bmw/"
+    }
+  ],
+  "collected_at": "2026-09-22T21:55:00Z",
+  "currency": "PLN",
+  "region": "PL",
+  "parts_pln": [
+    700,
+    2000
+  ],
+  "labor_pln": [
+    300,
+    600
+  ],
+  "split_note": "cenauslug.pl electric pump: parts 700–2000 + labor 300–600",
+  "formula": "independent_full = parts_pln + labor_pln"
+}

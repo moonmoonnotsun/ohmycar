@@ -1,0 +1,31 @@
+{
+  "pain_id": "takata-airbag-pl",
+  "currency": "PLN",
+  "region": "PL",
+  "collected_at": "2026-09-22T21:55:00Z",
+  "status": "quoted_parts_plus_labor",
+  "parts_pln": [
+    0,
+    0
+  ],
+  "labor_pln": [
+    0,
+    0
+  ],
+  "totals_pln": {
+    "independent": [
+      0,
+      0
+    ],
+    "specialist": [
+      0,
+      0
+    ],
+    "aso": [
+      0,
+      0
+    ]
+  },
+  "split_note": "Campaign free when VIN open",
+  "formula": "independent_full = parts_pln + labor_pln"
+}

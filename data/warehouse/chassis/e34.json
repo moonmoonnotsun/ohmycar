@@ -1,0 +1,46 @@
+{
+  "slug": "e34",
+  "code": "E34",
+  "family": "5",
+  "years": [
+    1988,
+    1996
+  ],
+  "market_model": "Seria 5",
+  "otomoto": "seria-5",
+  "gold": false,
+  "engines": [
+    "M20",
+    "M30",
+    "M50",
+    "M60"
+  ],
+  "wiki": "https://en.wikipedia.org/wiki/BMW_5_Series_(E34)",
+  "realoem_hint": "https://www.realoem.com/bmw/",
+  "region": "PL",
+  "status": "catalog_confirmed",
+  "phase": "D_long_tail",
+  "sources": [
+    {
+      "provider": "wikipedia",
+      "url": "https://en.wikipedia.org/wiki/BMW_5_Series_(E34)",
+      "role": "generation_identity"
+    },
+    {
+      "provider": "realoem",
+      "url": "https://www.realoem.com/bmw/",
+      "role": "parts_and_type_codes"
+    },
+    {
+      "provider": "ohmycar_chassis_ts",
+      "url": "src/data/chassis.ts",
+      "role": "product_taxonomy"
+    },
+    {
+      "provider": "otomoto",
+      "url": "https://www.otomoto.pl/osobowe/bmw/seria-5",
+      "role": "market_deep_link"
+    }
+  ],
+  "collected_at": "2026-09-23T00:30:00Z"
+}

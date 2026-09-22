@@ -1,0 +1,44 @@
+{
+  "slug": "g15",
+  "code": "G15",
+  "family": "luxury",
+  "years": [
+    2018,
+    2026
+  ],
+  "market_model": "Seria 8",
+  "otomoto": "seria-8",
+  "gold": false,
+  "engines": [
+    "B58",
+    "N63"
+  ],
+  "wiki": "https://en.wikipedia.org/wiki/BMW_8_Series_(G15)",
+  "realoem_hint": "https://www.realoem.com/bmw/",
+  "region": "PL",
+  "status": "catalog_confirmed",
+  "phase": "D_long_tail",
+  "sources": [
+    {
+      "provider": "wikipedia",
+      "url": "https://en.wikipedia.org/wiki/BMW_8_Series_(G15)",
+      "role": "generation_identity"
+    },
+    {
+      "provider": "realoem",
+      "url": "https://www.realoem.com/bmw/",
+      "role": "parts_and_type_codes"
+    },
+    {
+      "provider": "ohmycar_chassis_ts",
+      "url": "src/data/chassis.ts",
+      "role": "product_taxonomy"
+    },
+    {
+      "provider": "otomoto",
+      "url": "https://www.otomoto.pl/osobowe/bmw/seria-8",
+      "role": "market_deep_link"
+    }
+  ],
+  "collected_at": "2026-09-23T00:30:00Z"
+}

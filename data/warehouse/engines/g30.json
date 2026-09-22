@@ -1,0 +1,61 @@
+{
+  "chassis_slug": "g30",
+  "region": "PL",
+  "collected_at": "2026-09-22T23:55:00Z",
+  "confidence": "sourced_curated",
+  "sources": [
+    {
+      "label": "Wikipedia generation page",
+      "url": "https://en.wikipedia.org/wiki/BMW_5_Series_(G30)"
+    },
+    {
+      "label": "RealOEM BMW catalog",
+      "url": "https://www.realoem.com/bmw/"
+    }
+  ],
+  "lines": [
+    {
+      "model": "520d",
+      "engine": "B47",
+      "fuel": "diesel",
+      "years": [
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023
+      ]
+    },
+    {
+      "model": "530i",
+      "engine": "B48",
+      "fuel": "petrol",
+      "years": [
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023
+      ]
+    },
+    {
+      "model": "540i",
+      "engine": "B58",
+      "fuel": "petrol",
+      "years": [
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023
+      ]
+    }
+  ],
+  "line_count": 3
+}

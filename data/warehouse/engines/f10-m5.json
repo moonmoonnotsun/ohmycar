@@ -1,0 +1,33 @@
+{
+  "chassis_slug": "f10-m5",
+  "region": "PL",
+  "collected_at": "2026-09-23T00:30:00Z",
+  "confidence": "sourced_curated",
+  "phase": "D_long_tail",
+  "sources": [
+    {
+      "label": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/BMW_M5#F10"
+    },
+    {
+      "label": "RealOEM",
+      "url": "https://www.realoem.com/bmw/"
+    }
+  ],
+  "lines": [
+    {
+      "model": "M5",
+      "engine": "S63",
+      "fuel": "petrol",
+      "years": [
+        2011,
+        2012,
+        2013,
+        2014,
+        2015,
+        2016
+      ]
+    }
+  ],
+  "line_count": 1
+}

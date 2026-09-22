@@ -29,10 +29,12 @@ export default async function ComparePage({
   const copy = t(locale);
 
   return (
-    <div className="flex flex-col gap-6 pb-10">
+    <div className="flex flex-col gap-4 pb-24 sm:gap-6 sm:pb-10">
       <header>
-        <h1 className="font-display text-[2.1rem] leading-none tracking-tight sm:text-5xl">{copy.compareTitle}</h1>
-        <p className="mt-2 max-w-xl text-sm leading-6 text-[var(--muted)] sm:text-base">{copy.compareSub}</p>
+        <h1 className="font-display text-[1.75rem] leading-none tracking-tight sm:text-5xl">{copy.compareTitle}</h1>
+        <p className="mt-1.5 max-w-xl text-sm leading-5 text-[var(--muted)] sm:mt-2 sm:text-base sm:leading-6">
+          {copy.compareSub}
+        </p>
       </header>
 
       <Suspense

@@ -54,28 +54,30 @@ export default async function ChassisPage({
   const body = copy[bodyLabelKey(bodyOf(chassis))];
 
   return (
-    <div className="flex flex-col gap-7">
-      <header className="flex flex-col gap-5">
-        <div className="flex flex-col gap-4 sm:flex-row sm:items-start">
+    <div className="flex flex-col gap-4 sm:gap-7">
+      <header className="flex flex-col gap-3.5 sm:gap-5">
+        <div className="flex flex-col gap-3 sm:flex-row sm:items-start sm:gap-4">
           <div className="min-w-0 flex-1">
             <p className="text-[11px] font-medium uppercase tracking-[0.2em] text-[var(--muted)]">{body}</p>
-            <h1 className="mt-1 font-display text-5xl leading-none sm:text-7xl">{chassis.code}</h1>
-            <p className="mt-2 text-base text-[var(--muted)]">
+            <h1 className="mt-0.5 font-display text-4xl leading-none sm:mt-1 sm:text-7xl">{chassis.code}</h1>
+            <p className="mt-1.5 text-sm text-[var(--muted)] sm:mt-2 sm:text-base">
               {chassis.name[locale]} · {chassis.years}
             </p>
             {summary ? (
-              <div className="mt-4">
+              <div className="mt-3 sm:mt-4">
                 <FixBand range={fixes} locale={locale} hint />
               </div>
             ) : null}
             {bodies.length > 1 ? (
-              <p className="mt-3 max-w-xl text-sm leading-6 text-[var(--muted)]">{copy.drivetrainNote}</p>
+              <p className="mt-2 max-w-xl text-xs leading-5 text-[var(--muted)] sm:mt-3 sm:text-sm sm:leading-6">
+                {copy.drivetrainNote}
+              </p>
             ) : null}
           </div>
           <CarPhoto
             chassis={chassis}
             alt={`${chassis.code} ${chassis.name[locale]}`}
-            className="h-[10.5rem] w-full shrink-0 rounded-2xl border border-[var(--line)] sm:h-[9.5rem] sm:w-[16rem] lg:h-[11rem] lg:w-[19rem]"
+            className="h-36 w-full shrink-0 rounded-2xl border border-[var(--line)] sm:h-[9.5rem] sm:w-[16rem] lg:h-[11rem] lg:w-[19rem]"
             priority
             tone="card"
             emptyLabel={copy.photoSoon}
@@ -147,34 +149,34 @@ function FamilyPick({
   return (
     <Link
       href={href}
-      className="tap group relative flex min-h-[11.5rem] overflow-hidden rounded-2xl border border-[var(--line)] bg-[var(--card)] sm:min-h-[12.5rem]"
+      className="tap group relative flex min-h-[10.5rem] overflow-hidden rounded-2xl border border-[var(--line)] bg-[var(--card)] sm:min-h-[12.5rem]"
     >
-      <div className="relative z-10 min-w-0 w-[58%] p-3 pr-2 sm:p-4 sm:pr-3">
+      <div className="relative z-10 min-w-0 w-[58%] p-2.5 pr-1.5 sm:p-4 sm:pr-3">
         <p
-          className={`text-[10px] font-semibold uppercase tracking-wide ${
+          className={`text-[9px] font-semibold uppercase tracking-wide sm:text-[10px] ${
             tone === "good" ? "text-[var(--good)]" : "text-[var(--bad)]"
           }`}
         >
           {label}
         </p>
-        <div className="mt-2 flex flex-wrap items-center gap-2">
-          <p className="font-mono text-xl font-semibold leading-none tracking-tight sm:text-2xl">
+        <div className="mt-1.5 flex flex-wrap items-center gap-1.5 sm:mt-2 sm:gap-2">
+          <p className="font-mono text-lg font-semibold leading-none tracking-tight sm:text-2xl">
             {variant.year}
           </p>
-          <p className="inline-flex max-w-full rounded-lg border border-white/20 bg-[var(--wash)] px-2 py-1 text-sm font-semibold leading-none sm:text-base">
+          <p className="inline-flex max-w-full rounded-md border border-white/20 bg-[var(--wash)] px-1.5 py-0.5 text-[11px] font-semibold leading-none sm:rounded-lg sm:px-2 sm:py-1 sm:text-base">
             {variant.model} {variant.engine}
           </p>
         </div>
-        <p className="mt-3 font-display text-4xl leading-none">
+        <p className="mt-2 font-display text-3xl leading-none sm:mt-3 sm:text-4xl">
           <ScoreGlow score={variant.score} locale={locale} />
         </p>
-        <div className="mt-2">
+        <div className="mt-1.5 sm:mt-2">
           <FixBand range={variant.expectedRepairPln} locale={locale} compact />
         </div>
-        <div className="mt-2">
+        <div className="mt-1.5 sm:mt-2">
           <p className="text-[9px] font-semibold uppercase tracking-[0.16em] text-[var(--muted)]">{copy.buy}</p>
           <div className="mt-0.5">
-            <Money value={variant.medianBuyPln} locale={locale} />
+            <Money value={variant.medianBuyPln} locale={locale} size="sm" />
           </div>
         </div>
       </div>

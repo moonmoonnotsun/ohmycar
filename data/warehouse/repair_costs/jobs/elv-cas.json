@@ -1,0 +1,35 @@
+{
+  "pain_id": "elv-cas",
+  "status": "quoted_workshop_band",
+  "currency": "PLN",
+  "region": "PL",
+  "collected_at": "2026-09-22T21:40:00Z",
+  "totals_pln": {
+    "independent": [
+      1200,
+      3500
+    ],
+    "specialist": [
+      2000,
+      4500
+    ],
+    "aso": [
+      3000,
+      6000
+    ]
+  },
+  "quotes": [
+    {
+      "tier": "service",
+      "label": "kosztserwisu.pl · BMW electronic lock / immobiliser jobs priced per VIN",
+      "url": "https://kosztserwisu.pl/modele-samochodow/bmw/"
+    },
+    {
+      "tier": "fault",
+      "label": "ELV/CAS is a known E-series immobiliser failure mode",
+      "url": "https://en.wikipedia.org/wiki/BMW_3_Series_(E90)"
+    }
+  ],
+  "note": "Wide band — coding + lock actuator. VIN-specific ASO quotes vary.",
+  "confidence": "wide_market_band"
+}

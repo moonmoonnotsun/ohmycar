@@ -1,0 +1,34 @@
+{
+  "chassis_slug": "i8",
+  "region": "PL",
+  "collected_at": "2026-09-23T00:30:00Z",
+  "confidence": "sourced_curated",
+  "phase": "D_long_tail",
+  "sources": [
+    {
+      "label": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/BMW_i8"
+    },
+    {
+      "label": "RealOEM",
+      "url": "https://www.realoem.com/bmw/"
+    }
+  ],
+  "lines": [
+    {
+      "model": "i8",
+      "engine": "B38",
+      "fuel": "petrol",
+      "years": [
+        2014,
+        2015,
+        2016,
+        2017,
+        2018,
+        2019,
+        2020
+      ]
+    }
+  ],
+  "line_count": 1
+}

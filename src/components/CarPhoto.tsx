@@ -38,12 +38,15 @@ export function CarPhoto({
         <img
           src={src}
           alt={alt}
-          width={1536}
-          height={1024}
-          decoding={priority ? "sync" : "async"}
+          width={tone === "thumb" ? 184 : 640}
+          height={tone === "thumb" ? 122 : 400}
+          loading={priority ? "eager" : "lazy"}
+          decoding="async"
           fetchPriority={priority ? "high" : "low"}
           draggable={false}
-          className="absolute inset-0 size-full object-cover transition-transform duration-500 group-hover:scale-[1.05]"
+          className={`absolute inset-0 size-full object-cover ${
+            tone === "hero" ? "transition-transform duration-500 group-hover:scale-[1.05]" : ""
+          }`}
           style={{
             position: "absolute",
             inset: 0,

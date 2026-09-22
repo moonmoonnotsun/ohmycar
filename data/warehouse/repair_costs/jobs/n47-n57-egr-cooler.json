@@ -1,0 +1,30 @@
+{
+  "pain_id": "n47-n57-egr-cooler",
+  "status": "quoted_workshop_band",
+  "totals_pln": {
+    "independent": [
+      3200,
+      6000
+    ],
+    "specialist": [
+      4000,
+      7000
+    ],
+    "aso": [
+      5500,
+      9000
+    ]
+  },
+  "quotes": [
+    {
+      "tier": "specialist",
+      "pln_low": 3200,
+      "pln_high": 6000,
+      "label": "Skanyx · M57 EGR cooler PLN band",
+      "url": "https://skanyx.com/pl/blog/bmw-m57-engine-buyer-guide-525d-530d-535d-obd2"
+    }
+  ],
+  "collected_at": "2026-09-22T21:30:00Z",
+  "currency": "PLN",
+  "region": "PL"
+}

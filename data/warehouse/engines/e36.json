@@ -1,0 +1,79 @@
+{
+  "chassis_slug": "e36",
+  "region": "PL",
+  "collected_at": "2026-09-22T22:05:00Z",
+  "confidence": "sourced_curated",
+  "sources": [
+    {
+      "label": "Wikipedia E36",
+      "url": "https://en.wikipedia.org/wiki/BMW_3_Series_(E36)"
+    },
+    {
+      "label": "RealOEM",
+      "url": "https://www.realoem.com/bmw/"
+    }
+  ],
+  "lines": [
+    {
+      "model": "318i",
+      "engine": "M40",
+      "fuel": "petrol",
+      "years": [
+        1990,
+        1991,
+        1992,
+        1993
+      ]
+    },
+    {
+      "model": "318i",
+      "engine": "M43",
+      "fuel": "petrol",
+      "years": [
+        1993,
+        1994,
+        1995,
+        1996,
+        1997,
+        1998,
+        1999
+      ]
+    },
+    {
+      "model": "320i",
+      "engine": "M50",
+      "fuel": "petrol",
+      "years": [
+        1991,
+        1992,
+        1993,
+        1994,
+        1995
+      ]
+    },
+    {
+      "model": "325i",
+      "engine": "M50",
+      "fuel": "petrol",
+      "years": [
+        1991,
+        1992,
+        1993,
+        1994,
+        1995
+      ]
+    },
+    {
+      "model": "328i",
+      "engine": "M52",
+      "fuel": "petrol",
+      "years": [
+        1995,
+        1996,
+        1997,
+        1998,
+        1999
+      ]
+    }
+  ]
+}

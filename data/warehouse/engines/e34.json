@@ -1,0 +1,33 @@
+{
+  "chassis_slug": "e34",
+  "region": "PL",
+  "collected_at": "2026-09-23T00:30:00Z",
+  "confidence": "sourced_curated",
+  "phase": "D_long_tail",
+  "sources": [
+    {
+      "label": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/BMW_5_Series_(E34)"
+    },
+    {
+      "label": "RealOEM",
+      "url": "https://www.realoem.com/bmw/"
+    }
+  ],
+  "lines": [
+    {
+      "model": "525i",
+      "engine": "M50",
+      "fuel": "petrol",
+      "years": [
+        1990,
+        1991,
+        1992,
+        1993,
+        1994,
+        1995
+      ]
+    }
+  ],
+  "line_count": 1
+}

@@ -1,0 +1,61 @@
+{
+  "pain_id": "swirl-flaps",
+  "status": "quoted_parts_plus_labor",
+  "totals_pln": {
+    "independent": [
+      480,
+      1800
+    ],
+    "specialist": [
+      1950,
+      3650
+    ],
+    "aso": [
+      2500,
+      4500
+    ]
+  },
+  "quotes": [
+    {
+      "tier": "independent",
+      "pln_low": 1000,
+      "pln_high": 1800,
+      "label": "BMG Tuning · usuwanie klap (max band)",
+      "url": "https://www.bmgtuning.pl/usuwanie-klap-wirowych/"
+    },
+    {
+      "tier": "independent",
+      "pln_low": 400,
+      "pln_high": 400,
+      "label": "Kata-Serwis · od 400 zł",
+      "url": "https://kata-serwis.pl/usuwanie-klap-wirowych-gdansk/"
+    },
+    {
+      "tier": "specialist",
+      "pln_low": 1950,
+      "pln_high": 3650,
+      "label": "Skanyx · M57 flap delete parts+labor PLN",
+      "url": "https://skanyx.com/pl/blog/bmw-m57-engine-buyer-guide-525d-530d-535d-obd2"
+    },
+    {
+      "tier": "aso",
+      "pln_low": 2500,
+      "pln_high": 4500,
+      "label": "Car Media · OE collector replacement band",
+      "url": "https://car-media.pl/pl/technika-i-elektromobilnosc/budowa-i-dzialanie/klapy-wirowe-kolektor-naprawa-czy-usuwanie"
+    }
+  ],
+  "collected_at": "2026-09-22T21:55:00Z",
+  "currency": "PLN",
+  "region": "PL",
+  "parts_pln": [
+    80,
+    200
+  ],
+  "labor_pln": [
+    400,
+    1600
+  ],
+  "split_note": "blanking kit parts + labor; Skanyx specialist band",
+  "formula": "independent_full = parts_pln + labor_pln"
+}

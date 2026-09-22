@@ -1,0 +1,46 @@
+{
+  "slug": "z3",
+  "code": "E36/7 Z3",
+  "family": "z",
+  "years": [
+    1995,
+    2002
+  ],
+  "market_model": "Z3",
+  "otomoto": "z3",
+  "gold": false,
+  "engines": [
+    "M44",
+    "M52",
+    "S50",
+    "S54"
+  ],
+  "wiki": "https://en.wikipedia.org/wiki/BMW_Z3",
+  "realoem_hint": "https://www.realoem.com/bmw/",
+  "region": "PL",
+  "status": "catalog_confirmed",
+  "phase": "D_long_tail",
+  "sources": [
+    {
+      "provider": "wikipedia",
+      "url": "https://en.wikipedia.org/wiki/BMW_Z3",
+      "role": "generation_identity"
+    },
+    {
+      "provider": "realoem",
+      "url": "https://www.realoem.com/bmw/",
+      "role": "parts_and_type_codes"
+    },
+    {
+      "provider": "ohmycar_chassis_ts",
+      "url": "src/data/chassis.ts",
+      "role": "product_taxonomy"
+    },
+    {
+      "provider": "otomoto",
+      "url": "https://www.otomoto.pl/osobowe/bmw/z3",
+      "role": "market_deep_link"
+    }
+  ],
+  "collected_at": "2026-09-23T00:30:00Z"
+}

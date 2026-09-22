@@ -38,10 +38,37 @@ body {
   min-height: 100dvh;
   font-family: var(--font-jakarta), var(--font-plex-sans), ui-sans-serif, system-ui, sans-serif;
   background-color: var(--paper);
+}
+
+/* Fixed glow layer — avoids background-attachment:fixed scroll jank */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
   background-image:
     radial-gradient(900px 420px at 80% -10%, rgba(245, 196, 0, 0.14), transparent 55%),
     radial-gradient(700px 380px at -10% 20%, rgba(255, 75, 75, 0.09), transparent 50%);
-  background-attachment: fixed;
+}
+
+.catalog-card {
+  content-visibility: auto;
+  contain-intrinsic-size: auto 22rem;
+}
+
+.catalog-row {
+  content-visibility: auto;
+  contain-intrinsic-size: auto 4.5rem;
+}
+
+.catalog-card .score-good,
+.catalog-card .score-mid,
+.catalog-card .score-bad,
+.catalog-row .score-good,
+.catalog-row .score-mid,
+.catalog-row .score-bad {
+  text-shadow: none;
 }
 
 a,

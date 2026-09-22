@@ -1,0 +1,736 @@
+{
+  "collected_at": "2026-09-22T21:10:00Z",
+  "source": "https://car-dossier.com/ceny/bmw",
+  "rows_by_model": {
+    "seria-3": [
+      {
+        "year": 2026,
+        "median": 216100,
+        "p25": 197400,
+        "p75": 238500,
+        "mileage_median_km": null,
+        "sample_size": 323
+      },
+      {
+        "year": 2025,
+        "median": 189900,
+        "p25": 179800,
+        "p75": 217200,
+        "mileage_median_km": 10000,
+        "sample_size": 448
+      },
+      {
+        "year": 2024,
+        "median": 174900,
+        "p25": 149900,
+        "p75": 189900,
+        "mileage_median_km": 33000,
+        "sample_size": 490
+      },
+      {
+        "year": 2023,
+        "median": 143900,
+        "p25": 123900,
+        "p75": 160000,
+        "mileage_median_km": 71000,
+        "sample_size": 997
+      },
+      {
+        "year": 2022,
+        "median": 114900,
+        "p25": 95900,
+        "p75": 134000,
+        "mileage_median_km": 92000,
+        "sample_size": 872
+      },
+      {
+        "year": 2021,
+        "median": 99900,
+        "p25": 85900,
+        "p75": 119900,
+        "mileage_median_km": 105000,
+        "sample_size": 1096
+      },
+      {
+        "year": 2020,
+        "median": 94500,
+        "p25": 79900,
+        "p75": 114900,
+        "mileage_median_km": 121000,
+        "sample_size": 976
+      },
+      {
+        "year": 2019,
+        "median": 88000,
+        "p25": 67500,
+        "p75": 105000,
+        "mileage_median_km": 130000,
+        "sample_size": 1023
+      },
+      {
+        "year": 2018,
+        "median": 58900,
+        "p25": 49000,
+        "p75": 70000,
+        "mileage_median_km": 146000,
+        "sample_size": 704
+      },
+      {
+        "year": 2017,
+        "median": 55300,
+        "p25": 45100,
+        "p75": 66500,
+        "mileage_median_km": 166000,
+        "sample_size": 782
+      },
+      {
+        "year": 2016,
+        "median": 50000,
+        "p25": 41500,
+        "p75": 62000,
+        "mileage_median_km": 193000,
+        "sample_size": 903
+      },
+      {
+        "year": 2015,
+        "median": 44700,
+        "p25": 36000,
+        "p75": 53900,
+        "mileage_median_km": 204000,
+        "sample_size": 936
+      },
+      {
+        "year": 2014,
+        "median": 39900,
+        "p25": 31900,
+        "p75": 49000,
+        "mileage_median_km": 225000,
+        "sample_size": 1145
+      },
+      {
+        "year": 2013,
+        "median": 36500,
+        "p25": 30500,
+        "p75": 45000,
+        "mileage_median_km": 238000,
+        "sample_size": 1593
+      },
+      {
+        "year": 2012,
+        "median": 34000,
+        "p25": 25900,
+        "p75": 41000,
+        "mileage_median_km": 246000,
+        "sample_size": 1375
+      },
+      {
+        "year": 2011,
+        "median": 24000,
+        "p25": 19500,
+        "p75": 31900,
+        "mileage_median_km": 241000,
+        "sample_size": 1209
+      },
+      {
+        "year": 2010,
+        "median": 21500,
+        "p25": 17000,
+        "p75": 27900,
+        "mileage_median_km": 247000,
+        "sample_size": 1313
+      },
+      {
+        "year": 2009,
+        "median": 19900,
+        "p25": 15700,
+        "p75": 25900,
+        "mileage_median_km": 250000,
+        "sample_size": 1427
+      }
+    ],
+    "seria-5": [
+      {
+        "year": 2026,
+        "median": 289900,
+        "p25": 264800,
+        "p75": 309900,
+        "mileage_median_km": null,
+        "sample_size": 350
+      },
+      {
+        "year": 2025,
+        "median": 252900,
+        "p25": 234900,
+        "p75": 289800,
+        "mileage_median_km": 17000,
+        "sample_size": 751
+      },
+      {
+        "year": 2024,
+        "median": 220000,
+        "p25": 200000,
+        "p75": 240000,
+        "mileage_median_km": 37000,
+        "sample_size": 496
+      },
+      {
+        "year": 2023,
+        "median": 170000,
+        "p25": 136800,
+        "p75": 207900,
+        "mileage_median_km": 69000,
+        "sample_size": 433
+      },
+      {
+        "year": 2022,
+        "median": 140000,
+        "p25": 119900,
+        "p75": 165000,
+        "mileage_median_km": 104000,
+        "sample_size": 736
+      },
+      {
+        "year": 2021,
+        "median": 127400,
+        "p25": 109300,
+        "p75": 149400,
+        "mileage_median_km": 122000,
+        "sample_size": 807
+      },
+      {
+        "year": 2020,
+        "median": 112000,
+        "p25": 95000,
+        "p75": 129900,
+        "mileage_median_km": 137000,
+        "sample_size": 611
+      },
+      {
+        "year": 2019,
+        "median": 97700,
+        "p25": 82000,
+        "p75": 114900,
+        "mileage_median_km": 143000,
+        "sample_size": 899
+      },
+      {
+        "year": 2018,
+        "median": 88000,
+        "p25": 75900,
+        "p75": 106000,
+        "mileage_median_km": 164000,
+        "sample_size": 1077
+      },
+      {
+        "year": 2017,
+        "median": 84000,
+        "p25": 72000,
+        "p75": 98900,
+        "mileage_median_km": 180000,
+        "sample_size": 1115
+      },
+      {
+        "year": 2016,
+        "median": 58900,
+        "p25": 49900,
+        "p75": 68900,
+        "mileage_median_km": 199000,
+        "sample_size": 816
+      },
+      {
+        "year": 2015,
+        "median": 54900,
+        "p25": 46900,
+        "p75": 62400,
+        "mileage_median_km": 220000,
+        "sample_size": 830
+      },
+      {
+        "year": 2014,
+        "median": 49000,
+        "p25": 42000,
+        "p75": 56000,
+        "mileage_median_km": 236000,
+        "sample_size": 1033
+      },
+      {
+        "year": 2013,
+        "median": 43900,
+        "p25": 37000,
+        "p75": 51500,
+        "mileage_median_km": 243000,
+        "sample_size": 1238
+      },
+      {
+        "year": 2012,
+        "median": 38900,
+        "p25": 32900,
+        "p75": 45900,
+        "mileage_median_km": 258000,
+        "sample_size": 1283
+      },
+      {
+        "year": 2011,
+        "median": 36000,
+        "p25": 29900,
+        "p75": 43500,
+        "mileage_median_km": 273000,
+        "sample_size": 1584
+      },
+      {
+        "year": 2010,
+        "median": 32800,
+        "p25": 25800,
+        "p75": 39000,
+        "mileage_median_km": 280000,
+        "sample_size": 1032
+      },
+      {
+        "year": 2009,
+        "median": 23500,
+        "p25": 17500,
+        "p75": 29000,
+        "mileage_median_km": 291000,
+        "sample_size": 638
+      }
+    ],
+    "seria-1": [
+      {
+        "year": 2026,
+        "median": 149900,
+        "p25": 133500,
+        "p75": 162900,
+        "mileage_median_km": null,
+        "sample_size": 183
+      },
+      {
+        "year": 2025,
+        "median": 139900,
+        "p25": 125000,
+        "p75": 150400,
+        "mileage_median_km": 9000,
+        "sample_size": 202
+      },
+      {
+        "year": 2024,
+        "median": 96000,
+        "p25": 92900,
+        "p75": 119900,
+        "mileage_median_km": 30000,
+        "sample_size": 318
+      },
+      {
+        "year": 2023,
+        "median": 92900,
+        "p25": 84900,
+        "p75": 99900,
+        "mileage_median_km": 44000,
+        "sample_size": 306
+      },
+      {
+        "year": 2022,
+        "median": 84900,
+        "p25": 74900,
+        "p75": 99100,
+        "mileage_median_km": 72000,
+        "sample_size": 279
+      },
+      {
+        "year": 2021,
+        "median": 82900,
+        "p25": 70400,
+        "p75": 92000,
+        "mileage_median_km": 68000,
+        "sample_size": 339
+      },
+      {
+        "year": 2020,
+        "median": 72900,
+        "p25": 60200,
+        "p75": 81800,
+        "mileage_median_km": 85000,
+        "sample_size": 302
+      },
+      {
+        "year": 2019,
+        "median": 63500,
+        "p25": 51300,
+        "p75": 74900,
+        "mileage_median_km": 105000,
+        "sample_size": 278
+      },
+      {
+        "year": 2018,
+        "median": 52500,
+        "p25": 44800,
+        "p75": 59900,
+        "mileage_median_km": 129000,
+        "sample_size": 319
+      },
+      {
+        "year": 2017,
+        "median": 45000,
+        "p25": 36900,
+        "p75": 54000,
+        "mileage_median_km": 137000,
+        "sample_size": 386
+      },
+      {
+        "year": 2016,
+        "median": 42000,
+        "p25": 34900,
+        "p75": 50900,
+        "mileage_median_km": 165000,
+        "sample_size": 516
+      },
+      {
+        "year": 2015,
+        "median": 36000,
+        "p25": 29900,
+        "p75": 43900,
+        "mileage_median_km": 169000,
+        "sample_size": 544
+      },
+      {
+        "year": 2014,
+        "median": 28900,
+        "p25": 24900,
+        "p75": 34900,
+        "mileage_median_km": 190000,
+        "sample_size": 645
+      },
+      {
+        "year": 2013,
+        "median": 27000,
+        "p25": 23000,
+        "p75": 31900,
+        "mileage_median_km": 192000,
+        "sample_size": 762
+      },
+      {
+        "year": 2012,
+        "median": 25900,
+        "p25": 21900,
+        "p75": 30600,
+        "mileage_median_km": 198000,
+        "sample_size": 1000
+      },
+      {
+        "year": 2011,
+        "median": 20500,
+        "p25": 16800,
+        "p75": 25500,
+        "mileage_median_km": 209000,
+        "sample_size": 728
+      },
+      {
+        "year": 2010,
+        "median": 16300,
+        "p25": 12900,
+        "p75": 19900,
+        "mileage_median_km": 218000,
+        "sample_size": 797
+      },
+      {
+        "year": 2009,
+        "median": 15000,
+        "p25": 11900,
+        "p75": 18500,
+        "mileage_median_km": 216000,
+        "sample_size": 1012
+      }
+    ],
+    "x5": [
+      {
+        "year": 2026,
+        "median": 419000,
+        "p25": 384900,
+        "p75": 449000,
+        "mileage_median_km": null,
+        "sample_size": 885
+      },
+      {
+        "year": 2025,
+        "median": 394900,
+        "p25": 359900,
+        "p75": 430000,
+        "mileage_median_km": 7000,
+        "sample_size": 401
+      },
+      {
+        "year": 2024,
+        "median": 349000,
+        "p25": 314100,
+        "p75": 381100,
+        "mileage_median_km": 38000,
+        "sample_size": 260
+      },
+      {
+        "year": 2023,
+        "median": 290000,
+        "p25": 239900,
+        "p75": 329700,
+        "mileage_median_km": 65000,
+        "sample_size": 461
+      },
+      {
+        "year": 2022,
+        "median": 219900,
+        "p25": 195900,
+        "p75": 246000,
+        "mileage_median_km": 93000,
+        "sample_size": 501
+      },
+      {
+        "year": 2021,
+        "median": 199900,
+        "p25": 174900,
+        "p75": 229900,
+        "mileage_median_km": 111000,
+        "sample_size": 523
+      },
+      {
+        "year": 2020,
+        "median": 179900,
+        "p25": 164200,
+        "p75": 199900,
+        "mileage_median_km": 125000,
+        "sample_size": 346
+      },
+      {
+        "year": 2019,
+        "median": 169900,
+        "p25": 149000,
+        "p75": 189000,
+        "mileage_median_km": 125000,
+        "sample_size": 321
+      },
+      {
+        "year": 2018,
+        "median": 109900,
+        "p25": 95000,
+        "p75": 129900,
+        "mileage_median_km": 158000,
+        "sample_size": 267
+      },
+      {
+        "year": 2017,
+        "median": 95500,
+        "p25": 85900,
+        "p75": 114500,
+        "mileage_median_km": 160000,
+        "sample_size": 357
+      },
+      {
+        "year": 2016,
+        "median": 89500,
+        "p25": 79900,
+        "p75": 99700,
+        "mileage_median_km": 181000,
+        "sample_size": 442
+      },
+      {
+        "year": 2015,
+        "median": 79900,
+        "p25": 69800,
+        "p75": 89900,
+        "mileage_median_km": 199000,
+        "sample_size": 363
+      },
+      {
+        "year": 2014,
+        "median": 79300,
+        "p25": 67000,
+        "p75": 87900,
+        "mileage_median_km": 220000,
+        "sample_size": 398
+      },
+      {
+        "year": 2013,
+        "median": 62000,
+        "p25": 49000,
+        "p75": 70000,
+        "mileage_median_km": 234000,
+        "sample_size": 201
+      },
+      {
+        "year": 2012,
+        "median": 53000,
+        "p25": 45000,
+        "p75": 59100,
+        "mileage_median_km": 233000,
+        "sample_size": 192
+      },
+      {
+        "year": 2011,
+        "median": 48900,
+        "p25": 40000,
+        "p75": 55000,
+        "mileage_median_km": 265000,
+        "sample_size": 200
+      },
+      {
+        "year": 2010,
+        "median": 45000,
+        "p25": 35900,
+        "p75": 50000,
+        "mileage_median_km": 261000,
+        "sample_size": 234
+      },
+      {
+        "year": 2009,
+        "median": 39900,
+        "p25": 34800,
+        "p75": 45900,
+        "mileage_median_km": 284000,
+        "sample_size": 255
+      }
+    ],
+    "x3": [
+      {
+        "year": 2026,
+        "median": 280000,
+        "p25": 261100,
+        "p75": 300900,
+        "mileage_median_km": null,
+        "sample_size": 617
+      },
+      {
+        "year": 2025,
+        "median": 259900,
+        "p25": 239900,
+        "p75": 279900,
+        "mileage_median_km": 7000,
+        "sample_size": 1135
+      },
+      {
+        "year": 2024,
+        "median": 199900,
+        "p25": 168700,
+        "p75": 230900,
+        "mileage_median_km": 26000,
+        "sample_size": 284
+      },
+      {
+        "year": 2023,
+        "median": 174900,
+        "p25": 154900,
+        "p75": 199900,
+        "mileage_median_km": 59000,
+        "sample_size": 431
+      },
+      {
+        "year": 2022,
+        "median": 154900,
+        "p25": 134900,
+        "p75": 172900,
+        "mileage_median_km": 79000,
+        "sample_size": 642
+      },
+      {
+        "year": 2021,
+        "median": 129900,
+        "p25": 114000,
+        "p75": 147900,
+        "mileage_median_km": 90000,
+        "sample_size": 651
+      },
+      {
+        "year": 2020,
+        "median": 116500,
+        "p25": 100000,
+        "p75": 129900,
+        "mileage_median_km": 104000,
+        "sample_size": 507
+      },
+      {
+        "year": 2019,
+        "median": 99900,
+        "p25": 87900,
+        "p75": 115000,
+        "mileage_median_km": 120000,
+        "sample_size": 544
+      },
+      {
+        "year": 2018,
+        "median": 95900,
+        "p25": 86000,
+        "p75": 108000,
+        "mileage_median_km": 133000,
+        "sample_size": 518
+      },
+      {
+        "year": 2017,
+        "median": 72000,
+        "p25": 64900,
+        "p75": 82800,
+        "mileage_median_km": 153000,
+        "sample_size": 438
+      },
+      {
+        "year": 2016,
+        "median": 68600,
+        "p25": 61900,
+        "p75": 75000,
+        "mileage_median_km": 155000,
+        "sample_size": 298
+      },
+      {
+        "year": 2015,
+        "median": 60000,
+        "p25": 53000,
+        "p75": 66900,
+        "mileage_median_km": 191000,
+        "sample_size": 309
+      },
+      {
+        "year": 2014,
+        "median": 52600,
+        "p25": 45900,
+        "p75": 59500,
+        "mileage_median_km": 202000,
+        "sample_size": 336
+      },
+      {
+        "year": 2013,
+        "median": 45500,
+        "p25": 39900,
+        "p75": 50000,
+        "mileage_median_km": 212000,
+        "sample_size": 456
+      },
+      {
+        "year": 2012,
+        "median": 42900,
+        "p25": 37000,
+        "p75": 48900,
+        "mileage_median_km": 229000,
+        "sample_size": 573
+      },
+      {
+        "year": 2011,
+        "median": 39900,
+        "p25": 34900,
+        "p75": 44900,
+        "mileage_median_km": 240000,
+        "sample_size": 593
+      },
+      {
+        "year": 2010,
+        "median": 28900,
+        "p25": 24900,
+        "p75": 35900,
+        "mileage_median_km": 247000,
+        "sample_size": 279
+      },
+      {
+        "year": 2009,
+        "median": 24000,
+        "p25": 20900,
+        "p75": 27900,
+        "mileage_median_km": 253000,
+        "sample_size": 224
+      }
+    ]
+  }
+}

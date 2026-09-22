@@ -1,0 +1,47 @@
+{
+  "pain_id": "n63-coolant-pipes",
+  "status": "quoted_parts_plus_labor",
+  "currency": "PLN",
+  "region": "PL",
+  "collected_at": "2026-09-23T01:15:00Z",
+  "fx_note": "EUR aluminum pipe jobs + USD RepairPal @4.3",
+  "parts_pln": [
+    1290,
+    3440
+  ],
+  "labor_pln": [
+    860,
+    2580
+  ],
+  "totals_pln": {
+    "independent": [
+      2150,
+      5160
+    ],
+    "specialist": [
+      2580,
+      6450
+    ],
+    "aso": [
+      4300,
+      9460
+    ]
+  },
+  "quotes": [
+    {
+      "tier": "specialist",
+      "pln_low": 2150,
+      "pln_high": 3440,
+      "label": "TempaDrive forum · N63 aluminum coolant pipes 500–800€",
+      "url": "https://forum.tempadrive.com/t/bmw-n63-hot-v-twin-turbo-v8-problems-guide"
+    },
+    {
+      "tier": "specialist",
+      "pln_low": 1600,
+      "pln_high": 4800,
+      "label": "BimmerBoom / RepairPal class $400–1,200 total",
+      "url": "https://bimmerboom.com/bmw-n63-turbo-coolant-line-replacement-cost-insights/"
+    }
+  ],
+  "formula": "aluminum coolant pipe preventative 500–800€@4.3"
+}

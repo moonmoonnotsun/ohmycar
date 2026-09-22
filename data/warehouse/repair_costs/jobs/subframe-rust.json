@@ -1,0 +1,39 @@
+{
+  "pain_id": "subframe-rust",
+  "status": "quoted_workshop_band",
+  "totals_pln": {
+    "independent": [
+      2000,
+      5000
+    ],
+    "specialist": [
+      3000,
+      8000
+    ],
+    "aso": [
+      5000,
+      12000
+    ]
+  },
+  "quotes": [
+    {
+      "tier": "independent",
+      "pln_low": 2000,
+      "pln_high": 5000,
+      "label": "AutoTechnik · E46 subframe mount weld+reinforce",
+      "url": "https://autotechnik.tech/bmw/bmw_3_e46"
+    },
+    {
+      "tier": "body",
+      "pln_low": 6000,
+      "pln_high": 12000,
+      "label": "e-posadzki.pl · E46 floor panel replacement band",
+      "url": "https://e-posadzki.pl/wymiana-podlogi-w-samochodzie-koszt",
+      "role": "severe_perforation"
+    }
+  ],
+  "note": "UI band = localized subframe reinforcement. Full floor rebuild is higher and VIN-specific.",
+  "collected_at": "2026-09-22T21:30:00Z",
+  "currency": "PLN",
+  "region": "PL"
+}

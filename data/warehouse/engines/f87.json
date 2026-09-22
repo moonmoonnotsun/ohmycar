@@ -1,0 +1,41 @@
+{
+  "chassis_slug": "f87",
+  "region": "PL",
+  "collected_at": "2026-09-23T00:30:00Z",
+  "confidence": "sourced_curated",
+  "phase": "D_long_tail",
+  "sources": [
+    {
+      "label": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/BMW_M2#F87"
+    },
+    {
+      "label": "RealOEM",
+      "url": "https://www.realoem.com/bmw/"
+    }
+  ],
+  "lines": [
+    {
+      "model": "M2",
+      "engine": "N55",
+      "fuel": "petrol",
+      "years": [
+        2016,
+        2017,
+        2018
+      ]
+    },
+    {
+      "model": "M2",
+      "engine": "S55",
+      "fuel": "petrol",
+      "years": [
+        2018,
+        2019,
+        2020,
+        2021
+      ]
+    }
+  ],
+  "line_count": 2
+}

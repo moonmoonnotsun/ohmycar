@@ -19,10 +19,10 @@ export default async function CatalogPage({
 
   return (
     <div>
-      <header className="mb-5">
-        <h1 className="font-display text-4xl leading-tight sm:text-5xl">{copy.catalog}</h1>
-        <p className="mt-2 text-[var(--muted)]">
-          {chassisList.length} {copy.chassisCount} · E90 {copy.gold.toLowerCase()}
+      <header className="mb-3.5 sm:mb-5">
+        <h1 className="font-display text-[1.75rem] leading-tight sm:text-5xl">{copy.catalog}</h1>
+        <p className="mt-1 text-sm text-[var(--muted)] sm:mt-2 sm:text-base">
+          {chassisList.length} {copy.chassisCount}
         </p>
       </header>
       <CatalogExplorer locale={locale} chassis={chassisList} />

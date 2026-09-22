@@ -6,7 +6,7 @@ import { chassisSummary, type ListMark } from "@/lib/catalog";
 import { bodyLabelKey, bodyOf } from "@/lib/carImage";
 import { CarPhoto } from "@/components/CarPhoto";
 import { ScoreGlow } from "@/components/ScoreBadge";
-import { FixBand } from "@/components/Money";
+import { FixBand, MoneyRange } from "@/components/Money";
 
 export function ChassisCard({
   chassis,
@@ -26,7 +26,7 @@ export function ChassisCard({
   return (
     <Link
       href={`/${locale}/bmw/${chassis.slug}`}
-      className="group tap block overflow-hidden rounded-2xl border border-[var(--line)] bg-[var(--card)] transition active:scale-[0.99]"
+      className="catalog-card group tap block overflow-hidden rounded-2xl border border-[var(--line)] bg-[var(--card)]"
     >
       <CarPhoto
         chassis={chassis}
@@ -43,27 +43,14 @@ export function ChassisCard({
           </div>
         ) : null}
       </CarPhoto>
-      <div className="p-4">
-        <div className="flex items-start justify-between gap-4">
+      <div className="p-3 sm:p-4">
+        <div className="flex items-start justify-between gap-3">
           <div className="min-w-0">
-            <p className="font-mono text-xl font-semibold tracking-tight">{chassis.code}</p>
-            <p className="mt-1 text-sm text-[var(--muted)]">{chassis.name[locale]}</p>
-            <div className="mt-3 flex flex-wrap items-center gap-2">
-              <span className="text-sm font-semibold tabular-nums tracking-tight text-[var(--ink)]">
-                {chassis.years}
-              </span>
-              <span className="inline-flex h-7 items-center rounded-full border border-[var(--line)] px-2.5 text-xs font-semibold text-[var(--ink)]">
-                {body}
-              </span>
-            </div>
-            {summary ? (
-              <div className="mt-3">
-                <FixBand range={fixes} locale={locale} compact />
-              </div>
-            ) : null}
+            <p className="font-mono text-lg font-semibold tracking-tight sm:text-xl">{chassis.code}</p>
+            <p className="mt-0.5 text-xs text-[var(--muted)] sm:mt-1 sm:text-sm">{chassis.name[locale]}</p>
           </div>
           {summary ? (
-            <div className="flex shrink-0 gap-4">
+            <div className="flex shrink-0 gap-2.5 sm:gap-3">
               <ScoreCol label={copy.cardBest} score={summary.best.score} engine={summary.best.engine} />
               {split ? (
                 <ScoreCol label={copy.cardWorst} score={summary.worst.score} engine={summary.worst.engine} />
@@ -75,6 +62,21 @@ export function ChassisCard({
             </span>
           )}
         </div>
+        <div className="mt-2 sm:mt-3">
+          <span className="whitespace-nowrap text-sm font-semibold tabular-nums tracking-tight text-[var(--ink)]">
+            {chassis.years}
+          </span>
+        </div>
+        {summary ? (
+          <div className="mt-2 sm:mt-3">
+            <p className="text-[11px] font-semibold uppercase tracking-[0.14em] text-[var(--muted)]">
+              {copy.sortRepair}
+            </p>
+            <div className="mt-0.5">
+              <MoneyRange range={fixes} locale={locale} />
+            </div>
+          </div>
+        ) : null}
       </div>
     </Link>
   );

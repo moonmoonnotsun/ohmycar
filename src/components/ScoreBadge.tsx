@@ -75,16 +75,18 @@ export function ScoreGlow({
 export function ScoreTrack({
   score,
   tone: toneOverride,
+  compact = false,
 }: {
   score: number | null | undefined;
   tone?: "good" | "mid" | "bad";
+  compact?: boolean;
 }) {
   if (score == null) {
-    return <div className="relative mt-3 h-1.5 rounded-full bg-white/10" />;
+    return <div className={`relative rounded-full bg-white/10 ${compact ? "mt-1.5 h-1" : "mt-3 h-1.5"}`} />;
   }
   const tone = toneOverride ?? scoreTone(score);
   return (
-    <div className="relative mt-3 h-1.5 rounded-full bg-white/10">
+    <div className={`relative rounded-full bg-white/10 ${compact ? "mt-1.5 h-1" : "mt-3 h-1.5"}`}>
       <div
         className="absolute inset-y-0 left-0 rounded-full"
         style={{ width: `${score}%`, background: track[tone] }}

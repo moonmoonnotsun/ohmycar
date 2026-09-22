@@ -1,0 +1,44 @@
+{
+  "slug": "z3-m-coupe",
+  "code": "Z3 M Coupe",
+  "family": "z",
+  "years": [
+    1998,
+    2002
+  ],
+  "market_model": "Z3",
+  "otomoto": "z3",
+  "gold": false,
+  "engines": [
+    "S50",
+    "S54"
+  ],
+  "wiki": "https://en.wikipedia.org/wiki/BMW_Z3_M",
+  "realoem_hint": "https://www.realoem.com/bmw/",
+  "region": "PL",
+  "status": "catalog_confirmed",
+  "phase": "D_long_tail",
+  "sources": [
+    {
+      "provider": "wikipedia",
+      "url": "https://en.wikipedia.org/wiki/BMW_Z3_M",
+      "role": "generation_identity"
+    },
+    {
+      "provider": "realoem",
+      "url": "https://www.realoem.com/bmw/",
+      "role": "parts_and_type_codes"
+    },
+    {
+      "provider": "ohmycar_chassis_ts",
+      "url": "src/data/chassis.ts",
+      "role": "product_taxonomy"
+    },
+    {
+      "provider": "otomoto",
+      "url": "https://www.otomoto.pl/osobowe/bmw/z3",
+      "role": "market_deep_link"
+    }
+  ],
+  "collected_at": "2026-09-23T00:30:00Z"
+}

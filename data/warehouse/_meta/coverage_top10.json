@@ -1,5 +1,5 @@
 {
-  "collected_at": "2026-09-22T19:45:00Z",
+  "collected_at": "2026-09-22T21:45:00Z",
   "top10": [
     "e90",
     "f30",
@@ -16,150 +16,286 @@
     {
       "slug": "e90",
       "identity": true,
+      "engines_file": true,
       "buy_prices_year_rows": true,
+      "buy_year_count": 5,
+      "buy_years": [
+        "2009",
+        "2010",
+        "2011",
+        "2012",
+        "2013"
+      ],
+      "buy_year_gaps": [
+        2005,
+        2006,
+        2007,
+        2008
+      ],
       "buy_prices_api_live_sample": true,
       "uokik_campaigns": true,
       "nhtsa_recall_sample": true,
       "sourced_pains": true,
-      "repair_pln_job_quotes": false,
+      "repair_pln_job_quotes": true,
       "parts_pln_scraped": false,
       "score_inputs_from_warehouse": true,
-      "score_status": "evidence_derived_v1_omit_fix_parts",
-      "engines_file": true
+      "score_status": "evidence_derived_v1_with_fix_bands"
     },
     {
       "slug": "f30",
       "identity": true,
+      "engines_file": true,
       "buy_prices_year_rows": true,
+      "buy_year_count": 8,
+      "buy_years": [
+        "2012",
+        "2013",
+        "2014",
+        "2015",
+        "2016",
+        "2017",
+        "2018",
+        "2019"
+      ],
+      "buy_year_gaps": [],
       "buy_prices_api_live_sample": true,
       "uokik_campaigns": true,
-      "nhtsa_recall_sample": false,
+      "nhtsa_recall_sample": true,
       "sourced_pains": true,
-      "repair_pln_job_quotes": false,
+      "repair_pln_job_quotes": true,
       "parts_pln_scraped": false,
       "score_inputs_from_warehouse": true,
-      "score_status": "evidence_derived_v1_omit_fix_parts",
-      "engines_file": true
+      "score_status": "evidence_derived_v1_with_fix_bands"
     },
     {
       "slug": "e46",
       "identity": true,
+      "engines_file": true,
       "buy_prices_year_rows": false,
+      "buy_year_count": 0,
+      "buy_years": [],
+      "buy_year_gaps": [
+        1998,
+        1999,
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005,
+        2006
+      ],
       "buy_prices_api_live_sample": false,
-      "uokik_campaigns": false,
-      "nhtsa_recall_sample": false,
+      "uokik_campaigns": true,
+      "nhtsa_recall_sample": true,
       "sourced_pains": true,
-      "repair_pln_job_quotes": false,
+      "repair_pln_job_quotes": true,
       "parts_pln_scraped": false,
       "score_inputs_from_warehouse": true,
-      "score_status": "evidence_derived_v1_omit_fix_parts",
-      "engines_file": true
+      "score_status": "evidence_derived_v1_with_fix_bands"
     },
     {
       "slug": "e60",
       "identity": true,
+      "engines_file": true,
       "buy_prices_year_rows": true,
+      "buy_year_count": 2,
+      "buy_years": [
+        "2009",
+        "2010"
+      ],
+      "buy_year_gaps": [
+        2003,
+        2004,
+        2005,
+        2006,
+        2007,
+        2008
+      ],
       "buy_prices_api_live_sample": false,
-      "uokik_campaigns": false,
+      "uokik_campaigns": true,
       "nhtsa_recall_sample": true,
       "sourced_pains": true,
-      "repair_pln_job_quotes": false,
+      "repair_pln_job_quotes": true,
       "parts_pln_scraped": false,
       "score_inputs_from_warehouse": true,
-      "score_status": "evidence_derived_v1_omit_fix_parts",
-      "engines_file": true
+      "score_status": "evidence_derived_v1_with_fix_bands"
     },
     {
       "slug": "f10",
       "identity": true,
+      "engines_file": true,
       "buy_prices_year_rows": true,
+      "buy_year_count": 8,
+      "buy_years": [
+        "2010",
+        "2011",
+        "2012",
+        "2013",
+        "2014",
+        "2015",
+        "2016",
+        "2017"
+      ],
+      "buy_year_gaps": [],
       "buy_prices_api_live_sample": true,
       "uokik_campaigns": true,
-      "nhtsa_recall_sample": false,
+      "nhtsa_recall_sample": true,
       "sourced_pains": true,
-      "repair_pln_job_quotes": false,
+      "repair_pln_job_quotes": true,
       "parts_pln_scraped": false,
       "score_inputs_from_warehouse": true,
-      "score_status": "evidence_derived_v1_omit_fix_parts",
-      "engines_file": true
+      "score_status": "evidence_derived_v1_with_fix_bands"
     },
     {
       "slug": "e39",
       "identity": true,
+      "engines_file": true,
       "buy_prices_year_rows": false,
+      "buy_year_count": 0,
+      "buy_years": [],
+      "buy_year_gaps": [
+        1995,
+        1996,
+        1997,
+        1998,
+        1999,
+        2000,
+        2001,
+        2002,
+        2003
+      ],
       "buy_prices_api_live_sample": false,
-      "uokik_campaigns": false,
-      "nhtsa_recall_sample": false,
+      "uokik_campaigns": true,
+      "nhtsa_recall_sample": true,
       "sourced_pains": true,
-      "repair_pln_job_quotes": false,
+      "repair_pln_job_quotes": true,
       "parts_pln_scraped": false,
       "score_inputs_from_warehouse": true,
-      "score_status": "evidence_derived_v1_omit_fix_parts",
-      "engines_file": true
+      "score_status": "evidence_derived_v1_with_fix_bands"
     },
     {
       "slug": "e87",
       "identity": true,
+      "engines_file": true,
       "buy_prices_year_rows": true,
+      "buy_year_count": 5,
+      "buy_years": [
+        "2009",
+        "2010",
+        "2011",
+        "2012",
+        "2013"
+      ],
+      "buy_year_gaps": [
+        2004,
+        2005,
+        2006,
+        2007,
+        2008
+      ],
       "buy_prices_api_live_sample": true,
       "uokik_campaigns": true,
       "nhtsa_recall_sample": true,
       "sourced_pains": true,
-      "repair_pln_job_quotes": false,
+      "repair_pln_job_quotes": true,
       "parts_pln_scraped": false,
       "score_inputs_from_warehouse": true,
-      "score_status": "evidence_derived_v1_omit_fix_parts",
-      "engines_file": true
+      "score_status": "evidence_derived_v1_with_fix_bands"
     },
     {
       "slug": "f20",
       "identity": true,
+      "engines_file": true,
       "buy_prices_year_rows": true,
+      "buy_year_count": 9,
+      "buy_years": [
+        "2011",
+        "2012",
+        "2013",
+        "2014",
+        "2015",
+        "2016",
+        "2017",
+        "2018",
+        "2019"
+      ],
+      "buy_year_gaps": [],
       "buy_prices_api_live_sample": true,
       "uokik_campaigns": true,
-      "nhtsa_recall_sample": false,
+      "nhtsa_recall_sample": true,
       "sourced_pains": true,
-      "repair_pln_job_quotes": false,
+      "repair_pln_job_quotes": true,
       "parts_pln_scraped": false,
       "score_inputs_from_warehouse": true,
-      "score_status": "evidence_derived_v1_omit_fix_parts",
-      "engines_file": true
+      "score_status": "evidence_derived_v1_with_fix_bands"
     },
     {
       "slug": "e70",
       "identity": true,
+      "engines_file": true,
       "buy_prices_year_rows": true,
+      "buy_year_count": 5,
+      "buy_years": [
+        "2009",
+        "2010",
+        "2011",
+        "2012",
+        "2013"
+      ],
+      "buy_year_gaps": [
+        2007,
+        2008
+      ],
       "buy_prices_api_live_sample": true,
-      "uokik_campaigns": false,
+      "uokik_campaigns": true,
       "nhtsa_recall_sample": true,
       "sourced_pains": true,
-      "repair_pln_job_quotes": false,
+      "repair_pln_job_quotes": true,
       "parts_pln_scraped": false,
       "score_inputs_from_warehouse": true,
-      "score_status": "evidence_derived_v1_omit_fix_parts",
-      "engines_file": true
+      "score_status": "evidence_derived_v1_with_fix_bands"
     },
     {
       "slug": "e83",
       "identity": true,
+      "engines_file": true,
       "buy_prices_year_rows": true,
+      "buy_year_count": 2,
+      "buy_years": [
+        "2009",
+        "2010"
+      ],
+      "buy_year_gaps": [
+        2003,
+        2004,
+        2005,
+        2006,
+        2007,
+        2008
+      ],
       "buy_prices_api_live_sample": false,
       "uokik_campaigns": true,
       "nhtsa_recall_sample": true,
       "sourced_pains": true,
-      "repair_pln_job_quotes": false,
+      "repair_pln_job_quotes": true,
       "parts_pln_scraped": false,
       "score_inputs_from_warehouse": true,
-      "score_status": "evidence_derived_v1_omit_fix_parts",
-      "engines_file": true
+      "score_status": "evidence_derived_v1_with_fix_bands"
     }
   ],
   "app_wiring": {
     "pains": "src/data/imported/pains.json",
     "buy": "src/data/imported/buyMedians.json",
     "campaigns": "src/data/imported/campaigns.json",
+    "jobs": "data/warehouse/repair_costs/jobs/",
     "score_rule": "data/warehouse/score_inputs/rules_v1.json",
     "score_runtime": "src/lib/scoreEvidence.ts",
     "seed_score_buy_ignored": true
+  },
+  "blockers": {
+    "cardossier_api_demo_exhausted": "5/day used; early years <2009 need API key for e46/e39/early e90/e60/e87/e70/e83",
+    "autodoc_bot_block": "Cloudflare blocks automated Autodoc/iParts scrapes — parts SKU lines still pending",
+    "awaiting_user_confirm_before_beyond_top10": true
   }
 }

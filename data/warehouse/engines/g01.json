@@ -1,0 +1,64 @@
+{
+  "chassis_slug": "g01",
+  "region": "PL",
+  "collected_at": "2026-09-22T23:55:00Z",
+  "confidence": "sourced_curated",
+  "sources": [
+    {
+      "label": "Wikipedia generation page",
+      "url": "https://en.wikipedia.org/wiki/BMW_X3_(G01)"
+    },
+    {
+      "label": "RealOEM BMW catalog",
+      "url": "https://www.realoem.com/bmw/"
+    }
+  ],
+  "lines": [
+    {
+      "model": "20d",
+      "engine": "B47",
+      "fuel": "diesel",
+      "years": [
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ]
+    },
+    {
+      "model": "30i",
+      "engine": "B48",
+      "fuel": "petrol",
+      "years": [
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ]
+    },
+    {
+      "model": "M40i",
+      "engine": "B58",
+      "fuel": "petrol",
+      "years": [
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ]
+    }
+  ],
+  "line_count": 3
+}

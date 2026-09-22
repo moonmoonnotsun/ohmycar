@@ -75,6 +75,10 @@ export type Pain = {
   plnIndependent: [number, number] | null;
   plnSpecialist: [number, number] | null;
   plnAso: [number, number] | null;
+  /** Optional buy-parts band (PLN). When set with labor, UI shows Parts + Labor = Full. */
+  plnParts: [number, number] | null;
+  /** Optional labor-only band (PLN), usually independent-shop prior. */
+  plnLabor: [number, number] | null;
   plnNote?: string;
   oemHint?: string;
   autodocQuery: Localized;

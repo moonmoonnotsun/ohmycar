@@ -1,0 +1,66 @@
+{
+  "chassis_slug": "f22",
+  "region": "PL",
+  "collected_at": "2026-09-22T23:55:00Z",
+  "confidence": "sourced_curated",
+  "sources": [
+    {
+      "label": "Wikipedia generation page",
+      "url": "https://en.wikipedia.org/wiki/BMW_2_Series_(F22)"
+    },
+    {
+      "label": "RealOEM BMW catalog",
+      "url": "https://www.realoem.com/bmw/"
+    }
+  ],
+  "lines": [
+    {
+      "model": "220i",
+      "engine": "N20",
+      "fuel": "petrol",
+      "years": [
+        2014,
+        2015,
+        2016
+      ]
+    },
+    {
+      "model": "220i",
+      "engine": "B48",
+      "fuel": "petrol",
+      "years": [
+        2016,
+        2017,
+        2018,
+        2019,
+        2020,
+        2021
+      ]
+    },
+    {
+      "model": "230i",
+      "engine": "N55",
+      "fuel": "petrol",
+      "years": [
+        2014,
+        2015,
+        2016
+      ]
+    },
+    {
+      "model": "220d",
+      "engine": "B47",
+      "fuel": "diesel",
+      "years": [
+        2015,
+        2016,
+        2017,
+        2018,
+        2019,
+        2020,
+        2021
+      ]
+    }
+  ],
+  "line_count": 4
+}

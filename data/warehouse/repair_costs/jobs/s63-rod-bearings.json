@@ -1,0 +1,54 @@
+{
+  "pain_id": "s63-rod-bearings",
+  "status": "quoted_parts_plus_labor",
+  "currency": "PLN",
+  "region": "PL",
+  "collected_at": "2026-09-23T01:15:00Z",
+  "fx_note": "USD/EUR specialist guides @4.3 PLN/EUR equiv.",
+  "parts_pln": [
+    2150,
+    4300
+  ],
+  "labor_pln": [
+    6450,
+    12040
+  ],
+  "totals_pln": {
+    "independent": [
+      8600,
+      15050
+    ],
+    "specialist": [
+      10750,
+      19350
+    ],
+    "aso": [
+      17200,
+      30100
+    ]
+  },
+  "quotes": [
+    {
+      "tier": "specialist",
+      "pln_low": 8600,
+      "pln_high": 15050,
+      "label": "LuxuryCarsGuide · S63 preventative bearings ~$2k–3.5k indie",
+      "url": "https://www.luxurycarsguide.com/guides/bmw-s63-engine-failure-rate/"
+    },
+    {
+      "tier": "specialist",
+      "pln_low": 9600,
+      "pln_high": 16800,
+      "label": "Bimmer.AI · S63 preventative £2,000–£3,500 class",
+      "url": "https://bimmer.ai/bmw-common-problems/s55-rod-bearings/"
+    },
+    {
+      "tier": "parts",
+      "pln_low": 1050,
+      "pln_high": 2500,
+      "label": "PLN · Wiltronic · panewki V8/M-Power prior",
+      "url": "https://wiltronic.pl/blog/od-czego-zalezy-koszt-wymiany-panewek-w-bmw/"
+    }
+  ],
+  "formula": "preventative bearing class $2k–3.5k / £2–3.5k → PLN@FX"
+}

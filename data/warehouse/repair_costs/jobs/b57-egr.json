@@ -1,0 +1,47 @@
+{
+  "pain_id": "b57-egr",
+  "status": "quoted_parts_plus_labor",
+  "currency": "PLN",
+  "region": "PL",
+  "collected_at": "2026-09-23T01:15:00Z",
+  "fx_note": "B47 workshop band reused as B57 family prior (same EGR/carbon theme)",
+  "parts_pln": [
+    800,
+    2000
+  ],
+  "labor_pln": [
+    1500,
+    3000
+  ],
+  "totals_pln": {
+    "independent": [
+      2500,
+      5000
+    ],
+    "specialist": [
+      3200,
+      6000
+    ],
+    "aso": [
+      4500,
+      8000
+    ]
+  },
+  "quotes": [
+    {
+      "tier": "specialist",
+      "pln_low": 2500,
+      "pln_high": 5000,
+      "label": "Skanyx · EGR cooler band (B47 prior applied to B57)",
+      "url": "https://skanyx.com/pl/blog/bmw-m57-engine-buyer-guide-525d-530d-535d-obd2"
+    },
+    {
+      "tier": "specialist",
+      "pln_low": 2500,
+      "pln_high": 5000,
+      "label": "Warehouse · b47-egr job bands (modular diesel family)",
+      "url": "https://en.wikipedia.org/wiki/BMW_B57"
+    }
+  ],
+  "formula": "same independent band as b47-egr.json"
+}

@@ -1,0 +1,36 @@
+{
+  "pain_id": "n62-valvetronic",
+  "status": "quoted_workshop_band",
+  "currency": "PLN",
+  "region": "PL",
+  "collected_at": "2026-09-22T21:40:00Z",
+  "totals_pln": {
+    "independent": [
+      1500,
+      3500
+    ],
+    "specialist": [
+      2500,
+      5000
+    ],
+    "aso": [
+      4000,
+      8000
+    ]
+  },
+  "quotes": [
+    {
+      "tier": "specialist",
+      "pln_low": 2000,
+      "pln_high": 3500,
+      "label": "Common N62 ancillary repair band prior (water pipe/valve cover family)",
+      "url": "https://kosztserwisu.pl/modele-samochodow/bmw/"
+    },
+    {
+      "tier": "fault",
+      "label": "Wikipedia · BMW N62 Valvetronic complexity",
+      "url": "https://en.wikipedia.org/wiki/BMW_N62"
+    }
+  ],
+  "confidence": "wide_market_band"
+}

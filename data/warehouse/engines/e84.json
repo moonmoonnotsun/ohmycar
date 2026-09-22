@@ -1,0 +1,74 @@
+{
+  "chassis_slug": "e84",
+  "region": "PL",
+  "collected_at": "2026-09-22T23:30:00Z",
+  "confidence": "sourced_curated",
+  "sources": [
+    {
+      "label": "Wikipedia generation page",
+      "url": "https://en.wikipedia.org/wiki/BMW_X1_(E84)"
+    },
+    {
+      "label": "RealOEM BMW catalog",
+      "url": "https://www.realoem.com/bmw/"
+    },
+    {
+      "label": "App seed cross-check",
+      "url": "src/data/volume.ts"
+    }
+  ],
+  "lines": [
+    {
+      "model": "18d",
+      "engine": "N47",
+      "fuel": "diesel",
+      "years": [
+        2009,
+        2010,
+        2011,
+        2012,
+        2013,
+        2014,
+        2015
+      ]
+    },
+    {
+      "model": "20d",
+      "engine": "N47",
+      "fuel": "diesel",
+      "years": [
+        2009,
+        2010,
+        2011,
+        2012,
+        2013,
+        2014,
+        2015
+      ]
+    },
+    {
+      "model": "20i",
+      "engine": "N20",
+      "fuel": "petrol",
+      "years": [
+        2011,
+        2012,
+        2013,
+        2014,
+        2015
+      ]
+    },
+    {
+      "model": "28i",
+      "engine": "N52",
+      "fuel": "petrol",
+      "years": [
+        2009,
+        2010,
+        2011,
+        2012
+      ]
+    }
+  ],
+  "line_count": 4
+}

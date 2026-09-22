@@ -1,0 +1,35 @@
+{
+  "chassis_slug": "e34-m5",
+  "region": "PL",
+  "collected_at": "2026-09-23T00:30:00Z",
+  "confidence": "sourced_curated",
+  "phase": "D_long_tail",
+  "sources": [
+    {
+      "label": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/BMW_M5#E34"
+    },
+    {
+      "label": "RealOEM",
+      "url": "https://www.realoem.com/bmw/"
+    }
+  ],
+  "lines": [
+    {
+      "model": "M5",
+      "engine": "S38",
+      "fuel": "petrol",
+      "years": [
+        1988,
+        1989,
+        1990,
+        1991,
+        1992,
+        1993,
+        1994,
+        1995
+      ]
+    }
+  ],
+  "line_count": 1
+}

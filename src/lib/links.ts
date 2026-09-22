@@ -173,21 +173,22 @@ const AUTODOC_CATEGORIES: AutodocCategory[] = [
   },
 ];
 
-function autodocHost(locale: Locale): string {
-  if (locale === "pl") return "https://www.autodoc.pl";
-  if (locale === "ru") return "https://www.autodoc.ru";
-  return "https://www.autodoc.co.uk";
+/**
+ * OhMyCar is Poland-first (PLN / OTOMOTO / Inter Cars).
+ * UI language (en/pl/ru) must not send users to autodoc.ru or .co.uk.
+ */
+const AUTODOC_MARKET = "pl" as const;
+
+function autodocHost(_locale?: Locale): string {
+  return "https://www.autodoc.pl";
 }
 
-function autodocPartsRoot(locale: Locale): string {
-  if (locale === "pl") return "czesci-zapasowe";
-  if (locale === "ru") return "zapchasti";
-  return "car-parts";
+function autodocPartsRoot(_locale?: Locale): string {
+  return "czesci-zapasowe";
 }
 
-function autodocSlugLocale(locale: Locale): "pl" | "en" | "ru" {
-  if (locale === "pl" || locale === "ru") return locale;
-  return "en";
+function autodocSlugLocale(_locale?: Locale): "pl" | "en" | "ru" {
+  return AUTODOC_MARKET;
 }
 
 /** Strip spaces from OEM-looking part numbers (e.g. "11 21 7 571 037"). */
@@ -366,9 +367,7 @@ export function autodocBmwUrl(
   variant?: VariantBrief | null,
 ): string {
   const host = autodocHost(locale);
-  const root =
-    locale === "pl" ? "autoczesci/bmw" : locale === "ru" ? "avtozapchasti/bmw" : "spares/bmw";
-  return withAutodocVehicle(`${host}/${root}`, chassis, variant);
+  return withAutodocVehicle(`${host}/autoczesci/bmw`, chassis, variant);
 }
 
 /**

@@ -35,20 +35,20 @@ export function ComparePair({
     : chassisSlug.toUpperCase();
 
   return (
-    <section className="grid items-center gap-8 lg:grid-cols-[minmax(0,20rem)_minmax(0,1fr)] lg:gap-8 xl:grid-cols-[minmax(0,22rem)_minmax(0,1fr)]">
+    <section className="grid items-center gap-5 sm:gap-8 lg:grid-cols-[minmax(0,20rem)_minmax(0,1fr)] lg:gap-8 xl:grid-cols-[minmax(0,22rem)_minmax(0,1fr)]">
       <div className="min-w-0">
         <p className="text-[11px] font-medium uppercase tracking-[0.2em] text-[var(--muted)]">
           {copy.sameBadgeEyebrow}
         </p>
-        <h2 className="mt-3 font-display text-[2.25rem] leading-[1.05] tracking-tight text-[var(--ink)] sm:text-[2.85rem]">
+        <h2 className="mt-2 font-display text-[1.65rem] leading-[1.05] tracking-tight text-[var(--ink)] sm:mt-3 sm:text-[2.85rem]">
           {copy.sameBadge}
         </h2>
-        <p className="mt-4 text-sm leading-6 text-[var(--muted)] sm:text-[0.95rem] sm:leading-7">
+        <p className="mt-2.5 text-sm leading-5 text-[var(--muted)] sm:mt-4 sm:text-[0.95rem] sm:leading-7">
           {copy.sameBadgeLead}
         </p>
         <Link
           href={compareHref}
-          className="tap mt-7 inline-flex h-11 items-center justify-center gap-2 rounded-full border border-[var(--accent)] px-5 text-sm font-semibold text-[var(--accent)]"
+          className="tap mt-4 inline-flex h-10 items-center justify-center gap-2 rounded-full border border-[var(--accent)] px-4 text-sm font-semibold text-[var(--accent)] sm:mt-7 sm:h-11 sm:px-5"
         >
           {copy.compareThese}
           <span aria-hidden>→</span>

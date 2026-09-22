@@ -1,0 +1,43 @@
+{
+  "slug": "g07",
+  "code": "G07",
+  "family": "x",
+  "years": [
+    2019,
+    2026
+  ],
+  "market_model": "X7",
+  "otomoto": "x7",
+  "gold": false,
+  "engines": [
+    "B57",
+    "B58"
+  ],
+  "wiki": "https://en.wikipedia.org/wiki/BMW_X7",
+  "realoem_hint": "https://www.realoem.com/bmw/",
+  "region": "PL",
+  "status": "catalog_confirmed",
+  "sources": [
+    {
+      "provider": "wikipedia",
+      "url": "https://en.wikipedia.org/wiki/BMW_X7",
+      "role": "generation_identity"
+    },
+    {
+      "provider": "realoem",
+      "url": "https://www.realoem.com/bmw/",
+      "role": "parts_and_type_codes"
+    },
+    {
+      "provider": "ohmycar_chassis_ts",
+      "url": "src/data/chassis.ts",
+      "role": "product_taxonomy"
+    },
+    {
+      "provider": "otomoto",
+      "url": "https://www.otomoto.pl/osobowe/bmw/x7",
+      "role": "market_deep_link"
+    }
+  ],
+  "collected_at": "2026-09-23T00:15:00Z"
+}

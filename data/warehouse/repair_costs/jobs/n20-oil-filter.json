@@ -1,0 +1,47 @@
+{
+  "pain_id": "n20-oil-filter",
+  "status": "quoted_parts_plus_labor",
+  "currency": "PLN",
+  "region": "PL",
+  "collected_at": "2026-09-22T21:55:00Z",
+  "totals_pln": {
+    "independent": [
+      1140,
+      2475
+    ],
+    "specialist": [
+      1250,
+      2970
+    ],
+    "aso": [
+      1540,
+      3340
+    ]
+  },
+  "quotes": [
+    {
+      "tier": "specialist",
+      "pln_low": 250,
+      "pln_high": 550,
+      "currency": "EUR",
+      "pln_note": "Skanyx N55 OFHG 250–550 EUR workshop → ~1100–2400 PLN @4.3; N20 housing similar job family",
+      "url": "https://skanyx.com/pl/blog/bmw-fault-codes-guide"
+    },
+    {
+      "tier": "fault",
+      "label": "N20 oil filter housing gasket is a documented leak path (same family as N55 OFHG)",
+      "url": "https://en.wikipedia.org/wiki/BMW_N20"
+    }
+  ],
+  "confidence": "family_prior_ofhg",
+  "parts_pln": [
+    65,
+    110
+  ],
+  "labor_pln": [
+    1075,
+    2365
+  ],
+  "split_note": "Skanyx N55 OFHG: gasket 15–25€ + labor 250–550€ → PLN @4.3",
+  "formula": "independent_full = parts_pln + labor_pln"
+}

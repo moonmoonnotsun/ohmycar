@@ -1,0 +1,63 @@
+{
+  "chassis_slug": "f26",
+  "region": "PL",
+  "collected_at": "2026-09-23T00:05:00Z",
+  "confidence": "sourced_curated",
+  "sources": [
+    {
+      "label": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/BMW_X4_(F26)"
+    },
+    {
+      "label": "RealOEM",
+      "url": "https://www.realoem.com/bmw/"
+    }
+  ],
+  "lines": [
+    {
+      "model": "20i",
+      "engine": "N20",
+      "fuel": "petrol",
+      "years": [
+        2014,
+        2015,
+        2016,
+        2017,
+        2018
+      ]
+    },
+    {
+      "model": "35i",
+      "engine": "N55",
+      "fuel": "petrol",
+      "years": [
+        2014,
+        2015,
+        2016,
+        2017,
+        2018
+      ]
+    },
+    {
+      "model": "20d",
+      "engine": "N47",
+      "fuel": "diesel",
+      "years": [
+        2014,
+        2015
+      ]
+    },
+    {
+      "model": "20d",
+      "engine": "B47",
+      "fuel": "diesel",
+      "years": [
+        2015,
+        2016,
+        2017,
+        2018
+      ]
+    }
+  ],
+  "line_count": 4
+}

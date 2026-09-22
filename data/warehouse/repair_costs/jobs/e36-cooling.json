@@ -1,0 +1,43 @@
+{
+  "pain_id": "e36-cooling",
+  "status": "quoted_workshop_band",
+  "currency": "PLN",
+  "region": "PL",
+  "collected_at": "2026-09-22T22:05:00Z",
+  "parts_pln": [
+    400,
+    1200
+  ],
+  "labor_pln": [
+    400,
+    1000
+  ],
+  "totals_pln": {
+    "independent": [
+      800,
+      2200
+    ],
+    "specialist": [
+      1200,
+      3000
+    ],
+    "aso": [
+      1800,
+      4000
+    ]
+  },
+  "quotes": [
+    {
+      "tier": "fault",
+      "label": "Bimmerboard E36 cooling 101",
+      "url": "http://www.bimmerboard.com/forums/posts/1269691"
+    },
+    {
+      "tier": "independent",
+      "pln_low": 800,
+      "pln_high": 2200,
+      "label": "Family prior cooling plastics",
+      "url": "https://kosztserwisu.pl/modele-samochodow/bmw/"
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "chassis_slug": "z3",
+  "region": "PL",
+  "collected_at": "2026-09-23T00:30:00Z",
+  "confidence": "sourced_curated",
+  "phase": "D_long_tail",
+  "sources": [
+    {
+      "label": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/BMW_Z3"
+    },
+    {
+      "label": "RealOEM",
+      "url": "https://www.realoem.com/bmw/"
+    }
+  ],
+  "lines": [
+    {
+      "model": "2.8",
+      "engine": "M52",
+      "fuel": "petrol",
+      "years": [
+        1996,
+        1997,
+        1998,
+        1999,
+        2000
+      ]
+    }
+  ],
+  "line_count": 1
+}

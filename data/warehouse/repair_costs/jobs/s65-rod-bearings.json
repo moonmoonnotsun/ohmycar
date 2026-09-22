@@ -1,0 +1,46 @@
+{
+  "pain_id": "s65-rod-bearings",
+  "status": "quoted_parts_plus_labor",
+  "currency": "PLN",
+  "region": "PL",
+  "collected_at": "2026-09-22T22:05:00Z",
+  "parts_pln": [
+    1050,
+    2500
+  ],
+  "labor_pln": [
+    4950,
+    7500
+  ],
+  "totals_pln": {
+    "independent": [
+      6000,
+      10000
+    ],
+    "specialist": [
+      7000,
+      12000
+    ],
+    "aso": [
+      10000,
+      16000
+    ]
+  },
+  "quotes": [
+    {
+      "tier": "independent",
+      "pln_low": 6000,
+      "pln_high": 10000,
+      "label": "Wiltronic · V8/V10 panewki",
+      "url": "https://wiltronic.pl/blog/od-czego-zalezy-koszt-wymiany-panewek-w-bmw/"
+    },
+    {
+      "tier": "parts",
+      "pln_low": 1050,
+      "pln_high": 1050,
+      "label": "Motoran · ACL S65 rod kit",
+      "url": "https://motoran.pl/sklep/panewki-korbowodowe-52mm-bmw-racing-v8-s65b50-s65b44-panewki-wyczynowe-acl/"
+    }
+  ],
+  "formula": "independent band from Wiltronic; parts kit Motoran"
+}

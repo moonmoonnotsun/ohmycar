@@ -25,7 +25,7 @@ export default async function LocaleLayout({
     <>
       <SetLang locale={locale} />
       <Header locale={locale} />
-      <main className="mx-auto w-full max-w-5xl flex-1 px-4 pb-8 pt-4 sm:px-6 sm:pt-8">{children}</main>
+      <main className="mx-auto w-full max-w-5xl flex-1 px-4 pb-8 pt-3 sm:px-6 sm:pt-8">{children}</main>
       <footer className="mx-auto w-full max-w-5xl px-4 pb-28 sm:px-6 md:pb-10">
         <Disclaimer locale={locale} />
       </footer>

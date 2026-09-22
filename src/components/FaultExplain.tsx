@@ -135,9 +135,6 @@ export function FaultHint({
           <span className="text-[var(--muted)]">{copy.affects}: </span>
           {pain.affects[locale]}
         </p>
-        <p className="mt-4 text-[10px] uppercase tracking-[0.14em] text-[var(--muted)]">
-          {pain.plnIndependent ? copy.plnNote : copy.plnPending}
-        </p>
         <WorkshopPrices locale={locale} pain={pain} />
         <a
           className="mt-4 inline-flex h-tap items-center text-sm font-medium underline underline-offset-2"
@@ -179,20 +176,38 @@ export function SourceList({
 }) {
   const copy = t(locale);
   if (sources.length === 0) return null;
+
+  const price = sources.filter((s) => /^PLN\b/i.test(s.label) || /cenauslug|polecany|smorawinski|autokult|kosztserwisu|hypertech|skanyx|admserwis|rozrzad\.pl|gearmar|bmwstore|oryginalne-czesci/i.test(s.url));
+  const priceUrls = new Set(price.map((s) => s.url));
+  const fault = sources.filter((s) => !priceUrls.has(s.url));
+
   return (
-    <div className="mt-3">
-      <p className="text-[10px] font-semibold uppercase tracking-[0.14em] text-[var(--muted)]">{copy.sources}</p>
-      <ul className="mt-1 flex flex-col gap-1">
-        {sources.map((source) => (
+    <div className="mt-3 space-y-3">
+      {fault.length > 0 ? (
+        <SourceGroup title={copy.sources} items={fault} />
+      ) : null}
+      {price.length > 0 ? (
+        <SourceGroup title={copy.priceSources} items={price} />
+      ) : null}
+    </div>
+  );
+}
+
+function SourceGroup({ title, items }: { title: string; items: Pain["sources"] }) {
+  return (
+    <div>
+      <p className="text-[10px] font-semibold uppercase tracking-[0.14em] text-[var(--muted)]">{title}</p>
+      <ul className="mt-1.5 flex flex-col gap-1">
+        {items.map((source) => (
           <li key={source.url}>
             <a
               href={source.url}
               target="_blank"
               rel="noreferrer"
-              className="text-sm underline underline-offset-2"
+              className="break-all text-[13px] text-[var(--muted)] underline decoration-[var(--line)] underline-offset-2 hover:text-[var(--ink)]"
               onClick={(e) => e.stopPropagation()}
             >
-              {source.label}
+              {source.label.replace(/^PLN\s*·\s*/i, "")}
             </a>
           </li>
         ))}
@@ -201,35 +216,144 @@ export function SourceList({
   );
 }
 
+/**
+ * RepairPal-style estimate: lead with typical independent total,
+ * then parts/labor receipt rows, then specialist/ASO comparison.
+ */
 export function WorkshopPrices({ locale, pain }: { locale: Locale; pain: Pain }) {
   const copy = t(locale);
-  const cells = [
-    { label: copy.independent, range: pain.plnIndependent },
-    { label: copy.specialist, range: pain.plnSpecialist },
-    { label: copy.aso, range: pain.plnAso },
-  ];
-  if (!pain.plnIndependent && !pain.plnSpecialist && !pain.plnAso) {
+  const hasTotals = Boolean(pain.plnIndependent || pain.plnSpecialist || pain.plnAso);
+  const hasSplit = Boolean(pain.plnParts || pain.plnLabor);
+  const isFree = pain.plnIndependent?.[0] === 0 && pain.plnIndependent?.[1] === 0;
+
+  if (!hasTotals && !hasSplit) {
     return (
-      <p className="mt-2 text-sm leading-6 text-[var(--muted)]">
+      <p className="mt-3 text-sm leading-6 text-[var(--muted)]">
         {pain.plnNote ?? copy.plnPendingHint}
       </p>
     );
   }
+
   return (
-    <dl className="mt-2 grid grid-cols-1 gap-2 sm:grid-cols-3">
-      {cells.map((cell) => (
-        <div
-          key={cell.label}
-          className="flex items-center justify-between gap-3 rounded-xl bg-[var(--wash)] px-3 py-2.5 sm:flex-col sm:items-center sm:justify-start sm:px-2 sm:py-2 sm:text-center"
-        >
-          <dt className="shrink-0 text-[10px] font-semibold uppercase tracking-wide text-[var(--muted)]">
-            {cell.label}
-          </dt>
-          <dd className="min-w-0 sm:mt-1">
-            <MoneyRange range={cell.range} locale={locale} />
-          </dd>
+    <div className="mt-4 overflow-hidden rounded-xl border border-[var(--line)] bg-[var(--paper)]/60">
+      {/* Hero total — primary glance value */}
+      <div className="px-4 pb-3 pt-3.5">
+        <p className="text-[10px] font-semibold uppercase tracking-[0.16em] text-[var(--muted)]">
+          {copy.plnTypical}
+        </p>
+        <div className="mt-1.5 flex flex-wrap items-end justify-between gap-x-3 gap-y-1">
+          <MoneyRange range={pain.plnIndependent} locale={locale} size="lg" />
+          <p className="pb-0.5 text-[12px] text-[var(--muted)]">{copy.plnIndepShop}</p>
         </div>
-      ))}
-    </dl>
+        {isFree ? (
+          <p className="mt-1.5 text-[12px] leading-5 text-[var(--muted)]">{pain.plnNote}</p>
+        ) : null}
+      </div>
+
+      {/* Parts + labor receipt */}
+      {hasSplit && !isFree ? (
+        <div className="border-t border-[var(--line)] px-4 py-2.5">
+          <ReceiptRow label={copy.plnParts} range={pain.plnParts} locale={locale} />
+          <ReceiptRow label={`+ ${copy.plnLabor}`} range={pain.plnLabor} locale={locale} />
+          <div className="mt-1.5 flex items-baseline justify-between gap-3 border-t border-dashed border-[var(--line)] pt-2">
+            <span className="text-[12px] font-semibold text-[var(--ink)]">{copy.plnFullSum}</span>
+            <MoneyRange range={pain.plnIndependent} locale={locale} size="sm" />
+          </div>
+        </div>
+      ) : null}
+
+      {/* Shop ladder — all three tiers on one PLN axis */}
+      {(pain.plnSpecialist || pain.plnAso) && !isFree ? (
+        <div className="border-t border-[var(--line)] px-4 py-2.5">
+          <p className="mb-1.5 text-[10px] font-semibold uppercase tracking-[0.14em] text-[var(--muted)]">
+            {copy.plnShopCompare}
+          </p>
+          <ShopLadder
+            locale={locale}
+            independent={pain.plnIndependent}
+            specialist={pain.plnSpecialist}
+            aso={pain.plnAso}
+          />
+          <div className="mt-2 space-y-0.5">
+            <ReceiptRow label={copy.independent} range={pain.plnIndependent} locale={locale} quiet />
+            <ReceiptRow label={copy.specialist} range={pain.plnSpecialist} locale={locale} quiet />
+            <ReceiptRow label={copy.aso} range={pain.plnAso} locale={locale} quiet />
+          </div>
+        </div>
+      ) : null}
+    </div>
+  );
+}
+
+function ReceiptRow({
+  label,
+  range,
+  locale,
+  quiet,
+}: {
+  label: string;
+  range: [number, number] | null | undefined;
+  locale: Locale;
+  quiet?: boolean;
+}) {
+  return (
+    <div className="flex items-baseline justify-between gap-3 py-1">
+      <span className={`min-w-0 text-[12px] ${quiet ? "text-[var(--muted)]" : "text-[var(--ink)]"}`}>
+        {label}
+      </span>
+      <MoneyRange range={range} locale={locale} size="sm" />
+    </div>
+  );
+}
+
+/** Three shop tiers as stacked tracks — no overlapping translucent mush. */
+function ShopLadder({
+  locale,
+  independent,
+  specialist,
+  aso,
+}: {
+  locale: Locale;
+  independent: [number, number] | null;
+  specialist: [number, number] | null;
+  aso: [number, number] | null;
+}) {
+  const copy = t(locale);
+  const lows = [independent?.[0], specialist?.[0], aso?.[0]].filter((n): n is number => n != null);
+  const highs = [independent?.[1], specialist?.[1], aso?.[1]].filter((n): n is number => n != null);
+  if (lows.length === 0 || highs.length === 0) return null;
+
+  const min = Math.min(...lows);
+  const max = Math.max(...highs);
+  const span = Math.max(max - min, 1);
+
+  function track(range: [number, number] | null, tone: string, label: string) {
+    if (!range) return null;
+    const left = ((range[0] - min) / span) * 100;
+    const width = Math.max(((range[1] - range[0]) / span) * 100, 3);
+    return (
+      <div className="flex items-center gap-2" title={`${label}: ${range[0]}–${range[1]} PLN`}>
+        <span className="w-[4.5rem] shrink-0 truncate text-[10px] text-[var(--muted)]">{label}</span>
+        <div className="relative h-1.5 min-w-0 flex-1 rounded-full bg-[var(--wash)]">
+          <span
+            className={`absolute top-0 h-full rounded-full ${tone}`}
+            style={{ left: `${left}%`, width: `${width}%` }}
+            aria-hidden
+          />
+        </div>
+      </div>
+    );
+  }
+
+  return (
+    <div className="space-y-1.5" role="img" aria-label={copy.plnShopCompare}>
+      {track(independent, "bg-[var(--good)]", copy.independent)}
+      {track(specialist, "bg-[var(--mid)]", copy.specialist)}
+      {track(aso, "bg-[var(--bad)]", copy.aso)}
+      <div className="flex justify-between pt-0.5 font-mono text-[10px] tabular-nums text-[var(--muted)]">
+        <span>{min.toLocaleString(locale === "pl" ? "pl-PL" : locale === "ru" ? "ru-RU" : "en-GB")}</span>
+        <span>{max.toLocaleString(locale === "pl" ? "pl-PL" : locale === "ru" ? "ru-RU" : "en-GB")} PLN</span>
+      </div>
+    </div>
   );
 }

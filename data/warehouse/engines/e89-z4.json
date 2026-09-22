@@ -1,0 +1,58 @@
+{
+  "chassis_slug": "e89-z4",
+  "region": "PL",
+  "collected_at": "2026-09-23T00:30:00Z",
+  "confidence": "sourced_curated",
+  "phase": "D_long_tail",
+  "sources": [
+    {
+      "label": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/BMW_Z4_(E89)"
+    },
+    {
+      "label": "RealOEM",
+      "url": "https://www.realoem.com/bmw/"
+    }
+  ],
+  "lines": [
+    {
+      "model": "sDrive30i",
+      "engine": "N52",
+      "fuel": "petrol",
+      "years": [
+        2009,
+        2010,
+        2011
+      ]
+    },
+    {
+      "model": "sDrive35i",
+      "engine": "N54",
+      "fuel": "petrol",
+      "years": [
+        2009,
+        2010,
+        2011,
+        2012,
+        2013,
+        2014,
+        2015,
+        2016
+      ]
+    },
+    {
+      "model": "sDrive28i",
+      "engine": "N20",
+      "fuel": "petrol",
+      "years": [
+        2011,
+        2012,
+        2013,
+        2014,
+        2015,
+        2016
+      ]
+    }
+  ],
+  "line_count": 3
+}

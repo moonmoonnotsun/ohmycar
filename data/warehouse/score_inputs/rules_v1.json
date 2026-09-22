@@ -1,7 +1,7 @@
 {
   "rule_id": "score-evidence-v1",
-  "collected_at": "2026-09-22T19:30:00Z",
-  "policy": "No invented floats. Score only from warehouse pains + UOKiK campaigns. Omit fiveYearFix and partsReality until job/stock quotes exist; renormalize remaining weights to 100.",
+  "collected_at": "2026-09-22T22:00:00Z",
+  "policy": "No invented floats. Score from warehouse pains + UOKiK + quoted independent repair PLN (fiveYearFix). Omit partsReality until Autodoc/IC stock samples exist; renormalize remaining weights.",
   "severity_to_catastrophe": {
     "engine-loss": 0.9,
     "safety": 0.6,
@@ -28,10 +28,15 @@
       "other": 0.2
     }
   },
-  "omitted_until_quoted": ["fiveYearFix", "partsReality"],
+  "fiveYearFix": {
+    "formula": "midpoint(headline.pln_independent) + sum(other_quoted.pln_independent[0]); null if no paid quotes; saturates at FIX_PLN_CAP 20000",
+    "source": "pain pln_bands from repair_costs/jobs"
+  },
+  "omitted_until_quoted": ["partsReality"],
   "status_when_complete_enough": "evidence_derived",
   "sources": [
     "data/warehouse/pains/top10_sourced_pains.json",
-    "data/warehouse/campaigns/uokik_bmw_top10_relevant.json"
+    "data/warehouse/campaigns/uokik_bmw_top10_relevant.json",
+    "src/lib/scoreEvidence.ts"
   ]
 }

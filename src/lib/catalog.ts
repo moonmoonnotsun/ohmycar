@@ -269,12 +269,15 @@ function roundPln(n: number) {
 /** Independent-PL envelope from warehouse-quoted pains only. Null if none quoted yet. */
 export function fixBandForVariant(variant: VariantBrief): [number, number] | null {
   const pains = painsForVariant(variant);
-  const quoted = pains.filter((pain) => pain.plnIndependent);
+  // Skip free/campaign [0,0] bands (e.g. Takata) — same rule as scoreEvidence.
+  const quoted = pains.filter((pain) => {
+    const band = pain.plnIndependent;
+    return Boolean(band && !(band[0] <= 0 && band[1] <= 0));
+  });
   if (quoted.length === 0) return null;
   const topId = resolvePainId(variant.topPainId);
   const headline = quoted.find((pain) => pain.id === topId) ?? quoted[0];
   const hi = headline.plnIndependent!;
-  if (hi[0] <= 0 && hi[1] <= 0) return null;
   const restLow = quoted
     .filter((pain) => pain.id !== headline.id)
     .reduce((sum, pain) => sum + (pain.plnIndependent?.[0] ?? 0), 0);
