@@ -821,8 +821,8 @@ export function chassisVerdict(chassis: Chassis): Verdict {
 
   const engines = chassis.engines?.length ? chassis.engines.join(", ") : null;
   const summary = summarizeVariants(variantsFor(chassis.slug));
-  const best = summary.best;
-  const worst = summary.worst;
+  const best = summary?.best;
+  const worst = summary?.worst;
   const hasScore = best?.score != null;
 
   if (hasScore && best) {

@@ -56,8 +56,14 @@ function toPain(row: WarehouseRow): Pain {
   };
 }
 
-const aliases = (imported.meta.id_aliases ?? {}) as Record<string, string>;
-const rows = (imported.rows as WarehouseRow[]).map(toPain);
+const importedMeta = imported as unknown as {
+  id_aliases?: Record<string, string>;
+  meta?: { id_aliases?: Record<string, string>; phase_e_note?: string };
+  rows: WarehouseRow[];
+};
+
+const aliases = importedMeta.id_aliases ?? importedMeta.meta?.id_aliases ?? {};
+const rows = importedMeta.rows.map(toPain);
 
 export const warehousePains: Pain[] = rows;
 

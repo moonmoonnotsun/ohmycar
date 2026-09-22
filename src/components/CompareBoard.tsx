@@ -280,7 +280,7 @@ function MatrixHead({
   );
 }
 
-function MatrixPhoto({ entry, edge = false }: { locale: Locale; entry: Entry | null; edge?: boolean }) {
+function MatrixPhoto({ entry, edge = false }: { entry: Entry | null; edge?: boolean }) {
   if (!entry) {
     return (
       <div className={`bg-[var(--wash)]/40 p-2 ${edge ? "border-l border-[var(--line)]" : ""}`}>
