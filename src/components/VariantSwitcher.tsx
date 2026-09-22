@@ -24,32 +24,30 @@ function yearRiskClass(score: number | null, active: boolean): string {
           border: "border-[var(--good)]",
           bg: "bg-[rgba(62,224,143,0.06)]",
           text: "text-[var(--good)]",
-          outline: "outline-[var(--good)]",
         }
       : tone === "mid"
         ? {
             border: "border-[var(--mid)]",
             bg: "bg-[rgba(245,196,0,0.06)]",
             text: "text-[var(--mid)]",
-            outline: "outline-[var(--mid)]",
           }
         : tone === "bad"
           ? {
               border: "border-[var(--bad)]",
               bg: "bg-[rgba(255,75,75,0.06)]",
               text: "text-[var(--bad)]",
-              outline: "outline-[var(--bad)]",
             }
           : {
               border: "border-[var(--line)]",
               bg: "bg-transparent",
               text: "text-[var(--muted)]",
-              outline: "outline-[var(--line)]",
             };
 
-  // Selected keeps the risk color (green / yellow / red) — never force accent yellow.
-  const select = active ? `outline outline-2 outline-offset-0 ${rim.outline}` : "";
-  return `border border-solid ${rim.border} ${rim.bg} ${rim.text} ${select}`;
+  // Only the selected year keeps a risk-colored rim; idle years are borderless.
+  if (active) {
+    return `border border-solid ${rim.border} ${rim.bg} ${rim.text}`;
+  }
+  return `border border-solid border-transparent ${rim.bg} ${rim.text}`;
 }
 
 /** Hard nav href — soft Link nav is unreliable on static export + basePath. */
