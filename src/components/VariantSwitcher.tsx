@@ -1,7 +1,7 @@
-import Link from "next/link";
 import type { VariantBrief } from "@/data/types";
 import type { Locale } from "@/lib/locale";
 import { t } from "@/lib/i18n";
+import { publicUrl } from "@/lib/asset";
 import { modelsFor, resolveVariant, yearOptionsForModel } from "@/lib/catalog";
 
 /**
@@ -51,6 +51,11 @@ function yearRiskClass(score: number | null, active: boolean): string {
   return `border border-solid ${rim.border} ${rim.bg} ${rim.text} ${select}`;
 }
 
+/** Full page load — Next 16 static export soft-nav/prefetch is unreliable with basePath. */
+function variantHref(locale: Locale, chassisSlug: string, slug: string) {
+  return publicUrl(`/${locale}/bmw/${chassisSlug}/${slug}/`);
+}
+
 export function VariantSwitcher({
   locale,
   chassisSlug,
@@ -82,10 +87,9 @@ export function VariantSwitcher({
               }) ?? resolveVariant({ chassisSlug, model, preferFuel: variant.fuel });
             if (!target) return null;
             return (
-              <Link
+              <a
                 key={model}
-                href={`/${locale}/bmw/${chassisSlug}/${target.slug}`}
-                prefetch
+                href={variantHref(locale, chassisSlug, target.slug)}
                 className={`h-tap inline-flex shrink-0 items-center rounded-full border px-3.5 text-sm font-medium tabular-nums ${
                   active
                     ? "border-[var(--line)] bg-transparent text-[var(--accent)] outline outline-2 outline-offset-0 outline-[var(--accent)]"
@@ -93,7 +97,7 @@ export function VariantSwitcher({
                 }`}
               >
                 {model}
-              </Link>
+              </a>
             );
           })}
         </div>
@@ -118,14 +122,13 @@ export function VariantSwitcher({
                   preferFuel: variant.fuel,
                 }) ?? row;
               return (
-                <Link
+                <a
                   key={`${year}-${row.slug}`}
-                  href={`/${locale}/bmw/${chassisSlug}/${href.slug}`}
-                  prefetch
+                  href={variantHref(locale, chassisSlug, href.slug)}
                   className={`h-tap inline-flex shrink-0 items-center rounded-full px-3.5 text-sm font-medium tabular-nums ${yearRiskClass(score, active)}`}
                 >
                   {year}
-                </Link>
+                </a>
               );
             })}
           </div>
