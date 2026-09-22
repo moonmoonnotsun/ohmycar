@@ -1,0 +1,899 @@
+{
+  "meta": {
+    "collected_at": "2026-09-22T19:20:00Z",
+    "source": "data/warehouse/pains/top10_sourced_pains.json",
+    "rule": "Every pain must have at least one primary source URL. PLN bands only when parts+labor collected — never invented.",
+    "id_aliases": {
+      "n47-timing-chain": "n47-chain",
+      "n20-timing-chain": "n20-chain"
+    }
+  },
+  "rows": [
+    {
+      "id": "n47-chain",
+      "engines": [
+        "N47"
+      ],
+      "chassis_slugs": [
+        "e90",
+        "f30",
+        "e60",
+        "f10",
+        "e87",
+        "f20"
+      ],
+      "year_from": 2007,
+      "title": {
+        "en": "Timing chain (rear of engine)",
+        "pl": "Łańcuch rozrządu (tył silnika)",
+        "ru": "Цепь ГРМ (со стороны коробки)"
+      },
+      "affects": {
+        "en": "N47 318d / 320d / 118d / 120d / 520d, especially early years and high mileage",
+        "pl": "N47 318d / 320d / 118d / 120d / 520d, zwłaszcza wczesne lata i wysokie przebiegi",
+        "ru": "N47 318d / 320d / 118d / 120d / 520d, особенно ранние годы и большой пробег"
+      },
+      "summary": {
+        "en": "The chain is at the gearbox end. If it breaks or jumps, the engine often needs replacement. Highest risk production window ~2007-03 to 2009-01 (Wikipedia N47 citing Watchdog). This is an N47 fault, not every E90.",
+        "pl": "Łańcuch jest od strony skrzyni. Zerwanie albo przeskok często oznacza wymianę silnika. Najwyższe ryzyko produkcji ~2007-03–2009-01 (Wikipedia N47 / Watchdog). To usterka N47, nie wszystkich E90.",
+        "ru": "Цепь со стороны коробки. Обрыв или перескок часто означает замену мотора. Наибольший риск ~2007-03–2009-01 (Wikipedia N47 / Watchdog). Это поломка N47, не всех E90."
+      },
+      "severity": "engine-loss",
+      "pln_bands": null,
+      "pln_note": "No Autodoc/IC quote collected yet — do not invent PLN.",
+      "sources": [
+        {
+          "label": "Wikipedia · BMW N47 (Timing chain problems)",
+          "url": "https://en.wikipedia.org/wiki/BMW_N47"
+        },
+        {
+          "label": "BBC Watchdog · BMW deny engine failures (cited on Wikipedia N47)",
+          "url": "https://www.bbc.co.uk/programmes/b007td16"
+        },
+        {
+          "label": "NHTSA TSB / manufacturer communications index",
+          "url": "https://www.nhtsa.gov/nhtsa-datasets-and-apis"
+        }
+      ],
+      "autodoc_query": {
+        "en": "BMW N47 timing chain",
+        "pl": "BMW N47 łańcuch rozrządu",
+        "ru": "BMW N47 цепь ГРМ"
+      },
+      "confidence": "documented_fault_no_pln_yet"
+    },
+    {
+      "id": "n54-hpfp",
+      "engines": [
+        "N54"
+      ],
+      "chassis_slugs": [
+        "e90"
+      ],
+      "title": {
+        "en": "HPFP and injectors",
+        "pl": "Pompa HPFP i wtryskiwacze",
+        "ru": "ТНВД и форсунки"
+      },
+      "affects": {
+        "en": "335i twin-turbo (N54), not N55 and not diesels",
+        "pl": "335i twin-turbo (N54), nie N55 i nie diesle",
+        "ru": "335i twin-turbo (N54), не N55 и не дизели"
+      },
+      "summary": {
+        "en": "HPFP failures documented; BMW issued US warranty extensions / TSBs. Symptoms: hard starting, loss of power, mixture errors. Piezo injectors are a related high-cost item.",
+        "pl": "Awarię HPFP udokumentowano; BMW wydało przedłużenia gwarancji / TSB w USA. Objawy: trudny rozruch, spadek mocy, błędy mieszanki. Wtryskiwacze piezo to powiązany wysoki koszt.",
+        "ru": "Отказы HPFP задокументированы; BMW выдавало продление гарантии / TSB в США. Признаки: трудный запуск, падение мощности, ошибки смеси. Пьезофорсунки — связанный дорогой узел."
+      },
+      "severity": "expensive",
+      "pln_bands": null,
+      "sources": [
+        {
+          "label": "NHTSA · N54 HPFP warranty TSB (SI B13 04 09 / MC-10149587)",
+          "url": "https://static.nhtsa.gov/odi/tsbs/2013/MC-10149587-9999.pdf"
+        },
+        {
+          "label": "Wikipedia · BMW N54",
+          "url": "https://en.wikipedia.org/wiki/BMW_N54"
+        }
+      ],
+      "autodoc_query": {
+        "en": "BMW N54 HPFP injectors",
+        "pl": "BMW N54 pompa HPFP wtryskiwacze",
+        "ru": "BMW N54 ТНВД форсунки"
+      },
+      "confidence": "tsb_cited"
+    },
+    {
+      "id": "n53-injectors",
+      "engines": [
+        "N53"
+      ],
+      "title": {
+        "en": "Injectors and HPFP (EU N53)",
+        "pl": "Wtryskiwacze i pompa HPFP (N53 EU)",
+        "ru": "Форсунки и ТНВД (EU N53)"
+      },
+      "affects": {
+        "en": "EU 325i / 330i with N53 direct injection. The US kept N52 longer.",
+        "pl": "325i / 330i z wtryskiem bezpośrednim N53 (Europa). USA miało N52 dłużej.",
+        "ru": "EU 325i / 330i с непосредственным впрыском N53. В США N52 держали дольше."
+      },
+      "summary": {
+        "en": "N53 is not N52. Direct injection on this naturally aspirated six is a known expensive failure mode versus a water pump.",
+        "pl": "N53 to nie N52. Wtrysk bezpośredni na wolnossącej szóstce to znany drogi tryb awarii względem pompy wody.",
+        "ru": "N53 — это не N52. Непосредственный впрыск на атмосферной шестёрке — известный дорогой режим отказа по сравнению с помпой."
+      },
+      "severity": "expensive",
+      "pln_bands": null,
+      "sources": [
+        {
+          "label": "Wikipedia · BMW N53",
+          "url": "https://en.wikipedia.org/wiki/BMW_N53"
+        }
+      ],
+      "autodoc_query": {
+        "en": "BMW N53 injectors",
+        "pl": "BMW N53 wtryskiwacze",
+        "ru": "BMW N53 форсунки"
+      },
+      "confidence": "wiki_prior"
+    },
+    {
+      "id": "n43-injectors",
+      "engines": [
+        "N43"
+      ],
+      "title": {
+        "en": "N43 injectors / NOx",
+        "pl": "Wtryskiwacze N43 / NOx",
+        "ru": "Форсунки N43 / NOx"
+      },
+      "affects": {
+        "en": "318i / 320i with N43 (direct injection, four-cylinder)",
+        "pl": "318i / 320i z N43 (wtrysk bezpośredni, 4 cylindry)",
+        "ru": "318i / 320i с N43 (непосредственный впрыск, четыре цилиндра)"
+      },
+      "summary": {
+        "en": "Four-cylinder direct-injection petrol: injectors and NOx sensor are documented costly items on this family.",
+        "pl": "Benzyna DI 4-cyl: wtryskiwacze i sonda NOx to udokumentowane kosztowne elementy tej rodziny.",
+        "ru": "Бензин DI 4 цилиндра: форсунки и датчик NOx — задокументированные дорогие узлы этого семейства."
+      },
+      "severity": "expensive",
+      "pln_bands": null,
+      "sources": [
+        {
+          "label": "Wikipedia · BMW N43",
+          "url": "https://en.wikipedia.org/wiki/BMW_N43"
+        }
+      ],
+      "autodoc_query": {
+        "en": "BMW N43 injectors",
+        "pl": "BMW N43 wtryskiwacze",
+        "ru": "BMW N43 форсунки"
+      },
+      "confidence": "wiki_prior"
+    },
+    {
+      "id": "water-pump",
+      "engines": [
+        "N52",
+        "N54",
+        "N55"
+      ],
+      "title": {
+        "en": "Electric water pump / thermostat",
+        "pl": "Elektryczna pompa wody / termostat",
+        "ru": "Электрическая помпа / термостат"
+      },
+      "affects": {
+        "en": "N52 / N54 / N55 inline-sixes",
+        "pl": "Rzędowe szóstki N52 / N54 / N55",
+        "ru": "Рядные шестёрки N52 / N54 / N55"
+      },
+      "summary": {
+        "en": "Electric water pump is a known wear item on these engines; can fail without a clear warning. Check cooling on every N52/N54/N55.",
+        "pl": "Elektryczna pompa wody to znany element eksploatacyjny; może paść bez wyraźnego ostrzeżenia. Sprawdź chłodzenie na każdym N52/N54/N55.",
+        "ru": "Электрическая помпа — известный расходник; может отказать без явного предупреждения. Проверяйте охлаждение на каждом N52/N54/N55."
+      },
+      "severity": "overheat",
+      "pln_bands": null,
+      "sources": [
+        {
+          "label": "Wikipedia · BMW N52",
+          "url": "https://en.wikipedia.org/wiki/BMW_N52"
+        }
+      ],
+      "autodoc_query": {
+        "en": "BMW electric water pump N52 N55",
+        "pl": "BMW pompa wody elektryczna N52 N55",
+        "ru": "BMW электрическая помпа N52 N55"
+      },
+      "confidence": "wiki_prior"
+    },
+    {
+      "id": "swirl-flaps",
+      "engines": [
+        "M47",
+        "M57"
+      ],
+      "title": {
+        "en": "Intake swirl flaps",
+        "pl": "Klapki w kolektorze (swirl flaps)",
+        "ru": "Вихревые заслонки впуска"
+      },
+      "affects": {
+        "en": "M47 / M57 diesels — early 320d, 330d, 335d, 325d",
+        "pl": "Diesle M47 / M57 — 320d wczesny, 330d, 335d, 325d",
+        "ru": "Дизели M47 / M57 — ранний 320d, 330d, 335d, 325d"
+      },
+      "summary": {
+        "en": "Intake flaps can break off and fall into the intake. Different fault from the N47 timing chain.",
+        "pl": "Klapki w kolektorze mogą się oderwać i wpaść do dolotu. Inna usterka niż łańcuch N47.",
+        "ru": "Заслонки во впуске могут отломиться и попасть во впуск. Другая поломка, чем цепь ГРМ N47."
+      },
+      "severity": "expensive",
+      "pln_bands": null,
+      "sources": [
+        {
+          "label": "Wikipedia · BMW M57",
+          "url": "https://en.wikipedia.org/wiki/BMW_M57"
+        },
+        {
+          "label": "Wikipedia · BMW M47",
+          "url": "https://en.wikipedia.org/wiki/BMW_M47"
+        }
+      ],
+      "autodoc_query": {
+        "en": "BMW M57 swirl flaps",
+        "pl": "BMW M57 klapki kolektora",
+        "ru": "BMW M57 вихревые заслонки"
+      },
+      "confidence": "wiki_prior"
+    },
+    {
+      "id": "n57-timing",
+      "engines": [
+        "N57"
+      ],
+      "title": {
+        "en": "N57 timing chain (lower risk than N47)",
+        "pl": "Rozrząd / łańcuch N57 (niższe ryzyko niż N47)",
+        "ru": "Цепь ГРМ N57 (риск ниже, чем у N47)"
+      },
+      "affects": {
+        "en": "N57 330d / 530d / X5 40d, not the N47 320d",
+        "pl": "330d / 530d / X5 40d z N57, nie mylić z N47 320d",
+        "ru": "N57 330d / 530d / X5 40d, не N47 320d"
+      },
+      "summary": {
+        "en": "N57 fails less often than N47, but it is still a timing-chain diesel. Check timing noise and service history. Related EGR cooler theme has NHTSA ELW documentation.",
+        "pl": "N57 psuje się rzadziej niż N47, ale to nadal diesel z łańcuchem. Sprawdź hałas rozrządu i historię. Temat chłodnicy EGR ma dokumentację NHTSA ELW.",
+        "ru": "N57 ломается реже N47, но это всё ещё дизель с цепью. Проверьте шум ГРМ и историю. Тема охладителя EGR задокументирована в NHTSA ELW."
+      },
+      "severity": "expensive",
+      "pln_bands": null,
+      "sources": [
+        {
+          "label": "Wikipedia · BMW N57",
+          "url": "https://en.wikipedia.org/wiki/BMW_N57"
+        },
+        {
+          "label": "NHTSA · N47/N57 EGR cooler ELW (SI B01 05 20 / MC-10249439)",
+          "url": "https://static.nhtsa.gov/odi/tsbs/2024/MC-10249439-0001.pdf"
+        }
+      ],
+      "autodoc_query": {
+        "en": "BMW N57 timing chain",
+        "pl": "BMW N57 łańcuch rozrządu",
+        "ru": "BMW N57 цепь ГРМ"
+      },
+      "confidence": "wiki_plus_related_tsb"
+    },
+    {
+      "id": "timing-guides",
+      "engines": [
+        "N46",
+        "N42"
+      ],
+      "title": {
+        "en": "N42 / N46 chain guides",
+        "pl": "Prowadnice łańcucha N42 / N46",
+        "ru": "Направляющие цепи N42 / N46"
+      },
+      "affects": {
+        "en": "E46 318i N42 and E90/E87 318i / 320i with N46",
+        "pl": "E46 318i N42 i E90/E87 318i / 320i z N46",
+        "ru": "E46 318i N42 и E90/E87 318i / 320i с N46"
+      },
+      "summary": {
+        "en": "On this four-cylinder petrol the chain guides wear. This is not an N52 and not HPFP.",
+        "pl": "W tej benzynowej czwórce zużywają się prowadnice łańcucha. To nie N52 i nie HPFP.",
+        "ru": "У этой бензиновой четвёрки изнашиваются направляющие цепи. Это не N52 и не ТНВД."
+      },
+      "severity": "expensive",
+      "pln_bands": null,
+      "sources": [
+        {
+          "label": "Wikipedia · BMW N46",
+          "url": "https://en.wikipedia.org/wiki/BMW_N46"
+        }
+      ],
+      "autodoc_query": {
+        "en": "BMW N46 timing chain",
+        "pl": "BMW N46 łańcuch rozrządu",
+        "ru": "BMW N46 цепь ГРМ"
+      },
+      "confidence": "wiki_prior"
+    },
+    {
+      "id": "subframe-rust",
+      "engines": [],
+      "chassis_slugs": [
+        "e90",
+        "e91",
+        "e92",
+        "e93"
+      ],
+      "title": {
+        "en": "Rear subframe / rust (EU winters)",
+        "pl": "Tylna belka / rdza (zima EU)",
+        "ru": "Задний подрамник / ржавчина (зимы EU)"
+      },
+      "affects": {
+        "en": "E90/E91, especially Touring and road-salt cars",
+        "pl": "E90/E91, zwłaszcza Touring i auta z solą drogową",
+        "ru": "E90/E91, особенно Touring и машины после дорожной соли"
+      },
+      "summary": {
+        "en": "Rear subframe and control-arm mounts rust after Polish winters. Body issue, not engine-specific.",
+        "pl": "Tylna belka i mocowania wahaczy rdzewieją po polskich zimach. Usterka nadwozia, nie silnika.",
+        "ru": "Задний подрамник и крепления рычагов ржавеют после польских зим. Кузов, не мотор."
+      },
+      "severity": "safety",
+      "pln_bands": null,
+      "sources": [
+        {
+          "label": "Wikipedia · BMW 3 Series (E90)",
+          "url": "https://en.wikipedia.org/wiki/BMW_3_Series_(E90)"
+        }
+      ],
+      "autodoc_query": {
+        "en": "BMW E90 rear control arm subframe",
+        "pl": "BMW E90 wahacz tylny belka",
+        "ru": "BMW E90 задний рычаг подрамник"
+      },
+      "confidence": "wiki_body_prior"
+    },
+    {
+      "id": "elv-cas",
+      "engines": [],
+      "chassis_slugs": [
+        "e90",
+        "e91",
+        "e92",
+        "e93"
+      ],
+      "title": {
+        "en": "Electric steering lock / CAS",
+        "pl": "Blokada kierownicy / CAS",
+        "ru": "Электрозамок руля / CAS"
+      },
+      "affects": {
+        "en": "E-series electronics — the car will not unlock the steering",
+        "pl": "Elektronika E-series — auto nie odblokowuje kierownicy",
+        "ru": "Электрика E-series — машина не разблокирует руль"
+      },
+      "summary": {
+        "en": "Car may not unlock steering / start. Module and coding, not the engine. Confirm key-start at inspection.",
+        "pl": "Auto może nie odblokować kierownicy i nie odpalić. Moduł i kodowanie, nie silnik. Na oględzinach sprawdź zapłon z kluczyka.",
+        "ru": "Может не разблокировать руль и не завестись. Модуль и кодировка, не мотор. На осмотре проверьте запуск с ключа."
+      },
+      "severity": "stranded",
+      "pln_bands": null,
+      "sources": [
+        {
+          "label": "Wikipedia · BMW 3 Series (E90)",
+          "url": "https://en.wikipedia.org/wiki/BMW_3_Series_(E90)"
+        }
+      ],
+      "autodoc_query": {
+        "en": "BMW E90 ELV steering lock",
+        "pl": "BMW E90 ELV blokada kierownicy",
+        "ru": "BMW E90 ELV замок руля"
+      },
+      "confidence": "wiki_body_prior"
+    },
+    {
+      "id": "m54-cooling",
+      "engines": [
+        "M54",
+        "M52"
+      ],
+      "title": {
+        "en": "Cooling system (plastic)",
+        "pl": "Układ chłodzenia (plastik)",
+        "ru": "Система охлаждения (пластик)"
+      },
+      "affects": {
+        "en": "M54 / M52 inline-six — E46, E39, E53, E83",
+        "pl": "Rzędowa szóstka M54/M52 — E46, E39, E53, E83",
+        "ru": "Рядная шестёрка M54/M52 — E46, E39, E53, E83"
+      },
+      "summary": {
+        "en": "Radiator, expansion tank, and thermostat housings become brittle. Overheating can damage the cylinder head.",
+        "pl": "Chłodnica, zbiornik wyrównawczy i obudowy termostatu kruszeją. Przegrzanie może uszkodzić głowicę.",
+        "ru": "Радиатор, расширительный бачок и корпуса термостата становятся хрупкими. Перегрев может повредить головку."
+      },
+      "severity": "overheat",
+      "pln_bands": null,
+      "sources": [
+        {
+          "label": "Wikipedia · BMW M54",
+          "url": "https://en.wikipedia.org/wiki/BMW_M54"
+        }
+      ],
+      "autodoc_query": {
+        "en": "BMW M54 radiator expansion tank",
+        "pl": "BMW M54 chłodnica zbiornik wyrównawczy",
+        "ru": "BMW M54 радиатор расширительный бачок"
+      },
+      "confidence": "wiki_prior"
+    },
+    {
+      "id": "m54-disa",
+      "engines": [
+        "M54"
+      ],
+      "title": {
+        "en": "DISA valve",
+        "pl": "Klapa DISA",
+        "ru": "Клапан DISA"
+      },
+      "affects": {
+        "en": "M54 325i / 330i / 3.0i",
+        "pl": "M54 325i / 330i / 3.0i",
+        "ru": "M54 325i / 330i / 3.0i"
+      },
+      "summary": {
+        "en": "Intake flap shaft wears; valve can break into the intake. Cold-start rattle is a typical sign.",
+        "pl": "Wałek klapy ssącej się zużywa; klapa może wpaść do dolotu. Stuk na zimnym silniku to częsty objaw.",
+        "ru": "Вал впускной заслонки изнашивается; клапан может попасть во впуск. Стук на холодном моторе — частый признак."
+      },
+      "severity": "expensive",
+      "pln_bands": null,
+      "sources": [
+        {
+          "label": "Wikipedia · BMW M54",
+          "url": "https://en.wikipedia.org/wiki/BMW_M54"
+        }
+      ],
+      "autodoc_query": {
+        "en": "BMW M54 DISA valve",
+        "pl": "BMW M54 klapa DISA",
+        "ru": "BMW M54 клапан DISA"
+      },
+      "confidence": "wiki_prior"
+    },
+    {
+      "id": "n20-chain",
+      "engines": [
+        "N20",
+        "N26"
+      ],
+      "chassis_slugs": [
+        "f30",
+        "f10",
+        "f20"
+      ],
+      "title": {
+        "en": "N20/N26 timing chain / VANOS",
+        "pl": "Łańcuch N20/N26 / VANOS",
+        "ru": "Цепь ГРМ N20/N26 / VANOS"
+      },
+      "affects": {
+        "en": "N20 320i / 328i / 520i, especially 2011–2015",
+        "pl": "N20 320i / 328i / 520i, zwłaszcza 2011–2015",
+        "ru": "N20 320i / 328i / 520i, особенно 2011–2015"
+      },
+      "summary": {
+        "en": "BMW issued US timing-chain warranty coverage (SI B11 03 17). Typical signs: rattle at start, high oil consumption, jumped chain. Later years better, not risk-free.",
+        "pl": "BMW wydało w USA pokrycie gwarancyjne łańcucha (SI B11 03 17). Objawy: stuk przy starcie, zużycie oleju, przeskok. Późniejsze lata lepsze, nie bez ryzyka.",
+        "ru": "BMW выдало в США гарантийное покрытие цепи (SI B11 03 17). Признаки: стук на запуске, расход масла, перескок. Поздние годы лучше, не без риска."
+      },
+      "severity": "engine-loss",
+      "pln_bands": null,
+      "sources": [
+        {
+          "label": "NHTSA · N20/N26 timing-chain warranty (SI B11 03 17 / MC-10142923)",
+          "url": "https://static.nhtsa.gov/odi/tsbs/2017/MC-10142923-0001.pdf"
+        },
+        {
+          "label": "Wikipedia · BMW N20",
+          "url": "https://en.wikipedia.org/wiki/BMW_N20"
+        }
+      ],
+      "autodoc_query": {
+        "en": "BMW N20 timing chain VANOS",
+        "pl": "BMW N20 łańcuch VANOS",
+        "ru": "BMW N20 цепь ГРМ VANOS"
+      },
+      "confidence": "tsb_cited"
+    },
+    {
+      "id": "n20-oil-filter",
+      "engines": [
+        "N20",
+        "B48",
+        "N55"
+      ],
+      "title": {
+        "en": "Oil filter housing gasket",
+        "pl": "Uszczelka obudowy filtra oleju",
+        "ru": "Прокладка корпуса масляного фильтра"
+      },
+      "affects": {
+        "en": "N20 / B48 / N55 — oil down the side of the block",
+        "pl": "N20 / B48 / N55 — olej po boku bloku",
+        "ru": "N20 / B48 / N55 — масло по боку блока"
+      },
+      "summary": {
+        "en": "Plastic housing leaks oil onto the belt. Cheap if early; ignored leaks can take the belt. Inspect in person.",
+        "pl": "Plastikowa obudowa cieknie olejem na pasek. Tania naprawa wcześnie; zignorowany wyciek może zniszczyć pasek. Obejrzyj na miejscu.",
+        "ru": "Пластиковый корпус течёт маслом на ремень. Дёшево на ранней стадии; игнор может убить ремень. Смотрите на месте."
+      },
+      "severity": "annoyance",
+      "pln_bands": null,
+      "sources": [
+        {
+          "label": "Wikipedia · BMW N20",
+          "url": "https://en.wikipedia.org/wiki/BMW_N20"
+        }
+      ],
+      "autodoc_query": {
+        "en": "BMW oil filter housing gasket",
+        "pl": "BMW uszczelka obudowy filtra oleju",
+        "ru": "BMW прокладка корпуса масляного фильтра"
+      },
+      "confidence": "wiki_prior"
+    },
+    {
+      "id": "n62-valvetronic",
+      "engines": [
+        "N62"
+      ],
+      "title": {
+        "en": "N62 Valvetronic / coolant",
+        "pl": "N62 Valvetronic / płyn",
+        "ru": "N62 Valvetronic / антифриз"
+      },
+      "affects": {
+        "en": "N62 V8 — 545i, 550i, X5 4.8i",
+        "pl": "V8 N62 — 545i, 550i, X5 4.8i",
+        "ru": "V8 N62 — 545i, 550i, X5 4.8i"
+      },
+      "summary": {
+        "en": "Valvetronic actuators and plastic cooling parts fail on this V8. Ask for compression before buying.",
+        "pl": "Siłowniki Valvetronic i plastikowe części chłodzenia psują się w tym V8. Poproś o kompresję przed zakupem.",
+        "ru": "Актуаторы Valvetronic и пластик охлаждения ломаются на этом V8. Перед покупкой — замер компрессии."
+      },
+      "severity": "expensive",
+      "pln_bands": null,
+      "sources": [
+        {
+          "label": "Wikipedia · BMW N62",
+          "url": "https://en.wikipedia.org/wiki/BMW_N62"
+        }
+      ],
+      "autodoc_query": {
+        "en": "BMW N62 Valvetronic actuator",
+        "pl": "BMW N62 siłownik Valvetronic",
+        "ru": "BMW N62 актуатор Valvetronic"
+      },
+      "confidence": "wiki_prior"
+    },
+    {
+      "id": "b47-egr",
+      "engines": [
+        "B47"
+      ],
+      "title": {
+        "en": "B47 EGR / intake carbon",
+        "pl": "B47 EGR / nagar w dolocie",
+        "ru": "B47 EGR / нагар во впуске"
+      },
+      "affects": {
+        "en": "B47 318d / 320d / 118d / 120d after ~2014",
+        "pl": "B47 318d / 320d / 118d / 120d po ~2014",
+        "ru": "B47 318d / 320d / 118d / 120d после ~2014"
+      },
+      "summary": {
+        "en": "B47 is not N47. Timing chain is less of a theme; EGR cooler and intake carbon are the typical high-mileage costs. Confirm B47 on the engine plate.",
+        "pl": "B47 to nie N47. Łańcuch rzadziej; chłodnica EGR i nagar w dolocie to typowe koszty przy wysokim przebiegu. Potwierdź B47 na tabliczce.",
+        "ru": "B47 — не N47. Цепь реже; EGR и нагар во впуске — типичные расходы на большом пробеге. Подтвердите B47 на шильдике."
+      },
+      "severity": "expensive",
+      "pln_bands": null,
+      "sources": [
+        {
+          "label": "Wikipedia · BMW B47",
+          "url": "https://en.wikipedia.org/wiki/BMW_B47"
+        },
+        {
+          "label": "NHTSA · N47/N57 EGR cooler ELW (related family theme)",
+          "url": "https://static.nhtsa.gov/odi/tsbs/2024/MC-10249439-0001.pdf"
+        }
+      ],
+      "autodoc_query": {
+        "en": "BMW B47 EGR cooler",
+        "pl": "BMW B47 chłodnica EGR",
+        "ru": "BMW B47 охладитель EGR"
+      },
+      "confidence": "wiki_plus_related_tsb"
+    },
+    {
+      "id": "n13-timing",
+      "engines": [
+        "N13"
+      ],
+      "title": {
+        "en": "N13 timing / HPFP",
+        "pl": "N13 rozrząd / HPFP",
+        "ru": "N13 ГРМ / ТНВД"
+      },
+      "affects": {
+        "en": "F20 114i / 116i / 118i 1.6 turbo",
+        "pl": "F20 114i / 116i / 118i 1.6 turbo",
+        "ru": "F20 114i / 116i / 118i 1.6 турбо"
+      },
+      "summary": {
+        "en": "1.6 turbo is not a simple cheap 116i. Timing chain, HPFP, and carbon appear together at high mileage.",
+        "pl": "1.6 turbo nie jest tanią prostą 116i. Łańcuch, HPFP i nagar często razem przy wysokim przebiegu.",
+        "ru": "1.6 турбо — не дешёвая простая 116i. Цепь, ТНВД и нагар часто вместе на большом пробеге."
+      },
+      "severity": "expensive",
+      "pln_bands": null,
+      "sources": [
+        {
+          "label": "Wikipedia · BMW N13",
+          "url": "https://en.wikipedia.org/wiki/BMW_N13"
+        }
+      ],
+      "autodoc_query": {
+        "en": "BMW N13 timing chain HPFP",
+        "pl": "BMW N13 łańcuch HPFP",
+        "ru": "BMW N13 цепь ТНВД"
+      },
+      "confidence": "wiki_prior"
+    },
+    {
+      "id": "e39-cooling",
+      "engines": [
+        "M52",
+        "M62"
+      ],
+      "title": {
+        "en": "Expansion tank / cooling",
+        "pl": "Zbiornik wyrównawczy / chłodzenie",
+        "ru": "Расширительный бачок / охлаждение"
+      },
+      "affects": {
+        "en": "E39 petrol, also early X5 M62",
+        "pl": "Benzyny E39, też wczesne X5 M62",
+        "ru": "Бензин E39, также ранний X5 M62"
+      },
+      "summary": {
+        "en": "Expansion tank cracks and the engine overheats. On this generation cooling is the typical repair theme, not a timing chain.",
+        "pl": "Zbiornik pęka i silnik się przegrzewa. W tej generacji chłodzenie to typowy temat, nie łańcuch.",
+        "ru": "Бачок трескается, мотор перегревается. В этом поколении типична тема охлаждения, не цепи."
+      },
+      "severity": "overheat",
+      "pln_bands": null,
+      "sources": [
+        {
+          "label": "Wikipedia · BMW 5 Series (E39)",
+          "url": "https://en.wikipedia.org/wiki/BMW_5_Series_(E39)"
+        }
+      ],
+      "autodoc_query": {
+        "en": "BMW E39 coolant expansion tank",
+        "pl": "BMW E39 zbiornik wyrównawczy",
+        "ru": "BMW E39 расширительный бачок"
+      },
+      "confidence": "wiki_prior"
+    },
+    {
+      "id": "eu-winter-rust",
+      "engines": [],
+      "chassis_slugs": [
+        "e46",
+        "e39",
+        "e60",
+        "e61",
+        "e87",
+        "e81",
+        "e53",
+        "e83"
+      ],
+      "title": {
+        "en": "Subframe / sills (EU salt)",
+        "pl": "Belka / progi (sól EU)",
+        "ru": "Подрамник / пороги (соль EU)"
+      },
+      "affects": {
+        "en": "E46 / E39 / E60 / E87 / first X3 and X5 after Polish winters",
+        "pl": "E46 / E39 / E60 / E87 / pierwsze X3 i X5 po polskich zimach",
+        "ru": "E46 / E39 / E60 / E87 / первые X3 и X5 после польских зим"
+      },
+      "summary": {
+        "en": "Rust is a body issue. Inspect subframe welds, sills, and jacking points on a lift.",
+        "pl": "Rdza to usterka nadwozia. Na podnośniku sprawdź spoiny belki, progi i punkty podnoszenia.",
+        "ru": "Ржавчина — кузов. На подъёмнике проверьте швы подрамника, пороги и домкратные точки."
+      },
+      "severity": "safety",
+      "pln_bands": null,
+      "sources": [
+        {
+          "label": "Wikipedia · BMW 3 Series (E90)",
+          "url": "https://en.wikipedia.org/wiki/BMW_3_Series_(E90)"
+        },
+        {
+          "label": "Wikipedia · BMW 5 Series (E39)",
+          "url": "https://en.wikipedia.org/wiki/BMW_5_Series_(E39)"
+        }
+      ],
+      "autodoc_query": {
+        "en": "BMW rear subframe rust",
+        "pl": "BMW belka tylna rdza",
+        "ru": "BMW задний подрамник ржавчина"
+      },
+      "confidence": "wiki_body_prior"
+    },
+    {
+      "id": "transfer-case",
+      "engines": [],
+      "chassis_slugs": [
+        "e70",
+        "e53",
+        "e83"
+      ],
+      "title": {
+        "en": "Transfer case / xDrive",
+        "pl": "Skrzynka rozdzielcza / xDrive",
+        "ru": "Раздатка / xDrive"
+      },
+      "affects": {
+        "en": "X3 / X5 with xDrive — not an engine fault",
+        "pl": "X3 / X5 z xDrive — nie usterka silnika",
+        "ru": "X3 / X5 с xDrive — не поломка мотора"
+      },
+      "summary": {
+        "en": "Transfer-case chain stretches. Binding in tight turns / grinding on move-off. xDrive theme, not engine-specific.",
+        "pl": "Łańcuch w skrzynce się wyciąga. Spinanie w ciasnych zakrętach / zgrzyt przy ruszaniu. Temat xDrive, nie silnika.",
+        "ru": "Цепь в раздатке вытягивается. Зажатие в крутых поворотах / скрежет при старте. Тема xDrive, не мотора."
+      },
+      "severity": "expensive",
+      "pln_bands": null,
+      "sources": [
+        {
+          "label": "Wikipedia · BMW xDrive",
+          "url": "https://en.wikipedia.org/wiki/BMW_xDrive"
+        }
+      ],
+      "autodoc_query": {
+        "en": "BMW X5 transfer case actuator",
+        "pl": "BMW X5 siłownik skrzynki rozdzielczej",
+        "ru": "BMW X5 актуатор раздатки"
+      },
+      "confidence": "wiki_prior"
+    },
+    {
+      "id": "n47-n57-egr-cooler",
+      "engines": [
+        "N47",
+        "N57"
+      ],
+      "chassis_slugs": [
+        "e90",
+        "f30",
+        "e60",
+        "f10",
+        "e87",
+        "f20",
+        "e70"
+      ],
+      "title": {
+        "en": "N47/N57 EGR cooler — extended warranty theme",
+        "pl": "N47/N57 – chłodnica EGR",
+        "ru": "N47/N57 – охладитель EGR"
+      },
+      "affects": {
+        "en": "N47 / N57 diesels covered by BMW ELW communications",
+        "pl": "Diesle N47 / N57 objęte komunikatami ELW BMW",
+        "ru": "Дизели N47 / N57 по коммуникациям ELW BMW"
+      },
+      "summary": {
+        "en": "BMW extended limited warranty / service action theme for EGR cooler on N47/N57 (NHTSA SI B01 05 20).",
+        "pl": "Przedłużona gwarancja / akcja serwisowa chłodnicy EGR na N47/N57 (NHTSA SI B01 05 20).",
+        "ru": "Продлённая гарантия / сервисная акция охладителя EGR на N47/N57 (NHTSA SI B01 05 20)."
+      },
+      "severity": "safety",
+      "pln_bands": null,
+      "sources": [
+        {
+          "label": "NHTSA · N47/N57 EGR cooler ELW (SI B01 05 20 / MC-10249439)",
+          "url": "https://static.nhtsa.gov/odi/tsbs/2024/MC-10249439-0001.pdf"
+        }
+      ],
+      "autodoc_query": {
+        "en": "EGR cooler N47",
+        "pl": "chłodnica EGR N47",
+        "ru": "охладитель EGR N47"
+      },
+      "confidence": "tsb_cited"
+    },
+    {
+      "id": "takata-airbag-pl",
+      "engines": [],
+      "chassis_slugs": [
+        "e90",
+        "e87",
+        "e83",
+        "f30",
+        "f10",
+        "f20"
+      ],
+      "title": {
+        "en": "Driver airbag inflator (PL UOKiK campaigns)",
+        "pl": "Poduszka kierowcy — kampanie UOKiK",
+        "ru": "Подушка водителя — кампании UOKiK"
+      },
+      "affects": {
+        "en": "Selected E- and F-series BMW in Poland — VIN check required",
+        "pl": "Wybrane E- i F-series BMW w PL — wymagane sprawdzenie VIN",
+        "ru": "Отдельные E- и F-series BMW в PL — нужна проверка VIN"
+      },
+      "summary": {
+        "en": "Official PL UOKiK recall campaigns for driver airbag inflators. Repair is free at BMW partner when open on VIN — confirm with BMW VIN checker.",
+        "pl": "Oficjalne kampanie UOKiK dotyczące napełniacza poduszki kierowcy. Naprawa bezpłatna u partnera BMW, gdy otwarta na VIN — potwierdź w checkerze BMW.",
+        "ru": "Официальные кампании UOKiK по наполнителю подушки водителя. Ремонт бесплатен у партнёра BMW, если открыт на VIN — подтвердите в чекере BMW."
+      },
+      "severity": "safety",
+      "pln_bands": {
+        "independent": [
+          0,
+          0
+        ],
+        "specialist": [
+          0,
+          0
+        ],
+        "aso": [
+          0,
+          0
+        ],
+        "note": "Campaign repair free at BMW partner when open on VIN"
+      },
+      "sources": [
+        {
+          "label": "UOKiK · E81/E83/E84/E87/E90/E91",
+          "url": "https://uokik.gov.pl/bip/samochody-bmw"
+        },
+        {
+          "label": "UOKiK · F-series batch",
+          "url": "https://uokik.gov.pl/bip/samochody-bmw-1"
+        },
+        {
+          "label": "BMW VIN recall checker PL",
+          "url": "https://www.bmwgroup.com/en/general/regulations/recall/recall-polish.html"
+        }
+      ],
+      "autodoc_query": {
+        "en": "BMW airbag",
+        "pl": "BMW poduszka powietrzna",
+        "ru": "BMW подушка безопасности"
+      },
+      "confidence": "official_pl"
+    }
+  ]
+}

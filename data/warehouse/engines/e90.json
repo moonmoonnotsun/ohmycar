@@ -1,0 +1,227 @@
+{
+  "chassis_slug": "e90",
+  "region": "PL",
+  "collected_at": "2026-09-22T16:38:02Z",
+  "confidence": "sourced_curated",
+  "sources": [
+    {
+      "label": "Wikipedia generation page",
+      "url": "https://en.wikipedia.org/wiki/BMW_3_Series_(E90)"
+    },
+    {
+      "label": "RealOEM BMW catalog",
+      "url": "https://www.realoem.com/bmw/"
+    },
+    {
+      "label": "App seed cross-check",
+      "url": "src/data/e90.ts"
+    }
+  ],
+  "lines": [
+    {
+      "model": "318i",
+      "engine": "N46",
+      "fuel": "petrol",
+      "years": [
+        2005,
+        2006,
+        2007
+      ]
+    },
+    {
+      "model": "318i",
+      "engine": "N43",
+      "fuel": "petrol",
+      "years": [
+        2007,
+        2008,
+        2009,
+        2010,
+        2011
+      ]
+    },
+    {
+      "model": "320i",
+      "engine": "N46",
+      "fuel": "petrol",
+      "years": [
+        2005,
+        2006,
+        2007
+      ]
+    },
+    {
+      "model": "320i",
+      "engine": "N43",
+      "fuel": "petrol",
+      "years": [
+        2007,
+        2008,
+        2009,
+        2010,
+        2011
+      ]
+    },
+    {
+      "model": "325i",
+      "engine": "N52",
+      "fuel": "petrol",
+      "years": [
+        2005,
+        2006,
+        2007
+      ]
+    },
+    {
+      "model": "325i",
+      "engine": "N53",
+      "fuel": "petrol",
+      "years": [
+        2007,
+        2008,
+        2009,
+        2010,
+        2011
+      ]
+    },
+    {
+      "model": "330i",
+      "engine": "N52",
+      "fuel": "petrol",
+      "years": [
+        2005,
+        2006,
+        2007
+      ]
+    },
+    {
+      "model": "330i",
+      "engine": "N53",
+      "fuel": "petrol",
+      "years": [
+        2007,
+        2008,
+        2009,
+        2010,
+        2011
+      ]
+    },
+    {
+      "model": "335i",
+      "engine": "N54",
+      "fuel": "petrol",
+      "years": [
+        2006,
+        2007,
+        2008,
+        2009,
+        2010
+      ]
+    },
+    {
+      "model": "335i",
+      "engine": "N55",
+      "fuel": "petrol",
+      "years": [
+        2010,
+        2011,
+        2012
+      ]
+    },
+    {
+      "model": "318d",
+      "engine": "M47",
+      "fuel": "diesel",
+      "years": [
+        2005,
+        2006,
+        2007
+      ]
+    },
+    {
+      "model": "318d",
+      "engine": "N47",
+      "fuel": "diesel",
+      "years": [
+        2007,
+        2008,
+        2009,
+        2010,
+        2011
+      ]
+    },
+    {
+      "model": "320d",
+      "engine": "M47",
+      "fuel": "diesel",
+      "years": [
+        2005,
+        2006,
+        2007
+      ]
+    },
+    {
+      "model": "320d",
+      "engine": "N47",
+      "fuel": "diesel",
+      "years": [
+        2007,
+        2008,
+        2009,
+        2010,
+        2011,
+        2012
+      ]
+    },
+    {
+      "model": "325d",
+      "engine": "M57",
+      "fuel": "diesel",
+      "years": [
+        2006,
+        2007,
+        2008,
+        2009,
+        2010
+      ]
+    },
+    {
+      "model": "330d",
+      "engine": "M57",
+      "fuel": "diesel",
+      "years": [
+        2005,
+        2006,
+        2007,
+        2008
+      ]
+    },
+    {
+      "model": "330d",
+      "engine": "N57",
+      "fuel": "diesel",
+      "years": [
+        2008,
+        2009,
+        2010,
+        2011,
+        2012
+      ]
+    },
+    {
+      "model": "335d",
+      "engine": "M57",
+      "fuel": "diesel",
+      "years": [
+        2006,
+        2007,
+        2008,
+        2009,
+        2010,
+        2011
+      ]
+    }
+  ],
+  "line_count": 18,
+  "note": "Badge×engine×years curated from Wikipedia + cross-checked against app seed. Verify edge cases on RealOEM."
+}

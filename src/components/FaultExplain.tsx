@@ -2,7 +2,7 @@
 
 import { useEffect, useId, useRef, useState, type MouseEvent } from "react";
 import { createPortal } from "react-dom";
-import type { Pain } from "@/data/types";
+import type { Chassis, Pain, VariantBrief } from "@/data/types";
 import type { Locale } from "@/lib/locale";
 import { t } from "@/lib/i18n";
 import { autodocUrl } from "@/lib/links";
@@ -56,10 +56,14 @@ export function FaultDiagram({
 export function FaultHint({
   locale,
   pain,
+  chassis,
+  variant,
   showTitle = true,
 }: {
   locale: Locale;
   pain?: Pain;
+  chassis?: Chassis;
+  variant?: VariantBrief;
   showTitle?: boolean;
 }) {
   const copy = t(locale);
@@ -131,11 +135,13 @@ export function FaultHint({
           <span className="text-[var(--muted)]">{copy.affects}: </span>
           {pain.affects[locale]}
         </p>
-        <p className="mt-4 text-[10px] uppercase tracking-[0.14em] text-[var(--muted)]">{copy.plnNote}</p>
+        <p className="mt-4 text-[10px] uppercase tracking-[0.14em] text-[var(--muted)]">
+          {pain.plnIndependent ? copy.plnNote : copy.plnPending}
+        </p>
         <WorkshopPrices locale={locale} pain={pain} />
         <a
           className="mt-4 inline-flex h-tap items-center text-sm font-medium underline underline-offset-2"
-          href={autodocUrl(pain.autodocQuery[locale], locale)}
+          href={autodocUrl(pain.autodocQuery[locale], locale, chassis, variant)}
           target="_blank"
           rel="noreferrer"
           onClick={(e) => e.stopPropagation()}
@@ -202,6 +208,13 @@ export function WorkshopPrices({ locale, pain }: { locale: Locale; pain: Pain })
     { label: copy.specialist, range: pain.plnSpecialist },
     { label: copy.aso, range: pain.plnAso },
   ];
+  if (!pain.plnIndependent && !pain.plnSpecialist && !pain.plnAso) {
+    return (
+      <p className="mt-2 text-sm leading-6 text-[var(--muted)]">
+        {pain.plnNote ?? copy.plnPendingHint}
+      </p>
+    );
+  }
   return (
     <dl className="mt-2 grid grid-cols-1 gap-2 sm:grid-cols-3">
       {cells.map((cell) => (

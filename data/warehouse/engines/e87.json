@@ -1,0 +1,76 @@
+{
+  "chassis_slug": "e87",
+  "region": "PL",
+  "collected_at": "2026-09-22T16:38:02Z",
+  "confidence": "sourced_curated",
+  "sources": [
+    {
+      "label": "Wikipedia generation page",
+      "url": "https://en.wikipedia.org/wiki/BMW_1_Series_(E87)"
+    },
+    {
+      "label": "RealOEM BMW catalog",
+      "url": "https://www.realoem.com/bmw/"
+    },
+    {
+      "label": "App seed cross-check",
+      "url": "src/data/volume.ts"
+    }
+  ],
+  "lines": [
+    {
+      "model": "118i",
+      "engine": "N46",
+      "fuel": "petrol",
+      "years": [
+        2004,
+        2005,
+        2006,
+        2007,
+        2008,
+        2009,
+        2010,
+        2011
+      ]
+    },
+    {
+      "model": "130i",
+      "engine": "N52",
+      "fuel": "petrol",
+      "years": [
+        2005,
+        2006,
+        2007,
+        2008,
+        2009,
+        2010,
+        2011
+      ]
+    },
+    {
+      "model": "118d",
+      "engine": "M47",
+      "fuel": "diesel",
+      "years": [
+        2004,
+        2005,
+        2006,
+        2007
+      ]
+    },
+    {
+      "model": "120d",
+      "engine": "N47",
+      "fuel": "diesel",
+      "years": [
+        2007,
+        2008,
+        2009,
+        2010,
+        2011
+      ]
+    }
+  ],
+  "line_count": 4,
+  "note": "Badge×engine×years curated from Wikipedia + cross-checked against app seed. Verify edge cases on RealOEM."
+}

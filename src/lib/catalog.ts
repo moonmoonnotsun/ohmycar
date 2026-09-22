@@ -1,29 +1,73 @@
 import { chassisList, getChassis } from "@/data/chassis";
-import { e90Engines, e90Pains } from "@/data/e90";
-import { volumeEngines, volumePains } from "@/data/volume";
+import { e90Engines } from "@/data/e90";
+import { volumeEngines } from "@/data/volume";
 import type { Chassis, EngineLine, Localized, Pain, VariantBrief } from "@/data/types";
 import { loc } from "@/data/loc";
-import { scoreFromInputs } from "@/lib/score";
+import { marketMedianBuyPln } from "@/lib/marketBuy";
+import { getWarehousePain, resolvePainId, warehousePains } from "@/lib/warehousePains";
+import { deriveEvidencePack } from "@/lib/scoreEvidence";
 
-const allPains: Pain[] = [...e90Pains, ...volumePains];
-const painById = new Map<string, Pain>();
-for (const pain of allPains) {
-  if (!painById.has(pain.id)) painById.set(pain.id, pain);
-}
+/** Faults come only from warehouse import — never hand-seeded PLN hypotheses. */
+const allPains: Pain[] = warehousePains;
 
 function enginesFor(sourceSlug: string): EngineLine[] | undefined {
   if (sourceSlug === "e90") return e90Engines;
   return volumeEngines[sourceSlug];
 }
 
+function painsForLine(
+  chassisSlug: string,
+  sourceSlug: string,
+  engine: string,
+  year: number,
+  topPainId: string,
+): Pain[] {
+  const topId = resolvePainId(topPainId);
+  return allPains
+    .filter((pain) => {
+      if (pain.engines.length === 0) {
+        if (!pain.chassisSlugs?.length) return true;
+        return pain.chassisSlugs.includes(chassisSlug) || pain.chassisSlugs.includes(sourceSlug);
+      }
+      return pain.engines.includes(engine);
+    })
+    .filter((pain) => {
+      if (!pain.chassisSlugs?.length) return true;
+      return pain.chassisSlugs.includes(chassisSlug) || pain.chassisSlugs.includes(sourceSlug);
+    })
+    .filter((pain) => {
+      if (pain.yearFrom && year < pain.yearFrom) return false;
+      if (pain.yearTo && year > pain.yearTo) return false;
+      return true;
+    })
+    .sort((a, b) => {
+      if (a.id === topId) return -1;
+      if (b.id === topId) return 1;
+      return severityRank(a.severity) - severityRank(b.severity);
+    });
+}
+
 function variantsFromLines(chassis: Chassis, lines: EngineLine[]): VariantBrief[] {
   const out: VariantBrief[] = [];
+  const sourceSlug = drivetrainChassis(chassis.slug)?.slug ?? chassis.slug;
+
   for (const line of lines) {
     for (const year of line.years) {
       if (year < chassis.yearStart) continue;
       if (chassis.yearEnd && year > chassis.yearEnd) continue;
-      const inputs = line.inputsByYear[year];
-      if (!inputs) continue;
+
+      const topPainId = resolvePainId(line.topPainId);
+      const pains = painsForLine(chassis.slug, sourceSlug, line.engine, year, topPainId);
+      const effectiveTop =
+        pains.find((p) => p.id === topPainId)?.id ?? pains[0]?.id ?? topPainId;
+      const pack = deriveEvidencePack({
+        chassisSlug: chassis.slug,
+        sourceSlug,
+        pains,
+        topPainId: effectiveTop,
+      });
+      const market = marketMedianBuyPln(sourceSlug, year, line.fuel);
+
       const brief: VariantBrief = {
         slug: `${year}-${line.model.toLowerCase()}-${line.engine.toLowerCase()}`,
         chassisSlug: chassis.slug,
@@ -32,18 +76,24 @@ function variantsFromLines(chassis: Chassis, lines: EngineLine[]): VariantBrief[
         model: line.model,
         engine: line.engine,
         fuel: line.fuel,
-        score: scoreFromInputs(inputs),
-        scoreStatus: "hypothesis",
-        medianBuyPln: line.medianBuyPlnByYear[year] ?? 0,
-        expectedRepairPln: line.repairPln,
-        topPainId: line.topPainId,
-        inputs,
+        score: pack?.score ?? null,
+        scoreStatus: pack?.scoreStatus ?? "insufficient",
+        medianBuyPln: market?.median ?? null,
+        expectedRepairPln: null,
+        topPainId: effectiveTop,
+        inputs: pack?.inputs ?? null,
+        scoreIncomplete: pack?.incomplete,
       };
       brief.expectedRepairPln = fixBandForVariant(brief);
       out.push(brief);
     }
   }
-  return out.sort((a, b) => b.score - a.score || a.year - b.year);
+
+  return out.sort((a, b) => {
+    const as = a.score ?? -1;
+    const bs = b.score ?? -1;
+    return bs - as || a.year - b.year;
+  });
 }
 
 export function drivetrainChassis(slug: string): Chassis | undefined {
@@ -67,6 +117,110 @@ export function getVariant(chassisSlug: string, variantSlug: string): VariantBri
   return variantsFor(chassisSlug).find((item) => item.slug === variantSlug);
 }
 
+/** Unique model badges for a chassis, petrol first then diesel, numeric-aware name order. */
+export function modelsFor(chassisSlug: string): string[] {
+  const byModel = new Map<string, VariantBrief["fuel"]>();
+  for (const row of variantsFor(chassisSlug)) {
+    if (!byModel.has(row.model)) byModel.set(row.model, row.fuel);
+  }
+  return [...byModel.entries()]
+    .sort((a, b) => {
+      if (a[1] !== b[1]) return a[1] === "petrol" ? -1 : 1;
+      return a[0].localeCompare(b[0], undefined, { numeric: true });
+    })
+    .map(([model]) => model);
+}
+
+export type YearOption = {
+  year: number;
+  variant: VariantBrief;
+  score: number | null;
+};
+
+/** One chip per year for a model. Highest score wins when several engines share a year. */
+export function yearOptionsForModel(
+  chassisSlug: string,
+  model: string,
+  preferEngine?: string,
+): YearOption[] {
+  const rows = variantsFor(chassisSlug).filter((item) => item.model === model);
+  const byYear = new Map<number, VariantBrief[]>();
+  for (const row of rows) {
+    const list = byYear.get(row.year) ?? [];
+    list.push(row);
+    byYear.set(row.year, list);
+  }
+  return [...byYear.entries()]
+    .sort((a, b) => a[0] - b[0])
+    .map(([year, list]) => {
+      const variant = pickPreferred(list, preferEngine);
+      return { year, variant, score: variant.score };
+    });
+}
+
+function pickPreferred(
+  list: VariantBrief[],
+  preferEngine?: string,
+  preferFuel?: VariantBrief["fuel"],
+): VariantBrief {
+  let pool = list;
+  if (preferEngine) {
+    const matched = pool.filter((item) => item.engine === preferEngine);
+    if (matched.length) pool = matched;
+  }
+  if (preferFuel) {
+    const matched = pool.filter((item) => item.fuel === preferFuel);
+    if (matched.length) pool = matched;
+  }
+  return [...pool].sort((a, b) => (b.score ?? -1) - (a.score ?? -1) || b.year - a.year)[0];
+}
+
+/** Resolve a briefing cell when switching model/year chips. */
+export function resolveVariant(opts: {
+  chassisSlug: string;
+  model: string;
+  year?: number;
+  preferEngine?: string;
+  preferFuel?: VariantBrief["fuel"];
+}): VariantBrief | undefined {
+  const { chassisSlug, model, year, preferEngine, preferFuel } = opts;
+  const rows = variantsFor(chassisSlug).filter((item) => item.model === model);
+  if (rows.length === 0) return undefined;
+
+  if (year != null) {
+    const atYear = rows.filter((item) => item.year === year);
+    if (atYear.length) return pickPreferred(atYear, preferEngine, preferFuel);
+    const years = [...new Set(rows.map((item) => item.year))];
+    const nearest = years.reduce((best, value) =>
+      Math.abs(value - year) < Math.abs(best - year) ? value : best,
+    );
+    return pickPreferred(
+      rows.filter((item) => item.year === nearest),
+      preferEngine,
+      preferFuel,
+    );
+  }
+
+  return pickPreferred(rows, preferEngine, preferFuel);
+}
+
+/** Parse `chassis/variant` compare slot keys. */
+export function parseCompareSlot(raw: string | null | undefined): {
+  chassisSlug: string;
+  variantSlug: string;
+} | null {
+  if (!raw) return null;
+  const parts = raw.split("/").filter(Boolean);
+  if (parts.length !== 2) return null;
+  const [chassisSlug, variantSlug] = parts;
+  if (!getVariant(chassisSlug, variantSlug)) return null;
+  return { chassisSlug, variantSlug };
+}
+
+export function compareSlotKey(chassisSlug: string, variantSlug: string) {
+  return `${chassisSlug}/${variantSlug}`;
+}
+
 function painFitsChassis(pain: Pain, variant: VariantBrief, sourceSlug: string): boolean {
   if (!pain.chassisSlugs?.length) return true;
   return pain.chassisSlugs.includes(variant.chassisSlug) || pain.chassisSlugs.includes(sourceSlug);
@@ -75,19 +229,13 @@ function painFitsChassis(pain: Pain, variant: VariantBrief, sourceSlug: string):
 export function painsForVariant(variant: VariantBrief): Pain[] {
   const source = drivetrainChassis(variant.chassisSlug);
   if (!source || !enginesFor(source.slug)) return [];
-  return allPains
-    .filter((pain) => pain.engines.includes(variant.engine))
-    .filter((pain) => painFitsChassis(pain, variant, source.slug))
-    .filter((pain) => {
-      if (pain.yearFrom && variant.year < pain.yearFrom) return false;
-      if (pain.yearTo && variant.year > pain.yearTo) return false;
-      return true;
-    })
-    .sort((a, b) => {
-      if (a.id === variant.topPainId) return -1;
-      if (b.id === variant.topPainId) return 1;
-      return severityRank(a.severity) - severityRank(b.severity);
-    });
+  return painsForLine(
+    variant.chassisSlug,
+    source.slug,
+    variant.engine,
+    variant.year,
+    variant.topPainId,
+  ).filter((pain) => painFitsChassis(pain, variant, source.slug));
 }
 
 function severityRank(severity: Pain["severity"]): number {
@@ -103,7 +251,7 @@ function severityRank(severity: Pain["severity"]): number {
 }
 
 export function getPain(id: string): Pain | undefined {
-  return painById.get(id);
+  return getWarehousePain(id);
 }
 
 export function engineYearSpan(chassisSlug: string, model: string, engine: string): [number, number] | null {
@@ -118,15 +266,21 @@ function roundPln(n: number) {
   return Math.round(n / 100) * 100;
 }
 
-/** Independent-PL envelope: headline job floor → headline high plus other jobs’ floors. */
-export function fixBandForVariant(variant: VariantBrief): [number, number] {
+/** Independent-PL envelope from warehouse-quoted pains only. Null if none quoted yet. */
+export function fixBandForVariant(variant: VariantBrief): [number, number] | null {
   const pains = painsForVariant(variant);
-  if (pains.length === 0) return variant.expectedRepairPln;
-  const headline = pains.find((pain) => pain.id === variant.topPainId) ?? pains[0];
-  const restLow = pains
+  const quoted = pains.filter((pain) => pain.plnIndependent);
+  if (quoted.length === 0) return null;
+  const topId = resolvePainId(variant.topPainId);
+  const headline = quoted.find((pain) => pain.id === topId) ?? quoted[0];
+  const hi = headline.plnIndependent!;
+  if (hi[0] <= 0 && hi[1] <= 0) return null;
+  const restLow = quoted
     .filter((pain) => pain.id !== headline.id)
-    .reduce((sum, pain) => sum + pain.plnIndependent[0], 0);
-  return [roundPln(headline.plnIndependent[0]), roundPln(headline.plnIndependent[1] + restLow)];
+    .reduce((sum, pain) => sum + (pain.plnIndependent?.[0] ?? 0), 0);
+  const band: [number, number] = [roundPln(hi[0]), roundPln(hi[1] + restLow)];
+  if (band[0] <= 0 && band[1] <= 0) return null;
+  return band;
 }
 
 export function chassisFixBand(slug: string): [number, number] | null {
@@ -134,11 +288,9 @@ export function chassisFixBand(slug: string): [number, number] | null {
 }
 
 export function fixBandForVariants(variants: VariantBrief[]): [number, number] | null {
-  if (variants.length === 0) return null;
-  return [
-    Math.min(...variants.map((item) => item.expectedRepairPln[0])),
-    Math.max(...variants.map((item) => item.expectedRepairPln[1])),
-  ];
+  const bands = variants.map((item) => item.expectedRepairPln).filter((b): b is [number, number] => Boolean(b));
+  if (bands.length === 0) return null;
+  return [Math.min(...bands.map((b) => b[0])), Math.max(...bands.map((b) => b[1]))];
 }
 
 export type SearchHit = {
@@ -150,7 +302,11 @@ const BADGE_HITS: { query: string; slugs: string[]; reason: Localized }[] = [
   {
     query: "330i",
     slugs: ["e46", "e90", "f30", "g20"],
-    reason: loc("Same badge, four cars", "Ten sam znaczek, cztery auta", "Один шильдик, четыре машины"),
+    reason: loc(
+      "Same badge — E90 NA six vs F30 turbo four",
+      "Ten sam znaczek — E90 wolnossąca szóstka vs F30 turbo czwórka",
+      "Один шильдик — E90 атмосферная шестёрка vs F30 турбо четвёрка",
+    ),
   },
   {
     query: "330d",
@@ -207,7 +363,7 @@ export function relatedBodies(slug: string): Chassis[] {
 }
 
 export function isScoredChassis(chassis: Chassis): boolean {
-  return variantsFor(chassis.slug).length > 0;
+  return variantsFor(chassis.slug).some((v) => v.score != null);
 }
 
 export function variantFacets(variants: VariantBrief[]) {
@@ -221,10 +377,14 @@ export function variantFacets(variants: VariantBrief[]) {
 
 export function summarizeVariants(variants: VariantBrief[]) {
   if (variants.length === 0) return null;
+  const scored = variants.filter((item) => item.score != null);
+  const pool = scored.length > 0 ? scored : variants;
   return {
     count: variants.length,
-    best: variants.reduce((a, b) => (a.score >= b.score ? a : b)),
-    worst: variants.reduce((a, b) => (a.score <= b.score ? a : b)),
+    scoredCount: scored.length,
+    hasScore: scored.length > 0,
+    best: pool.reduce((a, b) => ((a.score ?? -1) >= (b.score ?? -1) ? a : b)),
+    worst: pool.reduce((a, b) => ((a.score ?? 999) <= (b.score ?? 999) ? a : b)),
   };
 }
 
@@ -232,21 +392,28 @@ export function chassisSummary(slug: string) {
   const variants = variantsFor(slug);
   const summary = summarizeVariants(variants);
   if (!summary) return null;
-  return { ...summary, fixBand: fixBandForVariants(variants)! };
+  return { ...summary, fixBand: fixBandForVariants(variants) };
 }
 
 export type ListMark = "best" | "worst";
 
-/** Among scored chassis in this list: highest best-engine, lowest worst-engine. */
+/** Among chassis with evidence scores: highest best-engine, lowest worst-engine. */
 export function listScoreMarks(items: Chassis[]): Map<string, ListMark[]> {
   const scored = items
     .map((chassis) => ({ chassis, summary: summarizeVariants(variantsFor(chassis.slug)) }))
-    .filter((item): item is { chassis: Chassis; summary: NonNullable<typeof item.summary> } => Boolean(item.summary));
+    .filter(
+      (item): item is { chassis: Chassis; summary: NonNullable<typeof item.summary> } =>
+        Boolean(item.summary?.hasScore),
+    );
   const marks = new Map<string, ListMark[]>();
   if (scored.length === 0) return marks;
 
-  const best = scored.reduce((a, b) => (a.summary.best.score >= b.summary.best.score ? a : b));
-  const worst = scored.reduce((a, b) => (a.summary.worst.score <= b.summary.worst.score ? a : b));
+  const best = scored.reduce((a, b) =>
+    (a.summary.best.score ?? -1) >= (b.summary.best.score ?? -1) ? a : b,
+  );
+  const worst = scored.reduce((a, b) =>
+    (a.summary.worst.score ?? 999) <= (b.summary.worst.score ?? 999) ? a : b,
+  );
   const add = (slug: string, mark: ListMark) => {
     const current = marks.get(slug) ?? [];
     if (!current.includes(mark)) marks.set(slug, [...current, mark]);

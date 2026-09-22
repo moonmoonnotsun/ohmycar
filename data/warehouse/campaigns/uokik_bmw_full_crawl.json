@@ -1,0 +1,336 @@
+{
+  "dataset": "campaigns_uokik_full_crawl",
+  "collected_at": "2026-09-22T16:37:20Z",
+  "index_url": "https://uokik.gov.pl/bip/tagi/bmw",
+  "vin_checker_pl": "https://www.bmwgroup.com/en/general/regulations/recall/recall-polish.html",
+  "rows": [
+    {
+      "id": "uokik-samochody-bmw-1",
+      "region": "PL",
+      "url": "https://uokik.gov.pl/bip/samochody-bmw-1",
+      "published": "2024-08-05",
+      "vehicles_in_pl": 52602,
+      "chassis_codes_detected": [
+        "F06",
+        "F07",
+        "F10",
+        "F11",
+        "F12",
+        "F13",
+        "F15",
+        "F16",
+        "F20",
+        "F21",
+        "F22",
+        "F23",
+        "F26",
+        "F30",
+        "F31",
+        "F32",
+        "F33",
+        "F34",
+        "F35",
+        "F36",
+        "F45",
+        "F46",
+        "F48",
+        "F49",
+        "F52",
+        "F80",
+        "F82",
+        "F83",
+        "F85",
+        "F86",
+        "F87"
+      ],
+      "chassis_slugs_top10": [
+        "f10",
+        "f20",
+        "f30"
+      ],
+      "relevant_to_top10": true,
+      "defect_snippet": "powiadomił Prezesa Urzędu Ochrony Konkurencji i Konsumentów, że w samochodach marki BMW, modele: M2 (F87), X6 M (F86), X5 (M) F85, M4 Convertible (F83), M4 coupe (F82), M3 (F80), seria 1 Stufenheck (F52), X1 long (F49), X1 (F48), seria 2 Gran Tourer (F46), seria 2 Active Tourer (F45), seria 4 (F36), F35, seria 3 Gran Turismo (F34), seria 4 Convertible (F33), seria 4 coupe (F32), seria 3 Touring (F",
+      "source": {
+        "provider": "uokik",
+        "url": "https://uokik.gov.pl/bip/samochody-bmw-1",
+        "tag_index": "https://uokik.gov.pl/bip/tagi/bmw"
+      },
+      "collected_at": "2026-09-22T16:37:20Z",
+      "confidence": "official_pl"
+    },
+    {
+      "id": "uokik-samochody-bmw-g05-g06-g07-g60-g70-u06-u10-u11",
+      "region": "PL",
+      "url": "https://uokik.gov.pl/bip/samochody-bmw-g05-g06-g07-g60-g70-u06-u10-u11",
+      "published": "2024-10-03",
+      "vehicles_in_pl": 24,
+      "chassis_codes_detected": [
+        "G05",
+        "G06",
+        "G07",
+        "G60",
+        "G70",
+        "U06",
+        "U10",
+        "U11"
+      ],
+      "chassis_slugs_top10": [],
+      "relevant_to_top10": false,
+      "defect_snippet": "powiadomił Prezesa Urzędu Ochrony Konkurencji i Konsumentów, że w samochodach marki BMW, modele: X5 (G05), X6 (G06), X7 (G07), Seria 5 (G60), Seria 7 (G70), Seria 2 Active Tourer (U06), X2 (U10) i X1 (U11), wyprodukowanych w Niemczech, spoina silnika nastawczego wspomagania pompy hamulcowej może pęknąć, skutkując brakiem wspomagania ze strony przeciwblokującego układu hamulcowego (ABS) i dynamiczn",
+      "source": {
+        "provider": "uokik",
+        "url": "https://uokik.gov.pl/bip/samochody-bmw-g05-g06-g07-g60-g70-u06-u10-u11",
+        "tag_index": "https://uokik.gov.pl/bip/tagi/bmw"
+      },
+      "collected_at": "2026-09-22T16:37:20Z",
+      "confidence": "official_pl"
+    },
+    {
+      "id": "uokik-samochody-bmw-modele-g60-g61-g70",
+      "region": "PL",
+      "url": "https://uokik.gov.pl/bip/samochody-bmw-modele-g60-g61-g70",
+      "published": "2024-10-02",
+      "vehicles_in_pl": 417,
+      "chassis_codes_detected": [
+        "G60",
+        "G61",
+        "G70"
+      ],
+      "chassis_slugs_top10": [],
+      "relevant_to_top10": false,
+      "defect_snippet": "powiadomił Prezesa Urzędu Ochrony Konkurencji i Konsumentów, że w samochodach marki BMW, modele: seria 5 (G60), seria 5 Touring (G61) i Seria 7 (G70), wyprodukowanych w Niemczech, może dojść do pęknięcia podwójnego przegubu krzyżakowego. Może to skutkować koniecznością nagłego użycia większej siły podczas skrętu. Na rynku polskim kampanią naprawczą objętych jest łącznie 417 pojazdów. Przedsiębiorc",
+      "source": {
+        "provider": "uokik",
+        "url": "https://uokik.gov.pl/bip/samochody-bmw-modele-g60-g61-g70",
+        "tag_index": "https://uokik.gov.pl/bip/tagi/bmw"
+      },
+      "collected_at": "2026-09-22T16:37:20Z",
+      "confidence": "official_pl"
+    },
+    {
+      "id": "uokik-samochody-bmw-modele-ix3-x1-i-ix",
+      "region": "PL",
+      "url": "https://uokik.gov.pl/bip/samochody-bmw-modele-ix3-x1-i-ix",
+      "published": "2025-01-10",
+      "vehicles_in_pl": 32,
+      "chassis_codes_detected": [
+        "G08",
+        "U11"
+      ],
+      "chassis_slugs_top10": [],
+      "relevant_to_top10": false,
+      "defect_snippet": "powiadomił Prezesa Urzędu Ochrony Konkurencji i Konsumentów, że w samochodach marki BMW, modele: iX3 (G08), X1 (U11) i iX (I20), wyprodukowanych w Niemczech, obudowa CCU (Combined Charging Unit) może być nieszczelna. W wyniku tego wilgoć może przedostać się do CCU i spowodować usterkę prowadzącą do przerwania procesu ładowania lub braku możliwości uruchomienia pojazdu. Na rynku polskim kampanią na",
+      "source": {
+        "provider": "uokik",
+        "url": "https://uokik.gov.pl/bip/samochody-bmw-modele-ix3-x1-i-ix",
+        "tag_index": "https://uokik.gov.pl/bip/tagi/bmw"
+      },
+      "collected_at": "2026-09-22T16:37:20Z",
+      "confidence": "official_pl"
+    },
+    {
+      "id": "uokik-samochody-bmw-rozne-modele",
+      "region": "PL",
+      "url": "https://uokik.gov.pl/bip/samochody-bmw-rozne-modele",
+      "published": "2024-04-12",
+      "vehicles_in_pl": 2059,
+      "chassis_codes_detected": [
+        "E83",
+        "E87",
+        "E90",
+        "E91"
+      ],
+      "chassis_slugs_top10": [
+        "e83",
+        "e87",
+        "e90"
+      ],
+      "relevant_to_top10": true,
+      "defect_snippet": "powiadomił Prezesa Urzędu Ochrony Konkurencji i Konsumentów, że w samochodach marki BMW, modele: X3 (E83); seria 1 (E87); seria 3 sedan (E90) i seria 3 kombi (E91), wyprodukowanych w Niemczech, może dochodzić do pęknięcia generatora gazowego poduszki powietrznej. Na rynku polskim kampanią naprawczą objętych jest 2 059 pojazdów.&nbsp; Przedsiębiorca zadeklarował, że skontaktuje się z właścicielami",
+      "source": {
+        "provider": "uokik",
+        "url": "https://uokik.gov.pl/bip/samochody-bmw-rozne-modele",
+        "tag_index": "https://uokik.gov.pl/bip/tagi/bmw"
+      },
+      "collected_at": "2026-09-22T16:37:20Z",
+      "confidence": "official_pl"
+    },
+    {
+      "id": "uokik-samochody-bmw-x1",
+      "region": "PL",
+      "url": "https://uokik.gov.pl/bip/samochody-bmw-x1",
+      "published": "2024-11-08",
+      "vehicles_in_pl": 275,
+      "chassis_codes_detected": [
+        "U11"
+      ],
+      "chassis_slugs_top10": [],
+      "relevant_to_top10": false,
+      "defect_snippet": "powiadomił Prezesa Urzędu Ochrony Konkurencji i Konsumentów, że w samochodach marki BMW X1 (U11), wyprodukowanych w&nbsp;Niemczech, użyto częściowo niewłaściwego materiału do wzmocnienia słupka B z lewej i z prawej strony. W przypadku uderzenia bocznego może to prowadzić do zmienionej charakterystyki zderzenia i zwiększonego ryzyka powstania obrażeń ciała u pasażerów.&nbsp; Na rynku polskim kampan",
+      "source": {
+        "provider": "uokik",
+        "url": "https://uokik.gov.pl/bip/samochody-bmw-x1",
+        "tag_index": "https://uokik.gov.pl/bip/tagi/bmw"
+      },
+      "collected_at": "2026-09-22T16:37:20Z",
+      "confidence": "official_pl"
+    },
+    {
+      "id": "uokik-samochody-bmw-x3-f25",
+      "region": "PL",
+      "url": "https://uokik.gov.pl/bip/samochody-bmw-x3-f25",
+      "published": "2024-08-05",
+      "vehicles_in_pl": 5286,
+      "chassis_codes_detected": [
+        "F25"
+      ],
+      "chassis_slugs_top10": [],
+      "relevant_to_top10": false,
+      "defect_snippet": "powiadomił Prezesa Urzędu Ochrony Konkurencji i Konsumentów, że w samochodach marki BMW X3 (F25), wyprodukowanych w Niemczech, układu kontroli emisji spalin może nie działać prawidłowo. Na rynku polskim kampanią naprawczą objętych jest 5 286 pojazdów. Przedsiębiorca zadeklarował, że skontaktuje się z właścicielami samochodów objętych kampanią oraz poinformuje o konieczności wizyty w warsztacie w c",
+      "source": {
+        "provider": "uokik",
+        "url": "https://uokik.gov.pl/bip/samochody-bmw-x3-f25",
+        "tag_index": "https://uokik.gov.pl/bip/tagi/bmw"
+      },
+      "collected_at": "2026-09-22T16:37:20Z",
+      "confidence": "official_pl"
+    },
+    {
+      "id": "uokik-samochody-bmw-x3",
+      "region": "PL",
+      "url": "https://uokik.gov.pl/bip/samochody-bmw-x3",
+      "published": "2024-11-08",
+      "vehicles_in_pl": 858,
+      "chassis_codes_detected": [
+        "F97",
+        "G01"
+      ],
+      "chassis_slugs_top10": [],
+      "relevant_to_top10": false,
+      "defect_snippet": "powiadomił Prezesa Urzędu Ochrony Konkurencji i Konsumentów, że w samochodach marki BMW X3 (G01) i X3 M (F97), wyprodukowanych w&nbsp;Niemczech, przy wcześniejszej naprawie mocowania szyn w bagażniku użyto części, które nie w każdym przypadku zapewniają bezpieczne złącze śrubowe. W okolicznościach prowadzących do wypadku szyny do mocowania mogą się przesunąć, stwarzając dodatkowe ryzyko obrażeń ci",
+      "source": {
+        "provider": "uokik",
+        "url": "https://uokik.gov.pl/bip/samochody-bmw-x3",
+        "tag_index": "https://uokik.gov.pl/bip/tagi/bmw"
+      },
+      "collected_at": "2026-09-22T16:37:20Z",
+      "confidence": "official_pl"
+    },
+    {
+      "id": "uokik-samochody-bmw-x5-g05",
+      "region": "PL",
+      "url": "https://uokik.gov.pl/bip/samochody-bmw-x5-g05",
+      "published": "2024-08-05",
+      "vehicles_in_pl": 672,
+      "chassis_codes_detected": [
+        "G05"
+      ],
+      "chassis_slugs_top10": [],
+      "relevant_to_top10": false,
+      "defect_snippet": "powiadomił Prezesa Urzędu Ochrony Konkurencji i Konsumentów, że w samochodach marki BMW X5 (G05), wyprodukowanych w Niemczech, instrukcja obsługi zawiera nieprawidłowe wartości dotyczące obciążenia użytkowego i dopuszczalnego obciążenia osi z przodu. Pojazd może być przeciążony lub może zostać przekroczona maksymalna dopuszczalna masa przyczepy. Na rynku polskim kampanią naprawczą objęte są 672 po",
+      "source": {
+        "provider": "uokik",
+        "url": "https://uokik.gov.pl/bip/samochody-bmw-x5-g05",
+        "tag_index": "https://uokik.gov.pl/bip/tagi/bmw"
+      },
+      "collected_at": "2026-09-22T16:37:20Z",
+      "confidence": "official_pl"
+    },
+    {
+      "id": "uokik-samochody-bmw",
+      "region": "PL",
+      "url": "https://uokik.gov.pl/bip/samochody-bmw",
+      "published": "2024-08-05",
+      "vehicles_in_pl": 10405,
+      "chassis_codes_detected": [
+        "E81",
+        "E83",
+        "E84",
+        "E87",
+        "E90",
+        "E91"
+      ],
+      "chassis_slugs_top10": [
+        "e83",
+        "e87",
+        "e90"
+      ],
+      "relevant_to_top10": true,
+      "defect_snippet": "powiadomił Prezesa Urzędu Ochrony Konkurencji i Konsumentów, że w samochodach marki BMW, modele: seria 1 – 3d (E81), X3 (E83), X1 (E84), seria 1 - 5d (E87), seria 3 Saloon (E90) i Seria 3 Touring (E91), wyprodukowanych w Niemczech, podczas przebudowy kierownicy na warianty Sport lub M Sport mogła zostać zamontowana wadliwa poduszka powietrzna kierowcy. W takim przypadku przy jej wyzwalaniu w związ",
+      "source": {
+        "provider": "uokik",
+        "url": "https://uokik.gov.pl/bip/samochody-bmw",
+        "tag_index": "https://uokik.gov.pl/bip/tagi/bmw"
+      },
+      "collected_at": "2026-09-22T16:37:20Z",
+      "confidence": "official_pl"
+    },
+    {
+      "id": "uokik-samochody-bwm-g20",
+      "region": "PL",
+      "url": "https://uokik.gov.pl/bip/samochody-bwm-g20",
+      "published": "2024-10-02",
+      "vehicles_in_pl": 14,
+      "chassis_codes_detected": [
+        "G20"
+      ],
+      "chassis_slugs_top10": [],
+      "relevant_to_top10": false,
+      "defect_snippet": "powiadomił Prezesa Urzędu Ochrony Konkurencji i Konsumentów, że w samochodach marki BMW Seria 3 (G20), wyprodukowanych w Niemczech, poduszka powietrzna pasażera w razie wypadku może nieprawidłowo się rozwinąć, ograniczając zdolność utrzymania pasażera na miejscu, co może skutkować obrażeniami ciała. Na rynku polskim kampanią naprawczą objętych jest 14 pojazdów. Przedsiębiorca zadeklarował, że skon",
+      "source": {
+        "provider": "uokik",
+        "url": "https://uokik.gov.pl/bip/samochody-bwm-g20",
+        "tag_index": "https://uokik.gov.pl/bip/tagi/bmw"
+      },
+      "collected_at": "2026-09-22T16:37:20Z",
+      "confidence": "official_pl"
+    },
+    {
+      "id": "uokik-samochody-marki-bmw",
+      "region": "PL",
+      "url": "https://uokik.gov.pl/bip/samochody-marki-bmw",
+      "published": "2023-02-03",
+      "vehicles_in_pl": 5617,
+      "chassis_codes_detected": [
+        "F06",
+        "F07",
+        "F10",
+        "F11",
+        "F12",
+        "F13",
+        "F15",
+        "F16",
+        "F20",
+        "F21",
+        "F22",
+        "F23",
+        "F30",
+        "F31",
+        "F32",
+        "F33",
+        "F34",
+        "F36",
+        "F45",
+        "F80",
+        "F82",
+        "F83",
+        "F85",
+        "F86"
+      ],
+      "chassis_slugs_top10": [
+        "f10",
+        "f20",
+        "f30"
+      ],
+      "relevant_to_top10": true,
+      "defect_snippet": "powiadomił Prezesa Urzędu Ochrony Konkurencji i Konsument&oacute;w, że w samochodach marki BMW, wyprodukowanych w&nbsp;Niemczech, możliwa jest usterka poduszki powietrznej kierowcy typu SDI, polegająca na degradacji tabletek generujących gaz pędny nadmuchiwacza. Może to w przypadku wyzwolenia poduszki spowodować nadmiernie agresywne spalanie, co może skutkować rozerwaniem obudowy nadmuchiwacza, a",
+      "source": {
+        "provider": "uokik",
+        "url": "https://uokik.gov.pl/bip/samochody-marki-bmw",
+        "tag_index": "https://uokik.gov.pl/bip/tagi/bmw"
+      },
+      "collected_at": "2026-09-22T16:37:20Z",
+      "confidence": "official_pl"
+    }
+  ]
+}

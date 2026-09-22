@@ -107,10 +107,10 @@ function Chip({
     <button
       type="button"
       onClick={onClick}
-      className={`h-tap shrink-0 rounded-full border px-3.5 text-sm ${
+      className={`h-tap shrink-0 rounded-full border px-3.5 text-sm font-medium ${
         active
-          ? "border-[var(--accent)] bg-[var(--card)] text-[var(--ink)]"
-          : "tap border-[var(--line)] bg-[var(--card)]"
+          ? "border-[var(--accent)] bg-[var(--card)] text-[var(--ink)] shadow-[0_0_0_1px_var(--accent)]"
+          : "tap border-[var(--line)] bg-[var(--card)] text-[var(--muted)]"
       }`}
     >
       {children}

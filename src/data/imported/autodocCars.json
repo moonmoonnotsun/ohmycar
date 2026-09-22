@@ -1,0 +1,8637 @@
+{
+  "source": "https://www.autodoc.co.uk",
+  "collected_at": "2026-09-22",
+  "note": "TecDoc car ids for Autodoc deep links: /bmw/{series}/{gen}/{id}-{slug}",
+  "byChassis": {
+    "e21": {
+      "gen": "3-e21",
+      "series": "3er-reihe",
+      "engines": [
+        {
+          "id": 11,
+          "slug": "315",
+          "hp": 75,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 12,
+          "slug": "316",
+          "hp": 90,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 13,
+          "slug": "316",
+          "hp": 90,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 14,
+          "slug": "318",
+          "hp": 98,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 15,
+          "slug": "318-i",
+          "hp": 105,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 16,
+          "slug": "320",
+          "hp": 109,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 35645,
+          "slug": "320-i",
+          "hp": 110,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 18,
+          "slug": "320-i",
+          "hp": 125,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 17,
+          "slug": "320-6",
+          "hp": 122,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 19,
+          "slug": "323-i",
+          "hp": 143,
+          "yearFrom": null,
+          "yearTo": null
+        }
+      ]
+    },
+    "e30": {
+      "gen": "3-e30",
+      "series": "3er-reihe",
+      "engines": [
+        {
+          "id": 6146,
+          "slug": "315",
+          "hp": 75,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 6145,
+          "slug": "316",
+          "hp": 90,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 20,
+          "slug": "316-ecotronic",
+          "hp": 90,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 21,
+          "slug": "316-i",
+          "hp": 100,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 6147,
+          "slug": "316-i",
+          "hp": 102,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 4651,
+          "slug": "316-i",
+          "hp": 102,
+          "yearFrom": 1988,
+          "yearTo": 1991
+        },
+        {
+          "id": 22,
+          "slug": "318-i",
+          "hp": 102,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 23,
+          "slug": "318-i",
+          "hp": 105,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 24,
+          "slug": "318-i",
+          "hp": 115,
+          "yearFrom": 1987,
+          "yearTo": 1991
+        },
+        {
+          "id": 27,
+          "slug": "318-i",
+          "hp": 113,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 28,
+          "slug": "318-is",
+          "hp": 136,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 135741,
+          "slug": "320-i",
+          "hp": 126,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 30,
+          "slug": "320-i",
+          "hp": 125,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 8286,
+          "slug": "320-i",
+          "hp": 150,
+          "yearFrom": 1985,
+          "yearTo": 1990
+        },
+        {
+          "id": 29,
+          "slug": "320-i",
+          "hp": 129,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 18153,
+          "slug": "320-is",
+          "hp": 192,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 34,
+          "slug": "323-i",
+          "hp": 150,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 33,
+          "slug": "323-i",
+          "hp": 139,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 42,
+          "slug": "324-d",
+          "hp": 86,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 43,
+          "slug": "324-td",
+          "hp": 115,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 40,
+          "slug": "325es-2-7",
+          "hp": 122,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 41,
+          "slug": "325-e-2-7",
+          "hp": 129,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 36,
+          "slug": "325-i-x",
+          "hp": 170,
+          "yearFrom": 1986,
+          "yearTo": 1991
+        },
+        {
+          "id": 37,
+          "slug": "325-i",
+          "hp": 170,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 39,
+          "slug": "325-i",
+          "hp": 171,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 121848,
+          "slug": "325-i",
+          "hp": 192,
+          "yearFrom": 1984,
+          "yearTo": 1991
+        },
+        {
+          "id": 38,
+          "slug": "325-i-x",
+          "hp": 171,
+          "yearFrom": 1986,
+          "yearTo": 1987
+        },
+        {
+          "id": 35,
+          "slug": "m3-2-3",
+          "hp": 215,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 32,
+          "slug": "m3-2-3",
+          "hp": 200,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 31,
+          "slug": "m3-2-3",
+          "hp": 195,
+          "yearFrom": 1986,
+          "yearTo": 1991
+        },
+        {
+          "id": 7049,
+          "slug": "m3-evo-i-2-3",
+          "hp": 220,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 6148,
+          "slug": "m3-evo-ii-2-5",
+          "hp": 238,
+          "yearFrom": null,
+          "yearTo": null
+        }
+      ]
+    },
+    "e36": {
+      "gen": "3-e36",
+      "series": "3er-reihe",
+      "engines": [
+        {
+          "id": 49,
+          "slug": "316-i",
+          "hp": 100,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 50,
+          "slug": "316-i",
+          "hp": 102,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 51,
+          "slug": "318-i",
+          "hp": 113,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 4650,
+          "slug": "318-i",
+          "hp": 115,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 35637,
+          "slug": "318-i",
+          "hp": 140,
+          "yearFrom": 1992,
+          "yearTo": 1995
+        },
+        {
+          "id": 52,
+          "slug": "318-is",
+          "hp": 140,
+          "yearFrom": 1993,
+          "yearTo": 1995
+        },
+        {
+          "id": 5102,
+          "slug": "318-is",
+          "hp": 140,
+          "yearFrom": 1996,
+          "yearTo": 1998
+        },
+        {
+          "id": 3818,
+          "slug": "318-tds",
+          "hp": 90,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 54,
+          "slug": "320-i",
+          "hp": 150,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 4628,
+          "slug": "323-i",
+          "hp": 170,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 59,
+          "slug": "325-i",
+          "hp": 192,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 63,
+          "slug": "325-tds",
+          "hp": 143,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 62,
+          "slug": "325-td",
+          "hp": 115,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 4627,
+          "slug": "328-i",
+          "hp": 193,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 14602,
+          "slug": "m3-3-0",
+          "hp": 286,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 5112,
+          "slug": "m3-3-2",
+          "hp": 321,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 35776,
+          "slug": "m3-3-2",
+          "hp": 243,
+          "yearFrom": null,
+          "yearTo": null
+        }
+      ]
+    },
+    "e36-compact": {
+      "gen": "3-compact-e36",
+      "series": "3er-reihe",
+      "engines": [
+        {
+          "id": 9201,
+          "slug": "316-g",
+          "hp": 102,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 3811,
+          "slug": "316-i",
+          "hp": 102,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 11369,
+          "slug": "316-i",
+          "hp": 105,
+          "yearFrom": 1999,
+          "yearTo": 2000
+        },
+        {
+          "id": 3824,
+          "slug": "318-tds",
+          "hp": 90,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 3825,
+          "slug": "318-ti",
+          "hp": 140,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 5103,
+          "slug": "318-ti",
+          "hp": 140,
+          "yearFrom": 1996,
+          "yearTo": 1999
+        },
+        {
+          "id": 35642,
+          "slug": "318-ti",
+          "hp": 136,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 8784,
+          "slug": "323-ti",
+          "hp": 170,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 121968,
+          "slug": "323-ti",
+          "hp": 163,
+          "yearFrom": null,
+          "yearTo": null
+        }
+      ]
+    },
+    "e39": {
+      "gen": "5-e39",
+      "series": "5er-reihe",
+      "engines": [
+        {
+          "id": 14599,
+          "slug": "520-d",
+          "hp": 136,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 5052,
+          "slug": "520-i",
+          "hp": 150,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 14186,
+          "slug": "520-i",
+          "hp": 136,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 15266,
+          "slug": "520-i",
+          "hp": 170,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 126078,
+          "slug": "520-i",
+          "hp": 163,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 5093,
+          "slug": "523-i",
+          "hp": 170,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 14679,
+          "slug": "525-d",
+          "hp": 163,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 15270,
+          "slug": "525-i",
+          "hp": 192,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 105994,
+          "slug": "525-i",
+          "hp": 186,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 8526,
+          "slug": "525-td",
+          "hp": 116,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 5053,
+          "slug": "525-tds",
+          "hp": 143,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 5094,
+          "slug": "528-i",
+          "hp": 193,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 10025,
+          "slug": "530-d",
+          "hp": 184,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 15267,
+          "slug": "530-d",
+          "hp": 193,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 15271,
+          "slug": "530-i",
+          "hp": 231,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 105995,
+          "slug": "530-i",
+          "hp": 228,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 5545,
+          "slug": "535-i",
+          "hp": 235,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 13088,
+          "slug": "535-i",
+          "hp": 245,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 5404,
+          "slug": "540-i",
+          "hp": 286,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 124064,
+          "slug": "540-i",
+          "hp": 294,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 10300,
+          "slug": "m5",
+          "hp": 400,
+          "yearFrom": null,
+          "yearTo": null
+        }
+      ]
+    },
+    "e46": {
+      "gen": "3-e46",
+      "series": "3er-reihe",
+      "engines": [
+        {
+          "id": 18822,
+          "slug": "316-i",
+          "hp": 115,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 16325,
+          "slug": "316-i",
+          "hp": 115,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 15894,
+          "slug": "316-i",
+          "hp": 105,
+          "yearFrom": 2000,
+          "yearTo": 2005
+        },
+        {
+          "id": 11042,
+          "slug": "316-i",
+          "hp": 105,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 16315,
+          "slug": "318-d",
+          "hp": 116,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 18465,
+          "slug": "318-d",
+          "hp": 116,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 8963,
+          "slug": "318-i",
+          "hp": 118,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 16198,
+          "slug": "318-i",
+          "hp": 143,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 121967,
+          "slug": "318-i",
+          "hp": 136,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 16201,
+          "slug": "320-d",
+          "hp": 150,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 54952,
+          "slug": "320-d",
+          "hp": 129,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 9092,
+          "slug": "320-i",
+          "hp": 150,
+          "yearFrom": 1998,
+          "yearTo": 2000
+        },
+        {
+          "id": 9045,
+          "slug": "320-d",
+          "hp": 136,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 15452,
+          "slug": "320-i",
+          "hp": 170,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 126076,
+          "slug": "320-i",
+          "hp": 163,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 9091,
+          "slug": "323-ti",
+          "hp": 170,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 126122,
+          "slug": "323-i",
+          "hp": 163,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 15454,
+          "slug": "328i",
+          "hp": 192,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 106991,
+          "slug": "325-i",
+          "hp": 186,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 137345,
+          "slug": "325-i",
+          "hp": 179,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 15456,
+          "slug": "325-xi",
+          "hp": 192,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 35677,
+          "slug": "325-xi",
+          "hp": 186,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 8964,
+          "slug": "328-i",
+          "hp": 193,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 123214,
+          "slug": "328-i",
+          "hp": 196,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 13874,
+          "slug": "330-d",
+          "hp": 184,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 17351,
+          "slug": "330-d",
+          "hp": 204,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 14922,
+          "slug": "330-i",
+          "hp": 231,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 55607,
+          "slug": "330-i",
+          "hp": 228,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 14774,
+          "slug": "330-xd",
+          "hp": 184,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 17352,
+          "slug": "330-xd",
+          "hp": 204,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 14802,
+          "slug": "330-xi",
+          "hp": 231,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 52055,
+          "slug": "330-xi",
+          "hp": 228,
+          "yearFrom": null,
+          "yearTo": null
+        }
+      ]
+    },
+    "e46-compact": {
+      "gen": "3-compact-e46",
+      "series": "3er-reihe",
+      "engines": [
+        {
+          "id": 15924,
+          "slug": "316-ti",
+          "hp": 115,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 27309,
+          "slug": "316-ti",
+          "hp": 105,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 30911,
+          "slug": "316-ti",
+          "hp": 115,
+          "yearFrom": 2002,
+          "yearTo": 2005
+        },
+        {
+          "id": 17350,
+          "slug": "318-td",
+          "hp": 115,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 16189,
+          "slug": "318-ti",
+          "hp": 143,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 124212,
+          "slug": "318-ti",
+          "hp": 136,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 16190,
+          "slug": "320-td",
+          "hp": 150,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 26863,
+          "slug": "320-td",
+          "hp": 136,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 15925,
+          "slug": "325-ti",
+          "hp": 192,
+          "yearFrom": null,
+          "yearTo": null
+        }
+      ]
+    },
+    "e53": {
+      "gen": "x5-e53",
+      "series": "x5",
+      "engines": [
+        {
+          "id": 13043,
+          "slug": "3-0-d",
+          "hp": 184,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 17625,
+          "slug": "3-0-d",
+          "hp": 218,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 34968,
+          "slug": "3-0-d",
+          "hp": 211,
+          "yearFrom": 2003,
+          "yearTo": 2006
+        },
+        {
+          "id": 17176,
+          "slug": "3-0-i",
+          "hp": 231,
+          "yearFrom": 2000,
+          "yearTo": 2006
+        },
+        {
+          "id": 106008,
+          "slug": "3-0-i",
+          "hp": 228,
+          "yearFrom": 2000,
+          "yearTo": 2006
+        },
+        {
+          "id": 13042,
+          "slug": "4-4-i",
+          "hp": 286,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 17624,
+          "slug": "4-4-i",
+          "hp": 320,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 16328,
+          "slug": "4-6-is",
+          "hp": 347,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 35790,
+          "slug": "4-6-is",
+          "hp": 355,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 18044,
+          "slug": "4-8-is",
+          "hp": 360,
+          "yearFrom": null,
+          "yearTo": null
+        }
+      ]
+    },
+    "e60": {
+      "gen": "5-e60",
+      "series": "5er-reihe",
+      "engines": [
+        {
+          "id": 134181,
+          "slug": "520-d",
+          "hp": 170,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 25489,
+          "slug": "520-d",
+          "hp": 177,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 19955,
+          "slug": "520-d",
+          "hp": 150,
+          "yearFrom": 2005,
+          "yearTo": 2007
+        },
+        {
+          "id": 19023,
+          "slug": "520-d",
+          "hp": 163,
+          "yearFrom": 2005,
+          "yearTo": 2009
+        },
+        {
+          "id": 59410,
+          "slug": "520-i",
+          "hp": 156,
+          "yearFrom": 2007,
+          "yearTo": 2010
+        },
+        {
+          "id": 25491,
+          "slug": "520-i",
+          "hp": 170,
+          "yearFrom": 2007,
+          "yearTo": 2009
+        },
+        {
+          "id": 17290,
+          "slug": "520-i",
+          "hp": 170,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 26960,
+          "slug": "520-i",
+          "hp": 163,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 118554,
+          "slug": "523-i",
+          "hp": 190,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 22659,
+          "slug": "523-i",
+          "hp": 190,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 19013,
+          "slug": "523-i",
+          "hp": 177,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 17968,
+          "slug": "525-d",
+          "hp": 177,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 22660,
+          "slug": "525-d",
+          "hp": 197,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 19950,
+          "slug": "525-d",
+          "hp": 163,
+          "yearFrom": 2004,
+          "yearTo": 2010
+        },
+        {
+          "id": 31022,
+          "slug": "525-d-xdrive",
+          "hp": 197,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 139265,
+          "slug": "525-i",
+          "hp": 218,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 19018,
+          "slug": "525-i",
+          "hp": 218,
+          "yearFrom": 2005,
+          "yearTo": 2009
+        },
+        {
+          "id": 17293,
+          "slug": "525-i",
+          "hp": 192,
+          "yearFrom": 2003,
+          "yearTo": 2005
+        },
+        {
+          "id": 25446,
+          "slug": "525-xd",
+          "hp": 197,
+          "yearFrom": 2007,
+          "yearTo": 2008
+        },
+        {
+          "id": 19095,
+          "slug": "525-xi",
+          "hp": 218,
+          "yearFrom": 2005,
+          "yearTo": 2007
+        },
+        {
+          "id": 22658,
+          "slug": "525-xi",
+          "hp": 218,
+          "yearFrom": 2007,
+          "yearTo": 2009
+        },
+        {
+          "id": 16022,
+          "slug": "525-i",
+          "hp": 186,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 121993,
+          "slug": "525-i",
+          "hp": 211,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 22657,
+          "slug": "525-i",
+          "hp": 218,
+          "yearFrom": 2007,
+          "yearTo": 2010
+        },
+        {
+          "id": 121966,
+          "slug": "525-i",
+          "hp": 211,
+          "yearFrom": 2005,
+          "yearTo": 2010
+        },
+        {
+          "id": 31020,
+          "slug": "525-i-xdrive",
+          "hp": 218,
+          "yearFrom": 2008,
+          "yearTo": 2010
+        },
+        {
+          "id": 122554,
+          "slug": "528-i",
+          "hp": 234,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 127006,
+          "slug": "528-i-xdrive",
+          "hp": 234,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 19024,
+          "slug": "530-d",
+          "hp": 231,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 118555,
+          "slug": "530-i",
+          "hp": 272,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 19007,
+          "slug": "530-i",
+          "hp": 258,
+          "yearFrom": 2005,
+          "yearTo": 2007
+        },
+        {
+          "id": 127003,
+          "slug": "530-i",
+          "hp": 228,
+          "yearFrom": 2004,
+          "yearTo": 2005
+        },
+        {
+          "id": 22663,
+          "slug": "530-i",
+          "hp": 272,
+          "yearFrom": 2007,
+          "yearTo": 2009
+        },
+        {
+          "id": 129618,
+          "slug": "530-xi",
+          "hp": 272,
+          "yearFrom": 2007,
+          "yearTo": 2009
+        },
+        {
+          "id": 22661,
+          "slug": "530-d",
+          "hp": 235,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 17292,
+          "slug": "530-d",
+          "hp": 218,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 54932,
+          "slug": "530-d",
+          "hp": 211,
+          "yearFrom": 2002,
+          "yearTo": 2009
+        },
+        {
+          "id": 31023,
+          "slug": "530-d-xdrive",
+          "hp": 235,
+          "yearFrom": 2007,
+          "yearTo": 2009
+        },
+        {
+          "id": 25091,
+          "slug": "530-i",
+          "hp": 254,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 17291,
+          "slug": "530-i",
+          "hp": 231,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 16023,
+          "slug": "530-i",
+          "hp": 228,
+          "yearFrom": 2007,
+          "yearTo": 2009
+        },
+        {
+          "id": 31021,
+          "slug": "530-i-xdrive",
+          "hp": 272,
+          "yearFrom": 2008,
+          "yearTo": 2009
+        },
+        {
+          "id": 22662,
+          "slug": "530-xd",
+          "hp": 235,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 19097,
+          "slug": "530-xd",
+          "hp": 231,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 22664,
+          "slug": "530-xi",
+          "hp": 272,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 19096,
+          "slug": "530-xi",
+          "hp": 258,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 18308,
+          "slug": "535-d",
+          "hp": 272,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 22656,
+          "slug": "535-d",
+          "hp": 286,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 25092,
+          "slug": "535-i",
+          "hp": 306,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 53674,
+          "slug": "535-i-xdrive",
+          "hp": 305,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 105996,
+          "slug": "535-xi",
+          "hp": 306,
+          "yearFrom": 2007,
+          "yearTo": 2008
+        },
+        {
+          "id": 105982,
+          "slug": "535-i",
+          "hp": 305,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 101037,
+          "slug": "540-i",
+          "hp": 299,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 19020,
+          "slug": "540-i",
+          "hp": 306,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 17294,
+          "slug": "545-i",
+          "hp": 333,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 35730,
+          "slug": "545-i",
+          "hp": 329,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 19021,
+          "slug": "550-i",
+          "hp": 367,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 35731,
+          "slug": "550-i",
+          "hp": 355,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 18252,
+          "slug": "m5",
+          "hp": 507,
+          "yearFrom": null,
+          "yearTo": null
+        }
+      ]
+    },
+    "e61": {
+      "gen": "5-touring-e61",
+      "series": "5er-reihe",
+      "engines": [
+        {
+          "id": 25490,
+          "slug": "520-d",
+          "hp": 177,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 19956,
+          "slug": "520-d",
+          "hp": 150,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 19223,
+          "slug": "520-d",
+          "hp": 163,
+          "yearFrom": 2005,
+          "yearTo": 2010
+        },
+        {
+          "id": 25492,
+          "slug": "520-i",
+          "hp": 170,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 59411,
+          "slug": "520-i",
+          "hp": 163,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 22673,
+          "slug": "523-i",
+          "hp": 190,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 19015,
+          "slug": "523-i",
+          "hp": 177,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 118557,
+          "slug": "523-i",
+          "hp": 190,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 22665,
+          "slug": "525-d",
+          "hp": 197,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 17969,
+          "slug": "525-d",
+          "hp": 177,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 19949,
+          "slug": "525-d",
+          "hp": 163,
+          "yearFrom": 2004,
+          "yearTo": 2007
+        },
+        {
+          "id": 31026,
+          "slug": "525-d-xdrive",
+          "hp": 197,
+          "yearFrom": 2008,
+          "yearTo": 2010
+        },
+        {
+          "id": 19019,
+          "slug": "525-i",
+          "hp": 218,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 126064,
+          "slug": "525-i",
+          "hp": 211,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 22670,
+          "slug": "525-i",
+          "hp": 218,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 124994,
+          "slug": "525-i",
+          "hp": 211,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 17775,
+          "slug": "525-i",
+          "hp": 192,
+          "yearFrom": 2004,
+          "yearTo": 2010
+        },
+        {
+          "id": 31024,
+          "slug": "525-i-xdrive",
+          "hp": 218,
+          "yearFrom": 2008,
+          "yearTo": 2010
+        },
+        {
+          "id": 25447,
+          "slug": "525-xd",
+          "hp": 197,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 19099,
+          "slug": "525-xi",
+          "hp": 218,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 22671,
+          "slug": "530xi",
+          "hp": 218,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 19025,
+          "slug": "530-d",
+          "hp": 231,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 22666,
+          "slug": "530-d",
+          "hp": 235,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 52829,
+          "slug": "530-d",
+          "hp": 211,
+          "yearFrom": 2004,
+          "yearTo": 2010
+        },
+        {
+          "id": 17778,
+          "slug": "530-d",
+          "hp": 218,
+          "yearFrom": 2004,
+          "yearTo": 2005
+        },
+        {
+          "id": 31027,
+          "slug": "530-d-xdrive",
+          "hp": 235,
+          "yearFrom": 2007,
+          "yearTo": 2010
+        },
+        {
+          "id": 118556,
+          "slug": "530-i",
+          "hp": 272,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 22668,
+          "slug": "530-i",
+          "hp": 272,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 19009,
+          "slug": "530-i",
+          "hp": 258,
+          "yearFrom": 2004,
+          "yearTo": 2007
+        },
+        {
+          "id": 31025,
+          "slug": "530-i-xdrive",
+          "hp": 272,
+          "yearFrom": 2008,
+          "yearTo": 2010
+        },
+        {
+          "id": 19098,
+          "slug": "530-xd",
+          "hp": 231,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 22667,
+          "slug": "530-xd",
+          "hp": 235,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 129623,
+          "slug": "530-xi",
+          "hp": 272,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 22669,
+          "slug": "530-xi",
+          "hp": 272,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 19100,
+          "slug": "530-xi",
+          "hp": 258,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 22672,
+          "slug": "535-d",
+          "hp": 286,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 18309,
+          "slug": "535-d",
+          "hp": 272,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 50810,
+          "slug": "535-xi",
+          "hp": 305,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 17777,
+          "slug": "545-i",
+          "hp": 333,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 19022,
+          "slug": "550-i",
+          "hp": 367,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 22696,
+          "slug": "m5",
+          "hp": 507,
+          "yearFrom": null,
+          "yearTo": null
+        }
+      ]
+    },
+    "e70": {
+      "gen": "x5-e70",
+      "series": "x5",
+      "engines": [
+        {
+          "id": 34969,
+          "slug": "3-0-3-0d",
+          "hp": 211,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 23282,
+          "slug": "3-0-d",
+          "hp": 235,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 25498,
+          "slug": "3-0-sd",
+          "hp": 286,
+          "yearFrom": 2007,
+          "yearTo": 2008
+        },
+        {
+          "id": 23280,
+          "slug": "3-0-si",
+          "hp": 272,
+          "yearFrom": 2006,
+          "yearTo": 2008
+        },
+        {
+          "id": 23281,
+          "slug": "4-8-i-xdrive",
+          "hp": 355,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 31960,
+          "slug": "m",
+          "hp": 555,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 124067,
+          "slug": "m",
+          "hp": 563,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 55985,
+          "slug": "m-50-d",
+          "hp": 381,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 1097,
+          "slug": "xdrive-30-d",
+          "hp": 245,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 30908,
+          "slug": "xdrive-30-d",
+          "hp": 235,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 59334,
+          "slug": "xdrive-30-d",
+          "hp": 211,
+          "yearFrom": 2008,
+          "yearTo": 2013
+        },
+        {
+          "id": 30906,
+          "slug": "xdrive-30-i",
+          "hp": 272,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 30909,
+          "slug": "xdrive-35-d",
+          "hp": 286,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 1103,
+          "slug": "xdrive-35-i",
+          "hp": 306,
+          "yearFrom": 2010,
+          "yearTo": 2013
+        },
+        {
+          "id": 30907,
+          "slug": "xdrive-48-i",
+          "hp": 355,
+          "yearFrom": 2008,
+          "yearTo": 2010
+        },
+        {
+          "id": 8292,
+          "slug": "xdrive-50-i",
+          "hp": 408,
+          "yearFrom": 2010,
+          "yearTo": 2013
+        },
+        {
+          "id": 121846,
+          "slug": "xdrive-30-i",
+          "hp": 234,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 123218,
+          "slug": "xdrive-30-i",
+          "hp": 264,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 52207,
+          "slug": "xdrive-35-i",
+          "hp": 320,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 1098,
+          "slug": "xdrive-40-d",
+          "hp": 306,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 120501,
+          "slug": "xdrive-40-i",
+          "hp": 306,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 106009,
+          "slug": "xdrive-50-i",
+          "hp": 405,
+          "yearFrom": null,
+          "yearTo": null
+        }
+      ]
+    },
+    "e71": {
+      "gen": "x6-e71",
+      "series": "x6",
+      "engines": []
+    },
+    "e81": {
+      "gen": "1-e81",
+      "series": "1er-reihe",
+      "engines": [
+        {
+          "id": 31672,
+          "slug": "116-d",
+          "hp": 116,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 58963,
+          "slug": "116-d",
+          "hp": 90,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 17928,
+          "slug": "116-i",
+          "hp": 115,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 25488,
+          "slug": "116-i",
+          "hp": 122,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 31671,
+          "slug": "116-i",
+          "hp": 122,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 22955,
+          "slug": "118-d",
+          "hp": 143,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 32172,
+          "slug": "118-d",
+          "hp": 136,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 22953,
+          "slug": "118-i",
+          "hp": 143,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 55945,
+          "slug": "118-i",
+          "hp": 136,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 126495,
+          "slug": "118-i",
+          "hp": 129,
+          "yearFrom": 2006,
+          "yearTo": 2008
+        },
+        {
+          "id": 17931,
+          "slug": "120-d",
+          "hp": 163,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 22956,
+          "slug": "120-d",
+          "hp": 177,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 124739,
+          "slug": "120-d",
+          "hp": 197,
+          "yearFrom": 2007,
+          "yearTo": 2011
+        },
+        {
+          "id": 22954,
+          "slug": "120-i",
+          "hp": 170,
+          "yearFrom": 2007,
+          "yearTo": 2012
+        },
+        {
+          "id": 30506,
+          "slug": "120-i",
+          "hp": 156,
+          "yearFrom": 2007,
+          "yearTo": 2011
+        },
+        {
+          "id": 32173,
+          "slug": "120-i",
+          "hp": 163,
+          "yearFrom": 2007,
+          "yearTo": 2011
+        },
+        {
+          "id": 23432,
+          "slug": "123-d",
+          "hp": 204,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 18560,
+          "slug": "130-i",
+          "hp": 265,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 31673,
+          "slug": "130-i",
+          "hp": 258,
+          "yearFrom": null,
+          "yearTo": null
+        }
+      ]
+    },
+    "e82": {
+      "gen": "1-coupe-e82",
+      "series": "1er-reihe",
+      "engines": [
+        {
+          "id": 12272,
+          "slug": "118-d",
+          "hp": 136,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 32676,
+          "slug": "118-d",
+          "hp": 143,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 23430,
+          "slug": "120-d",
+          "hp": 177,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 32177,
+          "slug": "120-d",
+          "hp": 163,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 122022,
+          "slug": "120-d",
+          "hp": 197,
+          "yearFrom": 2007,
+          "yearTo": 2013
+        },
+        {
+          "id": 32675,
+          "slug": "120-i",
+          "hp": 170,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 59307,
+          "slug": "120-i",
+          "hp": 156,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 23431,
+          "slug": "123-d",
+          "hp": 204,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 25442,
+          "slug": "125-i",
+          "hp": 218,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 51352,
+          "slug": "128-i",
+          "hp": 234,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 23429,
+          "slug": "135-i",
+          "hp": 306,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 123155,
+          "slug": "135-i",
+          "hp": 326,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 9877,
+          "slug": "m",
+          "hp": 340,
+          "yearFrom": null,
+          "yearTo": null
+        }
+      ]
+    },
+    "e83": {
+      "gen": "x3-e83",
+      "series": "x3",
+      "engines": [
+        {
+          "id": 18232,
+          "slug": "2-0-d",
+          "hp": 150,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 19033,
+          "slug": "2-0-i",
+          "hp": 150,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 25497,
+          "slug": "2-0-sd",
+          "hp": 177,
+          "yearFrom": 2007,
+          "yearTo": 2008
+        },
+        {
+          "id": 17812,
+          "slug": "2-5-i",
+          "hp": 192,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 35786,
+          "slug": "2-5-i",
+          "hp": 186,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 19828,
+          "slug": "2-5-si",
+          "hp": 218,
+          "yearFrom": 2006,
+          "yearTo": 2008
+        },
+        {
+          "id": 54750,
+          "slug": "2-5-si-xdrive",
+          "hp": 211,
+          "yearFrom": 2006,
+          "yearTo": 2008
+        },
+        {
+          "id": 17813,
+          "slug": "3-0-d",
+          "hp": 204,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 19037,
+          "slug": "3-0-d",
+          "hp": 218,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 123206,
+          "slug": "3-0-d",
+          "hp": 211,
+          "yearFrom": 2005,
+          "yearTo": 2008
+        },
+        {
+          "id": 106012,
+          "slug": "3-0-i",
+          "hp": 228,
+          "yearFrom": 2004,
+          "yearTo": 2006
+        },
+        {
+          "id": 17811,
+          "slug": "3-0-i-xdrive",
+          "hp": 231,
+          "yearFrom": 2003,
+          "yearTo": 2006
+        },
+        {
+          "id": 19829,
+          "slug": "3-0-sd",
+          "hp": 286,
+          "yearFrom": 2006,
+          "yearTo": 2008
+        },
+        {
+          "id": 19827,
+          "slug": "3-0-si",
+          "hp": 272,
+          "yearFrom": 2006,
+          "yearTo": 2008
+        },
+        {
+          "id": 118992,
+          "slug": "3-0-si",
+          "hp": 264,
+          "yearFrom": 2006,
+          "yearTo": 2008
+        },
+        {
+          "id": 31012,
+          "slug": "xdrive-18-d",
+          "hp": 143,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 52887,
+          "slug": "xdrive-18-d",
+          "hp": 136,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 10575,
+          "slug": "xdrive-20-d",
+          "hp": 163,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 31011,
+          "slug": "xdrive-20-d",
+          "hp": 177,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 31009,
+          "slug": "xdrive-25-i",
+          "hp": 218,
+          "yearFrom": 2008,
+          "yearTo": 2010
+        },
+        {
+          "id": 133093,
+          "slug": "xdrive-25-i",
+          "hp": 211,
+          "yearFrom": 2008,
+          "yearTo": 2010
+        },
+        {
+          "id": 16469,
+          "slug": "xdrive-30-i",
+          "hp": 218,
+          "yearFrom": 2006,
+          "yearTo": 2010
+        },
+        {
+          "id": 31010,
+          "slug": "xdrive-30-i",
+          "hp": 272,
+          "yearFrom": 2008,
+          "yearTo": 2010
+        },
+        {
+          "id": 123215,
+          "slug": "xdrive-30-i",
+          "hp": 264,
+          "yearFrom": 2008,
+          "yearTo": 2010
+        },
+        {
+          "id": 31008,
+          "slug": "xdrive-20-i",
+          "hp": 150,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 10578,
+          "slug": "xdrive-30-d",
+          "hp": 211,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 31013,
+          "slug": "xdrive-30-d",
+          "hp": 218,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 31014,
+          "slug": "xdrive-35-d",
+          "hp": 286,
+          "yearFrom": null,
+          "yearTo": null
+        }
+      ]
+    },
+    "e84": {
+      "gen": "x1-e84",
+      "series": "x1",
+      "engines": [
+        {
+          "id": 57548,
+          "slug": "sdrive-16-d",
+          "hp": 116,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 100902,
+          "slug": "sdrive-16-i",
+          "hp": 143,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 32113,
+          "slug": "sdrive-18-d",
+          "hp": 143,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 26980,
+          "slug": "sdrive-18-i",
+          "hp": 136,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 34992,
+          "slug": "sdrive-18-i",
+          "hp": 150,
+          "yearFrom": 2010,
+          "yearTo": 2015
+        },
+        {
+          "id": 56616,
+          "slug": "sdrive-28-i",
+          "hp": 245,
+          "yearFrom": 2012,
+          "yearTo": 2015
+        },
+        {
+          "id": 34990,
+          "slug": "sdrive-18-d",
+          "hp": 136,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 32116,
+          "slug": "sdrive-20-d",
+          "hp": 177,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 34989,
+          "slug": "sdrive-20-d",
+          "hp": 163,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 58951,
+          "slug": "sdrive-20-d",
+          "hp": 184,
+          "yearFrom": 2012,
+          "yearTo": 2015
+        },
+        {
+          "id": 11952,
+          "slug": "sdrive-20-i",
+          "hp": 184,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 107828,
+          "slug": "sdrive-20-i-flex",
+          "hp": 184,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 32114,
+          "slug": "xdrive-18-d",
+          "hp": 143,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 34991,
+          "slug": "xdrive-18-d",
+          "hp": 136,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 32115,
+          "slug": "xdrive-20-d",
+          "hp": 177,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 34993,
+          "slug": "xdrive-25-i",
+          "hp": 218,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 10030,
+          "slug": "xdrive-28-i",
+          "hp": 245,
+          "yearFrom": 2011,
+          "yearTo": 2015
+        },
+        {
+          "id": 32112,
+          "slug": "xdrive-28-i",
+          "hp": 258,
+          "yearFrom": 2009,
+          "yearTo": 2011
+        },
+        {
+          "id": 106013,
+          "slug": "xdrive-35-i",
+          "hp": 306,
+          "yearFrom": 2011,
+          "yearTo": 2015
+        },
+        {
+          "id": 34988,
+          "slug": "xdrive-20-d",
+          "hp": 163,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 57551,
+          "slug": "xdrive-20-d",
+          "hp": 184,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 11953,
+          "slug": "xdrive-20-i",
+          "hp": 184,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 32117,
+          "slug": "xdrive-23-d",
+          "hp": 204,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 57251,
+          "slug": "xdrive-25-d",
+          "hp": 218,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 121831,
+          "slug": "xdrive-28-i",
+          "hp": 264,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 119106,
+          "slug": "xdrive-28-i-flex",
+          "hp": 245,
+          "yearFrom": null,
+          "yearTo": null
+        }
+      ]
+    },
+    "e87": {
+      "gen": "1-e87",
+      "series": "1er-reihe",
+      "engines": [
+        {
+          "id": 58252,
+          "slug": "116-d",
+          "hp": 116,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 58168,
+          "slug": "116-i",
+          "hp": 115,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 58169,
+          "slug": "116-i",
+          "hp": 122,
+          "yearFrom": 2007,
+          "yearTo": 2011
+        },
+        {
+          "id": 58964,
+          "slug": "116-d",
+          "hp": 90,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 58184,
+          "slug": "116-i",
+          "hp": 122,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 58253,
+          "slug": "118-d",
+          "hp": 122,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 58254,
+          "slug": "118-d",
+          "hp": 136,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 58256,
+          "slug": "118-d",
+          "hp": 143,
+          "yearFrom": 2007,
+          "yearTo": 2011
+        },
+        {
+          "id": 58185,
+          "slug": "118-i",
+          "hp": 129,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 58186,
+          "slug": "118-i",
+          "hp": 136,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 58187,
+          "slug": "118-i",
+          "hp": 143,
+          "yearFrom": 2006,
+          "yearTo": 2011
+        },
+        {
+          "id": 59742,
+          "slug": "118-i",
+          "hp": 170,
+          "yearFrom": 2007,
+          "yearTo": 2007
+        },
+        {
+          "id": 58283,
+          "slug": "120-d",
+          "hp": 163,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 58303,
+          "slug": "120-d",
+          "hp": 177,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 124781,
+          "slug": "120-d",
+          "hp": 150,
+          "yearFrom": 2004,
+          "yearTo": 2007
+        },
+        {
+          "id": 136825,
+          "slug": "120-d",
+          "hp": 156,
+          "yearFrom": 2006,
+          "yearTo": 2007
+        },
+        {
+          "id": 136827,
+          "slug": "120-d",
+          "hp": 170,
+          "yearFrom": 2007,
+          "yearTo": 2010
+        },
+        {
+          "id": 58188,
+          "slug": "120-i",
+          "hp": 150,
+          "yearFrom": 2004,
+          "yearTo": 2007
+        },
+        {
+          "id": 58218,
+          "slug": "120-i",
+          "hp": 156,
+          "yearFrom": 2007,
+          "yearTo": 2011
+        },
+        {
+          "id": 58221,
+          "slug": "120-i",
+          "hp": 163,
+          "yearFrom": 2007,
+          "yearTo": 2011
+        },
+        {
+          "id": 58224,
+          "slug": "120-i",
+          "hp": 170,
+          "yearFrom": 2007,
+          "yearTo": 2011
+        },
+        {
+          "id": 58304,
+          "slug": "123-d",
+          "hp": 204,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 58233,
+          "slug": "130-i",
+          "hp": 258,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 58238,
+          "slug": "130-i",
+          "hp": 265,
+          "yearFrom": null,
+          "yearTo": null
+        }
+      ]
+    },
+    "e88": {
+      "gen": "1-convertible-e88",
+      "series": "1er-reihe",
+      "engines": [
+        {
+          "id": 29943,
+          "slug": "118-d",
+          "hp": 143,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 32176,
+          "slug": "118-d",
+          "hp": 136,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 25443,
+          "slug": "118-i",
+          "hp": 143,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 59274,
+          "slug": "118-i",
+          "hp": 136,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 25445,
+          "slug": "120-d",
+          "hp": 177,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 32175,
+          "slug": "120-d",
+          "hp": 163,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 55647,
+          "slug": "120-d",
+          "hp": 197,
+          "yearFrom": 2008,
+          "yearTo": 2013
+        },
+        {
+          "id": 24440,
+          "slug": "120-i",
+          "hp": 170,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 32174,
+          "slug": "120-i",
+          "hp": 163,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 55639,
+          "slug": "120-i",
+          "hp": 156,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 29944,
+          "slug": "123-d",
+          "hp": 204,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 24441,
+          "slug": "125-i",
+          "hp": 218,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 50120,
+          "slug": "128-i",
+          "hp": 234,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 25444,
+          "slug": "135-i",
+          "hp": 306,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 55640,
+          "slug": "135-i",
+          "hp": 326,
+          "yearFrom": null,
+          "yearTo": null
+        }
+      ]
+    },
+    "e90": {
+      "gen": "3-e90",
+      "series": "3er-reihe",
+      "engines": [
+        {
+          "id": 33386,
+          "slug": "316-d",
+          "hp": 116,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 30905,
+          "slug": "316-i",
+          "hp": 122,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 27555,
+          "slug": "316-i",
+          "hp": 115,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 5768,
+          "slug": "318-d",
+          "hp": 136,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 18966,
+          "slug": "318-i",
+          "hp": 129,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 58058,
+          "slug": "318-i",
+          "hp": 136,
+          "yearFrom": 2007,
+          "yearTo": 2011
+        },
+        {
+          "id": 25465,
+          "slug": "318-i",
+          "hp": 143,
+          "yearFrom": 2007,
+          "yearTo": 2011
+        },
+        {
+          "id": 18967,
+          "slug": "318-d",
+          "hp": 122,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 25466,
+          "slug": "318-d",
+          "hp": 143,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 136829,
+          "slug": "320-d",
+          "hp": 170,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 18452,
+          "slug": "320-d",
+          "hp": 163,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 25471,
+          "slug": "320-d",
+          "hp": 177,
+          "yearFrom": 2007,
+          "yearTo": 2010
+        },
+        {
+          "id": 33387,
+          "slug": "320-d",
+          "hp": 184,
+          "yearFrom": 2010,
+          "yearTo": 2011
+        },
+        {
+          "id": 25470,
+          "slug": "320-i",
+          "hp": 170,
+          "yearFrom": 2007,
+          "yearTo": 2011
+        },
+        {
+          "id": 18449,
+          "slug": "320-i",
+          "hp": 150,
+          "yearFrom": 2004,
+          "yearTo": 2007
+        },
+        {
+          "id": 59741,
+          "slug": "320-d",
+          "hp": 156,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 19953,
+          "slug": "320-d",
+          "hp": 150,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 33388,
+          "slug": "320-d-xdrive",
+          "hp": 184,
+          "yearFrom": 2010,
+          "yearTo": 2011
+        },
+        {
+          "id": 11399,
+          "slug": "320-d-xdrive",
+          "hp": 163,
+          "yearFrom": 2008,
+          "yearTo": 2011
+        },
+        {
+          "id": 31031,
+          "slug": "320-d-xdrive",
+          "hp": 177,
+          "yearFrom": 2008,
+          "yearTo": 2010
+        },
+        {
+          "id": 121998,
+          "slug": "320-i",
+          "hp": 163,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 33573,
+          "slug": "320-i",
+          "hp": 156,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 19496,
+          "slug": "320-si",
+          "hp": 173,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 55937,
+          "slug": "323-i",
+          "hp": 190,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 28018,
+          "slug": "323-i",
+          "hp": 177,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 19998,
+          "slug": "325-d",
+          "hp": 197,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 33396,
+          "slug": "325-d",
+          "hp": 204,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 117778,
+          "slug": "325-i",
+          "hp": 211,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 56495,
+          "slug": "325-i",
+          "hp": 222,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 25468,
+          "slug": "328-i",
+          "hp": 218,
+          "yearFrom": 2007,
+          "yearTo": 2011
+        },
+        {
+          "id": 54518,
+          "slug": "325-i",
+          "hp": 211,
+          "yearFrom": 2006,
+          "yearTo": 2011
+        },
+        {
+          "id": 18450,
+          "slug": "325-i",
+          "hp": 218,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 133046,
+          "slug": "325-i-xdrive",
+          "hp": 211,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 31028,
+          "slug": "325-i-xdrive",
+          "hp": 218,
+          "yearFrom": 2008,
+          "yearTo": 2011
+        },
+        {
+          "id": 139273,
+          "slug": "325-xi",
+          "hp": 218,
+          "yearFrom": 2005,
+          "yearTo": 2006
+        },
+        {
+          "id": 25469,
+          "slug": "325-xi",
+          "hp": 218,
+          "yearFrom": 2007,
+          "yearTo": 2008
+        },
+        {
+          "id": 19101,
+          "slug": "325-xi",
+          "hp": 218,
+          "yearFrom": 2005,
+          "yearTo": 2008
+        },
+        {
+          "id": 58077,
+          "slug": "328-i",
+          "hp": 234,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 105986,
+          "slug": "328-i-xdrive",
+          "hp": 234,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 119903,
+          "slug": "328-xi",
+          "hp": 234,
+          "yearFrom": 2006,
+          "yearTo": 2008
+        },
+        {
+          "id": 30864,
+          "slug": "330-d",
+          "hp": 245,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 118622,
+          "slug": "330-i",
+          "hp": 272,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 18451,
+          "slug": "330-i",
+          "hp": 258,
+          "yearFrom": 2004,
+          "yearTo": 2011
+        },
+        {
+          "id": 124777,
+          "slug": "330-d",
+          "hp": 211,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 18968,
+          "slug": "330-d",
+          "hp": 231,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 30868,
+          "slug": "330-d-xdrive",
+          "hp": 245,
+          "yearFrom": 2008,
+          "yearTo": 2011
+        },
+        {
+          "id": 25472,
+          "slug": "330-i",
+          "hp": 272,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 31029,
+          "slug": "330-i-xdrive",
+          "hp": 272,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 19103,
+          "slug": "330-xd",
+          "hp": 231,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 25473,
+          "slug": "330-xi",
+          "hp": 272,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 19102,
+          "slug": "330-xi",
+          "hp": 258,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 53532,
+          "slug": "335-d",
+          "hp": 269,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 19837,
+          "slug": "335-d",
+          "hp": 286,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 28396,
+          "slug": "335-i",
+          "hp": 299,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 28389,
+          "slug": "330i",
+          "hp": 305,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 121918,
+          "slug": "335-i",
+          "hp": 326,
+          "yearFrom": 2006,
+          "yearTo": 2011
+        },
+        {
+          "id": 105989,
+          "slug": "335-i-xdrive",
+          "hp": 305,
+          "yearFrom": 2008,
+          "yearTo": 2011
+        },
+        {
+          "id": 123156,
+          "slug": "335-i-xdrive",
+          "hp": 326,
+          "yearFrom": 2008,
+          "yearTo": 2011
+        },
+        {
+          "id": 19833,
+          "slug": "335-i",
+          "hp": 306,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 31030,
+          "slug": "335-i-xdrive",
+          "hp": 306,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 25467,
+          "slug": "335-xi",
+          "hp": 306,
+          "yearFrom": 2007,
+          "yearTo": 2008
+        },
+        {
+          "id": 105987,
+          "slug": "335-xi",
+          "hp": 305,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 123157,
+          "slug": "335-xi",
+          "hp": 326,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 26589,
+          "slug": "m3",
+          "hp": 420,
+          "yearFrom": null,
+          "yearTo": null
+        }
+      ]
+    },
+    "e91": {
+      "gen": "3-touring-e91",
+      "series": "3er-reihe",
+      "engines": [
+        {
+          "id": 11145,
+          "slug": "316-d",
+          "hp": 116,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 30910,
+          "slug": "316-i",
+          "hp": 122,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 25475,
+          "slug": "318-d",
+          "hp": 143,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 3980,
+          "slug": "318-d",
+          "hp": 136,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 19298,
+          "slug": "318-d",
+          "hp": 122,
+          "yearFrom": 2005,
+          "yearTo": 2007
+        },
+        {
+          "id": 10780,
+          "slug": "318-i",
+          "hp": 136,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 25474,
+          "slug": "318-i",
+          "hp": 143,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 19299,
+          "slug": "318-i",
+          "hp": 129,
+          "yearFrom": 2006,
+          "yearTo": 2007
+        },
+        {
+          "id": 33389,
+          "slug": "320-d",
+          "hp": 184,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 123184,
+          "slug": "320-d",
+          "hp": 200,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 123185,
+          "slug": "320-d",
+          "hp": 197,
+          "yearFrom": 2007,
+          "yearTo": 2010
+        },
+        {
+          "id": 19954,
+          "slug": "320-d",
+          "hp": 150,
+          "yearFrom": 2004,
+          "yearTo": 2007
+        },
+        {
+          "id": 123188,
+          "slug": "320-d-xdrive",
+          "hp": 197,
+          "yearFrom": 2008,
+          "yearTo": 2010
+        },
+        {
+          "id": 123187,
+          "slug": "320-d-xdrive",
+          "hp": 200,
+          "yearFrom": 2010,
+          "yearTo": 2012
+        },
+        {
+          "id": 34946,
+          "slug": "320-d-xdrive",
+          "hp": 163,
+          "yearFrom": 2009,
+          "yearTo": 2012
+        },
+        {
+          "id": 25482,
+          "slug": "320-d",
+          "hp": 177,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 18761,
+          "slug": "320-d",
+          "hp": 163,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 31035,
+          "slug": "320-d-xdrive",
+          "hp": 177,
+          "yearFrom": 2008,
+          "yearTo": 2010
+        },
+        {
+          "id": 33390,
+          "slug": "320-d-xdrive",
+          "hp": 184,
+          "yearFrom": 2010,
+          "yearTo": 2012
+        },
+        {
+          "id": 25476,
+          "slug": "320-i",
+          "hp": 170,
+          "yearFrom": 2007,
+          "yearTo": 2012
+        },
+        {
+          "id": 123190,
+          "slug": "320-i",
+          "hp": 163,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 55899,
+          "slug": "320-i",
+          "hp": 156,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 18758,
+          "slug": "320-i",
+          "hp": 150,
+          "yearFrom": 2005,
+          "yearTo": 2012
+        },
+        {
+          "id": 112302,
+          "slug": "323-i",
+          "hp": 190,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 28020,
+          "slug": "323-i",
+          "hp": 177,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 19995,
+          "slug": "325-d",
+          "hp": 197,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 34767,
+          "slug": "325-d",
+          "hp": 204,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 124763,
+          "slug": "325-i",
+          "hp": 211,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 25480,
+          "slug": "328i",
+          "hp": 218,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 3536,
+          "slug": "325-i",
+          "hp": 211,
+          "yearFrom": 2007,
+          "yearTo": 2012
+        },
+        {
+          "id": 18759,
+          "slug": "325-i",
+          "hp": 218,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 133087,
+          "slug": "325-i-xdrive",
+          "hp": 211,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 31032,
+          "slug": "325-i-xdrive",
+          "hp": 218,
+          "yearFrom": 2008,
+          "yearTo": 2012
+        },
+        {
+          "id": 19104,
+          "slug": "325-xi",
+          "hp": 218,
+          "yearFrom": 2005,
+          "yearTo": 2008
+        },
+        {
+          "id": 133084,
+          "slug": "325-xi",
+          "hp": 211,
+          "yearFrom": 2007,
+          "yearTo": 2008
+        },
+        {
+          "id": 25481,
+          "slug": "325-xi",
+          "hp": 218,
+          "yearFrom": 2007,
+          "yearTo": 2008
+        },
+        {
+          "id": 58078,
+          "slug": "328-i",
+          "hp": 234,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 105991,
+          "slug": "328-i-xdrive",
+          "hp": 234,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 105990,
+          "slug": "328-xi",
+          "hp": 234,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 30865,
+          "slug": "330-d",
+          "hp": 245,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 18969,
+          "slug": "330-d",
+          "hp": 231,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 30869,
+          "slug": "330-d-xdrive",
+          "hp": 245,
+          "yearFrom": 2009,
+          "yearTo": 2012
+        },
+        {
+          "id": 124776,
+          "slug": "330-d",
+          "hp": 211,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 143242,
+          "slug": "330-i",
+          "hp": 272,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 25478,
+          "slug": "330-i",
+          "hp": 272,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 18760,
+          "slug": "330-i",
+          "hp": 258,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 31033,
+          "slug": "330-i-xdrive",
+          "hp": 272,
+          "yearFrom": 2007,
+          "yearTo": 2012
+        },
+        {
+          "id": 19106,
+          "slug": "330-xd",
+          "hp": 231,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 25479,
+          "slug": "330-xi",
+          "hp": 272,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 19105,
+          "slug": "330-xi",
+          "hp": 258,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 19836,
+          "slug": "335-d",
+          "hp": 286,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 122020,
+          "slug": "335-i",
+          "hp": 326,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 19834,
+          "slug": "335-i",
+          "hp": 306,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 31034,
+          "slug": "335-i-xdrive",
+          "hp": 306,
+          "yearFrom": 2008,
+          "yearTo": 2012
+        },
+        {
+          "id": 122021,
+          "slug": "335-i-xdrive",
+          "hp": 326,
+          "yearFrom": 2008,
+          "yearTo": 2012
+        },
+        {
+          "id": 25477,
+          "slug": "335-xi",
+          "hp": 306,
+          "yearFrom": 2007,
+          "yearTo": 2008
+        },
+        {
+          "id": 123191,
+          "slug": "335-xi",
+          "hp": 326,
+          "yearFrom": 2007,
+          "yearTo": 2008
+        }
+      ]
+    },
+    "e92": {
+      "gen": "3-coupe-e92",
+      "series": "3er-reihe",
+      "engines": [
+        {
+          "id": 55565,
+          "slug": "316-i",
+          "hp": 122,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 12475,
+          "slug": "318-i",
+          "hp": 143,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 123162,
+          "slug": "320-d",
+          "hp": 197,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 123161,
+          "slug": "320-d",
+          "hp": 200,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 22534,
+          "slug": "320-d",
+          "hp": 177,
+          "yearFrom": 2006,
+          "yearTo": 2010
+        },
+        {
+          "id": 53615,
+          "slug": "320-d",
+          "hp": 163,
+          "yearFrom": 2007,
+          "yearTo": 2013
+        },
+        {
+          "id": 33392,
+          "slug": "320-d",
+          "hp": 184,
+          "yearFrom": 2010,
+          "yearTo": 2013
+        },
+        {
+          "id": 123163,
+          "slug": "320-d-xdrive",
+          "hp": 200,
+          "yearFrom": 2010,
+          "yearTo": 2013
+        },
+        {
+          "id": 33391,
+          "slug": "320-d-xdrive",
+          "hp": 184,
+          "yearFrom": 2010,
+          "yearTo": 2013
+        },
+        {
+          "id": 123166,
+          "slug": "320-d-xdrive",
+          "hp": 163,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 123165,
+          "slug": "320-d-xdrive",
+          "hp": 197,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 31039,
+          "slug": "320-d-xdrive",
+          "hp": 177,
+          "yearFrom": 2008,
+          "yearTo": 2010
+        },
+        {
+          "id": 111377,
+          "slug": "320-i",
+          "hp": 152,
+          "yearFrom": 2010,
+          "yearTo": 2013
+        },
+        {
+          "id": 22533,
+          "slug": "320-i",
+          "hp": 170,
+          "yearFrom": 2007,
+          "yearTo": 2013
+        },
+        {
+          "id": 52425,
+          "slug": "320-i",
+          "hp": 163,
+          "yearFrom": 2007,
+          "yearTo": 2013
+        },
+        {
+          "id": 55944,
+          "slug": "320-i",
+          "hp": 156,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 123168,
+          "slug": "323-i",
+          "hp": 190,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 25578,
+          "slug": "323-i",
+          "hp": 177,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 22543,
+          "slug": "325-d",
+          "hp": 197,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 53146,
+          "slug": "325-d",
+          "hp": 211,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 34768,
+          "slug": "325-d",
+          "hp": 204,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 19919,
+          "slug": "325-i",
+          "hp": 218,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 118827,
+          "slug": "325-i",
+          "hp": 204,
+          "yearFrom": 2010,
+          "yearTo": 2013
+        },
+        {
+          "id": 25483,
+          "slug": "325-i",
+          "hp": 218,
+          "yearFrom": 2007,
+          "yearTo": 2013
+        },
+        {
+          "id": 133057,
+          "slug": "325-i-xdrive",
+          "hp": 211,
+          "yearFrom": 2008,
+          "yearTo": 2013
+        },
+        {
+          "id": 128917,
+          "slug": "325-i-xdrive",
+          "hp": 211,
+          "yearFrom": 2010,
+          "yearTo": 2013
+        },
+        {
+          "id": 31036,
+          "slug": "325-i-xdrive",
+          "hp": 218,
+          "yearFrom": 2008,
+          "yearTo": 2013
+        },
+        {
+          "id": 133054,
+          "slug": "325-xi",
+          "hp": 211,
+          "yearFrom": 2007,
+          "yearTo": 2008
+        },
+        {
+          "id": 25484,
+          "slug": "325-xi",
+          "hp": 218,
+          "yearFrom": 2007,
+          "yearTo": 2008
+        },
+        {
+          "id": 53148,
+          "slug": "325-i",
+          "hp": 211,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 52830,
+          "slug": "325-i",
+          "hp": 211,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 118826,
+          "slug": "325-i-xdrive",
+          "hp": 204,
+          "yearFrom": 2010,
+          "yearTo": 2013
+        },
+        {
+          "id": 19930,
+          "slug": "325-xi",
+          "hp": 218,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 58079,
+          "slug": "328-i",
+          "hp": 234,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 123121,
+          "slug": "328-i-xdrive",
+          "hp": 234,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 35692,
+          "slug": "328-xi",
+          "hp": 234,
+          "yearFrom": 2006,
+          "yearTo": 2008
+        },
+        {
+          "id": 30866,
+          "slug": "330-d",
+          "hp": 245,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 20683,
+          "slug": "330-i",
+          "hp": 258,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 118548,
+          "slug": "330-i",
+          "hp": 272,
+          "yearFrom": 2007,
+          "yearTo": 2013
+        },
+        {
+          "id": 19920,
+          "slug": "330-i",
+          "hp": 272,
+          "yearFrom": 2006,
+          "yearTo": 2010
+        },
+        {
+          "id": 19921,
+          "slug": "330-d",
+          "hp": 231,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 31040,
+          "slug": "330-d-xdrive",
+          "hp": 245,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 31037,
+          "slug": "330-i-xdrive",
+          "hp": 272,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 19932,
+          "slug": "330-xd",
+          "hp": 231,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 30867,
+          "slug": "330-xd",
+          "hp": 245,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 20684,
+          "slug": "330-xi",
+          "hp": 258,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 19931,
+          "slug": "330-xi",
+          "hp": 272,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 128906,
+          "slug": "330-xi",
+          "hp": 272,
+          "yearFrom": 2007,
+          "yearTo": 2010
+        },
+        {
+          "id": 19835,
+          "slug": "335-d",
+          "hp": 286,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 19567,
+          "slug": "335-i",
+          "hp": 306,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 123171,
+          "slug": "335-i",
+          "hp": 326,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 126972,
+          "slug": "335-i",
+          "hp": 305,
+          "yearFrom": 2007,
+          "yearTo": 2013
+        },
+        {
+          "id": 126976,
+          "slug": "335-i-xdrive",
+          "hp": 305,
+          "yearFrom": 2009,
+          "yearTo": 2013
+        },
+        {
+          "id": 123175,
+          "slug": "335-i-xdrive",
+          "hp": 326,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 31038,
+          "slug": "335-i-xdrive",
+          "hp": 306,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 25485,
+          "slug": "335-xi",
+          "hp": 306,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 123176,
+          "slug": "335-xi",
+          "hp": 326,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 22939,
+          "slug": "m3",
+          "hp": 420,
+          "yearFrom": null,
+          "yearTo": null
+        }
+      ]
+    },
+    "e93": {
+      "gen": "3-convertible-e93",
+      "series": "3er-reihe",
+      "engines": [
+        {
+          "id": 12476,
+          "slug": "318-i",
+          "hp": 143,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 25487,
+          "slug": "320-d",
+          "hp": 177,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 22535,
+          "slug": "320-i",
+          "hp": 170,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 33393,
+          "slug": "320-d",
+          "hp": 184,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 59423,
+          "slug": "320-d",
+          "hp": 163,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 123159,
+          "slug": "320-d",
+          "hp": 200,
+          "yearFrom": 2010,
+          "yearTo": 2013
+        },
+        {
+          "id": 123160,
+          "slug": "320-d",
+          "hp": 197,
+          "yearFrom": 2007,
+          "yearTo": 2010
+        },
+        {
+          "id": 59417,
+          "slug": "320-i",
+          "hp": 156,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 59421,
+          "slug": "320-i",
+          "hp": 163,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 25582,
+          "slug": "323-i",
+          "hp": 177,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 121100,
+          "slug": "323-i",
+          "hp": 190,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 12491,
+          "slug": "325-d",
+          "hp": 204,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 25486,
+          "slug": "325-d",
+          "hp": 197,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 53145,
+          "slug": "325-d",
+          "hp": 211,
+          "yearFrom": 2007,
+          "yearTo": 2010
+        },
+        {
+          "id": 22536,
+          "slug": "328i",
+          "hp": 218,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 52885,
+          "slug": "325-i",
+          "hp": 211,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 22957,
+          "slug": "325-i",
+          "hp": 218,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 121101,
+          "slug": "325-i",
+          "hp": 204,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 28524,
+          "slug": "328-i",
+          "hp": 234,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 22539,
+          "slug": "330-d",
+          "hp": 231,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 30863,
+          "slug": "330-d",
+          "hp": 245,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 22537,
+          "slug": "330-i",
+          "hp": 272,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 25583,
+          "slug": "330-i",
+          "hp": 258,
+          "yearFrom": 2010,
+          "yearTo": 2013
+        },
+        {
+          "id": 118553,
+          "slug": "330-i",
+          "hp": 272,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 22538,
+          "slug": "335-i",
+          "hp": 306,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 126971,
+          "slug": "335-i",
+          "hp": 305,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 121102,
+          "slug": "335-i",
+          "hp": 326,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 26590,
+          "slug": "m3",
+          "hp": 420,
+          "yearFrom": null,
+          "yearTo": null
+        }
+      ]
+    },
+    "f10": {
+      "gen": "5-f10-f18",
+      "series": "5er-reihe",
+      "engines": [
+        {
+          "id": 125105,
+          "slug": "518-d",
+          "hp": 163,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 116690,
+          "slug": "518-d",
+          "hp": 136,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 106457,
+          "slug": "518-d",
+          "hp": 150,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 59795,
+          "slug": "518-d",
+          "hp": 143,
+          "yearFrom": 2013,
+          "yearTo": 2014
+        },
+        {
+          "id": 130516,
+          "slug": "520-d",
+          "hp": 205,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 123192,
+          "slug": "520-d",
+          "hp": 200,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 116680,
+          "slug": "520-d",
+          "hp": 163,
+          "yearFrom": 2010,
+          "yearTo": 2016
+        },
+        {
+          "id": 106458,
+          "slug": "520-d",
+          "hp": 190,
+          "yearFrom": 2014,
+          "yearTo": 2016
+        },
+        {
+          "id": 33010,
+          "slug": "520-d",
+          "hp": 184,
+          "yearFrom": 2010,
+          "yearTo": 2014
+        },
+        {
+          "id": 130517,
+          "slug": "520-d-xdrive",
+          "hp": 205,
+          "yearFrom": 2014,
+          "yearTo": 2016
+        },
+        {
+          "id": 106459,
+          "slug": "520-d-xdrive",
+          "hp": 190,
+          "yearFrom": 2014,
+          "yearTo": 2016
+        },
+        {
+          "id": 59782,
+          "slug": "520-d-xdrive",
+          "hp": 184,
+          "yearFrom": 2013,
+          "yearTo": 2014
+        },
+        {
+          "id": 4736,
+          "slug": "520-i",
+          "hp": 163,
+          "yearFrom": 2011,
+          "yearTo": 2016
+        },
+        {
+          "id": 11832,
+          "slug": "520-i",
+          "hp": 184,
+          "yearFrom": 2011,
+          "yearTo": 2016
+        },
+        {
+          "id": 123196,
+          "slug": "520-d",
+          "hp": 211,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 123194,
+          "slug": "520-d",
+          "hp": 136,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 123197,
+          "slug": "520-d-xdrive",
+          "hp": 211,
+          "yearFrom": 2013,
+          "yearTo": 2016
+        },
+        {
+          "id": 123195,
+          "slug": "520-d-xdrive",
+          "hp": 136,
+          "yearFrom": 2013,
+          "yearTo": 2014
+        },
+        {
+          "id": 123193,
+          "slug": "520-d-xdrive",
+          "hp": 200,
+          "yearFrom": 2013,
+          "yearTo": 2014
+        },
+        {
+          "id": 116693,
+          "slug": "520-d-xdrive",
+          "hp": 163,
+          "yearFrom": 2013,
+          "yearTo": 2016
+        },
+        {
+          "id": 117598,
+          "slug": "520-i",
+          "hp": 170,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 125098,
+          "slug": "523-i",
+          "hp": 211,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 14030,
+          "slug": "523-i",
+          "hp": 204,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 33006,
+          "slug": "523-i",
+          "hp": 204,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 4515,
+          "slug": "525-d",
+          "hp": 211,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 11836,
+          "slug": "525-d",
+          "hp": 218,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 4418,
+          "slug": "525-d-xdrive",
+          "hp": 211,
+          "yearFrom": 2011,
+          "yearTo": 2016
+        },
+        {
+          "id": 11837,
+          "slug": "525-d-xdrive",
+          "hp": 218,
+          "yearFrom": 2011,
+          "yearTo": 2016
+        },
+        {
+          "id": 33011,
+          "slug": "525-d",
+          "hp": 204,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 126991,
+          "slug": "528-i",
+          "hp": 218,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 51355,
+          "slug": "528-i",
+          "hp": 243,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 11833,
+          "slug": "528-i",
+          "hp": 245,
+          "yearFrom": 2011,
+          "yearTo": 2016
+        },
+        {
+          "id": 33007,
+          "slug": "528-i",
+          "hp": 258,
+          "yearFrom": 2010,
+          "yearTo": 2011
+        },
+        {
+          "id": 11834,
+          "slug": "528-i-xdrive",
+          "hp": 245,
+          "yearFrom": 2011,
+          "yearTo": 2016
+        },
+        {
+          "id": 33012,
+          "slug": "530-d",
+          "hp": 245,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 11838,
+          "slug": "530-d",
+          "hp": 258,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 117351,
+          "slug": "530-d-xdrive",
+          "hp": 286,
+          "yearFrom": 2011,
+          "yearTo": 2016
+        },
+        {
+          "id": 125102,
+          "slug": "530-i",
+          "hp": 258,
+          "yearFrom": 2010,
+          "yearTo": 2013
+        },
+        {
+          "id": 117349,
+          "slug": "530-d",
+          "hp": 286,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 11853,
+          "slug": "535d-xdrive",
+          "hp": 258,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 11835,
+          "slug": "530i",
+          "hp": 272,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 33764,
+          "slug": "535-d",
+          "hp": 299,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 11854,
+          "slug": "535-d",
+          "hp": 313,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 11855,
+          "slug": "535-d-xdrive",
+          "hp": 313,
+          "yearFrom": 2011,
+          "yearTo": 2016
+        },
+        {
+          "id": 33008,
+          "slug": "535-i",
+          "hp": 306,
+          "yearFrom": 2010,
+          "yearTo": 2016
+        },
+        {
+          "id": 10483,
+          "slug": "535-i-xdrive",
+          "hp": 306,
+          "yearFrom": 2011,
+          "yearTo": 2016
+        },
+        {
+          "id": 53673,
+          "slug": "535-i",
+          "hp": 305,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 107908,
+          "slug": "535-i",
+          "hp": 326,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 107912,
+          "slug": "535-i-xdrive",
+          "hp": 326,
+          "yearFrom": 2013,
+          "yearTo": 2016
+        },
+        {
+          "id": 59756,
+          "slug": "550-i",
+          "hp": 449,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 33009,
+          "slug": "550-i",
+          "hp": 408,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 107067,
+          "slug": "550-i-xdrive",
+          "hp": 452,
+          "yearFrom": 2013,
+          "yearTo": 2016
+        },
+        {
+          "id": 59757,
+          "slug": "550-i-xdrive",
+          "hp": 449,
+          "yearFrom": 2013,
+          "yearTo": 2016
+        },
+        {
+          "id": 107066,
+          "slug": "550-i",
+          "hp": 452,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 56536,
+          "slug": "550-i",
+          "hp": 405,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 33763,
+          "slug": "550-i-xdrive",
+          "hp": 408,
+          "yearFrom": 2010,
+          "yearTo": 2013
+        },
+        {
+          "id": 56948,
+          "slug": "550-i-xdrive",
+          "hp": 405,
+          "yearFrom": 2012,
+          "yearTo": 2013
+        },
+        {
+          "id": 11856,
+          "slug": "activehybrid",
+          "hp": 340,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 7543,
+          "slug": "m-550-d-xdrive",
+          "hp": 381,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 124066,
+          "slug": "m5",
+          "hp": 568,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 12689,
+          "slug": "m5",
+          "hp": 560,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 106467,
+          "slug": "m5-30th-anniversary",
+          "hp": 600,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 100907,
+          "slug": "m5-competition",
+          "hp": 575,
+          "yearFrom": null,
+          "yearTo": null
+        }
+      ]
+    },
+    "f11": {
+      "gen": "5-touring-f11",
+      "series": "5er-reihe",
+      "engines": [
+        {
+          "id": 59794,
+          "slug": "518-d",
+          "hp": 143,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 125059,
+          "slug": "518-d",
+          "hp": 163,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 116691,
+          "slug": "518-d",
+          "hp": 136,
+          "yearFrom": 2013,
+          "yearTo": 2017
+        },
+        {
+          "id": 106271,
+          "slug": "518-d",
+          "hp": 150,
+          "yearFrom": 2014,
+          "yearTo": 2017
+        },
+        {
+          "id": 130518,
+          "slug": "520-d",
+          "hp": 205,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 125043,
+          "slug": "520-d",
+          "hp": 136,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 123200,
+          "slug": "520-d",
+          "hp": 200,
+          "yearFrom": 2010,
+          "yearTo": 2014
+        },
+        {
+          "id": 123198,
+          "slug": "520-d",
+          "hp": 211,
+          "yearFrom": 2014,
+          "yearTo": 2017
+        },
+        {
+          "id": 116681,
+          "slug": "520-d",
+          "hp": 163,
+          "yearFrom": 2010,
+          "yearTo": 2017
+        },
+        {
+          "id": 106274,
+          "slug": "520-d",
+          "hp": 190,
+          "yearFrom": 2014,
+          "yearTo": 2017
+        },
+        {
+          "id": 33773,
+          "slug": "520-d",
+          "hp": 184,
+          "yearFrom": 2010,
+          "yearTo": 2014
+        },
+        {
+          "id": 130519,
+          "slug": "520-d-xdrive",
+          "hp": 205,
+          "yearFrom": 2014,
+          "yearTo": 2017
+        },
+        {
+          "id": 59780,
+          "slug": "520-d-xdrive",
+          "hp": 184,
+          "yearFrom": 2013,
+          "yearTo": 2014
+        },
+        {
+          "id": 106275,
+          "slug": "520-d-xdrive",
+          "hp": 190,
+          "yearFrom": 2014,
+          "yearTo": 2017
+        },
+        {
+          "id": 116692,
+          "slug": "520-d-xdrive",
+          "hp": 163,
+          "yearFrom": 2014,
+          "yearTo": 2017
+        },
+        {
+          "id": 123199,
+          "slug": "520-d-xdrive",
+          "hp": 211,
+          "yearFrom": 2014,
+          "yearTo": 2017
+        },
+        {
+          "id": 123201,
+          "slug": "520-d-xdrive",
+          "hp": 200,
+          "yearFrom": 2013,
+          "yearTo": 2014
+        },
+        {
+          "id": 125041,
+          "slug": "520-d-xdrive",
+          "hp": 136,
+          "yearFrom": 2013,
+          "yearTo": 2014
+        },
+        {
+          "id": 11857,
+          "slug": "523-i",
+          "hp": 184,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 116679,
+          "slug": "520-i",
+          "hp": 163,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 33770,
+          "slug": "523-i",
+          "hp": 204,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 46024,
+          "slug": "523-i",
+          "hp": 204,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 11877,
+          "slug": "525-d",
+          "hp": 218,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 33774,
+          "slug": "525-d",
+          "hp": 204,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 116694,
+          "slug": "525-d",
+          "hp": 211,
+          "yearFrom": 2011,
+          "yearTo": 2017
+        },
+        {
+          "id": 11878,
+          "slug": "525-d-xdrive",
+          "hp": 218,
+          "yearFrom": 2013,
+          "yearTo": 2017
+        },
+        {
+          "id": 116695,
+          "slug": "525-d-xdrive",
+          "hp": 211,
+          "yearFrom": 2013,
+          "yearTo": 2017
+        },
+        {
+          "id": 33771,
+          "slug": "528-i",
+          "hp": 258,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 11858,
+          "slug": "528-i",
+          "hp": 245,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 11874,
+          "slug": "528-i-xdrive",
+          "hp": 245,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 33775,
+          "slug": "530-d",
+          "hp": 245,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 11883,
+          "slug": "530-d",
+          "hp": 258,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 11884,
+          "slug": "530-d-xdrive",
+          "hp": 258,
+          "yearFrom": 2011,
+          "yearTo": 2017
+        },
+        {
+          "id": 117355,
+          "slug": "530-d-xdrive",
+          "hp": 286,
+          "yearFrom": 2011,
+          "yearTo": 2017
+        },
+        {
+          "id": 117353,
+          "slug": "530-d",
+          "hp": 286,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 125091,
+          "slug": "530-i",
+          "hp": 258,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 11875,
+          "slug": "530-i",
+          "hp": 272,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 11885,
+          "slug": "535-d",
+          "hp": 313,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 33776,
+          "slug": "535-d",
+          "hp": 299,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 11886,
+          "slug": "535-d-xdrive",
+          "hp": 313,
+          "yearFrom": 2011,
+          "yearTo": 2017
+        },
+        {
+          "id": 33772,
+          "slug": "535-i",
+          "hp": 306,
+          "yearFrom": 2010,
+          "yearTo": 2017
+        },
+        {
+          "id": 117330,
+          "slug": "535-i",
+          "hp": 326,
+          "yearFrom": 2013,
+          "yearTo": 2017
+        },
+        {
+          "id": 12690,
+          "slug": "535-i-xdrive",
+          "hp": 306,
+          "yearFrom": 2011,
+          "yearTo": 2017
+        },
+        {
+          "id": 117332,
+          "slug": "535-i-xdrive",
+          "hp": 326,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 11876,
+          "slug": "550-i",
+          "hp": 408,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 59765,
+          "slug": "550-i",
+          "hp": 449,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 6762,
+          "slug": "m-550-d-xdrive",
+          "hp": 381,
+          "yearFrom": null,
+          "yearTo": null
+        }
+      ]
+    },
+    "f15": {
+      "gen": "x5-f15-f85",
+      "series": "x5",
+      "engines": [
+        {
+          "id": 108622,
+          "slug": "m",
+          "hp": 575,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 20930,
+          "slug": "m-50-d",
+          "hp": 381,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 100269,
+          "slug": "sdrive-25-d",
+          "hp": 218,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 113459,
+          "slug": "sdrive-25-d",
+          "hp": 231,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 116713,
+          "slug": "sdrive-25-d",
+          "hp": 211,
+          "yearFrom": 2013,
+          "yearTo": 2018
+        },
+        {
+          "id": 109280,
+          "slug": "sdrive-35-i",
+          "hp": 306,
+          "yearFrom": 2013,
+          "yearTo": 2018
+        },
+        {
+          "id": 100270,
+          "slug": "xdrive-25-d",
+          "hp": 218,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 113460,
+          "slug": "xdrive-25-d",
+          "hp": 231,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 116714,
+          "slug": "xdrive-25-d",
+          "hp": 211,
+          "yearFrom": 2013,
+          "yearTo": 2015
+        },
+        {
+          "id": 116836,
+          "slug": "xdrive-28-i",
+          "hp": 245,
+          "yearFrom": 2015,
+          "yearTo": 2018
+        },
+        {
+          "id": 21691,
+          "slug": "xdrive-30-d",
+          "hp": 258,
+          "yearFrom": 2013,
+          "yearTo": 2018
+        },
+        {
+          "id": 108608,
+          "slug": "xdrive-30-d",
+          "hp": 277,
+          "yearFrom": 2013,
+          "yearTo": 2018
+        },
+        {
+          "id": 117397,
+          "slug": "xdrive-30-d",
+          "hp": 249,
+          "yearFrom": 2013,
+          "yearTo": 2018
+        },
+        {
+          "id": 123211,
+          "slug": "xdrive-30-d",
+          "hp": 286,
+          "yearFrom": 2013,
+          "yearTo": 2018
+        },
+        {
+          "id": 100268,
+          "slug": "xdrive-35-i",
+          "hp": 306,
+          "yearFrom": 2013,
+          "yearTo": 2018
+        },
+        {
+          "id": 107919,
+          "slug": "xdrive-35-i",
+          "hp": 326,
+          "yearFrom": 2013,
+          "yearTo": 2018
+        },
+        {
+          "id": 113842,
+          "slug": "xdrive-40e",
+          "hp": 313,
+          "yearFrom": 2015,
+          "yearTo": 2018
+        },
+        {
+          "id": 116697,
+          "slug": "xdrive-40e",
+          "hp": 279,
+          "yearFrom": 2015,
+          "yearTo": 2018
+        },
+        {
+          "id": 20743,
+          "slug": "xdrive-50-i",
+          "hp": 449,
+          "yearFrom": 2013,
+          "yearTo": 2018
+        },
+        {
+          "id": 107069,
+          "slug": "xdrive-50-i",
+          "hp": 452,
+          "yearFrom": 2013,
+          "yearTo": 2018
+        },
+        {
+          "id": 117396,
+          "slug": "xdrive-25-d",
+          "hp": 218,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 100271,
+          "slug": "xdrive-40-d",
+          "hp": 313,
+          "yearFrom": null,
+          "yearTo": null
+        }
+      ]
+    },
+    "f16": {
+      "gen": "x6-f16",
+      "series": "x6",
+      "engines": []
+    },
+    "f20": {
+      "gen": "1-f20",
+      "series": "1er-reihe",
+      "engines": [
+        {
+          "id": 115279,
+          "slug": "114-d",
+          "hp": 95,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 57464,
+          "slug": "114-d",
+          "hp": 95,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 55488,
+          "slug": "114-i",
+          "hp": 102,
+          "yearFrom": 2012,
+          "yearTo": 2015
+        },
+        {
+          "id": 5335,
+          "slug": "116-d",
+          "hp": 116,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 10313,
+          "slug": "116-d",
+          "hp": 116,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 10311,
+          "slug": "116-i",
+          "hp": 136,
+          "yearFrom": 2011,
+          "yearTo": 2015
+        },
+        {
+          "id": 110072,
+          "slug": "116-d",
+          "hp": 116,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 110060,
+          "slug": "116-i",
+          "hp": 109,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 5671,
+          "slug": "118-d",
+          "hp": 136,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 10314,
+          "slug": "118-d",
+          "hp": 143,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 115121,
+          "slug": "118-i",
+          "hp": 136,
+          "yearFrom": 2015,
+          "yearTo": 2019
+        },
+        {
+          "id": 10312,
+          "slug": "118-i",
+          "hp": 170,
+          "yearFrom": 2011,
+          "yearTo": 2015
+        },
+        {
+          "id": 110073,
+          "slug": "118-d",
+          "hp": 150,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 110074,
+          "slug": "118-d-xdrive",
+          "hp": 150,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 100886,
+          "slug": "118-d-xdrive",
+          "hp": 143,
+          "yearFrom": 2013,
+          "yearTo": 2015
+        },
+        {
+          "id": 110061,
+          "slug": "118-i",
+          "hp": 136,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 147594,
+          "slug": "120-d",
+          "hp": 205,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 100891,
+          "slug": "120-d",
+          "hp": 200,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 10316,
+          "slug": "120-d",
+          "hp": 184,
+          "yearFrom": 2011,
+          "yearTo": 2015
+        },
+        {
+          "id": 5334,
+          "slug": "120-d",
+          "hp": 163,
+          "yearFrom": 2011,
+          "yearTo": 2019
+        },
+        {
+          "id": 100887,
+          "slug": "120-d-xdrive",
+          "hp": 200,
+          "yearFrom": 2012,
+          "yearTo": 2015
+        },
+        {
+          "id": 57466,
+          "slug": "120-d-xdrive",
+          "hp": 184,
+          "yearFrom": 2012,
+          "yearTo": 2015
+        },
+        {
+          "id": 147586,
+          "slug": "120-d-xdrive",
+          "hp": 205,
+          "yearFrom": 2015,
+          "yearTo": 2019
+        },
+        {
+          "id": 120240,
+          "slug": "120-i",
+          "hp": 184,
+          "yearFrom": 2016,
+          "yearTo": 2019
+        },
+        {
+          "id": 110075,
+          "slug": "120-d",
+          "hp": 190,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 110078,
+          "slug": "120-d-xdrive",
+          "hp": 190,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 110062,
+          "slug": "120-i",
+          "hp": 177,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 113586,
+          "slug": "120-i-active-flex",
+          "hp": 184,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 16996,
+          "slug": "125-d",
+          "hp": 218,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 3513,
+          "slug": "125-d",
+          "hp": 211,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 100889,
+          "slug": "125-i",
+          "hp": 238,
+          "yearFrom": 2012,
+          "yearTo": 2017
+        },
+        {
+          "id": 8282,
+          "slug": "125-i",
+          "hp": 218,
+          "yearFrom": 2012,
+          "yearTo": 2017
+        },
+        {
+          "id": 120242,
+          "slug": "125-i",
+          "hp": 224,
+          "yearFrom": 2016,
+          "yearTo": 2019
+        },
+        {
+          "id": 115157,
+          "slug": "125-i-active-flex",
+          "hp": 218,
+          "yearFrom": 2014,
+          "yearTo": 2017
+        },
+        {
+          "id": 110080,
+          "slug": "125-d",
+          "hp": 224,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 110066,
+          "slug": "m-135-i",
+          "hp": 326,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 110070,
+          "slug": "m-135-i-xdrive",
+          "hp": 326,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 56734,
+          "slug": "m-135-i",
+          "hp": 320,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 56735,
+          "slug": "m-135-i-xdrive",
+          "hp": 320,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 120244,
+          "slug": "m-140-i",
+          "hp": 340,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 120245,
+          "slug": "m-140-i-xdrive",
+          "hp": 340,
+          "yearFrom": null,
+          "yearTo": null
+        }
+      ]
+    },
+    "f25": {
+      "gen": "x3-f25",
+      "series": "x3",
+      "engines": [
+        {
+          "id": 56809,
+          "slug": "sdrive-18-d",
+          "hp": 136,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 56810,
+          "slug": "sdrive-18-d",
+          "hp": 143,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 100941,
+          "slug": "sdrive-18-d",
+          "hp": 150,
+          "yearFrom": 2014,
+          "yearTo": 2017
+        },
+        {
+          "id": 101045,
+          "slug": "sdrive-20-i",
+          "hp": 184,
+          "yearFrom": 2014,
+          "yearTo": 2017
+        },
+        {
+          "id": 113711,
+          "slug": "sdrive-20-i",
+          "hp": 170,
+          "yearFrom": 2014,
+          "yearTo": 2017
+        },
+        {
+          "id": 115485,
+          "slug": "sdrive-28-i",
+          "hp": 245,
+          "yearFrom": 2014,
+          "yearTo": 2017
+        },
+        {
+          "id": 33778,
+          "slug": "xdrive28-d",
+          "hp": 184,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 58611,
+          "slug": "xdrive-20-d",
+          "hp": 163,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 100942,
+          "slug": "xdrive-20-d",
+          "hp": 190,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 11954,
+          "slug": "xdrive-20-i",
+          "hp": 184,
+          "yearFrom": 2011,
+          "yearTo": 2017
+        },
+        {
+          "id": 108079,
+          "slug": "xdrive-28-d",
+          "hp": 182,
+          "yearFrom": 2014,
+          "yearTo": 2016
+        },
+        {
+          "id": 10031,
+          "slug": "xdrive-28-i",
+          "hp": 258,
+          "yearFrom": 2011,
+          "yearTo": 2012
+        },
+        {
+          "id": 55252,
+          "slug": "xdrive-28-i",
+          "hp": 245,
+          "yearFrom": 2012,
+          "yearTo": 2017
+        },
+        {
+          "id": 10576,
+          "slug": "xdrive-30-d",
+          "hp": 258,
+          "yearFrom": 2011,
+          "yearTo": 2017
+        },
+        {
+          "id": 116656,
+          "slug": "xdrive-30-d",
+          "hp": 211,
+          "yearFrom": 2011,
+          "yearTo": 2017
+        },
+        {
+          "id": 119044,
+          "slug": "xdrive-30-d",
+          "hp": 286,
+          "yearFrom": 2011,
+          "yearTo": 2016
+        },
+        {
+          "id": 119045,
+          "slug": "xdrive-30-d",
+          "hp": 249,
+          "yearFrom": 2011,
+          "yearTo": 2017
+        },
+        {
+          "id": 11888,
+          "slug": "xdrive-35-d",
+          "hp": 313,
+          "yearFrom": 2011,
+          "yearTo": 2017
+        },
+        {
+          "id": 121617,
+          "slug": "xdrive-30-d",
+          "hp": 277,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 33777,
+          "slug": "xdrive-35-i",
+          "hp": 306,
+          "yearFrom": null,
+          "yearTo": null
+        }
+      ]
+    },
+    "f30": {
+      "gen": "3-f30-f35-f80",
+      "series": "3er-reihe",
+      "engines": [
+        {
+          "id": 27674,
+          "slug": "316-d",
+          "hp": 116,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 57472,
+          "slug": "316-i",
+          "hp": 136,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 113430,
+          "slug": "318-d",
+          "hp": 150,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 27765,
+          "slug": "318-d",
+          "hp": 143,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 53234,
+          "slug": "318-d",
+          "hp": 136,
+          "yearFrom": 2012,
+          "yearTo": 2018
+        },
+        {
+          "id": 113432,
+          "slug": "318-d-xdrive",
+          "hp": 150,
+          "yearFrom": 2015,
+          "yearTo": 2018
+        },
+        {
+          "id": 59797,
+          "slug": "318-d-xdrive",
+          "hp": 143,
+          "yearFrom": 2013,
+          "yearTo": 2015
+        },
+        {
+          "id": 113405,
+          "slug": "318-i",
+          "hp": 136,
+          "yearFrom": 2015,
+          "yearTo": 2018
+        },
+        {
+          "id": 12472,
+          "slug": "320-d",
+          "hp": 184,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 12473,
+          "slug": "320-d",
+          "hp": 163,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 113434,
+          "slug": "320-d",
+          "hp": 190,
+          "yearFrom": 2015,
+          "yearTo": 2018
+        },
+        {
+          "id": 100885,
+          "slug": "320-d",
+          "hp": 200,
+          "yearFrom": 2011,
+          "yearTo": 2016
+        },
+        {
+          "id": 53235,
+          "slug": "320-d-xdrive",
+          "hp": 163,
+          "yearFrom": 2012,
+          "yearTo": 2018
+        },
+        {
+          "id": 57293,
+          "slug": "320-d-xdrive",
+          "hp": 184,
+          "yearFrom": 2012,
+          "yearTo": 2015
+        },
+        {
+          "id": 100839,
+          "slug": "320-d-xdrive",
+          "hp": 200,
+          "yearFrom": 2012,
+          "yearTo": 2015
+        },
+        {
+          "id": 113436,
+          "slug": "320-d-xdrive",
+          "hp": 190,
+          "yearFrom": 2015,
+          "yearTo": 2018
+        },
+        {
+          "id": 27670,
+          "slug": "320-i",
+          "hp": 184,
+          "yearFrom": 2012,
+          "yearTo": 2018
+        },
+        {
+          "id": 59148,
+          "slug": "320-i",
+          "hp": 182,
+          "yearFrom": 2012,
+          "yearTo": 2018
+        },
+        {
+          "id": 116010,
+          "slug": "320-i",
+          "hp": 184,
+          "yearFrom": 2015,
+          "yearTo": 2018
+        },
+        {
+          "id": 59409,
+          "slug": "320-i",
+          "hp": 170,
+          "yearFrom": 2012,
+          "yearTo": 2016
+        },
+        {
+          "id": 56020,
+          "slug": "320-i-xdrive",
+          "hp": 184,
+          "yearFrom": 2012,
+          "yearTo": 2018
+        },
+        {
+          "id": 116012,
+          "slug": "320-i-xdrive",
+          "hp": 184,
+          "yearFrom": 2015,
+          "yearTo": 2018
+        },
+        {
+          "id": 59149,
+          "slug": "320-i-xdrive",
+          "hp": 182,
+          "yearFrom": 2012,
+          "yearTo": 2018
+        },
+        {
+          "id": 119105,
+          "slug": "320-i-activeflex",
+          "hp": 184,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 59223,
+          "slug": "325-d",
+          "hp": 218,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 116643,
+          "slug": "325-d",
+          "hp": 211,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 118077,
+          "slug": "325-d",
+          "hp": 224,
+          "yearFrom": 2016,
+          "yearTo": 2018
+        },
+        {
+          "id": 12470,
+          "slug": "328-i",
+          "hp": 245,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 107830,
+          "slug": "328-i-activeflex",
+          "hp": 245,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 57294,
+          "slug": "328-i-xdrive",
+          "hp": 245,
+          "yearFrom": 2012,
+          "yearTo": 2016
+        },
+        {
+          "id": 126970,
+          "slug": "328-i-xdrive",
+          "hp": 243,
+          "yearFrom": 2012,
+          "yearTo": 2016
+        },
+        {
+          "id": 131331,
+          "slug": "328i",
+          "hp": 218,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 58949,
+          "slug": "330-d",
+          "hp": 258,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 117281,
+          "slug": "330-d",
+          "hp": 286,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 59222,
+          "slug": "330-d-xdrive",
+          "hp": 258,
+          "yearFrom": 2013,
+          "yearTo": 2018
+        },
+        {
+          "id": 117282,
+          "slug": "330-d-xdrive",
+          "hp": 286,
+          "yearFrom": 2013,
+          "yearTo": 2018
+        },
+        {
+          "id": 117341,
+          "slug": "330-e",
+          "hp": 252,
+          "yearFrom": 2015,
+          "yearTo": 2018
+        },
+        {
+          "id": 113407,
+          "slug": "330-i",
+          "hp": 252,
+          "yearFrom": 2015,
+          "yearTo": 2018
+        },
+        {
+          "id": 113408,
+          "slug": "330-i-xdrive",
+          "hp": 252,
+          "yearFrom": 2015,
+          "yearTo": 2018
+        },
+        {
+          "id": 53089,
+          "slug": "335-d-xdrive",
+          "hp": 313,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 12471,
+          "slug": "335-i",
+          "hp": 306,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 127077,
+          "slug": "335-i",
+          "hp": 305,
+          "yearFrom": 2011,
+          "yearTo": 2015
+        },
+        {
+          "id": 107867,
+          "slug": "335-i",
+          "hp": 326,
+          "yearFrom": 2011,
+          "yearTo": 2013
+        },
+        {
+          "id": 107868,
+          "slug": "335-i-xdrive",
+          "hp": 326,
+          "yearFrom": 2012,
+          "yearTo": 2013
+        },
+        {
+          "id": 57295,
+          "slug": "335-i-xdrive",
+          "hp": 306,
+          "yearFrom": 2012,
+          "yearTo": 2015
+        },
+        {
+          "id": 107869,
+          "slug": "335-i",
+          "hp": 340,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 107870,
+          "slug": "335-i-xdrive",
+          "hp": 340,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 113409,
+          "slug": "340-i",
+          "hp": 326,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 117345,
+          "slug": "340-i",
+          "hp": 360,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 113410,
+          "slug": "340-i-xdrive",
+          "hp": 326,
+          "yearFrom": 2015,
+          "yearTo": 2018
+        },
+        {
+          "id": 117344,
+          "slug": "340-i-xdrive",
+          "hp": 360,
+          "yearFrom": 2015,
+          "yearTo": 2018
+        },
+        {
+          "id": 57560,
+          "slug": "activehybrid",
+          "hp": 340,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 100819,
+          "slug": "m3",
+          "hp": 431,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 118192,
+          "slug": "m3-competition",
+          "hp": 450,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 129115,
+          "slug": "m3-cs",
+          "hp": 460,
+          "yearFrom": null,
+          "yearTo": null
+        }
+      ]
+    },
+    "f31": {
+      "gen": "3-touring-f31",
+      "series": "3er-reihe",
+      "engines": [
+        {
+          "id": 55125,
+          "slug": "316-d",
+          "hp": 116,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 59407,
+          "slug": "316-i",
+          "hp": 136,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 55126,
+          "slug": "318-d",
+          "hp": 143,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 116646,
+          "slug": "318-d",
+          "hp": 136,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 113448,
+          "slug": "318-d",
+          "hp": 150,
+          "yearFrom": 2015,
+          "yearTo": 2019
+        },
+        {
+          "id": 113449,
+          "slug": "318-d-xdrive",
+          "hp": 150,
+          "yearFrom": 2015,
+          "yearTo": 2018
+        },
+        {
+          "id": 59799,
+          "slug": "318-d-xdrive",
+          "hp": 143,
+          "yearFrom": 2013,
+          "yearTo": 2015
+        },
+        {
+          "id": 113440,
+          "slug": "318-i",
+          "hp": 136,
+          "yearFrom": 2015,
+          "yearTo": 2019
+        },
+        {
+          "id": 55127,
+          "slug": "320-d",
+          "hp": 184,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 58965,
+          "slug": "320-d",
+          "hp": 163,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 113450,
+          "slug": "320-d",
+          "hp": 190,
+          "yearFrom": 2015,
+          "yearTo": 2019
+        },
+        {
+          "id": 100848,
+          "slug": "320-d",
+          "hp": 200,
+          "yearFrom": 2012,
+          "yearTo": 2016
+        },
+        {
+          "id": 116645,
+          "slug": "320-d-xdrive",
+          "hp": 163,
+          "yearFrom": 2013,
+          "yearTo": 2019
+        },
+        {
+          "id": 59406,
+          "slug": "320-d-xdrive",
+          "hp": 184,
+          "yearFrom": 2013,
+          "yearTo": 2015
+        },
+        {
+          "id": 100847,
+          "slug": "320-d-xdrive",
+          "hp": 200,
+          "yearFrom": 2013,
+          "yearTo": 2015
+        },
+        {
+          "id": 55123,
+          "slug": "320-i",
+          "hp": 184,
+          "yearFrom": 2012,
+          "yearTo": 2015
+        },
+        {
+          "id": 125171,
+          "slug": "320-i",
+          "hp": 163,
+          "yearFrom": 2012,
+          "yearTo": 2015
+        },
+        {
+          "id": 116013,
+          "slug": "320-i",
+          "hp": 184,
+          "yearFrom": 2015,
+          "yearTo": 2019
+        },
+        {
+          "id": 125172,
+          "slug": "320-i-xdrive",
+          "hp": 163,
+          "yearFrom": 2013,
+          "yearTo": 2015
+        },
+        {
+          "id": 59403,
+          "slug": "320-i-xdrive",
+          "hp": 184,
+          "yearFrom": 2013,
+          "yearTo": 2015
+        },
+        {
+          "id": 116014,
+          "slug": "320-i-xdrive",
+          "hp": 184,
+          "yearFrom": 2015,
+          "yearTo": 2019
+        },
+        {
+          "id": 113451,
+          "slug": "320-d-xdrive",
+          "hp": 190,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 116644,
+          "slug": "325-d",
+          "hp": 211,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 59219,
+          "slug": "325-d",
+          "hp": 218,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 118078,
+          "slug": "325-d",
+          "hp": 224,
+          "yearFrom": 2016,
+          "yearTo": 2018
+        },
+        {
+          "id": 55124,
+          "slug": "328-i",
+          "hp": 245,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 59402,
+          "slug": "328-i-xdrive",
+          "hp": 245,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 55128,
+          "slug": "330-d",
+          "hp": 258,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 117286,
+          "slug": "330-d",
+          "hp": 286,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 59404,
+          "slug": "330-d-xdrive",
+          "hp": 258,
+          "yearFrom": 2013,
+          "yearTo": 2019
+        },
+        {
+          "id": 117289,
+          "slug": "330-d-xdrive",
+          "hp": 286,
+          "yearFrom": 2013,
+          "yearTo": 2019
+        },
+        {
+          "id": 113444,
+          "slug": "330-i",
+          "hp": 252,
+          "yearFrom": 2015,
+          "yearTo": 2019
+        },
+        {
+          "id": 113445,
+          "slug": "330-i-xdrive",
+          "hp": 252,
+          "yearFrom": 2015,
+          "yearTo": 2019
+        },
+        {
+          "id": 100708,
+          "slug": "335-d-xdrive",
+          "hp": 313,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 107873,
+          "slug": "335-i",
+          "hp": 326,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 59221,
+          "slug": "335-i",
+          "hp": 306,
+          "yearFrom": 2013,
+          "yearTo": 2015
+        },
+        {
+          "id": 107874,
+          "slug": "335-i-xdrive",
+          "hp": 326,
+          "yearFrom": 2013,
+          "yearTo": 2013
+        },
+        {
+          "id": 59220,
+          "slug": "335-i-xdrive",
+          "hp": 306,
+          "yearFrom": 2013,
+          "yearTo": 2015
+        },
+        {
+          "id": 107875,
+          "slug": "335-i",
+          "hp": 340,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 107876,
+          "slug": "335-i-xdrive",
+          "hp": 340,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 113446,
+          "slug": "340-i",
+          "hp": 326,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 117293,
+          "slug": "340-i",
+          "hp": 360,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 113447,
+          "slug": "340-i-xdrive",
+          "hp": 326,
+          "yearFrom": 2015,
+          "yearTo": 2019
+        },
+        {
+          "id": 117294,
+          "slug": "340-i-xdrive",
+          "hp": 360,
+          "yearFrom": 2015,
+          "yearTo": 2019
+        }
+      ]
+    },
+    "f34": {
+      "gen": "3-gran-turismo-f34",
+      "series": "3er-reihe",
+      "engines": [
+        {
+          "id": 113453,
+          "slug": "318-d",
+          "hp": 150,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 58799,
+          "slug": "318-d",
+          "hp": 143,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 116654,
+          "slug": "318-d",
+          "hp": 136,
+          "yearFrom": 2013,
+          "yearTo": 2018
+        },
+        {
+          "id": 53390,
+          "slug": "320-d",
+          "hp": 163,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 113454,
+          "slug": "320-d",
+          "hp": 190,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 113455,
+          "slug": "320-d-xdrive",
+          "hp": 190,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 58800,
+          "slug": "320-d",
+          "hp": 184,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 111115,
+          "slug": "320-d",
+          "hp": 200,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 59803,
+          "slug": "320-d-xdrive",
+          "hp": 184,
+          "yearFrom": 2013,
+          "yearTo": 2015
+        },
+        {
+          "id": 116655,
+          "slug": "320-d-xdrive",
+          "hp": 163,
+          "yearFrom": 2013,
+          "yearTo": 2015
+        },
+        {
+          "id": 100846,
+          "slug": "320-d-xdrive",
+          "hp": 200,
+          "yearFrom": 2013,
+          "yearTo": 2015
+        },
+        {
+          "id": 58796,
+          "slug": "320-i",
+          "hp": 184,
+          "yearFrom": 2013,
+          "yearTo": 2016
+        },
+        {
+          "id": 133014,
+          "slug": "320-i",
+          "hp": 163,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 120517,
+          "slug": "320-i",
+          "hp": 184,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 116652,
+          "slug": "320-i",
+          "hp": 163,
+          "yearFrom": 2013,
+          "yearTo": 2016
+        },
+        {
+          "id": 133015,
+          "slug": "320-i-xdrive",
+          "hp": 163,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 120518,
+          "slug": "320-i-xdrive",
+          "hp": 184,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 116653,
+          "slug": "320-i-xdrive",
+          "hp": 163,
+          "yearFrom": 2013,
+          "yearTo": 2016
+        },
+        {
+          "id": 59800,
+          "slug": "320-i-xdrive",
+          "hp": 184,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 53384,
+          "slug": "325-d",
+          "hp": 211,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 120542,
+          "slug": "325-d",
+          "hp": 224,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 59804,
+          "slug": "325-d",
+          "hp": 218,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 58797,
+          "slug": "328-i",
+          "hp": 245,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 59801,
+          "slug": "328-i-xdrive",
+          "hp": 245,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 100827,
+          "slug": "330-d",
+          "hp": 258,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 117290,
+          "slug": "330-d",
+          "hp": 286,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 100818,
+          "slug": "330-d-xdrive",
+          "hp": 258,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 117291,
+          "slug": "330-d-xdrive",
+          "hp": 286,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 120265,
+          "slug": "330-i",
+          "hp": 252,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 120266,
+          "slug": "330-i-xdrive",
+          "hp": 252,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 137815,
+          "slug": "330-i-xdrive",
+          "hp": 249,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 100828,
+          "slug": "335-d-xdrive",
+          "hp": 313,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 107883,
+          "slug": "335-i",
+          "hp": 340,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 107884,
+          "slug": "335-i-xdrive",
+          "hp": 340,
+          "yearFrom": 2014,
+          "yearTo": 2016
+        },
+        {
+          "id": 59802,
+          "slug": "335-i-xdrive",
+          "hp": 306,
+          "yearFrom": 2013,
+          "yearTo": 2016
+        },
+        {
+          "id": 107879,
+          "slug": "335-i",
+          "hp": 326,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 58798,
+          "slug": "335-i",
+          "hp": 306,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 107881,
+          "slug": "335-i-xdrive",
+          "hp": 326,
+          "yearFrom": 2013,
+          "yearTo": 2014
+        },
+        {
+          "id": 120267,
+          "slug": "340-i",
+          "hp": 326,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 126168,
+          "slug": "340-i",
+          "hp": 360,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 120268,
+          "slug": "340-i-xdrive",
+          "hp": 326,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 126169,
+          "slug": "340-i-xdrive",
+          "hp": 360,
+          "yearFrom": null,
+          "yearTo": null
+        }
+      ]
+    },
+    "f40": {
+      "gen": "1-f40",
+      "series": "1er-reihe",
+      "engines": [
+        {
+          "id": 136292,
+          "slug": "116-d",
+          "hp": 116,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 141975,
+          "slug": "116-i",
+          "hp": 109,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 136293,
+          "slug": "118-d",
+          "hp": 150,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 137109,
+          "slug": "118-d",
+          "hp": 136,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 136290,
+          "slug": "118-i",
+          "hp": 140,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 142450,
+          "slug": "118-i",
+          "hp": 136,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 139207,
+          "slug": "120-d",
+          "hp": 190,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 136294,
+          "slug": "120-d-xdrive",
+          "hp": 190,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 141976,
+          "slug": "120-i",
+          "hp": 178,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 146300,
+          "slug": "120-i",
+          "hp": 192,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 141923,
+          "slug": "128-ti",
+          "hp": 265,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 142173,
+          "slug": "128-ti",
+          "hp": 245,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 136291,
+          "slug": "m-135-i-xdrive",
+          "hp": 306,
+          "yearFrom": null,
+          "yearTo": null
+        }
+      ]
+    },
+    "f48": {
+      "gen": "x1-f48",
+      "series": "x1",
+      "engines": [
+        {
+          "id": 117610,
+          "slug": "sdrive-16-d",
+          "hp": 116,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 115202,
+          "slug": "sdrive-18-d",
+          "hp": 150,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 116633,
+          "slug": "sdrive-18-d",
+          "hp": 136,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 116109,
+          "slug": "sdrive-18-i",
+          "hp": 136,
+          "yearFrom": 2015,
+          "yearTo": 2022
+        },
+        {
+          "id": 127858,
+          "slug": "sdrive-18-i",
+          "hp": 140,
+          "yearFrom": 2017,
+          "yearTo": 2022
+        },
+        {
+          "id": 117576,
+          "slug": "sdrive-20-d",
+          "hp": 190,
+          "yearFrom": 2015,
+          "yearTo": 2022
+        },
+        {
+          "id": 117614,
+          "slug": "sdrive-20-d",
+          "hp": 163,
+          "yearFrom": 2015,
+          "yearTo": 2022
+        },
+        {
+          "id": 116632,
+          "slug": "sdrive-20-i",
+          "hp": 192,
+          "yearFrom": 2015,
+          "yearTo": 2022
+        },
+        {
+          "id": 142156,
+          "slug": "sdrive-20-i",
+          "hp": 178,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 141775,
+          "slug": "sdrive-20-i-activeflex",
+          "hp": 192,
+          "yearFrom": 2015,
+          "yearTo": 2022
+        },
+        {
+          "id": 123806,
+          "slug": "sdrive-28-i",
+          "hp": 231,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 116112,
+          "slug": "xdrive-18-d",
+          "hp": 150,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 117619,
+          "slug": "xdrive-18-d",
+          "hp": 136,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 116115,
+          "slug": "xdrive-20-d",
+          "hp": 190,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 116634,
+          "slug": "xdrive-20-d",
+          "hp": 163,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 115200,
+          "slug": "xdrive-20-i",
+          "hp": 192,
+          "yearFrom": 2015,
+          "yearTo": 2022
+        },
+        {
+          "id": 142157,
+          "slug": "xdrive-20-i",
+          "hp": 178,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 136374,
+          "slug": "xdrive-25-e-plug-in-hybrid",
+          "hp": 220,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 115201,
+          "slug": "xdrive-25-i",
+          "hp": 231,
+          "yearFrom": 2015,
+          "yearTo": 2021
+        },
+        {
+          "id": 138087,
+          "slug": "xdrive-25-i-activeflex",
+          "hp": 231,
+          "yearFrom": 2016,
+          "yearTo": 2022
+        },
+        {
+          "id": 115203,
+          "slug": "xdrive-25-d",
+          "hp": 231,
+          "yearFrom": null,
+          "yearTo": null
+        }
+      ]
+    },
+    "g01": {
+      "gen": "x3-g01",
+      "series": "x3",
+      "engines": [
+        {
+          "id": 135353,
+          "slug": "m",
+          "hp": 480,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 135354,
+          "slug": "m-competition",
+          "hp": 510,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 132153,
+          "slug": "sdrive-18-d",
+          "hp": 150,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 132155,
+          "slug": "sdrive-18-d",
+          "hp": 136,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 141146,
+          "slug": "sdrive-18-d-mild-hybrid",
+          "hp": 150,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 141145,
+          "slug": "sdrive-18-d-mild-hybrid",
+          "hp": 136,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 129611,
+          "slug": "sdrive-20-i",
+          "hp": 184,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 129613,
+          "slug": "sdrive-20-i-1-6",
+          "hp": 170,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 131380,
+          "slug": "sdrive-30-i",
+          "hp": 251,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 127854,
+          "slug": "xdrive-20-d",
+          "hp": 190,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 128155,
+          "slug": "xdrive-20-d",
+          "hp": 163,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 139203,
+          "slug": "xdrive-20-d-mild-hybrid",
+          "hp": 190,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 139202,
+          "slug": "xdrive-20-d-mild-hybrid",
+          "hp": 163,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 127857,
+          "slug": "xdrive-20-i",
+          "hp": 184,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 145623,
+          "slug": "xdrive-20-i-mild-hybrid",
+          "hp": 184,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 129875,
+          "slug": "xdrive-25-d",
+          "hp": 231,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 132165,
+          "slug": "xdrive-25-d",
+          "hp": 211,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 154726,
+          "slug": "xdrive-30-e-plug-in-hybrid",
+          "hp": 272,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 135708,
+          "slug": "xdrive-30-e-plug-in-hybrid",
+          "hp": 292,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 138698,
+          "slug": "xdrive-30-e-plug-in-hybrid",
+          "hp": 292,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 137826,
+          "slug": "xdrive-30-i",
+          "hp": 249,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 127856,
+          "slug": "xdrive-30-i",
+          "hp": 252,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 145622,
+          "slug": "xdrive-30-i-mild-hybrid",
+          "hp": 245,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 132166,
+          "slug": "xdrive-30d",
+          "hp": 249,
+          "yearFrom": 2017,
+          "yearTo": 2020
+        },
+        {
+          "id": 127855,
+          "slug": "xdrive-30d",
+          "hp": 265,
+          "yearFrom": 2017,
+          "yearTo": 2020
+        },
+        {
+          "id": 141142,
+          "slug": "xdrive-30d-mild-hybrid",
+          "hp": 249,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 141143,
+          "slug": "xdrive-30d-mild-hybrid",
+          "hp": 286,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 131358,
+          "slug": "xdrive-m40-d",
+          "hp": 326,
+          "yearFrom": 2018,
+          "yearTo": 2020
+        },
+        {
+          "id": 141144,
+          "slug": "xdrive-m40-d-mild-hybrid",
+          "hp": 340,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 132498,
+          "slug": "xdrive-m40-i",
+          "hp": 354,
+          "yearFrom": 2018,
+          "yearTo": 2019
+        },
+        {
+          "id": 139649,
+          "slug": "xdrive-m40-i",
+          "hp": 387,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 127852,
+          "slug": "xdrive-m40-i",
+          "hp": 360,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 146539,
+          "slug": "xdrive-m40-i-mild-hybrid",
+          "hp": 360,
+          "yearFrom": null,
+          "yearTo": null
+        }
+      ]
+    },
+    "g05": {
+      "gen": "x5-g05",
+      "series": "x5",
+      "engines": [
+        {
+          "id": 137786,
+          "slug": "m",
+          "hp": 600,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 137787,
+          "slug": "m-competition",
+          "hp": 625,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 153714,
+          "slug": "m-competition-mild-hybrid",
+          "hp": 625,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 136618,
+          "slug": "sdrive-40-i",
+          "hp": 340,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 136310,
+          "slug": "xdrive-25-d",
+          "hp": 231,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 137597,
+          "slug": "xdrive-25-d",
+          "hp": 211,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 131418,
+          "slug": "xdrive-30-d",
+          "hp": 265,
+          "yearFrom": 2018,
+          "yearTo": 2020
+        },
+        {
+          "id": 132802,
+          "slug": "xdrive-30-d",
+          "hp": 249,
+          "yearFrom": 2018,
+          "yearTo": 2020
+        },
+        {
+          "id": 141150,
+          "slug": "xdrive-30-d-mild-hybrid",
+          "hp": 249,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 141151,
+          "slug": "xdrive-30-d-mild-hybrid",
+          "hp": 286,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 152806,
+          "slug": "xdrive-30-d-mild-hybrid",
+          "hp": 298,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 137926,
+          "slug": "xdrive-30-i",
+          "hp": 265,
+          "yearFrom": 2019,
+          "yearTo": 2021
+        },
+        {
+          "id": 139332,
+          "slug": "xdrive-40-d-mild-hybrid",
+          "hp": 340,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 154729,
+          "slug": "xdrive-40-d-mild-hybrid",
+          "hp": 352,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 131416,
+          "slug": "xdrive-40-i",
+          "hp": 340,
+          "yearFrom": 2018,
+          "yearTo": 2023
+        },
+        {
+          "id": 143031,
+          "slug": "xdrive-40-i-mild-hybrid",
+          "hp": 333,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 152807,
+          "slug": "xdrive-40-i-mild-hybrid-xdrive",
+          "hp": 381,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 133260,
+          "slug": "xdrive-45-e-plug-in-hybrid",
+          "hp": 394,
+          "yearFrom": 2019,
+          "yearTo": 2023
+        },
+        {
+          "id": 139154,
+          "slug": "xdrive-45-e-plug-in-hybrid",
+          "hp": 320,
+          "yearFrom": 2019,
+          "yearTo": 2023
+        },
+        {
+          "id": 131417,
+          "slug": "xdrive-50-i",
+          "hp": 462,
+          "yearFrom": 2018,
+          "yearTo": 2019
+        },
+        {
+          "id": 131420,
+          "slug": "xdrive-m-50-d",
+          "hp": 400,
+          "yearFrom": 2018,
+          "yearTo": 2023
+        },
+        {
+          "id": 136647,
+          "slug": "xdrive-m50-i",
+          "hp": 530,
+          "yearFrom": 2019,
+          "yearTo": 2023
+        },
+        {
+          "id": 152813,
+          "slug": "xdrive-m60-i-mild-hybrid",
+          "hp": 530,
+          "yearFrom": null,
+          "yearTo": null
+        }
+      ]
+    },
+    "g06": {
+      "gen": "x6-g06",
+      "series": "x6",
+      "engines": []
+    },
+    "g20": {
+      "gen": "3-g20",
+      "series": "3er-reihe",
+      "engines": [
+        {
+          "id": 142479,
+          "slug": "316-d",
+          "hp": 116,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 140024,
+          "slug": "316-d",
+          "hp": 122,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 142480,
+          "slug": "316-d-mild-hybrid",
+          "hp": 116,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 141496,
+          "slug": "316-d-mild-hybrid",
+          "hp": 122,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 135058,
+          "slug": "318-d",
+          "hp": 150,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 135917,
+          "slug": "318-d",
+          "hp": 136,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 141498,
+          "slug": "318-d-mild-hybrid",
+          "hp": 136,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 141499,
+          "slug": "318-d-mild-hybrid",
+          "hp": 150,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 139215,
+          "slug": "318-i",
+          "hp": 156,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 133249,
+          "slug": "320-d",
+          "hp": 190,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 133993,
+          "slug": "320-d",
+          "hp": 163,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 139184,
+          "slug": "320-d-mild-hybrid",
+          "hp": 163,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 139186,
+          "slug": "320-d-mild-hybrid",
+          "hp": 190,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 139189,
+          "slug": "320-d-mild-hybrid-xdrive",
+          "hp": 163,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 139192,
+          "slug": "320-d-mild-hybrid-xdrive",
+          "hp": 190,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 133250,
+          "slug": "320-d-xdrive",
+          "hp": 190,
+          "yearFrom": 2018,
+          "yearTo": 2020
+        },
+        {
+          "id": 133994,
+          "slug": "320-d-xdrive",
+          "hp": 163,
+          "yearFrom": 2018,
+          "yearTo": 2020
+        },
+        {
+          "id": 141528,
+          "slug": "320-e-plug-in-hybrid",
+          "hp": 204,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 135921,
+          "slug": "320-i-1-6",
+          "hp": 170,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 136302,
+          "slug": "320-i-xdrive",
+          "hp": 184,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 145459,
+          "slug": "320-ld",
+          "hp": 190,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 135053,
+          "slug": "320-i",
+          "hp": 184,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 135919,
+          "slug": "330-d",
+          "hp": 265,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 141986,
+          "slug": "330-d-mild-hybrid",
+          "hp": 286,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 141987,
+          "slug": "330-d-mild-hybrid-xdrive",
+          "hp": 286,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 136304,
+          "slug": "330-d-xdrive",
+          "hp": 265,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 140967,
+          "slug": "330-e-plug-in-hybrid",
+          "hp": 292,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 139467,
+          "slug": "330-e-plug-in-hybrid-xdrive",
+          "hp": 292,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 148051,
+          "slug": "330-i",
+          "hp": 245,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 136303,
+          "slug": "330-i-xdrive",
+          "hp": 258,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 148052,
+          "slug": "330-i-xdrive",
+          "hp": 245,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 133248,
+          "slug": "330-i",
+          "hp": 258,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 137646,
+          "slug": "m-340-i",
+          "hp": 387,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 142486,
+          "slug": "m-340-i-mild-hybrid-xdrive",
+          "hp": 374,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 137647,
+          "slug": "m-340-i-xdrive",
+          "hp": 387,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 134016,
+          "slug": "m-340-i-xdrive",
+          "hp": 374,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 141793,
+          "slug": "m3",
+          "hp": 480,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 141794,
+          "slug": "m3-competition",
+          "hp": 510,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 143769,
+          "slug": "m3-competition-xdrive",
+          "hp": 510,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 800150,
+          "slug": "m3-competition-xdrive",
+          "hp": 530,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 152065,
+          "slug": "m3-cs-xdrive",
+          "hp": 551,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 139470,
+          "slug": "m340-d-mild-hybrid-xdrive",
+          "hp": 340,
+          "yearFrom": null,
+          "yearTo": null
+        }
+      ]
+    },
+    "g21": {
+      "gen": "3-touring-g21",
+      "series": "3er-reihe",
+      "engines": [
+        {
+          "id": 142482,
+          "slug": "316-d",
+          "hp": 116,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 142481,
+          "slug": "316-d",
+          "hp": 122,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 142483,
+          "slug": "316-d-mild-hybrid",
+          "hp": 116,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 141494,
+          "slug": "316-d-mild-hybrid",
+          "hp": 122,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 136492,
+          "slug": "318-d",
+          "hp": 136,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 136493,
+          "slug": "318-d",
+          "hp": 150,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 141501,
+          "slug": "318-d-mild-hybrid",
+          "hp": 136,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 141502,
+          "slug": "318-d-mild-hybrid",
+          "hp": 150,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 139216,
+          "slug": "318-i",
+          "hp": 156,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 136494,
+          "slug": "320-d",
+          "hp": 163,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 136495,
+          "slug": "320-d",
+          "hp": 190,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 139198,
+          "slug": "320-d-mild-hybrid",
+          "hp": 163,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 139199,
+          "slug": "320-d-mild-hybrid",
+          "hp": 190,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 139200,
+          "slug": "320-d-mild-hybrid-xdrive",
+          "hp": 163,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 139201,
+          "slug": "320-d-mild-hybrid-xdrive",
+          "hp": 190,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 136496,
+          "slug": "320-d-xdrive",
+          "hp": 163,
+          "yearFrom": 2019,
+          "yearTo": 2020
+        },
+        {
+          "id": 136497,
+          "slug": "320-d-xdrive",
+          "hp": 190,
+          "yearFrom": 2019,
+          "yearTo": 2020
+        },
+        {
+          "id": 141531,
+          "slug": "320-e-plug-in-hybrid",
+          "hp": 204,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 143457,
+          "slug": "320-e-plug-in-hybrid-xdrive",
+          "hp": 204,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 136488,
+          "slug": "320-i",
+          "hp": 184,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 137895,
+          "slug": "330-d",
+          "hp": 265,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 141988,
+          "slug": "330-d-mild-hybrid",
+          "hp": 286,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 141989,
+          "slug": "330-d-mild-hybrid-xdrive",
+          "hp": 286,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 136498,
+          "slug": "330-d-xdrive",
+          "hp": 265,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 136500,
+          "slug": "330-e-plug-in-hybrid",
+          "hp": 292,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 139469,
+          "slug": "330-e-plug-in-hybrid-xdrive",
+          "hp": 292,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 136489,
+          "slug": "330-i",
+          "hp": 258,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 148049,
+          "slug": "330-i",
+          "hp": 245,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 136490,
+          "slug": "330-i-xdrive",
+          "hp": 258,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 148050,
+          "slug": "330-i-xdrive",
+          "hp": 245,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 139471,
+          "slug": "m-340-d-mild-hybrid-xdrive",
+          "hp": 340,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 142485,
+          "slug": "m-340-i-mild-hybrid-xdrive",
+          "hp": 374,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 142076,
+          "slug": "m-340-i-xdrive",
+          "hp": 387,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 136491,
+          "slug": "m-340-i-xdrive",
+          "hp": 374,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 148053,
+          "slug": "m3-competition-xdrive",
+          "hp": 510,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 800064,
+          "slug": "m3-competition-xdrive",
+          "hp": 530,
+          "yearFrom": null,
+          "yearTo": null
+        }
+      ]
+    },
+    "g30": {
+      "gen": "5-g30",
+      "series": "5er-reihe",
+      "engines": [
+        {
+          "id": 131833,
+          "slug": "518-d",
+          "hp": 150,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 131832,
+          "slug": "518-d",
+          "hp": 136,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 141065,
+          "slug": "518-d-mild-hybrid",
+          "hp": 136,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 141066,
+          "slug": "518-d-mild-hybrid",
+          "hp": 150,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 123345,
+          "slug": "520-d",
+          "hp": 190,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 123822,
+          "slug": "520-d",
+          "hp": 163,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 123346,
+          "slug": "520-d-xdrive",
+          "hp": 190,
+          "yearFrom": 2016,
+          "yearTo": 2023
+        },
+        {
+          "id": 123823,
+          "slug": "520-d-xdrive",
+          "hp": 163,
+          "yearFrom": 2016,
+          "yearTo": 2023
+        },
+        {
+          "id": 138722,
+          "slug": "520-d-mild-hybrid",
+          "hp": 163,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 138720,
+          "slug": "520-d-mild-hybrid",
+          "hp": 190,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 138723,
+          "slug": "520-d-mild-hybrid-xdrive",
+          "hp": 190,
+          "yearFrom": 2019,
+          "yearTo": 2023
+        },
+        {
+          "id": 143607,
+          "slug": "520-e-plug-in-hybrid",
+          "hp": 204,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 130639,
+          "slug": "520-i",
+          "hp": 211,
+          "yearFrom": 2017,
+          "yearTo": 2020
+        },
+        {
+          "id": 128091,
+          "slug": "520-i",
+          "hp": 184,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 128146,
+          "slug": "520-i",
+          "hp": 170,
+          "yearFrom": 2017,
+          "yearTo": 2023
+        },
+        {
+          "id": 128151,
+          "slug": "520-i",
+          "hp": 163,
+          "yearFrom": 2017,
+          "yearTo": 2020
+        },
+        {
+          "id": 140923,
+          "slug": "520-i-mild-hybrid",
+          "hp": 184,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 141064,
+          "slug": "520-i-mild-hybrid",
+          "hp": 163,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 144053,
+          "slug": "523-d-mild-hybrid-xdrive",
+          "hp": 190,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 128026,
+          "slug": "525-d",
+          "hp": 231,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 128153,
+          "slug": "525-d",
+          "hp": 211,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 123348,
+          "slug": "530-d",
+          "hp": 265,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 126257,
+          "slug": "530-d-xdrive",
+          "hp": 249,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 123349,
+          "slug": "530-d-xdrive",
+          "hp": 265,
+          "yearFrom": 2016,
+          "yearTo": 2020
+        },
+        {
+          "id": 141093,
+          "slug": "530-d-mild-hybrid",
+          "hp": 249,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 140928,
+          "slug": "530-d-mild-hybrid",
+          "hp": 286,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 141094,
+          "slug": "530-d-mild-hybrid-xdrive",
+          "hp": 249,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 140929,
+          "slug": "530-d-mild-hybrid-xdrive",
+          "hp": 286,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 125343,
+          "slug": "530-e-plug-in-hybrid",
+          "hp": 252,
+          "yearFrom": 2017,
+          "yearTo": 2020
+        },
+        {
+          "id": 141450,
+          "slug": "530-e-plug-in-hybrid",
+          "hp": 292,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 142150,
+          "slug": "530-e-plug-in-hybrid",
+          "hp": 272,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 138694,
+          "slug": "530-e-plug-in-hybrid",
+          "hp": 231,
+          "yearFrom": 2019,
+          "yearTo": 2020
+        },
+        {
+          "id": 125345,
+          "slug": "530-e-plug-in-hybrid-xdrive",
+          "hp": 252,
+          "yearFrom": 2017,
+          "yearTo": 2020
+        },
+        {
+          "id": 141451,
+          "slug": "530-e-plug-in-hybrid-xdrive",
+          "hp": 292,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 138696,
+          "slug": "530-e-plug-in-hybrid-xdrive",
+          "hp": 231,
+          "yearFrom": 2019,
+          "yearTo": 2020
+        },
+        {
+          "id": 142153,
+          "slug": "530-e-plug-in-hybrid-xdrive",
+          "hp": 272,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 147749,
+          "slug": "530-i",
+          "hp": 245,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 140924,
+          "slug": "530-i-mild-hybrid",
+          "hp": 252,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 150078,
+          "slug": "530-i-mild-hybrid",
+          "hp": 245,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 140925,
+          "slug": "530-i-mild-hybrid-xdrive",
+          "hp": 252,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 150079,
+          "slug": "530-i-mild-hybrid-xdrive",
+          "hp": 245,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 137811,
+          "slug": "530-i-xdrive",
+          "hp": 249,
+          "yearFrom": 2016,
+          "yearTo": 2023
+        },
+        {
+          "id": 147751,
+          "slug": "530-i-xdrive",
+          "hp": 245,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 123333,
+          "slug": "530-i",
+          "hp": 252,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 123334,
+          "slug": "530-i-xdrive",
+          "hp": 252,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 140930,
+          "slug": "540-d-mild-hybrid-xdrive",
+          "hp": 340,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 128029,
+          "slug": "540-d-xdrive",
+          "hp": 320,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 140926,
+          "slug": "540-i-mild-hybrid",
+          "hp": 333,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 140927,
+          "slug": "540-i-mild-hybrid-xdrive",
+          "hp": 333,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 123824,
+          "slug": "540-i",
+          "hp": 360,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 123340,
+          "slug": "540-i",
+          "hp": 340,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 123825,
+          "slug": "540-i-xdrive",
+          "hp": 360,
+          "yearFrom": 2016,
+          "yearTo": 2020
+        },
+        {
+          "id": 123342,
+          "slug": "540-i-xdrive",
+          "hp": 340,
+          "yearFrom": 2016,
+          "yearTo": 2020
+        },
+        {
+          "id": 141737,
+          "slug": "545-e-plug-in-hybrid-xdrive",
+          "hp": 394,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 128090,
+          "slug": "m-550-d-xdrive",
+          "hp": 400,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 136305,
+          "slug": "m-550-i-xdrive",
+          "hp": 530,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 123344,
+          "slug": "m-550-i-xdrive",
+          "hp": 462,
+          "yearFrom": 2017,
+          "yearTo": 2019
+        },
+        {
+          "id": 128183,
+          "slug": "m5",
+          "hp": 600,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 131130,
+          "slug": "m5-competition",
+          "hp": 625,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 143416,
+          "slug": "m5-cs",
+          "hp": 635,
+          "yearFrom": null,
+          "yearTo": null
+        }
+      ]
+    },
+    "g31": {
+      "gen": "5-touring-g31",
+      "series": "5er-reihe",
+      "engines": [
+        {
+          "id": 131834,
+          "slug": "518-d",
+          "hp": 150,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 131835,
+          "slug": "518-d",
+          "hp": 136,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 141105,
+          "slug": "518-d-mild-hybrid",
+          "hp": 150,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 141104,
+          "slug": "518-d-mild-hybrid",
+          "hp": 136,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 125339,
+          "slug": "520-d",
+          "hp": 190,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 126185,
+          "slug": "520-d",
+          "hp": 163,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 138724,
+          "slug": "520-d-mild-hybrid",
+          "hp": 190,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 141106,
+          "slug": "520-d-mild-hybrid",
+          "hp": 163,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 138726,
+          "slug": "520-d-mild-hybrid-xdrive",
+          "hp": 190,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 127986,
+          "slug": "520-d-xdrive",
+          "hp": 190,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 128696,
+          "slug": "520-d-xdrive",
+          "hp": 163,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 143459,
+          "slug": "520-e-plug-in-hybrid",
+          "hp": 204,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 128020,
+          "slug": "520-i",
+          "hp": 184,
+          "yearFrom": 2017,
+          "yearTo": 2020
+        },
+        {
+          "id": 128152,
+          "slug": "520-i",
+          "hp": 163,
+          "yearFrom": 2017,
+          "yearTo": 2020
+        },
+        {
+          "id": 130642,
+          "slug": "520-i",
+          "hp": 211,
+          "yearFrom": 2017,
+          "yearTo": 2020
+        },
+        {
+          "id": 140931,
+          "slug": "520-i-mild-hybrid",
+          "hp": 184,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 141103,
+          "slug": "520-i-mild-hybrid",
+          "hp": 163,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 127985,
+          "slug": "525-d",
+          "hp": 231,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 128154,
+          "slug": "525-d",
+          "hp": 211,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 125340,
+          "slug": "530-d",
+          "hp": 265,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 125341,
+          "slug": "530-d-xdrive",
+          "hp": 265,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 141108,
+          "slug": "530-d-mild-hybrid",
+          "hp": 249,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 140935,
+          "slug": "530-d-mild-hybrid",
+          "hp": 286,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 141109,
+          "slug": "530-d-mild-hybrid-xdrive",
+          "hp": 249,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 140936,
+          "slug": "530-d-mild-hybrid-xdrive",
+          "hp": 286,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 142152,
+          "slug": "530-e-plug-in-hybrid",
+          "hp": 272,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 141948,
+          "slug": "530-e-plug-in-hybrid",
+          "hp": 292,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 142155,
+          "slug": "530-e-plug-in-hybrid-xdrive",
+          "hp": 272,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 141950,
+          "slug": "530-e-plug-in-hybrid-xdrive",
+          "hp": 292,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 147753,
+          "slug": "530-i",
+          "hp": 245,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 140932,
+          "slug": "530-i-mild-hybrid",
+          "hp": 252,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 148075,
+          "slug": "530-i-mild-hybrid",
+          "hp": 245,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 140933,
+          "slug": "530-i-mild-hybrid-xdrive",
+          "hp": 252,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 148076,
+          "slug": "530-i-mild-hybrid-xdrive",
+          "hp": 245,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 127987,
+          "slug": "530-i-xdrive",
+          "hp": 252,
+          "yearFrom": 2017,
+          "yearTo": 2020
+        },
+        {
+          "id": 147755,
+          "slug": "530-i-xdrive",
+          "hp": 245,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 125336,
+          "slug": "530-i",
+          "hp": 252,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 140937,
+          "slug": "540-d-mild-hybrid-xdrive",
+          "hp": 340,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 127984,
+          "slug": "540-d-xdrive",
+          "hp": 320,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 140934,
+          "slug": "540-i-mild-hybrid-xdrive",
+          "hp": 333,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 125338,
+          "slug": "540-i-xdrive",
+          "hp": 360,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 125337,
+          "slug": "540-i-xdrive",
+          "hp": 340,
+          "yearFrom": null,
+          "yearTo": null
+        },
+        {
+          "id": 127983,
+          "slug": "m-550-d-xdrive",
+          "hp": 400,
+          "yearFrom": null,
+          "yearTo": null
+        }
+      ]
+    }
+  }
+}

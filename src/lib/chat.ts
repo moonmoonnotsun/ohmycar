@@ -48,9 +48,9 @@ export function stubChatReply(req: ChatRequest): string {
   const { chassis, variant } = resolveChatTarget(req);
   const foot = say(
     locale,
-    "Estimate — not confirmed by a mechanic.",
-    "Szacunek — niepotwierdzony przez mechanika.",
-    "Оценка — не подтверждена механиком.",
+    "Evidence score from sourced faults + UOKiK — not a mechanic sign-off; repair PLN pending quotes.",
+    "Ocena ze źródeł (usterki + UOKiK) — bez podpisu mechanika; PLN napraw po wycenie.",
+    "Оценка из источников (поломки + UOKiK) — без подписи механика; PLN ремонта после котировки.",
   );
 
   if (!q) {
@@ -60,6 +60,15 @@ export function stubChatReply(req: ChatRequest): string {
   if (variant && chassis) return variantReply(q, locale, chassis, variant, foot);
   if (chassis) return chassisReply(q, locale, chassis, foot);
   return homeReply(q, locale, foot);
+}
+
+function scoreLabel(variant: VariantBrief, locale: Locale): string {
+  if (variant.score == null) {
+    if (locale === "pl") return "brak pakietu oceny";
+    if (locale === "ru") return "нет пакета оценки";
+    return "no score pack";
+  }
+  return variant.score.toFixed(1);
 }
 
 function variantReply(q: string, locale: Locale, chassis: Chassis, variant: VariantBrief, foot: string): string {
@@ -75,9 +84,9 @@ function variantReply(q: string, locale: Locale, chassis: Chassis, variant: Vari
       return (
         say(
           locale,
-          `${who} is N47. The chain sits at the gearbox end. A snap or jump often means replacing the engine — that is why the score is ${variant.score.toFixed(1)}. This is not M47 and not all E90 diesels.`,
-          `${who} ma N47. Łańcuch siedzi od strony skrzyni. Pęknięcie albo przeskok często oznacza wymianę silnika — stąd ocena ${variant.score.toFixed(1)}. To nie M47 i nie wszystkie diesle E90.`,
-          `${who} — это N47. Цепь со стороны коробки. Обрыв или перескок часто означает замену мотора — поэтому оценка ${variant.score.toFixed(1)}. Это не M47 и не все дизели E90.`,
+          `${who} is N47. The chain sits at the gearbox end. A snap or jump often means replacing the engine — that is why the score is ${scoreLabel(variant, locale)}. This is not M47 and not all E90 diesels.`,
+          `${who} ma N47. Łańcuch siedzi od strony skrzyni. Pęknięcie albo przeskok często oznacza wymianę silnika — stąd ocena ${scoreLabel(variant, locale)}. To nie M47 i nie wszystkie diesle E90.`,
+          `${who} — это N47. Цепь со стороны коробки. Обрыв или перескок часто означает замену мотора — поэтому оценка ${scoreLabel(variant, locale)}. Это не M47 и не все дизели E90.`,
         ) +
         " " +
         foot
@@ -99,9 +108,9 @@ function variantReply(q: string, locale: Locale, chassis: Chassis, variant: Vari
     return (
       say(
         locale,
-        `Rear subframe rust is a common reason to reject a car at inspection in Poland. It is not diesel versus petrol. On ${who} still check the welds; do not treat the ${variant.score.toFixed(1)} score as a pass.`,
-        `Rdza tylnej belki to częsty powód odrzucenia auta na oględzinach w Polsce. To nie diesel kontra benzyna. Na ${who} i tak sprawdzaj spoiny; ocena ${variant.score.toFixed(1)} nie zastępuje oględzin.`,
-        `Ржавчина заднего подрамника — частая причина отказаться от машины на осмотре в Польше. Это не дизель против бензина. На ${who} всё равно проверяйте швы; оценка ${variant.score.toFixed(1)} не заменяет осмотр.`,
+        `Rear subframe rust is a common reason to reject a car at inspection in Poland. It is not diesel versus petrol. On ${who} still check the welds; do not treat the ${scoreLabel(variant, locale)} score as a pass.`,
+        `Rdza tylnej belki to częsty powód odrzucenia auta na oględzinach w Polsce. To nie diesel kontra benzyna. Na ${who} i tak sprawdzaj spoiny; ocena ${scoreLabel(variant, locale)} nie zastępuje oględzin.`,
+        `Ржавчина заднего подрамника — частая причина отказаться от машины на осмотре в Польше. Это не дизель против бензина. На ${who} всё равно проверяйте швы; оценка ${scoreLabel(variant, locale)} не заменяет осмотр.`,
       ) +
       " " +
       foot
@@ -140,9 +149,9 @@ function variantReply(q: string, locale: Locale, chassis: Chassis, variant: Vari
     return (
       say(
         locale,
-        `Score ${variant.score.toFixed(1)} starts at 100 and subtracts catastrophe, 5-year fix, pain load, campaigns, and parts. Asking price never enters. Status: estimate. Main fault: ${topTitle}.`,
-        `Ocena ${variant.score.toFixed(1)} startuje od 100 i odejmuje katastrofy, 5-letni remont, usterki, akcje i części. Cena zakupu nie wchodzi. Status: szacunek. Główna usterka: ${topTitle}.`,
-        `Оценка ${variant.score.toFixed(1)} стартует со 100 и вычитает катастрофы, 5-летний ремонт, поломки, акции и запчасти. Цена покупки не входит. Статус: оценка. Главная поломка: ${topTitle}.`,
+        `Score ${scoreLabel(variant, locale)} starts at 100 and subtracts catastrophe, 5-year fix, pain load, campaigns, and parts. Asking price never enters. Status: estimate. Main fault: ${topTitle}.`,
+        `Ocena ${scoreLabel(variant, locale)} startuje od 100 i odejmuje katastrofy, 5-letni remont, usterki, akcje i części. Cena zakupu nie wchodzi. Status: szacunek. Główna usterka: ${topTitle}.`,
+        `Оценка ${scoreLabel(variant, locale)} стартует со 100 и вычитает катастрофы, 5-летний ремонт, поломки, акции и запчасти. Цена покупки не входит. Статус: оценка. Главная поломка: ${topTitle}.`,
       ) +
       " " +
       foot
@@ -165,14 +174,14 @@ function variantReply(q: string, locale: Locale, chassis: Chassis, variant: Vari
 
   if (has(q, ["kupow", "brać", "brac", "buy", "should", "warto", "worth", "deposit", "zadatek", "брать", "покупа", "стоит"])) {
     const tone =
-      variant.score >= 70
+      (variant.score ?? -1) >= 70
         ? say(
             locale,
             "This is one of the lower-risk engines in the family — still inspect it.",
             "To jeden z silników o niższym ryzyku w rodzinie — oględziny i tak obowiązkowe.",
             "Это один из моторов с более низким риском в семействе — осмотр всё равно обязателен.",
           )
-        : variant.score >= 45
+        : (variant.score ?? -1) >= 45
           ? say(
               locale,
               "Mid-table: buy the service history, not the photo.",
@@ -195,9 +204,9 @@ function variantReply(q: string, locale: Locale, chassis: Chassis, variant: Vari
   return (
     say(
       locale,
-      `${first} Score ${variant.score.toFixed(1)}. Main fault: ${topTitle}.`,
-      `${first} Ocena ${variant.score.toFixed(1)}. Główna usterka: ${topTitle}.`,
-      `${first} Оценка ${variant.score.toFixed(1)}. Главная поломка: ${topTitle}.`,
+      `${first} Score ${scoreLabel(variant, locale)}. Main fault: ${topTitle}.`,
+      `${first} Ocena ${scoreLabel(variant, locale)}. Główna usterka: ${topTitle}.`,
+      `${first} Оценка ${scoreLabel(variant, locale)}. Главная поломка: ${topTitle}.`,
     ) +
     " " +
     foot
@@ -221,16 +230,30 @@ function chassisReply(q: string, locale: Locale, chassis: Chassis, foot: string)
     );
   }
 
-  const best = rows.reduce((a, b) => (a.score >= b.score ? a : b));
-  const worst = rows.reduce((a, b) => (a.score <= b.score ? a : b));
+  const scored = rows.filter((r) => r.score != null);
+  if (!scored.length) {
+    return (
+      say(
+        locale,
+        `${chassis.code} has engine rows, but no evidence score pack yet. Read the sourced fault list; we will not invent a 0–100.`,
+        `${chassis.code} ma wiersze silników, ale nie ma jeszcze pakietu oceny ze źródeł. Czytaj listę usterek; nie wymyślimy 0–100.`,
+        `${chassis.code} есть строки моторов, но пакета оценки из источников пока нет. Читайте список поломок; 0–100 не выдумаем.`,
+      ) +
+      " " +
+      foot
+    );
+  }
+
+  const best = scored.reduce((a, b) => ((a.score ?? -1) >= (b.score ?? -1) ? a : b));
+  const worst = scored.reduce((a, b) => ((a.score ?? 999) <= (b.score ?? 999) ? a : b));
 
   if (has(q, ["najlep", "best", "n52", "spokoj", "лучш", "спокой"])) {
     return (
       say(
         locale,
-        `Lowest typical risk on ${chassis.code}: ${best.year} ${best.model} ${best.engine} (${best.score.toFixed(1)}). That is not “no faults” — read that year’s report.`,
-        `Najniższe typowe ryzyko na ${chassis.code}: ${best.year} ${best.model} ${best.engine} (${best.score.toFixed(1)}). To nie znaczy „bez usterek” — czytaj opis tego roku.`,
-        `Самый низкий типичный риск на ${chassis.code}: ${best.year} ${best.model} ${best.engine} (${best.score.toFixed(1)}). Это не «без поломок» — читайте описание этого года.`,
+        `Lowest typical risk on ${chassis.code}: ${best.year} ${best.model} ${best.engine} (${scoreLabel(best, locale)}). That is not “no faults” — read that year’s report.`,
+        `Najniższe typowe ryzyko na ${chassis.code}: ${best.year} ${best.model} ${best.engine} (${scoreLabel(best, locale)}). To nie znaczy „bez usterek” — czytaj opis tego roku.`,
+        `Самый низкий типичный риск на ${chassis.code}: ${best.year} ${best.model} ${best.engine} (${scoreLabel(best, locale)}). Это не «без поломок» — читайте описание этого года.`,
       ) +
       " " +
       foot
@@ -241,9 +264,9 @@ function chassisReply(q: string, locale: Locale, chassis: Chassis, foot: string)
     return (
       say(
         locale,
-        `Highest risk on ${chassis.code}: ${worst.year} ${worst.model} ${worst.engine} (${worst.score.toFixed(1)}). N47 is not M47. Do not mix years.`,
-        `Najwyższe ryzyko na ${chassis.code}: ${worst.year} ${worst.model} ${worst.engine} (${worst.score.toFixed(1)}). N47 to nie M47. Nie mieszaj lat.`,
-        `Самый высокий риск на ${chassis.code}: ${worst.year} ${worst.model} ${worst.engine} (${worst.score.toFixed(1)}). N47 — не M47. Не путайте годы.`,
+        `Highest risk on ${chassis.code}: ${worst.year} ${worst.model} ${worst.engine} (${scoreLabel(worst, locale)}). N47 is not M47. Do not mix years.`,
+        `Najwyższe ryzyko na ${chassis.code}: ${worst.year} ${worst.model} ${worst.engine} (${scoreLabel(worst, locale)}). N47 to nie M47. Nie mieszaj lat.`,
+        `Самый высокий риск на ${chassis.code}: ${worst.year} ${worst.model} ${worst.engine} (${scoreLabel(worst, locale)}). N47 — не M47. Не путайте годы.`,
       ) +
       " " +
       foot
@@ -287,9 +310,9 @@ function homeReply(q: string, locale: Locale, foot: string): string {
     return (
       say(
         locale,
-        "330i is four cars. E46 M54, E90 N52/N53, F30 N20/B48. The badge is not an identity. Open a chassis and a year.",
-        "330i to cztery auta. E46 M54, E90 N52/N53, F30 N20/B48. Znaczek nic nie mówi. Otwórz podwozie i rok.",
-        "330i — четыре машины. E46 M54, E90 N52/N53, F30 N20/B48. Шильдик ничего не говорит. Откройте шасси и год.",
+        "330i is four cars. E90 is a naturally aspirated 3.0 inline-six (N52/N53); F30 is a turbocharged 2.0 four (N20/B48). E46 is M54. Open a chassis and a year.",
+        "330i to cztery auta. E90 to wolnossąca szóstka 3.0 (N52/N53); F30 to turbo czwórka 2.0 (N20/B48). E46 to M54. Otwórz podwozie i rok.",
+        "330i — четыре машины. E90 — атмосферная шестёрка 3.0 (N52/N53); F30 — турбо четвёрка 2.0 (N20/B48). E46 — M54. Откройте шасси и год.",
       ) +
       " " +
       foot

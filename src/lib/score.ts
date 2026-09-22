@@ -16,7 +16,14 @@ export const SCORE_WEIGHTS = {
 /** PLN that saturates the 5-year-fix bucket. */
 export const FIX_PLN_CAP = 20_000;
 
-export function scoreFromInputs(inputs: ScoreInputs): number {
+/** Full five-bucket scorer — only when every field is quoted (signed packs later). */
+export function scoreFromInputs(inputs: {
+  catastrophe: number;
+  expectedFix5yPln: number;
+  painLoad: number;
+  campaigns: number;
+  partsReality: number;
+}): number {
   const catastrophe = clamp01(inputs.catastrophe) * SCORE_WEIGHTS.catastrophe;
   const fiveYearFix =
     Math.min(inputs.expectedFix5yPln / FIX_PLN_CAP, 1) * SCORE_WEIGHTS.fiveYearFix;
@@ -27,20 +34,31 @@ export function scoreFromInputs(inputs: ScoreInputs): number {
   return Math.round(Math.min(100, Math.max(0, raw)) * 10) / 10;
 }
 
-export function scoreBreakdown(inputs: ScoreInputs) {
-  const catastrophe = clamp01(inputs.catastrophe) * SCORE_WEIGHTS.catastrophe;
-  const fiveYearFix =
-    Math.min(inputs.expectedFix5yPln / FIX_PLN_CAP, 1) * SCORE_WEIGHTS.fiveYearFix;
-  const painLoad = clamp01(inputs.painLoad) * SCORE_WEIGHTS.painLoad;
-  const campaigns = clamp01(inputs.campaigns) * SCORE_WEIGHTS.campaigns;
-  const partsGap = (1 - clamp01(inputs.partsReality)) * SCORE_WEIGHTS.partsReality;
+/** @deprecated Prefer evidenceBreakdown from scoreEvidence for partial packs. */
+export function scoreBreakdown(inputs: ScoreInputs | null) {
+  if (!inputs) {
+    return { catastrophe: 0, fiveYearFix: 0, painLoad: 0, campaigns: 0, partsGap: 0, total: 0 };
+  }
+  const totalW =
+    SCORE_WEIGHTS.catastrophe +
+    SCORE_WEIGHTS.painLoad +
+    SCORE_WEIGHTS.campaigns +
+    (inputs.expectedFix5yPln != null ? SCORE_WEIGHTS.fiveYearFix : 0) +
+    (inputs.partsReality != null ? SCORE_WEIGHTS.partsReality : 0);
+  const scale = (w: number) => (totalW > 0 ? (w / totalW) * 100 : 0);
   return {
-    catastrophe,
-    fiveYearFix,
-    painLoad,
-    campaigns,
-    partsGap,
-    total: scoreFromInputs(inputs),
+    catastrophe: clamp01(inputs.catastrophe) * scale(SCORE_WEIGHTS.catastrophe),
+    fiveYearFix:
+      inputs.expectedFix5yPln != null
+        ? Math.min(inputs.expectedFix5yPln / FIX_PLN_CAP, 1) * scale(SCORE_WEIGHTS.fiveYearFix)
+        : 0,
+    painLoad: clamp01(inputs.painLoad) * scale(SCORE_WEIGHTS.painLoad),
+    campaigns: clamp01(inputs.campaigns) * scale(SCORE_WEIGHTS.campaigns),
+    partsGap:
+      inputs.partsReality != null
+        ? (1 - clamp01(inputs.partsReality)) * scale(SCORE_WEIGHTS.partsReality)
+        : 0,
+    total: 0,
   };
 }
 

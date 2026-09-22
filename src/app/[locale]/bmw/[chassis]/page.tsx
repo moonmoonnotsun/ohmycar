@@ -63,7 +63,7 @@ export default async function ChassisPage({
             <p className="mt-2 text-base text-[var(--muted)]">
               {chassis.name[locale]} · {chassis.years}
             </p>
-            {fixes ? (
+            {summary ? (
               <div className="mt-4">
                 <FixBand range={fixes} locale={locale} hint />
               </div>
@@ -166,7 +166,7 @@ function FamilyPick({
           </p>
         </div>
         <p className="mt-3 font-display text-4xl leading-none">
-          <ScoreGlow score={variant.score} />
+          <ScoreGlow score={variant.score} locale={locale} />
         </p>
         <div className="mt-2">
           <FixBand range={variant.expectedRepairPln} locale={locale} compact />

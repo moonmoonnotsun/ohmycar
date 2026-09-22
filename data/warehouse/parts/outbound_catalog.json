@@ -1,0 +1,52 @@
+{
+  "dataset": "parts_outbound",
+  "region": "PL",
+  "collected_at": "2026-09-22T16:29:21Z",
+  "providers": [
+    {
+      "id": "autodoc_pl",
+      "url": "https://www.autodoc.pl",
+      "role": "consumer_parts_pln",
+      "api_note": "No official public API; deep-link search. Third-party scrapers exist but ToS-gray."
+    },
+    {
+      "id": "inter_cars",
+      "url": "https://www.intercars.pl",
+      "docs": "https://docs.webapi.intercars.eu/ic-api/contracts/api",
+      "role": "trade_parts_pln",
+      "api_note": "Customer API requires kh_kod+token (B2B account)."
+    },
+    {
+      "id": "realoem",
+      "url": "https://www.realoem.com/bmw/",
+      "role": "oem_part_numbers"
+    }
+  ],
+  "sample_deep_links": [
+    {
+      "pain_id": "n54-hpfp",
+      "autodoc": "https://www.autodoc.pl/czesci-zapasowe/pompa_wtryskowa_pompa_wysokiego_ciznienia-12903/bmw",
+      "intercars": "https://intercars.pl/szukaj/?q=N54%20HPFP"
+    },
+    {
+      "pain_id": "n47-timing-chain",
+      "autodoc": "https://www.autodoc.pl/czesci-zapasowe/lancuch_rozrzadu-10511/bmw",
+      "intercars": "https://intercars.pl/szukaj/?q=N47%20lancuch"
+    },
+    {
+      "pain_id": "n20-timing-chain",
+      "autodoc": "https://www.autodoc.pl/czesci-zapasowe/zestaw-lancucha-rozrzadu-15065/bmw",
+      "intercars": "https://intercars.pl/szukaj/?q=N20%20lancuch"
+    },
+    {
+      "note": "Variant-level Autodoc (no free-text search) → BMW catalog",
+      "autodoc": "https://www.autodoc.pl/autoczesci/bmw"
+    }
+  ],
+  "url_rules": {
+    "autodoc": "Never /search?keyword= (404). Use /czesci-zapasowe/{slug}-{id}/bmw, /czesci-zapasowe/oem/{n}, or /autoczesci/bmw.",
+    "otomoto": "/osobowe/bmw/{series}/ver-{model}/od-{yearFrom}?search[filter_float_year:to]=&search[filter_enum_fuel_type]=",
+    "mobile_de": "ms=3500;;;&fr={from}:{to}&q={model} {chassis}",
+    "inter_cars": "https://intercars.pl/szukaj/?q="
+  }
+}

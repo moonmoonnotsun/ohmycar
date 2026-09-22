@@ -1,6 +1,6 @@
 import type { Localized } from "./types";
 import type { Locale } from "@/lib/locale";
-import type { ScoreInputs } from "./types";
+import type { SeedScoreInputs } from "./types";
 
 export function loc(en: string, pl: string, ru = en): Localized {
   return { en, pl, ru };
@@ -18,12 +18,12 @@ export function lerp(a: number, b: number, t: number): number {
 
 export function fillYears(
   years: number[],
-  start: ScoreInputs,
-  end: ScoreInputs,
-): Record<number, ScoreInputs> {
+  start: SeedScoreInputs,
+  end: SeedScoreInputs,
+): Record<number, SeedScoreInputs> {
   if (years.length === 1) return { [years[0]]: start };
   const last = years.length - 1;
-  const out: Record<number, ScoreInputs> = {};
+  const out: Record<number, SeedScoreInputs> = {};
   for (let i = 0; i < years.length; i++) {
     const t = i / last;
     out[years[i]] = {
@@ -46,7 +46,7 @@ export function buy(years: number[], start: number, end: number): Record<number,
   return out;
 }
 
-export const n47Early: ScoreInputs = {
+export const n47Early: SeedScoreInputs = {
   catastrophe: 0.98,
   expectedFix5yPln: 16000,
   painLoad: 0.72,
@@ -54,7 +54,7 @@ export const n47Early: ScoreInputs = {
   partsReality: 0.88,
 };
 
-export const n47Late: ScoreInputs = {
+export const n47Late: SeedScoreInputs = {
   catastrophe: 0.92,
   expectedFix5yPln: 14000,
   painLoad: 0.65,

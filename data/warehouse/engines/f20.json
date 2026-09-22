@@ -1,0 +1,60 @@
+{
+  "chassis_slug": "f20",
+  "region": "PL",
+  "collected_at": "2026-09-22T16:38:02Z",
+  "confidence": "sourced_curated",
+  "sources": [
+    {
+      "label": "Wikipedia generation page",
+      "url": "https://en.wikipedia.org/wiki/BMW_1_Series_(F20)"
+    },
+    {
+      "label": "RealOEM BMW catalog",
+      "url": "https://www.realoem.com/bmw/"
+    },
+    {
+      "label": "App seed cross-check",
+      "url": "src/data/volume.ts"
+    }
+  ],
+  "lines": [
+    {
+      "model": "116i",
+      "engine": "N13",
+      "fuel": "petrol",
+      "years": [
+        2011,
+        2012,
+        2013,
+        2014,
+        2015
+      ]
+    },
+    {
+      "model": "118d",
+      "engine": "N47",
+      "fuel": "diesel",
+      "years": [
+        2011,
+        2012,
+        2013,
+        2014,
+        2015
+      ]
+    },
+    {
+      "model": "120d",
+      "engine": "B47",
+      "fuel": "diesel",
+      "years": [
+        2015,
+        2016,
+        2017,
+        2018,
+        2019
+      ]
+    }
+  ],
+  "line_count": 3,
+  "note": "Badge×engine×years curated from Wikipedia + cross-checked against app seed. Verify edge cases on RealOEM."
+}

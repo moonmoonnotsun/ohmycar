@@ -1,0 +1,377 @@
+{
+  "meta": {
+    "collected_at": "2026-09-22T16:37:20Z",
+    "source": "cardossier_public_stats",
+    "price_type": "asking_offer_series_level",
+    "disclaimer": "Medians are for Seria 1/3/5/X3/X5 by year, not badge/engine-specific. Applied as market prior for matching chassis production years.",
+    "urls": {
+      "seria-3": "https://car-dossier.com/ceny/bmw/seria-3",
+      "seria-5": "https://car-dossier.com/ceny/bmw/seria-5",
+      "seria-1": "https://car-dossier.com/ceny/bmw/seria-1",
+      "x5": "https://car-dossier.com/ceny/bmw/x5",
+      "x3": "https://car-dossier.com/ceny/bmw/x3"
+    }
+  },
+  "byChassisYear": {
+    "e90": {
+      "2009": {
+        "median": 19900,
+        "p25": 15700,
+        "p75": 25900,
+        "sample_size": 1427,
+        "source_url": "https://car-dossier.com/ceny/bmw/seria-3"
+      },
+      "2010": {
+        "median": 21500,
+        "p25": 17000,
+        "p75": 27900,
+        "sample_size": 1313,
+        "source_url": "https://car-dossier.com/ceny/bmw/seria-3"
+      },
+      "2011": {
+        "median": 24000,
+        "p25": 19500,
+        "p75": 31900,
+        "sample_size": 1209,
+        "source_url": "https://car-dossier.com/ceny/bmw/seria-3"
+      },
+      "2012": {
+        "median": 34000,
+        "p25": 25900,
+        "p75": 41000,
+        "sample_size": 1375,
+        "source_url": "https://car-dossier.com/ceny/bmw/seria-3"
+      }
+    },
+    "f30": {
+      "2012": {
+        "median": 34000,
+        "p25": 25900,
+        "p75": 41000,
+        "sample_size": 1375,
+        "source_url": "https://car-dossier.com/ceny/bmw/seria-3"
+      },
+      "2013": {
+        "median": 36500,
+        "p25": 30500,
+        "p75": 45000,
+        "sample_size": 1593,
+        "source_url": "https://car-dossier.com/ceny/bmw/seria-3"
+      },
+      "2014": {
+        "median": 39900,
+        "p25": 31900,
+        "p75": 49000,
+        "sample_size": 1145,
+        "source_url": "https://car-dossier.com/ceny/bmw/seria-3"
+      },
+      "2015": {
+        "median": 44700,
+        "p25": 36000,
+        "p75": 53900,
+        "sample_size": 936,
+        "source_url": "https://car-dossier.com/ceny/bmw/seria-3"
+      },
+      "2016": {
+        "median": 50000,
+        "p25": 41500,
+        "p75": 62000,
+        "sample_size": 903,
+        "source_url": "https://car-dossier.com/ceny/bmw/seria-3"
+      },
+      "2017": {
+        "median": 55300,
+        "p25": 45100,
+        "p75": 66500,
+        "sample_size": 782,
+        "source_url": "https://car-dossier.com/ceny/bmw/seria-3"
+      },
+      "2018": {
+        "median": 58900,
+        "p25": 49000,
+        "p75": 70000,
+        "sample_size": 704,
+        "source_url": "https://car-dossier.com/ceny/bmw/seria-3"
+      },
+      "2019": {
+        "median": 88000,
+        "p25": 67500,
+        "p75": 105000,
+        "sample_size": 1023,
+        "source_url": "https://car-dossier.com/ceny/bmw/seria-3"
+      }
+    },
+    "e60": {
+      "2009": {
+        "median": 23500,
+        "p25": 17500,
+        "p75": 29000,
+        "sample_size": 638,
+        "source_url": "https://car-dossier.com/ceny/bmw/seria-5"
+      },
+      "2010": {
+        "median": 32800,
+        "p25": 25800,
+        "p75": 39000,
+        "sample_size": 1032,
+        "source_url": "https://car-dossier.com/ceny/bmw/seria-5"
+      }
+    },
+    "f10": {
+      "2010": {
+        "median": 32800,
+        "p25": 25800,
+        "p75": 39000,
+        "sample_size": 1032,
+        "source_url": "https://car-dossier.com/ceny/bmw/seria-5"
+      },
+      "2011": {
+        "median": 36000,
+        "p25": 29900,
+        "p75": 43500,
+        "sample_size": 1584,
+        "source_url": "https://car-dossier.com/ceny/bmw/seria-5"
+      },
+      "2012": {
+        "median": 38900,
+        "p25": 32900,
+        "p75": 45900,
+        "sample_size": 1283,
+        "source_url": "https://car-dossier.com/ceny/bmw/seria-5"
+      },
+      "2013": {
+        "median": 43900,
+        "p25": 37000,
+        "p75": 51500,
+        "sample_size": 1238,
+        "source_url": "https://car-dossier.com/ceny/bmw/seria-5"
+      },
+      "2014": {
+        "median": 49000,
+        "p25": 42000,
+        "p75": 56000,
+        "sample_size": 1033,
+        "source_url": "https://car-dossier.com/ceny/bmw/seria-5"
+      },
+      "2015": {
+        "median": 54900,
+        "p25": 46900,
+        "p75": 62400,
+        "sample_size": 830,
+        "source_url": "https://car-dossier.com/ceny/bmw/seria-5"
+      },
+      "2016": {
+        "median": 58900,
+        "p25": 49900,
+        "p75": 68900,
+        "sample_size": 816,
+        "source_url": "https://car-dossier.com/ceny/bmw/seria-5"
+      },
+      "2017": {
+        "median": 84000,
+        "p25": 72000,
+        "p75": 98900,
+        "sample_size": 1115,
+        "source_url": "https://car-dossier.com/ceny/bmw/seria-5"
+      }
+    },
+    "e87": {
+      "2009": {
+        "median": 15000,
+        "p25": 11900,
+        "p75": 18500,
+        "sample_size": 1012,
+        "source_url": "https://car-dossier.com/ceny/bmw/seria-1"
+      },
+      "2010": {
+        "median": 16300,
+        "p25": 12900,
+        "p75": 19900,
+        "sample_size": 797,
+        "source_url": "https://car-dossier.com/ceny/bmw/seria-1"
+      },
+      "2011": {
+        "median": 20500,
+        "p25": 16800,
+        "p75": 25500,
+        "sample_size": 728,
+        "source_url": "https://car-dossier.com/ceny/bmw/seria-1"
+      }
+    },
+    "f20": {
+      "2011": {
+        "median": 20500,
+        "p25": 16800,
+        "p75": 25500,
+        "sample_size": 728,
+        "source_url": "https://car-dossier.com/ceny/bmw/seria-1"
+      },
+      "2012": {
+        "median": 25900,
+        "p25": 21900,
+        "p75": 30600,
+        "sample_size": 1000,
+        "source_url": "https://car-dossier.com/ceny/bmw/seria-1"
+      },
+      "2013": {
+        "median": 27000,
+        "p25": 23000,
+        "p75": 31900,
+        "sample_size": 762,
+        "source_url": "https://car-dossier.com/ceny/bmw/seria-1"
+      },
+      "2014": {
+        "median": 28900,
+        "p25": 24900,
+        "p75": 34900,
+        "sample_size": 645,
+        "source_url": "https://car-dossier.com/ceny/bmw/seria-1"
+      },
+      "2015": {
+        "median": 36000,
+        "p25": 29900,
+        "p75": 43900,
+        "sample_size": 544,
+        "source_url": "https://car-dossier.com/ceny/bmw/seria-1"
+      },
+      "2016": {
+        "median": 42000,
+        "p25": 34900,
+        "p75": 50900,
+        "sample_size": 516,
+        "source_url": "https://car-dossier.com/ceny/bmw/seria-1"
+      },
+      "2017": {
+        "median": 45000,
+        "p25": 36900,
+        "p75": 54000,
+        "sample_size": 386,
+        "source_url": "https://car-dossier.com/ceny/bmw/seria-1"
+      },
+      "2018": {
+        "median": 52500,
+        "p25": 44800,
+        "p75": 59900,
+        "sample_size": 319,
+        "source_url": "https://car-dossier.com/ceny/bmw/seria-1"
+      },
+      "2019": {
+        "median": 63500,
+        "p25": 51300,
+        "p75": 74900,
+        "sample_size": 278,
+        "source_url": "https://car-dossier.com/ceny/bmw/seria-1"
+      }
+    },
+    "e70": {
+      "2009": {
+        "median": 39900,
+        "p25": 34800,
+        "p75": 45900,
+        "sample_size": 255,
+        "source_url": "https://car-dossier.com/ceny/bmw/x5"
+      },
+      "2010": {
+        "median": 45000,
+        "p25": 35900,
+        "p75": 50000,
+        "sample_size": 234,
+        "source_url": "https://car-dossier.com/ceny/bmw/x5"
+      },
+      "2011": {
+        "median": 48900,
+        "p25": 40000,
+        "p75": 55000,
+        "sample_size": 200,
+        "source_url": "https://car-dossier.com/ceny/bmw/x5"
+      },
+      "2012": {
+        "median": 53000,
+        "p25": 45000,
+        "p75": 59100,
+        "sample_size": 192,
+        "source_url": "https://car-dossier.com/ceny/bmw/x5"
+      },
+      "2013": {
+        "median": 62000,
+        "p25": 49000,
+        "p75": 70000,
+        "sample_size": 201,
+        "source_url": "https://car-dossier.com/ceny/bmw/x5"
+      }
+    },
+    "e83": {
+      "2009": {
+        "median": 24000,
+        "p25": 20900,
+        "p75": 27900,
+        "sample_size": 224,
+        "source_url": "https://car-dossier.com/ceny/bmw/x3"
+      },
+      "2010": {
+        "median": 28900,
+        "p25": 24900,
+        "p75": 35900,
+        "sample_size": 279,
+        "source_url": "https://car-dossier.com/ceny/bmw/x3"
+      }
+    }
+  },
+  "fuelSpecificSamples": [
+    {
+      "year": 2010,
+      "fuel": "diesel",
+      "market_model": "Seria 3",
+      "median": 20900,
+      "p25": 16900,
+      "p75": 26500,
+      "sample_size": 939,
+      "source_query": "make=BMW&model=3 Series&year=2010&fuel_type=diesel",
+      "docs": "https://car-dossier.com/en/api/"
+    },
+    {
+      "year": 2015,
+      "fuel": "diesel",
+      "market_model": "Seria 3",
+      "median": 41900,
+      "p25": 34900,
+      "p75": 49100,
+      "sample_size": 699,
+      "source_query": "make=BMW&model=3 Series&year=2015&fuel_type=diesel",
+      "docs": "https://car-dossier.com/en/api/"
+    },
+    {
+      "year": 2012,
+      "fuel": "diesel",
+      "market_model": "Seria 5",
+      "median": 37900,
+      "p25": 31000,
+      "p75": 44383,
+      "sample_size": 1186,
+      "source_query": "make=BMW&model=5 Series&year=2012&fuel_type=diesel",
+      "docs": "https://car-dossier.com/en/api/"
+    },
+    {
+      "year": 2010,
+      "fuel": null,
+      "market_model": "X5",
+      "median": 45000,
+      "p25": 35975,
+      "p75": 49923,
+      "sample_size": 260,
+      "source_query": "make=BMW&model=X5&year=2010",
+      "docs": "https://car-dossier.com/en/api/"
+    },
+    {
+      "year": 2012,
+      "fuel": "diesel",
+      "market_model": "Seria 1",
+      "median": 25999,
+      "p25": 21900,
+      "p75": 31850,
+      "sample_size": 574,
+      "source_query": "make=BMW&model=1 Series&year=2012&fuel_type=diesel",
+      "docs": "https://car-dossier.com/en/api/"
+    }
+  ]
+}

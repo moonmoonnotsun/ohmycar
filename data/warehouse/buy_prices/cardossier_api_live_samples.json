@@ -1,0 +1,124 @@
+{
+  "dataset": "buy_prices_api_live",
+  "region": "PL",
+  "collected_at": "2026-09-22T16:29:21Z",
+  "endpoint": "https://car-dossier.com/api/v1/market/valuation",
+  "note": "Live keyless demo calls (5/IP/day). Diesel filter where noted. Full raw responses preserved.",
+  "rows": [
+    {
+      "key": "seria3|2010|diesel",
+      "make": "BMW",
+      "model": "3 Series",
+      "year": 2010,
+      "fuel": "diesel",
+      "median": 20900,
+      "average": 22549,
+      "p25": 16900,
+      "p75": 26500,
+      "sample": 939,
+      "matched": "Seria 3",
+      "currency": "PLN",
+      "price_type": "asking_offer",
+      "source": {
+        "provider": "cardossier_market_api",
+        "endpoint": "/v1/market/valuation",
+        "docs": "https://car-dossier.com/en/api/",
+        "query": "make=BMW&model=3 Series&year=2010&fuel_type=diesel"
+      },
+      "collected_at": "2026-09-22T16:29:21Z",
+      "confidence": "market_api"
+    },
+    {
+      "key": "seria3|2015|diesel",
+      "make": "BMW",
+      "model": "3 Series",
+      "year": 2015,
+      "fuel": "diesel",
+      "median": 41900,
+      "average": 42558,
+      "p25": 34900,
+      "p75": 49100,
+      "sample": 699,
+      "matched": "Seria 3",
+      "currency": "PLN",
+      "price_type": "asking_offer",
+      "source": {
+        "provider": "cardossier_market_api",
+        "endpoint": "/v1/market/valuation",
+        "docs": "https://car-dossier.com/en/api/",
+        "query": "make=BMW&model=3 Series&year=2015&fuel_type=diesel"
+      },
+      "collected_at": "2026-09-22T16:29:21Z",
+      "confidence": "market_api"
+    },
+    {
+      "key": "seria5|2012|diesel",
+      "make": "BMW",
+      "model": "5 Series",
+      "year": 2012,
+      "fuel": "diesel",
+      "median": 37900,
+      "average": 38309,
+      "p25": 31000,
+      "p75": 44383,
+      "sample": 1186,
+      "matched": "Seria 5",
+      "currency": "PLN",
+      "price_type": "asking_offer",
+      "source": {
+        "provider": "cardossier_market_api",
+        "endpoint": "/v1/market/valuation",
+        "docs": "https://car-dossier.com/en/api/",
+        "query": "make=BMW&model=5 Series&year=2012&fuel_type=diesel"
+      },
+      "collected_at": "2026-09-22T16:29:21Z",
+      "confidence": "market_api"
+    },
+    {
+      "key": "x5|2010|all",
+      "make": "BMW",
+      "model": "X5",
+      "year": 2010,
+      "fuel": null,
+      "median": 45000,
+      "average": 43439,
+      "p25": 35975,
+      "p75": 49923,
+      "sample": 260,
+      "matched": "X5",
+      "currency": "PLN",
+      "price_type": "asking_offer",
+      "source": {
+        "provider": "cardossier_market_api",
+        "endpoint": "/v1/market/valuation",
+        "docs": "https://car-dossier.com/en/api/",
+        "query": "make=BMW&model=X5&year=2010"
+      },
+      "collected_at": "2026-09-22T16:29:21Z",
+      "confidence": "market_api"
+    },
+    {
+      "key": "seria1|2012|diesel",
+      "make": "BMW",
+      "model": "1 Series",
+      "year": 2012,
+      "fuel": "diesel",
+      "median": 25999,
+      "average": 26451,
+      "p25": 21900,
+      "p75": 31850,
+      "sample": 574,
+      "matched": "Seria 1",
+      "currency": "PLN",
+      "price_type": "asking_offer",
+      "source": {
+        "provider": "cardossier_market_api",
+        "endpoint": "/v1/market/valuation",
+        "docs": "https://car-dossier.com/en/api/",
+        "query": "make=BMW&model=1 Series&year=2012&fuel_type=diesel"
+      },
+      "collected_at": "2026-09-22T16:29:21Z",
+      "confidence": "market_api"
+    }
+  ]
+}

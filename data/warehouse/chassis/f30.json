@@ -1,0 +1,46 @@
+{
+  "slug": "f30",
+  "code": "F30",
+  "family": "3",
+  "years": [
+    2012,
+    2019
+  ],
+  "market_model": "Seria 3",
+  "otomoto": "seria-3",
+  "gold": true,
+  "engines": [
+    "N20",
+    "N55",
+    "B48",
+    "N47",
+    "B47"
+  ],
+  "wiki": "https://en.wikipedia.org/wiki/BMW_3_Series_(F30)",
+  "realoem_hint": "https://www.realoem.com/bmw/",
+  "region": "PL",
+  "status": "catalog_confirmed",
+  "sources": [
+    {
+      "provider": "wikipedia",
+      "url": "https://en.wikipedia.org/wiki/BMW_3_Series_(F30)",
+      "role": "generation_identity"
+    },
+    {
+      "provider": "realoem",
+      "url": "https://www.realoem.com/bmw/",
+      "role": "parts_and_type_codes"
+    },
+    {
+      "provider": "ohmycar_chassis_ts",
+      "url": "src/data/chassis.ts",
+      "role": "product_taxonomy"
+    },
+    {
+      "provider": "otomoto",
+      "url": "https://www.otomoto.pl/osobowe/bmw/seria-3",
+      "role": "market_deep_link"
+    }
+  ],
+  "collected_at": "2026-09-22T16:29:21Z"
+}

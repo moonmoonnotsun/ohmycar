@@ -48,8 +48,15 @@ export function ChassisCard({
           <div className="min-w-0">
             <p className="font-mono text-xl font-semibold tracking-tight">{chassis.code}</p>
             <p className="mt-1 text-sm text-[var(--muted)]">{chassis.name[locale]}</p>
-            <p className="mt-3 text-xs tabular-nums text-[var(--muted)]">{chassis.years}</p>
-            {fixes ? (
+            <div className="mt-3 flex flex-wrap items-center gap-2">
+              <span className="text-sm font-semibold tabular-nums tracking-tight text-[var(--ink)]">
+                {chassis.years}
+              </span>
+              <span className="inline-flex h-7 items-center rounded-full border border-[var(--line)] px-2.5 text-xs font-semibold text-[var(--ink)]">
+                {body}
+              </span>
+            </div>
+            {summary ? (
               <div className="mt-3">
                 <FixBand range={fixes} locale={locale} compact />
               </div>
@@ -63,7 +70,7 @@ export function ChassisCard({
               ) : null}
             </div>
           ) : (
-            <span className="rounded-full bg-[var(--wash)] px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wide text-[var(--muted)]">
+            <span className="rounded-full bg-[var(--wash)] px-2 py-0.5 text-[11px] font-semibold uppercase tracking-wide text-[var(--muted)]">
               {copy.catalogOnly}
             </span>
           )}
@@ -105,10 +112,14 @@ export function ChassisRow({
           {marks.includes("best") ? <MarkPill tone="good">{copy.listBest}</MarkPill> : null}
           {marks.includes("worst") ? <MarkPill tone="bad">{copy.listWorst}</MarkPill> : null}
         </div>
-        <p className="truncate text-sm text-[var(--muted)]">
-          {body} · {chassis.name[locale]} · {chassis.years}
-        </p>
-        {fixes ? (
+        <p className="mt-0.5 truncate text-sm text-[var(--muted)]">{chassis.name[locale]}</p>
+        <div className="mt-1.5 flex flex-wrap items-center gap-1.5">
+          <span className="text-sm font-semibold tabular-nums text-[var(--ink)]">{chassis.years}</span>
+          <span className="inline-flex h-6 items-center rounded-full border border-[var(--line)] px-2 text-[11px] font-semibold text-[var(--ink)]">
+            {body}
+          </span>
+        </div>
+        {summary ? (
           <div className="mt-1">
             <FixBand range={fixes} locale={locale} compact />
           </div>
@@ -122,7 +133,7 @@ export function ChassisRow({
           ) : null}
         </div>
       ) : (
-        <span className="shrink-0 text-[10px] font-semibold uppercase tracking-wide text-[var(--muted)]">
+        <span className="shrink-0 text-[11px] font-semibold uppercase tracking-wide text-[var(--muted)]">
           {copy.catalogOnly}
         </span>
       )}
@@ -137,17 +148,17 @@ function ScoreCol({
   compact = false,
 }: {
   label: string;
-  score: number;
+  score: number | null;
   engine: string;
   compact?: boolean;
 }) {
   return (
     <div className="min-w-[3.25rem] text-right">
-      <p className="text-[9px] font-semibold uppercase tracking-[0.16em] text-[var(--muted)]">{label}</p>
+      <p className="text-[11px] font-semibold uppercase tracking-[0.14em] text-[var(--muted)]">{label}</p>
       <p className={`mt-0.5 font-display leading-none tracking-tight ${compact ? "text-lg" : "text-[1.65rem]"}`}>
         <ScoreGlow score={score} />
       </p>
-      <p className="mt-1 font-mono text-[10px] text-[var(--muted)]">{engine}</p>
+      <p className="mt-1 font-mono text-xs text-[var(--muted)]">{engine}</p>
     </div>
   );
 }
@@ -161,7 +172,7 @@ function MarkPill({
 }) {
   return (
     <span
-      className={`rounded-full px-2 py-0.5 text-[10px] font-semibold uppercase tracking-[0.14em] ${
+      className={`rounded-full px-2 py-0.5 text-[11px] font-semibold uppercase tracking-[0.12em] ${
         tone === "good" ? "bg-[var(--good)] text-[#04140c]" : "bg-[var(--bad)] text-white"
       }`}
     >

@@ -1,7 +1,7 @@
 import type { Chassis, Pain, VariantBrief } from "@/data/types";
 import type { Locale } from "@/lib/locale";
 import { t } from "@/lib/i18n";
-import { autodocUrl, interCarsUrl, mobileDeUrl, otomotoUrl } from "@/lib/links";
+import { autodocBmwUrl, autodocUrl, interCarsUrl, mobileDeUrl, otomotoUrl, partsQuery } from "@/lib/links";
 import { FaultDiagram, SourceList, WorkshopPrices } from "@/components/FaultExplain";
 
 export function BuyBar({
@@ -14,7 +14,6 @@ export function BuyBar({
   variant: VariantBrief;
 }) {
   const copy = t(locale);
-  const query = `${chassis.code} ${variant.model} ${variant.engine}`;
   return (
     <div className="fixed inset-x-0 bottom-0 z-40 border-t border-[var(--line)] bg-[var(--paper)]/95 backdrop-blur-md md:hidden">
       <div className="mx-auto grid max-w-5xl grid-cols-2 gap-2 px-4 pt-3 safe-bottom">
@@ -27,7 +26,7 @@ export function BuyBar({
           {copy.otomoto}
         </a>
         <a
-          href={autodocUrl(query, locale)}
+          href={autodocBmwUrl(locale, chassis, variant)}
           target="_blank"
           rel="noreferrer"
           className="h-tap inline-flex items-center justify-center rounded-full bg-[var(--accent)] px-3 text-sm font-semibold text-[var(--paper)]"
@@ -49,14 +48,14 @@ export function MarketLinks({
   variant: VariantBrief;
 }) {
   const copy = t(locale);
-  const query = `${chassis.code} ${variant.model} ${variant.engine}`;
+  const query = partsQuery(chassis, variant);
   const linkClass =
-    "h-tap inline-flex items-center rounded-xl border border-[var(--line)] px-4 text-sm font-medium text-[var(--ink)]";
+    "h-tap inline-flex items-center rounded-xl border border-[var(--line)] bg-[var(--wash)] px-4 text-sm font-medium text-[var(--ink)]";
   return (
-    <section className="grid gap-3 sm:grid-cols-2">
-      <div className="rounded-2xl border border-[var(--line)] bg-[var(--card)] p-4">
-        <h2 className="text-sm font-semibold">{copy.whereCar}</h2>
-        <div className="mt-3 flex flex-col gap-2">
+    <section className="grid gap-4 sm:grid-cols-2">
+      <div className="rounded-2xl border border-[var(--line)] bg-[var(--card)] p-5">
+        <h2 className="text-[11px] font-medium uppercase tracking-[0.16em] text-[var(--muted)]">{copy.whereCar}</h2>
+        <div className="mt-4 flex flex-col gap-2">
           <a className={linkClass} href={otomotoUrl(chassis, variant)} target="_blank" rel="noreferrer">
             {copy.openOtomoto}
           </a>
@@ -65,10 +64,10 @@ export function MarketLinks({
           </a>
         </div>
       </div>
-      <div className="rounded-2xl border border-[var(--line)] bg-[var(--card)] p-4">
-        <h2 className="text-sm font-semibold">{copy.whereParts}</h2>
-        <div className="mt-3 flex flex-col gap-2">
-          <a className={linkClass} href={autodocUrl(query, locale)} target="_blank" rel="noreferrer">
+      <div className="rounded-2xl border border-[var(--line)] bg-[var(--card)] p-5">
+        <h2 className="text-[11px] font-medium uppercase tracking-[0.16em] text-[var(--muted)]">{copy.whereParts}</h2>
+        <div className="mt-4 flex flex-col gap-2">
+          <a className={linkClass} href={autodocBmwUrl(locale, chassis, variant)} target="_blank" rel="noreferrer">
             {copy.openParts}
           </a>
           <a className={linkClass} href={interCarsUrl(query)} target="_blank" rel="noreferrer">
@@ -92,16 +91,20 @@ const SEV: Record<Pain["severity"], { key: keyof ReturnType<typeof t>; bar: stri
 export function PainCard({
   locale,
   pain,
+  chassis,
+  variant,
   featured,
 }: {
   locale: Locale;
   pain: Pain;
+  chassis?: Chassis;
+  variant?: VariantBrief;
   featured?: boolean;
 }) {
   const copy = t(locale);
   const sev = SEV[pain.severity];
   return (
-    <article className="relative overflow-x-clip rounded-2xl border border-[var(--line)] bg-[var(--card)] p-4 pl-5">
+    <article className="relative overflow-x-clip rounded-xl border border-[var(--line)] bg-[var(--wash)] p-4 pl-5">
       <span className={`absolute inset-y-0 left-0 w-1 ${sev.bar}`} />
       <div className="flex flex-wrap items-center justify-between gap-2">
         <h3 className="min-w-0 text-base font-semibold leading-snug">{pain.title[locale]}</h3>
@@ -116,11 +119,13 @@ export function PainCard({
         <span className="text-[var(--muted)]">{copy.affects}: </span>
         {pain.affects[locale]}
       </p>
-      <p className="mt-3 text-[11px] uppercase tracking-[0.14em] text-[var(--muted)]">{copy.plnNote}</p>
+      <p className="mt-3 text-[11px] uppercase tracking-[0.14em] text-[var(--muted)]">
+        {pain.plnIndependent ? copy.plnNote : copy.plnPending}
+      </p>
       <WorkshopPrices locale={locale} pain={pain} />
       <a
         className="mt-3 inline-flex h-tap items-center text-sm font-medium underline underline-offset-2"
-        href={autodocUrl(pain.autodocQuery[locale], locale)}
+        href={autodocUrl(pain.autodocQuery[locale], locale, chassis, variant)}
         target="_blank"
         rel="noreferrer"
       >

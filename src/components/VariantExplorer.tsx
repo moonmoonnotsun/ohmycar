@@ -10,6 +10,7 @@ import { Money, MoneyRange } from "@/components/Money";
 import { ScoreBadge } from "@/components/ScoreBadge";
 import { FaultHint } from "@/components/FaultExplain";
 import { getPain } from "@/lib/catalog";
+import { getChassis } from "@/data/chassis";
 
 type SortKey = "score" | "buy" | "repair";
 
@@ -19,13 +20,13 @@ type EngineGroup = {
   models: string[];
   yearFrom: number;
   yearTo: number;
-  best: number;
-  worst: number;
+  best: number | null;
+  worst: number | null;
   count: number;
   topPainId: string;
-  minBuy: number;
-  minRepair: number;
-  maxRepair: number;
+  minBuy: number | null;
+  minRepair: number | null;
+  maxRepair: number | null;
   rows: VariantBrief[];
 };
 
@@ -38,6 +39,7 @@ export function VariantExplorer({
   chassisSlug: string;
   variants: VariantBrief[];
 }) {
+  const chassis = getChassis(chassisSlug);
   const copy = t(locale);
   const [fuel, setFuel] = useState<Fuel | "all">("all");
   const [sort, setSort] = useState<SortKey>("score");
@@ -53,33 +55,52 @@ export function VariantExplorer({
     }
     const out: EngineGroup[] = [...map.entries()].map(([engine, list]) => {
       const years = list.map((item) => item.year);
-      const scores = list.map((item) => item.score);
-      const worst = list.reduce((a, b) => (a.score <= b.score ? a : b));
+      const worst = list.reduce((a, b) => ((a.score ?? 999) <= (b.score ?? 999) ? a : b));
       const rows = [...list].sort((a, b) => {
-        if (sort === "buy") return a.medianBuyPln - b.medianBuyPln || b.score - a.score;
-        if (sort === "repair") return a.expectedRepairPln[1] - b.expectedRepairPln[1] || b.score - a.score;
-        return b.score - a.score || b.year - a.year;
+        if (sort === "buy") {
+          const ab = a.medianBuyPln ?? Number.POSITIVE_INFINITY;
+          const bb = b.medianBuyPln ?? Number.POSITIVE_INFINITY;
+          return ab - bb || (b.score ?? -1) - (a.score ?? -1);
+        }
+        if (sort === "repair") {
+          const ar = a.expectedRepairPln?.[1] ?? Number.POSITIVE_INFINITY;
+          const br = b.expectedRepairPln?.[1] ?? Number.POSITIVE_INFINITY;
+          return ar - br || (b.score ?? -1) - (a.score ?? -1);
+        }
+        return (b.score ?? -1) - (a.score ?? -1) || b.year - a.year;
       });
+      const repairLows = list.map((item) => item.expectedRepairPln?.[0]).filter((n): n is number => n != null);
+      const repairHighs = list.map((item) => item.expectedRepairPln?.[1]).filter((n): n is number => n != null);
+      const buyVals = list.map((item) => item.medianBuyPln).filter((n): n is number => n != null);
+      const scoreVals = list.map((item) => item.score).filter((n): n is number => n != null);
       return {
         engine,
         fuel: list[0].fuel,
         models: [...new Set(list.map((item) => item.model))],
         yearFrom: Math.min(...years),
         yearTo: Math.max(...years),
-        best: Math.max(...scores),
-        worst: Math.min(...scores),
+        best: scoreVals.length ? Math.max(...scoreVals) : null,
+        worst: scoreVals.length ? Math.min(...scoreVals) : null,
         count: list.length,
         topPainId: worst.topPainId,
-        minBuy: Math.min(...list.map((item) => item.medianBuyPln)),
-        minRepair: Math.min(...list.map((item) => item.expectedRepairPln[0])),
-        maxRepair: Math.max(...list.map((item) => item.expectedRepairPln[1])),
+        minBuy: buyVals.length ? Math.min(...buyVals) : null,
+        minRepair: repairLows.length ? Math.min(...repairLows) : null,
+        maxRepair: repairHighs.length ? Math.max(...repairHighs) : null,
         rows,
       };
     });
     out.sort((a, b) => {
-      if (sort === "buy") return a.minBuy - b.minBuy;
-      if (sort === "repair") return a.maxRepair - b.maxRepair;
-      return b.best - a.best;
+      if (sort === "buy") {
+        const ab = a.minBuy ?? Number.POSITIVE_INFINITY;
+        const bb = b.minBuy ?? Number.POSITIVE_INFINITY;
+        return ab - bb;
+      }
+      if (sort === "repair") {
+        const ar = a.maxRepair ?? Number.POSITIVE_INFINITY;
+        const br = b.maxRepair ?? Number.POSITIVE_INFINITY;
+        return ar - br;
+      }
+      return (b.best ?? -1) - (a.best ?? -1);
     });
     return out;
   }, [variants, fuel, sort]);
@@ -243,6 +264,7 @@ function EngineBlock({
   const copy = t(locale);
   const router = useRouter();
   const pain = getPain(group.topPainId);
+  const chassis = getChassis(chassisSlug);
 
   function goYear(event: MouseEvent<HTMLTableRowElement>, href: string) {
     if ((event.target as HTMLElement).closest("a, button, dialog")) return;
@@ -294,18 +316,25 @@ function EngineBlock({
           {group.yearFrom}–{group.yearTo}
         </td>
         <td className="px-4 py-3 text-right">
-          <ScoreBadge score={group.best} size="sm" />
-          {group.best !== group.worst ? (
+          <ScoreBadge score={group.best} size="sm" locale={locale} />
+          {group.best != null && group.worst != null && group.best !== group.worst ? (
             <span className="mt-1 block text-[10px] text-[var(--muted)]">
               {group.worst.toFixed(1)}–{group.best.toFixed(1)}
             </span>
           ) : null}
         </td>
         <td className="px-4 py-3">
-          <FaultHint locale={locale} pain={pain} />
+          <FaultHint locale={locale} pain={pain} chassis={chassis} />
         </td>
         <td className="px-4 py-3 text-right whitespace-nowrap">
-          <MoneyRange range={[group.minRepair, group.maxRepair]} locale={locale} />
+          <MoneyRange
+            range={
+              group.minRepair != null && group.maxRepair != null
+                ? [group.minRepair, group.maxRepair]
+                : null
+            }
+            locale={locale}
+          />
         </td>
         <td className="px-4 py-3 text-right whitespace-nowrap">
           <Money value={group.minBuy} locale={locale} />
@@ -328,10 +357,10 @@ function EngineBlock({
                 </td>
                 <td className="px-4 py-2.5 font-mono text-base font-semibold tabular-nums text-[var(--ink)]">{row.year}</td>
                 <td className="px-4 py-2.5 text-right">
-                  <ScoreBadge score={row.score} size="sm" />
+                  <ScoreBadge score={row.score} size="sm" locale={locale} />
                 </td>
                 <td className="px-4 py-2.5">
-                  <FaultHint locale={locale} pain={rowPain} />
+                  <FaultHint locale={locale} pain={rowPain} chassis={chassis} variant={row} />
                 </td>
                 <td className="px-4 py-2.5 text-right whitespace-nowrap">
                   <MoneyRange range={row.expectedRepairPln} locale={locale} />
@@ -362,6 +391,7 @@ function MobileGroup({
 }) {
   const copy = t(locale);
   const pain = getPain(group.topPainId);
+  const chassis = getChassis(chassisSlug);
   return (
     <li
       className={`rounded-2xl border-2 bg-[var(--card)] ${
@@ -395,7 +425,7 @@ function MobileGroup({
               </p>
             </div>
             <div className="shrink-0 text-right">
-              <ScoreBadge score={group.best} size="sm" />
+              <ScoreBadge score={group.best} size="sm" locale={locale} />
             </div>
           </div>
           <div className="mt-3">
@@ -403,13 +433,20 @@ function MobileGroup({
           </div>
           <p className="mt-3 flex items-center gap-1.5 text-sm">
             <span className="min-w-0">{pain ? pain.title[locale] : "—"}</span>
-            {pain ? <FaultHint locale={locale} pain={pain} showTitle={false} /> : null}
+            {pain ? <FaultHint locale={locale} pain={pain} chassis={chassis} showTitle={false} /> : null}
           </p>
           <p className="mt-2 text-xs text-[var(--muted)]">
             {group.fuel === "diesel" ? copy.fuelDiesel : copy.fuelPetrol} · {copy.sortRepair}
           </p>
           <div className="mt-1.5">
-            <MoneyRange range={[group.minRepair, group.maxRepair]} locale={locale} />
+            <MoneyRange
+            range={
+              group.minRepair != null && group.maxRepair != null
+                ? [group.minRepair, group.maxRepair]
+                : null
+            }
+            locale={locale}
+          />
           </div>
           <button
             type="button"
@@ -437,14 +474,16 @@ function MobileGroup({
                     <p className="min-w-0 text-sm font-semibold">
                       <span className="font-mono tabular-nums">{row.year}</span> {row.model}
                     </p>
-                    <ScoreBadge score={row.score} size="sm" />
+                    <ScoreBadge score={row.score} size="sm" locale={locale} />
                   </div>
                   <div className="mt-2">
                     <Money value={row.medianBuyPln} locale={locale} />
                   </div>
                   <p className="mt-2 flex items-center gap-1.5 text-xs text-[var(--muted)]">
                     <span className="min-w-0">{rowPain ? rowPain.title[locale] : "—"}</span>
-                    {rowPain ? <FaultHint locale={locale} pain={rowPain} showTitle={false} /> : null}
+                    {rowPain ? (
+                      <FaultHint locale={locale} pain={rowPain} chassis={chassis} variant={row} showTitle={false} />
+                    ) : null}
                   </p>
                   <div className="mt-1.5">
                     <MoneyRange range={row.expectedRepairPln} locale={locale} />

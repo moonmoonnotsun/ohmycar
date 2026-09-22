@@ -28,7 +28,7 @@ export const cite = {
   n20: [
     {
       label: "NHTSA · N20/N26 timing-chain warranty (SI B11 03 17 / MC-10142923)",
-      url: "https://static.nhtsa.gov/odi/tsbs/2017/MC-10142923-9999.pdf",
+      url: "https://static.nhtsa.gov/odi/tsbs/2017/MC-10142923-0001.pdf",
     },
     wiki("BMW_N20", "Wikipedia · BMW N20"),
   ],

@@ -1,14 +1,13 @@
-import { cite } from "./citations";
-import type { EngineLine, Pain, ScoreInputs } from "./types";
+import type { EngineLine, SeedScoreInputs } from "./types";
 
 function fillYears(
   years: number[],
-  start: ScoreInputs,
-  end: ScoreInputs,
-): Record<number, ScoreInputs> {
+  start: SeedScoreInputs,
+  end: SeedScoreInputs,
+): Record<number, SeedScoreInputs> {
   if (years.length === 1) return { [years[0]]: start };
   const last = years.length - 1;
-  const out: Record<number, ScoreInputs> = {};
+  const out: Record<number, SeedScoreInputs> = {};
   for (let i = 0; i < years.length; i++) {
     const t = i / last;
     out[years[i]] = {
@@ -35,7 +34,7 @@ function buy(years: number[], start: number, end: number): Record<number, number
   return out;
 }
 
-const n52: ScoreInputs = {
+const n52: SeedScoreInputs = {
   catastrophe: 0.12,
   expectedFix5yPln: 3200,
   painLoad: 0.22,
@@ -43,7 +42,7 @@ const n52: ScoreInputs = {
   partsReality: 0.9,
 };
 
-const n47Early: ScoreInputs = {
+const n47Early: SeedScoreInputs = {
   catastrophe: 0.98,
   expectedFix5yPln: 16000,
   painLoad: 0.72,
@@ -51,7 +50,7 @@ const n47Early: ScoreInputs = {
   partsReality: 0.88,
 };
 
-const n47Late: ScoreInputs = {
+const n47Late: SeedScoreInputs = {
   catastrophe: 0.92,
   expectedFix5yPln: 14000,
   painLoad: 0.65,
@@ -322,302 +321,3 @@ export const e90Engines: EngineLine[] = [
     ),
   },
 ];
-
-export const e90Pains: Pain[] = [
-  {
-    id: "n47-chain",
-    engines: ["N47"],
-    yearFrom: 2007,
-    title: {
-      pl: "Łańcuch rozrządu (tył silnika)",
-      en: "Timing chain (rear of engine)",
-      ru: "Цепь ГРМ (со стороны коробки)",
-    },
-    affects: {
-      pl: "N47 318d / 320d / 118d / 120d / 520d, zwłaszcza wczesne lata i wysokie przebiegi",
-      en: "N47 318d / 320d / 118d / 120d / 520d, especially early years and high mileage",
-      ru: "N47 318d / 320d / 118d / 120d / 520d, особенно ранние годы и большой пробег",
-    },
-    summary: {
-      pl: "Łańcuch jest od strony skrzyni biegów. Zerwanie albo przeskok często oznacza wymianę silnika. To nie usterka wszystkich E90 — tylko N47.",
-      en: "The chain is at the gearbox end. If it breaks or jumps, the engine often needs replacement. This is an N47 fault, not a fault of every E90.",
-      ru: "Цепь стоит со стороны коробки передач. Обрыв или перескок часто означает замену мотора. Это поломка N47, а не всех E90.",
-    },
-    severity: "engine-loss",
-    plnIndependent: [4000, 8000],
-    plnSpecialist: [7000, 12000],
-    plnAso: [12000, 22000],
-    oemHint: "timing chain kit N47",
-    autodocQuery: {
-      pl: "BMW E90 N47 łańcuch rozrządu",
-      en: "BMW E90 N47 timing chain",
-      ru: "BMW E90 N47 цепь ГРМ",
-    },
-    sources: [...cite.n47],
-  },
-  {
-    id: "n54-hpfp",
-    engines: ["N54"],
-    title: {
-      pl: "Pompa HPFP i wtryskiwacze",
-      en: "HPFP and injectors",
-      ru: "ТНВД и форсунки",
-    },
-    affects: {
-      pl: "335i twin-turbo (N54), nie N55 i nie diesle",
-      en: "335i twin-turbo (N54), not N55 and not diesels",
-      ru: "335i twin-turbo (N54), не N55 и не дизели",
-    },
-    summary: {
-      pl: "Pompa wysokiego ciśnienia i wtryskiwacze piezo są drogie w wymianie. Objawy: trudny rozruch, spadek mocy, błędy mieszanki.",
-      en: "The high-pressure fuel pump and piezo injectors are expensive to replace. Symptoms: hard starting, loss of power, mixture errors.",
-      ru: "ТНВД и пьезофорсунки дорого менять. Признаки: трудный запуск, падение мощности, ошибки смеси.",
-    },
-    severity: "expensive",
-    plnIndependent: [4000, 10000],
-    plnSpecialist: [7000, 14000],
-    plnAso: [12000, 20000],
-    autodocQuery: {
-      pl: "BMW E90 N54 pompa HPFP wtryskiwacze",
-      en: "BMW E90 N54 HPFP injectors",
-      ru: "BMW E90 N54 ТНВД форсунки",
-    },
-    sources: [...cite.n54],
-  },
-  {
-    id: "n53-injectors",
-    engines: ["N53"],
-    title: {
-      pl: "Wtryskiwacze i pompa HPFP (N53 EU)",
-      en: "Injectors and HPFP (EU N53)",
-      ru: "Форсунки и ТНВД (EU N53)",
-    },
-    affects: {
-      pl: "325i / 330i z wtryskiem bezpośrednim N53 (Europa). USA miało N52 dłużej.",
-      en: "EU 325i / 330i with N53 direct injection. The US kept N52 longer.",
-      ru: "EU 325i / 330i с непосредственным впрыском N53. В США N52 держали дольше.",
-    },
-    summary: {
-      pl: "N53 to nie N52. Wtrysk bezpośredni na wolnossącej szóstce psuje się drożej niż pompa wody.",
-      en: "N53 is not N52. Direct injection on this naturally aspirated six costs more to repair than a water pump.",
-      ru: "N53 — это не N52. Непосредственный впрыск на атмосферной шестёрке ремонтировать дороже, чем помпу.",
-    },
-    severity: "expensive",
-    plnIndependent: [6000, 14000],
-    plnSpecialist: [9000, 16000],
-    plnAso: [14000, 22000],
-    autodocQuery: {
-      pl: "BMW E90 N53 wtryskiwacze",
-      en: "BMW E90 N53 injectors",
-      ru: "BMW E90 N53 форсунки",
-    },
-    sources: [...cite.n53],
-  },
-  {
-    id: "n43-injectors",
-    engines: ["N43"],
-    title: {
-      pl: "Wtryskiwacze N43 / NOx",
-      en: "N43 injectors / NOx",
-      ru: "Форсунки N43 / NOx",
-    },
-    affects: {
-      pl: "318i / 320i z N43 (wtrysk bezpośredni, 4 cylindry)",
-      en: "318i / 320i with N43 (direct injection, four-cylinder)",
-      ru: "318i / 320i с N43 (непосредственный впрыск, четыре цилиндра)",
-    },
-    summary: {
-      pl: "Ten czterocylindrowy silnik z wtryskiem bezpośrednim nie jest tanią benzyną. Wtryskiwacze i sonda NOx są kosztowne.",
-      en: "This four-cylinder direct-injection engine is not a cheap petrol option. Injectors and the NOx sensor are expensive.",
-      ru: "Этот четырёхцилиндровый мотор с непосредственным впрыском — не дешёвый бензин. Форсунки и датчик NOx стоят дорого.",
-    },
-    severity: "expensive",
-    plnIndependent: [4000, 9000],
-    plnSpecialist: [6000, 12000],
-    plnAso: [10000, 16000],
-    autodocQuery: {
-      pl: "BMW E90 N43 wtryskiwacze",
-      en: "BMW E90 N43 injectors",
-      ru: "BMW E90 N43 форсунки",
-    },
-    sources: [...cite.n43],
-  },
-  {
-    id: "water-pump",
-    engines: ["N52", "N54", "N55"],
-    title: {
-      pl: "Elektryczna pompa wody / termostat",
-      en: "Electric water pump / thermostat",
-      ru: "Электрическая помпа / термостат",
-    },
-    affects: {
-      pl: "Rzędowe szóstki N52 / N54 / N55",
-      en: "N52 / N54 / N55 inline-sixes",
-      ru: "Рядные шестёрки N52 / N54 / N55",
-    },
-    summary: {
-      pl: "Pompa jest elektryczna i psuje się bez wyraźnego ostrzeżenia. Na N52 to typowy, umiarkowany koszt. Na N54 i N55 też sprawdzaj chłodzenie.",
-      en: "The pump is electric and can fail without a clear warning. On N52 this is a typical, moderate cost. On N54 and N55 check the cooling system as well.",
-      ru: "Помпа электрическая и может выйти из строя без явного предупреждения. На N52 это обычный, умеренный расход. На N54 и N55 тоже проверяйте охлаждение.",
-    },
-    severity: "overheat",
-    plnIndependent: [1000, 2500],
-    plnSpecialist: [1800, 3500],
-    plnAso: [3000, 5500],
-    autodocQuery: {
-      pl: "BMW pompa wody elektryczna N52 N55",
-      en: "BMW electric water pump N52 N55",
-      ru: "BMW электрическая помпа N52 N55",
-    },
-    sources: [...cite.n52],
-  },
-  {
-    id: "swirl-flaps",
-    engines: ["M47", "M57"],
-    title: {
-      pl: "Klapki w kolektorze (swirl flaps)",
-      en: "Intake swirl flaps",
-      ru: "Вихревые заслонки впуска",
-    },
-    affects: {
-      pl: "Diesle M47 / M57 — 320d wczesny, 330d, 335d, 325d",
-      en: "M47 / M57 diesels — early 320d, 330d, 335d, 325d",
-      ru: "Дизели M47 / M57 — ранний 320d, 330d, 335d, 325d",
-    },
-    summary: {
-      pl: "Klapki w kolektorze mogą się oderwać i wpaść do dolotu. To inna usterka niż łańcuch N47.",
-      en: "The intake flaps can break off and fall into the intake. This is a different fault from the N47 timing chain.",
-      ru: "Заслонки во впуске могут отломиться и попасть во впускной коллектор. Это другая поломка, чем цепь ГРМ N47.",
-    },
-    severity: "expensive",
-    plnIndependent: [1500, 3500],
-    plnSpecialist: [2500, 5000],
-    plnAso: [4000, 8000],
-    autodocQuery: {
-      pl: "BMW E90 M57 klapki kolektora",
-      en: "BMW E90 M57 swirl flaps",
-      ru: "BMW E90 M57 вихревые заслонки",
-    },
-    sources: [...cite.m57, ...cite.m47],
-  },
-  {
-    id: "n57-timing",
-    engines: ["N57"],
-    title: {
-      pl: "Rozrząd / łańcuch N57 (niższe ryzyko niż N47)",
-      en: "N57 timing chain (lower risk than N47)",
-      ru: "Цепь ГРМ N57 (риск ниже, чем у N47)",
-    },
-    affects: {
-      pl: "330d / 530d / X5 40d z N57, nie mylić z N47 320d",
-      en: "N57 330d / 530d / X5 40d, not the N47 320d",
-      ru: "N57 330d / 530d / X5 40d, не N47 320d",
-    },
-    summary: {
-      pl: "N57 psuje się rzadziej niż N47, ale to nadal diesel z łańcuchem i wysokimi przebiegami w Polsce. Sprawdź hałas rozrządu i historię serwisową.",
-      en: "N57 fails less often than N47, but it is still a timing-chain diesel with high mileage in Poland. Check timing noise and service history.",
-      ru: "N57 ломается реже, чем N47, но это всё ещё дизель с цепью ГРМ и большим пробегом в Польше. Проверьте шум ГРМ и сервисную историю.",
-    },
-    severity: "expensive",
-    plnIndependent: [3000, 8000],
-    plnSpecialist: [5000, 11000],
-    plnAso: [9000, 16000],
-    autodocQuery: {
-      pl: "BMW E90 N57 łańcuch rozrządu",
-      en: "BMW E90 N57 timing chain",
-      ru: "BMW E90 N57 цепь ГРМ",
-    },
-    sources: [...cite.n57],
-  },
-  {
-    id: "timing-guides",
-    engines: ["N46", "N42"],
-    title: {
-      pl: "Prowadnice łańcucha N42 / N46",
-      en: "N42 / N46 chain guides",
-      ru: "Направляющие цепи N42 / N46",
-    },
-    affects: {
-      pl: "E46 318i N42 i E90/E87 318i / 320i z N46",
-      en: "E46 318i N42 and E90/E87 318i / 320i with N46",
-      ru: "E46 318i N42 и E90/E87 318i / 320i с N46",
-    },
-    summary: {
-      pl: "W tej benzynowej czwórce zużywają się prowadnice łańcucha, nie pompa HPFP. To nie silnik N52.",
-      en: "On this four-cylinder petrol the chain guides wear, not a high-pressure fuel pump. This is not an N52.",
-      ru: "У этой бензиновой четвёрки изнашиваются направляющие цепи, а не ТНВД. Это не мотор N52.",
-    },
-    severity: "expensive",
-    plnIndependent: [1500, 4000],
-    plnSpecialist: [2500, 5500],
-    plnAso: [4000, 8000],
-    autodocQuery: {
-      pl: "BMW E90 N46 łańcuch rozrządu",
-      en: "BMW E90 N46 timing chain",
-      ru: "BMW E90 N46 цепь ГРМ",
-    },
-    sources: [...cite.n46],
-  },
-  {
-    id: "subframe-rust",
-    engines: ["N52", "N53", "N54", "N55", "N47", "M47", "M57", "N57", "N43", "N46"],
-    title: {
-      pl: "Tylna belka / rdza (zima EU)",
-      en: "Rear subframe / rust (EU winters)",
-      ru: "Задний подрамник / ржавчина (зимы EU)",
-    },
-    affects: {
-      pl: "E90/E91, zwłaszcza Touring i auta z solą drogową",
-      en: "E90/E91, especially Touring and road-salt cars",
-      ru: "E90/E91, особенно Touring и машины после дорожной соли",
-    },
-    summary: {
-      pl: "Tylna belka i mocowania wahaczy rdzewieją po polskich zimach. Nie zależy to od diesla ani benzyny — od spawów i historii auta.",
-      en: "The rear subframe and control-arm mounts rust after Polish winters. This does not depend on diesel or petrol — it depends on welds and the car’s history.",
-      ru: "Задний подрамник и крепления рычагов ржавеют после польских зим. Это не зависит от дизеля или бензина — от сварных швов и истории машины.",
-    },
-    severity: "safety",
-    plnIndependent: [800, 6000],
-    plnSpecialist: [1500, 9000],
-    plnAso: [3000, 14000],
-    autodocQuery: {
-      pl: "BMW E90 wahacz tylny belka",
-      en: "BMW E90 rear control arm subframe",
-      ru: "BMW E90 задний рычаг подрамник",
-    },
-    sources: [...cite.e90],
-    chassisSlugs: ["e90", "e91", "e92", "e93"],
-  },
-  {
-    id: "elv-cas",
-    engines: ["N52", "N53", "N54", "N55", "N47", "M47", "M57", "N57", "N43", "N46"],
-    title: {
-      pl: "Blokada kierownicy / CAS",
-      en: "Electric steering lock / CAS",
-      ru: "Электрозамок руля / CAS",
-    },
-    affects: {
-      pl: "Elektronika E-series — auto nie odblokowuje kierownicy",
-      en: "E-series electronics — the car will not unlock the steering",
-      ru: "Электрика E-series — машина не разблокирует руль",
-    },
-    summary: {
-      pl: "Auto może nie odblokować kierownicy i nie odpalić. To moduł i kodowanie, nie silnik. Na oględzinach sprawdź, czy zapala z kluczyka.",
-      en: "The car may not unlock the steering and may not start. This is the module and coding, not the engine. At inspection, check that it starts from the key.",
-      ru: "Автомобиль может не разблокировать руль и не завестись. Это модуль и кодировка, не мотор. На осмотре проверьте, что он заводится с ключа.",
-    },
-    severity: "stranded",
-    plnIndependent: [500, 2000],
-    plnSpecialist: [900, 2800],
-    plnAso: [1500, 4000],
-    autodocQuery: {
-      pl: "BMW E90 ELV blokada kierownicy",
-      en: "BMW E90 ELV steering lock",
-      ru: "BMW E90 ELV замок руля",
-    },
-    sources: [...cite.e90],
-    chassisSlugs: ["e90", "e91", "e92", "e93"],
-  },
-];
-
-export const e90PainsById = new Map(e90Pains.map((pain) => [pain.id, pain]));

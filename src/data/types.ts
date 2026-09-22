@@ -1,7 +1,8 @@
 export type ChassisTag = "volume" | "famous" | "both";
 export type ChassisFamily = "3" | "4" | "5" | "1" | "2" | "x" | "luxury" | "z" | "i";
 export type Fuel = "petrol" | "diesel";
-export type ScoreStatus = "hypothesis" | "signed";
+/** hypothesis removed from runtime — only evidence packs or insufficient. */
+export type ScoreStatus = "evidence_derived" | "signed" | "insufficient";
 export type PainSeverity =
   | "engine-loss"
   | "expensive"
@@ -30,6 +31,17 @@ export type Chassis = {
 
 export type ScoreInputs = {
   catastrophe: number;
+  /** Null until job quotes exist — bucket omitted from score. */
+  expectedFix5yPln: number | null;
+  painLoad: number;
+  campaigns: number;
+  /** Null until parts stock quotes exist — bucket omitted from score. */
+  partsReality: number | null;
+};
+
+/** Legacy seed shape only — ignored at runtime. */
+export type SeedScoreInputs = {
+  catastrophe: number;
   expectedFix5yPln: number;
   painLoad: number;
   campaigns: number;
@@ -42,9 +54,12 @@ export type EngineLine = {
   fuel: Fuel;
   years: number[];
   topPainId: string;
-  medianBuyPlnByYear: Record<number, number>;
-  repairPln: [number, number];
-  inputsByYear: Record<number, ScoreInputs>;
+  /** Seed only — ignored at runtime (warehouse buy overlay or null). */
+  medianBuyPlnByYear?: Record<number, number>;
+  /** Seed only — ignored at runtime. */
+  repairPln?: [number, number];
+  /** Seed only — ignored at runtime (evidence pack replaces). */
+  inputsByYear?: Record<number, SeedScoreInputs>;
 };
 
 export type Pain = {
@@ -56,9 +71,11 @@ export type Pain = {
   affects: Localized;
   summary: Localized;
   severity: PainSeverity;
-  plnIndependent: [number, number];
-  plnSpecialist: [number, number];
-  plnAso: [number, number];
+  /** Null until parts+labor quote collected — never invent PLN. */
+  plnIndependent: [number, number] | null;
+  plnSpecialist: [number, number] | null;
+  plnAso: [number, number] | null;
+  plnNote?: string;
   oemHint?: string;
   autodocQuery: Localized;
   sources: { label: string; url: string }[];
@@ -76,10 +93,14 @@ export type VariantBrief = {
   model: string;
   engine: string;
   fuel: Fuel;
-  score: number;
+  /** Null when no warehouse pain evidence for this cell. */
+  score: number | null;
   scoreStatus: ScoreStatus;
-  medianBuyPln: number;
-  expectedRepairPln: [number, number];
+  /** Null when no CarDossier warehouse row. */
+  medianBuyPln: number | null;
+  /** Null until at least one warehouse pain has quoted PLN bands. */
+  expectedRepairPln: [number, number] | null;
   topPainId: string;
-  inputs: ScoreInputs;
+  inputs: ScoreInputs | null;
+  scoreIncomplete?: string[];
 };

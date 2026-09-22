@@ -5,6 +5,7 @@ import { ChassisCard } from "@/components/ChassisCard";
 import { ComparePair } from "@/components/ComparePair";
 import { chassisList } from "@/data/chassis";
 import { getVariant, listScoreMarks } from "@/lib/catalog";
+import { compareHref } from "@/lib/compare";
 import { isLocale, locales } from "@/lib/locale";
 import { t } from "@/lib/i18n";
 
@@ -24,8 +25,18 @@ export default async function HomePage({
     .map((slug) => chassisList.find((item) => item.slug === slug))
     .filter((item): item is NonNullable<typeof item> => Boolean(item));
   const marks = listScoreMarks(featured);
-  const n52 = getVariant("e90", "2006-330i-n52");
-  const n47 = getVariant("e90", "2008-320d-n47");
+  const best = getVariant("f30", "2016-330i-b48");
+  const worst = getVariant("f30", "2012-320d-n47");
+  const compareUrl =
+    best && worst ? compareHref(locale, `f30/${best.slug}`, `f30/${worst.slug}`) : `/${locale}/compare/`;
+
+  const scoreBasis = [
+    copy.basisCat,
+    copy.basisLoad,
+    copy.basisFix,
+    copy.basisCampaigns,
+    copy.basisParts,
+  ];
 
   return (
     <div className="flex flex-col gap-12 sm:gap-16">
@@ -37,7 +48,42 @@ export default async function HomePage({
         </div>
       </section>
 
-      {n52 && n47 ? <ComparePair locale={locale} chassisSlug="e90" left={n52} right={n47} /> : null}
+      {best && worst ? (
+        <ComparePair
+          locale={locale}
+          chassisSlug="f30"
+          left={best}
+          right={worst}
+          analysisHref={`/${locale}/bmw/f30`}
+          compareHref={compareUrl}
+        />
+      ) : null}
+
+      <section>
+        <div className="flex flex-wrap items-end justify-between gap-2">
+          <h2 className="text-[11px] font-medium uppercase tracking-[0.2em] text-[var(--muted)]">
+            {copy.scoreBasedOn}
+          </h2>
+          <p className="text-xs text-[var(--muted)] sm:text-sm">{copy.scoreBuyOut}</p>
+        </div>
+        <ul className="mt-3 grid gap-2 sm:grid-cols-2 lg:grid-cols-5">
+          {scoreBasis.map((label, i) => (
+            <li
+              key={label}
+              className="rounded-2xl border border-[var(--line)] bg-[var(--card)] px-3 py-3"
+            >
+              <p className="font-mono text-[11px] font-semibold text-[var(--accent)]">{i + 1}</p>
+              <p className="mt-1 text-sm font-medium leading-5">{label}</p>
+            </li>
+          ))}
+        </ul>
+        <p className="mt-3 text-xs leading-5 text-[var(--muted)] sm:text-sm">
+          {copy.threeNumbers}{" "}
+          <Link href={`/${locale}/score`} className="font-medium text-[var(--accent)] underline underline-offset-2">
+            {copy.scoreMethod}
+          </Link>
+        </p>
+      </section>
 
       <section>
         <h2 className="text-[11px] font-medium uppercase tracking-[0.2em] text-[var(--muted)]">{copy.howTitle}</h2>

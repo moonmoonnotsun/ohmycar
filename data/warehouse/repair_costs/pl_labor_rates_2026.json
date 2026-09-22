@@ -1,0 +1,45 @@
+{
+  "dataset": "labor_rates",
+  "region": "PL",
+  "year": 2026,
+  "currency": "PLN",
+  "rates_pln_per_hour": {
+    "independent": {
+      "low": 100,
+      "high": 200,
+      "typical": 150
+    },
+    "bmw_specialist": {
+      "low": 150,
+      "high": 250,
+      "typical": 200
+    },
+    "aso": {
+      "low": 250,
+      "high": 350,
+      "typical": 300,
+      "note": "Premium ASO and Service 4+ programs vary; Bawaria Motors cites Service 4+ rbh ~420 PLN net for 4+ cars"
+    }
+  },
+  "sources": [
+    {
+      "label": "kosztserwisu.pl · cennik napraw 2026",
+      "url": "https://kosztserwisu.pl/cennik-napraw/"
+    },
+    {
+      "label": "kosztserwisu.pl · BMW koszty",
+      "url": "https://kosztserwisu.pl/modele-samochodow/bmw/"
+    },
+    {
+      "label": "Auto Świat · niezależny vs ASO",
+      "url": "https://www.auto-swiat.pl/porady/eksploatacja/niezalezny-serwis-zamiast-aso-ile-mozna-zaoszczedzic-skad-biora-sie-roznice-w-cenach/t2n1tvc"
+    },
+    {
+      "label": "Bawaria Motors · Service 4+",
+      "url": "https://www.bawariamotors.pl/serwis-i-czesci/promocyjna-oferta-bmw-4-letnie/"
+    }
+  ],
+  "collected_at": "2026-09-22T16:29:21Z",
+  "confidence": "public_secondary",
+  "note": "Labor rates only. Job PLN = hours × rate + parts. Parts PLN still to collect from Autodoc.pl / Inter Cars per OEM."
+}

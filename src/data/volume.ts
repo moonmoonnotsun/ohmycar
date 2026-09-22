@@ -1,8 +1,7 @@
-import { cite } from "./citations";
-import type { EngineLine, Pain, ScoreInputs } from "./types";
-import { buy, fillYears, loc, n47Early, n47Late } from "./loc";
+import type { EngineLine, SeedScoreInputs } from "./types";
+import { buy, fillYears, n47Early, n47Late } from "./loc";
 
-const m54: ScoreInputs = {
+const m54: SeedScoreInputs = {
   catastrophe: 0.16,
   expectedFix5yPln: 4200,
   painLoad: 0.32,
@@ -10,7 +9,7 @@ const m54: ScoreInputs = {
   partsReality: 0.9,
 };
 
-const m57: ScoreInputs = {
+const m57: SeedScoreInputs = {
   catastrophe: 0.22,
   expectedFix5yPln: 6200,
   painLoad: 0.38,
@@ -18,7 +17,7 @@ const m57: ScoreInputs = {
   partsReality: 0.86,
 };
 
-const n20Early: ScoreInputs = {
+const n20Early: SeedScoreInputs = {
   catastrophe: 0.62,
   expectedFix5yPln: 11000,
   painLoad: 0.58,
@@ -26,7 +25,7 @@ const n20Early: ScoreInputs = {
   partsReality: 0.78,
 };
 
-const n20Late: ScoreInputs = {
+const n20Late: SeedScoreInputs = {
   catastrophe: 0.48,
   expectedFix5yPln: 8500,
   painLoad: 0.48,
@@ -34,7 +33,7 @@ const n20Late: ScoreInputs = {
   partsReality: 0.82,
 };
 
-const b47: ScoreInputs = {
+const b47: SeedScoreInputs = {
   catastrophe: 0.28,
   expectedFix5yPln: 7000,
   painLoad: 0.4,
@@ -42,7 +41,7 @@ const b47: ScoreInputs = {
   partsReality: 0.84,
 };
 
-const n55: ScoreInputs = {
+const n55: SeedScoreInputs = {
   catastrophe: 0.26,
   expectedFix5yPln: 6200,
   painLoad: 0.38,
@@ -544,182 +543,3 @@ export const volumeEngines: Record<string, EngineLine[]> = {
     },
   ],
 };
-
-export const volumePains: Pain[] = [
-  {
-    id: "m54-cooling",
-    engines: ["M54", "M52"],
-    title: loc("Cooling system (plastic)", "Układ chłodzenia (plastik)", "Система охлаждения (пластик)"),
-    affects: loc("M54 / M52 inline-six — E46, E39, E53, E83", "Rzędowa szóstka M54/M52 — E46, E39, E53, E83", "Рядная шестёрка M54/M52 — E46, E39, E53, E83"),
-    summary: loc(
-      "Radiator, expansion tank, and thermostat housings become brittle. Overheating can damage the cylinder head. At inspection: cold start, no emulsion under the oil cap, no dried coolant on the plastic.",
-      "Chłodnica, zbiornik wyrównawczy i obudowy termostatu kruszeją. Przegrzanie może uszkodzić głowicę. Na oględzinach: zimny start, brak emulsji pod korkiem oleju, brak śladów płynu na plastiku.",
-      "Радиатор, расширительный бачок и корпуса термостата становятся хрупкими. Перегрев может повредить головку. На осмотре: холодный запуск, нет эмульсии под крышкой масла, нет следов антифриза на пластике.",
-    ),
-    severity: "overheat",
-    plnIndependent: [800, 2500],
-    plnSpecialist: [1400, 3800],
-    plnAso: [2500, 6000],
-    autodocQuery: loc("BMW M54 radiator expansion tank", "BMW M54 chłodnica zbiornik wyrównawczy", "BMW M54 радиатор расширительный бачок"),
-    sources: [...cite.m54],
-  },
-  {
-    id: "m54-disa",
-    engines: ["M54"],
-    title: loc("DISA valve", "Klapa DISA", "Клапан DISA"),
-    affects: loc("M54 325i / 330i / 3.0i", "M54 325i / 330i / 3.0i", "M54 325i / 330i / 3.0i"),
-    summary: loc(
-      "The intake flap shaft wears and the valve can break into the intake. A rattle on a cold start is a typical sign. Check this on every M54.",
-      "Wałek klapy ssącej się zużywa i klapa może wpaść do dolotu. Stuk na zimnym silniku to częsty objaw. Sprawdź to na każdym M54.",
-      "Вал впускной заслонки изнашивается, клапан может попасть во впуск. Стук на холодном моторе — частый признак. Проверяйте это на каждом M54.",
-    ),
-    severity: "expensive",
-    plnIndependent: [600, 1800],
-    plnSpecialist: [1000, 2800],
-    plnAso: [1800, 4500],
-    autodocQuery: loc("BMW M54 DISA valve", "BMW M54 klapa DISA", "BMW M54 клапан DISA"),
-    sources: [...cite.m54],
-  },
-  {
-    id: "n20-chain",
-    engines: ["N20"],
-    title: loc("N20 timing chain / VANOS", "Łańcuch N20 / VANOS", "Цепь ГРМ N20 / VANOS"),
-    affects: loc("N20 320i / 328i / 520i, especially 2011–2015", "N20 320i / 328i / 520i, zwłaszcza 2011–2015", "N20 320i / 328i / 520i, особенно 2011–2015"),
-    summary: loc(
-      "Early N20 engines wear the timing chain and VANOS units. Typical signs: rattle at start, high oil consumption, then a jumped chain. Later years are better, not risk-free. This is not a B48.",
-      "Wczesne N20 zużywają łańcuch rozrządu i VANOS. Typowe objawy: stuk przy starcie, wysokie zużycie oleju, potem przeskok łańcucha. Późniejsze lata są lepsze, ale nie bez ryzyka. To nie B48.",
-      "Ранние N20 изнашивают цепь ГРМ и VANOS. Типичные признаки: стук на запуске, большой расход масла, затем перескок цепи. Поздние годы лучше, но не без риска. Это не B48.",
-    ),
-    severity: "engine-loss",
-    plnIndependent: [4500, 9000],
-    plnSpecialist: [7000, 13000],
-    plnAso: [11000, 18000],
-    autodocQuery: loc("BMW N20 timing chain VANOS", "BMW N20 łańcuch VANOS", "BMW N20 цепь ГРМ VANOS"),
-    sources: [...cite.n20],
-  },
-  {
-    id: "n20-oil-filter",
-    engines: ["N20", "B48", "N55"],
-    title: loc("Oil filter housing gasket", "Uszczelka obudowy filtra oleju", "Прокладка корпуса масляного фильтра"),
-    affects: loc("N20 / B48 / N55 — oil down the side of the block", "N20 / B48 / N55 — olej po boku bloku", "N20 / B48 / N55 — масло по боку блока"),
-    summary: loc(
-      "The plastic housing leaks oil onto the belt. The repair is inexpensive if done early; if ignored, the belt can fail. Inspect the housing in person, not from a photo of a dry driveway.",
-      "Plastikowa obudowa cieknie olejem na pasek. Naprawa jest tania, jeśli zrobiona wcześnie; jeśli zignorujesz wyciek, pasek może pęknąć. Obejrzyj obudowę na miejscu, nie na zdjęciu suchego podjazdu.",
-      "Пластиковый корпус течёт маслом на ремень. Ремонт недорогой, если сделать сразу; если игнорировать течь, ремень может оборваться. Смотрите корпус на месте, не по фото сухого двора.",
-    ),
-    severity: "annoyance",
-    plnIndependent: [400, 1200],
-    plnSpecialist: [700, 1800],
-    plnAso: [1200, 2800],
-    autodocQuery: loc("BMW oil filter housing gasket", "BMW uszczelka obudowy filtra oleju", "BMW прокладка корпуса масляного фильтра"),
-    sources: [...cite.n20Wiki],
-  },
-  {
-    id: "n62-valvetronic",
-    engines: ["N62"],
-    title: loc("N62 Valvetronic / coolant", "N62 Valvetronic / płyn", "N62 Valvetronic / антифриз"),
-    affects: loc("N62 V8 — 545i, 550i, X5 4.8i", "V8 N62 — 545i, 550i, X5 4.8i", "V8 N62 — 545i, 550i, X5 4.8i"),
-    summary: loc(
-      "Valvetronic actuators and plastic cooling parts fail on this V8. Typical signs: misfires, coolant loss, camshaft errors. Ask for a compression test before buying.",
-      "Siłowniki Valvetronic i plastikowe części układu chłodzenia psują się w tym V8. Typowe objawy: wypadania zapłonu, ubytek płynu, błędy wałków. Poproś o pomiar kompresji przed zakupem.",
-      "Актуаторы Valvetronic и пластиковые детали охлаждения ломаются на этом V8. Типичные признаки: пропуски зажигания, утечка антифриза, ошибки распредвалов. Перед покупкой запросите замер компрессии.",
-    ),
-    severity: "expensive",
-    plnIndependent: [4000, 12000],
-    plnSpecialist: [7000, 16000],
-    plnAso: [12000, 24000],
-    autodocQuery: loc("BMW N62 Valvetronic actuator", "BMW N62 siłownik Valvetronic", "BMW N62 актуатор Valvetronic"),
-    sources: [...cite.n62],
-  },
-  {
-    id: "b47-egr",
-    engines: ["B47"],
-    title: loc("B47 EGR / intake carbon", "B47 EGR / nagar w dolocie", "B47 EGR / нагар во впуске"),
-    affects: loc("B47 318d / 320d / 118d / 120d after ~2014", "B47 318d / 320d / 118d / 120d po ~2014", "B47 318d / 320d / 118d / 120d после ~2014"),
-    summary: loc(
-      "B47 is not N47. The timing chain is less of a problem; the EGR cooler and intake carbon are the typical costs at high mileage in Poland. Confirm B47 on the engine plate.",
-      "B47 to nie N47. Łańcuch rozrządu psuje się rzadziej; chłodnica EGR i nagar w dolocie to typowe koszty przy wysokim przebiegu w Polsce. Potwierdź B47 na tabliczce silnika.",
-      "B47 — это не N47. Цепь ГРМ ломается реже; охладитель EGR и нагар во впуске — типичные расходы при большом пробеге в Польше. Подтвердите B47 на шильдике мотора.",
-    ),
-    severity: "expensive",
-    plnIndependent: [2000, 5500],
-    plnSpecialist: [3200, 8000],
-    plnAso: [5000, 12000],
-    autodocQuery: loc("BMW B47 EGR cooler", "BMW B47 chłodnica EGR", "BMW B47 охладитель EGR"),
-    sources: [...cite.b47],
-  },
-  {
-    id: "n13-timing",
-    engines: ["N13"],
-    title: loc("N13 timing / HPFP", "N13 rozrząd / HPFP", "N13 ГРМ / ТНВД"),
-    affects: loc("F20 114i / 116i / 118i 1.6 turbo", "F20 114i / 116i / 118i 1.6 turbo", "F20 114i / 116i / 118i 1.6 турбо"),
-    summary: loc(
-      "This 1.6 turbo is not a cheap, simple 116i. Timing chain, high-pressure pump, and carbon often appear together at high mileage in Poland.",
-      "Ten 1.6 turbo nie jest tanią, prostą 116i. Łańcuch rozrządu, pompa wysokiego ciśnienia i nagar często pojawiają się razem przy wysokim przebiegu w Polsce.",
-      "Этот 1.6 турбо — не дешёвая простая 116i. Цепь ГРМ, ТНВД и нагар часто появляются вместе при большом пробеге в Польше.",
-    ),
-    severity: "expensive",
-    plnIndependent: [2500, 7000],
-    plnSpecialist: [4000, 10000],
-    plnAso: [7000, 14000],
-    autodocQuery: loc("BMW N13 timing chain HPFP", "BMW N13 łańcuch HPFP", "BMW N13 цепь ТНВД"),
-    sources: [...cite.n13],
-  },
-  {
-    id: "e39-cooling",
-    engines: ["M52", "M62"],
-    title: loc("Expansion tank / cooling", "Zbiornik wyrównawczy / chłodzenie", "Расширительный бачок / охлаждение"),
-    affects: loc("E39 petrol, also early X5 M62", "Benzyny E39, też wczesne X5 M62", "Бензин E39, также ранний X5 M62"),
-    summary: loc(
-      "The expansion tank cracks and the engine overheats. On this generation cooling is the typical repair, not a timing chain. Replace plastic parts preventively or look for coolant residue.",
-      "Zbiornik wyrównawczy pęka i silnik się przegrzewa. W tej generacji chłodzenie to typowa naprawa, nie łańcuch rozrządu. Wymieniaj plastik zapobiegawczo albo szukaj śladów płynu.",
-      "Расширительный бачок трескается, мотор перегревается. В этом поколении типичный ремонт — охлаждение, а не цепь ГРМ. Меняйте пластик заранее или ищите следы антифриза.",
-    ),
-    severity: "overheat",
-    plnIndependent: [500, 1800],
-    plnSpecialist: [900, 2800],
-    plnAso: [1600, 4500],
-    autodocQuery: loc("BMW E39 coolant expansion tank", "BMW E39 zbiornik wyrównawczy", "BMW E39 расширительный бачок"),
-    sources: [...cite.e39],
-  },
-  {
-    id: "eu-winter-rust",
-    engines: ["M54", "M52", "M47", "M57", "N52", "N62", "N46", "N47"],
-    chassisSlugs: ["e46", "e39", "e60", "e61", "e87", "e81", "e53", "e83"],
-    title: loc("Subframe / sills (EU salt)", "Belka / progi (sól EU)", "Подрамник / пороги (соль EU)"),
-    affects: loc(
-      "E46 / E39 / E60 / E87 / first X3 and X5 after Polish winters",
-      "E46 / E39 / E60 / E87 / pierwsze X3 i X5 po polskich zimach",
-      "E46 / E39 / E60 / E87 / первые X3 и X5 после польских зим",
-    ),
-    summary: loc(
-      "Rust is a body issue, not an engine issue. Inspect subframe welds, sills, and jacking points on a lift. A clean engine bay does not mean the body is sound.",
-      "Rdza to usterka nadwozia, nie silnika. Na podnośniku sprawdź spoiny belki, progi i punkty podnoszenia. Czysta komora silnika nie znaczy, że nadwozie jest sprawne.",
-      "Ржавчина — проблема кузова, не мотора. На подъёмнике проверьте швы подрамника, пороги и домкратные точки. Чистый моторный отсек не значит, что кузов в порядке.",
-    ),
-    severity: "safety",
-    plnIndependent: [800, 7000],
-    plnSpecialist: [1500, 10000],
-    plnAso: [3000, 16000],
-    autodocQuery: loc("BMW rear subframe rust", "BMW belka tylna rdza", "BMW задний подрамник ржавчина"),
-    sources: [...cite.e90, ...cite.e39],
-  },
-  {
-    id: "transfer-case",
-    engines: ["M54", "M57", "N52", "N55", "N57", "N62", "M47"],
-    chassisSlugs: ["e70", "e53", "e83"],
-    title: loc("Transfer case / xDrive", "Skrzynka rozdzielcza / xDrive", "Раздатка / xDrive"),
-    affects: loc("X3 / X5 with xDrive — not an engine fault", "X3 / X5 z xDrive — nie usterka silnika", "X3 / X5 с xDrive — не поломка мотора"),
-    summary: loc(
-      "The chain in the transfer case stretches. Typical signs: binding in tight turns, a grinding noise when moving off. This applies to xDrive, not to a specific engine. Check it in tight manoeuvres.",
-      "Łańcuch w skrzynce rozdzielczej się wyciąga. Typowe objawy: spinanie w ciasnych zakrętach, zgrzyt przy ruszaniu. Dotyczy xDrive, nie konkretnego silnika. Sprawdź to na ciasnych manewrach.",
-      "Цепь в раздаточной коробке вытягивается. Типичные признаки: зажатие в крутых поворотах, скрежет при старте. Это касается xDrive, а не конкретного мотора. Проверьте на крутых манёврах.",
-    ),
-    severity: "expensive",
-    plnIndependent: [2500, 7000],
-    plnSpecialist: [4000, 10000],
-    plnAso: [7000, 15000],
-    autodocQuery: loc("BMW X5 transfer case actuator", "BMW X5 siłownik skrzynki rozdzielczej", "BMW X5 актуатор раздатки"),
-    sources: [...cite.xdrive],
-  },
-];

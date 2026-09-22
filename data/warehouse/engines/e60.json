@@ -1,0 +1,75 @@
+{
+  "chassis_slug": "e60",
+  "region": "PL",
+  "collected_at": "2026-09-22T16:38:02Z",
+  "confidence": "sourced_curated",
+  "sources": [
+    {
+      "label": "Wikipedia generation page",
+      "url": "https://en.wikipedia.org/wiki/BMW_5_Series_(E60)"
+    },
+    {
+      "label": "RealOEM BMW catalog",
+      "url": "https://www.realoem.com/bmw/"
+    },
+    {
+      "label": "App seed cross-check",
+      "url": "src/data/volume.ts"
+    }
+  ],
+  "lines": [
+    {
+      "model": "530i",
+      "engine": "N52",
+      "fuel": "petrol",
+      "years": [
+        2005,
+        2006,
+        2007,
+        2008,
+        2009,
+        2010
+      ]
+    },
+    {
+      "model": "545i",
+      "engine": "N62",
+      "fuel": "petrol",
+      "years": [
+        2003,
+        2004,
+        2005,
+        2006,
+        2007
+      ]
+    },
+    {
+      "model": "520d",
+      "engine": "N47",
+      "fuel": "diesel",
+      "years": [
+        2007,
+        2008,
+        2009,
+        2010
+      ]
+    },
+    {
+      "model": "530d",
+      "engine": "M57",
+      "fuel": "diesel",
+      "years": [
+        2003,
+        2004,
+        2005,
+        2006,
+        2007,
+        2008,
+        2009,
+        2010
+      ]
+    }
+  ],
+  "line_count": 4,
+  "note": "Badge×engine×years curated from Wikipedia + cross-checked against app seed. Verify edge cases on RealOEM."
+}

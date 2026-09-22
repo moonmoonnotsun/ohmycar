@@ -20,6 +20,7 @@ export function Header({ locale }: { locale: Locale }) {
   const parts = pathname.split("/").filter(Boolean);
   const onCatalog = parts[1] === "bmw" && !parts[2];
   const onScore = parts[1] === "score";
+  const onCompare = parts[1] === "compare";
   const [langOpen, setLangOpen] = useState(false);
   const langRef = useRef<HTMLDivElement>(null);
 
@@ -55,6 +56,16 @@ export function Header({ locale }: { locale: Locale }) {
             }`}
           >
             {copy.catalog}
+          </Link>
+          <Link
+            href={`/${locale}/compare`}
+            className={`h-tap inline-flex items-center rounded-full border px-3 font-medium ${
+              onCompare
+                ? "border-[var(--accent)] text-[var(--ink)]"
+                : "tap border-transparent text-[var(--muted)]"
+            }`}
+          >
+            {copy.compare}
           </Link>
           <Link
             href={`/${locale}/score`}

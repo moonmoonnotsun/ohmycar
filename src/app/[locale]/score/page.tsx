@@ -41,6 +41,7 @@ export default async function ScorePage({
           </li>
         ))}
       </ul>
+      <p className="text-sm leading-6 text-[var(--muted)]">{copy.scoreEvidence}</p>
       <p className="text-sm leading-6 text-[var(--muted)]">{copy.threeNumbers}</p>
       <p className="text-sm leading-6 text-[var(--muted)]">{copy.disclaimer}</p>
     </div>

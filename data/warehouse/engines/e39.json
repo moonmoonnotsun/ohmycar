@@ -1,0 +1,72 @@
+{
+  "chassis_slug": "e39",
+  "region": "PL",
+  "collected_at": "2026-09-22T16:38:02Z",
+  "confidence": "sourced_curated",
+  "sources": [
+    {
+      "label": "Wikipedia generation page",
+      "url": "https://en.wikipedia.org/wiki/BMW_5_Series_(E39)"
+    },
+    {
+      "label": "RealOEM BMW catalog",
+      "url": "https://www.realoem.com/bmw/"
+    },
+    {
+      "label": "App seed cross-check",
+      "url": "src/data/volume.ts"
+    }
+  ],
+  "lines": [
+    {
+      "model": "528i",
+      "engine": "M52",
+      "fuel": "petrol",
+      "years": [
+        1995,
+        1996,
+        1997,
+        1998,
+        1999,
+        2000
+      ]
+    },
+    {
+      "model": "530i",
+      "engine": "M54",
+      "fuel": "petrol",
+      "years": [
+        2000,
+        2001,
+        2002,
+        2003
+      ]
+    },
+    {
+      "model": "525d",
+      "engine": "M57",
+      "fuel": "diesel",
+      "years": [
+        2000,
+        2001,
+        2002,
+        2003
+      ]
+    },
+    {
+      "model": "530d",
+      "engine": "M57",
+      "fuel": "diesel",
+      "years": [
+        1998,
+        1999,
+        2000,
+        2001,
+        2002,
+        2003
+      ]
+    }
+  ],
+  "line_count": 4,
+  "note": "Badge×engine×years curated from Wikipedia + cross-checked against app seed. Verify edge cases on RealOEM."
+}

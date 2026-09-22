@@ -1,0 +1,37 @@
+{
+  "rule_id": "score-evidence-v1",
+  "collected_at": "2026-09-22T19:30:00Z",
+  "policy": "No invented floats. Score only from warehouse pains + UOKiK campaigns. Omit fiveYearFix and partsReality until job/stock quotes exist; renormalize remaining weights to 100.",
+  "severity_to_catastrophe": {
+    "engine-loss": 0.9,
+    "safety": 0.6,
+    "expensive": 0.4,
+    "overheat": 0.45,
+    "stranded": 0.35,
+    "annoyance": 0.12
+  },
+  "pain_load": {
+    "formula": "min(1, sum(severity_weight) / 2.5)",
+    "severity_weight": {
+      "engine-loss": 1.0,
+      "safety": 0.7,
+      "expensive": 0.45,
+      "overheat": 0.5,
+      "stranded": 0.4,
+      "annoyance": 0.15
+    }
+  },
+  "campaigns": {
+    "formula": "max over UOKiK rows on chassis: base[severity] + min(0.25, vehicles_in_pl/200000); +0.05 per extra row; cap 0.85. No rows → 0.",
+    "base": {
+      "safety": 0.45,
+      "other": 0.2
+    }
+  },
+  "omitted_until_quoted": ["fiveYearFix", "partsReality"],
+  "status_when_complete_enough": "evidence_derived",
+  "sources": [
+    "data/warehouse/pains/top10_sourced_pains.json",
+    "data/warehouse/campaigns/uokik_bmw_top10_relevant.json"
+  ]
+}

@@ -1,0 +1,62 @@
+{
+  "collected_at": "2026-09-22T16:29:21Z",
+  "buy_car": [
+    {
+      "id": "otomoto",
+      "url": "https://www.otomoto.pl",
+      "api_note": "Official API is dealer write/post only: https://www.otomoto.pl/news/przeglad-funkcji-api"
+    },
+    {
+      "id": "mobile_de",
+      "url": "https://www.mobile.de",
+      "api_note": "Search API for dealers/partners: https://services.mobile.de/docs/search-api.html"
+    },
+    {
+      "id": "olx",
+      "url": "https://www.olx.pl/motoryzacja/samochody/"
+    },
+    {
+      "id": "allegro_lokalnie",
+      "url": "https://allegrolokalnie.pl/oferty/osobowe/bmw-4032"
+    }
+  ],
+  "valuation": [
+    {
+      "id": "cardossier",
+      "url": "https://car-dossier.com/en/api/",
+      "public_stats": "https://car-dossier.com/ceny/bmw"
+    },
+    {
+      "id": "eurotax_pl",
+      "url": "https://eurotax.pl/autovista-api/"
+    },
+    {
+      "id": "info_ekspert",
+      "url": "https://infonet.info-ekspert.net/"
+    }
+  ],
+  "recalls": [
+    {
+      "id": "uokik",
+      "url": "https://uokik.gov.pl/bip/tagi/bmw"
+    },
+    {
+      "id": "bmw_vin_pl",
+      "url": "https://www.bmwgroup.com/en/general/regulations/recall/recall-polish.html"
+    },
+    {
+      "id": "nhtsa",
+      "url": "https://www.nhtsa.gov/nhtsa-datasets-and-apis"
+    }
+  ],
+  "reliability_priors": [
+    {
+      "id": "adac_pannenstatistik",
+      "url": "https://www.adac.de/rund-ums-fahrzeug/unfall-schaden-panne/adac-pannenstatistik-2026/"
+    },
+    {
+      "id": "tuv_report",
+      "url": "https://www.tuev-verband.de/presse/publikationen/reporte/tuev-report-autobild"
+    }
+  ]
+}

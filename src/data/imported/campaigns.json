@@ -1,0 +1,121 @@
+{
+  "dataset": "campaigns",
+  "region": "PL",
+  "collected_at": "2026-09-22T16:29:21Z",
+  "index_url": "https://uokik.gov.pl/bip/tagi/bmw",
+  "vin_checker_pl": "https://www.bmwgroup.com/en/general/regulations/recall/recall-polish.html",
+  "note": "Official PL notifications. VIN-level open/closed status is only via BMW VIN tool — not published in bulk by UOKiK (RODO).",
+  "rows": [
+    {
+      "id": "uokik-2024-08-05-bmw-e81-e83-e84-e87-e90-e91-takata-driver",
+      "region": "PL",
+      "published": "2024-08-05",
+      "title": "Wadliwa poduszka powietrzna kierowcy (Sport/M Sport steering rebuild)",
+      "chassis_codes": [
+        "E81",
+        "E83",
+        "E84",
+        "E87",
+        "E90",
+        "E91"
+      ],
+      "chassis_slugs": [
+        "e87",
+        "e83",
+        "e90"
+      ],
+      "vehicles_in_pl": 10405,
+      "severity": "safety",
+      "defect_summary_pl": "Podczas przebudowy kierownicy na Sport/M Sport mogła zostać zamontowana wadliwa poduszka kierowcy; ryzyko pęknięcia generatora gazu.",
+      "source": {
+        "provider": "uokik",
+        "url": "https://uokik.gov.pl/bip/samochody-bmw",
+        "tag_index": "https://uokik.gov.pl/bip/tagi/bmw"
+      },
+      "importer": "BMW Vertriebs GmbH Oddział w Polsce",
+      "collected_at": "2026-09-22T16:29:21Z",
+      "confidence": "official_pl"
+    },
+    {
+      "id": "uokik-2024-08-05-bmw-f-series-takata-driver",
+      "region": "PL",
+      "published": "2024-08-05",
+      "title": "Wadliwa poduszka powietrzna kierowcy (Sport/M Sport) — F-series batch",
+      "chassis_codes": [
+        "F87",
+        "F86",
+        "F85",
+        "F83",
+        "F82",
+        "F80",
+        "F52",
+        "F49",
+        "F48",
+        "F46",
+        "F45",
+        "F36",
+        "F35",
+        "F34",
+        "F33",
+        "F32",
+        "F31",
+        "F30",
+        "F26",
+        "F23",
+        "F22",
+        "F21",
+        "F20",
+        "F16",
+        "F15",
+        "F13",
+        "F12",
+        "F11",
+        "F10",
+        "F07",
+        "F06"
+      ],
+      "chassis_slugs": [
+        "f30",
+        "f10",
+        "f20"
+      ],
+      "vehicles_in_pl": 52602,
+      "severity": "safety",
+      "defect_summary_pl": "Ta sama klasa usterki poduszki kierowcy przy przebudowie Sport/M Sport — duża partia F-series.",
+      "source": {
+        "provider": "uokik",
+        "url": "https://uokik.gov.pl/bip/samochody-bmw-1",
+        "tag_index": "https://uokik.gov.pl/bip/tagi/bmw"
+      },
+      "importer": "BMW Vertriebs GmbH Oddział w Polsce",
+      "collected_at": "2026-09-22T16:29:21Z",
+      "confidence": "official_pl"
+    },
+    {
+      "id": "uokik-2024-04-12-bmw-e83-e87-e90-e91-airbag",
+      "region": "PL",
+      "published": "2024-04-12",
+      "title": "Pęknięcie generatora gazowego poduszki powietrznej kierowcy",
+      "chassis_codes": [
+        "E83",
+        "E87",
+        "E90",
+        "E91"
+      ],
+      "chassis_slugs": [
+        "e83",
+        "e87",
+        "e90"
+      ],
+      "vehicles_in_pl": 2059,
+      "severity": "safety",
+      "defect_summary_pl": "Może dochodzić do pęknięcia generatora gazowego poduszki powietrznej kierowcy.",
+      "source": {
+        "provider": "uokik",
+        "url": "https://uokik.gov.pl/bip/samochody-bmw-rozne-modele"
+      },
+      "collected_at": "2026-09-22T16:29:21Z",
+      "confidence": "official_pl"
+    }
+  ]
+}

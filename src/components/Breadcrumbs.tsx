@@ -67,6 +67,9 @@ function crumbsFor(pathname: string, locale: Locale): Crumb[] {
   if (section === "score") {
     return [home, { href: `/${locale}/score`, label: copy.scoreShort, current: true }];
   }
+  if (section === "compare") {
+    return [home, { href: `/${locale}/compare`, label: copy.compare, current: true }];
+  }
   if (section !== "bmw") return [home];
 
   const crumbs: Crumb[] = [
