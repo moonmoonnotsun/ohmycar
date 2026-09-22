@@ -2,6 +2,7 @@ import type { Chassis, VariantBrief } from "@/data/types";
 import type { Locale } from "@/lib/locale";
 import { t } from "@/lib/i18n";
 import { publicUrl } from "@/lib/asset";
+import { HardLink } from "@/components/HardLink";
 import { bodyLabelKey, bodyOf } from "@/lib/carImage";
 import { CarPhoto } from "@/components/CarPhoto";
 import { getVariant } from "@/lib/catalog";
@@ -39,7 +40,7 @@ export function BodySwitcher({
             ? publicUrl(`/${locale}/bmw/${item.slug}/${from.slug}/`)
             : publicUrl(`/${locale}/bmw/${item.slug}/`);
           return (
-            <a
+            <HardLink
               key={item.slug}
               href={href}
               className={`overflow-hidden rounded-xl border ${
@@ -57,7 +58,7 @@ export function BodySwitcher({
                 <p className="font-mono text-xs font-semibold">{item.code}</p>
                 <p className="truncate text-[10px] uppercase tracking-wide text-[var(--muted)]">{body}</p>
               </div>
-            </a>
+            </HardLink>
           );
         })}
       </div>

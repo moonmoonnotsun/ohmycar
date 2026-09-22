@@ -2,6 +2,7 @@ import type { VariantBrief } from "@/data/types";
 import type { Locale } from "@/lib/locale";
 import { t } from "@/lib/i18n";
 import { publicUrl } from "@/lib/asset";
+import { HardLink } from "@/components/HardLink";
 import { modelsFor, resolveVariant, yearOptionsForModel } from "@/lib/catalog";
 
 /**
@@ -51,7 +52,7 @@ function yearRiskClass(score: number | null, active: boolean): string {
   return `border border-solid ${rim.border} ${rim.bg} ${rim.text} ${select}`;
 }
 
-/** Full page load — Next 16 static export soft-nav/prefetch is unreliable with basePath. */
+/** Hard nav href — soft Link nav is unreliable on static export + basePath. */
 function variantHref(locale: Locale, chassisSlug: string, slug: string) {
   return publicUrl(`/${locale}/bmw/${chassisSlug}/${slug}/`);
 }
@@ -87,7 +88,7 @@ export function VariantSwitcher({
               }) ?? resolveVariant({ chassisSlug, model, preferFuel: variant.fuel });
             if (!target) return null;
             return (
-              <a
+              <HardLink
                 key={model}
                 href={variantHref(locale, chassisSlug, target.slug)}
                 className={`h-tap inline-flex shrink-0 items-center rounded-full border px-3.5 text-sm font-medium tabular-nums ${
@@ -97,7 +98,7 @@ export function VariantSwitcher({
                 }`}
               >
                 {model}
-              </a>
+              </HardLink>
             );
           })}
         </div>
@@ -122,13 +123,13 @@ export function VariantSwitcher({
                   preferFuel: variant.fuel,
                 }) ?? row;
               return (
-                <a
+                <HardLink
                   key={`${year}-${row.slug}`}
                   href={variantHref(locale, chassisSlug, href.slug)}
                   className={`h-tap inline-flex shrink-0 items-center rounded-full px-3.5 text-sm font-medium tabular-nums ${yearRiskClass(score, active)}`}
                 >
                   {year}
-                </a>
+                </HardLink>
               );
             })}
           </div>
