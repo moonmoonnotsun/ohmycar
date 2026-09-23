@@ -1,0 +1,41 @@
+{
+  "pain_id": "s63-valve-stem-seals",
+  "status": "quoted_workshop_band",
+  "currency": "PLN",
+  "region": "PL",
+  "collected_at": "2026-09-23T20:30:00Z",
+  "totals_pln": {
+    "independent": [
+      6000,
+      14000
+    ],
+    "specialist": [
+      8000,
+      18000
+    ],
+    "aso": [
+      12000,
+      25000
+    ]
+  },
+  "parts_pln": [
+    2000,
+    5000
+  ],
+  "labor_pln": [
+    4000,
+    10000
+  ],
+  "quotes": [
+    {
+      "tier": "specialist",
+      "pln_low": 6000,
+      "pln_high": 14000,
+      "label": "LuxuryCarsGuide · S63 failure themes (stems / bearings class)",
+      "url": "https://www.luxurycarsguide.com/guides/bmw-s63-engine-failure-rate/"
+    }
+  ],
+  "confidence": "pain_pln_bands_sync",
+  "split_note": "Head-off stem seal job class prior (refine with Autodoc / indie quotes)",
+  "formula": "independent_full = parts_pln + labor_pln (when split present)"
+}

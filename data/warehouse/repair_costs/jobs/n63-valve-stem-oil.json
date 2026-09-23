@@ -1,0 +1,40 @@
+{
+  "pain_id": "n63-valve-stem-oil",
+  "status": "quoted_workshop_band",
+  "currency": "PLN",
+  "region": "PL",
+  "collected_at": "2026-09-23T22:00:00Z",
+  "totals_pln": {
+    "independent": [
+      2150,
+      5160
+    ],
+    "specialist": [
+      2580,
+      6450
+    ],
+    "aso": [
+      4300,
+      9460
+    ]
+  },
+  "parts_pln": [
+    1290,
+    3440
+  ],
+  "labor_pln": [
+    860,
+    2580
+  ],
+  "quotes": [
+    {
+      "tier": "specialist",
+      "pln_low": 2150,
+      "pln_high": 5160,
+      "label": "NHTSA · SI B11 01 17 — N63T/S63T valve seal replacement",
+      "url": "https://static.nhtsa.gov/odi/tsbs/2017/MC-10146525-9999.pdf"
+    }
+  ],
+  "split_note": "Head-cover stem-seal job class prior (N63 family); confirm oil-consumption test per SIB",
+  "confidence": "f4b_sync"
+}

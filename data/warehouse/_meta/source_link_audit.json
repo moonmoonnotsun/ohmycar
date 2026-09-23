@@ -1,0 +1,4017 @@
+{
+  "summary": {
+    "collected_at": "2026-09-23T15:59:09.940Z",
+    "pains": 74,
+    "unique_urls": 178,
+    "hard_mismatches": 0,
+    "pains_with_uncovered_engines": 0,
+    "autodoc_gaps": 0,
+    "fetch_ran": false,
+    "dead_urls": null
+  },
+  "hard_mismatches": [],
+  "autodoc_gaps": [],
+  "pains": [
+    {
+      "id": "n47-chain",
+      "packEngines": [
+        "N47"
+      ],
+      "chassisCount": 12,
+      "uncoveredEngines": [],
+      "aqMissing": [],
+      "sources": [
+        {
+          "label": "Wikipedia · BMW N47 (Timing chain problems)",
+          "url": "https://en.wikipedia.org/wiki/BMW_N47",
+          "role": "primary",
+          "applies_engines": [
+            "N47"
+          ],
+          "applies_chassis": [],
+          "hard": false
+        },
+        {
+          "label": "NHTSA TSB / manufacturer communications index",
+          "url": "https://www.nhtsa.gov/nhtsa-datasets-and-apis",
+          "role": "primary",
+          "applies_engines": [],
+          "applies_chassis": [],
+          "hard": false
+        },
+        {
+          "label": "PLN · AutoKult · N47 rozrząd (zamienniki→OEM)",
+          "url": "https://autokult.pl/silnik-2-0-n47-od-bmw-i-jego-rozrzad-sprawdzamy-czy-jest-az-tak-zle,6809155006965377a",
+          "role": "pln_band",
+          "applies_engines": [
+            "N47"
+          ],
+          "applies_chassis": [],
+          "hard": false
+        },
+        {
+          "label": "PLN · ADM Serwis · N47 pełna wymiana",
+          "url": "https://admserwis.com/blog/bmw-n47-i-wymiana-rozrzdu-kiedy-i-dlaczego-to-konieczne",
+          "role": "pln_band",
+          "applies_engines": [
+            "N47"
+          ],
+          "applies_chassis": [],
+          "hard": false
+        },
+        {
+          "label": "PLN · BMW Smorawiński GZ · N47 od 7499 zł brutto",
+          "url": "https://www.bmw-smorawinskigz.pl/wymiana-rozrzadu",
+          "role": "pln_band",
+          "applies_engines": [
+            "N47"
+          ],
+          "applies_chassis": [],
+          "hard": false
+        },
+        {
+          "label": "PLN · kosztserwisu.pl · N47 (lower aggregator band — kept as secondary)",
+          "url": "https://kosztserwisu.pl/koszty-napraw/rozrzad/wymiana-rozrzadu-bmw/",
+          "role": "pln_band",
+          "applies_engines": [
+            "N47"
+          ],
+          "applies_chassis": [],
+          "hard": false
+        },
+        {
+          "label": "Wikipedia · N47 timing chain — worst units 1 Mar 2007–5 Jan 2009",
+          "url": "https://en.wikipedia.org/wiki/BMW_N47#Timing_chain_problems",
+          "role": "primary",
+          "applies_engines": [
+            "N47"
+          ],
+          "applies_chassis": [],
+          "hard": false
+        },
+        {
+          "label": "Wybór Kierowców · N47 — units from ~2010 considered more solid",
+          "url": "https://www.wyborkierowcow.pl/diesel-2-0-n47-bmw-opinie-awarie-usterki-spalanie-i-rozrzad/",
+          "role": "primary",
+          "applies_engines": [
+            "N47"
+          ],
+          "applies_chassis": [],
+          "hard": false
+        }
+      ]
+    },
+    {
+      "id": "n54-hpfp",
+      "packEngines": [
+        "N54"
+      ],
+      "chassisCount": 4,
+      "uncoveredEngines": [],
+      "aqMissing": [],
+      "sources": [
+        {
+          "label": "NHTSA · N54 HPFP warranty TSB (SI B13 04 09 / MC-10149587)",
+          "url": "https://static.nhtsa.gov/odi/tsbs/2013/MC-10149587-9999.pdf",
+          "role": "primary",
+          "applies_engines": [
+            "N54"
+          ],
+          "applies_chassis": [],
+          "hard": false
+        },
+        {
+          "label": "Wikipedia · BMW N54",
+          "url": "https://en.wikipedia.org/wiki/BMW_N54",
+          "role": "primary",
+          "applies_engines": [
+            "N54"
+          ],
+          "applies_chassis": [],
+          "hard": false
+        },
+        {
+          "label": "PLN · cenauslug.pl · HPFP parts 1400–3800 + labor 500–1200",
+          "url": "https://cenauslug.pl/poradniki/wymiana-pompy-paliwa-jakie-sa-koszty-i-jak-wybrac-warsztat",
+          "role": "pln_band",
+          "applies_engines": [],
+          "applies_chassis": [],
+          "hard": false
+        },
+        {
+          "label": "PLN · https://skanyx.com/pl/blog/bmw-fault-codes-guide",
+          "url": "https://skanyx.com/pl/blog/bmw-fault-codes-guide",
+          "role": "pln_band",
+          "applies_engines": [],
+          "applies_chassis": [],
+          "hard": false
+        },
+        {
+          "label": "PLN · Oryginalne-Czesci.pl · single N54 injector OE",
+          "url": "https://oryginalne-czesci.pl/wtryskiwacz-paliwa-n54-n54t-n63-n74-s63-bmw-e60-e61-x5-e70-x6-e71-e72-e82-e88-z4-e89-e90-e91-e92-e93-f01-f02-f03-f04-5gt-f07-f10-f11-f12-f13,id10359.html",
+          "role": "pln_band",
+          "applies_engines": [
+            "N54"
+          ],
+          "applies_chassis": [],
+          "hard": false
+        },
+        {
+          "label": "Wikipedia · N54 HPFP class action / 2010 recall (MY 2007–2010)",
+          "url": "https://en.wikipedia.org/wiki/BMW_N54",
+          "role": "primary",
+          "applies_engines": [
+            "N54"
+          ],
+          "applies_chassis": [],
+          "hard": false
+        }
+      ]
+    },
+    {
+      "id": "n53-injectors",
+      "packEngines": [
+        "N53"
+      ],
+      "chassisCount": 10,
+      "uncoveredEngines": [],
+      "aqMissing": [],
+      "sources": [
+        {
+          "label": "Wikipedia · BMW N53",
+          "url": "https://en.wikipedia.org/wiki/BMW_N53",
+          "role": "primary",
+          "applies_engines": [
+            "N53"
+          ],
+          "applies_chassis": [],
+          "hard": false
+        },
+        {
+          "label": "PLN · Oryginalne-Czesci.pl · OE N43/N53 injector (×6 for I6)",
+          "url": "https://oryginalne-czesci.pl/wtryskiwacz-paliwa-n43-n53-bmw-e60-e61-e63-e64-e81-e82-e87-e88-e90-e91-e92-e93-f10-f11,id11322.html",
+          "role": "pln_band",
+          "applies_engines": [
+            "N53"
+          ],
+          "applies_chassis": [],
+          "hard": false
+        },
+        {
+          "label": "PLN · Diesel-Partner · regen per injector",
+          "url": "http://diesel-partner.pl/wtryskiwacze-benzynowe.html",
+          "role": "pln_band",
+          "applies_engines": [],
+          "applies_chassis": [],
+          "hard": false
+        },
+        {
+          "label": "PLN · BMW Klub PL · N43/N53 injector discussion (pricing context)",
+          "url": "https://www.bmwklubpolska.pl/forum/topic/191703-e60-n43-n53-regeneracja-wtryskiwaczy/",
+          "role": "pln_band",
+          "applies_engines": [
+            "N53"
+          ],
+          "applies_chassis": [],
+          "hard": false
+        }
+      ]
+    },
+    {
+      "id": "n43-injectors",
+      "packEngines": [
+        "N43"
+      ],
+      "chassisCount": 8,
+      "uncoveredEngines": [],
+      "aqMissing": [],
+      "sources": [
+        {
+          "label": "Wikipedia · BMW N43",
+          "url": "https://en.wikipedia.org/wiki/BMW_N43",
+          "role": "primary",
+          "applies_engines": [
+            "N43"
+          ],
+          "applies_chassis": [],
+          "hard": false
+        },
+        {
+          "label": "PLN · pojazdy.net / forum · ~1000–1093 zł per injector",
+          "url": "https://www.pojazdy.net/bmw/bmw-n43-2-0-benzyna-170-km/",
+          "role": "pln_band",
+          "applies_engines": [
+            "N43"
+          ],
+          "applies_chassis": [],
+          "hard": false
+        },
+        {
+          "label": "PLN · BMW Klub PL · ASO bank of injectors ~6500 zł (reported)",
+          "url": "https://www.bmwklubpolska.pl/forum/topic/191703-e60-n43-n53-regeneracja-wtryskiwaczy/",
+          "role": "pln_band",
+          "applies_engines": [
+            "N43"
+          ],
+          "applies_chassis": [],
+          "hard": false
+        },
+        {
+          "label": "PLN · Oryginalne-Czesci.pl · OE N43/N53 injector unit",
+          "url": "https://oryginalne-czesci.pl/wtryskiwacz-paliwa-n43-n53-bmw-e60-e61-e63-e64-e81-e82-e87-e88-e90-e91-e92-e93-f10-f11,id11322.html",
+          "role": "pln_band",
+          "applies_engines": [
+            "N43"
+          ],
+          "applies_chassis": [],
+          "hard": false
+        },
+        {
+          "label": "PLN · Diesel-Partner · regen/test per injector",
+          "url": "http://diesel-partner.pl/wtryskiwacze-benzynowe.html",
+          "role": "pln_band",
+          "applies_engines": [],
+          "applies_chassis": [],
+          "hard": false
+        }
+      ]
+    },
+    {
+      "id": "water-pump",
+      "packEngines": [
+        "N52",
+        "N54",
+        "N55"
+      ],
+      "chassisCount": 40,
+      "uncoveredEngines": [],
+      "aqMissing": [],
+      "sources": [
+        {
+          "label": "Wikipedia · BMW N52",
+          "url": "https://en.wikipedia.org/wiki/BMW_N52",
+          "role": "primary",
+          "applies_engines": [
+            "N52"
+          ],
+          "applies_chassis": [],
+          "hard": false
+        },
+        {
+          "label": "PLN · polecanymechanik.pl · E90 electric water pump job",
+          "url": "https://www.polecanymechanik.pl/artykul/porownanie-kosztow-wymiany-elektrycznej-pompy-wody-do-bmw-e90-co-warto-wiedziec-534074",
+          "role": "pln_band",
+          "applies_engines": [],
+          "applies_chassis": [
+            "e90"
+          ],
+          "hard": false
+        },
+        {
+          "label": "PLN · cenauslug.pl · electric pump parts 700–2000 + labor 300–600",
+          "url": "https://cenauslug.pl/poradniki/ile-kosztuje-wymiana-pompy-wody-w-samochodzie-objawy-awarii-i-porownanie-cen",
+          "role": "pln_band",
+          "applies_engines": [],
+          "applies_chassis": [],
+          "hard": false
+        },
+        {
+          "label": "PLN · Hypertech · labor+coolant (parts extra)",
+          "url": "https://www.hypertech.com.pl/serwis-bmw/wymiana-pompy-wody-bmw/",
+          "role": "pln_band",
+          "applies_engines": [],
+          "applies_chassis": [],
+          "hard": false
+        },
+        {
+          "label": "Wikipedia · BMW N52 (electric water pump)",
+          "url": "https://en.wikipedia.org/wiki/BMW_N52",
+          "role": "primary",
+          "applies_engines": [
+            "N52"
+          ],
+          "applies_chassis": [],
+          "hard": false
+        },
+        {
+          "label": "Wikipedia · BMW N54",
+          "url": "https://en.wikipedia.org/wiki/BMW_N54",
+          "role": "primary",
+          "applies_engines": [
+            "N54"
+          ],
+          "applies_chassis": [],
+          "hard": false
+        },
+        {
+          "label": "Wikipedia · BMW N55",
+          "url": "https://en.wikipedia.org/wiki/BMW_N55",
+          "role": "primary",
+          "applies_engines": [
+            "N55"
+          ],
+          "applies_chassis": [],
+          "hard": false
+        }
+      ]
+    },
+    {
+      "id": "swirl-flaps",
+      "packEngines": [
+        "M47",
+        "M57"
+      ],
+      "chassisCount": 17,
+      "uncoveredEngines": [],
+      "aqMissing": [],
+      "sources": [
+        {
+          "label": "Wikipedia · BMW M57",
+          "url": "https://en.wikipedia.org/wiki/BMW_M57",
+          "role": "primary",
+          "applies_engines": [
+            "M57"
+          ],
+          "applies_chassis": [],
+          "hard": false
+        },
+        {
+          "label": "Wikipedia · BMW M47",
+          "url": "https://en.wikipedia.org/wiki/BMW_M47",
+          "role": "primary",
+          "applies_engines": [
+            "M47"
+          ],
+          "applies_chassis": [],
+          "hard": false
+        },
+        {
+          "label": "PLN · BMG Tuning · usuwanie klap (max band)",
+          "url": "https://www.bmgtuning.pl/usuwanie-klap-wirowych/",
+          "role": "pln_band",
+          "applies_engines": [],
+          "applies_chassis": [],
+          "hard": false
+        },
+        {
+          "label": "PLN · Kata-Serwis · od 400 zł",
+          "url": "https://kata-serwis.pl/usuwanie-klap-wirowych-gdansk/",
+          "role": "pln_band",
+          "applies_engines": [],
+          "applies_chassis": [],
+          "hard": false
+        },
+        {
+          "label": "PLN · Skanyx · M57 flap delete parts+labor PLN",
+          "url": "https://skanyx.com/pl/blog/bmw-m57-engine-buyer-guide-525d-530d-535d-obd2",
+          "role": "pln_band",
+          "applies_engines": [
+            "M57"
+          ],
+          "applies_chassis": [],
+          "hard": false
+        },
+        {
+          "label": "PLN · Car Media · OE collector replacement band",
+          "url": "https://car-media.pl/pl/technika-i-elektromobilnosc/budowa-i-dzialanie/klapy-wirowe-kolektor-naprawa-czy-usuwanie",
+          "role": "pln_band",
+          "applies_engines": [],
+          "applies_chassis": [],
+          "hard": false
+        },
+        {
+          "label": "Wikipedia · BMW M57 (production 1998–2013)",
+          "url": "https://en.wikipedia.org/wiki/BMW_M57",
+          "role": "primary",
+          "applies_engines": [
+            "M57"
+          ],
+          "applies_chassis": [],
+          "hard": false
+        }
+      ]
+    },
+    {
+      "id": "n57-timing",
+      "packEngines": [
+        "N57"
+      ],
+      "chassisCount": 17,
+      "uncoveredEngines": [],
+      "aqMissing": [],
+      "sources": [
+        {
+          "label": "Wikipedia · BMW N57",
+          "url": "https://en.wikipedia.org/wiki/BMW_N57",
+          "role": "primary",
+          "applies_engines": [
+            "N57"
+          ],
+          "applies_chassis": [],
+          "hard": false
+        },
+        {
+          "label": "NHTSA · N47/N57 EGR cooler ELW (SI B01 05 20 / MC-10249439)",
+          "url": "https://static.nhtsa.gov/odi/tsbs/2024/MC-10249439-0001.pdf",
+          "role": "primary",
+          "applies_engines": [
+            "N57"
+          ],
+          "applies_chassis": [],
+          "hard": false
+        },
+        {
+          "label": "PLN · kosztserwisu.pl · N57",
+          "url": "https://kosztserwisu.pl/koszty-napraw/rozrzad/wymiana-rozrzadu-bmw/",
+          "role": "pln_band",
+          "applies_engines": [
+            "N57"
+          ],
+          "applies_chassis": [],
+          "hard": false
+        },
+        {
+          "label": "PLN · Bosch Sawa · N57 od",
+          "url": "https://www.bosch-sawa.pl/wymiana-rozrzadu-bmw-lublin/",
+          "role": "pln_band",
+          "applies_engines": [
+            "N57"
+          ],
+          "applies_chassis": [],
+          "hard": false
+        },
+        {
+          "label": "PLN · BMW Smorawiński GZ · N57 od 8499 zł",
+          "url": "https://www.bmw-smorawinskigz.pl/wymiana-rozrzadu",
+          "role": "pln_band",
+          "applies_engines": [
+            "N57"
+          ],
+          "applies_chassis": [],
+          "hard": false
+        }
+      ]
+    },
+    {
+      "id": "timing-guides",
+      "packEngines": [
+        "N46",
+        "N42"
+      ],
+      "chassisCount": 13,
+      "uncoveredEngines": [],
+      "aqMissing": [],
+      "sources": [
+        {
+          "label": "Wikipedia · BMW N46",
+          "url": "https://en.wikipedia.org/wiki/BMW_N46",
+          "role": "primary",
+          "applies_engines": [
+            "N46"
+          ],
+          "applies_chassis": [],
+          "hard": false
+        },
+        {
+          "label": "PLN · kosztserwisu.pl · N46/N52 guides/VANOS band",
+          "url": "https://kosztserwisu.pl/koszty-napraw/rozrzad/wymiana-rozrzadu-bmw/",
+          "role": "pln_band",
+          "applies_engines": [
+            "N46"
+          ],
+          "applies_chassis": [],
+          "hard": false
+        },
+        {
+          "label": "Wikipedia · BMW N46 (production 2004–2015)",
+          "url": "https://en.wikipedia.org/wiki/BMW_N46",
+          "role": "primary",
+          "applies_engines": [
+            "N46"
+          ],
+          "applies_chassis": [],
+          "hard": false
+        },
+        {
+          "label": "Wikipedia · BMW N42",
+          "url": "https://en.wikipedia.org/wiki/BMW_N42",
+          "role": "primary",
+          "applies_engines": [
+            "N42"
+          ],
+          "applies_chassis": [],
+          "hard": false
+        }
+      ]
+    },
+    {
+      "id": "subframe-rust",
+      "packEngines": [],
+      "chassisCount": 4,
+      "uncoveredEngines": [],
+      "aqMissing": [],
+      "sources": [
+        {
+          "label": "Wikipedia · BMW 3 Series (E90)",
+          "url": "https://en.wikipedia.org/wiki/BMW_3_Series_(E90)",
+          "role": "primary",
+          "applies_engines": [],
+          "applies_chassis": [
+            "e90",
+            "e91",
+            "e92",
+            "e93"
+          ],
+          "hard": false
+        },
+        {
+          "label": "PLN · AutoTechnik · E46 subframe mount weld+reinforce",
+          "url": "https://autotechnik.tech/bmw/bmw_3_e46",
+          "role": "pln_band",
+          "applies_engines": [],
+          "applies_chassis": [
+            "e46"
+          ],
+          "hard": false
+        },
+        {
+          "label": "PLN · e-posadzki.pl · E46 floor panel replacement band",
+          "url": "https://e-posadzki.pl/wymiana-podlogi-w-samochodzie-koszt",
+          "role": "pln_band",
+          "applies_engines": [],
+          "applies_chassis": [
+            "e46"
+          ],
+          "hard": false
+        }
+      ]
+    },
+    {
+      "id": "elv-cas",
+      "packEngines": [],
+      "chassisCount": 4,
+      "uncoveredEngines": [],
+      "aqMissing": [],
+      "sources": [
+        {
+          "label": "Wikipedia · BMW 3 Series (E90)",
+          "url": "https://en.wikipedia.org/wiki/BMW_3_Series_(E90)",
+          "role": "primary",
+          "applies_engines": [],
+          "applies_chassis": [
+            "e90",
+            "e91",
+            "e92",
+            "e93"
+          ],
+          "hard": false
+        },
+        {
+          "label": "PLN · kosztserwisu.pl · BMW electronic lock / immobiliser jobs priced per VIN",
+          "url": "https://kosztserwisu.pl/modele-samochodow/bmw/",
+          "role": "pln_band",
+          "applies_engines": [],
+          "applies_chassis": [],
+          "hard": false
+        }
+      ]
+    },
+    {
+      "id": "m54-cooling",
+      "packEngines": [
+        "M54",
+        "M52"
+      ],
+      "chassisCount": 6,
+      "uncoveredEngines": [],
+      "aqMissing": [],
+      "sources": [
+        {
+          "label": "Wikipedia · BMW M54",
+          "url": "https://en.wikipedia.org/wiki/BMW_M54",
+          "role": "primary",
+          "applies_engines": [
+            "M54"
+          ],
+          "applies_chassis": [],
+          "hard": false
+        },
+        {
+          "label": "PLN · polecanymechanik / cenauslug electric&plastic cooling prior",
+          "url": "https://www.polecanymechanik.pl/artykul/porownanie-kosztow-wymiany-elektrycznej-pompy-wody-do-bmw-e90-co-warto-wiedziec-534074",
+          "role": "family_prior",
+          "applies_engines": [],
+          "applies_chassis": [],
+          "hard": false
+        },
+        {
+          "label": "Wikipedia · BMW M52",
+          "url": "https://en.wikipedia.org/wiki/BMW_M52",
+          "role": "primary",
+          "applies_engines": [
+            "M52"
+          ],
+          "applies_chassis": [],
+          "hard": false
+        }
+      ]
+    },
+    {
+      "id": "m54-disa",
+      "packEngines": [
+        "M54"
+      ],
+      "chassisCount": 8,
+      "uncoveredEngines": [],
+      "aqMissing": [],
+      "sources": [
+        {
+          "label": "Wikipedia · BMW M54",
+          "url": "https://en.wikipedia.org/wiki/BMW_M54",
+          "role": "primary",
+          "applies_engines": [
+            "M54"
+          ],
+          "applies_chassis": [],
+          "hard": false
+        },
+        {
+          "label": "PLN · repair-set.pl / e-motoryzacyjny · DISA repair kit M54",
+          "url": "https://repair-set.pl/sklep/zestawy-naprawcze-ukladu-disa-bmw/zestaw-naprawczy-disa-bmw-m54-3-0-l-i-m56-2-5-l-11617544805-11617502275/",
+          "role": "pln_band",
+          "applies_engines": [
+            "M54"
+          ],
+          "applies_chassis": [],
+          "hard": false
+        },
+        {
+          "label": "PLN · e-motoryzacyjny · full DISA valve substitute",
+          "url": "https://e-motoryzacyjny.pl/products/card/01HNF9/zestaw-naprawczy-zaworu-disa-do-bmw-z-silnikiem-3-0-m54-b30-2000-2008",
+          "role": "pln_band",
+          "applies_engines": [
+            "M54"
+          ],
+          "applies_chassis": [],
+          "hard": false
+        },
+        {
+          "label": "Wikipedia · BMW M54 (production 2000–2006)",
+          "url": "https://en.wikipedia.org/wiki/BMW_M54",
+          "role": "primary",
+          "applies_engines": [
+            "M54"
+          ],
+          "applies_chassis": [],
+          "hard": false
+        }
+      ]
+    },
+    {
+      "id": "n20-chain",
+      "packEngines": [
+        "N20",
+        "N26"
+      ],
+      "chassisCount": 11,
+      "uncoveredEngines": [],
+      "aqMissing": [],
+      "sources": [
+        {
+          "label": "Wikipedia · BMW N20",
+          "url": "https://en.wikipedia.org/wiki/BMW_N20",
+          "role": "primary",
+          "applies_engines": [
+            "N20",
+            "N26"
+          ],
+          "applies_chassis": [],
+          "hard": false
+        },
+        {
+          "label": "PLN · kosztserwisu.pl · N20",
+          "url": "https://kosztserwisu.pl/koszty-napraw/rozrzad/wymiana-rozrzadu-bmw/",
+          "role": "pln_band",
+          "applies_engines": [
+            "N20"
+          ],
+          "applies_chassis": [],
+          "hard": false
+        },
+        {
+          "label": "PLN · BMW Smorawiński GZ · N20 od 5999 zł",
+          "url": "https://www.bmw-smorawinskigz.pl/wymiana-rozrzadu",
+          "role": "pln_band",
+          "applies_engines": [
+            "N20"
+          ],
+          "applies_chassis": [],
+          "hard": false
+        },
+        {
+          "label": "PLN · rozrzad.pl · IWIS N20 kit",
+          "url": "https://rozrzad.pl/pl/p/ROZRZAD-LANCUCH-ROZRZADU-BMW-125i-F21-N20-11317584084S2/21575",
+          "role": "pln_band",
+          "applies_engines": [
+            "N20"
+          ],
+          "applies_chassis": [],
+          "hard": false
+        },
+        {
+          "label": "Wikipedia · N20 class action — timing chain guide failures",
+          "url": "https://en.wikipedia.org/wiki/BMW_N20#Class_action_lawsuit_alleging_timing_chain_guide_failures",
+          "role": "primary",
+          "applies_engines": [
+            "N20",
+            "N26"
+          ],
+          "applies_chassis": [],
+          "hard": false
+        }
+      ]
+    },
+    {
+      "id": "n20-oil-filter",
+      "packEngines": [
+        "N20",
+        "N55",
+        "B48",
+        "B38",
+        "N52",
+        "N42",
+        "N46",
+        "S55"
+      ],
+      "chassisCount": 0,
+      "uncoveredEngines": [],
+      "aqMissing": [],
+      "sources": [
+        {
+          "label": "Wikipedia · BMW N20",
+          "url": "https://en.wikipedia.org/wiki/BMW_N20",
+          "role": "primary",
+          "applies_engines": [
+            "N20"
+          ],
+          "applies_chassis": [],
+          "hard": false
+        },
+        {
+          "label": "PLN · https://skanyx.com/pl/blog/bmw-fault-codes-guide",
+          "url": "https://skanyx.com/pl/blog/bmw-fault-codes-guide",
+          "role": "pln_band",
+          "applies_engines": [],
+          "applies_chassis": [],
+          "hard": false
+        },
+        {
+          "label": "Wikipedia · B48 Technical Update 2018 (timing/HPFP — not an OFH fix)",
+          "url": "https://en.wikipedia.org/wiki/BMW_B48",
+          "role": "primary",
+          "applies_engines": [
+            "B48"
+          ],
+          "applies_chassis": [],
+          "hard": false
+        },
+        {
+          "label": "AmpAuto · N52 problems (valve cover / water pump / OFHG trio)",
+          "url": "https://www.ampauto.io/symptoms/bmw-n52-problems",
+          "role": "primary",
+          "applies_engines": [
+            "N52"
+          ],
+          "applies_chassis": [],
+          "hard": false
+        },
+        {
+          "label": "Wikipedia · BMW N46 (production / Valvetronic four context)",
+          "url": "https://en.wikipedia.org/wiki/BMW_N46",
+          "role": "primary",
+          "applies_engines": [
+            "N46"
+          ],
+          "applies_chassis": [],
+          "hard": false
+        },
+        {
+          "label": "BMWTuning · S55 oil leaks (valve cover / OFH)",
+          "url": "https://bmwtuning.co/the-4-most-common-bmw-s55-engine-problems/",
+          "role": "primary",
+          "applies_engines": [
+            "S55"
+          ],
+          "applies_chassis": [],
+          "hard": false
+        },
+        {
+          "label": "NHTSA · SI B11 13 15 N20 plastic OFH (see n20-oil-filter-early)",
+          "url": "https://static.nhtsa.gov/odi/tsbs/2015/MC-10151399-9999.pdf",
+          "role": "primary",
+          "applies_engines": [
+            "N20"
+          ],
+          "applies_chassis": [],
+          "hard": false
+        },
+        {
+          "label": "Wikipedia · BMW N55",
+          "url": "https://en.wikipedia.org/wiki/BMW_N55",
+          "role": "primary",
+          "applies_engines": [
+            "N55"
+          ],
+          "applies_chassis": [],
+          "hard": false
+        },
+        {
+          "label": "Wikipedia · BMW B38",
+          "url": "https://en.wikipedia.org/wiki/BMW_B38",
+          "role": "primary",
+          "applies_engines": [
+            "B38"
+          ],
+          "applies_chassis": [],
+          "hard": false
+        },
+        {
+          "label": "Wikipedia · BMW N42",
+          "url": "https://en.wikipedia.org/wiki/BMW_N42",
+          "role": "primary",
+          "applies_engines": [
+            "N42"
+          ],
+          "applies_chassis": [],
+          "hard": false
+        }
+      ]
+    },
+    {
+      "id": "n62-valvetronic",
+      "packEngines": [
+        "N62"
+      ],
+      "chassisCount": 8,
+      "uncoveredEngines": [],
+      "aqMissing": [],
+      "sources": [
+        {
+          "label": "Wikipedia · BMW N62",
+          "url": "https://en.wikipedia.org/wiki/BMW_N62",
+          "role": "primary",
+          "applies_engines": [
+            "N62"
+          ],
+          "applies_chassis": [],
+          "hard": false
+        },
+        {
+          "label": "PLN · Common N62 ancillary repair band prior (water pipe/valve cover family)",
+          "url": "https://kosztserwisu.pl/modele-samochodow/bmw/",
+          "role": "family_prior",
+          "applies_engines": [
+            "N62"
+          ],
+          "applies_chassis": [],
+          "hard": false
+        },
+        {
+          "label": "Wikipedia · BMW N62 (production 2001–2010)",
+          "url": "https://en.wikipedia.org/wiki/BMW_N62",
+          "role": "primary",
+          "applies_engines": [
+            "N62"
+          ],
+          "applies_chassis": [],
+          "hard": false
+        },
+        {
+          "label": "BMW SI B11 02 05 early levers (see n62-valvetronic-early)",
+          "url": "https://xoutpost.com/attachments/x5-e53-forum/38547d1261255308-rough-idle-cold-days-sib-11-02-05.pdf",
+          "role": "primary",
+          "applies_engines": [
+            "N62"
+          ],
+          "applies_chassis": [],
+          "hard": false
+        }
+      ]
+    },
+    {
+      "id": "b47-egr",
+      "packEngines": [
+        "B47"
+      ],
+      "chassisCount": 30,
+      "uncoveredEngines": [],
+      "aqMissing": [],
+      "sources": [
+        {
+          "label": "Wikipedia · BMW B47",
+          "url": "https://en.wikipedia.org/wiki/BMW_B47",
+          "role": "primary",
+          "applies_engines": [
+            "B47"
+          ],
+          "applies_chassis": [],
+          "hard": false
+        },
+        {
+          "label": "NHTSA · N47/N57 EGR cooler ELW (related family theme)",
+          "url": "https://static.nhtsa.gov/odi/tsbs/2024/MC-10249439-0001.pdf",
+          "role": "family_prior",
+          "applies_engines": [
+            "N47",
+            "N57"
+          ],
+          "applies_chassis": [],
+          "hard": false
+        },
+        {
+          "label": "PLN · Skanyx · EGR cooler band used as B47 prior (same family job)",
+          "url": "https://skanyx.com/pl/blog/bmw-m57-engine-buyer-guide-525d-530d-535d-obd2",
+          "role": "family_prior",
+          "applies_engines": [
+            "B47",
+            "M57"
+          ],
+          "applies_chassis": [],
+          "hard": false
+        },
+        {
+          "label": "Wikipedia · BMW B47 (production from 2014)",
+          "url": "https://en.wikipedia.org/wiki/BMW_B47",
+          "role": "primary",
+          "applies_engines": [
+            "B47"
+          ],
+          "applies_chassis": [],
+          "hard": false
+        },
+        {
+          "label": "Which? · UK BMW diesel EGR cooler recall extension",
+          "url": "https://www.which.co.uk/news/article/bmw-extends-uk-recall-over-fire-risk-aavZB2R92Thr",
+          "role": "primary",
+          "applies_engines": [],
+          "applies_chassis": [],
+          "hard": false
+        }
+      ]
+    },
+    {
+      "id": "n13-timing",
+      "packEngines": [
+        "N13"
+      ],
+      "chassisCount": 7,
+      "uncoveredEngines": [],
+      "aqMissing": [],
+      "sources": [
+        {
+          "label": "Wikipedia · BMW N13",
+          "url": "https://en.wikipedia.org/wiki/BMW_N13",
+          "role": "primary",
+          "applies_engines": [
+            "N13"
+          ],
+          "applies_chassis": [],
+          "hard": false
+        },
+        {
+          "label": "PLN · BMW Smorawiński GZ · N13 od 4999 zł",
+          "url": "https://www.bmw-smorawinskigz.pl/wymiana-rozrzadu",
+          "role": "pln_band",
+          "applies_engines": [
+            "N13"
+          ],
+          "applies_chassis": [],
+          "hard": false
+        },
+        {
+          "label": "PLN · kosztserwisu.pl · similar 4-cyl chain band (N20 row used as prior)",
+          "url": "https://kosztserwisu.pl/koszty-napraw/rozrzad/wymiana-rozrzadu-bmw/",
+          "role": "family_prior",
+          "applies_engines": [
+            "N20"
+          ],
+          "applies_chassis": [],
+          "hard": false
+        },
+        {
+          "label": "Wikipedia · Prince engine / N13 family",
+          "url": "https://en.wikipedia.org/wiki/Prince_engine",
+          "role": "family_prior",
+          "applies_engines": [
+            "N13"
+          ],
+          "applies_chassis": [],
+          "hard": false
+        },
+        {
+          "label": "Wikipedia · Prince engine (2013 SI — timing chain / tensioner)",
+          "url": "https://en.wikipedia.org/wiki/Prince_engine",
+          "role": "primary",
+          "applies_engines": [],
+          "applies_chassis": [],
+          "hard": false
+        }
+      ]
+    },
+    {
+      "id": "e39-cooling",
+      "packEngines": [
+        "M52",
+        "M62"
+      ],
+      "chassisCount": 4,
+      "uncoveredEngines": [],
+      "aqMissing": [],
+      "sources": [
+        {
+          "label": "Wikipedia · BMW 5 Series (E39)",
+          "url": "https://en.wikipedia.org/wiki/BMW_5_Series_(E39)",
+          "role": "primary",
+          "applies_engines": [],
+          "applies_chassis": [
+            "e39"
+          ],
+          "hard": false
+        },
+        {
+          "label": "PLN · Cooling plastics/expansion tank prior (same family as M54 cooling)",
+          "url": "https://kosztserwisu.pl/modele-samochodow/bmw/",
+          "role": "family_prior",
+          "applies_engines": [
+            "M54"
+          ],
+          "applies_chassis": [],
+          "hard": false
+        },
+        {
+          "label": "Wikipedia · BMW M52",
+          "url": "https://en.wikipedia.org/wiki/BMW_M52",
+          "role": "primary",
+          "applies_engines": [
+            "M52"
+          ],
+          "applies_chassis": [],
+          "hard": false
+        },
+        {
+          "label": "Wikipedia · BMW M62",
+          "url": "https://en.wikipedia.org/wiki/BMW_M62",
+          "role": "primary",
+          "applies_engines": [
+            "M62"
+          ],
+          "applies_chassis": [],
+          "hard": false
+        }
+      ]
+    },
+    {
+      "id": "eu-winter-rust",
+      "packEngines": [],
+      "chassisCount": 17,
+      "uncoveredEngines": [],
+      "aqMissing": [],
+      "sources": [
+        {
+          "label": "Wikipedia · BMW 3 Series (E90)",
+          "url": "https://en.wikipedia.org/wiki/BMW_3_Series_(E90)",
+          "role": "family_prior",
+          "applies_engines": [],
+          "applies_chassis": [
+            "e90",
+            "e91",
+            "e92",
+            "e93"
+          ],
+          "hard": false
+        },
+        {
+          "label": "Wikipedia · BMW 5 Series (E39)",
+          "url": "https://en.wikipedia.org/wiki/BMW_5_Series_(E39)",
+          "role": "family_prior",
+          "applies_engines": [],
+          "applies_chassis": [
+            "e39"
+          ],
+          "hard": false
+        },
+        {
+          "label": "PLN · AutoTechnik · single body panel repair",
+          "url": "https://autotechnik.tech/bmw/bmw_3_e46",
+          "role": "pln_band",
+          "applies_engines": [],
+          "applies_chassis": [],
+          "hard": false
+        },
+        {
+          "label": "Wikipedia · BMW E36",
+          "url": "https://en.wikipedia.org/wiki/BMW_3_Series_(E36)",
+          "role": "primary",
+          "applies_engines": [],
+          "applies_chassis": [
+            "e36"
+          ],
+          "hard": false
+        },
+        {
+          "label": "Wikipedia · BMW E46",
+          "url": "https://en.wikipedia.org/wiki/BMW_3_Series_(E46)",
+          "role": "primary",
+          "applies_engines": [],
+          "applies_chassis": [
+            "e46"
+          ],
+          "hard": false
+        },
+        {
+          "label": "Wikipedia · BMW E53",
+          "url": "https://en.wikipedia.org/wiki/BMW_X5_(E53)",
+          "role": "primary",
+          "applies_engines": [],
+          "applies_chassis": [
+            "e53"
+          ],
+          "hard": false
+        },
+        {
+          "label": "Wikipedia · BMW E60",
+          "url": "https://en.wikipedia.org/wiki/BMW_5_Series_(E60)",
+          "role": "primary",
+          "applies_engines": [],
+          "applies_chassis": [
+            "e60",
+            "e61"
+          ],
+          "hard": false
+        },
+        {
+          "label": "Wikipedia · BMW E61",
+          "url": "https://en.wikipedia.org/wiki/BMW_5_Series_(E60)",
+          "role": "primary",
+          "applies_engines": [],
+          "applies_chassis": [
+            "e61"
+          ],
+          "hard": false
+        },
+        {
+          "label": "Wikipedia · BMW E83",
+          "url": "https://en.wikipedia.org/wiki/BMW_X3_(E83)",
+          "role": "primary",
+          "applies_engines": [],
+          "applies_chassis": [
+            "e83"
+          ],
+          "hard": false
+        },
+        {
+          "label": "Wikipedia · BMW E87",
+          "url": "https://en.wikipedia.org/wiki/BMW_1_Series_(E87)",
+          "role": "primary",
+          "applies_engines": [],
+          "applies_chassis": [
+            "e87"
+          ],
+          "hard": false
+        },
+        {
+          "label": "Wikipedia · BMW E23",
+          "url": "https://en.wikipedia.org/wiki/BMW_7_Series_(E23)",
+          "role": "primary",
+          "applies_engines": [],
+          "applies_chassis": [
+            "e23"
+          ],
+          "hard": false
+        },
+        {
+          "label": "Wikipedia · BMW E32",
+          "url": "https://en.wikipedia.org/wiki/BMW_7_Series_(E32)",
+          "role": "primary",
+          "applies_engines": [],
+          "applies_chassis": [
+            "e32"
+          ],
+          "hard": false
+        },
+        {
+          "label": "Wikipedia · BMW E31",
+          "url": "https://en.wikipedia.org/wiki/BMW_8_Series_(E31)",
+          "role": "primary",
+          "applies_engines": [],
+          "applies_chassis": [
+            "e31"
+          ],
+          "hard": false
+        },
+        {
+          "label": "Wikipedia · BMW E28",
+          "url": "https://en.wikipedia.org/wiki/BMW_5_Series_(E28)",
+          "role": "primary",
+          "applies_engines": [],
+          "applies_chassis": [
+            "e28"
+          ],
+          "hard": false
+        },
+        {
+          "label": "Wikipedia · BMW E30",
+          "url": "https://en.wikipedia.org/wiki/BMW_3_Series_(E30)",
+          "role": "primary",
+          "applies_engines": [],
+          "applies_chassis": [
+            "e30"
+          ],
+          "hard": false
+        },
+        {
+          "label": "Wikipedia · BMW E12",
+          "url": "https://en.wikipedia.org/wiki/BMW_5_Series_(E12)",
+          "role": "primary",
+          "applies_engines": [],
+          "applies_chassis": [
+            "e12"
+          ],
+          "hard": false
+        },
+        {
+          "label": "Wikipedia · BMW E21",
+          "url": "https://en.wikipedia.org/wiki/BMW_3_Series_(E21)",
+          "role": "primary",
+          "applies_engines": [],
+          "applies_chassis": [
+            "e21"
+          ],
+          "hard": false
+        },
+        {
+          "label": "Wikipedia · BMW E24",
+          "url": "https://en.wikipedia.org/wiki/BMW_6_Series_(E24)",
+          "role": "primary",
+          "applies_engines": [],
+          "applies_chassis": [
+            "e24"
+          ],
+          "hard": false
+        }
+      ]
+    },
+    {
+      "id": "transfer-case",
+      "packEngines": [],
+      "chassisCount": 20,
+      "uncoveredEngines": [],
+      "aqMissing": [],
+      "sources": [
+        {
+          "label": "Wikipedia · BMW xDrive",
+          "url": "https://en.wikipedia.org/wiki/BMW_xDrive",
+          "role": "primary",
+          "applies_engines": [],
+          "applies_chassis": [],
+          "hard": false
+        },
+        {
+          "label": "PLN · GearMar / xdrive-service · ATC700 regen unit",
+          "url": "https://sklep.gearmar.pl/strona-glowna/53-regenerowana-skrzynia-rozdzielcza-atc300.html",
+          "role": "pln_band",
+          "applies_engines": [],
+          "applies_chassis": [],
+          "hard": false
+        },
+        {
+          "label": "PLN · GearMar · ~5h regen job",
+          "url": "http://gearmar.pl/naprawa-reduktorow/",
+          "role": "pln_band",
+          "applies_engines": [],
+          "applies_chassis": [],
+          "hard": false
+        },
+        {
+          "label": "PLN · bmwstore.pl · new ATC700 OE exchange",
+          "url": "https://www.bmwstore.pl/pl/katalog/diagram/27_0038-transfer-case-atc-700",
+          "role": "pln_band",
+          "applies_engines": [],
+          "applies_chassis": [],
+          "hard": false
+        },
+        {
+          "label": "Wikipedia · BMW E53",
+          "url": "https://en.wikipedia.org/wiki/BMW_X5_(E53)",
+          "role": "primary",
+          "applies_engines": [],
+          "applies_chassis": [
+            "e53"
+          ],
+          "hard": false
+        },
+        {
+          "label": "Wikipedia · BMW E70",
+          "url": "https://en.wikipedia.org/wiki/BMW_X5_(E70)",
+          "role": "primary",
+          "applies_engines": [],
+          "applies_chassis": [
+            "e70"
+          ],
+          "hard": false
+        },
+        {
+          "label": "Wikipedia · BMW E83",
+          "url": "https://en.wikipedia.org/wiki/BMW_X3_(E83)",
+          "role": "primary",
+          "applies_engines": [],
+          "applies_chassis": [
+            "e83"
+          ],
+          "hard": false
+        }
+      ]
+    },
+    {
+      "id": "n47-n57-egr-cooler",
+      "packEngines": [
+        "N47",
+        "N57"
+      ],
+      "chassisCount": 22,
+      "uncoveredEngines": [],
+      "aqMissing": [],
+      "sources": [
+        {
+          "label": "NHTSA · N47/N57 EGR cooler ELW (SI B01 05 20 / MC-10249439)",
+          "url": "https://static.nhtsa.gov/odi/tsbs/2024/MC-10249439-0001.pdf",
+          "role": "primary",
+          "applies_engines": [
+            "N47",
+            "N57"
+          ],
+          "applies_chassis": [],
+          "hard": false
+        },
+        {
+          "label": "PLN · Skanyx · M57 EGR cooler PLN band",
+          "url": "https://skanyx.com/pl/blog/bmw-m57-engine-buyer-guide-525d-530d-535d-obd2",
+          "role": "pln_band",
+          "applies_engines": [
+            "M57"
+          ],
+          "applies_chassis": [],
+          "hard": false
+        },
+        {
+          "label": "NHTSA · N47/N57 EGR cooler recall communications (class MY 2013–2018)",
+          "url": "https://www.nhtsa.gov/nhtsa-datasets-and-apis",
+          "role": "primary",
+          "applies_engines": [
+            "N47",
+            "N57"
+          ],
+          "applies_chassis": [],
+          "hard": false
+        },
+        {
+          "label": "NHTSA · 18V-755 EGR cooler (N47/N57 MY 2013–2018)",
+          "url": "https://static.nhtsa.gov/odi/rcl/2018/RCRIT-18V755-3062.pdf",
+          "role": "primary",
+          "applies_engines": [
+            "N47",
+            "N57"
+          ],
+          "applies_chassis": [],
+          "hard": false
+        },
+        {
+          "label": "NHTSA · 21V-907 EGR cooler follow-up (N47/N57)",
+          "url": "https://static.nhtsa.gov/odi/rcl/2021/RCRIT-21V907-8803.pdf",
+          "role": "primary",
+          "applies_engines": [
+            "N47",
+            "N57"
+          ],
+          "applies_chassis": [],
+          "hard": false
+        }
+      ]
+    },
+    {
+      "id": "takata-airbag-pl",
+      "packEngines": [],
+      "chassisCount": 6,
+      "uncoveredEngines": [],
+      "aqMissing": [],
+      "sources": [
+        {
+          "label": "UOKiK · E81/E83/E84/E87/E90/E91",
+          "url": "https://uokik.gov.pl/bip/samochody-bmw",
+          "role": "primary",
+          "applies_engines": [],
+          "applies_chassis": [
+            "e81",
+            "e83",
+            "e84",
+            "e87",
+            "e90",
+            "e91"
+          ],
+          "hard": false
+        },
+        {
+          "label": "UOKiK · F-series batch",
+          "url": "https://uokik.gov.pl/bip/samochody-bmw-1",
+          "role": "primary",
+          "applies_engines": [],
+          "applies_chassis": [],
+          "hard": false
+        },
+        {
+          "label": "BMW VIN recall checker PL",
+          "url": "https://www.bmwgroup.com/en/general/regulations/recall/recall-polish.html",
+          "role": "primary",
+          "applies_engines": [],
+          "applies_chassis": [],
+          "hard": false
+        },
+        {
+          "label": "Wikipedia · BMW E90",
+          "url": "https://en.wikipedia.org/wiki/BMW_3_Series_(E90)",
+          "role": "primary",
+          "applies_engines": [],
+          "applies_chassis": [
+            "e90"
+          ],
+          "hard": false
+        },
+        {
+          "label": "Wikipedia · BMW E87",
+          "url": "https://en.wikipedia.org/wiki/BMW_1_Series_(E87)",
+          "role": "primary",
+          "applies_engines": [],
+          "applies_chassis": [
+            "e87"
+          ],
+          "hard": false
+        },
+        {
+          "label": "Wikipedia · BMW E83",
+          "url": "https://en.wikipedia.org/wiki/BMW_X3_(E83)",
+          "role": "primary",
+          "applies_engines": [],
+          "applies_chassis": [
+            "e83"
+          ],
+          "hard": false
+        }
+      ]
+    },
+    {
+      "id": "s65-rod-bearings",
+      "packEngines": [
+        "S65"
+      ],
+      "chassisCount": 4,
+      "uncoveredEngines": [],
+      "aqMissing": [],
+      "sources": [
+        {
+          "label": "BMW Tuning · rod bearing failure (S54/S65/S85)",
+          "url": "https://bmwtuning.co/bmw-rod-bearing-failure/",
+          "role": "primary",
+          "applies_engines": [
+            "S65"
+          ],
+          "applies_chassis": [],
+          "hard": false
+        },
+        {
+          "label": "Element Performance · S65 rod bearings",
+          "url": "https://www.elementperformance.co.uk/blog/s65-rod-bearings",
+          "role": "primary",
+          "applies_engines": [
+            "S65"
+          ],
+          "applies_chassis": [],
+          "hard": false
+        },
+        {
+          "label": "PLN · Wiltronic · panewki V8/V10 6000–10000+",
+          "url": "https://wiltronic.pl/blog/od-czego-zalezy-koszt-wymiany-panewek-w-bmw/",
+          "role": "pln_band",
+          "applies_engines": [],
+          "applies_chassis": [],
+          "hard": false
+        },
+        {
+          "label": "PLN · Motoran · ACL S65 rod bearings kit 1050",
+          "url": "https://motoran.pl/sklep/panewki-korbowodowe-52mm-bmw-racing-v8-s65b50-s65b44-panewki-wyczynowe-acl/",
+          "role": "pln_band",
+          "applies_engines": [
+            "S65"
+          ],
+          "applies_chassis": [],
+          "hard": false
+        },
+        {
+          "label": "Hypertech · M-engine bearing revision",
+          "url": "https://www.hypertech.com.pl/rewizja-panewek-korbowodowych-w-silnikach-bmw-m/",
+          "role": "primary",
+          "applies_engines": [],
+          "applies_chassis": [],
+          "hard": false
+        }
+      ]
+    },
+    {
+      "id": "e36-cooling",
+      "packEngines": [
+        "M40",
+        "M43",
+        "M50",
+        "M52",
+        "S50",
+        "S52"
+      ],
+      "chassisCount": 7,
+      "uncoveredEngines": [],
+      "aqMissing": [],
+      "sources": [
+        {
+          "label": "Bimmerboard · E36 Cooling System 101",
+          "url": "http://www.bimmerboard.com/forums/posts/1269691",
+          "role": "primary",
+          "applies_engines": [],
+          "applies_chassis": [
+            "e36"
+          ],
+          "hard": false
+        },
+        {
+          "label": "Wikipedia · BMW 3 Series (E36)",
+          "url": "https://en.wikipedia.org/wiki/BMW_3_Series_(E36)",
+          "role": "primary",
+          "applies_engines": [],
+          "applies_chassis": [
+            "e36"
+          ],
+          "hard": false
+        },
+        {
+          "label": "PLN · kosztserwisu BMW cooling prior",
+          "url": "https://kosztserwisu.pl/modele-samochodow/bmw/",
+          "role": "family_prior",
+          "applies_engines": [],
+          "applies_chassis": [],
+          "hard": false
+        },
+        {
+          "label": "Wikipedia · BMW M40",
+          "url": "https://en.wikipedia.org/wiki/BMW_M40",
+          "role": "primary",
+          "applies_engines": [
+            "M40"
+          ],
+          "applies_chassis": [],
+          "hard": false
+        },
+        {
+          "label": "Wikipedia · BMW M43",
+          "url": "https://en.wikipedia.org/wiki/BMW_M43",
+          "role": "primary",
+          "applies_engines": [
+            "M43"
+          ],
+          "applies_chassis": [],
+          "hard": false
+        },
+        {
+          "label": "Wikipedia · BMW M50",
+          "url": "https://en.wikipedia.org/wiki/BMW_M50",
+          "role": "primary",
+          "applies_engines": [
+            "M50"
+          ],
+          "applies_chassis": [],
+          "hard": false
+        },
+        {
+          "label": "Wikipedia · BMW M52",
+          "url": "https://en.wikipedia.org/wiki/BMW_M52",
+          "role": "primary",
+          "applies_engines": [
+            "M52"
+          ],
+          "applies_chassis": [],
+          "hard": false
+        },
+        {
+          "label": "Wikipedia · BMW S50",
+          "url": "https://en.wikipedia.org/wiki/BMW_S50",
+          "role": "primary",
+          "applies_engines": [
+            "S50"
+          ],
+          "applies_chassis": [],
+          "hard": false
+        },
+        {
+          "label": "Wikipedia · BMW S52",
+          "url": "https://en.wikipedia.org/wiki/BMW_S52",
+          "role": "primary",
+          "applies_engines": [
+            "S52"
+          ],
+          "applies_chassis": [],
+          "hard": false
+        }
+      ]
+    },
+    {
+      "id": "s50-vanos",
+      "packEngines": [
+        "S50"
+      ],
+      "chassisCount": 2,
+      "uncoveredEngines": [],
+      "aqMissing": [],
+      "sources": [
+        {
+          "label": "Wikipedia · BMW S50",
+          "url": "https://en.wikipedia.org/wiki/BMW_S50",
+          "role": "primary",
+          "applies_engines": [
+            "S50"
+          ],
+          "applies_chassis": [],
+          "hard": false
+        },
+        {
+          "label": "Beisan · Euro S50 double VANOS procedure (5h)",
+          "url": "https://beisansystems.com/euro-s50-double-vanos-procedure-e36/",
+          "role": "primary",
+          "applies_engines": [
+            "S50"
+          ],
+          "applies_chassis": [],
+          "hard": false
+        },
+        {
+          "label": "PLN · Probsten-Tech · S50B32 VANOS rebuild 590€",
+          "url": "https://www.probsten-tech.de/produkt/s50b32-e36-m3z3m-vanosueberarbeitung/",
+          "role": "pln_band",
+          "applies_engines": [],
+          "applies_chassis": [],
+          "hard": false
+        },
+        {
+          "label": "PLN · VORLING · S50B32 VANOS überholung 885€",
+          "url": "https://www.vorling.de/en/p/vanos-ueberholung-bmw-m3-e36-s50b32-doppelvanos-inkl-material",
+          "role": "pln_band",
+          "applies_engines": [],
+          "applies_chassis": [],
+          "hard": false
+        },
+        {
+          "label": "Mr Vanos · rebuilt twin VANOS + fitting",
+          "url": "https://mrvanos.com/products/copy-of-mr-vanos-rebuilt-vanos-bmw-z3m-s50b32",
+          "role": "primary",
+          "applies_engines": [],
+          "applies_chassis": [],
+          "hard": false
+        }
+      ]
+    },
+    {
+      "id": "s54-vanos",
+      "packEngines": [
+        "S54"
+      ],
+      "chassisCount": 5,
+      "uncoveredEngines": [],
+      "aqMissing": [],
+      "sources": [
+        {
+          "label": "PLN · Probsten-Tech · S54 VANOS rebuild (send-in) 590€",
+          "url": "https://www.probsten-tech.de/vanosueberarbeitung-s54-e46-m3-z4m-wiesmann/",
+          "role": "pln_band",
+          "applies_engines": [
+            "S54"
+          ],
+          "applies_chassis": [],
+          "hard": false
+        },
+        {
+          "label": "PLN · Burkhart 599€ / VOSS 799€ exchange VANOS",
+          "url": "https://burkhart-engineering.com/shop/vanos-ueberarbeitung-passend-fuer-s54-e46-m3-z4-m-bmw/",
+          "role": "pln_band",
+          "applies_engines": [
+            "S54"
+          ],
+          "applies_chassis": [],
+          "hard": false
+        },
+        {
+          "label": "PLN · H2 Motors · E46 M3 S54 VANOS Überholung fitted 1.290€",
+          "url": "https://www.h2motors.de/vanos-ueberholung-bmw",
+          "role": "pln_band",
+          "applies_engines": [
+            "S54"
+          ],
+          "applies_chassis": [
+            "e46"
+          ],
+          "hard": false
+        },
+        {
+          "label": "PLN · AReeve · S54 VANOS overhaul package £1,500",
+          "url": "https://areeve.co.uk/product/bmw-e46-m3-z4m-s54-vanos-overhaul/",
+          "role": "pln_band",
+          "applies_engines": [
+            "S54"
+          ],
+          "applies_chassis": [],
+          "hard": false
+        },
+        {
+          "label": "Wikipedia · BMW S54",
+          "url": "https://en.wikipedia.org/wiki/BMW_S54",
+          "role": "primary",
+          "applies_engines": [
+            "S54"
+          ],
+          "applies_chassis": [],
+          "hard": false
+        }
+      ]
+    },
+    {
+      "id": "s55-rod-bearings",
+      "packEngines": [
+        "S55"
+      ],
+      "chassisCount": 4,
+      "uncoveredEngines": [],
+      "aqMissing": [],
+      "sources": [
+        {
+          "label": "PLN · Aulitzky · S55 rod bearings (F80/F82/F87) from 2.499€",
+          "url": "https://aulitzkyexhaust.de/en/Connecting-rod-bearing-change-for-BMW-M2-M3-M4-incl.-Competition-CS-F80-F82-F83-F87-S55/ATPLEUELM2F87",
+          "role": "pln_band",
+          "applies_engines": [
+            "S55"
+          ],
+          "applies_chassis": [
+            "f80",
+            "f82",
+            "f87"
+          ],
+          "hard": false
+        },
+        {
+          "label": "PLN · Bimmer.AI · UK S55 preventative £1,500–£2,500",
+          "url": "https://bimmer.ai/bmw-common-problems/s55-rod-bearings/",
+          "role": "pln_band",
+          "applies_engines": [
+            "S55"
+          ],
+          "applies_chassis": [],
+          "hard": false
+        },
+        {
+          "label": "Wikipedia · BMW S55",
+          "url": "https://en.wikipedia.org/wiki/BMW_S55",
+          "role": "primary",
+          "applies_engines": [
+            "S55"
+          ],
+          "applies_chassis": [],
+          "hard": false
+        }
+      ]
+    },
+    {
+      "id": "s62-rod-bearings",
+      "packEngines": [
+        "S62"
+      ],
+      "chassisCount": 1,
+      "uncoveredEngines": [],
+      "aqMissing": [],
+      "sources": [
+        {
+          "label": "PLN · Aulitzky · S62 E39 M5 rod bearings 1.749€",
+          "url": "https://aulitzkyexhaust.de/en/Connecting-rod-bearing-change-for-BMW-M5-E39-400hp-S62/ATPLEUELM5S62",
+          "role": "pln_band",
+          "applies_engines": [
+            "S62"
+          ],
+          "applies_chassis": [
+            "e39"
+          ],
+          "hard": false
+        },
+        {
+          "label": "PLN · PLN · Wiltronic · M V8/V10 panewki prior 6000–10000+ (family)",
+          "url": "https://wiltronic.pl/blog/od-czego-zalezy-koszt-wymiany-panewek-w-bmw/",
+          "role": "family_prior",
+          "applies_engines": [],
+          "applies_chassis": [],
+          "hard": false
+        },
+        {
+          "label": "Wikipedia · BMW S62",
+          "url": "https://en.wikipedia.org/wiki/BMW_S62",
+          "role": "primary",
+          "applies_engines": [
+            "S62"
+          ],
+          "applies_chassis": [],
+          "hard": false
+        }
+      ]
+    },
+    {
+      "id": "s85-rod-bearings",
+      "packEngines": [
+        "S85"
+      ],
+      "chassisCount": 4,
+      "uncoveredEngines": [],
+      "aqMissing": [],
+      "sources": [
+        {
+          "label": "PLN · Aulitzky · S85 E60 M5 rod bearings 2.749€",
+          "url": "https://aulitzkyexhaust.de/en/Connecting-rod-bearing-change-BMW-M5-E60-E61-507hp-S85-Aulitzky-Tuning/ATPLEUELM5S85",
+          "role": "pln_band",
+          "applies_engines": [
+            "S85"
+          ],
+          "applies_chassis": [
+            "e60"
+          ],
+          "hard": false
+        },
+        {
+          "label": "PLN · Nforcd · S85 rod bearing service ~€3,036",
+          "url": "https://www.nforcd.com/products/rod-bearing-replacement-bmw-e60-e61-m5-e63-e64-m6",
+          "role": "pln_band",
+          "applies_engines": [
+            "S85"
+          ],
+          "applies_chassis": [],
+          "hard": false
+        },
+        {
+          "label": "BMWTuning · rod bearing failure (S54 / S65 / S85)",
+          "url": "https://bmwtuning.co/bmw-rod-bearing-failure/",
+          "role": "primary",
+          "applies_engines": [
+            "S85"
+          ],
+          "applies_chassis": [],
+          "hard": false
+        }
+      ]
+    },
+    {
+      "id": "s63-rod-bearings",
+      "packEngines": [
+        "S63"
+      ],
+      "chassisCount": 14,
+      "uncoveredEngines": [],
+      "aqMissing": [],
+      "sources": [
+        {
+          "label": "PLN · LuxuryCarsGuide · S63 preventative bearings ~$2k–3.5k indie",
+          "url": "https://www.luxurycarsguide.com/guides/bmw-s63-engine-failure-rate/",
+          "role": "pln_band",
+          "applies_engines": [
+            "S63"
+          ],
+          "applies_chassis": [],
+          "hard": false
+        },
+        {
+          "label": "PLN · Bimmer.AI · S63 preventative £2,000–£3,500 class",
+          "url": "https://bimmer.ai/bmw-common-problems/s55-rod-bearings/",
+          "role": "pln_band",
+          "applies_engines": [
+            "S63"
+          ],
+          "applies_chassis": [],
+          "hard": false
+        },
+        {
+          "label": "PLN · PLN · Wiltronic · panewki V8/M-Power prior",
+          "url": "https://wiltronic.pl/blog/od-czego-zalezy-koszt-wymiany-panewek-w-bmw/",
+          "role": "family_prior",
+          "applies_engines": [],
+          "applies_chassis": [],
+          "hard": false
+        },
+        {
+          "label": "Wikipedia · BMW S63",
+          "url": "https://en.wikipedia.org/wiki/BMW_S63",
+          "role": "primary",
+          "applies_engines": [
+            "S63"
+          ],
+          "applies_chassis": [],
+          "hard": false
+        }
+      ]
+    },
+    {
+      "id": "s58-rod-bearings",
+      "packEngines": [
+        "S58"
+      ],
+      "chassisCount": 7,
+      "uncoveredEngines": [],
+      "aqMissing": [],
+      "sources": [
+        {
+          "label": "PLN · 5150 AutoSport · S58 coated rod bearings 515,99€",
+          "url": "https://r44performance.com/products/5150-autosport-high-performance-rod-bearing-set-bmw-s58-engine",
+          "role": "pln_band",
+          "applies_engines": [
+            "S58"
+          ],
+          "applies_chassis": [],
+          "hard": false
+        },
+        {
+          "label": "PLN · Labor prior from Aulitzky S55 bearing job (same layout class)",
+          "url": "https://aulitzkyexhaust.de/en/Connecting-rod-bearing-change-for-BMW-M2-M3-M4-incl.-Competition-CS-F80-F82-F83-F87-S55/ATPLEUELM2F87",
+          "role": "family_prior",
+          "applies_engines": [
+            "S55"
+          ],
+          "applies_chassis": [],
+          "hard": false
+        },
+        {
+          "label": "Wikipedia · BMW S58",
+          "url": "https://en.wikipedia.org/wiki/BMW_S58",
+          "role": "primary",
+          "applies_engines": [
+            "S58"
+          ],
+          "applies_chassis": [],
+          "hard": false
+        }
+      ]
+    },
+    {
+      "id": "b58-oil-filter",
+      "packEngines": [
+        "B58",
+        "S58"
+      ],
+      "chassisCount": 30,
+      "uncoveredEngines": [],
+      "aqMissing": [],
+      "sources": [
+        {
+          "label": "PLN · BimmerWorld · B58 OFH gasket set ~$45",
+          "url": "https://www.bimmerworld.com/Engine/Gaskets/BMW-Oil-Filter-Housing-Gasket-Set-11428583896.html",
+          "role": "pln_band",
+          "applies_engines": [
+            "B58"
+          ],
+          "applies_chassis": [],
+          "hard": false
+        },
+        {
+          "label": "PLN · FCP Euro · B58 oil filter housing kit ~$705",
+          "url": "https://www.fcpeuro.com/products/bmw-b58-engine-oil-filter-housing-replacement-kit-11428583895kt3",
+          "role": "pln_band",
+          "applies_engines": [
+            "B58"
+          ],
+          "applies_chassis": [],
+          "hard": false
+        },
+        {
+          "label": "PLN · Tysautoworks · gasket $300–800 / housing $800–1500+",
+          "url": "https://tysautoworksperformance.com/blogs/news/bmw-b58-oil-filter-housing-leak-cost-symptoms-when-to-fix-it-540i-340i-440i-guide",
+          "role": "pln_band",
+          "applies_engines": [
+            "B58"
+          ],
+          "applies_chassis": [],
+          "hard": false
+        },
+        {
+          "label": "FCP Euro · B58 OFH replacement kit (housing family)",
+          "url": "https://www.fcpeuro.com/products/bmw-b58-engine-oil-filter-housing-replacement-kit-11428583895kt3",
+          "role": "family_prior",
+          "applies_engines": [
+            "B58"
+          ],
+          "applies_chassis": [],
+          "hard": false
+        },
+        {
+          "label": "Wikipedia · BMW B58",
+          "url": "https://en.wikipedia.org/wiki/BMW_B58",
+          "role": "primary",
+          "applies_engines": [
+            "B58"
+          ],
+          "applies_chassis": [],
+          "hard": false
+        },
+        {
+          "label": "Wikipedia · BMW S58",
+          "url": "https://en.wikipedia.org/wiki/BMW_S58",
+          "role": "primary",
+          "applies_engines": [
+            "S58"
+          ],
+          "applies_chassis": [],
+          "hard": false
+        }
+      ]
+    },
+    {
+      "id": "n63-coolant-pipes",
+      "packEngines": [
+        "N63"
+      ],
+      "chassisCount": 16,
+      "uncoveredEngines": [],
+      "aqMissing": [],
+      "sources": [
+        {
+          "label": "PLN · TempaDrive forum · N63 aluminum coolant pipes 500–800€",
+          "url": "https://forum.tempadrive.com/t/bmw-n63-hot-v-twin-turbo-v8-problems-guide",
+          "role": "pln_band",
+          "applies_engines": [
+            "N63"
+          ],
+          "applies_chassis": [],
+          "hard": false
+        },
+        {
+          "label": "PLN · BimmerBoom / RepairPal class $400–1,200 total",
+          "url": "https://bimmerboom.com/bmw-n63-turbo-coolant-line-replacement-cost-insights/",
+          "role": "pln_band",
+          "applies_engines": [
+            "N63"
+          ],
+          "applies_chassis": [],
+          "hard": false
+        },
+        {
+          "label": "Wikipedia · BMW N63 — 2012 / 2016 Technical Updates",
+          "url": "https://en.wikipedia.org/wiki/BMW_N63",
+          "role": "primary",
+          "applies_engines": [
+            "N63"
+          ],
+          "applies_chassis": [],
+          "hard": false
+        }
+      ]
+    },
+    {
+      "id": "i3-hv-battery",
+      "packEngines": [
+        "IBE0",
+        "IB1",
+        "RANGE EXTENDER"
+      ],
+      "chassisCount": 3,
+      "uncoveredEngines": [],
+      "aqMissing": [],
+      "sources": [
+        {
+          "label": "PLN · e-dakro · regeneracja baterii i3 od 6 500 zł",
+          "url": "https://e-dakro.pl/regeneracja-baterii-trakcyjnych-kiedy-warto-i-ile-mozna-zaoszczedzic/",
+          "role": "pln_band",
+          "applies_engines": [],
+          "applies_chassis": [],
+          "hard": false
+        },
+        {
+          "label": "PLN · Allegro Lokalnie · i3 upgrade 154Ah 29 000 zł (Poznań)",
+          "url": "https://allegrolokalnie.pl/oferta/bmw-i3-wymiana-baterii-60ah-94ah-120ah-na-154ah-or-upgrade-zasiegu",
+          "role": "pln_band",
+          "applies_engines": [],
+          "applies_chassis": [],
+          "hard": false
+        },
+        {
+          "label": "PLN · i3upgrade · new OEM 94/120Ah 4.500–7.000€ excl. VAT",
+          "url": "https://www.i3upgrade.cz/en/cenik.html",
+          "role": "pln_band",
+          "applies_engines": [],
+          "applies_chassis": [],
+          "hard": false
+        },
+        {
+          "label": "Wikipedia · BMW i3 (battery)",
+          "url": "https://en.wikipedia.org/wiki/BMW_i3",
+          "role": "primary",
+          "applies_engines": [],
+          "applies_chassis": [],
+          "hard": false
+        }
+      ]
+    },
+    {
+      "id": "classic-cooling",
+      "packEngines": [
+        "M10",
+        "M20",
+        "M30",
+        "S14",
+        "S38"
+      ],
+      "chassisCount": 11,
+      "uncoveredEngines": [],
+      "aqMissing": [],
+      "sources": [
+        {
+          "label": "PLN · M5Board · S38 OEM water pump historically ~400€",
+          "url": "https://www.m5board.com/threads/s38-water-pump-rebuild.608383/",
+          "role": "pln_band",
+          "applies_engines": [
+            "S38"
+          ],
+          "applies_chassis": [],
+          "hard": false
+        },
+        {
+          "label": "PLN · M5Board · S38 water pump rebuild service $595",
+          "url": "https://www.m5board.com/threads/e34m5-s38-b36-s38-b38-water-pump-rebuilt-service-with-core-exchange.618583/",
+          "role": "pln_band",
+          "applies_engines": [
+            "S38"
+          ],
+          "applies_chassis": [],
+          "hard": false
+        },
+        {
+          "label": "PLN · kosztserwisu BMW cooling prior",
+          "url": "https://kosztserwisu.pl/modele-samochodow/bmw/",
+          "role": "family_prior",
+          "applies_engines": [],
+          "applies_chassis": [],
+          "hard": false
+        },
+        {
+          "label": "Wikipedia · BMW M10",
+          "url": "https://en.wikipedia.org/wiki/BMW_M10",
+          "role": "primary",
+          "applies_engines": [
+            "M10"
+          ],
+          "applies_chassis": [],
+          "hard": false
+        },
+        {
+          "label": "Wikipedia · BMW M20",
+          "url": "https://en.wikipedia.org/wiki/BMW_M20",
+          "role": "primary",
+          "applies_engines": [
+            "M20"
+          ],
+          "applies_chassis": [],
+          "hard": false
+        },
+        {
+          "label": "Wikipedia · BMW M30",
+          "url": "https://en.wikipedia.org/wiki/BMW_M30",
+          "role": "primary",
+          "applies_engines": [
+            "M30"
+          ],
+          "applies_chassis": [],
+          "hard": false
+        },
+        {
+          "label": "Wikipedia · BMW S14",
+          "url": "https://en.wikipedia.org/wiki/BMW_S14",
+          "role": "primary",
+          "applies_engines": [
+            "S14"
+          ],
+          "applies_chassis": [],
+          "hard": false
+        },
+        {
+          "label": "Wikipedia · BMW S38",
+          "url": "https://en.wikipedia.org/wiki/BMW_S38",
+          "role": "primary",
+          "applies_engines": [
+            "S38"
+          ],
+          "applies_chassis": [],
+          "hard": false
+        }
+      ]
+    },
+    {
+      "id": "b57-egr",
+      "packEngines": [
+        "B57"
+      ],
+      "chassisCount": 6,
+      "uncoveredEngines": [],
+      "aqMissing": [],
+      "sources": [
+        {
+          "label": "PLN · Skanyx · EGR cooler band (B47 prior applied to B57)",
+          "url": "https://skanyx.com/pl/blog/bmw-m57-engine-buyer-guide-525d-530d-535d-obd2",
+          "role": "family_prior",
+          "applies_engines": [
+            "B47",
+            "B57",
+            "M57"
+          ],
+          "applies_chassis": [],
+          "hard": false
+        },
+        {
+          "label": "PLN · Warehouse · b47-egr job bands (modular diesel family)",
+          "url": "https://en.wikipedia.org/wiki/BMW_B57",
+          "role": "family_prior",
+          "applies_engines": [
+            "B47"
+          ],
+          "applies_chassis": [],
+          "hard": false
+        },
+        {
+          "label": "NHTSA · 22V-614 G30 540d B57O cooler (see b57-egr-cooler-recall)",
+          "url": "https://static.nhtsa.gov/odi/rcl/2022/RCRIT-22V614-6977.pdf",
+          "role": "primary",
+          "applies_engines": [
+            "B57"
+          ],
+          "applies_chassis": [
+            "g30"
+          ],
+          "hard": false
+        }
+      ]
+    },
+    {
+      "id": "n47-chain-mid",
+      "packEngines": [
+        "N47"
+      ],
+      "chassisCount": 12,
+      "uncoveredEngines": [],
+      "aqMissing": [],
+      "sources": [
+        {
+          "label": "Wikipedia · BMW N47 (Timing chain problems)",
+          "url": "https://en.wikipedia.org/wiki/BMW_N47",
+          "role": "primary",
+          "applies_engines": [
+            "N47"
+          ],
+          "applies_chassis": [],
+          "hard": false
+        },
+        {
+          "label": "NHTSA TSB / manufacturer communications index",
+          "url": "https://www.nhtsa.gov/nhtsa-datasets-and-apis",
+          "role": "primary",
+          "applies_engines": [],
+          "applies_chassis": [],
+          "hard": false
+        },
+        {
+          "label": "PLN · AutoKult · N47 rozrząd (zamienniki→OEM)",
+          "url": "https://autokult.pl/silnik-2-0-n47-od-bmw-i-jego-rozrzad-sprawdzamy-czy-jest-az-tak-zle,6809155006965377a",
+          "role": "pln_band",
+          "applies_engines": [
+            "N47"
+          ],
+          "applies_chassis": [],
+          "hard": false
+        },
+        {
+          "label": "PLN · ADM Serwis · N47 pełna wymiana",
+          "url": "https://admserwis.com/blog/bmw-n47-i-wymiana-rozrzdu-kiedy-i-dlaczego-to-konieczne",
+          "role": "pln_band",
+          "applies_engines": [
+            "N47"
+          ],
+          "applies_chassis": [],
+          "hard": false
+        },
+        {
+          "label": "PLN · BMW Smorawiński GZ · N47 od 7499 zł brutto",
+          "url": "https://www.bmw-smorawinskigz.pl/wymiana-rozrzadu",
+          "role": "pln_band",
+          "applies_engines": [
+            "N47"
+          ],
+          "applies_chassis": [],
+          "hard": false
+        },
+        {
+          "label": "PLN · kosztserwisu.pl · N47 (lower aggregator band — kept as secondary)",
+          "url": "https://kosztserwisu.pl/koszty-napraw/rozrzad/wymiana-rozrzadu-bmw/",
+          "role": "pln_band",
+          "applies_engines": [
+            "N47"
+          ],
+          "applies_chassis": [],
+          "hard": false
+        },
+        {
+          "label": "Wikipedia · N47 timing chain — worst units 1 Mar 2007–5 Jan 2009",
+          "url": "https://en.wikipedia.org/wiki/BMW_N47#Timing_chain_problems",
+          "role": "primary",
+          "applies_engines": [
+            "N47"
+          ],
+          "applies_chassis": [],
+          "hard": false
+        },
+        {
+          "label": "Wybór Kierowców · N47 — units from ~2010 considered more solid",
+          "url": "https://www.wyborkierowcow.pl/diesel-2-0-n47-bmw-opinie-awarie-usterki-spalanie-i-rozrzad/",
+          "role": "primary",
+          "applies_engines": [
+            "N47"
+          ],
+          "applies_chassis": [],
+          "hard": false
+        }
+      ]
+    },
+    {
+      "id": "n47-chain-late",
+      "packEngines": [
+        "N47"
+      ],
+      "chassisCount": 12,
+      "uncoveredEngines": [],
+      "aqMissing": [],
+      "sources": [
+        {
+          "label": "Wikipedia · BMW N47 (Timing chain problems)",
+          "url": "https://en.wikipedia.org/wiki/BMW_N47",
+          "role": "primary",
+          "applies_engines": [
+            "N47"
+          ],
+          "applies_chassis": [],
+          "hard": false
+        },
+        {
+          "label": "NHTSA TSB / manufacturer communications index",
+          "url": "https://www.nhtsa.gov/nhtsa-datasets-and-apis",
+          "role": "primary",
+          "applies_engines": [],
+          "applies_chassis": [],
+          "hard": false
+        },
+        {
+          "label": "PLN · AutoKult · N47 rozrząd (zamienniki→OEM)",
+          "url": "https://autokult.pl/silnik-2-0-n47-od-bmw-i-jego-rozrzad-sprawdzamy-czy-jest-az-tak-zle,6809155006965377a",
+          "role": "pln_band",
+          "applies_engines": [
+            "N47"
+          ],
+          "applies_chassis": [],
+          "hard": false
+        },
+        {
+          "label": "PLN · ADM Serwis · N47 pełna wymiana",
+          "url": "https://admserwis.com/blog/bmw-n47-i-wymiana-rozrzdu-kiedy-i-dlaczego-to-konieczne",
+          "role": "pln_band",
+          "applies_engines": [
+            "N47"
+          ],
+          "applies_chassis": [],
+          "hard": false
+        },
+        {
+          "label": "PLN · BMW Smorawiński GZ · N47 od 7499 zł brutto",
+          "url": "https://www.bmw-smorawinskigz.pl/wymiana-rozrzadu",
+          "role": "pln_band",
+          "applies_engines": [
+            "N47"
+          ],
+          "applies_chassis": [],
+          "hard": false
+        },
+        {
+          "label": "PLN · kosztserwisu.pl · N47 (lower aggregator band — kept as secondary)",
+          "url": "https://kosztserwisu.pl/koszty-napraw/rozrzad/wymiana-rozrzadu-bmw/",
+          "role": "pln_band",
+          "applies_engines": [
+            "N47"
+          ],
+          "applies_chassis": [],
+          "hard": false
+        },
+        {
+          "label": "Wikipedia · N47 timing chain — worst units 1 Mar 2007–5 Jan 2009",
+          "url": "https://en.wikipedia.org/wiki/BMW_N47#Timing_chain_problems",
+          "role": "primary",
+          "applies_engines": [
+            "N47"
+          ],
+          "applies_chassis": [],
+          "hard": false
+        },
+        {
+          "label": "Wybór Kierowców · N47 — units from ~2010 considered more solid",
+          "url": "https://www.wyborkierowcow.pl/diesel-2-0-n47-bmw-opinie-awarie-usterki-spalanie-i-rozrzad/",
+          "role": "primary",
+          "applies_engines": [
+            "N47"
+          ],
+          "applies_chassis": [],
+          "hard": false
+        }
+      ]
+    },
+    {
+      "id": "n20-chain-late",
+      "packEngines": [
+        "N20",
+        "N26"
+      ],
+      "chassisCount": 11,
+      "uncoveredEngines": [],
+      "aqMissing": [],
+      "sources": [
+        {
+          "label": "NHTSA · N20/N26 timing-chain warranty discussion (SI B11 03 17 family)",
+          "url": "https://en.wikipedia.org/wiki/BMW_N20#Class_action_lawsuit_alleging_timing_chain_guide_failures",
+          "role": "primary",
+          "applies_engines": [
+            "N20",
+            "N26"
+          ],
+          "applies_chassis": [],
+          "hard": false
+        },
+        {
+          "label": "Wikipedia · BMW N20",
+          "url": "https://en.wikipedia.org/wiki/BMW_N20",
+          "role": "primary",
+          "applies_engines": [
+            "N20",
+            "N26"
+          ],
+          "applies_chassis": [],
+          "hard": false
+        },
+        {
+          "label": "PLN · kosztserwisu.pl · N20",
+          "url": "https://kosztserwisu.pl/koszty-napraw/rozrzad/wymiana-rozrzadu-bmw/",
+          "role": "pln_band",
+          "applies_engines": [
+            "N20"
+          ],
+          "applies_chassis": [],
+          "hard": false
+        },
+        {
+          "label": "PLN · BMW Smorawiński GZ · N20 od 5999 zł",
+          "url": "https://www.bmw-smorawinskigz.pl/wymiana-rozrzadu",
+          "role": "pln_band",
+          "applies_engines": [
+            "N20"
+          ],
+          "applies_chassis": [],
+          "hard": false
+        },
+        {
+          "label": "PLN · rozrzad.pl · IWIS N20 kit",
+          "url": "https://rozrzad.pl/pl/p/ROZRZAD-LANCUCH-ROZRZADU-BMW-125i-F21-N20-11317584084S2/21575",
+          "role": "pln_band",
+          "applies_engines": [
+            "N20"
+          ],
+          "applies_chassis": [],
+          "hard": false
+        }
+      ]
+    },
+    {
+      "id": "n54-injectors-late",
+      "packEngines": [
+        "N54"
+      ],
+      "chassisCount": 4,
+      "uncoveredEngines": [],
+      "aqMissing": [],
+      "sources": [
+        {
+          "label": "NHTSA · N54 HPFP warranty TSB (SI B13 04 09 / MC-10149587)",
+          "url": "https://static.nhtsa.gov/odi/tsbs/2013/MC-10149587-9999.pdf",
+          "role": "primary",
+          "applies_engines": [
+            "N54"
+          ],
+          "applies_chassis": [],
+          "hard": false
+        },
+        {
+          "label": "Wikipedia · BMW N54",
+          "url": "https://en.wikipedia.org/wiki/BMW_N54",
+          "role": "primary",
+          "applies_engines": [
+            "N54"
+          ],
+          "applies_chassis": [],
+          "hard": false
+        },
+        {
+          "label": "PLN · cenauslug.pl · HPFP parts 1400–3800 + labor 500–1200",
+          "url": "https://cenauslug.pl/poradniki/wymiana-pompy-paliwa-jakie-sa-koszty-i-jak-wybrac-warsztat",
+          "role": "pln_band",
+          "applies_engines": [],
+          "applies_chassis": [],
+          "hard": false
+        },
+        {
+          "label": "PLN · https://skanyx.com/pl/blog/bmw-fault-codes-guide",
+          "url": "https://skanyx.com/pl/blog/bmw-fault-codes-guide",
+          "role": "pln_band",
+          "applies_engines": [],
+          "applies_chassis": [],
+          "hard": false
+        },
+        {
+          "label": "PLN · Oryginalne-Czesci.pl · single N54 injector OE",
+          "url": "https://oryginalne-czesci.pl/wtryskiwacz-paliwa-n54-n54t-n63-n74-s63-bmw-e60-e61-x5-e70-x6-e71-e72-e82-e88-z4-e89-e90-e91-e92-e93-f01-f02-f03-f04-5gt-f07-f10-f11-f12-f13,id10359.html",
+          "role": "pln_band",
+          "applies_engines": [
+            "N54"
+          ],
+          "applies_chassis": [],
+          "hard": false
+        }
+      ]
+    },
+    {
+      "id": "b48-timing-pre-tu",
+      "packEngines": [
+        "B48"
+      ],
+      "chassisCount": 0,
+      "uncoveredEngines": [],
+      "aqMissing": [],
+      "sources": [
+        {
+          "label": "Wikipedia · BMW B48 — Technical Update 2018 (B48TU)",
+          "url": "https://en.wikipedia.org/wiki/BMW_B48",
+          "role": "primary",
+          "applies_engines": [
+            "B48"
+          ],
+          "applies_chassis": [],
+          "hard": false
+        }
+      ]
+    },
+    {
+      "id": "b58-pre-tu",
+      "packEngines": [
+        "B58"
+      ],
+      "chassisCount": 0,
+      "uncoveredEngines": [],
+      "aqMissing": [],
+      "sources": [
+        {
+          "label": "Wikipedia · BMW B58 — Technical Update 2018 (B58TU)",
+          "url": "https://en.wikipedia.org/wiki/BMW_B58",
+          "role": "primary",
+          "applies_engines": [
+            "B58"
+          ],
+          "applies_chassis": [],
+          "hard": false
+        }
+      ]
+    },
+    {
+      "id": "n63-pre-tu",
+      "packEngines": [
+        "N63"
+      ],
+      "chassisCount": 14,
+      "uncoveredEngines": [],
+      "aqMissing": [],
+      "sources": [
+        {
+          "label": "Wikipedia · BMW N63 — 2012 Technical Update (N63TU)",
+          "url": "https://en.wikipedia.org/wiki/BMW_N63",
+          "role": "primary",
+          "applies_engines": [
+            "N63"
+          ],
+          "applies_chassis": [],
+          "hard": false
+        }
+      ]
+    },
+    {
+      "id": "n63-post-tu2",
+      "packEngines": [
+        "N63"
+      ],
+      "chassisCount": 16,
+      "uncoveredEngines": [],
+      "aqMissing": [],
+      "sources": [
+        {
+          "label": "Wikipedia · BMW N63 — 2016 Technical Update (N63TÜ2)",
+          "url": "https://en.wikipedia.org/wiki/BMW_N63",
+          "role": "primary",
+          "applies_engines": [
+            "N63"
+          ],
+          "applies_chassis": [],
+          "hard": false
+        },
+        {
+          "label": "Wikipedia · BMW N63 — Technical Updates",
+          "url": "https://en.wikipedia.org/wiki/BMW_N63",
+          "role": "primary",
+          "applies_engines": [
+            "N63"
+          ],
+          "applies_chassis": [],
+          "hard": false
+        }
+      ]
+    },
+    {
+      "id": "swirl-flaps-late",
+      "packEngines": [
+        "M57"
+      ],
+      "chassisCount": 17,
+      "uncoveredEngines": [],
+      "aqMissing": [],
+      "sources": [
+        {
+          "label": "Wikipedia · BMW M57",
+          "url": "https://en.wikipedia.org/wiki/BMW_M57",
+          "role": "primary",
+          "applies_engines": [
+            "M57"
+          ],
+          "applies_chassis": [],
+          "hard": false
+        },
+        {
+          "label": "Wikipedia · BMW M47",
+          "url": "https://en.wikipedia.org/wiki/BMW_M47",
+          "role": "family_prior",
+          "applies_engines": [
+            "M47"
+          ],
+          "applies_chassis": [],
+          "hard": false
+        },
+        {
+          "label": "PLN · BMG Tuning · usuwanie klap (max band)",
+          "url": "https://www.bmgtuning.pl/usuwanie-klap-wirowych/",
+          "role": "pln_band",
+          "applies_engines": [],
+          "applies_chassis": [],
+          "hard": false
+        },
+        {
+          "label": "PLN · Kata-Serwis · od 400 zł",
+          "url": "https://kata-serwis.pl/usuwanie-klap-wirowych-gdansk/",
+          "role": "pln_band",
+          "applies_engines": [],
+          "applies_chassis": [],
+          "hard": false
+        },
+        {
+          "label": "PLN · Skanyx · M57 flap delete parts+labor PLN",
+          "url": "https://skanyx.com/pl/blog/bmw-m57-engine-buyer-guide-525d-530d-535d-obd2",
+          "role": "pln_band",
+          "applies_engines": [
+            "M57"
+          ],
+          "applies_chassis": [],
+          "hard": false
+        },
+        {
+          "label": "PLN · Car Media · OE collector replacement band",
+          "url": "https://car-media.pl/pl/technika-i-elektromobilnosc/budowa-i-dzialanie/klapy-wirowe-kolektor-naprawa-czy-usuwanie",
+          "role": "pln_band",
+          "applies_engines": [],
+          "applies_chassis": [],
+          "hard": false
+        },
+        {
+          "label": "Wikipedia · BMW M57 (production 1998–2013)",
+          "url": "https://en.wikipedia.org/wiki/BMW_M57",
+          "role": "primary",
+          "applies_engines": [
+            "M57"
+          ],
+          "applies_chassis": [],
+          "hard": false
+        }
+      ]
+    },
+    {
+      "id": "timing-guides-late",
+      "packEngines": [
+        "N46"
+      ],
+      "chassisCount": 13,
+      "uncoveredEngines": [],
+      "aqMissing": [],
+      "sources": [
+        {
+          "label": "Wikipedia · BMW N46",
+          "url": "https://en.wikipedia.org/wiki/BMW_N46",
+          "role": "primary",
+          "applies_engines": [
+            "N46"
+          ],
+          "applies_chassis": [],
+          "hard": false
+        },
+        {
+          "label": "PLN · kosztserwisu.pl · N46/N52 guides/VANOS band",
+          "url": "https://kosztserwisu.pl/koszty-napraw/rozrzad/wymiana-rozrzadu-bmw/",
+          "role": "pln_band",
+          "applies_engines": [
+            "N46"
+          ],
+          "applies_chassis": [],
+          "hard": false
+        },
+        {
+          "label": "Wikipedia · BMW N46 (production 2004–2015)",
+          "url": "https://en.wikipedia.org/wiki/BMW_N46",
+          "role": "primary",
+          "applies_engines": [
+            "N46"
+          ],
+          "applies_chassis": [],
+          "hard": false
+        }
+      ]
+    },
+    {
+      "id": "n55-hpfp-early",
+      "packEngines": [
+        "N55"
+      ],
+      "chassisCount": 27,
+      "uncoveredEngines": [],
+      "aqMissing": [],
+      "sources": [
+        {
+          "label": "FCP Euro · N55 early vs 2014+ HPFP redesign",
+          "url": "https://www.fcpeuro.com/blog/the-definitive-guide-to-the-bmw-n55-engine-common-faults-tech-specs-upgrades",
+          "role": "primary",
+          "applies_engines": [
+            "N55"
+          ],
+          "applies_chassis": [],
+          "hard": false
+        },
+        {
+          "label": "Bimmer Bytes · N55 HPFP pre-2014 vs late part numbers",
+          "url": "https://www.bimmerbytes.com/n55.html",
+          "role": "primary",
+          "applies_engines": [
+            "N55"
+          ],
+          "applies_chassis": [],
+          "hard": false
+        },
+        {
+          "label": "NHTSA · SI B12 05 16 N55 Continental HPFP / vapor (to 3/2012)",
+          "url": "https://static.oemdtc.com/NHTSA-PDFs/SB-10076479-5448.pdf",
+          "role": "primary",
+          "applies_engines": [
+            "N55"
+          ],
+          "applies_chassis": [],
+          "hard": false
+        },
+        {
+          "label": "Wikipedia · BMW N55 (production context)",
+          "url": "https://en.wikipedia.org/wiki/BMW_N55",
+          "role": "primary",
+          "applies_engines": [
+            "N55"
+          ],
+          "applies_chassis": [],
+          "hard": false
+        },
+        {
+          "label": "PLN · cenauslug.pl · HPFP parts/labor prior (N54 family reused for early N55)",
+          "url": "https://cenauslug.pl/poradniki/wymiana-pompy-paliwa-jakie-sa-koszty-i-jak-wybrac-warsztat",
+          "role": "family_prior",
+          "applies_engines": [
+            "N54",
+            "N55"
+          ],
+          "applies_chassis": [],
+          "hard": false
+        }
+      ]
+    },
+    {
+      "id": "n52-pcv-heater",
+      "packEngines": [
+        "N52",
+        "N51"
+      ],
+      "chassisCount": 25,
+      "uncoveredEngines": [],
+      "aqMissing": [],
+      "sources": [
+        {
+          "label": "NHTSA · 17V-683 PCV blow-by heater (MY 2007–2011 N51/N52)",
+          "url": "https://static.nhtsa.gov/odi/rcl/2017/RCMN-17V683-7659.pdf",
+          "role": "primary",
+          "applies_engines": [
+            "N51",
+            "N52"
+          ],
+          "applies_chassis": [],
+          "hard": false
+        },
+        {
+          "label": "NHTSA · 22V-119 PCV heater expansion (MY 2006–2013)",
+          "url": "https://static.nhtsa.gov/odi/rcl/2022/RCRIT-22V119-1582.pdf",
+          "role": "primary",
+          "applies_engines": [],
+          "applies_chassis": [],
+          "hard": false
+        },
+        {
+          "label": "Wikipedia · BMW N52 (PCV heater fire recalls)",
+          "url": "https://en.wikipedia.org/wiki/BMW_N52",
+          "role": "primary",
+          "applies_engines": [
+            "N52"
+          ],
+          "applies_chassis": [],
+          "hard": false
+        }
+      ]
+    },
+    {
+      "id": "n52-vanos-bolts",
+      "packEngines": [
+        "N52",
+        "N51",
+        "N55"
+      ],
+      "chassisCount": 36,
+      "uncoveredEngines": [],
+      "aqMissing": [],
+      "sources": [
+        {
+          "label": "NHTSA · 23V-707 VANOS adjuster bolts (MY 2010–2013)",
+          "url": "https://static.nhtsa.gov/odi/rcl/2023/RCRIT-23V707-5068.pdf",
+          "role": "primary",
+          "applies_engines": [],
+          "applies_chassis": [],
+          "hard": false
+        },
+        {
+          "label": "Wikipedia · BMW N52 (2023 VANOS bolt recall note)",
+          "url": "https://en.wikipedia.org/wiki/BMW_N52",
+          "role": "primary",
+          "applies_engines": [
+            "N52",
+            "N51"
+          ],
+          "applies_chassis": [],
+          "hard": false
+        },
+        {
+          "label": "Wikipedia · BMW N55",
+          "url": "https://en.wikipedia.org/wiki/BMW_N55",
+          "role": "primary",
+          "applies_engines": [
+            "N55"
+          ],
+          "applies_chassis": [],
+          "hard": false
+        }
+      ]
+    },
+    {
+      "id": "n52-eccentric-shaft",
+      "packEngines": [
+        "N52",
+        "N51"
+      ],
+      "chassisCount": 25,
+      "uncoveredEngines": [],
+      "aqMissing": [],
+      "sources": [
+        {
+          "label": "NHTSA · SI eccentric shaft sensor oil contamination (N51/N52)",
+          "url": "https://static.nhtsa.gov/odi/tsbs/2016/SB-10076476-5448.pdf",
+          "role": "primary",
+          "applies_engines": [
+            "N51",
+            "N52"
+          ],
+          "applies_chassis": [],
+          "hard": false
+        },
+        {
+          "label": "AmpAuto · N52 eccentric shaft sensor",
+          "url": "https://www.ampauto.io/symptoms/bmw-n52-problems",
+          "role": "primary",
+          "applies_engines": [
+            "N52"
+          ],
+          "applies_chassis": [],
+          "hard": false
+        },
+        {
+          "label": "Wikipedia · BMW N52 (Valvetronic)",
+          "url": "https://en.wikipedia.org/wiki/BMW_N52",
+          "role": "primary",
+          "applies_engines": [
+            "N52"
+          ],
+          "applies_chassis": [],
+          "hard": false
+        }
+      ]
+    },
+    {
+      "id": "n52-valve-cover",
+      "packEngines": [
+        "N52",
+        "N51"
+      ],
+      "chassisCount": 25,
+      "uncoveredEngines": [],
+      "aqMissing": [],
+      "sources": [
+        {
+          "label": "Turner Motorsport · N52 plastic valve cover (MY 2007+)",
+          "url": "https://www.turnermotorsport.com/p-395319-valve-cover/",
+          "role": "primary",
+          "applies_engines": [
+            "N52"
+          ],
+          "applies_chassis": [],
+          "hard": false
+        },
+        {
+          "label": "AmpAuto · N52 valve cover gasket",
+          "url": "https://www.ampauto.io/symptoms/bmw-n52-problems",
+          "role": "primary",
+          "applies_engines": [
+            "N52"
+          ],
+          "applies_chassis": [],
+          "hard": false
+        },
+        {
+          "label": "PLN · automotoopinie · valve cover gasket job band",
+          "url": "https://automotoopinie.pl/wymiana-uszczelki-pokrywy-zaworow-koszt/",
+          "role": "pln_band",
+          "applies_engines": [],
+          "applies_chassis": [],
+          "hard": false
+        },
+        {
+          "label": "PL parts · grelkam N52 valve cover gasket set",
+          "url": "https://grelkam.pl/uszczelki/3743-zestaw-uszczelek-pokrywy-glowicy-bmw-e60-e61-e63-e64-e65-n52n.html",
+          "role": "primary",
+          "applies_engines": [
+            "N52"
+          ],
+          "applies_chassis": [],
+          "hard": false
+        },
+        {
+          "label": "Wikipedia · BMW N51",
+          "url": "https://en.wikipedia.org/wiki/BMW_N52",
+          "role": "primary",
+          "applies_engines": [
+            "N51"
+          ],
+          "applies_chassis": [],
+          "hard": false
+        }
+      ]
+    },
+    {
+      "id": "b47-adblue-scr",
+      "packEngines": [
+        "B47",
+        "B57"
+      ],
+      "chassisCount": 36,
+      "uncoveredEngines": [],
+      "aqMissing": [],
+      "sources": [
+        {
+          "label": "Bimmer.AI · B47 AdBlue / SCR buyer notes",
+          "url": "https://bimmer.ai/bmw-engines/b47/",
+          "role": "primary",
+          "applies_engines": [
+            "B47"
+          ],
+          "applies_chassis": [],
+          "hard": false
+        },
+        {
+          "label": "Bimmer Garage · B47 AdBlue and NOx sensor faults",
+          "url": "https://www.bimmergarage.co.uk/bmw-b47-common-issues/",
+          "role": "primary",
+          "applies_engines": [
+            "B47"
+          ],
+          "applies_chassis": [],
+          "hard": false
+        },
+        {
+          "label": "Wikipedia · BMW B47 (Euro 6 successor to N47)",
+          "url": "https://en.wikipedia.org/wiki/BMW_B47",
+          "role": "primary",
+          "applies_engines": [
+            "B47"
+          ],
+          "applies_chassis": [],
+          "hard": false
+        },
+        {
+          "label": "Wikipedia · BMW B57",
+          "url": "https://en.wikipedia.org/wiki/BMW_B57",
+          "role": "primary",
+          "applies_engines": [
+            "B57"
+          ],
+          "applies_chassis": [],
+          "hard": false
+        }
+      ]
+    },
+    {
+      "id": "n13-hpfp",
+      "packEngines": [
+        "N13"
+      ],
+      "chassisCount": 9,
+      "uncoveredEngines": [],
+      "aqMissing": [],
+      "sources": [
+        {
+          "label": "Wikipedia · Prince engine (HPFP recalls / extended warranty)",
+          "url": "https://en.wikipedia.org/wiki/Prince_engine",
+          "role": "primary",
+          "applies_engines": [],
+          "applies_chassis": [],
+          "hard": false
+        },
+        {
+          "label": "Wikipedia · BMW N13",
+          "url": "https://en.wikipedia.org/wiki/BMW_N13",
+          "role": "primary",
+          "applies_engines": [
+            "N13"
+          ],
+          "applies_chassis": [],
+          "hard": false
+        },
+        {
+          "label": "Bimmer Boom · N13 HPFP / timing ownership notes",
+          "url": "https://bimmerboom.com/bmw-n13-engine-review-problems-and-recommendations/",
+          "role": "primary",
+          "applies_engines": [
+            "N13"
+          ],
+          "applies_chassis": [],
+          "hard": false
+        },
+        {
+          "label": "PLN · cenauslug.pl · HPFP prior (N54 family reused)",
+          "url": "https://cenauslug.pl/poradniki/wymiana-pompy-paliwa-jakie-sa-koszty-i-jak-wybrac-warsztat",
+          "role": "family_prior",
+          "applies_engines": [
+            "N54"
+          ],
+          "applies_chassis": [],
+          "hard": false
+        }
+      ]
+    },
+    {
+      "id": "n13-intake-carbon",
+      "packEngines": [
+        "N13"
+      ],
+      "chassisCount": 9,
+      "uncoveredEngines": [],
+      "aqMissing": [],
+      "sources": [
+        {
+          "label": "Wikipedia · BMW N13 (DI turbo Prince)",
+          "url": "https://en.wikipedia.org/wiki/BMW_N13",
+          "role": "primary",
+          "applies_engines": [
+            "N13"
+          ],
+          "applies_chassis": [],
+          "hard": false
+        },
+        {
+          "label": "EngineScope · N13 carbon buildup",
+          "url": "https://enginescope.gr/engine/bmw-n13/",
+          "role": "primary",
+          "applies_engines": [
+            "N13"
+          ],
+          "applies_chassis": [],
+          "hard": false
+        },
+        {
+          "label": "Bimmer Boom · N13 injector / combustion notes",
+          "url": "https://bimmerboom.com/bmw-n13-engine-review-problems-and-recommendations/",
+          "role": "primary",
+          "applies_engines": [
+            "N13"
+          ],
+          "applies_chassis": [],
+          "hard": false
+        }
+      ]
+    },
+    {
+      "id": "n53-hpfp",
+      "packEngines": [
+        "N53"
+      ],
+      "chassisCount": 12,
+      "uncoveredEngines": [],
+      "aqMissing": [],
+      "sources": [
+        {
+          "label": "Wikipedia · BMW N53 (same HPFP as N54)",
+          "url": "https://en.wikipedia.org/wiki/BMW_N53",
+          "role": "primary",
+          "applies_engines": [
+            "N53"
+          ],
+          "applies_chassis": [],
+          "hard": false
+        },
+        {
+          "label": "BMWTuning · N53 HPFP + ~2012/13 redesign note",
+          "url": "https://bmwtuning.co/n53-engine-problems/",
+          "role": "primary",
+          "applies_engines": [
+            "N53"
+          ],
+          "applies_chassis": [],
+          "hard": false
+        },
+        {
+          "label": "NHTSA · N54 HPFP warranty TSB (family prior)",
+          "url": "https://static.nhtsa.gov/odi/tsbs/2013/MC-10149587-9999.pdf",
+          "role": "family_prior",
+          "applies_engines": [
+            "N54"
+          ],
+          "applies_chassis": [],
+          "hard": false
+        }
+      ]
+    },
+    {
+      "id": "n53-intake-carbon",
+      "packEngines": [
+        "N53",
+        "N43"
+      ],
+      "chassisCount": 12,
+      "uncoveredEngines": [],
+      "aqMissing": [],
+      "sources": [
+        {
+          "label": "Wikipedia · BMW N53 (direct injection)",
+          "url": "https://en.wikipedia.org/wiki/BMW_N53",
+          "role": "primary",
+          "applies_engines": [
+            "N53"
+          ],
+          "applies_chassis": [],
+          "hard": false
+        },
+        {
+          "label": "NHTSA · SI B12 02 12 N54 intake carbon cleaning (DI family procedure)",
+          "url": "https://static.nhtsa.gov/odi/tsbs/2014/MC-10149286-9999.pdf",
+          "role": "family_prior",
+          "applies_engines": [
+            "N54"
+          ],
+          "applies_chassis": [],
+          "hard": false
+        },
+        {
+          "label": "BMWTuning · N53 carbon / injector notes",
+          "url": "https://bmwtuning.co/n53-engine-problems/",
+          "role": "primary",
+          "applies_engines": [
+            "N53"
+          ],
+          "applies_chassis": [],
+          "hard": false
+        },
+        {
+          "label": "Wikipedia · BMW N43",
+          "url": "https://en.wikipedia.org/wiki/BMW_N43",
+          "role": "primary",
+          "applies_engines": [
+            "N43"
+          ],
+          "applies_chassis": [],
+          "hard": false
+        }
+      ]
+    },
+    {
+      "id": "n43-hpfp",
+      "packEngines": [
+        "N43"
+      ],
+      "chassisCount": 10,
+      "uncoveredEngines": [],
+      "aqMissing": [],
+      "sources": [
+        {
+          "label": "Wikipedia · BMW N13 (N43 as predecessor context)",
+          "url": "https://en.wikipedia.org/wiki/BMW_N13",
+          "role": "primary",
+          "applies_engines": [
+            "N43"
+          ],
+          "applies_chassis": [],
+          "hard": false
+        },
+        {
+          "label": "Wikipedia · BMW N53 (DI / HPFP family context for EU DI petrol)",
+          "url": "https://en.wikipedia.org/wiki/BMW_N53",
+          "role": "family_prior",
+          "applies_engines": [
+            "N53"
+          ],
+          "applies_chassis": [],
+          "hard": false
+        },
+        {
+          "label": "PLN · cenauslug.pl · HPFP prior",
+          "url": "https://cenauslug.pl/poradniki/wymiana-pompy-paliwa-jakie-sa-koszty-i-jak-wybrac-warsztat",
+          "role": "family_prior",
+          "applies_engines": [],
+          "applies_chassis": [],
+          "hard": false
+        }
+      ]
+    },
+    {
+      "id": "s54-rod-bearings",
+      "packEngines": [
+        "S54"
+      ],
+      "chassisCount": 5,
+      "uncoveredEngines": [],
+      "aqMissing": [],
+      "sources": [
+        {
+          "label": "BMWTuning · BMW rod bearing failure (S54 / S65 / S85)",
+          "url": "https://bmwtuning.co/bmw-rod-bearing-failure/",
+          "role": "primary",
+          "applies_engines": [
+            "S54"
+          ],
+          "applies_chassis": [],
+          "hard": false
+        },
+        {
+          "label": "Beisan Systems · S54 VANOS context (same ownership era)",
+          "url": "https://beisansystems.com/s54-vanos-procedure-e46-m3/",
+          "role": "primary",
+          "applies_engines": [
+            "S54"
+          ],
+          "applies_chassis": [],
+          "hard": false
+        }
+      ]
+    },
+    {
+      "id": "s65-throttle-actuators",
+      "packEngines": [
+        "S65"
+      ],
+      "chassisCount": 4,
+      "uncoveredEngines": [],
+      "aqMissing": [],
+      "sources": [
+        {
+          "label": "BMWTuning · S65 throttle body actuator failures",
+          "url": "https://bmwtuning.co/s65-engine-problems/",
+          "role": "primary",
+          "applies_engines": [
+            "S65"
+          ],
+          "applies_chassis": [],
+          "hard": false
+        },
+        {
+          "label": "BMWTuning · S65 rod bearings (companion ownership theme)",
+          "url": "https://bmwtuning.co/bmw-rod-bearing-failure/",
+          "role": "primary",
+          "applies_engines": [
+            "S65"
+          ],
+          "applies_chassis": [],
+          "hard": false
+        }
+      ]
+    },
+    {
+      "id": "s55-crank-hub",
+      "packEngines": [
+        "S55"
+      ],
+      "chassisCount": 4,
+      "uncoveredEngines": [],
+      "aqMissing": [],
+      "sources": [
+        {
+          "label": "BMWTuning · S55 crank hub discussion",
+          "url": "https://bmwtuning.co/the-4-most-common-bmw-s55-engine-problems/",
+          "role": "primary",
+          "applies_engines": [
+            "S55"
+          ],
+          "applies_chassis": [],
+          "hard": false
+        },
+        {
+          "label": "R44 · S55 crank hub failure & upgrades",
+          "url": "https://r44performance.com/blogs/r44-central/bmw-s55-engine-review-reliability-problems",
+          "role": "primary",
+          "applies_engines": [
+            "S55"
+          ],
+          "applies_chassis": [],
+          "hard": false
+        },
+        {
+          "label": "R44 Performance · S55 reliability / crank hub",
+          "url": "https://r44performance.com/blogs/r44-central/bmw-s55-engine-review-reliability-performance-servicing",
+          "role": "primary",
+          "applies_engines": [
+            "S55"
+          ],
+          "applies_chassis": [],
+          "hard": false
+        },
+        {
+          "label": "Wikipedia · BMW N55 / S55 (S55 applications)",
+          "url": "https://en.wikipedia.org/wiki/BMW_N55",
+          "role": "primary",
+          "applies_engines": [
+            "S55"
+          ],
+          "applies_chassis": [],
+          "hard": false
+        }
+      ]
+    },
+    {
+      "id": "s63-valve-stem-seals",
+      "packEngines": [
+        "S63"
+      ],
+      "chassisCount": 12,
+      "uncoveredEngines": [],
+      "aqMissing": [],
+      "sources": [
+        {
+          "label": "LuxuryCarsGuide · S63 failure themes (stems / bearings class)",
+          "url": "https://www.luxurycarsguide.com/guides/bmw-s63-engine-failure-rate/",
+          "role": "primary",
+          "applies_engines": [
+            "S63"
+          ],
+          "applies_chassis": [],
+          "hard": false
+        },
+        {
+          "label": "Existing warehouse · s63-rod-bearings companion",
+          "url": "https://bimmer.ai/bmw-common-problems/s55-rod-bearings/",
+          "role": "primary",
+          "applies_engines": [
+            "S63"
+          ],
+          "applies_chassis": [],
+          "hard": false
+        }
+      ]
+    },
+    {
+      "id": "s85-smg-pump",
+      "packEngines": [
+        "S85"
+      ],
+      "chassisCount": 4,
+      "uncoveredEngines": [],
+      "aqMissing": [],
+      "sources": [
+        {
+          "label": "SMG Society · E60/E63 SMG III pump motor €327.73",
+          "url": "https://www.smgsociety.com/product/pump-motor-bmw-e60-m5-e63-m6-smg-iii/",
+          "role": "primary",
+          "applies_engines": [
+            "S85"
+          ],
+          "applies_chassis": [
+            "e60",
+            "e63"
+          ],
+          "hard": false
+        },
+        {
+          "label": "BimmerWorld · complete SMG hydraulic unit (full-path contrast)",
+          "url": "https://www.bimmerworld.com/Driveline-Shifter/Transmissions-Accessories/SMG-Hydraulic-Pump-Motor-Unit-BMW-M5-M6-21542282998.html",
+          "role": "primary",
+          "applies_engines": [
+            "S85"
+          ],
+          "applies_chassis": [],
+          "hard": false
+        },
+        {
+          "label": "M5Board · SMG pump motor vs full unit DIY notes",
+          "url": "https://www.m5board.com/threads/smg-pump-motor-replacement.345297/",
+          "role": "primary",
+          "applies_engines": [
+            "S85"
+          ],
+          "applies_chassis": [],
+          "hard": false
+        },
+        {
+          "label": "Wikipedia · BMW S85",
+          "url": "https://en.wikipedia.org/wiki/BMW_S85",
+          "role": "primary",
+          "applies_engines": [
+            "S85"
+          ],
+          "applies_chassis": [],
+          "hard": false
+        }
+      ]
+    },
+    {
+      "id": "s85-throttle-actuators",
+      "packEngines": [
+        "S85"
+      ],
+      "chassisCount": 4,
+      "uncoveredEngines": [],
+      "aqMissing": [],
+      "sources": [
+        {
+          "label": "Element Performance · S85 throttle actuator supply+fit from £945",
+          "url": "https://www.elementperformance.co.uk/bmw-e60-m5",
+          "role": "primary",
+          "applies_engines": [
+            "S85"
+          ],
+          "applies_chassis": [],
+          "hard": false
+        },
+        {
+          "label": "Euro Power Motorsports · reman S85 throttle actuator ~$390 + core",
+          "url": "https://europowermotorsports.com/products/re-manufactured-bmw-m5-throttle-actuator-single-unit",
+          "role": "primary",
+          "applies_engines": [
+            "S85"
+          ],
+          "applies_chassis": [],
+          "hard": false
+        },
+        {
+          "label": "BMWTuning · S65 ITB actuators (same failure mode class)",
+          "url": "https://bmwtuning.co/s65-engine-problems/",
+          "role": "family_prior",
+          "applies_engines": [
+            "S65"
+          ],
+          "applies_chassis": [],
+          "hard": false
+        }
+      ]
+    },
+    {
+      "id": "b48-ofh-housing-early",
+      "packEngines": [
+        "B48"
+      ],
+      "chassisCount": 25,
+      "uncoveredEngines": [],
+      "aqMissing": [],
+      "sources": [
+        {
+          "label": "BimmerWorld · B46/B48 aluminum OFH kit (plastic crack / supersessions since 2017)",
+          "url": "https://www.bimmerworld.com/Engine/Gaskets/Aluminum-Oil-Filter-Housing-with-Cap-Filter-and-Gaskets-B46-B48-Engine.html",
+          "role": "primary",
+          "applies_engines": [
+            "B48"
+          ],
+          "applies_chassis": [],
+          "hard": false
+        },
+        {
+          "label": "BMW shop · OFH 11428596283 supersedes 11428593771 / 86673 / 76429",
+          "url": "https://shop.bmw.ca/p/Bmw__430i/Oil-filter-housing/72049350/11428596283.html",
+          "role": "primary",
+          "applies_engines": [],
+          "applies_chassis": [],
+          "hard": false
+        },
+        {
+          "label": "NHTSA complaint class · B48 OFH housing failure cost notes",
+          "url": "https://vehicleflaws.com/complaint/11570175",
+          "role": "primary",
+          "applies_engines": [
+            "B48"
+          ],
+          "applies_chassis": [],
+          "hard": false
+        }
+      ]
+    },
+    {
+      "id": "b48-ofh-coolant-bushing",
+      "packEngines": [
+        "B48"
+      ],
+      "chassisCount": 13,
+      "uncoveredEngines": [],
+      "aqMissing": [],
+      "sources": [
+        {
+          "label": "NHTSA · SIB 11 10 25 coolant leaking from oil filter housing",
+          "url": "https://static.nhtsa.gov/odi/tsbs/2026/MC-11026946-0001.pdf",
+          "role": "primary",
+          "applies_engines": [],
+          "applies_chassis": [],
+          "hard": false
+        },
+        {
+          "label": "BimmerWorld · G20/G22 B46/B48 OFH assembly fitment (B48P 2025+)",
+          "url": "https://www.bimmerworld.com/Engine/BMW-Oil-System/Oil-Filter-Housing-Assembly-B46-B48-G20-G22-G26-G30-G29-G01-G02.html",
+          "role": "primary",
+          "applies_engines": [
+            "B48"
+          ],
+          "applies_chassis": [
+            "g20",
+            "g22"
+          ],
+          "hard": false
+        }
+      ]
+    },
+    {
+      "id": "i3-hv-94ah",
+      "packEngines": [
+        "IBE0",
+        "IB1",
+        "RANGE EXTENDER"
+      ],
+      "chassisCount": 1,
+      "uncoveredEngines": [],
+      "aqMissing": [],
+      "sources": [
+        {
+          "label": "BMW Press · 2017 i3 94Ah",
+          "url": "https://www.press.bmwgroup.com/usa/article/detail/T0259560EN_US/the-new-2017-bmw-i3-94-ah-:-more-range-paired-to-high-level-dynamic-performance?language=en_US",
+          "role": "primary",
+          "applies_engines": [],
+          "applies_chassis": [],
+          "hard": false
+        },
+        {
+          "label": "Wikipedia · BMW i3 battery generations",
+          "url": "https://en.wikipedia.org/wiki/BMW_i3_(hatchback)",
+          "role": "primary",
+          "applies_engines": [],
+          "applies_chassis": [],
+          "hard": false
+        },
+        {
+          "label": "PLN · e-dakro · regeneracja baterii i3 od 6 500 zł",
+          "url": "https://e-dakro.pl/regeneracja-baterii-trakcyjnych-kiedy-warto-i-ile-mozna-zaoszczedzic/",
+          "role": "pln_band",
+          "applies_engines": [],
+          "applies_chassis": [],
+          "hard": false
+        },
+        {
+          "label": "PLN · Allegro Lokalnie · i3 upgrade 154Ah 29 000 zł (Poznań)",
+          "url": "https://allegrolokalnie.pl/oferta/bmw-i3-wymiana-baterii-60ah-94ah-120ah-na-154ah-or-upgrade-zasiegu",
+          "role": "pln_band",
+          "applies_engines": [],
+          "applies_chassis": [],
+          "hard": false
+        },
+        {
+          "label": "Wikipedia · BMW i3 (battery generations)",
+          "url": "https://en.wikipedia.org/wiki/BMW_i3",
+          "role": "primary",
+          "applies_engines": [],
+          "applies_chassis": [],
+          "hard": false
+        }
+      ]
+    },
+    {
+      "id": "i3-hv-120ah",
+      "packEngines": [
+        "IBE0",
+        "IB1",
+        "RANGE EXTENDER"
+      ],
+      "chassisCount": 1,
+      "uncoveredEngines": [],
+      "aqMissing": [],
+      "sources": [
+        {
+          "label": "BMW Press · 2019 i3 120Ah",
+          "url": "https://www.press.bmwgroup.com/usa/article/detail/T0285420EN_US/the-new-2019-bmw-i3-120ah-and-i3s-120ah?language=en_US",
+          "role": "primary",
+          "applies_engines": [],
+          "applies_chassis": [],
+          "hard": false
+        },
+        {
+          "label": "Wikipedia · BMW i3 battery generations",
+          "url": "https://en.wikipedia.org/wiki/BMW_i3_(hatchback)",
+          "role": "primary",
+          "applies_engines": [],
+          "applies_chassis": [],
+          "hard": false
+        },
+        {
+          "label": "PLN · e-dakro · regeneracja baterii i3 od 6 500 zł",
+          "url": "https://e-dakro.pl/regeneracja-baterii-trakcyjnych-kiedy-warto-i-ile-mozna-zaoszczedzic/",
+          "role": "pln_band",
+          "applies_engines": [],
+          "applies_chassis": [],
+          "hard": false
+        },
+        {
+          "label": "PLN · Allegro Lokalnie · i3 upgrade 154Ah 29 000 zł (Poznań)",
+          "url": "https://allegrolokalnie.pl/oferta/bmw-i3-wymiana-baterii-60ah-94ah-120ah-na-154ah-or-upgrade-zasiegu",
+          "role": "pln_band",
+          "applies_engines": [],
+          "applies_chassis": [],
+          "hard": false
+        },
+        {
+          "label": "Wikipedia · BMW i3 (120 Ah)",
+          "url": "https://en.wikipedia.org/wiki/BMW_i3",
+          "role": "primary",
+          "applies_engines": [],
+          "applies_chassis": [],
+          "hard": false
+        }
+      ]
+    },
+    {
+      "id": "i4-hv-battery",
+      "packEngines": [
+        "HA0"
+      ],
+      "chassisCount": 1,
+      "uncoveredEngines": [],
+      "aqMissing": [],
+      "sources": [
+        {
+          "label": "Wikipedia · BMW i4",
+          "url": "https://en.wikipedia.org/wiki/BMW_i4",
+          "role": "primary",
+          "applies_engines": [
+            "HA0"
+          ],
+          "applies_chassis": [],
+          "hard": false
+        },
+        {
+          "label": "BMW Press · 2019 i3 120Ah",
+          "url": "https://www.press.bmwgroup.com/usa/article/detail/T0285420EN_US/the-new-2019-bmw-i3-120ah-and-i3s-120ah?language=en_US",
+          "role": "family_prior",
+          "applies_engines": [],
+          "applies_chassis": [],
+          "hard": false
+        },
+        {
+          "label": "Wikipedia · BMW i3 battery generations",
+          "url": "https://en.wikipedia.org/wiki/BMW_i3_(hatchback)",
+          "role": "family_prior",
+          "applies_engines": [],
+          "applies_chassis": [],
+          "hard": false
+        }
+      ]
+    },
+    {
+      "id": "n63-valve-stem-oil",
+      "packEngines": [
+        "N63"
+      ],
+      "chassisCount": 17,
+      "uncoveredEngines": [],
+      "aqMissing": [],
+      "sources": [
+        {
+          "label": "NHTSA · SI B11 01 17 — N63T/S63T valve seal replacement",
+          "url": "https://static.nhtsa.gov/odi/tsbs/2017/MC-10146525-9999.pdf",
+          "role": "primary",
+          "applies_engines": [],
+          "applies_chassis": [],
+          "hard": false
+        },
+        {
+          "label": "NHTSA · SI — N63/S63 valve seal replacement procedure",
+          "url": "https://static.nhtsa.gov/odi/tsbs/2018/MC-10149960-9999.pdf",
+          "role": "primary",
+          "applies_engines": [
+            "N63"
+          ],
+          "applies_chassis": [],
+          "hard": false
+        },
+        {
+          "label": "CourtListener · N63 oil-consumption class action (TU/TU2 applications)",
+          "url": "https://storage.courtlistener.com/recap/gov.uscourts.njd.407573/gov.uscourts.njd.407573.6.0.pdf",
+          "role": "primary",
+          "applies_engines": [
+            "N63"
+          ],
+          "applies_chassis": [],
+          "hard": false
+        }
+      ]
+    },
+    {
+      "id": "b57-egr-cooler-recall",
+      "packEngines": [
+        "B57"
+      ],
+      "chassisCount": 2,
+      "uncoveredEngines": [],
+      "aqMissing": [],
+      "sources": [
+        {
+          "label": "NHTSA · 22V-614 Part 573 — 2018 540d B57O EGR cooler",
+          "url": "https://static.nhtsa.gov/odi/rcl/2022/RCLRPT-22V614-6498.PDF",
+          "role": "primary",
+          "applies_engines": [],
+          "applies_chassis": [],
+          "hard": false
+        },
+        {
+          "label": "NHTSA · SI B11 02 22 Recall 22V-614 (prod Oct 2017–Jun 2018)",
+          "url": "https://static.nhtsa.gov/odi/rcl/2022/RCRIT-22V614-6977.pdf",
+          "role": "primary",
+          "applies_engines": [],
+          "applies_chassis": [],
+          "hard": false
+        },
+        {
+          "label": "Wikipedia · BMW B57",
+          "url": "https://en.wikipedia.org/wiki/BMW_B57",
+          "role": "primary",
+          "applies_engines": [
+            "B57"
+          ],
+          "applies_chassis": [],
+          "hard": false
+        }
+      ]
+    },
+    {
+      "id": "s68-too-new",
+      "packEngines": [
+        "S68"
+      ],
+      "chassisCount": 2,
+      "uncoveredEngines": [],
+      "aqMissing": [],
+      "sources": [
+        {
+          "label": "EngineScope · BMW S68 — too new for long-term pattern failures",
+          "url": "https://enginescope.gr/engine/bmw-s68/",
+          "role": "primary",
+          "applies_engines": [
+            "S68"
+          ],
+          "applies_chassis": [],
+          "hard": false
+        },
+        {
+          "label": "OwnerSpecs · S68B44 oil capacity / LL-22 FE++",
+          "url": "https://ownerspecs.com/engines/s68b44",
+          "role": "primary",
+          "applies_engines": [],
+          "applies_chassis": [],
+          "hard": false
+        },
+        {
+          "label": "Gondura · G90 M5 — HV battery coolant interval note",
+          "url": "https://cars.gondura.com/bmw-m5-vii-g90/en",
+          "role": "primary",
+          "applies_engines": [],
+          "applies_chassis": [
+            "g90"
+          ],
+          "hard": false
+        }
+      ]
+    },
+    {
+      "id": "n20-oil-filter-early",
+      "packEngines": [
+        "N20"
+      ],
+      "chassisCount": 6,
+      "uncoveredEngines": [],
+      "aqMissing": [],
+      "sources": [
+        {
+          "label": "NHTSA · SI B11 13 15 — N20 inspect/replace plastic OFH (Aug 2011–Mar 2012)",
+          "url": "https://static.nhtsa.gov/odi/tsbs/2015/MC-10151399-9999.pdf",
+          "role": "primary",
+          "applies_engines": [
+            "N20"
+          ],
+          "applies_chassis": [],
+          "hard": false
+        },
+        {
+          "label": "NHTSA · SI B11 13 15 (July 2015 revision)",
+          "url": "https://static.nhtsa.gov/odi/tsbs/2015/MC-10146945-9999.pdf",
+          "role": "primary",
+          "applies_engines": [],
+          "applies_chassis": [],
+          "hard": false
+        }
+      ]
+    },
+    {
+      "id": "n62-valvetronic-early",
+      "packEngines": [
+        "N62"
+      ],
+      "chassisCount": 7,
+      "uncoveredEngines": [],
+      "aqMissing": [],
+      "sources": [
+        {
+          "label": "BMW SI B11 02 05 — N62 intermediate levers (prod 06/04–02/05)",
+          "url": "https://xoutpost.com/attachments/x5-e53-forum/38547d1261255308-rough-idle-cold-days-sib-11-02-05.pdf",
+          "role": "primary",
+          "applies_engines": [
+            "N62"
+          ],
+          "applies_chassis": [],
+          "hard": false
+        },
+        {
+          "label": "BMW SI B11 02 05 — N62 intermediate levers (prod 06/04–02/05)",
+          "url": "https://xoutpost.com/attachments/x5-e53-forum/38547d1261255308-rough-idle-cold-d",
+          "role": "family_prior",
+          "applies_engines": [
+            "N62"
+          ],
+          "applies_chassis": [],
+          "hard": false
+        }
+      ]
+    },
+    {
+      "id": "n62-valvetronic-late",
+      "packEngines": [
+        "N62"
+      ],
+      "chassisCount": 8,
+      "uncoveredEngines": [],
+      "aqMissing": [],
+      "sources": [
+        {
+          "label": "Wikipedia · BMW N62",
+          "url": "https://en.wikipedia.org/wiki/BMW_N62",
+          "role": "primary",
+          "applies_engines": [
+            "N62"
+          ],
+          "applies_chassis": [],
+          "hard": false
+        },
+        {
+          "label": "PLN · Common N62 ancillary repair band prior (water pipe/valve cover family)",
+          "url": "https://kosztserwisu.pl/modele-samochodow/bmw/",
+          "role": "family_prior",
+          "applies_engines": [
+            "N62"
+          ],
+          "applies_chassis": [],
+          "hard": false
+        },
+        {
+          "label": "Wikipedia · BMW N62 (production 2001–2010)",
+          "url": "https://en.wikipedia.org/wiki/BMW_N62",
+          "role": "primary",
+          "applies_engines": [
+            "N62"
+          ],
+          "applies_chassis": [],
+          "hard": false
+        },
+        {
+          "label": "BMW SI B11 02 05 early levers (see n62-valvetronic-early)",
+          "url": "https://xoutpost.com/attachments/x5-e53-forum/38547d1261255308-rough-idle-cold-days-sib-11-02-05.pdf",
+          "role": "primary",
+          "applies_engines": [
+            "N62"
+          ],
+          "applies_chassis": [],
+          "hard": false
+        }
+      ]
+    }
+  ],
+  "http": null
+}

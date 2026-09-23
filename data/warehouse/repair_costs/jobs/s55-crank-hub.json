@@ -1,0 +1,41 @@
+{
+  "pain_id": "s55-crank-hub",
+  "status": "quoted_workshop_band",
+  "currency": "PLN",
+  "region": "PL",
+  "collected_at": "2026-09-23T20:30:00Z",
+  "totals_pln": {
+    "independent": [
+      4000,
+      9000
+    ],
+    "specialist": [
+      5500,
+      12000
+    ],
+    "aso": [
+      8000,
+      16000
+    ]
+  },
+  "parts_pln": [
+    1500,
+    4500
+  ],
+  "labor_pln": [
+    2000,
+    5000
+  ],
+  "quotes": [
+    {
+      "tier": "specialist",
+      "pln_low": 4000,
+      "pln_high": 9000,
+      "label": "BMWTuning · S55 crank hub discussion",
+      "url": "https://bmwtuning.co/the-4-most-common-bmw-s55-engine-problems/"
+    }
+  ],
+  "confidence": "pain_pln_bands_sync",
+  "split_note": "Prior: crank hub + timing correction job class (refine with Autodoc)",
+  "formula": "independent_full = parts_pln + labor_pln (when split present)"
+}

@@ -14,5 +14,72 @@
     "Autodoc/IC SKU BOM → partsReality",
     "Sourced pains: S55/S58/S63/S85/S54/B38/B57/N63/EV",
     "Deeper long-tail engine matrices + campaigns"
+  ],
+  "runs": [
+    {
+      "id": "phase-f1-year-windows",
+      "at": "2026-09-23T16:30:00Z",
+      "note": "N47 early/mid/late + N20/N54/EGR year bounds; OFH all-years policy"
+    },
+    {
+      "id": "phase-f1b-b48-b58-b47-n57",
+      "at": "2026-09-23T16:45:00Z"
+    },
+    {
+      "id": "phase-f1c-n52-n62-n63-m57",
+      "at": "2026-09-23T17:00:00Z"
+    },
+    {
+      "id": "phase-f1d-n13-n46-classic-takata",
+      "at": "2026-09-23T17:15:00Z"
+    },
+    {
+      "id": "phase-f1e-n55-hpfp-n57-egr-b38",
+      "at": "2026-09-23T18:00:00Z"
+    },
+    {
+      "id": "phase-f2a-nulls-n52-b47",
+      "at": "2026-09-23T19:00:00Z"
+    },
+    {
+      "id": "phase-f2b-n13-n46-n43-n53",
+      "at": "2026-09-23T19:30:00Z"
+    },
+    {
+      "id": "phase-f2c-m-cars",
+      "at": "2026-09-23T20:00:00Z"
+    },
+    {
+      "id": "phase-f2d-jobs-s85-smg",
+      "at": "2026-09-23T20:30:00Z",
+      "jobs_written": 27
+    },
+    {
+      "id": "phase-f4a-ofh-i3",
+      "at": "2026-09-23T21:00:00Z"
+    },
+    {
+      "id": "phase-f4b-n63-b57-s68",
+      "at": "2026-09-23T22:00:00Z"
+    },
+    {
+      "id": "phase-f4c-n20-ofh-n62-levers",
+      "at": "2026-09-23T23:00:00Z"
+    },
+    {
+      "id": "phase-s-source-display",
+      "at": "2026-09-23T15:52:00Z",
+      "note": "Source scope: applies_engines/chassis + role + autodoc_by_engine; wiki fill; 404 prune; audit_source_display.mjs; UI SourceList filter",
+      "tools": [
+        "data/tools/phase_s_source_scope.mjs",
+        "data/tools/audit_source_display.mjs"
+      ],
+      "audit": {
+        "hard_mismatches": 0,
+        "uncovered_engines": 0,
+        "autodoc_gaps": 0,
+        "unique_urls": 178
+      }
+    }
   ]
 }

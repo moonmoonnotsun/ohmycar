@@ -1,0 +1,40 @@
+{
+  "pain_id": "n62-valvetronic-early",
+  "status": "quoted_workshop_band",
+  "currency": "PLN",
+  "region": "PL",
+  "collected_at": "2026-09-23T23:00:00Z",
+  "totals_pln": {
+    "independent": [
+      6500,
+      15000
+    ],
+    "specialist": [
+      8500,
+      18000
+    ],
+    "aso": [
+      12000,
+      25000
+    ]
+  },
+  "parts_pln": [
+    2500,
+    6000
+  ],
+  "labor_pln": [
+    4000,
+    9000
+  ],
+  "quotes": [
+    {
+      "tier": "specialist",
+      "pln_low": 6500,
+      "pln_high": 15000,
+      "label": "BMW SI B11 02 05 — N62 intermediate levers (prod 06/04–02/05)",
+      "url": "https://xoutpost.com/attachments/x5-e53-forum/38547d1261255308-rough-idle-cold-days-sib-11-02-05.pdf"
+    }
+  ],
+  "split_note": "Both banks Valvetronic intermediate levers (×16) + valve covers — SI B11 02 05 job class prior",
+  "confidence": "f4c_sync"
+}

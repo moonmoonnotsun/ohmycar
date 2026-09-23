@@ -1,0 +1,40 @@
+{
+  "pain_id": "n20-oil-filter-early",
+  "status": "quoted_workshop_band",
+  "currency": "PLN",
+  "region": "PL",
+  "collected_at": "2026-09-23T23:00:00Z",
+  "totals_pln": {
+    "independent": [
+      2000,
+      5000
+    ],
+    "specialist": [
+      2800,
+      6500
+    ],
+    "aso": [
+      4000,
+      9000
+    ]
+  },
+  "parts_pln": [
+    800,
+    2200
+  ],
+  "labor_pln": [
+    1200,
+    2800
+  ],
+  "quotes": [
+    {
+      "tier": "specialist",
+      "pln_low": 2000,
+      "pln_high": 5000,
+      "label": "NHTSA · SI B11 13 15 — N20 inspect/replace plastic OFH (Aug 2011–Mar 2012)",
+      "url": "https://static.nhtsa.gov/odi/tsbs/2015/MC-10151399-9999.pdf"
+    }
+  ],
+  "split_note": "Aluminum OFH housing R&R after plastic failure; SI B11 13 15 was free when open — unpaid used cars pay indie/ASO path",
+  "confidence": "f4c_sync"
+}

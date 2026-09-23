@@ -1,0 +1,41 @@
+{
+  "pain_id": "s65-throttle-actuators",
+  "status": "quoted_workshop_band",
+  "currency": "PLN",
+  "region": "PL",
+  "collected_at": "2026-09-23T20:30:00Z",
+  "totals_pln": {
+    "independent": [
+      3500,
+      8500
+    ],
+    "specialist": [
+      4500,
+      11000
+    ],
+    "aso": [
+      6000,
+      14000
+    ]
+  },
+  "parts_pln": [
+    2500,
+    7000
+  ],
+  "labor_pln": [
+    800,
+    2000
+  ],
+  "quotes": [
+    {
+      "tier": "specialist",
+      "pln_low": 3500,
+      "pln_high": 8500,
+      "label": "BMWTuning · S65 throttle body actuator failures",
+      "url": "https://bmwtuning.co/s65-engine-problems/"
+    }
+  ],
+  "confidence": "pain_pln_bands_sync",
+  "split_note": "Family prior: dual-bank actuator replacement class (refine with Autodoc / indie quotes)",
+  "formula": "independent_full = parts_pln + labor_pln (when split present)"
+}

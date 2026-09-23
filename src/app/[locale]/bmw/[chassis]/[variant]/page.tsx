@@ -7,7 +7,7 @@ import { isLocale, locales } from "@/lib/locale";
 import { t } from "@/lib/i18n";
 import { Money, MoneyRange } from "@/components/Money";
 import { scoreBreakdown } from "@/lib/score";
-import { ScoreGlow, ScoreTrack } from "@/components/ScoreBadge";
+import { ScoreCircle, ScoreGlow, ScoreTrack } from "@/components/ScoreBadge";
 import { BuyBar, MarketLinks, PainCard } from "@/components/Briefing";
 import { BodySwitcher } from "@/components/BodySwitcher";
 import { CarPhoto } from "@/components/CarPhoto";
@@ -62,12 +62,6 @@ export default async function VariantPage({
   const copy = t(locale);
   const pains = painsForVariant(variant);
   const breakdown = scoreBreakdown(variant.inputs);
-  const statusLabel =
-    variant.scoreStatus === "evidence_derived"
-      ? copy.scoreEvidence
-      : variant.scoreStatus === "signed"
-        ? copy.signed
-        : copy.scoreInsufficient;
   const bodies = relatedBodies(slug);
   const body = copy[bodyLabelKey(bodyOf(chassis))];
 
@@ -84,7 +78,11 @@ export default async function VariantPage({
               tone="card"
               emptyLabel={copy.photoSoon}
               badge={chassis.code}
-            />
+            >
+              <div className="absolute left-2 top-2 z-10">
+                <ScoreCircle score={variant.score} locale={locale} label={copy.score} />
+              </div>
+            </CarPhoto>
             <CompareAddButton locale={locale} chassisSlug={slug} variantSlug={variant.slug} />
           </div>
           <div className="min-w-0">
@@ -108,9 +106,6 @@ export default async function VariantPage({
                   {variant.model} {variant.engine}
                 </span>
               </div>
-              <p className="mt-1.5 text-xs leading-5 text-[var(--muted)] sm:mt-2.5 sm:text-sm sm:leading-6">
-                {statusLabel}
-              </p>
             </div>
             <div className="mt-3.5 sm:mt-5">
               <VariantSwitcher locale={locale} chassisSlug={slug} variant={variant} />
@@ -146,7 +141,7 @@ export default async function VariantPage({
               value={variant.fuel === "diesel" ? copy.fuelDiesel : copy.fuelPetrol}
             />
             <SpecRow icon="body" label={copy.bodyType} value={body} />
-            <SpecRow icon="year" label={copy.years} value={String(variant.year)} last />
+            <SpecRow icon="year" label={copy.year} value={String(variant.year)} last />
           </dl>
         </div>
 

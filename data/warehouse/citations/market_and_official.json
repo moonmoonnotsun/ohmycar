@@ -1,5 +1,6 @@
 {
-  "collected_at": "2026-09-22T16:29:21Z",
+  "collected_at": "2026-09-23T16:35:00Z",
+  "note": "UI table lives in src/data/scoreSources.ts (score page). Buy never enters 0–100. Tier C = discovery only.",
   "buy_car": [
     {
       "id": "otomoto",
@@ -24,7 +25,8 @@
     {
       "id": "cardossier",
       "url": "https://car-dossier.com/en/api/",
-      "public_stats": "https://car-dossier.com/ceny/bmw"
+      "public_stats": "https://car-dossier.com/ceny/bmw",
+      "in_score": false
     },
     {
       "id": "eurotax_pl",
@@ -38,7 +40,8 @@
   "recalls": [
     {
       "id": "uokik",
-      "url": "https://uokik.gov.pl/bip/tagi/bmw"
+      "url": "https://uokik.gov.pl/bip/tagi/bmw",
+      "in_score": true
     },
     {
       "id": "bmw_vin_pl",
@@ -46,7 +49,8 @@
     },
     {
       "id": "nhtsa",
-      "url": "https://www.nhtsa.gov/nhtsa-datasets-and-apis"
+      "url": "https://www.nhtsa.gov/nhtsa-datasets-and-apis",
+      "api": "https://api.nhtsa.gov/recalls/recallsByVehicle"
     }
   ],
   "reliability_priors": [
@@ -58,5 +62,29 @@
       "id": "tuv_report",
       "url": "https://www.tuev-verband.de/presse/publikationen/reporte/tuev-report-autobild"
     }
-  ]
+  ],
+  "identity": [
+    { "id": "realoem", "url": "https://www.realoem.com/bmw/" }
+  ],
+  "press_pl": [
+    { "id": "autokult", "url": "https://autokult.pl/" },
+    { "id": "wyborkierowcow", "url": "https://www.wyborkierowcow.pl/" },
+    { "id": "skanyx", "url": "https://skanyx.com/pl/blog/" },
+    { "id": "autobaza", "url": "https://www.autobaza.pl/" }
+  ],
+  "forums_discovery": [
+    { "id": "bimmerpost", "url": "https://www.bimmerpost.com/" },
+    { "id": "e90post", "url": "https://www.e90post.com/forums/" },
+    { "id": "bimmerfest", "url": "https://www.bimmerfest.com/" },
+    { "id": "5series_net", "url": "https://www.5series.net/" },
+    { "id": "bmwklub", "url": "https://www.bmwklubpolska.pl/forum/" },
+    { "id": "bmwsport", "url": "https://www.bmw-sport.pl/" },
+    { "id": "motor_talk", "url": "https://www.motor-talk.de/" },
+    { "id": "reddit_bmw", "url": "https://www.reddit.com/r/BMW/" }
+  ],
+  "parts": [
+    { "id": "autodoc", "url": "https://www.autodoc.pl/" },
+    { "id": "intercars_api", "url": "https://docs.webapi.intercars.eu/" }
+  ],
+  "ui_registry": "src/data/scoreSources.ts"
 }

@@ -1,0 +1,42 @@
+{
+  "pain_id": "s85-throttle-actuators",
+  "status": "quoted_workshop_band",
+  "currency": "PLN",
+  "region": "PL",
+  "collected_at": "2026-09-23T20:30:00Z",
+  "totals_pln": {
+    "independent": [
+      4177,
+      4914
+    ],
+    "specialist": [
+      4914,
+      6143
+    ],
+    "aso": [
+      6880,
+      8354
+    ]
+  },
+  "parts_pln": [
+    1440,
+    3120
+  ],
+  "labor_pln": [
+    800,
+    2000
+  ],
+  "quotes": [
+    {
+      "tier": "specialist",
+      "pln_low": 4177,
+      "pln_high": 4914,
+      "currency": "GBP",
+      "pln_note": "Element Performance £945 supply+fit @5.2",
+      "url": "https://www.elementperformance.co.uk/bmw-e60-m5"
+    }
+  ],
+  "confidence": "pain_pln_bands_sync",
+  "split_note": "Element Performance £945 supply+fit @5.2 PLN/GBP; reman unit listings ~$390 ea (Euro Power Motorsports)",
+  "formula": "independent_full = parts_pln + labor_pln (when split present)"
+}

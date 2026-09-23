@@ -7,6 +7,13 @@ import type { Locale } from "@/lib/locale";
 import { t } from "@/lib/i18n";
 import { autodocUrl } from "@/lib/links";
 import { MoneyRange } from "@/components/Money";
+import {
+  autodocQueryFor,
+  displaySourceLabel,
+  filterPainSources,
+  filterPriceSources,
+  type PainSource,
+} from "@/lib/painSources";
 
 const SEV: Record<Pain["severity"], { key: keyof ReturnType<typeof t>; bar: string }> = {
   "engine-loss": { key: "sevEngine", bar: "bg-[var(--bad)]" },
@@ -135,17 +142,27 @@ export function FaultHint({
           <span className="text-[var(--muted)]">{copy.affects}: </span>
           {pain.affects[locale]}
         </p>
-        <WorkshopPrices locale={locale} pain={pain} />
+        <WorkshopPrices
+          locale={locale}
+          pain={pain}
+          engine={variant?.engine}
+          chassisSlug={variant?.chassisSlug ?? chassis?.slug}
+        />
         <a
           className="mt-4 inline-flex h-tap items-center text-sm font-medium underline underline-offset-2"
-          href={autodocUrl(pain.autodocQuery[locale], locale, chassis, variant)}
+          href={autodocUrl(autodocQueryFor(pain, locale, variant?.engine), locale, chassis, variant)}
           target="_blank"
           rel="noreferrer"
           onClick={(e) => e.stopPropagation()}
         >
-          {copy.autodoc}: {pain.autodocQuery[locale]}
+          {copy.autodoc}: {autodocQueryFor(pain, locale, variant?.engine)}
         </a>
-        <SourceList locale={locale} sources={pain.sources} />
+        <SourceList
+          locale={locale}
+          sources={pain.sources}
+          engine={variant?.engine}
+          chassisSlug={variant?.chassisSlug ?? chassis?.slug}
+        />
       </div>
     </dialog>
   );
@@ -170,34 +187,63 @@ export function FaultHint({
 export function SourceList({
   locale,
   sources,
+  engine,
+  chassisSlug,
 }: {
   locale: Locale;
   sources: Pain["sources"];
+  engine?: string;
+  chassisSlug?: string;
 }) {
   const copy = t(locale);
   if (sources.length === 0) return null;
 
-  const price = sources.filter((s) => /^PLN\b/i.test(s.label) || /cenauslug|polecany|smorawinski|autokult|kosztserwisu|hypertech|skanyx|admserwis|rozrzad\.pl|gearmar|bmwstore|oryginalne-czesci/i.test(s.url));
+  const scoped = filterPainSources(sources as PainSource[], { engine, chassisSlug });
+  const price = filterPriceSources(sources as PainSource[], { engine, chassisSlug });
   const priceUrls = new Set(price.map((s) => s.url));
-  const fault = sources.filter((s) => !priceUrls.has(s.url));
+  const fault = scoped.filter((s) => !priceUrls.has(s.url));
 
   return (
     <div className="mt-3 space-y-3">
       {fault.length > 0 ? (
-        <SourceGroup title={copy.sources} items={fault} />
+        <SourceGroup
+          title={copy.sources}
+          items={fault}
+          engine={engine}
+          chassisSlug={chassisSlug}
+          familyPriorPrefix={copy.familyPrior}
+        />
       ) : null}
       {price.length > 0 ? (
-        <SourceGroup title={copy.priceSources} items={price} />
+        <SourceGroup
+          title={copy.priceSources}
+          items={price}
+          engine={engine}
+          chassisSlug={chassisSlug}
+          familyPriorPrefix={copy.familyPrior}
+        />
       ) : null}
     </div>
   );
 }
 
-function SourceGroup({ title, items }: { title: string; items: Pain["sources"] }) {
+function SourceGroup({
+  title,
+  items,
+  engine,
+  chassisSlug,
+  familyPriorPrefix,
+}: {
+  title: string;
+  items: PainSource[];
+  engine?: string;
+  chassisSlug?: string;
+  familyPriorPrefix: string;
+}) {
   return (
     <div>
-      <p className="text-[10px] font-semibold uppercase tracking-[0.14em] text-[var(--muted)]">{title}</p>
-      <ul className="mt-1.5 flex flex-col gap-1">
+      <p className="text-[10px] font-semibold uppercase tracking-[0.14em] text-[var(--ink)]">{title}</p>
+      <ul className="mt-1.5 list-disc space-y-1 pl-4 marker:text-[var(--muted)]">
         {items.map((source) => (
           <li key={source.url}>
             <a
@@ -207,7 +253,10 @@ function SourceGroup({ title, items }: { title: string; items: Pain["sources"] }
               className="break-all text-[13px] text-[var(--muted)] underline decoration-[var(--line)] underline-offset-2 hover:text-[var(--ink)]"
               onClick={(e) => e.stopPropagation()}
             >
-              {source.label.replace(/^PLN\s*·\s*/i, "")}
+              {displaySourceLabel(source, { engine, chassisSlug, familyPriorPrefix }).replace(
+                /^PLN\s*·\s*/i,
+                "",
+              )}
             </a>
           </li>
         ))}
@@ -220,11 +269,29 @@ function SourceGroup({ title, items }: { title: string; items: Pain["sources"] }
  * RepairPal-style estimate: lead with typical independent total,
  * then parts/labor receipt rows, then specialist/ASO comparison.
  */
-export function WorkshopPrices({ locale, pain }: { locale: Locale; pain: Pain }) {
+export function WorkshopPrices({
+  locale,
+  pain,
+  engine,
+  chassisSlug,
+}: {
+  locale: Locale;
+  pain: Pain;
+  engine?: string;
+  chassisSlug?: string;
+}) {
   const copy = t(locale);
   const hasTotals = Boolean(pain.plnIndependent || pain.plnSpecialist || pain.plnAso);
   const hasSplit = Boolean(pain.plnParts || pain.plnLabor);
   const isFree = pain.plnIndependent?.[0] === 0 && pain.plnIndependent?.[1] === 0;
+  const priceHelp = (
+    <PriceSourcesHelp
+      locale={locale}
+      pain={pain}
+      engine={engine}
+      chassisSlug={chassisSlug}
+    />
+  );
 
   if (!hasTotals && !hasSplit) {
     return (
@@ -238,9 +305,12 @@ export function WorkshopPrices({ locale, pain }: { locale: Locale; pain: Pain })
     <div className="mt-4 overflow-hidden rounded-xl border border-[var(--line)] bg-[var(--paper)]/60">
       {/* Hero total — primary glance value */}
       <div className="px-4 pb-3 pt-3.5">
-        <p className="text-[10px] font-semibold uppercase tracking-[0.16em] text-[var(--muted)]">
-          {copy.plnTypical}
-        </p>
+        <div className="flex items-center gap-1.5">
+          <p className="text-[10px] font-semibold uppercase tracking-[0.16em] text-[var(--muted)]">
+            {copy.plnTypical}
+          </p>
+          {priceHelp}
+        </div>
         <div className="mt-1.5 flex flex-wrap items-end justify-between gap-x-3 gap-y-1">
           <MoneyRange range={pain.plnIndependent} locale={locale} size="lg" />
           <p className="pb-0.5 text-[12px] text-[var(--muted)]">{copy.plnIndepShop}</p>
@@ -274,14 +344,126 @@ export function WorkshopPrices({ locale, pain }: { locale: Locale; pain: Pain })
             specialist={pain.plnSpecialist}
             aso={pain.plnAso}
           />
-          <div className="mt-2 space-y-0.5">
-            <ReceiptRow label={copy.independent} range={pain.plnIndependent} locale={locale} quiet />
-            <ReceiptRow label={copy.specialist} range={pain.plnSpecialist} locale={locale} quiet />
-            <ReceiptRow label={copy.aso} range={pain.plnAso} locale={locale} quiet />
-          </div>
         </div>
       ) : null}
     </div>
+  );
+}
+
+function PriceSourcesHelp({
+  locale,
+  pain,
+  engine,
+  chassisSlug,
+}: {
+  locale: Locale;
+  pain: Pain;
+  engine?: string;
+  chassisSlug?: string;
+}) {
+  const copy = t(locale);
+  const dialog = useRef<HTMLDialogElement>(null);
+  const titleId = useId();
+  const [mounted, setMounted] = useState(false);
+  const items = filterPriceSources(pain.sources as PainSource[], { engine, chassisSlug });
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  function open(e: MouseEvent) {
+    e.preventDefault();
+    e.stopPropagation();
+    dialog.current?.showModal();
+  }
+
+  function close(e?: MouseEvent) {
+    e?.stopPropagation();
+    dialog.current?.close();
+  }
+
+  const sheet = (
+    <dialog
+      ref={dialog}
+      aria-labelledby={titleId}
+      className="fault-dialog"
+      onClick={(e) => {
+        e.stopPropagation();
+        if (e.target === dialog.current) close(e);
+      }}
+      onCancel={(e) => e.stopPropagation()}
+    >
+      <div className="fault-dialog-head">
+        <div className="min-w-0">
+          <p className="text-[10px] font-semibold uppercase tracking-[0.16em] text-[var(--muted)]">
+            {copy.plnNote}
+          </p>
+          <h2 id={titleId} className="mt-1 text-lg font-semibold leading-snug">
+            {copy.priceSources}
+          </h2>
+        </div>
+        <button
+          type="button"
+          onClick={close}
+          className="grid size-12 shrink-0 place-items-center rounded-full border border-[var(--line)] bg-[var(--wash)] text-[var(--ink)]"
+          aria-label={copy.faultClose}
+        >
+          <svg viewBox="0 0 24 24" className="block size-5" aria-hidden>
+            <path
+              d="M7 7 17 17M17 7 7 17"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+              strokeLinecap="round"
+            />
+          </svg>
+        </button>
+      </div>
+      <div className="fault-dialog-body px-4 py-4">
+        <p className="text-sm leading-6 text-[var(--muted)]">{copy.priceSourcesLead}</p>
+        {pain.plnNote ? (
+          <p className="mt-3 text-[13px] leading-5 text-[var(--ink)]/90">{pain.plnNote}</p>
+        ) : null}
+        {items.length > 0 ? (
+          <ul className="mt-4 list-disc space-y-2 pl-4 marker:text-[var(--muted)]">
+            {items.map((source) => (
+              <li key={source.url}>
+                <a
+                  href={source.url}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="break-all text-[13px] text-[var(--muted)] underline decoration-[var(--line)] underline-offset-2 hover:text-[var(--ink)]"
+                  onClick={(e) => e.stopPropagation()}
+                >
+                  {displaySourceLabel(source, {
+                    engine,
+                    chassisSlug,
+                    familyPriorPrefix: copy.familyPrior,
+                  }).replace(/^PLN\s*·\s*/i, "")}
+                </a>
+              </li>
+            ))}
+          </ul>
+        ) : (
+          <p className="mt-4 text-sm leading-6 text-[var(--muted)]">{copy.priceSourcesEmpty}</p>
+        )}
+      </div>
+    </dialog>
+  );
+
+  return (
+    <span className="inline-flex">
+      <button
+        type="button"
+        aria-haspopup="dialog"
+        aria-label={copy.priceSources}
+        onClick={open}
+        className="inline-flex size-5 shrink-0 items-center justify-center rounded-full border border-[var(--line)] text-[11px] font-semibold leading-none text-[var(--muted)] hover:border-[var(--ink)] hover:text-[var(--ink)]"
+      >
+        ?
+      </button>
+      {mounted ? createPortal(sheet, document.body) : null}
+    </span>
   );
 }
 
@@ -290,23 +472,25 @@ function ReceiptRow({
   range,
   locale,
   quiet,
+  tone,
 }: {
   label: string;
   range: [number, number] | null | undefined;
   locale: Locale;
   quiet?: boolean;
+  tone?: "good" | "mid" | "bad";
 }) {
   return (
     <div className="flex items-baseline justify-between gap-3 py-1">
       <span className={`min-w-0 text-[12px] ${quiet ? "text-[var(--muted)]" : "text-[var(--ink)]"}`}>
         {label}
       </span>
-      <MoneyRange range={range} locale={locale} size="sm" />
+      <MoneyRange range={range} locale={locale} size="sm" tone={tone} />
     </div>
   );
 }
 
-/** Three shop tiers as stacked tracks — no overlapping translucent mush. */
+/** One row per shop: label · range bar · price; shared from/to axis under the bars. */
 function ShopLadder({
   locale,
   independent,
@@ -319,40 +503,61 @@ function ShopLadder({
   aso: [number, number] | null;
 }) {
   const copy = t(locale);
-  const lows = [independent?.[0], specialist?.[0], aso?.[0]].filter((n): n is number => n != null);
-  const highs = [independent?.[1], specialist?.[1], aso?.[1]].filter((n): n is number => n != null);
+  const rows: {
+    range: [number, number] | null;
+    bar: string;
+    label: string;
+    tone: "good" | "mid" | "bad";
+  }[] = [
+    { range: independent, bar: "bg-[var(--good)]", label: copy.independent, tone: "good" },
+    { range: specialist, bar: "bg-[var(--mid)]", label: copy.specialist, tone: "mid" },
+    { range: aso, bar: "bg-[var(--bad)]", label: copy.aso, tone: "bad" },
+  ];
+  const lows = rows.map((r) => r.range?.[0]).filter((n): n is number => n != null);
+  const highs = rows.map((r) => r.range?.[1]).filter((n): n is number => n != null);
   if (lows.length === 0 || highs.length === 0) return null;
 
   const min = Math.min(...lows);
   const max = Math.max(...highs);
   const span = Math.max(max - min, 1);
-
-  function track(range: [number, number] | null, tone: string, label: string) {
-    if (!range) return null;
-    const left = ((range[0] - min) / span) * 100;
-    const width = Math.max(((range[1] - range[0]) / span) * 100, 3);
-    return (
-      <div className="flex items-center gap-2" title={`${label}: ${range[0]}–${range[1]} PLN`}>
-        <span className="w-[4.5rem] shrink-0 truncate text-[10px] text-[var(--muted)]">{label}</span>
-        <div className="relative h-1.5 min-w-0 flex-1 rounded-full bg-[var(--wash)]">
-          <span
-            className={`absolute top-0 h-full rounded-full ${tone}`}
-            style={{ left: `${left}%`, width: `${width}%` }}
-            aria-hidden
-          />
-        </div>
-      </div>
-    );
-  }
+  const fmt = (n: number) =>
+    n.toLocaleString(locale === "pl" ? "pl-PL" : locale === "ru" ? "ru-RU" : "en-GB");
 
   return (
-    <div className="space-y-1.5" role="img" aria-label={copy.plnShopCompare}>
-      {track(independent, "bg-[var(--good)]", copy.independent)}
-      {track(specialist, "bg-[var(--mid)]", copy.specialist)}
-      {track(aso, "bg-[var(--bad)]", copy.aso)}
-      <div className="flex justify-between pt-0.5 font-mono text-[10px] tabular-nums text-[var(--muted)]">
-        <span>{min.toLocaleString(locale === "pl" ? "pl-PL" : locale === "ru" ? "ru-RU" : "en-GB")}</span>
-        <span>{max.toLocaleString(locale === "pl" ? "pl-PL" : locale === "ru" ? "ru-RU" : "en-GB")} PLN</span>
+    <div className="space-y-2" role="img" aria-label={copy.plnShopCompare}>
+      {rows.map((row) => {
+        if (!row.range) return null;
+        const width = Math.min(100, Math.max(((row.range[1] - row.range[0]) / span) * 100, 3));
+        const left = Math.min(((row.range[0] - min) / span) * 100, 100 - width);
+        return (
+          <div
+            key={row.label}
+            className="grid grid-cols-[6.75rem_minmax(0,1fr)_auto] items-center gap-x-2.5"
+            title={`${row.label}: ${row.range[0]}–${row.range[1]} PLN`}
+          >
+            <span className="truncate text-[12px] text-[var(--muted)]">{row.label}</span>
+            <div className="relative h-1.5 min-w-0 overflow-hidden rounded-full bg-[var(--wash)]">
+              <span
+                className={`absolute top-0 h-full rounded-full ${row.bar}`}
+                style={{ left: `${left}%`, width: `${width}%` }}
+                aria-hidden
+              />
+            </div>
+            <MoneyRange range={row.range} locale={locale} size="sm" tone={row.tone} />
+          </div>
+        );
+      })}
+      <div className="grid grid-cols-[6.75rem_minmax(0,1fr)_auto] gap-x-2.5 pt-0.5">
+        <span aria-hidden />
+        <div className="relative h-4 font-mono text-[10px] tabular-nums text-[var(--muted)]">
+          <span className="absolute left-0 top-0">
+            {copy.plnRangeFrom} {fmt(min)}
+          </span>
+          <span className="absolute right-0 top-0 text-right">
+            {copy.plnRangeTo} {fmt(max)} {locale === "pl" ? "zł" : "PLN"}
+          </span>
+        </div>
+        <span aria-hidden />
       </div>
     </div>
   );

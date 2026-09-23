@@ -1,0 +1,41 @@
+{
+  "pain_id": "n47-chain-late",
+  "status": "quoted_workshop_band",
+  "currency": "PLN",
+  "region": "PL",
+  "collected_at": "2026-09-23T20:30:00Z",
+  "totals_pln": {
+    "independent": [
+      3800,
+      6000
+    ],
+    "specialist": [
+      6500,
+      8500
+    ],
+    "aso": [
+      7499,
+      7499
+    ]
+  },
+  "parts_pln": [
+    1800,
+    3500
+  ],
+  "labor_pln": [
+    2000,
+    2500
+  ],
+  "quotes": [
+    {
+      "tier": "specialist",
+      "pln_low": 3800,
+      "pln_high": 6000,
+      "label": "Wikipedia · BMW N47 (Timing chain problems)",
+      "url": "https://en.wikipedia.org/wiki/BMW_N47"
+    }
+  ],
+  "confidence": "pain_pln_bands_sync",
+  "split_note": "Same cited workshop bands; severity lower outside worst window.",
+  "formula": "independent_full = parts_pln + labor_pln (when split present)"
+}

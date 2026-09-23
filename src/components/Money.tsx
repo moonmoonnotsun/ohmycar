@@ -27,12 +27,15 @@ export function MoneyRange({
   locale,
   size = "sm",
   variant = "pill",
+  tone,
 }: {
   range: [number, number] | null | undefined;
   locale: Locale;
   size?: "sm" | "md" | "lg";
   /** pill = badge (default). plain = tabular text for estimate rows. */
   variant?: "pill" | "plain";
+  /** Match shop ladder: good=independent, mid=specialist, bad=ASO. */
+  tone?: "good" | "mid" | "bad";
 }) {
   if (!range) {
     return variant === "plain" ? (
@@ -53,18 +56,20 @@ export function MoneyRange({
     return <MoneyFree locale={locale} size={size} />;
   }
   const amount = `${formatPlnAmount(range[0], locale)}\u2060–\u2060${formatPlnAmount(range[1], locale)}`;
+  const ink = tone === "good" ? "text-[var(--good)]" : tone === "bad" ? "text-[var(--bad)]" : tone === "mid" ? "text-[var(--mid)]" : "text-[var(--ink)]";
+  const cur = tone === "good" ? "text-[var(--good)]" : tone === "bad" ? "text-[var(--bad)]" : tone === "mid" ? "text-[var(--mid)]" : "text-[var(--accent)]";
   if (variant === "plain") {
     const amountSize = size === "lg" ? "text-2xl sm:text-3xl" : size === "md" ? "text-base" : "text-[13px]";
     return (
       <span className={`inline-flex items-baseline gap-1.5 whitespace-nowrap ${amountSize}`}>
-        <span className="font-mono font-semibold tabular-nums tracking-tight text-[var(--ink)]">{amount}</span>
-        <span className="text-[10px] font-semibold uppercase tracking-wide text-[var(--accent)]">
+        <span className={`font-mono font-semibold tabular-nums tracking-tight ${ink}`}>{amount}</span>
+        <span className={`text-[10px] font-semibold uppercase tracking-wide ${cur}`}>
           {locale === "pl" ? "zł" : "PLN"}
         </span>
       </span>
     );
   }
-  return <MoneyCell amount={amount} locale={locale} size={size} />;
+  return <MoneyCell amount={amount} locale={locale} size={size} tone={tone} />;
 }
 
 export function FixBand({
@@ -138,24 +143,50 @@ function MoneyCell({
   amount,
   locale,
   size = "md",
+  tone,
 }: {
   amount: string;
   locale: Locale;
   size?: "sm" | "md" | "lg";
+  tone?: "good" | "mid" | "bad";
 }) {
   const amountSize = size === "lg" ? "text-xl sm:text-2xl" : size === "sm" ? "text-[13px]" : "text-[15px]";
   const currencySize = size === "lg" ? "text-xs" : "text-[11px]";
   const pad = size === "lg" ? "px-3 py-1.5" : "px-2 py-1";
+  const bg =
+    tone === "good"
+      ? "bg-[var(--good-bg)]"
+      : tone === "bad"
+        ? "bg-[var(--bad-bg)]"
+        : tone === "mid"
+          ? "bg-[var(--mid-bg)]"
+          : "bg-[var(--mid-bg)]";
+  const ink =
+    tone === "good"
+      ? "text-[var(--good)]"
+      : tone === "bad"
+        ? "text-[var(--bad)]"
+        : tone === "mid"
+          ? "text-[var(--mid)]"
+          : "text-[var(--ink)]";
+  const cur =
+    tone === "good"
+      ? "text-[var(--good)]"
+      : tone === "bad"
+        ? "text-[var(--bad)]"
+        : tone === "mid"
+          ? "text-[var(--mid)]"
+          : "text-[var(--accent)]";
   return (
     <span
-      className={`inline-flex w-max max-w-full items-baseline gap-1.5 whitespace-nowrap rounded-lg bg-[var(--mid-bg)] ${pad}`}
+      className={`inline-flex w-max max-w-full items-baseline gap-1.5 whitespace-nowrap rounded-lg ${bg} ${pad}`}
     >
       <span
-        className={`font-mono font-semibold tabular-nums leading-none tracking-tight text-[var(--ink)] ${amountSize}`}
+        className={`font-mono font-semibold tabular-nums leading-none tracking-tight ${ink} ${amountSize}`}
       >
         {amount}
       </span>
-      <span className={`shrink-0 ${currencySize} font-semibold uppercase tracking-wide text-[var(--accent)]`}>
+      <span className={`shrink-0 ${currencySize} font-semibold uppercase tracking-wide ${cur}`}>
         {locale === "pl" ? "zł" : "PLN"}
       </span>
     </span>

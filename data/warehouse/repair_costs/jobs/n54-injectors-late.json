@@ -1,0 +1,41 @@
+{
+  "pain_id": "n54-injectors-late",
+  "status": "quoted_workshop_band",
+  "currency": "PLN",
+  "region": "PL",
+  "collected_at": "2026-09-23T20:30:00Z",
+  "totals_pln": {
+    "independent": [
+      1900,
+      5000
+    ],
+    "specialist": [
+      2090,
+      6000
+    ],
+    "aso": [
+      2565,
+      6750
+    ]
+  },
+  "parts_pln": [
+    1400,
+    3800
+  ],
+  "labor_pln": [
+    500,
+    1200
+  ],
+  "quotes": [
+    {
+      "tier": "specialist",
+      "pln_low": 1900,
+      "pln_high": 5000,
+      "label": "NHTSA · N54 HPFP warranty TSB (SI B13 04 09 / MC-10149587)",
+      "url": "https://static.nhtsa.gov/odi/tsbs/2013/MC-10149587-9999.pdf"
+    }
+  ],
+  "confidence": "pain_pln_bands_sync",
+  "split_note": "Parts + labor. cenauslug.pl HPFP parts 1400–3800 + labor 500–1200",
+  "formula": "independent_full = parts_pln + labor_pln (when split present)"
+}

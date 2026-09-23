@@ -52,7 +52,7 @@ export function CompareAddButton({
         writeCompareSlots({ a, b });
         router.push(compareHref(locale, a, b));
       }}
-      className="tap inline-flex h-tap w-full shrink-0 items-center justify-center gap-2 rounded-full border border-[var(--line)] bg-transparent px-3.5 text-sm font-medium text-[var(--muted)] hover:border-white/20 hover:text-[var(--ink)]"
+      className="tap inline-flex h-tap w-full shrink-0 items-center justify-center gap-2 rounded-full border border-[var(--accent)] bg-transparent px-3.5 text-sm font-medium text-[var(--accent)] hover:bg-[var(--accent)]/10"
     >
       <Bookmark className="size-4" strokeWidth={1.75} aria-hidden />
       {label}

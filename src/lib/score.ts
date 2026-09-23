@@ -62,8 +62,9 @@ export function scoreBreakdown(inputs: ScoreInputs | null) {
   };
 }
 
+/** Shared risk colors for score + year pills. Soft mid band so ~45–70 aren’t all-red. */
 export function scoreTone(score: number): "good" | "mid" | "bad" {
-  if (score >= 75) return "good";
-  if (score >= 50) return "mid";
+  if (score >= 70) return "good";
+  if (score >= 40) return "mid";
   return "bad";
 }

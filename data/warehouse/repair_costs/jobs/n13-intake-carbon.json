@@ -1,0 +1,41 @@
+{
+  "pain_id": "n13-intake-carbon",
+  "status": "quoted_workshop_band",
+  "currency": "PLN",
+  "region": "PL",
+  "collected_at": "2026-09-23T20:30:00Z",
+  "totals_pln": {
+    "independent": [
+      1000,
+      2600
+    ],
+    "specialist": [
+      1400,
+      3200
+    ],
+    "aso": [
+      2000,
+      4000
+    ]
+  },
+  "parts_pln": [
+    200,
+    600
+  ],
+  "labor_pln": [
+    800,
+    2000
+  ],
+  "quotes": [
+    {
+      "tier": "specialist",
+      "pln_low": 1000,
+      "pln_high": 2600,
+      "label": "Wikipedia · BMW N13 (DI turbo Prince)",
+      "url": "https://en.wikipedia.org/wiki/BMW_N13"
+    }
+  ],
+  "confidence": "pain_pln_bands_sync",
+  "split_note": "Walnut-blast / intake clean family prior (DI petrol); refine with Autodoc",
+  "formula": "independent_full = parts_pln + labor_pln (when split present)"
+}

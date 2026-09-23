@@ -82,7 +82,15 @@ export type Pain = {
   plnNote?: string;
   oemHint?: string;
   autodocQuery: Localized;
-  sources: { label: string; url: string }[];
+  /** Optional per-engine Autodoc chip override (shared packs). */
+  autodocQueryByEngine?: Record<string, Localized>;
+  sources: {
+    label: string;
+    url: string;
+    appliesEngines?: string[];
+    appliesChassis?: string[];
+    role?: "primary" | "family_prior" | "pln_band" | "context";
+  }[];
   /** Limit a shared pain to these chassis (and their drivetrain twins). */
   chassisSlugs?: string[];
   /** Optional diagram of the failing part. Empty = placeholder. */

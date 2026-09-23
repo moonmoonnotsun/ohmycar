@@ -1,0 +1,41 @@
+{
+  "pain_id": "n20-chain-late",
+  "status": "quoted_workshop_band",
+  "currency": "PLN",
+  "region": "PL",
+  "collected_at": "2026-09-23T20:30:00Z",
+  "totals_pln": {
+    "independent": [
+      2875,
+      4300
+    ],
+    "specialist": [
+      3162,
+      5160
+    ],
+    "aso": [
+      5999,
+      5999
+    ]
+  },
+  "parts_pln": [
+    1375,
+    1800
+  ],
+  "labor_pln": [
+    1500,
+    2500
+  ],
+  "quotes": [
+    {
+      "tier": "specialist",
+      "pln_low": 2875,
+      "pln_high": 4300,
+      "label": "NHTSA · N20/N26 timing-chain warranty (SI B11 03 17 / MC-10142923)",
+      "url": "https://static.nhtsa.gov/odi/tsbs/2017/MC-10142923-0001.pdf"
+    }
+  ],
+  "confidence": "pain_pln_bands_sync",
+  "split_note": "Parts + labor. rozrzad.pl IWIS kit 1375 + labor prior; ASO Smorawiński od 5999",
+  "formula": "independent_full = parts_pln + labor_pln (when split present)"
+}

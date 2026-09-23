@@ -94,3 +94,34 @@ export function ScoreTrack({
     </div>
   );
 }
+
+const circleRim = {
+  good: "border-[var(--good)] text-[var(--good)]",
+  mid: "border-[var(--mid)] text-[var(--mid)]",
+  bad: "border-[var(--bad)] text-[var(--bad)]",
+  none: "border-white/35 text-white/70",
+};
+
+/** Compact score disc for photo overlays (mobile hero). Same tones as year pills. */
+export function ScoreCircle({
+  score,
+  locale,
+  label,
+  className = "",
+}: {
+  score: number | null | undefined;
+  locale?: Locale;
+  label?: string;
+  className?: string;
+}) {
+  const tone = score == null ? "none" : scoreTone(score);
+  const value = score == null ? (locale ? t(locale).scorePendingShort : "—") : score.toFixed(1);
+  return (
+    <span
+      className={`inline-flex h-11 min-w-11 items-center justify-center rounded-full border-2 bg-black/65 px-1.5 font-semibold tabular-nums shadow-[0_4px_16px_rgba(0,0,0,0.45)] backdrop-blur-sm ${circleRim[tone]} ${className}`}
+      aria-label={label ? `${label}: ${score == null ? "—" : score.toFixed(1)} / 100` : undefined}
+    >
+      <span className="font-display text-[0.8rem] leading-none tracking-tight">{value}</span>
+    </span>
+  );
+}

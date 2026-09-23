@@ -1,0 +1,40 @@
+{
+  "pain_id": "i4-hv-battery",
+  "status": "quoted_workshop_band",
+  "currency": "PLN",
+  "region": "PL",
+  "collected_at": "2026-09-23T21:15:00Z",
+  "totals_pln": {
+    "independent": [
+      10000,
+      29000
+    ],
+    "specialist": [
+      12000,
+      32000
+    ],
+    "aso": [
+      15000,
+      38000
+    ]
+  },
+  "parts_pln": [
+    12000,
+    29000
+  ],
+  "labor_pln": [
+    1500,
+    4000
+  ],
+  "quotes": [
+    {
+      "tier": "specialist",
+      "pln_low": 10000,
+      "pln_high": 29000,
+      "label": "i3 large-pack prior applied to i4",
+      "url": "https://en.wikipedia.org/wiki/BMW_i4"
+    }
+  ],
+  "split_note": "Family prior from i3-hv-120ah",
+  "confidence": "f4a_i4_fix"
+}

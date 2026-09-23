@@ -1,0 +1,41 @@
+{
+  "pain_id": "s54-rod-bearings",
+  "status": "quoted_workshop_band",
+  "currency": "PLN",
+  "region": "PL",
+  "collected_at": "2026-09-23T20:30:00Z",
+  "totals_pln": {
+    "independent": [
+      6000,
+      10000
+    ],
+    "specialist": [
+      7000,
+      12000
+    ],
+    "aso": [
+      10000,
+      16000
+    ]
+  },
+  "parts_pln": [
+    1050,
+    2500
+  ],
+  "labor_pln": [
+    4950,
+    7500
+  ],
+  "quotes": [
+    {
+      "tier": "specialist",
+      "pln_low": 6000,
+      "pln_high": 10000,
+      "label": "BMWTuning · BMW rod bearing failure (S54 / S65 / S85)",
+      "url": "https://bmwtuning.co/bmw-rod-bearing-failure/"
+    }
+  ],
+  "confidence": "pain_pln_bands_sync",
+  "split_note": "Wiltronic V8/M-Power band 6000–10000; Motoran ACL rod bearings kit 1050 PLN",
+  "formula": "independent_full = parts_pln + labor_pln (when split present)"
+}

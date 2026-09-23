@@ -11,6 +11,7 @@ import { bodyLabelKey, bodyOf, carPhotoSrc } from "@/lib/carImage";
 import { variantVerdict } from "@/data/verdicts";
 import { tx } from "@/data/loc";
 import { compareHref } from "@/lib/compare";
+import { scoreTone } from "@/lib/score";
 
 type Entry = { chassis: Chassis; variant: VariantBrief };
 
@@ -169,7 +170,7 @@ function CompareMatrix({
         right={right ? copy[bodyLabelKey(bodyOf(right.chassis))] : "—"}
       />
       <AttrRow
-        label={copy.years}
+        label={copy.year}
         left={left ? String(left.variant.year) : "—"}
         right={right ? String(right.variant.year) : "—"}
       />
@@ -425,14 +426,7 @@ function VerdictCell({ locale, entry }: { locale: Locale; entry: Entry }) {
   const copy = t(locale);
   const body = copy[bodyLabelKey(bodyOf(entry.chassis))];
   const verdict = variantVerdict(entry.variant, entry.chassis, body);
-  const tone =
-    entry.variant.score == null
-      ? "mid"
-      : entry.variant.score >= 75
-        ? "good"
-        : entry.variant.score >= 50
-          ? "mid"
-          : "bad";
+  const tone = entry.variant.score == null ? "mid" : scoreTone(entry.variant.score);
   const box =
     tone === "good"
       ? "bg-[var(--good-bg)] text-[var(--good)]"
@@ -530,7 +524,7 @@ function CompareColumn({
           value={variant.fuel === "diesel" ? copy.fuelDiesel : copy.fuelPetrol}
         />
         <Spec label={copy.bodyType} value={body} />
-        <Spec label={copy.years} value={String(variant.year)} />
+        <Spec label={copy.year} value={String(variant.year)} />
       </dl>
 
       <div className="mt-4 grid gap-3 border-t border-[var(--line)] pt-4">
@@ -578,14 +572,7 @@ function VerdictCol({ locale, entry }: { locale: Locale; entry: Entry }) {
   const copy = t(locale);
   const body = copy[bodyLabelKey(bodyOf(entry.chassis))];
   const verdict = variantVerdict(entry.variant, entry.chassis, body);
-  const tone =
-    entry.variant.score == null
-      ? "mid"
-      : entry.variant.score >= 75
-        ? "good"
-        : entry.variant.score >= 50
-          ? "mid"
-          : "bad";
+  const tone = entry.variant.score == null ? "mid" : scoreTone(entry.variant.score);
   const box =
     tone === "good"
       ? "bg-[var(--good-bg)] text-[var(--good)]"

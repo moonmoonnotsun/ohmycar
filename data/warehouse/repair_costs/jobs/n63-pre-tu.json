@@ -1,0 +1,41 @@
+{
+  "pain_id": "n63-pre-tu",
+  "status": "quoted_workshop_band",
+  "currency": "PLN",
+  "region": "PL",
+  "collected_at": "2026-09-23T20:30:00Z",
+  "totals_pln": {
+    "independent": [
+      2150,
+      5160
+    ],
+    "specialist": [
+      2580,
+      6450
+    ],
+    "aso": [
+      4300,
+      9460
+    ]
+  },
+  "parts_pln": [
+    1290,
+    3440
+  ],
+  "labor_pln": [
+    860,
+    2580
+  ],
+  "quotes": [
+    {
+      "tier": "specialist",
+      "pln_low": 2150,
+      "pln_high": 5160,
+      "label": "Wikipedia · BMW N63 — 2012 Technical Update (N63TU)",
+      "url": "https://en.wikipedia.org/wiki/BMW_N63"
+    }
+  ],
+  "confidence": "pain_pln_bands_sync",
+  "split_note": "Family prior from sourced N63 coolant-pipes job (pre-TU high-risk window)",
+  "formula": "independent_full = parts_pln + labor_pln (when split present)"
+}

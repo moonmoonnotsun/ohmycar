@@ -37,8 +37,10 @@ function chassis(opts: {
     pl: opts.name.pl,
     ru: opts.name.ru ?? ruFromEn(opts.name.en),
   };
+  const years = opts.yearEnd == null && opts.years.endsWith("–") ? `${opts.years}now` : opts.years;
   return {
     ...opts,
+    years,
     name,
     search: [
       opts.slug,
@@ -47,7 +49,7 @@ function chassis(opts: {
       name.pl,
       name.en,
       name.ru,
-      opts.years,
+      years,
       ...(opts.engines ?? []),
       ...(opts.extraSearch ?? []),
     ].map((s) => s.toLowerCase()),
@@ -99,7 +101,7 @@ export const chassisList: Chassis[] = [
   chassis({ slug: "f10", code: "F10", name: { pl: "Seria 5 sedan VI", en: "5 Series sedan VI" }, years: "2010–2017", yearStart: 2010, yearEnd: 2017, tag: "volume", family: "5", gold: true, engines: ["N47", "N57", "N20", "N63"], extraSearch: ["seria 5", "530d"] }),
   chassis({ slug: "f11", code: "F11", name: { pl: "Seria 5 Touring VI", en: "5 Series Touring VI" }, years: "2010–2017", yearStart: 2010, yearEnd: 2017, tag: "volume", family: "5", drivetrainOf: "f10" }),
   chassis({ slug: "f10-m5", code: "F10 M5", name: { pl: "M5 V (S63)", en: "M5 V (S63)" }, years: "2011–2016", yearStart: 2011, yearEnd: 2016, tag: "famous", family: "5", extraSearch: ["m5"] }),
-  chassis({ slug: "g30", code: "G30", name: { pl: "Seria 5 sedan VII", en: "5 Series sedan VII" }, years: "2017–2023", yearStart: 2017, yearEnd: 2023, tag: "volume", family: "5", engines: ["B47", "B48", "B58"] }),
+  chassis({ slug: "g30", code: "G30", name: { pl: "Seria 5 sedan VII", en: "5 Series sedan VII" }, years: "2017–2023", yearStart: 2017, yearEnd: 2023, tag: "volume", family: "5", engines: ["B47", "B48", "B57", "B58"] }),
   chassis({ slug: "g31", code: "G31", name: { pl: "Seria 5 Touring VII", en: "5 Series Touring VII" }, years: "2017–2024", yearStart: 2017, yearEnd: 2024, tag: "volume", family: "5", drivetrainOf: "g30" }),
   chassis({ slug: "f90", code: "F90", name: { pl: "M5 VI", en: "M5 VI" }, years: "2017–2023", yearStart: 2017, yearEnd: 2023, tag: "famous", family: "5", extraSearch: ["m5"] }),
   chassis({ slug: "g60", code: "G60", name: { pl: "Seria 5 sedan VIII", en: "5 Series sedan VIII" }, years: "2024–", yearStart: 2024, yearEnd: null, tag: "volume", family: "5", engines: ["B48", "B58"] }),

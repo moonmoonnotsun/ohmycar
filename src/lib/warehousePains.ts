@@ -1,5 +1,6 @@
 import imported from "@/data/imported/pains.json";
 import type { Localized, Pain, PainSeverity } from "@/data/types";
+import { normalizePainSource } from "@/lib/painSources";
 
 type WarehouseRow = {
   id: string;
@@ -20,8 +21,15 @@ type WarehouseRow = {
     note?: string;
   };
   pln_note?: string;
-  sources: { label: string; url: string }[];
+  sources: {
+    label: string;
+    url: string;
+    applies_engines?: string[];
+    applies_chassis?: string[];
+    role?: "primary" | "family_prior" | "pln_band" | "context";
+  }[];
   autodoc_query: Localized | string;
+  autodoc_query_by_engine?: Record<string, Localized | string>;
   oemHint?: string;
   diagram?: string;
 };
@@ -33,6 +41,10 @@ function asLocalized(value: Localized | string): Localized {
 
 function toPain(row: WarehouseRow): Pain {
   const bands = row.pln_bands;
+  const byEng = row.autodoc_query_by_engine;
+  const autodocQueryByEngine = byEng
+    ? Object.fromEntries(Object.entries(byEng).map(([k, v]) => [k, asLocalized(v)]))
+    : undefined;
   return {
     id: row.id,
     engines: row.engines ?? [],
@@ -50,7 +62,8 @@ function toPain(row: WarehouseRow): Pain {
     plnNote: bands?.note ?? row.pln_note,
     oemHint: row.oemHint,
     autodocQuery: asLocalized(row.autodoc_query),
-    sources: row.sources,
+    autodocQueryByEngine,
+    sources: row.sources.map((s) => normalizePainSource(s)),
     chassisSlugs: row.chassis_slugs,
     diagram: row.diagram,
   };

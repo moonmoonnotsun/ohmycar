@@ -4,6 +4,7 @@ import { t } from "@/lib/i18n";
 import { autodocBmwUrl, autodocUrl, interCarsUrl, mobileDeUrl, otomotoUrl, partsQuery } from "@/lib/links";
 import { FaultDiagram, SourceList, WorkshopPrices } from "@/components/FaultExplain";
 import { SeverityPill } from "@/components/SeverityPill";
+import { autodocQueryFor } from "@/lib/painSources";
 
 export function BuyBar({
   locale,
@@ -117,17 +118,32 @@ export function PainCard({
         <span className="text-[var(--muted)]">{copy.affects} · </span>
         <span className="text-[var(--ink)]/90">{pain.affects[locale]}</span>
       </p>
-      <WorkshopPrices locale={locale} pain={pain} />
+      <WorkshopPrices
+        locale={locale}
+        pain={pain}
+        engine={variant?.engine}
+        chassisSlug={variant?.chassisSlug ?? chassis?.slug}
+      />
       <div className="mt-3 flex flex-col gap-2 border-t border-[var(--line)] pt-3">
         <a
           className="inline-flex h-10 w-fit items-center rounded-full border border-[var(--line)] bg-[var(--wash)] px-3.5 text-[13px] font-medium text-[var(--ink)] hover:border-[var(--accent)]/50"
-          href={autodocUrl(pain.autodocQuery[locale], locale, chassis, variant)}
+          href={autodocUrl(
+            autodocQueryFor(pain, locale, variant?.engine),
+            locale,
+            chassis,
+            variant,
+          )}
           target="_blank"
           rel="noreferrer"
         >
-          {copy.autodoc}: {pain.autodocQuery[locale]}
+          {copy.autodoc}: {autodocQueryFor(pain, locale, variant?.engine)}
         </a>
-        <SourceList locale={locale} sources={pain.sources} />
+        <SourceList
+          locale={locale}
+          sources={pain.sources}
+          engine={variant?.engine}
+          chassisSlug={variant?.chassisSlug ?? chassis?.slug}
+        />
         <details className="group">
           <summary className="cursor-pointer text-[13px] text-[var(--muted)] hover:text-[var(--ink)]">
             {copy.faultDiagram}

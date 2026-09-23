@@ -1,0 +1,40 @@
+{
+  "pain_id": "i3-hv-94ah",
+  "status": "quoted_workshop_band",
+  "currency": "PLN",
+  "region": "PL",
+  "collected_at": "2026-09-23T21:00:00Z",
+  "totals_pln": {
+    "independent": [
+      6500,
+      29000
+    ],
+    "specialist": [
+      19350,
+      35000
+    ],
+    "aso": [
+      40000,
+      80000
+    ]
+  },
+  "parts_pln": [
+    6500,
+    30100
+  ],
+  "labor_pln": [
+    1000,
+    4000
+  ],
+  "quotes": [
+    {
+      "tier": "specialist",
+      "pln_low": 6500,
+      "pln_high": 29000,
+      "label": "BMW Press · 2017 i3 94Ah",
+      "url": "https://www.press.bmwgroup.com/usa/article/detail/T0259560EN_US/the-new-2017-bmw-i3-94-ah-:-more-range-paired-to-high-level-dynamic-performance?language=en_US"
+    }
+  ],
+  "split_note": "Same PL regen/OEM quote envelope as i3-hv-battery; mid pack",
+  "confidence": "f4a_sync"
+}

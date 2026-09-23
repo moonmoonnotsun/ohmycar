@@ -101,7 +101,9 @@ export function CatalogExplorer({
   const [filtersOpen, setFiltersOpen] = useState(false);
   const headScrollRef = useRef<HTMLDivElement>(null);
   const bodyScrollRef = useRef<HTMLDivElement>(null);
+  const stickySentinelRef = useRef<HTMLDivElement>(null);
   const syncing = useRef(false);
+  const [filtersStuck, setFiltersStuck] = useState(false);
 
   const meta = useMemo<ChassisMeta[]>(() => {
     return chassis.map((item) => {
@@ -191,6 +193,19 @@ export function CatalogExplorer({
     if (head && body) body.scrollLeft = head.scrollLeft;
   }, [sorted.length, filtersOpen]);
 
+  useEffect(() => {
+    const sentinel = stickySentinelRef.current;
+    if (!sentinel) return;
+    const headerVar = getComputedStyle(document.documentElement).getPropertyValue("--header-h").trim();
+    const headerPx = Number.parseFloat(headerVar) || 56;
+    const observer = new IntersectionObserver(
+      ([entry]) => setFiltersStuck(!entry.isIntersecting),
+      { rootMargin: `-${headerPx + 1}px 0px 0px 0px`, threshold: 0 },
+    );
+    observer.observe(sentinel);
+    return () => observer.disconnect();
+  }, []);
+
   const eras: { key: EraKey; label: string }[] = [
     { key: "all", label: copy.eraAll },
     { key: "classic", label: copy.eraClassic },
@@ -201,7 +216,12 @@ export function CatalogExplorer({
 
   return (
     <div>
-      <div className="sticky top-[var(--header-h,3.5rem)] z-30 -mx-4 border-b border-[var(--line)] bg-[var(--paper)] px-4 py-2.5 sm:mx-0 sm:rounded-2xl sm:border sm:py-3">
+      <div ref={stickySentinelRef} className="pointer-events-none h-0" aria-hidden />
+      <div
+        className={`sticky top-[var(--header-h,3.5rem)] z-30 -mx-4 border-b border-[var(--line)] bg-[var(--paper)] px-4 py-2.5 sm:mx-0 sm:border sm:py-3 ${
+          filtersStuck ? "sm:rounded-b-2xl" : "sm:rounded-2xl"
+        }`}
+      >
         <input
           value={q}
           onChange={(e) => setQ(e.target.value)}

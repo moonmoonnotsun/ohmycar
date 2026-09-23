@@ -1,0 +1,55 @@
+{
+  "pain_id": "b48-timing-pre-tu",
+  "status": "quoted_workshop_band",
+  "currency": "PLN",
+  "region": "PL",
+  "collected_at": "2026-09-23T20:30:00Z",
+  "totals_pln": {
+    "independent": [
+      2875,
+      4300
+    ],
+    "specialist": [
+      3162,
+      5160
+    ],
+    "aso": [
+      5999,
+      5999
+    ]
+  },
+  "parts_pln": [
+    1375,
+    1800
+  ],
+  "labor_pln": [
+    1500,
+    2500
+  ],
+  "quotes": [
+    {
+      "tier": "independent",
+      "pln_low": 1500,
+      "pln_high": 3000,
+      "label": "Family prior · kosztserwisu.pl · N20 (applied to pre-TU B48)",
+      "url": "https://kosztserwisu.pl/koszty-napraw/rozrzad/wymiana-rozrzadu-bmw/"
+    },
+    {
+      "tier": "aso",
+      "pln_low": 5999,
+      "pln_high": 5999,
+      "label": "Family prior · BMW Smorawiński GZ · N20 od 5999 zł",
+      "url": "https://www.bmw-smorawinskigz.pl/wymiana-rozrzadu"
+    },
+    {
+      "tier": "parts",
+      "pln_low": 1375,
+      "pln_high": 1375,
+      "label": "Family prior · rozrzad.pl · IWIS N20 kit",
+      "url": "https://rozrzad.pl/pl/p/ROZRZAD-LANCUCH-ROZRZADU-BMW-125i-F21-N20-11317584084S2/21575"
+    }
+  ],
+  "confidence": "pain_pln_bands_sync",
+  "split_note": "Family prior from sourced N20/N26 chain job (pre-TU B48 timing layout check — not an N47 snap epidemic)",
+  "formula": "independent_full = parts_pln + labor_pln (when split present)"
+}

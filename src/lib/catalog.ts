@@ -15,6 +15,34 @@ function enginesFor(sourceSlug: string): EngineLine[] | undefined {
   return volumeEngines[sourceSlug];
 }
 
+/** Year-split siblings share a stem (n47-chain → n47-chain-mid / -late). */
+function painFamilyStem(id: string): string {
+  return id.replace(/-(early|mid|late)$/i, "");
+}
+
+function isEnginePain(pain: Pain): boolean {
+  return pain.engines.length > 0;
+}
+
+function pickEffectiveTop(pains: Pain[], topId: string): string {
+  if (pains.length === 0) return topId;
+  const stem = painFamilyStem(topId);
+  const exact = pains.find((p) => p.id === topId);
+  const sibling = pains.find((p) => isEnginePain(p) && painFamilyStem(p.id) === stem);
+  const engineBest = [...pains]
+    .filter(isEnginePain)
+    .sort((a, b) => severityRank(a.severity) - severityRank(b.severity))[0];
+  // Prefer volume topPain family only if it is at least as severe as the worst engine pain.
+  if (exact && (!engineBest || severityRank(exact.severity) <= severityRank(engineBest.severity))) {
+    return exact.id;
+  }
+  if (sibling && (!engineBest || severityRank(sibling.severity) <= severityRank(engineBest.severity))) {
+    return sibling.id;
+  }
+  if (engineBest) return engineBest.id;
+  return pains[0].id;
+}
+
 function painsForLine(
   chassisSlug: string,
   sourceSlug: string,
@@ -23,6 +51,7 @@ function painsForLine(
   topPainId: string,
 ): Pain[] {
   const topId = resolvePainId(topPainId);
+  const stem = painFamilyStem(topId);
   return allPains
     .filter((pain) => {
       if (pain.engines.length === 0) {
@@ -41,8 +70,14 @@ function painsForLine(
       return true;
     })
     .sort((a, b) => {
+      const aFam = painFamilyStem(a.id) === stem && isEnginePain(a);
+      const bFam = painFamilyStem(b.id) === stem && isEnginePain(b);
+      if (aFam !== bFam) return aFam ? -1 : 1;
       if (a.id === topId) return -1;
       if (b.id === topId) return 1;
+      const aEng = isEnginePain(a);
+      const bEng = isEnginePain(b);
+      if (aEng !== bEng) return aEng ? -1 : 1;
       return severityRank(a.severity) - severityRank(b.severity);
     });
 }
@@ -58,8 +93,7 @@ function variantsFromLines(chassis: Chassis, lines: EngineLine[]): VariantBrief[
 
       const topPainId = resolvePainId(line.topPainId);
       const pains = painsForLine(chassis.slug, sourceSlug, line.engine, year, topPainId);
-      const effectiveTop =
-        pains.find((p) => p.id === topPainId)?.id ?? pains[0]?.id ?? topPainId;
+      const effectiveTop = pickEffectiveTop(pains, topPainId);
       const pack = deriveEvidencePack({
         chassisSlug: chassis.slug,
         sourceSlug,

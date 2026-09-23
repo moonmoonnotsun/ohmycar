@@ -1,0 +1,41 @@
+{
+  "pain_id": "n52-valve-cover",
+  "status": "quoted_workshop_band",
+  "currency": "PLN",
+  "region": "PL",
+  "collected_at": "2026-09-23T20:30:00Z",
+  "totals_pln": {
+    "independent": [
+      700,
+      2800
+    ],
+    "specialist": [
+      900,
+      3500
+    ],
+    "aso": [
+      1200,
+      4500
+    ]
+  },
+  "parts_pln": [
+    200,
+    1800
+  ],
+  "labor_pln": [
+    500,
+    1200
+  ],
+  "quotes": [
+    {
+      "tier": "specialist",
+      "pln_low": 700,
+      "pln_high": 2800,
+      "label": "Turner Motorsport · N52 plastic valve cover (MY 2007+)",
+      "url": "https://www.turnermotorsport.com/p-395319-valve-cover/"
+    }
+  ],
+  "confidence": "pain_pln_bands_sync",
+  "split_note": "PL gasket job ~300–1200 (automotoopinie premium band) up to full plastic cover assembly",
+  "formula": "independent_full = parts_pln + labor_pln (when split present)"
+}

@@ -11,6 +11,8 @@
 | [`COLLECTION_REQUESTS.md`](./COLLECTION_REQUESTS.md) | Volumes, request counts, sprint backlog for all cars |
 | [`DATA_PIPELINE.md`](./DATA_PIPELINE.md) | Bootstrap pipeline + warehouse layout |
 | [`NO_HYPOTHESIS_PLAN.md`](./NO_HYPOTHESIS_PLAN.md) | What must never be invented |
+| [`ENGINE_YEAR_CELL_PLAN.md`](./ENGINE_YEAR_CELL_PLAN.md) | Phase F: chassis × model × engine × year + full source registry (forums/Reddit/TSB) |
+| [`SOURCE_DISPLAY_REFINEMENT.md`](./SOURCE_DISPLAY_REFINEMENT.md) | Shared pain packs vs cell-honest source/Autodoc display (wrong engine/chassis links) |
 | `warehouse/_meta/coverage_top10.json` | Per-chassis coverage flags |
 | `warehouse/_meta/collection_log.json` | Run history |
 | `warehouse/citations/market_and_official.json` | Short URL registry |

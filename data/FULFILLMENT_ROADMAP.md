@@ -49,9 +49,31 @@ See prior sections / `collection_log.json`.
 - **100 / 100** chassis have variants + sourced score/repair bands (where engine matched)
 - Still blocked for “complete” honesty: API &lt;2009 buy, fuel splits, Autodoc BOM, deeper M/EV packages
 
+## Phase F (next) — engine × year fidelity
+
+**Plan doc:** [`ENGINE_YEAR_CELL_PLAN.md`](./ENGINE_YEAR_CELL_PLAN.md)
+
+| Step | Scope | Status |
+|------|-------|--------|
+| **F0** | Honesty UX: year-window score copy; engine-preferring headline fault | **done 2026-09-23** |
+| **F1a** | N47 chain early/mid/late + EGR years; N20 chain; N54 HPFP window | **done 2026-09-23** |
+| **F1b** | B48/B58 pre-TU (wiki 2018); OFH cleanup; B47/N57 bounds; N57 chassis map | **done 2026-09-23** |
+| **F1c** | N63 pre-TU / pipes / post-TÜ2; N62+swirl maps; N52/N43/N53 bounds; X5 N63 headline fix | **done 2026-09-23** |
+| **F1d** | N13/N46 timing; M54/classic/E36 cooling bounds; Takata/i3/subframe/ELV years; B57 headline | **done 2026-09-23** |
+| **F1e** | N55 early HPFP 2009–2013; N57 EGR chassis→F15/F16; B38 untagged from i3 HV → OFH | **done 2026-09-23** |
+| **F2** | Expand pains so each volume engine lists all sourced problems | **in progress** — see [`PHASE_F2_PAIN_EXPANSION_PLAN.md`](./PHASE_F2_PAIN_EXPANSION_PLAN.md) |
+| **F2a** | Null chassis maps; N52 PCV/VANOS/valve-cover/OFH; B47 AdBlue | **done 2026-09-23** |
+| **F2b** | N13 HPFP+carbon; N53 HPFP+carbon; N43 HPFP; N42/N46 OFH | **done 2026-09-23** |
+| **F2c** | S54 bearings; S65 ITB; S55 crank hub+OFH; S63 stems; S58 OFH | **done 2026-09-23** |
+| **F2d** | S85 SMG+ITB; job JSON sync; PLN on design-change pains | **done 2026-09-23** |
+| **F3** | PLN + partsReality per pain | partial — warehouse PLN done; Autodoc BOM blocked |
+| **F4** | OFH supersessions / generation splits | **F4c done** — see [`PHASE_F4_OFH_SUPERSESSIONS.md`](./PHASE_F4_OFH_SUPERSESSIONS.md) |
+
+**Why:** F4c: N20 plastic OFH SI B11 13 15 (2011–12); N62 levers SI B11 02 05 (2004–05). Vary **~120**. Next: more Tier A SIBs or unblock **A2/A4**.
+
 ## How to continue next sessions
 
-1. Unblock **A2** with CarDossier API key  
-2. Deepen dedicated quotes (S68-specific, i4 pack, N63 valve stems)  
+1. Continue **F4d** (more NHTSA/SI year windows) or unblock **A2** CarDossier  
+2. Unblock **A2** with CarDossier API key  
 3. **A4** partsReality via IC/Autodoc  
-4. Optional: hand-written CHASSIS verdicts for remaining long-tail (fallback is now score-aware)
+4. Optional: hand-written CHASSIS verdicts for remaining long-tail — see [`VERDICT_COPY_PLAN.md`](./VERDICT_COPY_PLAN.md) (Wave 0 derived fallback shipped; Wave 1 hand polish next)

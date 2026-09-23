@@ -1,0 +1,41 @@
+{
+  "pain_id": "b47-adblue-scr",
+  "status": "quoted_workshop_band",
+  "currency": "PLN",
+  "region": "PL",
+  "collected_at": "2026-09-23T20:30:00Z",
+  "totals_pln": {
+    "independent": [
+      1500,
+      5500
+    ],
+    "specialist": [
+      2000,
+      7000
+    ],
+    "aso": [
+      2800,
+      9000
+    ]
+  },
+  "parts_pln": [
+    800,
+    3500
+  ],
+  "labor_pln": [
+    400,
+    1500
+  ],
+  "quotes": [
+    {
+      "tier": "specialist",
+      "pln_low": 1500,
+      "pln_high": 5500,
+      "label": "Bimmer.AI · B47 AdBlue / SCR buyer notes",
+      "url": "https://bimmer.ai/bmw-engines/b47/"
+    }
+  ],
+  "confidence": "pain_pln_bands_sync",
+  "split_note": "Prior from Bimmer.AI UK £300–£1200 typical sensor/pump jobs → ~1500–6200 PLN @5.2; widen for ASO",
+  "formula": "independent_full = parts_pln + labor_pln (when split present)"
+}

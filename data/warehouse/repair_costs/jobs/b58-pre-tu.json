@@ -1,0 +1,41 @@
+{
+  "pain_id": "b58-pre-tu",
+  "status": "quoted_workshop_band",
+  "currency": "PLN",
+  "region": "PL",
+  "collected_at": "2026-09-23T20:30:00Z",
+  "totals_pln": {
+    "independent": [
+      1500,
+      4500
+    ],
+    "specialist": [
+      2000,
+      5500
+    ],
+    "aso": [
+      2800,
+      7000
+    ]
+  },
+  "parts_pln": [
+    800,
+    2500
+  ],
+  "labor_pln": [
+    600,
+    2000
+  ],
+  "quotes": [
+    {
+      "tier": "specialist",
+      "pln_low": 1500,
+      "pln_high": 4500,
+      "label": "Wikipedia · BMW B58 — Technical Update 2018 (B58TU)",
+      "url": "https://en.wikipedia.org/wiki/BMW_B58"
+    }
+  ],
+  "confidence": "pain_pln_bands_sync",
+  "split_note": "Pre-TU fuel/HPFP inspection residual band — softer than chain; OFH remains separate (b58-oil-filter)",
+  "formula": "independent_full = parts_pln + labor_pln (when split present)"
+}

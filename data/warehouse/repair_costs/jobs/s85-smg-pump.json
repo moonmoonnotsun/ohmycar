@@ -1,0 +1,50 @@
+{
+  "pain_id": "s85-smg-pump",
+  "status": "quoted_workshop_band",
+  "currency": "PLN",
+  "region": "PL",
+  "collected_at": "2026-09-23T20:30:00Z",
+  "totals_pln": {
+    "independent": [
+      2055,
+      2915
+    ],
+    "specialist": [
+      2363,
+      3644
+    ],
+    "aso": [
+      2877,
+      4373
+    ]
+  },
+  "parts_pln": [
+    1410,
+    1410
+  ],
+  "labor_pln": [
+    645,
+    1505
+  ],
+  "quotes": [
+    {
+      "tier": "parts",
+      "pln_low": 1410,
+      "pln_high": 1410,
+      "currency": "EUR",
+      "pln_note": "SMG Society €328 @4.3",
+      "url": "https://www.smgsociety.com/product/pump-motor-bmw-e60-m5-e63-m6-smg-iii/"
+    },
+    {
+      "tier": "labor",
+      "pln_low": 645,
+      "pln_high": 1505,
+      "currency": "EUR",
+      "pln_note": "Indie motor R&R + ISTA bleed prior €150–350",
+      "url": "https://www.m5board.com/threads/smg-pump-motor-replacement.345297/"
+    }
+  ],
+  "confidence": "pain_pln_bands_sync",
+  "split_note": "SMG Society motor €328 @4.3 + indie bleed/labor €150–350; full hydraulic unit is a different (much higher) path",
+  "formula": "independent_full = parts_pln + labor_pln (when split present)"
+}

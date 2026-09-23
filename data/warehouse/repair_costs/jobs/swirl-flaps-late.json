@@ -1,0 +1,41 @@
+{
+  "pain_id": "swirl-flaps-late",
+  "status": "quoted_workshop_band",
+  "currency": "PLN",
+  "region": "PL",
+  "collected_at": "2026-09-23T20:30:00Z",
+  "totals_pln": {
+    "independent": [
+      480,
+      1800
+    ],
+    "specialist": [
+      1950,
+      3650
+    ],
+    "aso": [
+      2500,
+      4500
+    ]
+  },
+  "parts_pln": [
+    80,
+    200
+  ],
+  "labor_pln": [
+    400,
+    1600
+  ],
+  "quotes": [
+    {
+      "tier": "specialist",
+      "pln_low": 480,
+      "pln_high": 1800,
+      "label": "Wikipedia · BMW M57",
+      "url": "https://en.wikipedia.org/wiki/BMW_M57"
+    }
+  ],
+  "confidence": "pain_pln_bands_sync",
+  "split_note": "Parts + labor. blanking kit parts + labor; Skanyx specialist band",
+  "formula": "independent_full = parts_pln + labor_pln (when split present)"
+}

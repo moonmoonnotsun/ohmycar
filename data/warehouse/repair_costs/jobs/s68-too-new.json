@@ -1,0 +1,40 @@
+{
+  "pain_id": "s68-too-new",
+  "status": "quoted_workshop_band",
+  "currency": "PLN",
+  "region": "PL",
+  "collected_at": "2026-09-23T22:00:00Z",
+  "totals_pln": {
+    "independent": [
+      500,
+      1700
+    ],
+    "specialist": [
+      700,
+      2200
+    ],
+    "aso": [
+      1000,
+      3000
+    ]
+  },
+  "parts_pln": [
+    200,
+    800
+  ],
+  "labor_pln": [
+    300,
+    900
+  ],
+  "quotes": [
+    {
+      "tier": "specialist",
+      "pln_low": 500,
+      "pln_high": 1700,
+      "label": "EngineScope · BMW S68 — too new for long-term pattern failures",
+      "url": "https://enginescope.gr/engine/bmw-s68/"
+    }
+  ],
+  "split_note": "HV coolant / inspection prior until dedicated S68 failure package exists — not an S63 bearing quote",
+  "confidence": "f4b_sync"
+}

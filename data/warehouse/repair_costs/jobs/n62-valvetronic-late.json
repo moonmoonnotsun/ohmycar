@@ -1,0 +1,32 @@
+{
+  "pain_id": "n62-valvetronic-late",
+  "status": "quoted_workshop_band",
+  "currency": "PLN",
+  "region": "PL",
+  "collected_at": "2026-09-23T23:00:00Z",
+  "totals_pln": {
+    "independent": [
+      1500,
+      3500
+    ],
+    "specialist": [
+      2500,
+      5000
+    ],
+    "aso": [
+      4000,
+      8000
+    ]
+  },
+  "quotes": [
+    {
+      "tier": "specialist",
+      "pln_low": 1500,
+      "pln_high": 3500,
+      "label": "Wikipedia · BMW N62",
+      "url": "https://en.wikipedia.org/wiki/BMW_N62"
+    }
+  ],
+  "split_note": "From warehouse/repair_costs/jobs/n62-valvetronic.json (workshop-published bands 2026-09-22)",
+  "confidence": "f4c_sync"
+}

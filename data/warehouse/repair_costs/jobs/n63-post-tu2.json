@@ -1,0 +1,41 @@
+{
+  "pain_id": "n63-post-tu2",
+  "status": "quoted_workshop_band",
+  "currency": "PLN",
+  "region": "PL",
+  "collected_at": "2026-09-23T20:30:00Z",
+  "totals_pln": {
+    "independent": [
+      800,
+      2500
+    ],
+    "specialist": [
+      1100,
+      3200
+    ],
+    "aso": [
+      1500,
+      4000
+    ]
+  },
+  "parts_pln": [
+    400,
+    1500
+  ],
+  "labor_pln": [
+    400,
+    1200
+  ],
+  "quotes": [
+    {
+      "tier": "specialist",
+      "pln_low": 800,
+      "pln_high": 2500,
+      "label": "Wikipedia · BMW N63 — 2016 Technical Update (N63TÜ2)",
+      "url": "https://en.wikipedia.org/wiki/BMW_N63"
+    }
+  ],
+  "confidence": "pain_pln_bands_sync",
+  "split_note": "Post-TÜ2 residual inspection band (lower than pre-TU / pipes epidemic)",
+  "formula": "independent_full = parts_pln + labor_pln (when split present)"
+}

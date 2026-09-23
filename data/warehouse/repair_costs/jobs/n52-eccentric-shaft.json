@@ -1,0 +1,41 @@
+{
+  "pain_id": "n52-eccentric-shaft",
+  "status": "quoted_workshop_band",
+  "currency": "PLN",
+  "region": "PL",
+  "collected_at": "2026-09-23T20:30:00Z",
+  "totals_pln": {
+    "independent": [
+      700,
+      2100
+    ],
+    "specialist": [
+      900,
+      2800
+    ],
+    "aso": [
+      1200,
+      3500
+    ]
+  },
+  "parts_pln": [
+    400,
+    1200
+  ],
+  "labor_pln": [
+    300,
+    900
+  ],
+  "quotes": [
+    {
+      "tier": "specialist",
+      "pln_low": 700,
+      "pln_high": 2100,
+      "label": "NHTSA · SI eccentric shaft sensor oil contamination (N51/N52)",
+      "url": "https://static.nhtsa.gov/odi/tsbs/2016/SB-10076476-5448.pdf"
+    }
+  ],
+  "confidence": "pain_pln_bands_sync",
+  "split_note": "Family prior: OEM sensor + gasket/labor band (AmpAuto est. band converted loosely; refine with Autodoc)",
+  "formula": "independent_full = parts_pln + labor_pln (when split present)"
+}
