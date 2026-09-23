@@ -243,12 +243,12 @@ const pl = {
   typicalCosts: "Typowe koszty (PLN)",
   scoreSourcesTitle: "Źródła używane do ocen (i wokół nich)",
   scoreSourcesLead:
-    "Tabela wszystkich zewnętrznych zasobów. W 0–100 wchodzą tylko wiersze ze statusem „w ocenie” lub „wspiera ocenę”. Cena zakupu nigdy nie wchodzi w 0–100. Fora i Reddit tylko odkrywają usterki — same nie ustawiają okien lat.",
+    "Każdy zewnętrzny serwis / API / forum, z którego korzystamy — nie każda osobna strona Wikipedii ani każdy pojedynczy URL wyceny. W 0–100 wchodzą tylko wiersze „w ocenie” lub „wspiera ocenę”. Cena zakupu nigdy nie wchodzi w 0–100. Fora i Reddit tylko discovery — same nie ustawiają okien lat.",
   scoreSrcColName: "Źródło",
   scoreSrcColUrl: "URL / API",
   scoreSrcColTier: "Tier",
   scoreSrcColRole: "Rola",
-  scoreSrcColFeeds: "Co zasila",
+  scoreSrcColFeeds: "Gdzie używane",
   scoreRoleScore: "W ocenie 0–100",
   scoreRoleSupporting: "Wspiera ocenę",
   scoreRoleDiscovery: "Tylko discovery",
@@ -259,7 +259,14 @@ const pl = {
   scoreTierB: "B — potwierdzenie",
   scoreTierC: "C — discovery",
   scoreTierD: "D — miękki prior",
-  scoreSourcesMore: "Więcej URL",
+  scoreSourcesMore: "Powiązane witryny",
+  scoreGroupOfficial: "Oficjalne / regulacyjne",
+  scoreGroupEvidence: "Dowody do oceny (usterki, lata)",
+  scoreGroupPln: "Wyceny napraw PLN",
+  scoreGroupBuy: "Rynek kupna (poza 0–100)",
+  scoreGroupParts: "Części / stany",
+  scoreGroupDiscovery: "Fora / Reddit (discovery)",
+  scoreGroupPlanned: "Planowane (jeszcze nie w formule)",
 };
 
 const en: typeof pl = {
@@ -506,12 +513,12 @@ const en: typeof pl = {
   typicalCosts: "Typical costs (PLN)",
   scoreSourcesTitle: "Sources used for ratings (and around them)",
   scoreSourcesLead:
-    "Full table of external resources. Only rows marked “in 0–100” or “supports score” feed the rating. Buy price never enters 0–100. Forums and Reddit are discovery only — they never set year windows alone.",
+    "Every external site / API / forum we use — not every Wikipedia engine page or every single quote URL. Only rows marked “in 0–100” or “supports score” feed the rating. Buy price never enters 0–100. Forums and Reddit are discovery only — they never set year windows alone.",
   scoreSrcColName: "Source",
   scoreSrcColUrl: "URL / API",
   scoreSrcColTier: "Tier",
   scoreSrcColRole: "Role",
-  scoreSrcColFeeds: "What it feeds",
+  scoreSrcColFeeds: "Where used",
   scoreRoleScore: "In 0–100 score",
   scoreRoleSupporting: "Supports score",
   scoreRoleDiscovery: "Discovery only",
@@ -522,7 +529,14 @@ const en: typeof pl = {
   scoreTierB: "B — corroboration",
   scoreTierC: "C — discovery",
   scoreTierD: "D — soft prior",
-  scoreSourcesMore: "More URLs",
+  scoreSourcesMore: "Related sites",
+  scoreGroupOfficial: "Official / regulatory",
+  scoreGroupEvidence: "Score evidence (faults, years)",
+  scoreGroupPln: "Repair cost quotes (PLN)",
+  scoreGroupBuy: "Buy market (outside 0–100)",
+  scoreGroupParts: "Parts / stock",
+  scoreGroupDiscovery: "Forums / Reddit (discovery)",
+  scoreGroupPlanned: "Planned (not in formula yet)",
 };
 
 const ru: typeof pl = {
@@ -769,12 +783,12 @@ const ru: typeof pl = {
   typicalCosts: "Типичные расходы (PLN)",
   scoreSourcesTitle: "Источники для оценок (и вокруг них)",
   scoreSourcesLead:
-    "Полная таблица внешних ресурсов. В 0–100 входят только строки «в оценке» или «поддерживает оценку». Цена покупки никогда не входит в 0–100. Форумы и Reddit только discovery — сами не задают окна лет.",
+    "Каждый внешний сайт / API / форум, которым пользуемся — не каждая страница Wikipedia по мотору и не каждый URL котировки. В 0–100 входят только строки «в оценке» или «поддерживает оценку». Цена покупки никогда не входит в 0–100. Форумы и Reddit только discovery — сами не задают окна лет.",
   scoreSrcColName: "Источник",
   scoreSrcColUrl: "URL / API",
   scoreSrcColTier: "Tier",
   scoreSrcColRole: "Роль",
-  scoreSrcColFeeds: "Что питает",
+  scoreSrcColFeeds: "Где используется",
   scoreRoleScore: "В оценке 0–100",
   scoreRoleSupporting: "Поддерживает оценку",
   scoreRoleDiscovery: "Только discovery",
@@ -785,7 +799,14 @@ const ru: typeof pl = {
   scoreTierB: "B — подтверждение",
   scoreTierC: "C — discovery",
   scoreTierD: "D — мягкий prior",
-  scoreSourcesMore: "Ещё URL",
+  scoreSourcesMore: "Связанные сайты",
+  scoreGroupOfficial: "Официальные / регуляторные",
+  scoreGroupEvidence: "Доказательства для оценки (поломки, годы)",
+  scoreGroupPln: "Котировки ремонта (PLN)",
+  scoreGroupBuy: "Рынок покупки (вне 0–100)",
+  scoreGroupParts: "Запчасти / сток",
+  scoreGroupDiscovery: "Форумы / Reddit (discovery)",
+  scoreGroupPlanned: "Запланировано (ещё не в формуле)",
 };
 
 const dict: Record<Locale, Copy> = { en, pl, ru };
