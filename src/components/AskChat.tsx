@@ -5,6 +5,7 @@ import { usePathname } from "next/navigation";
 import type { Locale } from "@/lib/locale";
 import { t } from "@/lib/i18n";
 import { stubChatReply } from "@/lib/chat";
+import { track } from "@/lib/analytics";
 
 type ChatContext = {
   locale: Locale;
@@ -66,6 +67,11 @@ export function AskChat({ locale }: { locale: Locale }) {
   function show() {
     dialog.current?.showModal();
     setOpen(true);
+    track("Chat Opened", {
+      locale,
+      chassis_slug: ctx.chassisSlug,
+      variant_slug: ctx.variantSlug,
+    });
     window.setTimeout(() => input.current?.focus(), 50);
   }
 
@@ -74,9 +80,17 @@ export function AskChat({ locale }: { locale: Locale }) {
     setOpen(false);
   }
 
-  async function send(text: string) {
+  async function send(text: string, source: "typed" | "chip" = "typed") {
     const content = text.trim();
     if (!content || pending) return;
+    track("Chat Message Sent", {
+      locale,
+      chassis_slug: ctx.chassisSlug,
+      variant_slug: ctx.variantSlug,
+      source,
+      message_len: content.length,
+      chip_label: source === "chip" ? content : undefined,
+    });
     setDraft("");
     setMessages((prev) => [...prev, { role: "user", content }]);
     setPending(true);
@@ -98,7 +112,7 @@ export function AskChat({ locale }: { locale: Locale }) {
 
   function onSubmit(event: FormEvent) {
     event.preventDefault();
-    void send(draft);
+    void send(draft, "typed");
   }
 
   function onKey(event: KeyboardEvent<HTMLTextAreaElement>) {
@@ -183,7 +197,7 @@ export function AskChat({ locale }: { locale: Locale }) {
                   <button
                     key={chip}
                     type="button"
-                    onClick={() => void send(chip)}
+                    onClick={() => void send(chip, "chip")}
                     className="tap rounded-full border border-[var(--accent)]/40 bg-[var(--mid-bg)] px-3 py-2 text-left text-sm font-medium"
                   >
                     {chip}
@@ -198,7 +212,7 @@ export function AskChat({ locale }: { locale: Locale }) {
                   key={`${msg.role}-${i}`}
                   className={`max-w-[92%] rounded-2xl px-3.5 py-2.5 text-sm leading-6 ${
                     msg.role === "user"
-                      ? "ml-auto bg-[var(--accent)] text-[var(--paper)]"
+                      ? "ml-auto bg-[var(--ink)] text-[var(--card)]"
                       : "bg-[var(--card)] ring-1 ring-[var(--line)]"
                   }`}
                 >
@@ -231,7 +245,7 @@ export function AskChat({ locale }: { locale: Locale }) {
           <button
             type="submit"
             disabled={pending || !draft.trim()}
-            className="grid size-11 shrink-0 place-items-center rounded-full bg-[var(--accent)] text-[var(--paper)] disabled:opacity-40"
+            className="grid size-11 shrink-0 place-items-center rounded-full bg-[var(--ink)] text-[var(--card)] disabled:opacity-40"
             aria-label={copy.askSend}
           >
             <svg viewBox="0 0 24 24" className="size-5" aria-hidden>

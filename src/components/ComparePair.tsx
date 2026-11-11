@@ -98,7 +98,7 @@ export function ComparePair({
                 href={`/${locale}/bmw/${chassisSlug}/${left.slug}`}
                 className="group mt-3 flex items-center gap-3 border-t border-[var(--line)] pt-3"
               >
-                <span className="inline-flex size-9 shrink-0 items-center justify-center rounded-lg border border-[var(--line)] bg-[var(--wash)] text-[var(--muted)] transition-colors group-hover:border-white/20 group-hover:text-[var(--ink)]">
+                <span className="inline-flex size-9 shrink-0 items-center justify-center rounded-lg border border-[var(--line)] bg-[var(--wash)] text-[var(--muted)] transition-colors group-hover:border-[var(--hairline)] group-hover:text-[var(--ink)]">
                   <CalendarDays className="size-4" strokeWidth={1.75} aria-hidden />
                 </span>
                 <span className="min-w-0 flex-1">
@@ -151,7 +151,7 @@ function EngineRow({
   return (
     <Link
       href={`/${locale}/bmw/${chassisSlug}/${variant.slug}`}
-      className="tap flex items-center gap-2.5 rounded-xl bg-white/[0.04] px-2.5 py-2.5 sm:gap-3 sm:px-3"
+      className="tap flex items-center gap-2.5 rounded-xl bg-[var(--veil)] px-2.5 py-2.5 sm:gap-3 sm:px-3"
     >
       <span className={`size-2.5 shrink-0 rounded-full ${dot}`} aria-hidden />
       <span className="min-w-0 flex-1">
@@ -161,7 +161,9 @@ function EngineRow({
         <span className="mt-0.5 block truncate text-xs text-[var(--muted)]">{sub}</span>
       </span>
       <span
-        className={`inline-flex min-w-[2.85rem] shrink-0 items-center justify-center rounded-md px-2 py-1 font-mono text-[13px] font-bold tabular-nums text-[#0a0b0f] ${scoreBg}`}
+        className={`inline-flex min-w-[2.85rem] shrink-0 items-center justify-center rounded-md px-2 py-1 font-mono text-[13px] font-bold tabular-nums ${
+          isBest ? "text-[var(--on-accent)]" : "text-white"
+        } ${scoreBg}`}
       >
         {variant.score != null ? variant.score.toFixed(1) : copy.scorePendingShort}
       </span>

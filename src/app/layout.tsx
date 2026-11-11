@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import type { ReactNode } from "react";
 import { IBM_Plex_Mono, IBM_Plex_Sans, Plus_Jakarta_Sans, Space_Grotesk } from "next/font/google";
+import { THEME_BOOT_SCRIPT, THEME_COLOR } from "@/lib/theme";
 import "./globals.css";
 
 const jakarta = Plus_Jakarta_Sans({
@@ -43,15 +44,24 @@ export const viewport: Viewport = {
   width: "device-width",
   initialScale: 1,
   viewportFit: "cover",
-  themeColor: "#07080c",
+  themeColor: [
+    { media: "(prefers-color-scheme: dark)", color: THEME_COLOR.dark },
+    { media: "(prefers-color-scheme: light)", color: THEME_COLOR.light },
+    { color: THEME_COLOR.dark },
+  ],
 };
 
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html
       lang="en"
+      data-theme="dark"
+      suppressHydrationWarning
       className={`${jakarta.variable} ${space.variable} ${plexSans.variable} ${plex.variable} h-full antialiased`}
     >
+      <head>
+        <script dangerouslySetInnerHTML={{ __html: THEME_BOOT_SCRIPT }} />
+      </head>
       <body className="flex min-h-full flex-col bg-[var(--paper)] text-[var(--ink)]">{children}</body>
     </html>
   );

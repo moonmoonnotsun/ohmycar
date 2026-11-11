@@ -12,6 +12,7 @@ import { Money, FixBand } from "@/components/Money";
 import { BodySwitcher } from "@/components/BodySwitcher";
 import { CarPhoto } from "@/components/CarPhoto";
 import { VerdictBlock } from "@/components/VerdictBlock";
+import { EngineGlance } from "@/components/EngineGlance";
 import { chassisVerdict } from "@/data/verdicts";
 import { bodyLabelKey, bodyOf } from "@/lib/carImage";
 
@@ -53,15 +54,33 @@ export default async function ChassisPage({
 
   const body = copy[bodyLabelKey(bodyOf(chassis))];
 
+  const panel = "rounded-2xl border-2 border-[var(--line)] bg-[var(--card)] p-3.5 sm:p-4";
+
   return (
-    <div className="flex flex-col gap-4 sm:gap-7">
-      <header className="flex flex-col gap-3.5 sm:gap-5">
-        <div className="flex flex-col gap-3 sm:flex-row sm:items-start sm:gap-4">
-          <div className="min-w-0 flex-1">
+    <div className="flex flex-col gap-4 sm:gap-5">
+      <header className={`flex flex-col gap-3.5 sm:gap-5 ${panel}`}>
+        <div className="flex flex-col gap-3 sm:gap-5 lg:grid lg:grid-cols-[minmax(0,17rem)_minmax(0,1fr)] lg:items-start lg:gap-6">
+          <CarPhoto
+            chassis={chassis}
+            alt={`${chassis.code} ${chassis.name[locale]}`}
+            className="h-36 w-full rounded-xl border border-[var(--line)] sm:h-44 lg:h-full lg:min-h-[12rem] lg:max-h-[14rem]"
+            priority
+            tone="card"
+            emptyLabel={copy.photoSoon}
+            badge={body}
+          />
+          <div className="min-w-0">
             <p className="text-[11px] font-medium uppercase tracking-[0.2em] text-[var(--muted)]">{body}</p>
-            <h1 className="mt-0.5 font-display text-4xl leading-none sm:mt-1 sm:text-7xl">{chassis.code}</h1>
-            <p className="mt-1.5 text-sm text-[var(--muted)] sm:mt-2 sm:text-base">
-              {chassis.name[locale]} · {chassis.years}
+            <h1 className="mt-1.5 font-display text-[1.85rem] font-bold leading-[1.1] tracking-tight sm:text-[2.35rem]">
+              {chassis.name[locale]}
+              <span className="font-bold text-[var(--muted)]"> ({chassis.code})</span>
+            </h1>
+            <p className="mt-1.5 text-sm text-[var(--muted)] sm:mt-2">
+              {chassis.years}
+              <span className="mx-1.5 text-[var(--line)]" aria-hidden>
+                ·
+              </span>
+              {body}
             </p>
             {summary ? (
               <div className="mt-3 sm:mt-4">
@@ -74,19 +93,16 @@ export default async function ChassisPage({
               </p>
             ) : null}
           </div>
-          <CarPhoto
-            chassis={chassis}
-            alt={`${chassis.code} ${chassis.name[locale]}`}
-            className="h-36 w-full shrink-0 rounded-2xl border border-[var(--line)] sm:h-[9.5rem] sm:w-[16rem] lg:h-[11rem] lg:w-[19rem]"
-            priority
-            tone="card"
-            emptyLabel={copy.photoSoon}
-            badge={body}
-          />
         </div>
-        <BodySwitcher locale={locale} current={slug} bodies={bodies} compact />
+
+        {bodies.length > 1 ? (
+          <div className="border-t border-[var(--line)] pt-3 sm:pt-3.5">
+            <BodySwitcher locale={locale} current={slug} bodies={bodies} compact />
+          </div>
+        ) : null}
+
         {summary ? (
-          <div className="grid grid-cols-2 gap-3">
+          <div className="grid grid-cols-2 gap-3 border-t border-[var(--line)] pt-3 sm:gap-3 sm:pt-3.5">
             <FamilyPick
               locale={locale}
               href={`/${locale}/bmw/${slug}/${summary.best.slug}`}
@@ -111,7 +127,22 @@ export default async function ChassisPage({
         ) : null}
       </header>
 
-      <VerdictBlock locale={locale} verdict={chassisVerdict(chassis)} />
+      <VerdictBlock
+        locale={locale}
+        verdict={chassisVerdict(chassis)}
+        score={summary?.best.score}
+        title={`${chassis.code} · ${chassis.name[locale]}`}
+        meta={chassis.years}
+      />
+
+      {variants.length > 0 ? (
+        <EngineGlance
+          locale={locale}
+          chassisSlug={slug}
+          chassisCode={chassis.code}
+          variants={variants}
+        />
+      ) : null}
 
       {variants.length > 0 ? (
         <VariantExplorer locale={locale} chassisSlug={slug} variants={variants} />
@@ -163,7 +194,7 @@ function FamilyPick({
           <p className="font-mono text-lg font-semibold leading-none tracking-tight sm:text-2xl">
             {variant.year}
           </p>
-          <p className="inline-flex max-w-full rounded-md border border-white/20 bg-[var(--wash)] px-1.5 py-0.5 text-[11px] font-semibold leading-none sm:rounded-lg sm:px-2 sm:py-1 sm:text-base">
+          <p className="inline-flex max-w-full rounded-md border border-[var(--hairline)] bg-[var(--wash)] px-1.5 py-0.5 text-[11px] font-semibold leading-none sm:rounded-lg sm:px-2 sm:py-1 sm:text-base">
             {variant.model} {variant.engine}
           </p>
         </div>

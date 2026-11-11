@@ -20,7 +20,7 @@ export function BottomNav({ locale }: { locale: Locale }) {
   const onGold = parts[2] === "e90" || parts[2] === "e91" || parts[2] === "e92" || parts[2] === "e93";
 
   return (
-    <nav className="fixed inset-x-0 bottom-0 z-40 border-t border-white/8 bg-[var(--paper)]/90 backdrop-blur-xl md:hidden">
+    <nav className="fixed inset-x-0 bottom-0 z-40 border-t border-[var(--hairline)] bg-[var(--paper)]/90 backdrop-blur-xl md:hidden">
       <div className="mx-auto grid max-w-5xl grid-cols-3 px-2 pt-1 safe-bottom">
         <Tab href={home} active={onHome} label={copy.navHome} />
         <Tab href={catalog} active={onCatalog} label={copy.catalogShort} />

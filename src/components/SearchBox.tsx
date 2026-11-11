@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import type { Locale } from "@/lib/locale";
 import { t } from "@/lib/i18n";
 import { chassisSummary, searchChassis } from "@/lib/catalog";
@@ -9,6 +9,7 @@ import { bodyLabelKey, bodyOf } from "@/lib/carImage";
 import { CarPhoto } from "@/components/CarPhoto";
 import { ScoreGlow } from "@/components/ScoreBadge";
 import { FixBand } from "@/components/Money";
+import { track } from "@/lib/analytics";
 
 const QUICK = ["E90", "320d", "N47", "330i", "E46", "E39"] as const;
 
@@ -16,6 +17,26 @@ export function SearchBox({ locale, hero = false }: { locale: Locale; hero?: boo
   const copy = t(locale);
   const [q, setQ] = useState("");
   const hits = useMemo(() => searchChassis(q), [q]);
+  const lastTrackedQuery = useRef("");
+
+  useEffect(() => {
+    const query = q.trim();
+    if (!query) {
+      lastTrackedQuery.current = "";
+      return;
+    }
+    const timer = window.setTimeout(() => {
+      if (lastTrackedQuery.current === query) return;
+      lastTrackedQuery.current = query;
+      track("Search Performed", {
+        locale,
+        query,
+        result_count: searchChassis(query).length,
+        source: hero ? "hero" : "search",
+      });
+    }, 350);
+    return () => window.clearTimeout(timer);
+  }, [q, locale, hero]);
 
   return (
     <div className="w-full">
@@ -29,10 +50,10 @@ export function SearchBox({ locale, hero = false }: { locale: Locale; hero?: boo
           onChange={(e) => setQ(e.target.value)}
           placeholder={copy.searchPlaceholder}
           autoFocus={hero}
-          className={`w-full rounded-2xl border bg-white/[0.06] px-4 pr-12 text-[var(--ink)] outline-none ring-[var(--accent)] placeholder:text-[var(--muted)] focus:border-[var(--accent)] focus:ring-1 ${
+          className={`w-full rounded-2xl border bg-[var(--veil)] px-4 pr-12 text-[var(--ink)] outline-none ring-[var(--accent)] placeholder:text-[var(--muted)] focus:border-[var(--accent)] focus:ring-1 ${
             hero
-              ? "h-12 border-[var(--accent)]/55 text-base shadow-[0_0_0_3px_rgba(245,196,0,0.08)] sm:h-[4.5rem] sm:px-5 sm:text-xl sm:shadow-[0_0_0_4px_rgba(245,196,0,0.08)]"
-              : "h-14 border-white/12 text-base sm:h-16 sm:text-lg"
+              ? "h-12 border-[var(--accent)] bg-[var(--card)] text-base shadow-[0_0_0_3px_color-mix(in_srgb,var(--accent)_18%,transparent)] sm:h-[4.5rem] sm:px-5 sm:text-xl sm:shadow-[0_0_0_4px_color-mix(in_srgb,var(--accent)_18%,transparent)]"
+              : "h-14 border-[var(--hairline)] text-base sm:h-16 sm:text-lg"
           }`}
           autoComplete="off"
           autoCorrect="off"
@@ -60,8 +81,11 @@ export function SearchBox({ locale, hero = false }: { locale: Locale; hero?: boo
             <button
               key={chip}
               type="button"
-              onClick={() => setQ(chip)}
-              className={`tap shrink-0 rounded-full border border-white/10 bg-white/[0.04] px-3.5 font-mono font-medium sm:px-4 ${
+              onClick={() => {
+                track("Search Chip Used", { locale, chip });
+                setQ(chip);
+              }}
+              className={`tap shrink-0 rounded-full border border-[var(--hairline)] bg-[var(--veil)] px-3.5 font-mono font-medium sm:px-4 ${
                 hero ? "h-9 text-sm sm:h-11 sm:text-[15px]" : "h-tap text-sm"
               }`}
             >
@@ -74,13 +98,22 @@ export function SearchBox({ locale, hero = false }: { locale: Locale; hero?: boo
           {hits.length === 0 ? (
             <li className="px-4 py-4 text-sm text-[var(--muted)]">{copy.noResults}</li>
           ) : (
-            hits.map((hit) => {
+            hits.map((hit, index) => {
               const summary = chassisSummary(hit.chassis.slug);
               const split = summary && summary.best.slug !== summary.worst.slug;
               return (
               <li key={hit.chassis.slug} className="border-b border-[var(--line)] last:border-0">
                 <Link
                   href={`/${locale}/bmw/${hit.chassis.slug}`}
+                  onClick={() => {
+                    track("Search Result Clicked", {
+                      locale,
+                      query: q.trim(),
+                      chassis_slug: hit.chassis.slug,
+                      position: index + 1,
+                      result_count: hits.length,
+                    });
+                  }}
                   className="flex items-start gap-3 px-4 py-3 active:bg-[var(--wash)]"
                 >
                   <CarPhoto
@@ -115,7 +148,7 @@ export function SearchBox({ locale, hero = false }: { locale: Locale; hero?: boo
                       {split ? (
                         <>
                           <ScoreGlow score={summary.best.score} />
-                          <span className="mx-0.5 text-xs text-white/25">/</span>
+                          <span className="mx-0.5 text-xs text-[var(--muted)]/50">/</span>
                           <ScoreGlow score={summary.worst.score} />
                         </>
                       ) : (

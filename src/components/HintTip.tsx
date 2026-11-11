@@ -1,5 +1,13 @@
-/** Compact ? control with hover/focus tooltip text. */
-export function HintTip({ text, label = "Info" }: { text: string; label?: string }) {
+import type { ReactNode } from "react";
+
+/** Compact ? control with hover/focus tooltip. */
+export function HintTip({
+  text,
+  label = "Info",
+}: {
+  text: ReactNode;
+  label?: string;
+}) {
   return (
     <span className="group relative inline-flex shrink-0">
       <button
@@ -11,7 +19,7 @@ export function HintTip({ text, label = "Info" }: { text: string; label?: string
       </button>
       <span
         role="tooltip"
-        className="pointer-events-none absolute bottom-[calc(100%+0.4rem)] right-0 z-20 w-[min(16.5rem,70vw)] rounded-xl border border-[var(--line)] bg-[var(--card)] px-3 py-2 text-left text-xs leading-5 text-[var(--ink)] opacity-0 shadow-[0_12px_32px_rgba(0,0,0,0.45)] transition-opacity duration-150 group-hover:opacity-100 group-focus-within:opacity-100"
+        className="pointer-events-none absolute bottom-[calc(100%+0.4rem)] left-1/2 z-20 w-[min(16.5rem,70vw)] -translate-x-1/2 rounded-xl border border-[var(--line)] bg-[var(--card)] px-3 py-2.5 text-left text-xs leading-5 text-[var(--ink)] opacity-0 shadow-[var(--shadow)] transition-opacity duration-150 group-hover:opacity-100 group-focus-within:opacity-100 sm:left-auto sm:right-0 sm:translate-x-0"
       >
         {text}
       </span>

@@ -11,6 +11,7 @@ import { ScoreBadge } from "@/components/ScoreBadge";
 import { FaultHint } from "@/components/FaultExplain";
 import { getPain } from "@/lib/catalog";
 import { getChassis } from "@/data/chassis";
+import { track } from "@/lib/analytics";
 
 type SortKey = "score" | "buy" | "repair";
 
@@ -108,8 +109,15 @@ export function VariantExplorer({
   function toggle(engine: string) {
     setOpen((prev) => {
       const next = new Set(prev);
-      if (next.has(engine)) next.delete(engine);
-      else next.add(engine);
+      const opening = !next.has(engine);
+      if (opening) next.add(engine);
+      else next.delete(engine);
+      track("Engine Group Toggled", {
+        locale,
+        chassis_slug: chassisSlug,
+        engine,
+        open: opening,
+      });
       return next;
     });
   }
@@ -134,11 +142,18 @@ export function VariantExplorer({
               type="button"
               role="tab"
               aria-selected={fuel === key}
-              onClick={() => setFuel(key)}
+              onClick={() => {
+                setFuel(key);
+                track("Fuel Filter Changed", {
+                  locale,
+                  chassis_slug: chassisSlug,
+                  fuel: key,
+                });
+              }}
               className={`h-9 rounded-md border text-sm font-medium ${
                 fuel === key
                   ? "border-[var(--accent)] bg-[var(--paper)] text-[var(--ink)]"
-                  : "border-transparent text-[var(--muted)] hover:border-[var(--line)] hover:bg-white/[0.04] hover:text-[var(--ink)]"
+                  : "border-transparent text-[var(--muted)] hover:border-[var(--line)] hover:bg-[var(--veil)] hover:text-[var(--ink)]"
               }`}
             >
               {label}
@@ -266,8 +281,16 @@ function EngineBlock({
   const pain = getPain(group.topPainId);
   const chassis = getChassis(chassisSlug);
 
-  function goYear(event: MouseEvent<HTMLTableRowElement>, href: string) {
+  function goYear(event: MouseEvent<HTMLTableRowElement>, href: string, row: VariantBrief) {
     if ((event.target as HTMLElement).closest("a, button, dialog")) return;
+    track("Variant Opened From Explorer", {
+      locale,
+      chassis_slug: chassisSlug,
+      variant_slug: row.slug,
+      engine: row.engine,
+      fuel: row.fuel,
+      surface: "desktop_row",
+    });
     if (event.metaKey || event.ctrlKey || event.shiftKey || event.button === 1) {
       window.open(href, "_blank", "noopener,noreferrer");
       return;
@@ -347,11 +370,24 @@ function EngineBlock({
             return (
               <tr
                 key={row.slug}
-                onClick={(event) => goYear(event, href)}
+                onClick={(event) => goYear(event, href, row)}
                 className="tap-row group cursor-pointer border-b border-[var(--line)] last:border-0"
               >
                 <td className="py-2.5 pr-4 pl-10">
-                  <Link href={href} className="font-semibold group-hover:text-[var(--accent)]">
+                  <Link
+                    href={href}
+                    onClick={() => {
+                      track("Variant Opened From Explorer", {
+                        locale,
+                        chassis_slug: chassisSlug,
+                        variant_slug: row.slug,
+                        engine: row.engine,
+                        fuel: row.fuel,
+                        surface: "desktop_row",
+                      });
+                    }}
+                    className="font-semibold group-hover:text-[var(--accent)]"
+                  >
                     {row.model} {row.engine}
                   </Link>
                 </td>
@@ -469,7 +505,20 @@ function MobileGroup({
             const href = `/${locale}/bmw/${chassisSlug}/${row.slug}`;
             return (
               <li key={row.slug} className="border-b border-[var(--line)] last:border-0">
-                <Link href={href} className="tap block px-4 py-3">
+                <Link
+                  href={href}
+                  onClick={() => {
+                    track("Variant Opened From Explorer", {
+                      locale,
+                      chassis_slug: chassisSlug,
+                      variant_slug: row.slug,
+                      engine: row.engine,
+                      fuel: row.fuel,
+                      surface: "mobile_row",
+                    });
+                  }}
+                  className="tap block px-4 py-3"
+                >
                   <div className="flex items-start justify-between gap-3">
                     <p className="min-w-0 text-sm font-semibold">
                       <span className="font-mono tabular-nums">{row.year}</span> {row.model}

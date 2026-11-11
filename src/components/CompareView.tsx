@@ -9,6 +9,7 @@ import type { Locale } from "@/lib/locale";
 import { t } from "@/lib/i18n";
 import { CompareBoard } from "@/components/CompareBoard";
 import { compareHref, readCompareSlots, writeCompareSlots } from "@/lib/compare";
+import { track } from "@/lib/analytics";
 
 /** Client-side slots — static export cannot read searchParams on the server. */
 export function CompareView({ locale }: { locale: Locale }) {
@@ -19,6 +20,7 @@ export function CompareView({ locale }: { locale: Locale }) {
   const b = searchParams.get("b") ?? undefined;
   const [ready, setReady] = useState(Boolean(a || b));
   const seenUrl = useRef(Boolean(a || b));
+  const trackedPair = useRef("");
 
   // Header → bare /compare restores tray once.
   // Clearing both cars writes an empty tray (no revive loop).
@@ -41,6 +43,19 @@ export function CompareView({ locale }: { locale: Locale }) {
     }
     setReady(true);
   }, [a, b, locale, router]);
+
+  useEffect(() => {
+    if (!ready || (!a && !b)) return;
+    const key = `${a ?? ""}|${b ?? ""}`;
+    if (trackedPair.current === key) return;
+    trackedPair.current = key;
+    track("Compare Viewed", {
+      locale,
+      a,
+      b,
+      has_both: Boolean(a && b),
+    });
+  }, [ready, a, b, locale]);
 
   if (!ready) {
     return (

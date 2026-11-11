@@ -7,6 +7,8 @@ import type { Locale } from "@/lib/locale";
 import { locales, switchLocalePath } from "@/lib/locale";
 import { t } from "@/lib/i18n";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
+import { ThemeToggle } from "@/components/ThemeToggle";
+import { track } from "@/lib/analytics";
 
 const LANG_CODE: Record<Locale, string> = {
   en: "EN",
@@ -56,8 +58,9 @@ export function Header({ locale }: { locale: Locale }) {
   return (
     <header
       ref={headerRef}
-      className="sticky top-0 z-50 border-b border-white/8 bg-[var(--paper)] safe-top"
-    >      <div className="mx-auto flex h-12 items-center justify-between gap-3 px-4 sm:h-14 sm:px-6 md:max-w-5xl">
+      className="sticky top-0 z-50 border-b border-[var(--hairline)] bg-[var(--paper)]/92 backdrop-blur-xl safe-top"
+    >
+      <div className="mx-auto flex h-12 items-center justify-between gap-3 px-4 sm:h-14 sm:px-6 md:max-w-5xl">
         <Link href={`/${locale}`} className="min-w-0 shrink-0 font-display text-[1.35rem] leading-none sm:text-[1.5rem]">
           <span className="text-[var(--accent)]">Oh</span>MyCar
         </Link>
@@ -93,43 +96,55 @@ export function Header({ locale }: { locale: Locale }) {
           >
             {copy.scoreShort}
           </Link>
-          <div ref={langRef} className="relative ml-1">
-            <button
-              type="button"
-              aria-haspopup="listbox"
-              aria-expanded={langOpen}
-              aria-label={copy.lang}
-              onClick={() => setLangOpen((open) => !open)}
-              className="h-tap inline-flex items-center gap-1 rounded-full border border-[var(--accent)] bg-[var(--card)] px-3 font-mono text-xs font-semibold tracking-wide"
-            >
-              {LANG_CODE[locale]}
-              <span className="text-[9px] text-[var(--muted)]" aria-hidden>
-                ▾
-              </span>
-            </button>
-            {langOpen ? (
-              <ul
-                role="listbox"
+          <div className="ml-1 flex items-center gap-1">
+            <ThemeToggle locale={locale} />
+            <div ref={langRef} className="relative">
+              <button
+                type="button"
+                aria-haspopup="listbox"
+                aria-expanded={langOpen}
                 aria-label={copy.lang}
-                className="absolute right-0 top-[calc(100%+6px)] z-50 min-w-[4.5rem] overflow-hidden rounded-2xl border border-[var(--line)] bg-[var(--card)] py-1 shadow-[0_16px_40px_rgba(0,0,0,0.45)]"
+                onClick={() => setLangOpen((open) => !open)}
+                className="h-tap inline-flex items-center gap-1 rounded-full border border-[var(--accent)] bg-[var(--card)] px-3 font-mono text-xs font-semibold tracking-wide"
               >
-                {locales.map((item) => (
-                  <li key={item} role="option" aria-selected={item === locale}>
-                    <Link
-                      href={switchLocalePath(pathname, locale, item)}
-                      onClick={() => setLangOpen(false)}
-                      className={`flex h-10 items-center justify-center font-mono text-xs font-semibold tracking-wide ${
-                        item === locale
-                          ? "bg-[var(--accent)] text-[var(--paper)]"
-                          : "tap text-[var(--ink)]"
-                      }`}
-                    >
-                      {LANG_CODE[item]}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            ) : null}
+                {LANG_CODE[locale]}
+                <span className="text-[9px] text-[var(--muted)]" aria-hidden>
+                  ▾
+                </span>
+              </button>
+              {langOpen ? (
+                <ul
+                  role="listbox"
+                  aria-label={copy.lang}
+                  className="absolute right-0 top-[calc(100%+6px)] z-50 min-w-[4.5rem] overflow-hidden rounded-2xl border border-[var(--line)] bg-[var(--card)] py-1 shadow-[var(--shadow)]"
+                >
+                  {locales.map((item) => (
+                    <li key={item} role="option" aria-selected={item === locale}>
+                      <Link
+                        href={switchLocalePath(pathname, locale, item)}
+                        onClick={() => {
+                          if (item !== locale) {
+                            track("Locale Switched", {
+                              from_locale: locale,
+                              to_locale: item,
+                              path: pathname,
+                            });
+                          }
+                          setLangOpen(false);
+                        }}
+                        className={`flex h-10 items-center justify-center font-mono text-xs font-semibold tracking-wide ${
+                          item === locale
+                            ? "bg-[var(--accent)] text-[var(--on-accent)]"
+                            : "tap text-[var(--ink)]"
+                        }`}
+                      >
+                        {LANG_CODE[item]}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              ) : null}
+            </div>
           </div>
         </nav>
       </div>

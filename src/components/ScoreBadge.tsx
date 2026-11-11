@@ -1,4 +1,4 @@
-import { scoreTone } from "@/lib/score";
+import { scoreTone, scoreWord } from "@/lib/score";
 import type { Locale } from "@/lib/locale";
 import { t } from "@/lib/i18n";
 
@@ -64,12 +64,47 @@ export function ScoreGlow({
 }) {
   if (score == null) {
     return (
-      <span className={`tabular-nums text-[var(--muted)] ${className}`}>
+      <span
+        className={`inline-flex items-baseline rounded-lg bg-[var(--wash)] px-2.5 py-1.5 tabular-nums text-[var(--muted)] sm:rounded-xl sm:px-3 sm:py-2 ${className}`}
+      >
         {locale ? t(locale).scorePendingShort : "—"}
       </span>
     );
   }
-  return <span className={`tabular-nums ${glow[scoreTone(score)]} ${className}`}>{score.toFixed(1)}</span>;
+  const tone = scoreTone(score);
+  // Same tone pill treatment as Money prices (bg wash + colored text).
+  return (
+    <span
+      className={`inline-flex items-baseline rounded-lg px-2.5 py-1.5 tabular-nums sm:rounded-xl sm:px-3 sm:py-2 ${colors[tone]} ${glow[tone]} ${className}`}
+    >
+      {score.toFixed(1)}
+    </span>
+  );
+}
+
+const wordText = {
+  good: "text-[var(--good)]",
+  mid: "text-[var(--mid)]",
+  bad: "text-[var(--bad)]",
+};
+
+/** Plain-language label beside the score (MotorFiable “Good reliability”). */
+export function ScoreWordLabel({
+  score,
+  locale,
+  className = "",
+}: {
+  score: number | null | undefined;
+  locale: Locale;
+  className?: string;
+}) {
+  const word = scoreWord(score);
+  if (!word) return null;
+  const copy = t(locale);
+  const label =
+    word === "strong" ? copy.scoreWordStrong : word === "mixed" ? copy.scoreWordMixed : copy.scoreWordWeak;
+  const tone = scoreTone(score!);
+  return <p className={`text-sm font-semibold leading-snug ${wordText[tone]} ${className}`}>{label}</p>;
 }
 
 export function ScoreTrack({
@@ -82,11 +117,11 @@ export function ScoreTrack({
   compact?: boolean;
 }) {
   if (score == null) {
-    return <div className={`relative rounded-full bg-white/10 ${compact ? "mt-1.5 h-1" : "mt-3 h-1.5"}`} />;
+    return <div className={`relative rounded-full bg-[var(--veil-strong)] ${compact ? "mt-1.5 h-1" : "mt-3 h-1.5"}`} />;
   }
   const tone = toneOverride ?? scoreTone(score);
   return (
-    <div className={`relative rounded-full bg-white/10 ${compact ? "mt-1.5 h-1" : "mt-3 h-1.5"}`}>
+    <div className={`relative rounded-full bg-[var(--veil-strong)] ${compact ? "mt-1.5 h-1" : "mt-3 h-1.5"}`}>
       <div
         className="absolute inset-y-0 left-0 rounded-full"
         style={{ width: `${score}%`, background: track[tone] }}

@@ -43,9 +43,25 @@ export function BodySwitcher({
             <HardLink
               key={item.slug}
               href={href}
-              className={`overflow-hidden rounded-xl border ${
+              analyticsEvent={active ? undefined : "Body Switched"}
+              analyticsProps={
+                active
+                  ? undefined
+                  : {
+                      locale,
+                      from_chassis: current,
+                      to_chassis: item.slug,
+                      context: from ? "variant" : "chassis",
+                      from_variant: from?.slug,
+                    }
+              }
+              className={`overflow-hidden rounded-xl border-2 ${
                 compact ? "w-[6.75rem] shrink-0" : "min-w-0"
-              } ${active ? "border-[var(--accent)]" : "tap border-[var(--line)]"}`}
+              } ${
+                active
+                  ? "border-[var(--ink)]"
+                  : "tap border-[var(--line)]"
+              }`}
             >
               <CarPhoto
                 chassis={item}

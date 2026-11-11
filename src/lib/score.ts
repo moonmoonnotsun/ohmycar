@@ -68,3 +68,27 @@ export function scoreTone(score: number): "good" | "mid" | "bad" {
   if (score >= 40) return "mid";
   return "bad";
 }
+
+/**
+ * Buyer stance from evidence score (MotorFiable-style Buy / Caution / Avoid,
+ * phrased for OhMyCar: prefer / with caution / high risk — not a purchase order).
+ */
+export type ScoreStance = "prefer" | "caution" | "avoid";
+
+export function scoreStance(score: number | null | undefined): ScoreStance | null {
+  if (score == null) return null;
+  if (score >= 70) return "prefer";
+  if (score >= 40) return "caution";
+  return "avoid";
+}
+
+/** Plain-language reliability label for the score number. */
+export type ScoreWord = "strong" | "mixed" | "weak";
+
+export function scoreWord(score: number | null | undefined): ScoreWord | null {
+  if (score == null) return null;
+  const tone = scoreTone(score);
+  if (tone === "good") return "strong";
+  if (tone === "mid") return "mixed";
+  return "weak";
+}

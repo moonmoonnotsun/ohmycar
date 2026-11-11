@@ -1,6 +1,8 @@
 @import "tailwindcss";
 
-:root {
+:root,
+html[data-theme="dark"] {
+  color-scheme: dark;
   --paper: #07080c;
   --wash: #16181f;
   --card: #101218;
@@ -13,10 +15,113 @@
   --mid-bg: rgba(245, 196, 0, 0.14);
   --bad: #ff4b4b;
   --bad-bg: rgba(255, 75, 75, 0.16);
+  --good-bg-strong: rgba(62, 224, 143, 0.28);
+  --mid-bg-strong: rgba(245, 196, 0, 0.28);
+  --bad-bg-strong: rgba(255, 75, 75, 0.3);
   --night: #05060a;
   --cream: #f4f5f7;
   --accent: #f5c400;
+  --on-accent: #07080c;
+  --veil: rgba(255, 255, 255, 0.045);
+  --veil-strong: rgba(255, 255, 255, 0.08);
+  --hairline: rgba(255, 255, 255, 0.1);
+  --shadow: 0 16px 40px rgba(0, 0, 0, 0.45);
+  --overlay: rgba(0, 0, 0, 0.72);
+  --glow-accent: rgba(245, 196, 0, 0.14);
+  --glow-danger: rgba(255, 75, 75, 0.09);
+  /* Year risk dots only — keep mid text/fills separate. */
+  --year-dot-mid: #f5c400;
   --header-h: 3.5rem;
+}
+
+html[data-theme="light"] {
+  color-scheme: light;
+  --paper: #f2f4f7;
+  --wash: #e9eef4;
+  --card: #ffffff;
+  --ink: #0f1419;
+  --muted: #5b6573;
+  --line: #d3d9e2;
+  /*
+    Light signals = bright saturated hues (not muddy forest/brown/maroon).
+    Soft pastel washes + vivid text/borders.
+  */
+  --good: #10b981;
+  --good-bg: rgba(52, 211, 153, 0.22);
+  --mid: #d97706;
+  --mid-bg: rgba(254, 240, 138, 0.92);
+  --bad: #f43f5e;
+  --bad-bg: rgba(251, 113, 133, 0.2);
+  --good-bg-strong: rgba(52, 211, 153, 0.36);
+  --mid-bg-strong: rgba(253, 224, 71, 0.95);
+  --bad-bg-strong: rgba(251, 113, 133, 0.34);
+  --night: #0a0b0f;
+  --cream: #f2f4f7;
+  --accent: #f59e0b;
+  --on-accent: #fffbeb;
+  --veil: rgba(15, 20, 25, 0.04);
+  --veil-strong: rgba(15, 20, 25, 0.07);
+  --hairline: rgba(15, 20, 25, 0.1);
+  --shadow: 0 12px 32px rgba(15, 20, 25, 0.08);
+  --overlay: rgba(15, 20, 25, 0.4);
+  --glow-accent: rgba(245, 158, 11, 0.18);
+  --glow-danger: rgba(244, 63, 94, 0.1);
+  /* Bright yellow on the pill — not muddy amber used for mid text. */
+  --year-dot-mid: #eab308;
+}
+
+/* Light: cards lift off cool porcelain paper */
+html[data-theme="light"] .catalog-card {
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.7) inset, var(--shadow);
+}
+
+/*
+  Semantic cards: white surface + strong side bar (not pastel sticky-notes).
+*/
+.tone-verdict,
+html[data-theme="light"] .tone-good,
+html[data-theme="light"] .tone-bad {
+  position: relative;
+  overflow: hidden;
+}
+.tone-verdict::before,
+html[data-theme="light"] .tone-good::before,
+html[data-theme="light"] .tone-bad::before {
+  content: "";
+  position: absolute;
+  inset: 0 auto 0 0;
+  width: 4px;
+}
+.tone-verdict::before {
+  background: var(--ink);
+}
+html[data-theme="light"] .tone-good,
+html[data-theme="light"] .tone-bad {
+  background: var(--card);
+}
+html[data-theme="light"] .tone-good {
+  border-color: color-mix(in srgb, var(--good) 55%, var(--line));
+}
+html[data-theme="light"] .tone-bad {
+  border-color: color-mix(in srgb, var(--bad) 55%, var(--line));
+}
+html[data-theme="light"] .tone-verdict {
+  border-color: color-mix(in srgb, var(--ink) 28%, var(--line));
+  background: var(--wash);
+}
+html[data-theme="light"] .tone-good::before {
+  background: var(--good);
+}
+html[data-theme="light"] .tone-bad::before {
+  background: var(--bad);
+}
+
+/* Ask FAB stays neutral — no orange fill */
+html[data-theme="light"] .ask-fab {
+  border-color: var(--line);
+  background: var(--card);
+  color: var(--ink);
+  box-shadow: var(--shadow);
 }
 
 @theme inline {
@@ -38,6 +143,8 @@ body {
   min-height: 100dvh;
   font-family: var(--font-jakarta), var(--font-plex-sans), ui-sans-serif, system-ui, sans-serif;
   background-color: var(--paper);
+  color: var(--ink);
+  transition: background-color 180ms ease, color 180ms ease;
 }
 
 /* Fixed glow layer — avoids background-attachment:fixed scroll jank */
@@ -48,8 +155,8 @@ body::before {
   z-index: -1;
   pointer-events: none;
   background-image:
-    radial-gradient(900px 420px at 80% -10%, rgba(245, 196, 0, 0.14), transparent 55%),
-    radial-gradient(700px 380px at -10% 20%, rgba(255, 75, 75, 0.09), transparent 50%);
+    radial-gradient(900px 420px at 80% -10%, var(--glow-accent), transparent 55%),
+    radial-gradient(700px 380px at -10% 20%, var(--glow-danger), transparent 50%);
 }
 
 .catalog-card {
@@ -116,7 +223,7 @@ button:disabled,
 }
 
 .fault-dialog::backdrop {
-  background: #000;
+  background: var(--overlay);
 }
 
 .fault-dialog-head {
@@ -151,11 +258,7 @@ button:disabled,
     border: 1px solid var(--line);
     border-radius: 1.25rem;
     padding-top: 0;
-    box-shadow: 0 24px 64px rgba(0, 0, 0, 0.5);
-  }
-
-  .fault-dialog::backdrop {
-    background: rgba(0, 0, 0, 0.72);
+    box-shadow: var(--shadow);
   }
 }
 
@@ -175,6 +278,12 @@ button:disabled,
 .score-bad {
   color: var(--bad);
   text-shadow: 0 0 48px rgba(255, 75, 75, 0.5);
+}
+
+html[data-theme="light"] .score-good,
+html[data-theme="light"] .score-mid,
+html[data-theme="light"] .score-bad {
+  text-shadow: none;
 }
 
 .no-scrollbar {
@@ -201,24 +310,24 @@ button:disabled,
   transition: border-color 140ms ease, background-color 140ms ease, color 140ms ease;
 }
 .tap:active {
-  background-color: rgba(245, 196, 0, 0.1);
+  background-color: color-mix(in srgb, var(--accent) 12%, transparent);
 }
 
 .tap-row > * {
   transition: background-color 140ms ease, box-shadow 140ms ease;
 }
 .tap-row:active > * {
-  background-color: rgba(245, 196, 0, 0.12);
+  background-color: color-mix(in srgb, var(--accent) 14%, transparent);
 }
 
 @media (hover: hover) and (pointer: fine) {
   .tap:hover {
     border-color: var(--accent);
-    background-color: rgba(245, 196, 0, 0.08);
+    background-color: color-mix(in srgb, var(--accent) 10%, transparent);
   }
   .tap-row:hover > *,
   .tap-row:focus-visible > * {
-    background-color: rgba(245, 196, 0, 0.1);
+    background-color: color-mix(in srgb, var(--accent) 12%, transparent);
   }
   .tap-row:hover > :first-child,
   .tap-row:focus-visible > :first-child {
@@ -249,13 +358,13 @@ button:disabled,
   height: 2.75rem;
   padding: 0 1rem 0 0.85rem;
   overflow: hidden;
-  border: 1px solid rgba(245, 196, 0, 0.45);
+  border: 1px solid color-mix(in srgb, var(--accent) 45%, transparent);
   border-radius: 999px;
   background: var(--card);
   color: var(--ink);
   font-size: 0.875rem;
   font-weight: 600;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.45), 0 0 24px rgba(245, 196, 0, 0.12);
+  box-shadow: var(--shadow), 0 0 24px color-mix(in srgb, var(--accent) 14%, transparent);
 }
 
 .ask-fab-buybar {
@@ -266,7 +375,7 @@ button:disabled,
   pointer-events: none;
   position: absolute;
   inset: -40%;
-  background: radial-gradient(circle at 20% 50%, rgba(245, 196, 0, 0.22), transparent 55%);
+  background: radial-gradient(circle at 20% 50%, color-mix(in srgb, var(--accent) 22%, transparent), transparent 55%);
 }
 
 @media (min-width: 768px) {
@@ -305,7 +414,7 @@ button:disabled,
 }
 
 .ask-sheet::backdrop {
-  background: rgba(0, 0, 0, 0.72);
+  background: var(--overlay);
 }
 
 .ask-sheet-head {
@@ -373,12 +482,18 @@ button:disabled,
     height: 100dvh;
     max-height: 100dvh;
     border-left: 1px solid var(--line);
+    box-shadow: -24px 0 64px color-mix(in srgb, var(--ink) 18%, transparent);
+  }
+
+  html[data-theme="dark"] .ask-sheet,
+  html[data-theme="dark"] .ask-sheet[open],
+  html[data-theme="dark"] .ask-sheet:modal {
     box-shadow: -24px 0 64px rgba(0, 0, 0, 0.45);
   }
 }
 
 ::selection {
-  background: rgba(245, 196, 0, 0.28);
+  background: color-mix(in srgb, var(--accent) 28%, transparent);
 }
 
 @media (prefers-reduced-motion: reduce) {

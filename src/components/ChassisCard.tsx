@@ -1,3 +1,5 @@
+"use client";
+
 import Link from "next/link";
 import type { Chassis } from "@/data/types";
 import type { Locale } from "@/lib/locale";
@@ -12,10 +14,12 @@ export function ChassisCard({
   chassis,
   locale,
   marks = [],
+  onOpen,
 }: {
   chassis: Chassis;
   locale: Locale;
   marks?: ListMark[];
+  onOpen?: () => void;
 }) {
   const copy = t(locale);
   const summary = chassisSummary(chassis.slug);
@@ -26,6 +30,7 @@ export function ChassisCard({
   return (
     <Link
       href={`/${locale}/bmw/${chassis.slug}`}
+      onClick={onOpen}
       className="catalog-card group tap block overflow-hidden rounded-2xl border border-[var(--line)] bg-[var(--card)]"
     >
       <CarPhoto
@@ -44,24 +49,20 @@ export function ChassisCard({
         ) : null}
       </CarPhoto>
       <div className="p-3 sm:p-4">
-        <div className="flex items-start justify-between gap-3">
-          <div className="min-w-0">
-            <p className="font-mono text-lg font-semibold tracking-tight sm:text-xl">{chassis.code}</p>
-            <p className="mt-0.5 text-xs text-[var(--muted)] sm:mt-1 sm:text-sm">{chassis.name[locale]}</p>
+        <p className="font-mono text-lg font-semibold leading-snug tracking-tight sm:text-xl">{chassis.code}</p>
+        <p className="mt-1 truncate text-sm leading-snug text-[var(--muted)]">{chassis.name[locale]}</p>
+        {summary ? (
+          <div className="mt-2.5 flex gap-3 sm:mt-3 sm:gap-3.5">
+            <ScoreCol label={copy.cardBest} score={summary.best.score} engine={summary.best.engine} />
+            {split ? (
+              <ScoreCol label={copy.cardWorst} score={summary.worst.score} engine={summary.worst.engine} />
+            ) : null}
           </div>
-          {summary ? (
-            <div className="flex shrink-0 gap-2.5 sm:gap-3">
-              <ScoreCol label={copy.cardBest} score={summary.best.score} engine={summary.best.engine} />
-              {split ? (
-                <ScoreCol label={copy.cardWorst} score={summary.worst.score} engine={summary.worst.engine} />
-              ) : null}
-            </div>
-          ) : (
-            <span className="rounded-full bg-[var(--wash)] px-2 py-0.5 text-[11px] font-semibold uppercase tracking-wide text-[var(--muted)]">
-              {copy.catalogOnly}
-            </span>
-          )}
-        </div>
+        ) : (
+          <span className="mt-2.5 inline-flex rounded-full bg-[var(--wash)] px-2 py-0.5 text-[11px] font-semibold uppercase tracking-wide text-[var(--muted)]">
+            {copy.catalogOnly}
+          </span>
+        )}
         <div className="mt-2 sm:mt-3">
           <span className="whitespace-nowrap text-sm font-semibold tabular-nums tracking-tight text-[var(--ink)]">
             {chassis.years}
@@ -155,12 +156,15 @@ function ScoreCol({
   compact?: boolean;
 }) {
   return (
-    <div className="min-w-[3.25rem] text-right">
-      <p className="text-[11px] font-semibold uppercase tracking-[0.14em] text-[var(--muted)]">{label}</p>
-      <p className={`mt-0.5 font-display leading-none tracking-tight ${compact ? "text-lg" : "text-[1.65rem]"}`}>
-        <ScoreGlow score={score} />
+    <div className={compact ? "min-w-[2.75rem] text-right" : "min-w-0 text-left"}>
+      <p className="text-[10px] font-semibold uppercase tracking-[0.14em] text-[var(--muted)]">{label}</p>
+      <p className={`mt-0.5 font-display leading-none tracking-tight ${compact ? "text-lg" : "text-[1.35rem]"}`}>
+        <ScoreGlow
+          score={score}
+          className={compact ? undefined : "!rounded-md !px-1.5 !py-0.5 sm:!rounded-md sm:!px-2 sm:!py-1"}
+        />
       </p>
-      <p className="mt-1 font-mono text-xs text-[var(--muted)]">{engine}</p>
+      <p className="mt-0.5 truncate font-mono text-[10px] text-[var(--muted)]">{engine}</p>
     </div>
   );
 }
@@ -175,7 +179,7 @@ function MarkPill({
   return (
     <span
       className={`rounded-full px-2 py-0.5 text-[11px] font-semibold uppercase tracking-[0.12em] ${
-        tone === "good" ? "bg-[var(--good)] text-[#04140c]" : "bg-[var(--bad)] text-white"
+        tone === "good" ? "bg-[var(--good)] text-[var(--on-accent)]" : "bg-[var(--bad)] text-white"
       }`}
     >
       {children}

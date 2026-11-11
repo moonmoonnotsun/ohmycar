@@ -56,14 +56,13 @@ export function MoneyRange({
     return <MoneyFree locale={locale} size={size} />;
   }
   const amount = `${formatPlnAmount(range[0], locale)}\u2060–\u2060${formatPlnAmount(range[1], locale)}`;
-  const ink = tone === "good" ? "text-[var(--good)]" : tone === "bad" ? "text-[var(--bad)]" : tone === "mid" ? "text-[var(--mid)]" : "text-[var(--ink)]";
-  const cur = tone === "good" ? "text-[var(--good)]" : tone === "bad" ? "text-[var(--bad)]" : tone === "mid" ? "text-[var(--mid)]" : "text-[var(--accent)]";
+  const color = moneyToneClass(tone);
   if (variant === "plain") {
     const amountSize = size === "lg" ? "text-2xl sm:text-3xl" : size === "md" ? "text-base" : "text-[13px]";
     return (
-      <span className={`inline-flex items-baseline gap-1.5 whitespace-nowrap ${amountSize}`}>
-        <span className={`font-mono font-semibold tabular-nums tracking-tight ${ink}`}>{amount}</span>
-        <span className={`text-[10px] font-semibold uppercase tracking-wide ${cur}`}>
+      <span className={`inline-flex items-baseline gap-1.5 whitespace-nowrap ${amountSize} ${color}`}>
+        <span className="font-mono font-semibold tabular-nums tracking-tight">{amount}</span>
+        <span className="text-[10px] font-semibold uppercase tracking-wide">
           {locale === "pl" ? "zł" : "PLN"}
         </span>
       </span>
@@ -105,17 +104,27 @@ export function FixBand({
   );
 }
 
+function moneyToneClass(tone?: "good" | "mid" | "bad") {
+  if (tone === "good") return "text-[var(--good)]";
+  if (tone === "bad") return "text-[var(--bad)]";
+  return "text-[var(--mid)]";
+}
+
+function moneyToneBg(tone?: "good" | "mid" | "bad") {
+  if (tone === "good") return "bg-[var(--good-bg)]";
+  if (tone === "bad") return "bg-[var(--bad-bg)]";
+  return "bg-[var(--mid-bg)]";
+}
+
 function MoneyFree({ locale, size = "md" }: { locale: Locale; size?: "sm" | "md" | "lg" }) {
   const copy = t(locale);
   const amountSize = size === "lg" ? "text-xl sm:text-2xl" : size === "sm" ? "text-[13px]" : "text-[15px]";
   const pad = size === "lg" ? "px-3 py-1.5" : "px-2 py-1";
   return (
     <span
-      className={`inline-flex w-max max-w-full items-baseline whitespace-nowrap rounded-lg bg-[var(--mid-bg)] ${pad}`}
+      className={`inline-flex w-max max-w-full items-baseline whitespace-nowrap rounded-lg bg-[var(--good-bg)] ${pad}`}
     >
-      <span
-        className={`font-semibold leading-none tracking-tight text-[var(--good)] ${amountSize}`}
-      >
+      <span className={`font-semibold leading-none tracking-tight text-[var(--good)] ${amountSize}`}>
         {copy.free}
       </span>
     </span>
@@ -128,11 +137,9 @@ function MoneyNa({ locale, size = "md" }: { locale: Locale; size?: "sm" | "md" |
   const pad = size === "lg" ? "px-3 py-1.5" : "px-2 py-1";
   return (
     <span
-      className={`inline-flex w-max max-w-full items-baseline whitespace-nowrap rounded-lg bg-[var(--mid-bg)] ${pad}`}
+      className={`inline-flex w-max max-w-full items-baseline whitespace-nowrap rounded-lg bg-[var(--wash)] ${pad}`}
     >
-      <span
-        className={`font-mono font-semibold leading-none tracking-tight text-[var(--ink)] ${amountSize}`}
-      >
+      <span className={`font-mono font-semibold leading-none tracking-tight text-[var(--muted)] ${amountSize}`}>
         {copy.na}
       </span>
     </span>
@@ -153,40 +160,15 @@ function MoneyCell({
   const amountSize = size === "lg" ? "text-xl sm:text-2xl" : size === "sm" ? "text-[13px]" : "text-[15px]";
   const currencySize = size === "lg" ? "text-xs" : "text-[11px]";
   const pad = size === "lg" ? "px-3 py-1.5" : "px-2 py-1";
-  const bg =
-    tone === "good"
-      ? "bg-[var(--good-bg)]"
-      : tone === "bad"
-        ? "bg-[var(--bad-bg)]"
-        : tone === "mid"
-          ? "bg-[var(--mid-bg)]"
-          : "bg-[var(--mid-bg)]";
-  const ink =
-    tone === "good"
-      ? "text-[var(--good)]"
-      : tone === "bad"
-        ? "text-[var(--bad)]"
-        : tone === "mid"
-          ? "text-[var(--mid)]"
-          : "text-[var(--ink)]";
-  const cur =
-    tone === "good"
-      ? "text-[var(--good)]"
-      : tone === "bad"
-        ? "text-[var(--bad)]"
-        : tone === "mid"
-          ? "text-[var(--mid)]"
-          : "text-[var(--accent)]";
+  const color = moneyToneClass(tone);
   return (
     <span
-      className={`inline-flex w-max max-w-full items-baseline gap-1.5 whitespace-nowrap rounded-lg ${bg} ${pad}`}
+      className={`inline-flex w-max max-w-full items-baseline gap-1.5 whitespace-nowrap rounded-lg ${moneyToneBg(tone)} ${pad} ${color}`}
     >
-      <span
-        className={`font-mono font-semibold tabular-nums leading-none tracking-tight ${ink} ${amountSize}`}
-      >
+      <span className={`font-mono font-semibold tabular-nums leading-none tracking-tight ${amountSize}`}>
         {amount}
       </span>
-      <span className={`shrink-0 ${currencySize} font-semibold uppercase tracking-wide ${cur}`}>
+      <span className={`shrink-0 font-semibold uppercase tracking-wide ${currencySize}`}>
         {locale === "pl" ? "zł" : "PLN"}
       </span>
     </span>

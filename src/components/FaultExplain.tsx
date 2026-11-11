@@ -14,6 +14,7 @@ import {
   filterPriceSources,
   type PainSource,
 } from "@/lib/painSources";
+import { track } from "@/lib/analytics";
 
 const SEV: Record<Pain["severity"], { key: keyof ReturnType<typeof t>; bar: string }> = {
   "engine-loss": { key: "sevEngine", bar: "bg-[var(--bad)]" },
@@ -84,11 +85,19 @@ export function FaultHint({
 
   if (!pain) return <span className="text-[var(--muted)]">—</span>;
 
-  const sev = SEV[pain.severity];
+  const activePain = pain;
+  const sev = SEV[activePain.severity];
 
   function open(e: MouseEvent) {
     e.preventDefault();
     e.stopPropagation();
+    track("Fault Opened", {
+      locale,
+      pain_id: activePain.id,
+      severity: activePain.severity,
+      chassis_slug: chassis?.slug ?? variant?.chassisSlug,
+      variant_slug: variant?.slug,
+    });
     dialog.current?.showModal();
   }
 
@@ -153,7 +162,18 @@ export function FaultHint({
           href={autodocUrl(autodocQueryFor(pain, locale, variant?.engine), locale, chassis, variant)}
           target="_blank"
           rel="noreferrer"
-          onClick={(e) => e.stopPropagation()}
+          onClick={(e) => {
+            e.stopPropagation();
+            track("Outbound Link Clicked", {
+              locale,
+              destination: "autodoc",
+              surface: "fault_dialog",
+              pain_id: pain.id,
+              chassis_slug: chassis?.slug ?? variant?.chassisSlug,
+              variant_slug: variant?.slug,
+              url: autodocUrl(autodocQueryFor(pain, locale, variant?.engine), locale, chassis, variant),
+            });
+          }}
         >
           {copy.autodoc}: {autodocQueryFor(pain, locale, variant?.engine)}
         </a>
@@ -189,11 +209,14 @@ export function SourceList({
   sources,
   engine,
   chassisSlug,
+  nestUnderHeading = false,
 }: {
   locale: Locale;
   sources: Pain["sources"];
   engine?: string;
   chassisSlug?: string;
+  /** Skip repeating “Sources” when the parent section already has that heading. */
+  nestUnderHeading?: boolean;
 }) {
   const copy = t(locale);
   if (sources.length === 0) return null;
@@ -204,10 +227,10 @@ export function SourceList({
   const fault = scoped.filter((s) => !priceUrls.has(s.url));
 
   return (
-    <div className="mt-3 space-y-3">
+    <div className="mt-3 space-y-4">
       {fault.length > 0 ? (
         <SourceGroup
-          title={copy.sources}
+          title={nestUnderHeading ? null : copy.sources}
           items={fault}
           engine={engine}
           chassisSlug={chassisSlug}
@@ -234,7 +257,7 @@ function SourceGroup({
   chassisSlug,
   familyPriorPrefix,
 }: {
-  title: string;
+  title: string | null;
   items: PainSource[];
   engine?: string;
   chassisSlug?: string;
@@ -242,15 +265,19 @@ function SourceGroup({
 }) {
   return (
     <div>
-      <p className="text-[10px] font-semibold uppercase tracking-[0.14em] text-[var(--ink)]">{title}</p>
-      <ul className="mt-1.5 list-disc space-y-1 pl-4 marker:text-[var(--muted)]">
+      {title ? (
+        <p className="text-sm font-semibold tracking-tight text-[var(--ink)]">{title}</p>
+      ) : null}
+      <ul
+        className={`${title ? "mt-2" : ""} list-disc space-y-1.5 pl-4 marker:text-[var(--muted)]`}
+      >
         {items.map((source) => (
           <li key={source.url}>
             <a
               href={source.url}
               target="_blank"
               rel="noreferrer"
-              className="break-all text-[13px] text-[var(--muted)] underline decoration-[var(--line)] underline-offset-2 hover:text-[var(--ink)]"
+              className="break-all text-[13px] text-[var(--ink)]/80 underline decoration-[var(--line)] underline-offset-2 hover:text-[var(--ink)]"
               onClick={(e) => e.stopPropagation()}
             >
               {displaySourceLabel(source, { engine, chassisSlug, familyPriorPrefix }).replace(
@@ -302,18 +329,18 @@ export function WorkshopPrices({
   }
 
   return (
-    <div className="mt-4 overflow-hidden rounded-xl border border-[var(--line)] bg-[var(--paper)]/60">
+    <div className="overflow-hidden rounded-xl border border-[var(--line)] bg-[var(--wash)]">
       {/* Hero total — primary glance value */}
       <div className="px-4 pb-3 pt-3.5">
         <div className="flex items-center gap-1.5">
-          <p className="text-[10px] font-semibold uppercase tracking-[0.16em] text-[var(--muted)]">
+          <p className="text-sm font-semibold tracking-tight text-[var(--ink)]">
             {copy.plnTypical}
+            <span className="font-normal text-[var(--muted)]"> · {copy.plnIndepShop}</span>
           </p>
           {priceHelp}
         </div>
-        <div className="mt-1.5 flex flex-wrap items-end justify-between gap-x-3 gap-y-1">
+        <div className="mt-2">
           <MoneyRange range={pain.plnIndependent} locale={locale} size="lg" />
-          <p className="pb-0.5 text-[12px] text-[var(--muted)]">{copy.plnIndepShop}</p>
         </div>
         {isFree ? (
           <p className="mt-1.5 text-[12px] leading-5 text-[var(--muted)]">{pain.plnNote}</p>
@@ -322,11 +349,11 @@ export function WorkshopPrices({
 
       {/* Parts + labor receipt */}
       {hasSplit && !isFree ? (
-        <div className="border-t border-[var(--line)] px-4 py-2.5">
+        <div className="border-t border-[var(--line)] px-4 py-3">
           <ReceiptRow label={copy.plnParts} range={pain.plnParts} locale={locale} />
           <ReceiptRow label={`+ ${copy.plnLabor}`} range={pain.plnLabor} locale={locale} />
-          <div className="mt-1.5 flex items-baseline justify-between gap-3 border-t border-dashed border-[var(--line)] pt-2">
-            <span className="text-[12px] font-semibold text-[var(--ink)]">{copy.plnFullSum}</span>
+          <div className="mt-2 flex items-baseline justify-between gap-3 border-t border-dashed border-[var(--line)] pt-2.5">
+            <span className="text-sm font-semibold text-[var(--ink)]">{copy.plnFullSum}</span>
             <MoneyRange range={pain.plnIndependent} locale={locale} size="sm" />
           </div>
         </div>
@@ -334,8 +361,8 @@ export function WorkshopPrices({
 
       {/* Shop ladder — all three tiers on one PLN axis */}
       {(pain.plnSpecialist || pain.plnAso) && !isFree ? (
-        <div className="border-t border-[var(--line)] px-4 py-2.5">
-          <p className="mb-1.5 text-[10px] font-semibold uppercase tracking-[0.14em] text-[var(--muted)]">
+        <div className="border-t border-[var(--line)] px-4 py-3">
+          <p className="mb-2 text-sm font-semibold tracking-tight text-[var(--ink)]">
             {copy.plnShopCompare}
           </p>
           <ShopLadder
@@ -481,8 +508,10 @@ function ReceiptRow({
   tone?: "good" | "mid" | "bad";
 }) {
   return (
-    <div className="flex items-baseline justify-between gap-3 py-1">
-      <span className={`min-w-0 text-[12px] ${quiet ? "text-[var(--muted)]" : "text-[var(--ink)]"}`}>
+    <div className="flex items-baseline justify-between gap-3 py-1.5">
+      <span
+        className={`min-w-0 text-sm font-medium ${quiet ? "text-[var(--muted)]" : "text-[var(--ink)]"}`}
+      >
         {label}
       </span>
       <MoneyRange range={range} locale={locale} size="sm" tone={tone} />
@@ -535,7 +564,7 @@ function ShopLadder({
             className="grid grid-cols-[6.75rem_minmax(0,1fr)_auto] items-center gap-x-2.5"
             title={`${row.label}: ${row.range[0]}–${row.range[1]} PLN`}
           >
-            <span className="truncate text-[12px] text-[var(--muted)]">{row.label}</span>
+            <span className="truncate text-sm font-medium text-[var(--ink)]">{row.label}</span>
             <div className="relative h-1.5 min-w-0 overflow-hidden rounded-full bg-[var(--wash)]">
               <span
                 className={`absolute top-0 h-full rounded-full ${row.bar}`}

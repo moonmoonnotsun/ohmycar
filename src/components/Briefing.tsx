@@ -3,7 +3,9 @@ import type { Locale } from "@/lib/locale";
 import { t } from "@/lib/i18n";
 import { autodocBmwUrl, autodocUrl, interCarsUrl, mobileDeUrl, otomotoUrl, partsQuery } from "@/lib/links";
 import { FaultDiagram, SourceList, WorkshopPrices } from "@/components/FaultExplain";
+import { GroupTitle } from "@/components/GroupTitle";
 import { SeverityPill } from "@/components/SeverityPill";
+import { OutboundLink } from "@/components/OutboundLink";
 import { autodocQueryFor } from "@/lib/painSources";
 
 export function BuyBar({
@@ -16,25 +18,31 @@ export function BuyBar({
   variant: VariantBrief;
 }) {
   const copy = t(locale);
+  const base = {
+    locale,
+    chassis_slug: chassis.slug,
+    variant_slug: variant.slug,
+    surface: "buy_bar",
+  };
   return (
     <div className="fixed inset-x-0 bottom-0 z-40 border-t border-[var(--line)] bg-[var(--paper)]/95 backdrop-blur-md md:hidden">
       <div className="mx-auto grid max-w-5xl grid-cols-2 gap-2 px-4 pt-3 safe-bottom">
-        <a
+        <OutboundLink
           href={otomotoUrl(chassis, variant)}
-          target="_blank"
-          rel="noreferrer"
+          destination="otomoto"
+          props={base}
           className="h-tap inline-flex items-center justify-center rounded-full border border-[var(--line)] bg-transparent px-3 text-sm font-medium text-[var(--ink)]"
         >
           {copy.otomoto}
-        </a>
-        <a
+        </OutboundLink>
+        <OutboundLink
           href={autodocBmwUrl(locale, chassis, variant)}
-          target="_blank"
-          rel="noreferrer"
+          destination="autodoc_bmw"
+          props={base}
           className="h-tap inline-flex items-center justify-center rounded-full border border-[var(--line)] bg-transparent px-3 text-sm font-medium text-[var(--ink)]"
         >
           {copy.autodoc}
-        </a>
+        </OutboundLink>
       </div>
     </div>
   );
@@ -53,28 +61,39 @@ export function MarketLinks({
   const query = partsQuery(chassis, variant);
   const linkClass =
     "h-tap inline-flex items-center rounded-xl border border-[var(--line)] bg-[var(--wash)] px-3 text-sm font-medium text-[var(--ink)] sm:px-4";
+  const base = {
+    locale,
+    chassis_slug: chassis.slug,
+    variant_slug: variant.slug,
+    surface: "market_links",
+  };
   return (
     <section className="grid gap-3 sm:grid-cols-2 sm:gap-4">
-      <div className="rounded-2xl border border-[var(--line)] bg-[var(--card)] p-3.5 sm:p-5">
-        <h2 className="text-[11px] font-medium uppercase tracking-[0.16em] text-[var(--muted)]">{copy.whereCar}</h2>
-        <div className="mt-3 flex flex-col gap-2 sm:mt-4">
-          <a className={linkClass} href={otomotoUrl(chassis, variant)} target="_blank" rel="noreferrer">
+      <div className="rounded-2xl border-2 border-[var(--line)] bg-[var(--card)] p-3.5 sm:p-5">
+        <GroupTitle>{copy.whereCar}</GroupTitle>
+        <div className="mt-1 flex flex-col gap-2 border-t border-[var(--line)] pt-3 sm:mt-1.5 sm:pt-4">
+          <OutboundLink className={linkClass} href={otomotoUrl(chassis, variant)} destination="otomoto" props={base}>
             {copy.openOtomoto}
-          </a>
-          <a className={linkClass} href={mobileDeUrl(chassis, variant)} target="_blank" rel="noreferrer">
+          </OutboundLink>
+          <OutboundLink className={linkClass} href={mobileDeUrl(chassis, variant)} destination="mobile_de" props={base}>
             {copy.mobile}
-          </a>
+          </OutboundLink>
         </div>
       </div>
-      <div className="rounded-2xl border border-[var(--line)] bg-[var(--card)] p-3.5 sm:p-5">
-        <h2 className="text-[11px] font-medium uppercase tracking-[0.16em] text-[var(--muted)]">{copy.whereParts}</h2>
-        <div className="mt-3 flex flex-col gap-2 sm:mt-4">
-          <a className={linkClass} href={autodocBmwUrl(locale, chassis, variant)} target="_blank" rel="noreferrer">
+      <div className="rounded-2xl border-2 border-[var(--line)] bg-[var(--card)] p-3.5 sm:p-5">
+        <GroupTitle>{copy.whereParts}</GroupTitle>
+        <div className="mt-1 flex flex-col gap-2 border-t border-[var(--line)] pt-3 sm:mt-1.5 sm:pt-4">
+          <OutboundLink
+            className={linkClass}
+            href={autodocBmwUrl(locale, chassis, variant)}
+            destination="autodoc_bmw"
+            props={base}
+          >
             {copy.openParts}
-          </a>
-          <a className={linkClass} href={interCarsUrl(query)} target="_blank" rel="noreferrer">
+          </OutboundLink>
+          <OutboundLink className={linkClass} href={interCarsUrl(query)} destination="intercars" props={base}>
             {copy.intercars}
-          </a>
+          </OutboundLink>
         </div>
       </div>
     </section>
@@ -107,12 +126,25 @@ export function PainCard({
   return (
     <article className="relative overflow-hidden rounded-2xl border border-[var(--line)] bg-[var(--card)] p-4 pl-5 sm:p-5 sm:pl-6">
       <span className={`absolute inset-y-0 left-0 w-1 ${sev.bar}`} aria-hidden />
-      <div className="flex flex-wrap items-start justify-between gap-2">
-        <h3 className="min-w-0 max-w-[18rem] text-[17px] font-semibold leading-snug tracking-tight sm:max-w-none">
-          {pain.title[locale]}
-        </h3>
+      {/* MotorFiable-style metadata row before the title */}
+      <div className="flex flex-wrap items-center gap-2">
         <SeverityPill locale={locale} severity={pain.severity} />
+        {variant?.engine ? (
+          <span className="rounded-full border border-[var(--line)] bg-[var(--wash)] px-2 py-0.5 font-mono text-[11px] font-medium text-[var(--ink)]">
+            {variant.engine}
+          </span>
+        ) : null}
+        {pain.yearFrom != null || pain.yearTo != null ? (
+          <span className="text-[11px] font-medium tabular-nums text-[var(--muted)]">
+            {pain.yearFrom != null && pain.yearTo != null && pain.yearFrom !== pain.yearTo
+              ? `${pain.yearFrom}–${pain.yearTo}`
+              : String(pain.yearFrom ?? pain.yearTo)}
+          </span>
+        ) : null}
       </div>
+      <h3 className="mt-2.5 min-w-0 text-[17px] font-semibold leading-snug tracking-tight">
+        {pain.title[locale]}
+      </h3>
       <p className="mt-2 max-w-prose text-sm leading-6 text-[var(--muted)]">{pain.summary[locale]}</p>
       <p className="mt-2 text-[13px] leading-5">
         <span className="text-[var(--muted)]">{copy.affects} · </span>
@@ -125,7 +157,7 @@ export function PainCard({
         chassisSlug={variant?.chassisSlug ?? chassis?.slug}
       />
       <div className="mt-3 flex flex-col gap-2 border-t border-[var(--line)] pt-3">
-        <a
+        <OutboundLink
           className="inline-flex h-10 w-fit items-center rounded-full border border-[var(--line)] bg-[var(--wash)] px-3.5 text-[13px] font-medium text-[var(--ink)] hover:border-[var(--accent)]/50"
           href={autodocUrl(
             autodocQueryFor(pain, locale, variant?.engine),
@@ -133,11 +165,17 @@ export function PainCard({
             chassis,
             variant,
           )}
-          target="_blank"
-          rel="noreferrer"
+          destination="autodoc"
+          props={{
+            locale,
+            surface: "pain_card",
+            pain_id: pain.id,
+            chassis_slug: chassis?.slug ?? variant?.chassisSlug,
+            variant_slug: variant?.slug,
+          }}
         >
           {copy.autodoc}: {autodocQueryFor(pain, locale, variant?.engine)}
-        </a>
+        </OutboundLink>
         <SourceList
           locale={locale}
           sources={pain.sources}

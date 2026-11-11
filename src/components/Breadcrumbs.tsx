@@ -5,7 +5,7 @@ import { usePathname } from "next/navigation";
 import type { Locale } from "@/lib/locale";
 import { t } from "@/lib/i18n";
 import { getChassis } from "@/data/chassis";
-import { getVariant } from "@/lib/catalog";
+import { getPain, getVariant } from "@/lib/catalog";
 import { bodyLabelKey, bodyOf } from "@/lib/carImage";
 
 type Crumb = {
@@ -22,7 +22,7 @@ export function Breadcrumbs({ locale }: { locale: Locale }) {
   if (crumbs.length < 2) return null;
 
   return (
-    <div className="border-t border-white/6">
+    <div className="border-t border-[var(--hairline)]">
       <nav aria-label={copy.breadcrumb} className="relative mx-auto md:max-w-5xl">
         <ol className="flex items-center gap-0.5 overflow-x-auto px-4 py-1.5 no-scrollbar sm:px-6">
           {crumbs.map((crumb, i) => (
@@ -40,7 +40,7 @@ export function Breadcrumbs({ locale }: { locale: Locale }) {
                 <Link
                   href={crumb.href}
                   title={crumb.hint}
-                  className={`inline-flex h-8 items-center rounded-full px-2.5 text-[11px] font-medium text-[var(--muted)] underline decoration-white/15 underline-offset-4 hover:bg-white/6 hover:text-[var(--accent)] sm:text-xs`}
+                  className="inline-flex h-8 items-center rounded-full px-2.5 text-[11px] font-medium text-[var(--muted)] underline decoration-[var(--hairline)] underline-offset-4 hover:bg-[var(--veil-strong)] hover:text-[var(--accent)] sm:text-xs"
                 >
                   {crumb.label}
                 </Link>
@@ -91,6 +91,22 @@ function crumbsFor(pathname: string, locale: Locale): Crumb[] {
     current: parts.length === 3,
   });
   if (parts.length === 3) return crumbs;
+
+  if (parts[3] === "fault" && parts[4]) {
+    const pain = getPain(parts[4]);
+    const label = pain
+      ? pain.title[locale].length > 42
+        ? `${pain.title[locale].slice(0, 40)}…`
+        : pain.title[locale]
+      : parts[4];
+    crumbs.push({
+      href: pathname,
+      label,
+      hint: pain?.title[locale],
+      current: true,
+    });
+    return crumbs;
+  }
 
   const variant = getVariant(chassis.slug, parts[3]);
   crumbs.push({

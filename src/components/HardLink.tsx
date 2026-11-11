@@ -1,6 +1,7 @@
 "use client";
 
 import type { MouseEvent, ReactNode } from "react";
+import { track, type AnalyticsProps } from "@/lib/analytics";
 
 /**
  * Full document navigation.
@@ -11,16 +12,22 @@ export function HardLink({
   href,
   className,
   children,
+  analyticsEvent,
+  analyticsProps,
 }: {
   href: string;
   className?: string;
   children: ReactNode;
+  analyticsEvent?: string;
+  analyticsProps?: AnalyticsProps;
 }) {
   function go(event: MouseEvent<HTMLAnchorElement>) {
     // Allow modified clicks (new tab / download) to use the native href.
     if (event.metaKey || event.ctrlKey || event.shiftKey || event.altKey || event.button !== 0) {
+      if (analyticsEvent) track(analyticsEvent, analyticsProps);
       return;
     }
+    if (analyticsEvent) track(analyticsEvent, analyticsProps);
     event.preventDefault();
     window.location.assign(href);
   }

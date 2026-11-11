@@ -12,6 +12,7 @@ import { MoneyRange } from "@/components/Money";
 import { ScoreGlow } from "@/components/ScoreBadge";
 import { chassisSummary, listScoreMarks, type ListMark } from "@/lib/catalog";
 import { bodyLabelKey, bodyOf, type BodyStyle } from "@/lib/carImage";
+import { track } from "@/lib/analytics";
 
 const GROUPS: { title: keyof Copy; families: ChassisFamily[] }[] = [
   { title: "family3", families: ["3", "4"] },
@@ -155,24 +156,47 @@ export function CatalogExplorer({
     setEra("all");
     setScoredOnly(false);
     setGoldOnly(false);
+    track("Catalog Filter Changed", {
+      locale,
+      filter_type: "clear",
+      value: "all",
+      result_count: chassis.length,
+      layout,
+    });
   }
 
   function toggleBody(body: BodyStyle) {
     setBodies((prev) => {
       const next = new Set(prev);
-      if (next.has(body)) next.delete(body);
-      else next.add(body);
+      const enabling = !next.has(body);
+      if (enabling) next.add(body);
+      else next.delete(body);
+      track("Catalog Filter Changed", {
+        locale,
+        filter_type: "body",
+        value: body,
+        enabled: enabling,
+        result_count: filtered.length,
+        layout,
+      });
       return next;
     });
   }
 
   function onSort(key: SortKey) {
+    const nextDir = sortKey === key ? (sortDir === "asc" ? "desc" : "asc") : DEFAULT_DIR[key];
     if (sortKey === key) {
-      setSortDir((d) => (d === "asc" ? "desc" : "asc"));
-      return;
+      setSortDir(nextDir);
+    } else {
+      setSortKey(key);
+      setSortDir(nextDir);
     }
-    setSortKey(key);
-    setSortDir(DEFAULT_DIR[key]);
+    track("Catalog Sorted", {
+      locale,
+      sort_key: key,
+      sort_dir: nextDir,
+      layout,
+    });
   }
 
   function syncScroll(source: "head" | "body") {
@@ -226,18 +250,36 @@ export function CatalogExplorer({
           value={q}
           onChange={(e) => setQ(e.target.value)}
           placeholder={copy.catalogFilter}
-          className="h-11 w-full rounded-xl border border-white/10 bg-[var(--card)] px-3 text-base outline-none ring-[var(--accent)] focus:border-[var(--accent)] focus:ring-1 sm:h-12"
+          className="h-11 w-full rounded-xl border border-[var(--hairline)] bg-[var(--card)] px-3 text-base outline-none ring-[var(--accent)] focus:border-[var(--accent)] focus:ring-1 sm:h-12"
           autoComplete="off"
           spellCheck={false}
         />
 
         <div className="mt-2.5 flex items-center gap-2 sm:mt-3">
           <div className="flex min-w-0 flex-1 gap-2 overflow-x-auto py-1 no-scrollbar">
-            <Chip active={group === "all"} onClick={() => setGroup("all")}>
+            <Chip
+              active={group === "all"}
+              onClick={() => {
+                setGroup("all");
+                track("Catalog Filter Changed", { locale, filter_type: "group", value: "all", layout });
+              }}
+            >
               {copy.familyAll}
             </Chip>
             {GROUPS.map((item) => (
-              <Chip key={item.title} active={group === item.title} onClick={() => setGroup(item.title)}>
+              <Chip
+                key={item.title}
+                active={group === item.title}
+                onClick={() => {
+                  setGroup(item.title);
+                  track("Catalog Filter Changed", {
+                    locale,
+                    filter_type: "group",
+                    value: item.title,
+                    layout,
+                  });
+                }}
+              >
                 {copy[item.title]}
               </Chip>
             ))}
@@ -287,7 +329,19 @@ export function CatalogExplorer({
               </p>
               <div className="flex flex-wrap gap-2">
                 {eras.map((item) => (
-                  <Chip key={item.key} active={era === item.key} onClick={() => setEra(item.key)}>
+                  <Chip
+                    key={item.key}
+                    active={era === item.key}
+                    onClick={() => {
+                      setEra(item.key);
+                      track("Catalog Filter Changed", {
+                        locale,
+                        filter_type: "era",
+                        value: item.key,
+                        layout,
+                      });
+                    }}
+                  >
                     {item.label}
                   </Chip>
                 ))}
@@ -295,17 +349,43 @@ export function CatalogExplorer({
             </div>
 
             <div className="flex flex-wrap gap-2">
-              <Chip active={scoredOnly} onClick={() => setScoredOnly((v) => !v)}>
+              <Chip
+                active={scoredOnly}
+                onClick={() => {
+                  setScoredOnly((v) => {
+                    track("Catalog Filter Changed", {
+                      locale,
+                      filter_type: "scored",
+                      value: !v,
+                      layout,
+                    });
+                    return !v;
+                  });
+                }}
+              >
                 {copy.filterScored}
               </Chip>
-              <Chip active={goldOnly} onClick={() => setGoldOnly((v) => !v)}>
+              <Chip
+                active={goldOnly}
+                onClick={() => {
+                  setGoldOnly((v) => {
+                    track("Catalog Filter Changed", {
+                      locale,
+                      filter_type: "gold",
+                      value: !v,
+                      layout,
+                    });
+                    return !v;
+                  });
+                }}
+              >
                 {copy.filterGold}
               </Chip>
               {hasExtraFilters ? (
                 <button
                   type="button"
                   onClick={clearFilters}
-                  className="tap inline-flex h-tap items-center gap-1.5 rounded-full px-3 text-sm font-medium text-[var(--muted)] underline decoration-white/15 underline-offset-4 hover:text-[var(--ink)]"
+                  className="tap inline-flex h-tap items-center gap-1.5 rounded-full px-3 text-sm font-medium text-[var(--muted)] underline decoration-[var(--hairline)] underline-offset-4 hover:text-[var(--ink)]"
                 >
                   <X className="size-3.5" strokeWidth={2} aria-hidden />
                   {copy.resetFilters}
@@ -336,7 +416,7 @@ export function CatalogExplorer({
             <button
               type="button"
               onClick={clearFilters}
-              className="text-xs font-medium text-[var(--muted)] underline decoration-white/15 underline-offset-4 hover:text-[var(--ink)]"
+              className="text-xs font-medium text-[var(--muted)] underline decoration-[var(--hairline)] underline-offset-4 hover:text-[var(--ink)]"
             >
               {copy.resetFilters}
             </button>
@@ -447,6 +527,13 @@ export function CatalogExplorer({
               chassis={row.chassis}
               locale={locale}
               marks={marks.get(row.chassis.slug) ?? []}
+              onOpen={() => {
+                track("Catalog Chassis Opened", {
+                  locale,
+                  chassis_slug: row.chassis.slug,
+                  layout: "cards",
+                });
+              }}
             />
           ))}
         </div>
@@ -527,7 +614,14 @@ function CatalogTableRow({
     <Link
       href={`/${locale}/bmw/${chassis.slug}`}
       role="row"
-      className={`catalog-row ${CATALOG_COLS} border-b border-[var(--line)] py-3 last:border-0 hover:bg-white/[0.04]`}
+      onClick={() => {
+        track("Catalog Chassis Opened", {
+          locale,
+          chassis_slug: chassis.slug,
+          layout: "table",
+        });
+      }}
+      className={`catalog-row ${CATALOG_COLS} border-b border-[var(--line)] py-3 last:border-0 hover:bg-[var(--veil)]`}
     >
       <span className="flex min-w-0 items-center gap-3">
         <CarPhoto
@@ -580,7 +674,7 @@ function MarkPill({ tone, children }: { tone: "good" | "bad"; children: string }
   return (
     <span
       className={`rounded-full px-2 py-0.5 text-[10px] font-semibold uppercase tracking-[0.12em] ${
-        tone === "good" ? "bg-[var(--good)] text-[#04140c]" : "bg-[var(--bad)] text-white"
+        tone === "good" ? "bg-[var(--good)] text-[var(--on-accent)]" : "bg-[var(--bad)] text-white"
       }`}
     >
       {children}

@@ -288,6 +288,33 @@ export function getPain(id: string): Pain | undefined {
   return getWarehousePain(id);
 }
 
+/** Unique pains that appear on any scored year of this chassis (for static fault pages). */
+export function painsForChassis(chassisSlug: string): Pain[] {
+  const byId = new Map<string, Pain>();
+  for (const variant of variantsFor(chassisSlug)) {
+    for (const pain of painsForVariant(variant)) {
+      if (!byId.has(pain.id)) byId.set(pain.id, pain);
+    }
+  }
+  return [...byId.values()].sort(
+    (a, b) => severityRank(a.severity) - severityRank(b.severity) || a.id.localeCompare(b.id),
+  );
+}
+
+/** Variants on this chassis whose evidence list includes the pain. Best score first. */
+export function variantsTouchingPain(chassisSlug: string, painId: string): VariantBrief[] {
+  const id = resolvePainId(painId);
+  return variantsFor(chassisSlug)
+    .filter((variant) => painsForVariant(variant).some((pain) => pain.id === id))
+    .sort((a, b) => (b.score ?? -1) - (a.score ?? -1) || b.year - a.year);
+}
+
+/** Pain if it applies to at least one variant on this chassis. */
+export function painOnChassis(chassisSlug: string, painId: string): Pain | undefined {
+  const id = resolvePainId(painId);
+  return painsForChassis(chassisSlug).find((pain) => pain.id === id);
+}
+
 export function engineYearSpan(chassisSlug: string, model: string, engine: string): [number, number] | null {
   const years = variantsFor(chassisSlug)
     .filter((item) => item.model === model && item.engine === engine)
